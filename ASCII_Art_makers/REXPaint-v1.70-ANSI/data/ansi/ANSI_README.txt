@@ -1,0 +1,1 @@
+For ANSI art mode, see Appendix D of the manual.

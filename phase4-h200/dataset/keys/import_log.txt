@@ -1,0 +1,1867 @@
+[2026-01-04 01:08:06] Found 13 files in C:\Users\Admin\Downloads\Evony_Decrypted\Accounts
+[2026-01-04 01:08:06] Importing Evony Accounts - Copy.txt (.txt)
+[2026-01-04 01:08:06]   -> 59 new, 8 duplicates
+[2026-01-04 01:08:06] Importing Evony Accounts.txt (.txt)
+[2026-01-04 01:08:06]   -> 0 new, 67 duplicates
+[2026-01-04 01:08:06] Importing Evony Accounts2.txt (.txt)
+[2026-01-04 01:08:06]   -> 0 new, 67 duplicates
+[2026-01-04 01:08:06] Importing Lion_ALTS.txt (.txt)
+[2026-01-04 01:08:06]   -> 3 new, 0 duplicates
+[2026-01-04 01:08:06] Importing Madmum.txt (.txt)
+[2026-01-04 01:08:06]   -> 0 new, 3 duplicates
+[2026-01-04 01:08:06] Importing Master list.txt (.txt)
+[2026-01-04 01:08:06]   -> 1 new, 61 duplicates
+[2026-01-04 01:08:06] Importing Master list2.txt (.txt)
+[2026-01-04 01:08:06]   -> 0 new, 61 duplicates
+[2026-01-04 01:08:06] Importing Master list3.txt (.txt)
+[2026-01-04 01:08:06]   -> 3 new, 62 duplicates
+[2026-01-04 01:08:06] Importing Master list3_.txt (.txt)
+[2026-01-04 01:08:06]   -> 0 new, 65 duplicates
+[2026-01-04 01:08:06] Importing Master list_backup.txt (.txt)
+[2026-01-04 01:08:06]   -> 0 new, 62 duplicates
+[2026-01-04 01:08:06] Importing Evony Accounts.XLSX (.xlsx)
+[2026-01-04 01:08:06]   -> 249 new, 600 duplicates
+[2026-01-04 01:08:06] Importing Khans Comprehensive Log Sheet v2.0.xlsx (.xlsx)
+[2026-01-04 01:08:06]   -> 1 new, 0 duplicates
+[2026-01-04 01:08:06] Importing Khans Log Sheet v3.0.xlsx (.xlsx)
+[2026-01-04 01:08:08]   -> 0 new, 1 duplicates
+[2026-01-04 01:12:03] Found 13 files in C:\Users\Admin\Downloads\Evony_Decrypted\Accounts
+[2026-01-04 01:12:03] Importing Evony Accounts - Copy.txt (.txt)
+[2026-01-04 01:12:03]   -> 0 new, 67 duplicates
+[2026-01-04 01:12:03] Importing Evony Accounts.txt (.txt)
+[2026-01-04 01:12:03]   -> 0 new, 67 duplicates
+[2026-01-04 01:12:03] Importing Evony Accounts2.txt (.txt)
+[2026-01-04 01:12:03]   -> 0 new, 67 duplicates
+[2026-01-04 01:12:03] Importing Lion_ALTS.txt (.txt)
+[2026-01-04 01:12:03]   -> 0 new, 3 duplicates
+[2026-01-04 01:12:03] Importing Madmum.txt (.txt)
+[2026-01-04 01:12:03]   -> 0 new, 3 duplicates
+[2026-01-04 01:12:03] Importing Master list.txt (.txt)
+[2026-01-04 01:12:03]   -> 0 new, 62 duplicates
+[2026-01-04 01:12:03] Importing Master list2.txt (.txt)
+[2026-01-04 01:12:03]   -> 0 new, 61 duplicates
+[2026-01-04 01:12:03] Importing Master list3.txt (.txt)
+[2026-01-04 01:12:03]   -> 0 new, 65 duplicates
+[2026-01-04 01:12:03] Importing Master list3_.txt (.txt)
+[2026-01-04 01:12:03]   -> 0 new, 65 duplicates
+[2026-01-04 01:12:03] Importing Master list_backup.txt (.txt)
+[2026-01-04 01:12:03]   -> 0 new, 62 duplicates
+[2026-01-04 01:12:03] Importing Evony Accounts.XLSX (.xlsx)
+[2026-01-04 01:12:03]   -> 0 new, 849 duplicates
+[2026-01-04 01:12:03] Importing Khans Comprehensive Log Sheet v2.0.xlsx (.xlsx)
+[2026-01-04 01:12:03]   -> 0 new, 1 duplicates
+[2026-01-04 01:12:03] Importing Khans Log Sheet v3.0.xlsx (.xlsx)
+[2026-01-04 01:12:06]   -> 0 new, 1 duplicates
+[2026-01-04 01:12:06] Found 827 files in C:\Users\Admin\Downloads\Evony_Decrypted\Scripts\khan_Accounts_556
+[2026-01-04 01:12:06] Importing khanaccounts.csv (.csv)
+[2026-01-04 01:12:06]   -> 161 new, 470 duplicates
+[2026-01-04 01:12:06] Importing script.txt (.txt)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing 0732051539.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing 0732051539mtnloaded.co.za.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing 12antonius1972.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing 12antonius1972gmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing a-j-watson.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing a-j-watsonhotmail.co.uk.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing Adelena.cox.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing Adelena.coxgmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing alexalanta.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing alex_ermolaevyahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing alf481.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing alf481hotmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing alliknow2002.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing alliknow2002yahoo.ca.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing alsermolaevgmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing andrew.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing andrewflirtomatic.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing andycadd.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing andycaddcomcast.net.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing annadepe1.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing annadepe1gmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing Anton.evony.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing Anton.evonygmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing apmjunior.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing apmjunioraol.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing Aragog1279.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing Aragog1279gmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing aroman83.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing aroman83aol.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing asermolaev.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing asermolaevhotmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing ausseif.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing ausseifhotmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing Aussi007.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing Aussi007hotmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing auto180.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing auto180yahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bainesj74.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bainesj74yahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bambie.khans.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bambie.khanscomcast.net.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing barryronnie1965.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing barryronnie1965hotmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bartolome_marino.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bartolome_marinoyahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing baseball_junky3.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing baseball_junky3yahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bbb_ark1962.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bbb_ark1962yahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bbb_ark1964.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bbb_ark1964yahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bbb_ark2014.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bbb_ark2014yahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bigger.2007outlook.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bigger.2008.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bigger.2008hotmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bigger.2009.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bigger.2009outlook.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bigscrewy.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bigscrewygmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bill.prins.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bill.prinsgmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bluepuppy_56.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bluepuppy_56hotmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bnicol.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bnicolmountaincable.net.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing bobsfakeid2.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing Bobsfakeid2yahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing buckskinhorse.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing buckskinhorsehotmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing callingcrowes.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing callingcroweshotmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing cane1278.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing cane1278yahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing car1029ol.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing car1029olexcite.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing car1029olyahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing carolevonyyahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing cateransdementia.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing cateransdementiagmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing catlinnstorm.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing catlinnstormgmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing celticchef2000.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing celticchef2000aol.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing cgilbrich.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing cgilbrichhotmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing chrischen421.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing chrischen421gmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing chrishetelus.net.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing chriskittleson.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing chriskittlesonhotmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing chrislogue4396.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing chrislogue4396yahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing chrisofhouston.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing chrisofhoustonyahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing chrissye-1.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing chrissye-1netzero.net.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing chupu.69.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing chupu.69hotmail.ca.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing cmoyers.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing cmoyersyahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing coachteet80.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing coachteet80gmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing cobra-evony.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing cobra-evonyhotmail.co.uk.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing coffinsatch.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing coffinsatchgmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing Cold_fear187.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing Cold_fear187hotmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing confused_gemini_goddess.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing confused_gemini_goddessyahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing connolly.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing connollybigpond.net.au.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing coreymoyers.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing coreymoyersyahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing Cotton_candy_for_uyahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing craigcorn99.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing craigcorn99hotmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing crazy_leopard03.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing crazy_leopard03hotmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing curledmango.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing curledmangoyahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing dakota_taz.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing dakota_tazyahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing dal163.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing dal163bigpond.com.au.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing dalefreeburg.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing dalefreeburgyahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing danieltest.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing danieltestdragonfly.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing danlavoie1.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing danlavoie1hotmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing Darkagetech.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing Darkagetechgmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing dave.angel.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing dave.angelyahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing davidenvoy.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing davidenvoyhotmail.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing dawnbunny101.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing dawnbunny101yahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing dirklaw.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing dirklawyahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing dkw1951.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing dkw1951Yahoo.com.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing dollylolly13.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing dollylolly13hotmail.co.uk.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing domexdan.json (.json)
+[2026-01-04 01:12:06]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:06] Importing domexdanyahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing doug46972002.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing doug46972002hotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing dr300evony.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing dr300evonyyahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing dr300evonyyahoocom.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing draco810.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing draco810msn.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing dustysoccer0.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing dustysoccer0hotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing e.hi42.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing e.hi42yahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing e1alexhotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing e2alexhotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing e3alexhotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing e44alexhotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing e5alexhotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing e7alexhotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing ebraff.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing ebraffyahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing edward660.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing edward660hotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing elacetay12.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing elacetay12yahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing ELPERL4.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing ELPERL4gmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing erez_11.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing erez_11yahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing erhettus.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing erhettushotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing erich.schlegel.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing erich.schlegelus.fujitsu.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing Evony.niko.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing Evony.nikoaol.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing exist2inspire1805.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing exist2inspire1805gmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing feyenoorder_1983.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing feyenoorder_1983hotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing fishermanaaron1.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing fishermanaaron1yahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing fmba07514.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing fmba07514blueyonder.co.uk.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing foxtrotbest12.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing foxtrotbest12yahoo.ie.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing franky_franky1551.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing franky_franky1551yahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing freeze888.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing freeze888outlook.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing freeze999.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing freeze999outlook.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing fulonhotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing garyjoint1.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing garyjoint1yahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing gdmarkus.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing gdmarkushotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing geese0525.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing geese0525yahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing george.escobedojr.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing george.escobedojryahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing godivaevony.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing godivaevonyyahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing goose22evony.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing goose22evonygmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing gotoxygen.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing gotoxygengmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing grosy.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing grosymusc.edu.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing gutter_maintenance.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing gutter_maintenanceiinet.net.au.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing guy.mundy.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing guy.mundytiscali.co.uk.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing gyulez.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing gyulezgmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing hanny2.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing hanny2ziggo.nl.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing hauble.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing haubleyahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing haydenermel.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing haydenermelyahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing holystgeorges.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing holystgeorgeshotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing hpu333.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing hpu333yahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing hpu357.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing hpu357yahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing hugo.evans56.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing hugo.evans56btinternet.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing huisman81.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing huisman81hotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing hunygurl67.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing hunygurl67yahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing hurlothrumboiprimus.com.au.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing iikissmygritsii.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing iikissmygritsiiyahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing iikissmygritsiiyahoocom.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing Ioriasj03.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing Ioriasj03gmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing ironhead2235.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing ironhead2235yahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jacquiehassiaoui.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jacquiehassiaouihotmail.co.uk.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing Jac_6788.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing Jac_6788yahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jah_calyx_rastafari.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jah_calyx_rastafariyahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jamcaveman357.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jamcaveman357att.net.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jameson_mckee.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jameson_mckeelive.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing janette-scott.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing janette-scotthotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jasonj.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jasonjgenerator.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jbtjes2015.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jbtjes2015yahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jburkhardt0.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jburkhardt0gmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jcardoza50_.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jcardoza50_hotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jef_wear.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jef_wearhotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jenn1131.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jenn1131gmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jenspast1991yahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing Jhoopes01.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing Jhoopes01yahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jjjones.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jjjonesiinet.net.au.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jjmckay6manyahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jmtomei.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jmtomeihotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing johnpsandersii.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing johnpsandersiigmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing josephungmm.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing josephungmmclearwire.net.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jptje1989.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jptje1989gmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jtfletch123.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jtfletch123yahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jtwc1.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing jtwc1hotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing judson.brown.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing judson.brownrcsdk12.org.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing kamie.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing kamiecomcast.net.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing kanda1988outlook.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing katastrophe.2012.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing katastrophe.2012hotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing kathy_burton_885.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing kathy_burton_885msn.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing kelvinths.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing kelvinthsyahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing kendicosmo.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing kendicosmoyahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing kenzoevony.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing kenzoevonygmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing kevincarbray.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing kevincarbrayhotmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing klanders.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing klanderscitcom.net.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing klaus-biesel.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing klaus-bieselhotmail.de.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing krystalice13.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing krystalice13yahoo.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing ksronnie88.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing ksronnie88gmail.com.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing kugslite.json (.json)
+[2026-01-04 01:12:07]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:07] Importing kugslitegmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing kugsliteyahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing langley_timothy.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing langley_timothyyahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing lavaye18.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing lavaye18yahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing lavaye18yahoocom.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing Lburchianti.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing Lburchiantibellsouth.net.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing legacy-njjuno.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing LeoCasserly1.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing LeoCasserly1hotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing lionofpride1.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing Lionofpride1gmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing liontooth1988.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing liontooth1988gmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing live2love3laugh.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing live2love3laughhotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing lordgray.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing lordgrayhotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing lucasgaethhotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing luimi_revolution.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing luimi_revolutionhotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing lyarrockshotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing m.ribbonsyahoo.com.au.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing macoverall1.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing macoverall1yahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing Maltese_minx.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing Maltese_minxhotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing mantonucci.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing mantonucciyahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing Markimhof.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing Markimhofyahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing marknewsome1.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing marknewsome1sky.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing markramier.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing markramiergmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing Martingerard07.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing martingerard07aol.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing martyevony1.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing martyevony1yahoo.co.uk.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing martyevony4.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing martyevony4yahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing masterramrod.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing masterramrodhotmail.co.uk.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing mat.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing matgcqld.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing mcmhel.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing mcmhelyahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing mdepender.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing mdependerziggo.nl.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing medri15.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing medri15yahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing mhpirooz.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing mhpiroozgmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing michelle_hanson9.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing michelle_hanson9hotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing mikehmike.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing mikehmikeyahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing Mistersergio13gmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing mjpatague.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing mjpataguehotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing Mk3vento24.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing Mk3vento24yahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing moore.tn2.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing moore.tn2gmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing mrqbiii.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing mrqbiiiyahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing mymechanics.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing mymechanicsaol.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing myung.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing myunglive.com.au.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing nathan.biggs23.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing nathan.biggs23yahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing nauticalterm.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing nauticaltermgmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing neo36427.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing neo36427yahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing newmyseattleyahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing nigel.abrown.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing nigel.abrownblueyonder.co.uk.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing nmchilo.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing nmchiloyahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing nobwen.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing nobwenhotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing oneandonlybbq.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing oneandonlybbqbellsouth.net.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing orrsimon78.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing orrsimon78yahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing patchwork_77.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing patchwork_77yahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing patchwork_77yahoocom.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing patrick_fnn.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing patrick_fnnyahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing paus.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing pausshantytown.st.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing pausshantytownst.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing pcmentors.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing pcmentorshotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing pepsi1988outlook.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing peterbrannan.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing peterbrannanhotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing peterj23.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing peterj23hotmail.co.uk.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing prince_medo_eg.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing prince_medo_eghotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing Protikahlteknologies.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing Protikahlteknologieslive.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing ptjes1987.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing ptjes1987outlook.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing pttambigpond.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing pureheart10.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing pureheart10hotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing q_t_p_i_e99.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing q_t_p_i_e99yahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing racman1022.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing racman1022yahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing raiderdude.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing raiderdudemsn.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing rainman3232.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing rainman3232gmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing randomdragon2.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing randomdragon2hotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing randomdragon3.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing randomdragon3hotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing rapture15.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing rapture15hotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing redjr46.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing redjr46yahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing revkah23.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing revkah23yahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing richardblack1comcast.net.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing ricksdad2001.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing ricksdad2001yahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing rnrkhans.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing rnrkhansgmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing robcuaw2250aol.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing roboneill.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing roboneillbtconnect.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing rochut.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing rochutrocketmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing rockfriedman.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing rockfriedmanyahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing ronniebarry.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing ronniebarryhotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing roofing.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing roofingconsolidated.net.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing rsimoesgmx.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing rtharp01.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing rtharp01gmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing ruud.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing ruudvan-wersch.nl.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing Rwerner.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing Rwernerlive.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing ryaneiler.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing ryaneilerrocketmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing sapphire_71.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing sapphire_71hotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing satchman69.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing satchman69hotmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing satchman777.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing satchman777gmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing schaef81.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing schaef81yahoo.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing scottwtaylor67.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing scottwtaylor67gmail.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing scream.your.heartoutwindowslive.com.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing Seaquest85.json (.json)
+[2026-01-04 01:12:08]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:08] Importing Seaquest85yahoo.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing shewolf.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing shewolfcitcom.net.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing show_stopper.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing show_stopperhotmail.co.uk.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing sidnypearl.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing sidnypearlyahoo.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing simoes134.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing simoes134hotmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing simon.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing simonsmall-voices.net.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing sixandclimbing69gmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing skinnerindustries.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing skinnerindustriesyahoo.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing sleddog218.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing sleddog218yahoo.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing spambill.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing spambillrocketmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing squeezemetite.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing squeezemetiteyahoo.com.au.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing st.survivor.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing st.survivorhotmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing swisspoe69.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing swisspoe69yahoo.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing Tarasdbe.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing Tarasdbeyahoo.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing teasley1889yahoo.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing tenabutter.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing tenabuttergmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing tfornelliaol.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing thedaneinoz.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing thedaneinozhotmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing thedonkeysheep.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing thedonkeysheepyahoo.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing thenqai8ms2.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing Thunderstar1.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing Thunderstar1yahoo.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing tikaevo.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing tikaevogmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing timothyvogel1990.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing timothyvogel1990gmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing tompapadopoulos.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing tompapadopoulossympatico.ca.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing toygarc.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing toygarchotmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing tprrph.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing tprrphhotmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing travelinm004.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing travelinm004yahoo.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing trondski88.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing trondski88hotmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing twoguys.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing twoguysmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing twowolves7gmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing VicVeritas.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing VicVeritashotmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing wally.nino.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing wally.ninoyahoo.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing watsonj50.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing watsonj50hotmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing wesleyhallingyahoo.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing williamrlongjrgmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing wjgonder.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing wjgondergmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing ykamhong.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing ykamhongyahoo.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing yoni273gmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing ypgros.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing ypgrosgmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing ypgrosgmailcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing yucon1966yahoo.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing yucon2466yahoo.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing zak21.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing zak21blueyonder.co.uk.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing zigzag.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing zigzag1904.dk.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing zsk54321gmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing zsk54321yahoo.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing zurt.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing zurtmail.com.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing 0732051539mtnloadedcoza.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing a-j-watsonhotmailcouk.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing alexalantacom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing alex_ermolaevyahoocom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing alf481hotmailcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing alliknow2002yahooca.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing alsermolaevgmailcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing andrewflirtomaticcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing andycaddcomcastnet.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing Antonevonygmailcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing apmjunioraolcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing Aragog1279gmailcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing asermolaevhotmailcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing ausseifhotmailcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing auto180yahoocom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing bainesj74yahoocom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing bambiekhanscomcastnet.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing barryronnie1965hotmailcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing baseball_junky3yahoocom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing bbb_ark1964yahoocom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing bbb_ark2014yahoocom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing bigger2007outlookcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing bigger2008hotmailcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing bigger2009outlookcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing bigscrewygmailcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing bluepuppy_56hotmailcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing bnicolmountaincablenet.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing bobsfakeid2yahoocom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing buckskinhorsehotmailcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing callingcroweshotmailcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing cane1278yahoocom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing car1029olexcitecom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing car1029olyahoocom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing carolevonyyahoocom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing cateransdementiagmailcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing catlinnstormgmailcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing celticchef2000aolcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing cgilbrichhotmailcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing chrischen421gmailcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing chrishetelusnet.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing chriskittlesonhotmailcom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing chrislogue4396yahoocom.json (.json)
+[2026-01-04 01:12:09]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:09] Importing chrisofhoustonyahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing chrissye-1netzeronet.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing chupu69hotmailca.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing cmoyersyahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing coachteet80gmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing cobra-evonyhotmailcouk.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing coffinsatchgmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing Cold_fear187hotmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing confused_gemini_goddessyahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing coreymoyersyahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing Cotton_candy_for_uyahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing craigcorn99hotmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing crazy_leopard03hotmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing curledmangoyahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing dakota_tazyahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing dal163bigpondcomau.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing danieltestdragonflycom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing danlavoie1hotmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing daveangelyahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing davidenvoyhotmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing dawnbunny101yahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing dkw1951yahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing dollylolly13hotmailcouk.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing domexdanyahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing doug46972002hotmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing draco810msncom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing dustysoccer0hotmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing e1alexhotmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing e2alexhotmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing e3alexhotmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing e44alexhotmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing e5alexhotmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing e7alexhotmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing ebraffyahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing edward660hotmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing ehi42yahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing elacetay12yahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing elperl4gmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing erez_11yahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing erhettushotmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing erichschlegelusfujitsucom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing evonynikoaolcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing exist2inspire1805gmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing feyenoorder_1983hotmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing fishermanaaron1yahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing fniceqcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing foxtrotbest12yahooie.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing frankgowersympaticoca.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing franky_franky1551yahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing freeze888outlookcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing freeze999outlookcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing garyjoint1yahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing gdmarkushotmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing geese0525yahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing georgeescobedojryahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing godivaevonyyahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing gotoxygengmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing gutter_maintenanceiinetnetau.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing hanny2ziggonl.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing haubleyahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing haydenermelyahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing hgrowdenhotmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing hpu333yahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing hugoevans56btinternetcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing hunygurl67yahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing hurlothrumboiprimuscomau.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing iikissmygritsiiyahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing Ioriasj03gmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing ironhead2235yahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing jacquiehassiaouihotmailcouk.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing Jac_6788yahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing jah_calyx_rastafariyahoocom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing jamcaveman357attnet.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing jameson_mckeelivecom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing janette-scotthotmailcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing jasonjgeneratorcom.json (.json)
+[2026-01-04 01:12:10]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:10] Importing jbtjes2015yahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing jburkhardt0gmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing jcardoza50_hotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing jef_wearhotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing jenn1131gmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing jenspast1991yahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing Jhoopes01yahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing jjjonesiinetnetau.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing jjmckay6manyahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing jmtomeihotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing johnpsandersiigmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing josephungmmclearwirenet.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing jtfletch123yahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing jtwc1hotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing judsonbrownrcsdk12org.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing kakarot1973hotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing kamiecomcastnet.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing kanda1988outlookcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing katastrophe2012hotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing kathy_burton_885msncom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing kelvinthsyahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing kendicosmoyahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing kenzoevonygmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing kevincarbrayhotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing klanderscitcomnet.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing klaus-bieselhotmailde.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing krystalice13yahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing ksronnie88gmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing kugsliteyahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing langley_timothyyahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing lavaye18yahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing Lburchiantibellsouthnet.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing leocasserly1hotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing liontooth1988gmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing live2love3laughhotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing lordgrayhotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing lucasgaethhotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing luimi_revolutionhotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing lyarrockshotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing macoverall1yahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing maltese_minxhotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing Markimhofyahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing marknewsome1skycom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing markramiergmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing Martingerard07aolcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing martyevony1yahoocouk.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing masterramrodhotmailcouk.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing matgcqldcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing mcmhelyahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing medri15yahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing mhpiroozgmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing michelle_hanson9hotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing mikehmikeyahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing Mistersergio13gmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing mjpataguehotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing Mk3vento24yahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing mooretn2gmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing mrqbiiiyahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing myunglivecomau.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing nauticaltermgmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing newmyseattleyahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing nmchiloyahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing nobwenhotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing oneandonlybbqbellsouthnet.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing patchwork_77yahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing patrick_fnnyahoocom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing pausshantytownst.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing pcmentorshotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing pepsi1988outlookcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing peterbrannanhotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing peterj23hotmailcouk.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing piendrogmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing prince_medo_eghotmailcom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing Protikahlteknologieslivecom.json (.json)
+[2026-01-04 01:12:11]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:11] Importing pttambigpondcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing pureheart10hotmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing q_t_p_i_e99yahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing racman1022yahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing raiderdudemsncom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing rainman3232gmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing randomdragon2hotmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing randomdragon3hotmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing rapture15hotmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing redjr46yahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing revell753hotmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing revkah23yahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing ricksdad2001yahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing rnrkhansgmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing robcuaw2250aolcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing roboneillbtconnectcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing rochutrocketmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing rockfriedmanyahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing ronniebarryhotmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing roofingconsolidatednet.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing rsimoesgmxcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing rtharp01gmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing ruudvan-werschnl.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing Rwernerlivecom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing ryaneilerrocketmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing sapphire_71hotmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing satchman777gmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing schaef81yahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing scottwtaylor67gmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing screamyourheartoutwindowslivecom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing shewolfcitcomnet.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing sidnypearlyahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing simoes134hotmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing simonsmall-voicesnet.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing sirsammy318yahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing sixandclimbing69gmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing skinnerindustriesyahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing spambillrocketmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing squeezemetiteyahoocomau.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing stsurvivorhotmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing swisspoe69yahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing tamezsimonlivecom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing Tarasdbeyahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing teasley1889yahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing tenabuttergmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing tfornelliaolcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing thedaneinozhotmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing thedonkeysheepyahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing tikaevogmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing timothyvogel1990gmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing tompapadopoulossympaticoca.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing toygarchotmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing tprrphhotmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing travelinm004yahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing trondski88hotmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing twoguysmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing VicVeritashotmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing wallyninoyahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing watsonj50hotmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing wesleyhallingyahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing williamrlongjrgmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing wjgondergmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing ykamhongyahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing yoni273gmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing ypgrosgmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing yucon1966yahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing yucon2466yahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing zak21blueyondercouk.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing zigzag1904dk.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing zsk54321yahoocom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:12] Importing zurtmailcom.json (.json)
+[2026-01-04 01:12:12]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Found 0 files in C:\Users\Admin\Downloads\Evony_Decrypted\SOL_Accounts
+[2026-01-04 01:12:13] Found 62 files in C:\Users\Admin\Downloads\Evony_Decrypted\checkme
+[2026-01-04 01:12:13] Importing citieskhans.csv (.csv)
+[2026-01-04 01:12:13]   -> 0 new, 1110 duplicates
+[2026-01-04 01:12:13] Importing citieskhans.csv (.csv)
+[2026-01-04 01:12:13]   -> 0 new, 1110 duplicates
+[2026-01-04 01:12:13] Importing accept.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing acceptquest.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing AI-Evony_Chat.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing Amulet_Glitch.TXT (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing CommisionQuest_Troop_Glitch.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing CommissionQuestAcceptor.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing CommissionQuestAcceptor3.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing Comm_Quest_.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing Evony_the_begining.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing fastattack(v1).txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing feeder.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing FoodGlitchCounterV1.2.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing Glitch_Numbers_Borg.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing Glitch_Other.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing issuequest.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing Keep_Borg_battack_script.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing Khans_Heroes.txt (.txt)
+[2026-01-04 01:12:13]   -> 164 new, 16 duplicates
+[2026-01-04 01:12:13] Importing Moving_Troops_Borg_Borg_script.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing newAccountStarter_Script_for_RE.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing New_City_Snippets_CrazyCungy_snippets.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing questaddarmy.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing ScanMap2.TXT (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing scripts.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 65 duplicates
+[2026-01-04 01:12:13] Importing Scripts_LOL.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing Sonya_Keep_Troop_Sending2.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing spam_script_v13.2_Borg.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing spam_script_v13.4_Sonya.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing Troop_&_RSS_Counter.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing [=]_Comm_Quest_[=].txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing CommisionQuest_Troop_Glitch.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing CommissionQuestAcceptor.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing CommissionQuestAcceptor3.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing Comm_Quest_.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing FoodGlitchCounterV1.2.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing issuequest.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing Khans_Heroes.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 180 duplicates
+[2026-01-04 01:12:13] Importing khan_Items.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing Scanmap.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing spam_script_v13.2_Borg.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing spam_script_v13.4_Sonya.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing Troop_&_RSS_Counter.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing [=]_Comm_Quest_[=].txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing [=]_Food_Glitch_All_Citys_[=].txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing FoodGlitchCounterV1.2.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing Glitchscript - Copy.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing Glitchscript.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing Troop_&_RSS_Counter.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing Troop_Counter.txt (.txt)
+[2026-01-04 01:12:13]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:13] Importing Enhanced_Na2_Elite_Evony_Game_Map_v6.1.xlsx (.xlsx)
+[2026-01-04 01:12:17]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:17] Importing Khans Comprehensive Log Sheet v2.0.xlsx (.xlsx)
+[2026-01-04 01:12:18]   -> 0 new, 1 duplicates
+[2026-01-04 01:12:18] Importing Khans Log Sheet v3.0.xlsx (.xlsx)
+[2026-01-04 01:12:21]   -> 0 new, 1 duplicates
+[2026-01-04 01:12:21] Importing Na2 Elite Evony Game Map Ver 6.xls.xlsx (.xlsx)
+[2026-01-04 01:12:21]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:21] Importing Evony Accounts.XLSX (.xlsx)
+[2026-01-04 01:12:21]   -> 0 new, 849 duplicates
+[2026-01-04 01:12:21] Importing glitch numbers.xlsx (.xlsx)
+[2026-01-04 01:12:21]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:21] Importing Khans Comprehensive Log Sheet v2.0.xlsx (.xlsx)
+[2026-01-04 01:12:22]   -> 0 new, 1 duplicates
+[2026-01-04 01:12:22] Importing Khans Log Sheet v3.0.xlsx (.xlsx)
+[2026-01-04 01:12:24]   -> 0 new, 1 duplicates
+[2026-01-04 01:12:24] Importing Undraftable calc.xlsx (.xlsx)
+[2026-01-04 01:12:24]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:24] Importing Evony Game Map Ver 4.xls (.xls)
+[2026-01-04 01:12:24] XLSX parse error: openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format.
+[2026-01-04 01:12:24]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:24] Importing Evony Game Map Ver 4.xls (.xls)
+[2026-01-04 01:12:24] XLSX parse error: openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format.
+[2026-01-04 01:12:24]   -> 0 new, 0 duplicates
+[2026-01-04 01:12:24] Importing Evony Troop Count Blank.xls (.xls)
+[2026-01-04 01:12:24] XLSX parse error: openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format.
+[2026-01-04 01:12:24]   -> 0 new, 0 duplicates
+[2026-01-04 01:14:51] Loaded 641 existing accounts
+[2026-01-04 01:15:02] Loaded 641 existing accounts
+[2026-01-04 01:15:02] Found 13 files in C:\Users\Admin\Downloads\Evony_Decrypted\Accounts
+[2026-01-04 01:15:02] Importing Evony Accounts - Copy.txt (.txt)
+[2026-01-04 01:15:02]   -> 0 new, 67 duplicates
+[2026-01-04 01:15:02] Importing Evony Accounts.txt (.txt)
+[2026-01-04 01:15:02]   -> 0 new, 67 duplicates
+[2026-01-04 01:15:02] Importing Evony Accounts2.txt (.txt)
+[2026-01-04 01:15:02]   -> 0 new, 67 duplicates
+[2026-01-04 01:15:02] Importing Lion_ALTS.txt (.txt)
+[2026-01-04 01:15:02]   -> 0 new, 3 duplicates
+[2026-01-04 01:15:02] Importing Madmum.txt (.txt)
+[2026-01-04 01:15:02]   -> 0 new, 3 duplicates
+[2026-01-04 01:15:02] Importing Master list.txt (.txt)
+[2026-01-04 01:15:02]   -> 0 new, 62 duplicates
+[2026-01-04 01:15:02] Importing Master list2.txt (.txt)
+[2026-01-04 01:15:02]   -> 0 new, 61 duplicates
+[2026-01-04 01:15:02] Importing Master list3.txt (.txt)
+[2026-01-04 01:15:02]   -> 0 new, 65 duplicates
+[2026-01-04 01:15:02] Importing Master list3_.txt (.txt)
+[2026-01-04 01:15:02]   -> 0 new, 65 duplicates
+[2026-01-04 01:15:02] Importing Master list_backup.txt (.txt)
+[2026-01-04 01:15:02]   -> 0 new, 62 duplicates
+[2026-01-04 01:15:02] Importing Evony Accounts.XLSX (.xlsx)
+[2026-01-04 01:15:02]   -> 0 new, 849 duplicates
+[2026-01-04 01:15:02] Importing Khans Comprehensive Log Sheet v2.0.xlsx (.xlsx)
+[2026-01-04 01:15:02]   -> 0 new, 1 duplicates
+[2026-01-04 01:15:02] Importing Khans Log Sheet v3.0.xlsx (.xlsx)
+[2026-01-04 01:15:04]   -> 0 new, 1 duplicates

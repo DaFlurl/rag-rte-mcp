@@ -1,0 +1,326 @@
+//--New Account Builder Script v1.10					by Nepoleon/ScriptGod
+//--Start an account, name it, build a lv1 cottage, and complete the be an evonian quest.
+//--Copy the entire script to the starting town on a new account.
+//--Set the 4 variables below before running entire doc in your script.
+//--Run this script until the account reaches Town Hall lv4 and it finishes.
+//--Note: do not save this script
+
+set flagType 1
+set castleName 1
+set mailto "Nepoleon"
+set homeState "Tuscany"
+
+//===============DO=NOT=CHANGE=BELOW=THIS=LINE===============
+set maintown true
+useitem aries_amulet
+upgrade c
+create f 1001
+gosub quest
+create s 1002
+create q 1003
+gosub quest
+create i 1004
+create inn
+gosub quest
+create fh
+useitem newbies_package
+upgrade s
+gosub quest
+create wh
+gosub speedup1
+create m
+gosub speedup1
+create r
+gosub quest
+production 100 100 100 100
+completequests routine
+settaxrate 20
+completequests routine
+changecastlename %castleName%
+completequests routine
+sleep 3
+changeflag %flagType%
+sell iron 10 0.1
+label step1
+gosub quest
+if {$m_city.castle.resource.wood.amount$<6000} goto cycle1
+if {$m_city.castle.resource.stone.amount$<5000} goto cycle1
+upgrade t
+gosub speedup1
+gosub speedup1
+create a
+gosub speedup1
+create e
+gosub speedup1
+upgrade i
+sleep 3
+upgrade i
+gosub speedup1
+upgrade q
+create fo
+sleep 3
+upgrade fo
+gosub speedup1
+create ws
+gosub speedup1
+sleep 3
+completequests routine
+create w
+gosub speedup2
+sell iron 10 0.1
+gosub quest
+levy wood
+upgrade a
+research lu
+set junk $m_city.cityManager.updateWallQueue()$
+sleep 6
+walldefense! tra 10
+echo "Account is growing properly"
+set junk $m_city.cityManager.updateInn()$
+sleep 240
+getspamhero
+gosub quest
+sleep 300
+research ag
+sleep 420
+label step2
+gosub quest
+sleep 15
+set junk $m_city.cityManager.updateWallQueue()$
+sleep 6
+if {$m_city.castle.fortification.trap$>99} gosub wall1
+if {$m_city.castle.resource.wood.amount$<12000} goto cycle2
+if {$m_city.castle.resource.stone.amount$<10000} goto cycle2
+upgrade t
+gosub speedup2
+useitem package_for_lords
+useitem hero_enhancement_materials_package
+gosub quest
+useitem junior_medal_box
+research ms
+set buyDecrease 10
+set buyAt {$m_city.cityManager.market[2].sellersArray[4].price$+$m_city.cityManager.market[2].sellersArray[4].price$*.%buyDecrease%}
+buy stone 8000 %buyAt%
+usetradeitem merchant_fleet
+gosub gear1
+label safe
+gosub res
+gosub quest
+if {$m_city.castle.resource.stone.amount$<20000} goto safe
+upgrade w
+gosub speedup2
+set buyDecrease 10
+set buyAt {$m_city.cityManager.market[1].sellersArray[4].price$+$m_city.cityManager.market[1].sellersArray[4].price$*.%buyDecrease%}
+buy lumber 14000 %buyAt%
+usetradeitem merchant_fleet
+usetechitem beginner_guidelines
+gosub quest
+settaxrate 0
+label step3
+gosub quest
+sleep 15
+if {$m_city.castle.resource.wood.amount$<24000} goto cycle3
+if {$m_city.castle.resource.stone.amount$<20000} goto cycle3
+upgrade t
+gosub speedup3
+sleep 15
+gosub quest
+upgrade a
+gosub speedup2
+sleep 6
+upgrade a 
+gosub speedup2
+set nullVar $m_city.accountTab.itemInfo.fetchPage(hero_enhancement_materials_package)$
+set fbLinkitem $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%fbLinkitem%!=0} gosub linkAccount
+sleep 240
+create! b
+gosub quest
+upgrade b
+gosub speedup1
+upgrade b
+gosub speedup2
+upgrade b
+gosub speedup2
+upgrade fo
+gosub speedup1
+set junk $m_city.actionFactory.getMailCommands().sendMail(%mailto%,Hi,Quest)$
+label step4
+gosub quest
+if {$m_city.castle.resource.food.amount$<2000} goto cycle4
+if {$m_city.castle.resource.wood.amount$<10000} goto cycle4
+if {$m_city.castle.resource.stone.amount$<6000} goto cycle4
+if {$m_city.castle.resource.iron.amount$<12000} goto cycle4
+upgrade fo
+gosub speedup2
+upgrade r
+teleport %homeState%
+chatwc "Hello"
+gosub quest
+untrain p:{$m_city.cityManager.troop.pikemen$}
+untrain sw:{$m_city.cityManager.troop.swordsmen$}
+waitnoresearch
+gosub create1Sawmill
+tech ms:2
+gosub create1Sawmill
+usetechitem beginner_guidelines
+usetechitem beginner_guidelines
+waitnoresearch
+gosub create1Sawmill
+tech ms:3
+gosub create1Sawmill
+usetechitem primary_guidelines
+waitnoresearch
+gosub create1Sawmill
+tech ms:4
+gosub create1Sawmill
+usetechitem intermediate_guidelines
+waitnoresearch
+gosub create1Sawmill
+gosub quest
+set nullVar $m_city.accountTab.itemInfo.fetchPage(hero_enhancement_materials_package)$
+set fbLinkitem $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%fbLinkitem%!=0} gosub linkAccount
+gosub quest
+goto exitAccbuilder
+label linkAccount
+echo "Checking for account link with Facebook"
+set nullVar $m_city.accountTab.itemInfo.fetchPage(package_for_lords)$
+set lordsItem $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%lordsItem%!=0} useitem package_for_lords
+set nullVar $m_city.accountTab.itemInfo.fetchPage(hero_enhancement_materials_package)$
+set fbLinkitem $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%fbLinkitem%!=0} useitem hero_enhancement_materials_package
+set nullVar $m_city.accountTab.itemInfo.fetchPage(newbies_package)$
+set newbItem $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%newbItem%!=0} useitem newbies_package
+sleep 3
+completequests routine
+set nullVar $m_city.accountTab.itemInfo.fetchPage(junior_medal_box)$
+set jMedalbox $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%jMedalbox%!=0} useitem junior_medal_box
+gosubreturn
+label quest
+sleep 3
+completequests routine
+gosubreturn
+label speedup1
+sleep 3
+usebuilditem beginner_guidelines
+completequests routine
+gosubreturn
+label speedup2
+sleep 3
+usebuilditem primary_guidelines
+completequests routine
+gosubreturn
+label speedup3
+sleep 3
+usebuilditem intermediate_guidelines
+completequests routine
+gosubreturn
+label cycle1
+set nullVar $m_city.accountTab.itemInfo.fetchPage(minor_bonus_reward)$
+set minBon $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%minBon%!=0} useitem minor_bonus_reward
+set nullVar $m_city.accountTab.itemInfo.fetchPage(minor_resources_reward)$
+set minRes $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%minRes%!=0} useitem minor_resources_reward
+gosub quest
+goto step1
+label cycle2
+set nullVar $m_city.accountTab.itemInfo.fetchPage(minor_bonus_reward)$
+set minBon $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%minBon%!=0} useitem minor_bonus_reward
+set nullVar $m_city.accountTab.itemInfo.fetchPage(minor_resources_reward)$
+set minRes $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%minRes%!=0} useitem minor_resources_reward
+gosub quest
+settaxrate 0
+goto step2
+label cycle3
+echo "Now you should do facebook visits if u can"
+set nullVar $m_city.accountTab.itemInfo.fetchPage(minor_bonus_reward)$
+set minBon $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%minBon%!=0} useitem minor_bonus_reward
+set nullVar $m_city.accountTab.itemInfo.fetchPage(minor_resources_reward)$
+set minRes $m_city.accountTab.itemInfo.itemsArray[0].count$
+set nullVar $m_city.accountTab.itemInfo.fetchPage(lesser_bonus_reward)$
+set lBon $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%lBon%!=0} useitem lesser_bonus_reward
+set nullVar $m_city.accountTab.itemInfo.fetchPage(lesser_resources_reward)$
+set lRes $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%lRes%!=0} useitem lesser_resources_reward
+gosub quest
+goto step3
+label cycle4
+set nullVar $m_city.accountTab.itemInfo.fetchPage(lesser_bonus_reward)$
+set lBon $m_city.accountTab.itemInfo.itemsArray[0].count$
+set nullVar $m_city.accountTab.itemInfo.fetchPage(medium_bonus_reward)$
+set mBon $m_city.accountTab.itemInfo.itemsArray[0].count$
+set nullVar $m_city.accountTab.itemInfo.fetchPage(greater_bonus_reward)$
+set gBon $m_city.accountTab.itemInfo.itemsArray[0].count$
+set nullVar $m_city.accountTab.itemInfo.fetchPage(lesser_resources_reward)$
+set lRes $m_city.accountTab.itemInfo.itemsArray[0].count$
+set nullVar $m_city.accountTab.itemInfo.fetchPage(medium_resources_reward)$
+set mRes $m_city.accountTab.itemInfo.itemsArray[0].count$
+set nullVar $m_city.accountTab.itemInfo.fetchPage(greater_resources_reward)$
+set gRes $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%lBon%!=0} useitem lesser_bonus_reward 
+if {%lRes%!=0} useitem lesser_resources_reward
+if {%mBon%!=0} useitem medium_bonus_reward
+if {%mRes%!=0} useitem medium_resources_reward
+if {%gBon%!=0} useitem greater_bonus_reward
+if {%gRes%!=0} useitem greater_resources_reward
+gosub quest
+goto step4
+label res
+set nullVar $m_city.accountTab.itemInfo.fetchPage(lesser_bonus_reward)$
+set lBon $m_city.accountTab.itemInfo.itemsArray[0].count$
+set nullVar $m_city.accountTab.itemInfo.fetchPage(medium_bonus_reward)$
+set mBon $m_city.accountTab.itemInfo.itemsArray[0].count$
+set nullVar $m_city.accountTab.itemInfo.fetchPage(greater_bonus_reward)$
+set gBon $m_city.accountTab.itemInfo.itemsArray[0].count$
+set nullVar $m_city.accountTab.itemInfo.fetchPage(lesser_resources_reward)$
+set lRes $m_city.accountTab.itemInfo.itemsArray[0].count$
+set nullVar $m_city.accountTab.itemInfo.fetchPage(medium_resources_reward)$
+set mRes $m_city.accountTab.itemInfo.itemsArray[0].count$
+set nullVar $m_city.accountTab.itemInfo.fetchPage(greater_resources_reward)$
+set gRes $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%lBon%!=0} useitem lesser_bonus_reward 
+if {%lRes%!=0} useitem lesser_resources_reward
+if {%mBon%!=0} useitem medium_bonus_reward
+if {%mRes%!=0} useitem medium_resources_reward
+if {%gBon%!=0} useitem greater_bonus_reward
+if {%gRes%!=0} useitem greater_resources_reward
+gosubreturn
+label wall1
+walldefense tra 100 demo
+completequests routine
+gosubreturn
+label gear1
+gear foot
+gear legs
+gear belts
+gear gauntlets
+gear back
+gear chest
+gear shoulder
+gear head
+gear ring
+gear charm
+gear necklace
+gear shield
+gear weapon
+gosubreturn
+label create1Sawmill
+Create! s
+sleep 3
+settaxrate 0
+set junk $m_city.cityManager.updateResearch()$
+upgrade! s
+sleep 3
+gosubreturn
+label exitAccbuilder
+rereadgoals
+echo "Stage 1 of account builder was successful"

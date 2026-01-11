@@ -1,0 +1,29 @@
+// BORG TOOLKIT - Rapid Item Use (Race Condition)
+// Attempts to use item multiple times before server decrements
+// Change ITEM_ID to your target item
+
+setsilence off
+
+echo ========================================
+echo RAPID ITEM USE - Race Condition
+echo ========================================
+
+// Target item - change this!
+set itemId player.item.speed.1hr
+
+// Rapid fire uses
+useitem $itemId
+useitem $itemId
+useitem $itemId
+useitem $itemId
+useitem $itemId
+useitem $itemId
+useitem $itemId
+useitem $itemId
+useitem $itemId
+useitem $itemId
+
+echo ========================================
+echo 10 rapid uses sent!
+echo Check if more than 1 was consumed
+echo ========================================

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="gd1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+    <linearGradient id="gd2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A0F0A"/>
+      <stop offset="100%" style="stop-color:#0D0705"/>
+    </linearGradient>
+    <linearGradient id="gd3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E90FF"/>
+      <stop offset="100%" style="stop-color:#0D4F8B"/>
+    </linearGradient>
+    <linearGradient id="gd4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#228B22"/>
+      <stop offset="100%" style="stop-color:#006400"/>
+    </linearGradient>
+    <filter id="gl">
+      <feGaussianBlur stdDeviation="2"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="sh">
+      <feDropShadow dx="3" dy="3" stdDeviation="3" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#gd2)"/>
+  <rect x="10" y="10" width="1180" height="780" fill="none" stroke="url(#gd1)" stroke-width="3" rx="5"/>
+
+  <!-- Title -->
+  <rect x="350" y="20" width="500" height="50" fill="url(#gd3)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#sh)"/>
+  <text x="600" y="52" font-family="Georgia, serif" font-size="24" fill="#FFD700" text-anchor="middle" font-weight="bold" filter="url(#gl)">📦 AMF3 PROTOCOL SPECIFICATION</text>
+
+  <!-- Packet Structure -->
+  <g transform="translate(30, 90)">
+    <rect width="550" height="300" fill="url(#gd3)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#sh)"/>
+    <text x="275" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">📡 EVONY PACKET STRUCTURE</text>
+
+    <!-- Packet Diagram -->
+    <rect x="20" y="50" width="510" height="80" fill="#0D1B2A" stroke="#1E90FF" rx="5"/>
+
+    <!-- Length field -->
+    <rect x="25" y="55" width="100" height="70" fill="#4A0082" stroke="#DDA0DD" rx="3"/>
+    <text x="75" y="82" font-family="Arial" font-size="10" fill="#DDA0DD" text-anchor="middle" font-weight="bold">LENGTH</text>
+    <text x="75" y="98" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">4 bytes</text>
+    <text x="75" y="112" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">Big-endian</text>
+
+    <!-- AMF3 Payload -->
+    <rect x="130" y="55" width="400" height="70" fill="#006400" stroke="#90EE90" rx="3"/>
+    <text x="330" y="82" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle" font-weight="bold">AMF3 PAYLOAD</text>
+    <text x="330" y="98" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">Variable length (specified by LENGTH field)</text>
+    <text x="330" y="112" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">Contains: cmd (string) + data (object)</text>
+
+    <!-- Encoding example -->
+    <rect x="20" y="145" width="510" height="140" fill="#0D1B2A" stroke="#87CEEB" rx="5"/>
+    <text x="275" y="165" font-family="Arial" font-size="11" fill="#87CEEB" text-anchor="middle" font-weight="bold">Example: troop.produceTroop</text>
+
+    <text x="30" y="185" font-family="monospace" font-size="9" fill="#DAA520">Raw Hex:</text>
+    <text x="30" y="200" font-family="monospace" font-size="8" fill="#FFFFFF">00 00 00 2F  0A 0B 01  06 23 74 72 6F 6F 70 2E</text>
+    <text x="30" y="212" font-family="monospace" font-size="8" fill="#FFFFFF">70 72 6F 64 75 63 65 54 72 6F 6F 70  0A 0B 01</text>
+    <text x="30" y="224" font-family="monospace" font-size="8" fill="#FFFFFF">06 11 63 61 73 74 6C 65 49 64  04 89 CE 29 ...</text>
+
+    <text x="30" y="248" font-family="monospace" font-size="9" fill="#DAA520">Decoded:</text>
+    <text x="30" y="263" font-family="monospace" font-size="8" fill="#90EE90">{"cmd": "troop.produceTroop", "data": {"castleId": 1335129, "troopType": 6, "num": 6135037}}</text>
+  </g>
+
+  <!-- AMF3 Types -->
+  <g transform="translate(610, 90)">
+    <rect width="560" height="300" fill="url(#gd4)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#sh)"/>
+    <text x="280" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">🔢 AMF3 TYPE MARKERS</text>
+
+    <!-- Type table -->
+    <rect x="15" y="50" width="260" height="235" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="145" y="70" font-family="Arial" font-size="11" fill="#90EE90" text-anchor="middle" font-weight="bold">Primitive Types</text>
+
+    <text x="25" y="90" font-family="monospace" font-size="9" fill="#FFFFFF">0x00 = undefined</text>
+    <text x="25" y="105" font-family="monospace" font-size="9" fill="#FFFFFF">0x01 = null</text>
+    <text x="25" y="120" font-family="monospace" font-size="9" fill="#FFFFFF">0x02 = false</text>
+    <text x="25" y="135" font-family="monospace" font-size="9" fill="#FFFFFF">0x03 = true</text>
+    <text x="25" y="150" font-family="monospace" font-size="9" fill="#FFD700">0x04 = integer (U29)</text>
+    <text x="25" y="165" font-family="monospace" font-size="9" fill="#FFFFFF">0x05 = double (IEEE 754)</text>
+    <text x="25" y="180" font-family="monospace" font-size="9" fill="#FFD700">0x06 = string (UTF-8)</text>
+    <text x="25" y="195" font-family="monospace" font-size="9" fill="#FFFFFF">0x07 = XML document</text>
+    <text x="25" y="210" font-family="monospace" font-size="9" fill="#FFFFFF">0x08 = date</text>
+    <text x="25" y="225" font-family="monospace" font-size="9" fill="#FFD700">0x09 = array</text>
+    <text x="25" y="240" font-family="monospace" font-size="9" fill="#FFD700">0x0A = object</text>
+    <text x="25" y="255" font-family="monospace" font-size="9" fill="#FFFFFF">0x0B = XML</text>
+    <text x="25" y="270" font-family="monospace" font-size="9" fill="#FFFFFF">0x0C = byte array</text>
+
+    <rect x="285" y="50" width="260" height="235" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="415" y="70" font-family="Arial" font-size="11" fill="#90EE90" text-anchor="middle" font-weight="bold">U29 Encoding</text>
+
+    <text x="295" y="95" font-family="Arial" font-size="9" fill="#FFFFFF">Variable-length integer:</text>
+    <text x="295" y="115" font-family="monospace" font-size="8" fill="#87CEEB">1 byte:  0xxxxxxx (0-127)</text>
+    <text x="295" y="130" font-family="monospace" font-size="8" fill="#87CEEB">2 bytes: 1xxxxxxx 0xxxxxxx</text>
+    <text x="295" y="145" font-family="monospace" font-size="8" fill="#87CEEB">3 bytes: 1xxxxxxx 1xxxxxxx 0xxxxxxx</text>
+    <text x="295" y="160" font-family="monospace" font-size="8" fill="#87CEEB">4 bytes: 1xxxxxxx 1xxxxxxx 1xxxxxxx xxxxxxxx</text>
+
+    <text x="295" y="185" font-family="Arial" font-size="9" fill="#FFFFFF">Example encodings:</text>
+    <text x="295" y="205" font-family="monospace" font-size="8" fill="#FFD700">127    → 0x7F (1 byte)</text>
+    <text x="295" y="220" font-family="monospace" font-size="8" fill="#FFD700">128    → 0x81 0x00 (2 bytes)</text>
+    <text x="295" y="235" font-family="monospace" font-size="8" fill="#FFD700">16383  → 0xFF 0x7F (2 bytes)</text>
+    <text x="295" y="250" font-family="monospace" font-size="8" fill="#FFD700">16384  → 0x81 0x80 0x00 (3 bytes)</text>
+    <text x="295" y="265" font-family="monospace" font-size="8" fill="#FF6B6B">Max U29: 536,870,911</text>
+  </g>
+
+  <!-- Encoding/Decoding -->
+  <g transform="translate(30, 410)">
+    <rect width="550" height="350" fill="#1A0F0A" stroke="url(#gd1)" stroke-width="2" rx="8" filter="url(#sh)"/>
+    <text x="275" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">⚙️ PURE PYTHON IMPLEMENTATION</text>
+
+    <!-- Encoder -->
+    <rect x="15" y="50" width="255" height="280" fill="#0D0705" stroke="#DAA520" rx="5"/>
+    <text x="142" y="70" font-family="Arial" font-size="11" fill="#DAA520" text-anchor="middle" font-weight="bold">AMF3 Encoder</text>
+
+    <text x="25" y="95" font-family="monospace" font-size="8" fill="#87CEEB">def amf3_encode(data):</text>
+    <text x="25" y="110" font-family="monospace" font-size="8" fill="#FFFFFF">  buf = BytesIO()</text>
+    <text x="25" y="125" font-family="monospace" font-size="8" fill="#FFFFFF">  string_refs = []</text>
+    <text x="25" y="140" font-family="monospace" font-size="8" fill="#FFFFFF">  object_refs = []</text>
+    <text x="25" y="155" font-family="monospace" font-size="8" fill="#FFFFFF"></text>
+    <text x="25" y="170" font-family="monospace" font-size="8" fill="#90EE90">  # Type detection</text>
+    <text x="25" y="185" font-family="monospace" font-size="8" fill="#FFFFFF">  if data is None:</text>
+    <text x="25" y="200" font-family="monospace" font-size="8" fill="#FFFFFF">    buf.write(b'\x01')</text>
+    <text x="25" y="215" font-family="monospace" font-size="8" fill="#FFFFFF">  elif isinstance(data, bool):</text>
+    <text x="25" y="230" font-family="monospace" font-size="8" fill="#FFFFFF">    buf.write(b'\x03' if data</text>
+    <text x="25" y="245" font-family="monospace" font-size="8" fill="#FFFFFF">              else b'\x02')</text>
+    <text x="25" y="260" font-family="monospace" font-size="8" fill="#FFFFFF">  elif isinstance(data, int):</text>
+    <text x="25" y="275" font-family="monospace" font-size="8" fill="#FFFFFF">    buf.write(b'\x04')</text>
+    <text x="25" y="290" font-family="monospace" font-size="8" fill="#FFFFFF">    write_u29(buf, data)</text>
+    <text x="25" y="305" font-family="monospace" font-size="8" fill="#FFFFFF">  elif isinstance(data, str):</text>
+    <text x="25" y="320" font-family="monospace" font-size="8" fill="#FFFFFF">    write_string(buf, data)</text>
+
+    <!-- Decoder -->
+    <rect x="280" y="50" width="255" height="280" fill="#0D0705" stroke="#DAA520" rx="5"/>
+    <text x="407" y="70" font-family="Arial" font-size="11" fill="#DAA520" text-anchor="middle" font-weight="bold">AMF3 Decoder</text>
+
+    <text x="290" y="95" font-family="monospace" font-size="8" fill="#87CEEB">def amf3_decode(data):</text>
+    <text x="290" y="110" font-family="monospace" font-size="8" fill="#FFFFFF">  buf = BytesIO(data)</text>
+    <text x="290" y="125" font-family="monospace" font-size="8" fill="#FFFFFF">  string_refs = []</text>
+    <text x="290" y="140" font-family="monospace" font-size="8" fill="#FFFFFF">  object_refs = []</text>
+    <text x="290" y="155" font-family="monospace" font-size="8" fill="#FFFFFF"></text>
+    <text x="290" y="170" font-family="monospace" font-size="8" fill="#90EE90">  # Read type marker</text>
+    <text x="290" y="185" font-family="monospace" font-size="8" fill="#FFFFFF">  marker = buf.read(1)[0]</text>
+    <text x="290" y="200" font-family="monospace" font-size="8" fill="#FFFFFF"></text>
+    <text x="290" y="215" font-family="monospace" font-size="8" fill="#FFFFFF">  if marker == 0x01:</text>
+    <text x="290" y="230" font-family="monospace" font-size="8" fill="#FFFFFF">    return None</text>
+    <text x="290" y="245" font-family="monospace" font-size="8" fill="#FFFFFF">  elif marker == 0x02:</text>
+    <text x="290" y="260" font-family="monospace" font-size="8" fill="#FFFFFF">    return False</text>
+    <text x="290" y="275" font-family="monospace" font-size="8" fill="#FFFFFF">  elif marker == 0x03:</text>
+    <text x="290" y="290" font-family="monospace" font-size="8" fill="#FFFFFF">    return True</text>
+    <text x="290" y="305" font-family="monospace" font-size="8" fill="#FFFFFF">  elif marker == 0x04:</text>
+    <text x="290" y="320" font-family="monospace" font-size="8" fill="#FFFFFF">    return read_u29(buf)</text>
+  </g>
+
+  <!-- Protocol Commands -->
+  <g transform="translate(610, 410)">
+    <rect width="560" height="350" fill="url(#gd3)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#sh)"/>
+    <text x="280" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">📋 PROTOCOL COMMANDS (301+)</text>
+
+    <!-- Command namespaces -->
+    <rect x="15" y="50" width="260" height="280" fill="#0D1B2A" stroke="#1E90FF" rx="5"/>
+    <text x="145" y="70" font-family="Arial" font-size="11" fill="#87CEEB" text-anchor="middle" font-weight="bold">Command Namespaces</text>
+
+    <text x="25" y="95" font-family="monospace" font-size="9" fill="#90EE90">army.*</text>
+    <text x="130" y="95" font-family="Arial" font-size="9" fill="#FFFFFF">Troop movement</text>
+    <text x="25" y="112" font-family="monospace" font-size="9" fill="#90EE90">building.*</text>
+    <text x="130" y="112" font-family="Arial" font-size="9" fill="#FFFFFF">Construction</text>
+    <text x="25" y="129" font-family="monospace" font-size="9" fill="#90EE90">city.*</text>
+    <text x="130" y="129" font-family="Arial" font-size="9" fill="#FFFFFF">City management</text>
+    <text x="25" y="146" font-family="monospace" font-size="9" fill="#90EE90">hero.*</text>
+    <text x="130" y="146" font-family="Arial" font-size="9" fill="#FFFFFF">Hero operations</text>
+    <text x="25" y="163" font-family="monospace" font-size="9" fill="#FFD700">troop.*</text>
+    <text x="130" y="163" font-family="Arial" font-size="9" fill="#FFFFFF">Training (EXPLOITS)</text>
+    <text x="25" y="180" font-family="monospace" font-size="9" fill="#90EE90">alliance.*</text>
+    <text x="130" y="180" font-family="Arial" font-size="9" fill="#FFFFFF">Alliance ops</text>
+    <text x="25" y="197" font-family="monospace" font-size="9" fill="#90EE90">quest.*</text>
+    <text x="130" y="197" font-family="Arial" font-size="9" fill="#FFFFFF">Quests/achievements</text>
+    <text x="25" y="214" font-family="monospace" font-size="9" fill="#FFD700">shop.*</text>
+    <text x="130" y="214" font-family="Arial" font-size="9" fill="#FFFFFF">Item shop (RACE)</text>
+    <text x="25" y="231" font-family="monospace" font-size="9" fill="#90EE90">trade.*</text>
+    <text x="130" y="231" font-family="Arial" font-size="9" fill="#FFFFFF">Market trading</text>
+    <text x="25" y="248" font-family="monospace" font-size="9" fill="#90EE90">mail.*</text>
+    <text x="130" y="248" font-family="Arial" font-size="9" fill="#FFFFFF">Messaging</text>
+    <text x="25" y="265" font-family="monospace" font-size="9" fill="#90EE90">fortifications.*</text>
+    <text x="130" y="265" font-family="Arial" font-size="9" fill="#FFFFFF">Defense</text>
+
+    <text x="145" y="295" font-family="Arial" font-size="10" fill="#FFD700" text-anchor="middle" font-weight="bold">Total: 301+ commands</text>
+    <text x="145" y="315" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">All documented in codebase</text>
+
+    <!-- Key exploitable commands -->
+    <rect x="285" y="50" width="260" height="280" fill="#0D1B2A" stroke="#FF6B6B" rx="5"/>
+    <text x="415" y="70" font-family="Arial" font-size="11" fill="#FF6B6B" text-anchor="middle" font-weight="bold">Exploitable Commands</text>
+
+    <text x="295" y="95" font-family="monospace" font-size="8" fill="#FFD700">troop.produceTroop</text>
+    <text x="295" y="110" font-family="Arial" font-size="8" fill="#FFFFFF">  → INTEGER OVERFLOW</text>
+
+    <text x="295" y="130" font-family="monospace" font-size="8" fill="#FFD700">shop.useItem</text>
+    <text x="295" y="145" font-family="Arial" font-size="8" fill="#FFFFFF">  → RACE CONDITION (parallel)</text>
+
+    <text x="295" y="165" font-family="monospace" font-size="8" fill="#FFD700">city.transportResources</text>
+    <text x="295" y="180" font-family="Arial" font-size="8" fill="#FFFFFF">  → NEGATIVE VALUES</text>
+
+    <text x="295" y="200" font-family="monospace" font-size="8" fill="#FFD700">hero.addPoint</text>
+    <text x="295" y="215" font-family="Arial" font-size="8" fill="#FFFFFF">  → PARAMETER TAMPERING</text>
+
+    <text x="295" y="235" font-family="monospace" font-size="8" fill="#FFD700">quest.getAward</text>
+    <text x="295" y="250" font-family="Arial" font-size="8" fill="#FFFFFF">  → DOUBLE CLAIM (race)</text>
+
+    <text x="295" y="270" font-family="monospace" font-size="8" fill="#FFD700">building.speedUpBuilding</text>
+    <text x="295" y="285" font-family="Arial" font-size="8" fill="#FFFFFF">  → COOLDOWN BYPASS</text>
+
+    <text x="295" y="305" font-family="monospace" font-size="8" fill="#FFD700">army.newArmy (replay)</text>
+    <text x="295" y="320" font-family="Arial" font-size="8" fill="#FFFFFF">  → PACKET REPLAY ATTACK</text>
+  </g>
+
+  <text x="600" y="780" font-family="Arial" font-size="10" fill="#8B8B83" text-anchor="middle">Evony AMF3 Protocol | Pure Python Implementation | 301+ Commands | January 2026</text>
+</svg>

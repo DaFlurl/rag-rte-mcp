@@ -1,0 +1,14 @@
+Goals: = Add to Goals Section: save all! then refresh script, 
+(keep in goals for 3 days)
+
+maintown
+config allowdisableseccode:1
+
+Script: = remove once you run.(Refesh after you save goals) then Run Script.
+
+setsilence true
+set r $m_city.actionFactory.getSecurityCommands().removeSecurityCode()$
+label wait
+sleep $c.lag$
+iferror $%r%.ok$ goto wait
+echo "$%r%.toDebugString()$"

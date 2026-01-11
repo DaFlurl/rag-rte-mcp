@@ -1,0 +1,397 @@
+
+setsilence true
+label start
+sleep 2
+iferror $c.cm.localArmies[0]$ goto start
+set time $c.cm.localArmies[0].reachTime$
+set x {{{%time%-$c.getRawTime()$}/1000}-0.5}
+echo "Waiting for %x% seconds to use strat"
+sleep $c.math.max(0,%x%)$
+set z player.trick.qlbx
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+label wait
+sleep 1
+iferror $%a%.ok$ goto wait
+echo Success, Deez Nutz!!!
+
+=========================================================
+
+
+setsilence true
+label start
+sleep 2
+iferror $c.cm.localArmies[0]$ goto start
+set time $c.cm.localArmies[0].reachTime$
+set x {{{%time%-$c.getRawTime()$}/1000}-0.5}
+echo "Waiting for %x% seconds to use strat"
+sleep $c.math.max(0,%x%)$
+set z player.trick.qlbx
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+label wait
+sleep 1
+iferror $%a%.ok$ goto wait
+echo Success!
+=====================================================================================================
+setsilence true
+label start
+iferror $c.cm.localArmies[0]$ goto start
+set time $c.cm.localArmies[0].reachTime$
+set x {{{%time%-$c.getRawTime()$}/1000}-0.5}
+echo "Waiting for %x% seconds to use strat"
+sleep $c.math.max(0,%x%)$
+set z player.trick.qlbx
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+repeat 5
+label wait
+iferror $%a%.ok$ goto wait
+echo Success, Deez Nutz!!!
+
+
+
+
+
+
+
+======================================================================================================
+
+
+setsilence true
+label start
+sleep 2
+iferror $c.cm.localArmies[0]$ goto start
+set time $c.cm.localArmies[0].reachTime$
+set x {{{%time%-$c.getRawTime()$}/1000}-0.5}
+echo "Waiting for %x% seconds to use strat"
+sleep $c.math.max(0,%x%)$
+set z player.trick.qlbx
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+set a $c.af.getShopCommands().useTrickItem(c.castle.fieldId,c.cm.localArmies[0].armyId,c.getVar(z))$
+label wait
+sleep 1
+iferror $%a%.ok$ goto wait
+echo Success, Deez Nutz!!!
+
+
+
+==============================================================================================================
+
+302,696
+
+// alt feeder
+setarr TgtList "301,699"
+//setarr TgtList "310,706"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% c:100000 f:10000000
+repeat 5
+transport %CurrTgt% c:100000 f:10000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 13
+// alt feeder
+setarr TgtList "301,699"
+//setarr TgtList "310,706"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% c:100000 f:2000000
+repeat 3
+transport %CurrTgt% c:100000 f:2000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 10
+loop
+
+============================================================
+
+303,703
+
+// alt feeder
+setarr TgtList "301,699"
+//setarr TgtList "310,706"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% c:100000 f:10000000
+repeat 5
+transport %CurrTgt% c:100000 f:10000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 13
+// alt feeder
+setarr TgtList "301,699"
+//setarr TgtList "310,706"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% c:100000 f:2000000
+repeat 3
+transport %CurrTgt% c:100000 f:2000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 10
+loop
+
+========================================================
+
+301,703
+
+
+
+
+// alt feeder
+setarr TgtList "302,700"
+//setarr TgtList "310,706"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% c:100000 f:20000000
+repeat 5
+transport %CurrTgt% c:100000 f:20000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 12
+// alt feeder
+setarr TgtList "302,700"
+//setarr TgtList "310,706"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% c:100000 f:2000000
+repeat 3
+transport %CurrTgt% c:100000 f:2000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 6
+loop
+
+
+===============================================
+304
+
+// alt feeder
+setarr TgtList "301,699"
+//setarr TgtList "310,706"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% c:100000 f:10000000
+repeat 5
+transport %CurrTgt% c:100000 f:10000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 13
+// alt feeder
+setarr TgtList "301,699"
+//setarr TgtList "310,706"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% c:100000 f:2000000
+repeat 3
+transport %CurrTgt% c:100000 f:2000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 10
+loop
+
+-------------------------
+299
+
+// alt feeder
+setarr TgtList "300,700"
+//setarr TgtList "310,706"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% c:100000 f:10000000
+repeat 5
+transport %CurrTgt% c:100000 f:10000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 8
+// alt feeder
+setarr TgtList "300,700"
+//setarr TgtList "310,706"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% c:100000 f:2000000
+repeat 3
+transport %CurrTgt% c:100000 f:2000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 6
+loop
+
+
+
+deploy reinforce 301,700 none t:200000 g:2000000000
+deploy reinforce 301,700 none t:200000 g:2000000000
+deploy reinforce 301,700 none t:200000 g:2000000000
+deploy reinforce 301,700 none t:200000 g:2000000000
+deploy reinforce 301,700 none t:200000 w:2000000000
+deploy reinforce 301,700 none t:200000 w:2000000000
+deploy reinforce 301,700 none t:200000 i:2000000000
+deploy reinforce 301,700 none t:200000 i:2000000000
+deploy reinforce 301,700 none t:200000 s:2000000000
+deploy reinforce 301,700 none t:200000 s:2000000000
+loop
+
+deploy reinforce 301,698 none t:200000 g:2000000000
+deploy reinforce 301,698 none t:200000 g:2000000000
+deploy reinforce 301,698 none t:200000 g:2000000000
+deploy reinforce 301,698 none t:200000 g:2000000000
+deploy reinforce 301,698 none t:200000 w:2000000000
+deploy reinforce 301,698 none t:200000 w:2000000000
+deploy reinforce 301,698 none t:200000 i:2000000000
+deploy reinforce 301,698 none t:200000 i:2000000000
+deploy reinforce 301,698 none t:200000 s:2000000000
+deploy reinforce 301,698 none t:200000 s:2000000000
+loop
+
+
+deploy reinforce 299,700 none t:250000 g:2500000000
+deploy reinforce 299,700 none t:250000 g:2500000000
+deploy reinforce 299,700 none t:250000 g:2500000000
+deploy reinforce 299,700 none t:250000 g:2500000000
+deploy reinforce 299,700 none t:250000 w:2500000000
+deploy reinforce 299,700 none t:250000 w:2500000000
+deploy reinforce 299,700 none t:250000 i:2500000000
+deploy reinforce 299,700 none t:250000 i:2500000000
+deploy reinforce 299,700 none t:250000 s:2500000000
+deploy reinforce 299,700 none t:250000 s:2500000000
+loop
+
+Checking for available hero and troops... 
+12:41:17 (LOLA) - deploy - starting march to (301,698) arrival at 12:41:41 with t:200000 carrying g:2000000000 in 00m:24
+12:41:17 (Falana) - transport - starting march to (302,700) arrival at 12:41:33 with t:100000 carrying f:1000000000 in 00m:16
+12:41:17 (LOLA) - deploy - starting march to (301,698) arrival at 12:41:41 with t:200000 carrying w:2000000000 in 00m:24
+12:41:18 (Falana) - transport - starting march to (302,700) arrival at 12:41:34 with t:100000 carrying f:1000000000 in 00m:16
+12:41:18 (LOLA) - deploy - starting march to (301,698) arrival at 12:41:42 with t:200000 carrying w:2000000000 in 00m:24
+12:41:18 (Falana) - transport - starting march to (302,700) arrival at 12:41:34 with t:100000 carrying f:1000000000 in 00m:16
+12:41:19 (Falana) - transport - starting march to (302,700) arrival at 12:41:35 with t:100000 carrying f:1000000000 in 00m:16
+12:41:19 (Jerusalem) - PLAYERBUFFUPDATE > Buff change: PlayerIncArmyAttachBuff: Enhances the army's Attack by 20%.  remain time: 1508d:22h:36m:56
+12:41:19 (Falana) - Insufficient resources. Requires Food 1000049166.
+12:41:19 (Jerusalem) - ITEM UPDATE >  -1 Ivory_Horn, new count 20
+12:41:20 (Falana) - transport - starting march to (302,700) arrival at 12:41:36 with t:100000 carrying f:1000000000 in 00m:16
+12:41:20 (Falana) - Insufficient resources. Requires Food 1000049166.
+12:41:20 (LOLA) - Checking for available hero and troops... 
+
+
+
+
+
+===================================================================================
+
+import flash.events.Event;
+import flash.events.ProgressEvent;
+import autoevony.common.Utils;
+import flash.net.Socket;
+import flash.utils.ByteArray;
+function datahandler(event:ProgressEvent):int{
+c.cm.logMsg("Received message.");
+var sock:Socket = c.m_techLevels.sock;
+var fo:ByteArray = new ByteArray();
+var by:int = sock.bytesAvailable;
+sock.readBytes(fo,0,by);
+var amount:int = fo.readObject();
+if (c.m_techLevels.lastupdate!=c.m_techLevels.lastsold){
+c.m_techLevels.totalsold=0;
+c.m_techLevels.lastsold=c.m_techLevels.lastupdate;
+}
+var total:int=c.m_techLevels.totalsold;
+var price:int =1;
+var extra:int =0;
+for each(var j:int=c.m_techLevels.sellersArray.length;j>0;j--){
+extra+=c.m_techLevels.sellersArray[j-1].amount;
+price=c.m_techLevels.sellersArray[j-1].price;
+if ((extra>=(200000000+(2*total)))||((extra-total)*price>=2*amount)){
+break;
+}
+}
+var am:int = Math.min(int(amount/price),99999999);
+var v:ByteArray = new ByteArray;
+v.writeObject([am,price]);
+sock.writeBytes(v);
+sock.flush();
+c.cm.logMsg("Buying "+String(am)+" at price "+String(price));
+}
+function priceupdater(restype:int):int{
+if (c.m_techLevels.killsignal){
+return 1;
+}
+c.af.getTradeCommands().searchTrades(restype,getCallback("updatehandler"));
+Utils.callLater(100,getCallback("priceupdater"),[restype])
+}
+function updatehandler(evt:Object):int{
+c.m_techLevels.sellersArray=evt.sellersArray;
+c.m_techLevels.lastupdate= new Date().getTime();
+}
+function main(restype:int):int{
+var sock:Socket = new Socket();
+c.m_techLevels.sock=sock;
+c.m_techLevels.lastsold=0;
+c.m_techLevels.totalsold=0;
+sock.connect('127.0.0.1',801);
+sock.addEventListener(ProgressEvent.SOCKET_DATA,setCallback(datahandler));
+setCallback(updatehandler);
+setCallback(priceupdater);
+c.m_techLevels.restype=restype;
+c.m_techLevels.killsignal=false;
+priceupdater(restype);
+}
+echo $m_dyn.main(0)$
+
+
+///////******SECOND PART*********\\\\\\\\\
+
+
+
+function clear():int{
+c.m_techLevels.killsignal=true;
+c.m_techLevels.sock=null;
+}
+echo $m_dyn.clear(
+
+
+
+

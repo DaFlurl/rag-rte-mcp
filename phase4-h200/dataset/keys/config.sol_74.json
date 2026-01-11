@@ -1,0 +1,26 @@
+{
+  "now": {
+    "autoScript": false,
+    "sid": "375",
+    "autoLogin": false,
+    "tokenExpires": NaN,
+    "proxyType": "",
+    "strserverAlias": "Parapet",
+    "proxyPort": "8080",
+    "skypePw": "",
+    "proxyPw": "",
+    "skypeUn": "",
+    "proxyUn": "",
+    "secCode": "",
+    "serverIP": "216.66.17.168",
+    "autoLoginMinTime": "1",
+    "username": "marknewsome1@sky.com",
+    "proxyHost": "",
+    "autoRun": false,
+    "password": "Newsome@1970",
+    "theme": "Classic Blue RE",
+    "loginType": "ev",
+    "server": "cc2",
+    "autoLoginMaxTime": "600"
+  }
+}

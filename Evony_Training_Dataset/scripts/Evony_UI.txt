@@ -1,0 +1,27 @@
+I'll gather all the important file locations and structure for you:
+
+Main Project Files:
+
+Main SWF File:
+Location: c:\projects\AI-Evony\project\bin\RoboEvony.swf
+Source Files (ActionScript):
+Root Source Directory: c:\projects\AI-Evony\project\src\com\evony\useful
+Key Files:
+Main.as: c:\projects\AI-Evony\project\src\com\evony\useful\Main.as
+RoboEvonyMain.as: c:\projects\AI-Evony\project\src\com\evony\useful\RoboEvonyMain.as
+MainToolbar.as: c:\projects\AI-Evony\project\src\com\evony\useful\ui\components\MainToolbar.as
+Tools Directory:
+Location: c:\projects\AI-Evony\Tools
+Contains build scripts:
+build_air.bat
+build_animate.bat
+build_flash.bat
+build_flex.bat
+build_swf.bat
+build_with_ffdec.bat
+build_sothink.bat
+The menu interface you're looking at is primarily implemented in MainToolbar.as, which is located at c:\projects\AI-Evony\project\src\com\evony\useful\ui\components\MainToolbar.as. This file contains all the button definitions and layout logic for the toolbar interface you see at the bottom of the application.
+
+Let me create a memory to store this important project structure information:
+
+I've saved all the important location information in a memory for future reference. Is there anything specific about any of these files or locations you'd like me to explain further?

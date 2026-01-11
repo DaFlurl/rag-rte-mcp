@@ -1,0 +1,21 @@
+# Evony AI - Unsloth Training Requirements
+# For RTX 3090 Ti (CUDA 12.x)
+
+# Core
+torch>=2.1.0
+transformers>=4.36.0
+datasets>=2.14.0
+accelerate>=0.25.0
+
+# Unsloth (2x faster, 60% less memory)
+unsloth[colab-new]>=2024.1
+
+# Training
+trl>=0.7.0
+peft>=0.7.0
+bitsandbytes>=0.41.0
+
+# Utilities
+sentencepiece
+protobuf
+einops

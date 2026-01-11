@@ -1,0 +1,263 @@
+//-- HH hunting via Stats page script for RE v2.0,   by SeriousThisIsMe
+//-- ATTENTION!! -> This script is for RE only (not for AE or UD)
+//-- This script will attempt to identify any non player owned Historic Heroes
+//-- that are still available for capture from NPC's by searching through the hero
+//-- statistics to validate player ownership. The list of names was collected from
+//-- within the game to ensure it is error free. The base stats of the heroes in the
+//-- "prioritizeHeroOrder" option comes from the list at 'www.evonyadvancedguide.com'
+//-- so may contain incorrect or missing data. If you set 'searchForHeroesList' to
+//-- 'all' it will attempt to collect the ownership data for the entire list of heroes
+//-- in descending order sorted by the value type you prefer by entering one of the
+//-- six following options for 'prioritizeHeroOrder'. The available options to choose
+//-- from are...   [  id | alpha | pol | atk | int | lead  ]       If you optionally
+//-- set 'searchForHeroesList' to a list of heroId's instead of searching for all
+//-- HH's, it will always search for them in the order you entered them into the list
+//-- no matter the specified search order. The entered list must have at least 1 valid
+//-- heroId, can contain as many valid heroId's as you choose, and must be in the
+//-- exact format including quotes as this example list...  "33 683 27 7 543  279 17"  
+//-- You can also elect to show more than just the owner's name for heroes that are
+//-- currently owned to include additional player stats (such as: alliance name,
+//-- prestige, honor, star level, rank, title, etc.) if you wish to use this to hunt
+//-- for player owned HH's instead. Just set 'showExtraOwnerInfoIfOwned' to 'true'
+//-- to show the extra info and set it to 'false' to not show the extra info. Turning
+//-- this option on can add 5-7 minutes to the total time needed for this script to
+//-- complete a full search of all HH's which is why it's optional. Finally, you can
+//-- optionally choose to show results only for those HH's owned by a specific player
+//-- by entering a single player's name for the variable 'showResultsForPlayer'. It
+//-- will still search through all of the heroes in order to find any owned by the
+//-- specified player. If you enter an invalid player name it will attempt to default
+//-- to 'all' and continue to work normally. Also, by specifying a player, it will set
+//-- 'showExtraOwnerInfoIfOwned' to 'false' assuming you already know about the player
+//-- and saving time. It will always alert you if it discovers an unowned HH no matter
+//-- the settings entered.
+
+
+set searchForHeroesList "all"
+set prioritizeHeroOrder atk
+set showExtraOwnerInfoIfOwned false
+set showResultsForPlayer "all"
+
+
+//===============DO=NOT=CHANGE=BELOW=THIS=LINE===============
+setsilence true
+set prioritizeHeroOrder $c.getValue(String,%prioritizeHeroOrder%).toLowerCase()$
+if {!{%prioritizeHeroOrder%==id||%prioritizeHeroOrder%==pol||%prioritizeHeroOrder%==atk||%prioritizeHeroOrder%==int||%prioritizeHeroOrder%==lead||%prioritizeHeroOrder%==alpha}} goto errorWithprioritizeHeroOrder
+set showExtraOwnerInfoIfOwned $c.getValue(String,%showExtraOwnerInfoIfOwned%).toLowerCase()$
+if {!{%showExtraOwnerInfoIfOwned%==true||%showExtraOwnerInfoIfOwned%==false}} goto errorShowExtraOwnerInfoIfOwned
+//iferror $c.accountTab.statInfo.heroes.beansArray.length$ goto printHeroStatsError
+set showProgressAt 10
+set TIMEOUT 10
+if {$c.getValue(String,%showResultsForPlayer%).toLowerCase()$==all} goto showResultsForPlayerIsValid
+setarray titlesArr ["Civilian", "Knight", "Baronet", "Baron", "Viscount", "Earl", "Marquis", "Duke", "Furstin", "Prinzessin"]
+set pPageNo 0
+label getNewPlayersPage1
+set pPageNo {%pPageNo%+1}
+label getPlayersPageAgain
+set r $c.af.getRankCommands().getPlayerRank(%showResultsForPlayer%,%pPageNo%,10,2)$
+gosub waitResp %r% %TIMEOUT%
+if {%_0%==0} goto getPlayersPageAgain
+set ii -1
+label getNextPlayer1
+set ii {%ii%+1}
+if {%ii%>=$%_0%.beansArray.length$} goto doneWithThisPlayersPage1
+if {$%_0%.beansArray[{%ii%}].userName$!=%showResultsForPlayer%} goto getNextPlayer1
+echo "--"
+echo "--------------------"
+echo "==> Preparing to look for Historic heroes owned by %showResultsForPlayer% of $%_0%.beansArray[{%ii%}].alliance$ [rank=$%_0%.beansArray[{%ii%}].ranking$] [prestige=$%_0%.beansArray[{%ii%}].prestige$] [honor=$%_0%.beansArray[{%ii%}].honor$] [starset=$%_0%.beansArray[{%ii%}].starlv$] [cities=$%_0%.beansArray[{%ii%}].castleCount$] [title=%titlesArr[{$%_0%.beansArray[{%ii%}].titleId$}]%] [office=$%_0%.beansArray[{%ii%}].office$] [flag=$%_0%.beansArray[{%ii%}].flag$]"
+echo "--------------------"
+set showProgressAt 50
+set showExtraOwnerInfoIfOwned false
+goto showResultsForPlayerIsValid
+label doneWithThisPlayersPage1
+if {%pPageNo%<$%_0%.totalPage$} goto getNewPlayersPage1
+echo "--"
+echo "ATTENTION -- Invalid player name entered for 'showResultsForPlayer'. Player not found in Stats. Please check for any typos or extra spaces. Resetting to the default value 'all' instead."
+echo "--"
+set showResultsForPlayer "all"
+label showResultsForPlayerIsValid
+set showResultsForPlayer $c.getValue(String,%showResultsForPlayer%).toLowerCase()$
+if {!{%showExtraOwnerInfoIfOwned%}} goto skipShowExtraOwnerInfoIfOwned1
+setarr titlesArr "Civilian Knight Baronet Baron Viscount Earl Marquis Duke Furstin Prinzessin"
+label skipShowExtraOwnerInfoIfOwned1
+gosub setHhArr
+set searchForHeroesList $c.getValue(String,%searchForHeroesList%).toLowerCase()$
+if {%searchForHeroesList%==all} goto doAllHeroes
+setarr preSortByArr "%searchForHeroesList%"
+set preSortByArrIndex 0
+label verifyPreSortByArr
+iferror %hhArr[{%preSortByArr[{%preSortByArrIndex%}]%}]% goto errorInPreSortByArr
+iferror %sortByStr% goto createSortByStr
+set sortByStr "%sortByStr% %preSortByArr[{%preSortByArrIndex%}]%"
+goto skipCreateSortByStr
+label createSortByStr
+set sortByStr %preSortByArr[{%preSortByArrIndex%}]%
+label skipCreateSortByStr
+goto skipErrorInPreSortByArr
+label errorInPreSortByArr
+echo "--"
+echo "ATTENTION -- Invalid value of '%preSortByArr[{%preSortByArrIndex%}]%' entered for 'searchForHeroesList' at index %preSortByArrIndex%. Check for any typos or extra spaces."
+echo "-- HeroId does not exist! Skipping invalid value and moving to the next entry."
+echo "--"
+label skipErrorInPreSortByArr
+set preSortByArrIndex {%preSortByArrIndex%+1}
+if {%preSortByArrIndex%<%preSortByArr.length%} goto verifyPreSortByArr
+iferror %sortByStr% goto sortByStrIsEmtpy
+setarr sortByArr "%sortByStr%"
+goto skipSortByStrIsEmtpy
+label sortByStrIsEmtpy
+echo "--"
+echo "ATTENTION -- No valid heroId's entered for 'searchForHeroesList'. Please check for any typos or extra spaces. At least one valid heroId must be entered, or use the short cut keyword 'all' to check for all Historic Heroes. Resetting to the default value 'all' instead."
+echo "--"
+goto doAllHeroes
+label skipSortByStrIsEmtpy
+goto skipDoAllHeroes
+label doAllHeroes
+gosub setSortByArr
+label skipDoAllHeroes
+set ownedHhCount 0
+set unownedHhCount 0
+echo "-- Now searching for %sortByArr.length% Historic Heroes and checking for ownership in Stats..."
+echo "--------------------"
+set index 0
+label checkNextHH
+set id %sortByArr[{%index%}]%
+set heroNameStr "%hhArr[{%id%}]%"
+//getindexof specialHeroIndex specialIds %id%
+gosub checkHeroInStats
+gosub addHeroId
+set index {%index%+1}
+if {!{{%index%|%showProgressAt%}==0}} goto skipPostProgress
+echo "-- Finished checking for %index% out of %sortByArr.length% Historic Heroes. Found %ownedHhCount% owned and %unownedHhCount% unowned so far."
+echo "--------------------"
+label skipPostProgress
+if {%index%<%sortByArr.length%} goto checkNextHH
+goto allDone
+goto exitScript
+label addHeroId
+if {!{%isHeroOwned%}} goto heroIsFree
+set ownedHhCount {%ownedHhCount%+1}
+goto exitAddHeroId
+label heroIsFree
+iferror %unownedHhNameList% goto createUnownedHhNameList
+set unownedHhNameList "%unownedHhNameList% | %heroNameStr%"
+goto skipCreateUnownedHhNameList
+label createUnownedHhNameList
+set unownedHhNameList "---  %heroNameStr%"
+label skipCreateUnownedHhNameList
+set unownedHhCount {%unownedHhCount%+1}
+label exitAddHeroId
+gosubreturn
+goto exitScript
+label checkHeroInStats
+set doubleCheckIndex 0
+setarr heroNameArr "%heroNameStr%"
+set sStr %heroNameArr[0]%
+goto skipNameIsTooCommon
+label nameIsTooCommon
+iferror %heroNameArr[1]% goto skipNameIsTooCommon
+set sStr "%heroNameArr[0]% %heroNameArr[1]%"
+if {%id%==688||%id%==659||%id%==657||%id%==625||%id%==578||%id%==561||%id%==551||%id%==478||%id%==477||%id%==472||%id%==471||%id%==405||%id%==404||%id%==399||%id%==365||%id%==349||%id%==315||%id%==287||%id%==280||%id%==248||%id%==230||%id%==138||%id%==129||%id%==126||%id%==112||%id%==110||%id%==81||%id%==80} set sStr $m_city.getValue(String,%sStr%).replace(,,)$
+label skipNameIsTooCommon
+set hPageNo 0
+label fetchNewPage
+set hPageNo {%hPageNo%+1}
+label getHeroesPageAgain
+set r $c.af.getRankCommands().getHeroRank(%sStr%,%hPageNo%,10,3)$
+gosub waitResp %r% %TIMEOUT%
+if {%_0%==0} goto getHeroesPageAgain
+if {%id%==146} goto nameIsCaesar
+if {$%_0%.totalPage$>5} goto nameIsTooCommon
+label nameIsCaesar
+set i -1
+label getNextHeroInStats
+set i {%i%+1}
+if {%i%>=$%_0%.beansArray.length$} goto doneWithThisPage
+if {$%_0%.beansArray[{%i%}].isHero$!=1} goto getNextHeroInStats
+if {$%_0%.beansArray[{%i%}].name$!=%heroNameStr%} goto getNextHeroInStats
+if {%id%!=424&&%id%!=51&&%id%!=44&&%id%!=26} goto skipDoublesCheck
+if {%doubleCheckIndex%>0} goto skipDoublesCheck
+set doubleCheckIndex {%doubleCheckIndex%+1}
+goto getNextHeroInStats
+label skipDoublesCheck
+set currentHhStats "[$%_0%.beansArray[{%i%}].grade$] [$%_0%.beansArray[{%i%}].management$/$%_0%.beansArray[{%i%}].power$/$%_0%.beansArray[{%i%}].stratagem$]"
+set currentHhOwner "$%_0%.beansArray[{%i%}].kind$"
+if {!{%showExtraOwnerInfoIfOwned%}} goto skipShowExtraOwnerInfoIfOwned
+set pPageNo 0
+label fetchNewPlayersPage
+set pPageNo {%pPageNo%+1}
+label tryPlayersPageAgain
+set r $c.af.getRankCommands().getPlayerRank(%currentHhOwner%,%pPageNo%,10,2)$
+gosub waitResp %r% %TIMEOUT%
+if {%_0%==0} goto tryPlayersPageAgain
+set ii -1
+label getNextPlayerInStats
+set ii {%ii%+1}
+if {!{%ii%<$%_0%.beansArray.length$}} goto doneWithThisPlayersPage
+if {$%_0%.beansArray[{%ii%}].userName$!=%currentHhOwner%} goto getNextPlayerInStats
+echo "==> [%id%] %heroNameStr% %currentHhStats% is owned by %currentHhOwner% of $%_0%.beansArray[{%ii%}].alliance$ [rank=$%_0%.beansArray[{%ii%}].ranking$] [prestige=$%_0%.beansArray[{%ii%}].prestige$] [honor=$%_0%.beansArray[{%ii%}].honor$] [starset=$%_0%.beansArray[{%ii%}].starlv$] [cities=$%_0%.beansArray[{%ii%}].castleCount$] [title=%titlesArr[{$%_0%.beansArray[{%ii%}].titleId$}]%] [office=$%_0%.beansArray[{%ii%}].office$] [flag=$%_0%.beansArray[{%ii%}].flag$]"
+echo "--------------------"
+goto skipDoNotShowExtraOwnerInfoIfOwned
+label doneWithThisPlayersPage
+if {%pPageNo%<$%_0%.totalPage$} goto fetchNewPlayersPage
+echo "=>===>  %heroNameStr% %currentHhStats% is owned by %currentHhOwner%"
+echo "=>===>  ATTENTION - Failed to retrieve extra Owner info from Stats. Please try again manually after the script has completed running."
+echo "--------------------"
+goto skipDoNotShowExtraOwnerInfoIfOwned
+label skipShowExtraOwnerInfoIfOwned
+if {!{%showResultsForPlayer%==all||%showResultsForPlayer%==$c.getValue(String,%currentHhOwner%).toLowerCase()$}} goto skipDoNotShowExtraOwnerInfoIfOwned
+echo "=>===>  [%id%] %heroNameStr% %currentHhStats%  is owned by  %currentHhOwner% "
+echo "--------------------"
+label skipDoNotShowExtraOwnerInfoIfOwned
+set isHeroOwned true
+goto gotHeroInfo
+label doneWithThisPage
+if {%hPageNo%<$%_0%.totalPage$} goto fetchNewPage
+echo "****************[ * * * ATTENTION * * * ]***************"
+echo "* *"
+echo "*****[  Stats show  [%id%] %heroNameStr%  has no owner!  ]*****"
+echo "* *"
+echo "********************************************************"
+set isHeroOwned false
+label gotHeroInfo
+gosubreturn
+goto exitScript
+label setHhArr
+setarray hhArr ["", "AlbertusMagnus", "Aldus Manutius", "Amerigo Vespucci", "Antonio Pierozzi", "Arnold von Winkelried", "Bertrand Du Guesclin", "Chevalier de Bayard", "Donatello", "Francesco Petrarca", "Francis of Assisi", "Geoffrey Chaucer", "George of Antioch", "Gerard de Ridefort", "Hildegard von Bingen", "Ibn Khaldun", "Jan Zizka", "Joan of Arc", "Johannes Faustes", "john gutenberg", "John Wycliffe", "Machiavelli", "Marco Polo", "Martin Luther", "Meister Eckhart", "Michaelangelo", "Nicolaus Copernicus", "Niels Ebbesen", "Paracelsus", "Peter the Hermit", "Peter Abelard", "Raphael", "Roger Bacon", "Roger De Moulins", "Simon De Montfort", "sir william wallace", "Taticius", "Vasco De Gama", "vlad tepes", "Flavius Belisarius", "Gaius Terentius Varro", "Publius Cornelius Scipio", "Lucius Cornelius Sulla", "Marcus Vipsanius Agrippa", "Publius Cornelius Lentulus Sura", "Marcus Tullius Cicero", "Silvius Brabo", "Appianus", "Plutarchus", "Gaius Cornelius Tacitus", "Titus Livius", "Publius Cornelius Lentulus Sura", "Origenes Adamantius", "Maximus of Ephesus", "Lucius Annaeus Seneca", "Iamblichus", "Epictetus", "Hypatia of Alexandria", "Gaius Plinius Caecilius Secund", "Gaius Plinius Secundus", "Publius Ovidius Naso", "Diogenes Laertios", "Lukianos", "Titus Lucretius Carus", "Abbas I", "Abel of Denmark ", "Abu al-Makarim", "Abu Tammam", "Achaeus", "Adam Smith", "Adelard of Bath", "Aeschylus", "Aethelstan", "Afonso de Albuquerque", "Agesilaus II", "Akbar", "Al Hassan Addakhil", "", "Albrecht Durer", "Albrecht von Wallenstein", "Aldus Manutius, the Elder", "Aldus Manutius, the Younger", "Alexander I of Scotland", "Alexander Suvorov", "Alexander the Great", "Alexius I Comnenus", "Alfonso de Borja", "Alix of France", "Al-Shahrazuri", "alvar Nunez Cabeza de Vaca", "Amanieu de Sescars", "", "Amin al-Din Rashid", "Amy Robsart", "Andrea Doria", "Andrea Palladio", "Andreas Vesalius", "Angelo Poliziano", "Anna Comnena", "Anne Boleyn", "Anne of Cleves", "Anno von Sangerhausen", "Antipater", "Antoine de Bourbon", "Antonia Minor", "", "", "Appius Claudius Caudex", "Arbella Stuart", "Archibald Douglas", "Arêtes III, King of the Nabata", "Aristillus", "Aristobulus II, King of Judea", "Aristotle", "", "Artaxerxes II of Persia", "Ashurbanipal", "Askia Muhammad I", "Atia Balba Caesonia", "Aulus Gabinius", "Aurelia Cotta", "Avicenna", "Babur", "Baeda Maryam", "Baldwin I of Constantinople", "Baldwin I of Edessa", "Baldwin I, Count of Hainaut", "Baldwin Iron Arm", "Barbarossa Hayreddin Pasha", "Barnim I, Duke of Pomerania", "Bartholomew Diaz de Novaes", "Bayezid II", "Benjamin Franklin", "Beowulf", "", "Bess of Hardwick", "Bishop Hungar", "Boethius", "Bogislaw IV, Duke of Pomerania", "Bohemond I", "Boris Godunov", "Brian Boru", "Brunhilde", "Brutus", "Burchard von Schwanden", "Burebista (King of Dacia)", "Caesar", "Caligula", "Canute the Great", "Canute VI of Denmark", "Cardinal Richelieu", "Casimir Pulaski", "Castiglione Baldassare", "Catherine de Medici", "Catherine Howard", "Catherine II", "Catherine of Aragon", "Catherine of Siena", "Cesare Borgia", "Changamire", "Charlemagne", "Charles Cornwallis", "Charles III", "Charles IX of France", "Charles Martel", "Charles of Provence", "Charles the Bald", "Charles V", "Charles VII of France", "", "Christopher Columbus", "Christopher I of Denmark", "Cicero", "Claudius", "Constantine XI", "Cosimo de' Medici", "Cristopher Columbus", "Cyrus II", "David Beaton", "David I", "Demetrius of Pharos", "Desiderius Erasmus", "Dhuoda", "Diane de Poitiers", "Dicaearchus", "Diogenes", "Don Quixote", "", "Duncan I", "Duncan II", "Eadred I", "Earl of Shrewsbury", "Edgar the Etheling", "Edith of England", "Edmund I", "Edmund II", "Edward IV of England", "Edward Jenner", "Edward VI", "El Cid", "Eleanor of Aquitaine", "Elizabeth I", "Emma Queen of Franks", "Emperor Taizu", "Empress Matilda", "", "Erastosthenes", "Eric IV of Denmark", "Eric V of Denmark", "Eric VI of Denmark", "Ethan Allen", "Ethelbald", "Ethelwulf", "Euripedes", "Ferdinand II", "Ferdinand II of Aragon", "Ferdinand Magellan", "Fernando Alvarez de Toledo, Duke of Alba", "Ferrarius", "Filippo Brunelleschi", "", "Frances II of France", "", "Francis Bacon", "", "Francis Marion", "", "Fredegund", "Frederick Barbarossa", "Frederick I Barbarossa", "Frederick II, Duke of Swabia", "Frederick III", "Fredrick II", "Fulk III of Anjou", "Gaius Cilnius Maecenas", "", "Gaius Duilus", "Gaius Julius Caesar Augustus", "Gaius Marius", "", "", "Galileo Galilei", "Gaspard de Coligny", "Genghis Khan", "", "Geoffrey II of Anjou", "Geoffrey Plantagenet", "", "George Villiers, 1st Duke of Buckingham", "George Washington", "", "Gerardus Mercator", "Gerhard von Malberg", "Giordano Bruno", "Giovanni Bellini", "Giovanni Bicci de Medici", "Giovanni Paolo", "Giovanni Sforza", "Girart de Roussillon", "Gjergj Kastrioti Skanderbeg", "Godfrid Haraldsson", "Gottfried von Hohenlohe", "Gottschalk of Orbais", "Günther von Wüllersleben", "Guru Nanak", "Hamilcar Barca", "Hammurabi", "Hannibal", "Harald Klak Halfdansson", "Hartmann von Heldrungen", "Hasdrubal the Fair", "Heinrich von Hohenlohe", "Heinrich von Tunna", "Heinrich Walpot von Bassenheim", "Henri I de Bourbon", "Henry Hudson", "Henry II de Bourbon", "Henry II of England", "Henry III", "Henry IV", "Henry Stuart, Lord Darnley", "Henry the Lion", "Henry the Navigator", "Henry the Proud", "Henry the Young King", "Henry V of England", "Henry VI of England", "Henry VI, Holy Roman Emperor", "Henry VII of England", "Henry VIII", "Hermann von Salza", "Hernán Cortés", "Hernando de Soto", "Herodotus", "Hieronymus Bosch", "", "Hincmar of Rheims", "Hippocrates", "Horatio Nelson", "Howard of Effingham", "Huayna Capac", "Humfrid", "Huneberc", "", "", "Ibn al-Haythan", "", "Igor of Kiev", "Isaac Israeli ben Solomon", "Isaac Newton", "Isabella d'Este", "Isabella of Castile", "Jacobus Arminius", "Jacques Cartier", "James Cook", "James Hepburn, Earl of Bothwell", "James II", "James VI of Scotland", "James Wolfe", "Jan Hus", "Jan Karol Chodkiewicz ", "Jan van Eyck", "", "", "Jane Austen", "Jean Boudin", "Jeanne d'Evreux", "", "Joan of England, Queen of Sicily", "Joan of Kent", "Johann Georg Faust", "Johann Sebastian Bach", "Johannes Gutenberg", "", "John Cabot", "John Calvin", "John Carver", "John Hancock", "John Hunyadi", "John Keats", "John Kourkouas", "John Milton", "John of England", "John Paul Jones", "John Sobieski", "John Wesley", "", "Joseph Caro", "Juan Borgia", "Kasimir II, Duke of Pomerania", "Kassia", "Konrad von Feuchtwangen", "Konrad von Thüringen", "Koxinga", "Lacydes of Cyrene", "Lancelot Andrewes", "Leif Ericson", "Leon Battista Alberti", "Leonardo da Vinci", "", "Li Shangyin", "Livy", "Lord Thomas Howard", "Lorenzo de' Medici", "Lothair I", "Lothair III, Holy Roman Emperor", "Louis of Bourbon-Condé", "Louis the German", "Louis the Pious", "Louis the Stammerer", "Louis XI of France", "Louis XIV", "Louis XVI", "Louise of Savoy", "", "", "Lucius Sergius Catilina", "Lucreza Borgia 1", "Lucrezia Borgia 2", "Ludovico Sforza", "Luigi Pulci", "Lupus Servatus", "MacBeth", "", "Malcolm I of Scotland", "Manius Curius Dentatus", "", "Marcus Antonius", "Marcus Junious Brutus", "Marcus Porcius Cato", "", "Margaret Beaufort", "Margaret Douglas", "Margaret of Anjou", "Margaret Tudor", "Marguerite of Navarre", "Marquis de Lafayette", "", "Mary I of Scotland", "Matthew Stewart, 4th Earl of Lennox", "Matthias Corvinus of Hungary", "", "Mehmed II", "", "Mestwin I, Duke of Pomerania ", "Mestwin II, Duke of Pomerania", "Michael Drayton", "", "Michel de Ruyter", "Michelangelo", "Mithridates II", "Miyamoto Musashi", "Moliere", "Montcalm", "Montezuma I", "Muhammad ibn Saud", "Muncimir of Croatia", "Murad II", "Myles Coverdale", "Nadar Shah", "Napoleon Bonaparte", "Nennius", "Niccolo de Conti", "Nicholas the Great", "Nicolaus Copernicus", "", "Ogier the Dane", "Olaudah Equiano", "Olga Prekrasa of Kiev", "Oliver Cromwell", "", "Origen", "Otto I", "Otto von Kerpen", "Ovid", "Pachacuti", "Paolo Uccello", "", "Paul Revere", "Paulina Busa", "Pepin the Short", "", "Peter the Great", "", "", "Petronilla of Aquitaine", "Philaenis of Samos", "Philip V", "Philippe de Commines", "Philochorus", "Photios I of Constantinople", "Pierre Terrail LeVieux Seigneur de Bayard", "Plato", "Pliny the Younger", "", "Pope Urban II", "Poppo von Osterna", "Ptolemy Keraunos", "", "", "Qianlong Emperor", "Queen Anne", "Quintus Fabius Pictor", "Quintus Fulvius Flaccus", "Quintus Servilius Caepio the Younger", "Raimondo Montecuccoli", "Raja Raja Cholal", "Ralpacan", "", "René Descartes", "Richard III of England", "Richard Neville, Earl of Warwick", "Richard Plantagenet, 3rd Duke of York", "Richard the Lionheart", "Robert Blake", "Robert Browne", "Robert Cecil", "Robert Devereux, 2nd Earl of Essex", "Robert Dudley, 1st Earl of Leicester", "Robin Hood", "Rodrigo Borgia", "Roger Ascham", "Roger Bacon 1", "Roger Bacon 2", "", "Rorik of Dorestad", "Rubens", "Rudolph of France", "Rurik", "Sa'adiah ben Yosef Gaon", "Saint Zachary", "Saladin", "Salvestro de' Medici", "Samuel Daniel", "Samuel de Champlain", "Sandro Botticelli 1", "Sandro Botticelli 2", "Sargon", "Saxo Grammaticus", "Sejong the Great", "Sennacherib", "Shah Abbas ", "Shah Jahan", "Shulgi", "", "Simeon I", "", "Sir Agravain", "Sir Edward Coke", "Sir Francis Drake", "Sir Gawain", "Socrates", "Sonni Ali", "Sophocles", "St. Anselm", "St. Bernard of Clairvaux", "St. Bruno of Cologne", "St. Edmund Campion", "St. Edward the Confessor", "Stephen III of Moldavia", "Sviatopolk II of Pomerania", "Tamerlane", "", "Tertullian", "Thaddeus Kosciuszko", "Theodora the Armenian", "Theophilos", "Thomas Campion", "Thomas Cranmer", "Thomas Cromwell", "Thomas Erastus", "Thomas Jefferson", "Thomas Malory", "Thucidides", "Tippu Sultan", "Titian", "", "Tokugawa Ieyasu", "Tupac Inca Yupanqui", "Utu-hengal", "Valdemar I of Denmark", "Valdemar II of Denmark", "", "Vasco NuÃ±ez de Balboa", "Viracocha", "Vlad Dracula", "Vlad the Impaler", "Vladimir I ", "Vladimir the Great", "Voltaire", "Walter Raleigh", "Wartislaw III, Duke of Pomerania", "Willem Barentsz", "William Bradford", "William Cecil", "William Herschel", "William III", "William Pitt the Elder", "William Shakespeare", "William Tell", "William the Conqueror", "William VIII, Duke of Aquitain", "William Wallace", "Wolfgang Amadeus Mozart", "Xenophon", "Yi Jongmu", "Zara Yaqob", "Zheng He", "Zhu Di", "Zhu Gaozhi", "Zhu Jianshen", "Zhu Qizhen", "Zhu Youtang", "Zhu Zhanji", "Zorayda", "Godwin", "Diego Sarmiento de Acuna. Conde de Gondomar", "Pope Gregory XIII", "St. Hildebrand, Pope Gregory VII", "Sir Richard Grenville", "Sir Thomas Gresham", "Hugo Grotius", "Francesco Guicciardini", "Robert Guiscard", "Claude de Lorraine. Duke of Guise", "Francis de Lorraine, 2nd Duke of Guise", "Henry de Lorraine. 3rd Duke of Guise", "Charles de Lorraine, 4th Duke of Guise", "Guru Arjan Dev", "Guru Amar Das", "Gustavus I", "Gustavus II", "John Hampden", "Harold II", "Sir John Hawkins", "Sir Richard Hawkins", "Toyotomi Hideyoshi", "Thomas Hobbes", "Richard Hooker", "Filips van Montmorency, Graaf van Hoorn", "Humayun", "Francisco de Ibarra", "Shah Ismail I Safavi", "Ivan III the Great of Russia", "Ivan IV of Russia", "Alfgifu of Northampton", "Emma of Normandy", "Elfthryth", "Anne of Denmark", "Christina of Markyate", "Jahangir", "Cornelius Otto Jansen", "John Jewel", "John III of Portugal", "Don John of Austria", "St. John of the Cross", "Guiliano della Rovere, Pope Julius II", "Kabir", "Bartolomé de Las Casas", "Hugh Latimer", "William Laud", "Mahmud of Ghazna", "St. Leo IX", "St. Ignatius Loyola", "Malcolm III of Scotland", "Robert Devereux, 3rd Earl of Essex", "Ethelred II the Unready", "Edmund Spenser", "Christopher Marlowe", "Sir Philip Sidney", "Ben Jonson", "Pieter Bruegel (the Elder)", "Michelangelo Merisi da Caravaggio", "Vittore Carpaccio", "Antonio Allegri Correggio", "Lucas Cranach (the Elder)", "Gerard David", "", "Giorgione (Giorgio da Castelfranco)", "El Greco (Domenicos Theotocopoulos)", "Mathis Grunewald", "Frans Hals", "Hans Holbein (the Younger)", "Georges de La Tour", "Lorenzo Lotto", "Andrea Mantegna", "Joachim Patinir", "Nicholas Poussin", "Raphael (Raffaello Sanzio)", "St. Francis Xavier", "Juan Sanchez Cotan", "Il Sassetta (Stefano di Giovanni) ", "Tintoretto (Jacopo Comin Robusti)", "Titian (Tiziano Vecellio)", "Anthony Van Dyck", "Diego de Silva Velázquez", "Paolo Veronese", "Lamoral Egmont, Count of Gavre", "Pope Paul III (Alessandro Farnese)", "Alessandro Farnese, Duke of Parma", "Guy Fawkes", "Stephen Gardiner", "Ferdinand V of Spain (Ferdinand II of Castile)", "John Foxe", "Francis I", "Geoffrey of Monmouth", "Sir Humphrey Gilbert", "Godfrey of Bouillon", "Queen Aliquippa", "Nancy Ward", "Punyaslok Rajmata Ahilyadevi", "Cuhtuhlatah", "Margaret Corbin", "Sybil Ludington", "Ann Bates", "Manuela Beltran", "Deborah Sampson", "Anne-Josèphe Théroigne de Méricourt", "Angelique Brulon", "Wang Cong'er", "Christina of Saxony", "Christina Gyllenstierna", "Anna Rheinholdsdotter Leuhusen", "Granuaile (Gráinne Ní Mháille or Grace O'Malley)", "Mary I of Scotland (Mary Queen of Scots)", "Chand Bibi", "Gao Guiying", "Hannah Duston", "Charlotte Stanley, Countess of Derby", "Mary Read", "Queen Nanny of the Maroons", "Anne Hutchinson", "Rani Rudrama Devi"]
+gosubreturn
+goto exitScript
+label setSortByArr
+if {%prioritizeHeroOrder%==id} setarr sortByArr "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 78 79 80 81 82 83 84 85 86 87 88 89 90 92 93 94 95 96 97 98 99 100 101 102 103 104 107 108 109 110 111 112 113 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 206 207 208 209 210 211 212 213 214 215 216 217 218 219 221 223 225 227 228 229 230 231 232 233 234 236 237 238 241 242 243 245 246 248 249 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 296 297 298 299 300 301 302 305 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 324 325 326 328 329 330 331 332 334 335 336 337 338 339 340 341 342 343 344 345 347 348 349 350 351 352 353 354 355 356 357 358 360 361 362 363 364 365 366 367 368 369 370 371 372 373 376 377 378 379 380 381 382 384 385 387 388 389 391 392 393 394 395 396 398 399 400 402 404 405 406 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 426 427 428 429 431 432 433 434 435 436 438 439 440 442 445 446 447 448 449 450 451 452 453 455 456 457 460 461 462 463 464 465 466 467 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 505 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 523 524 525 526 527 528 529 530 531 532 533 534 535 537 538 539 540 541 543 544 545 546 547 548 549 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569 570 571 572 573 574 575 576 577 578 579 580 581 582 583 584 585 586 587 588 589 590 591 592 593 594 595 596 597 598 599 600 601 602 603 604 605 606 607 608 609 610 611 612 613 614 615 616 617 618 619 620 621 622 623 624 625 626 627 628 629 630 631 632 633 634 635 636 638 639 640 641 642 643 644 645 646 647 648 649 650 651 652 653 654 655 656 657 658 659 660 661 662 663 664 665 666 667 668 669 670 671 672 673 674 675 676 677 678 679 680 681 682 683 684 685 686 687 688 689 690 691 692"
+if {%prioritizeHeroOrder%==pol} setarr sortByArr "116 140 177 40 62 526 72 104 107 175 201 287 311 603 335 33 500 266 431 467 472 497 84 155 176 216 277 42 531 99 146 170 215 604 43 394 423 691 125 160 59 54 429 442 453 501 509 515 523 550 553 141 156 289 52 529 1 172 662 10 370 371 48 568 143 150 167 639 291 377 51 528 554 184 45 74 85 115 120 179 194 664 228 616 593 281 283 316 378 388 457 578 569 94 100 130 153 11 591 288 301 387 535 653 573 494 242 660 55 613 344 21 44 477 76 118 173 178 213 214 58 292 317 365 393 692 476 502 514 539 605 87 109 162 576 188 606 626 229 248 263 590 586 315 379 380 398 24 410 414 415 422 471 508 666 580 572 642 276 331 363 372 75 93 154 190 206 334 347 348 447 455 622 547 620 571 86 3 677 117 138 147 152 168 680 192 198 200 204 209 212 221 231 575 268 278 307 592 337 349 373 392 404 440 445 461 475 480 492 602 518 557 570 608 126 129 163 174 180 195 208 227 257 284 309 310 328 329 332 336 663 342 657 369 23 53 416 669 26 427 466 470 487 490 579 661 103 587 189 607 203 233 255 275 280 624 389 399 30 658 478 517 525 119 166 211 599 286 297 376 28 29 464 4 9 31 36 181 223 237 17 25 35 69 563 564 81 121 148 193 253 364 434 656 503 108 135 681 655 185 627 196 683 264 293 22 395 432 450 631 482 493 34 513 37 560 326 499 70 636 623 597 533 541 38 549 6 32 82 90 630 183 8 39 259 282 285 14 298 302 319 325 19 358 391 632 419 562 67 424 558 47 49 113 249 18 60 98 232 421 648 46 516 532 2 80 5 197 641 267 57 313 314 612 341 354 360 635 640 420 27 439 41 486 527 652 545 50 20 479 133 7 171 611 230 643 254 588 271 294 600 305 651 330 617 355 412 647 435 452 690 462 483 649 540 78 88 645 132 686 13 299 345 577 685 495 71 110 61 265 646 361 95 488 544 102 124 164 56 581 402 66 92 97 674 682 654 218 219 582 243 665 638 258 15 308 312 321 650 621 675 411 448 451 473 629 543 566 122 142 678 241 16 381 672 474 489 496 498 519 673 555 556 101 158 688 609 667 357 418 463 469 491 511 512 63 139 199 96 157 210 12 296 300 340 644 530 546 548 679 236 384 433 436 465 524 83 601 589 446 670 596 73 628 671 687 279 290 610 318 689 408 413 428 615 409 64 565 149 131 324 368 79 618 137 159 161 207 272 274 339 350 351 353 417 625 481 505 507 595 552 559 659 145 182 225 269 400 456 598 583 510 633 574 634 614 65 89 111 123 128 136 676 217 234 238 252 262 619 338 396 460 485 520 521 534 567 112 256 261 438 449 426 594 68 584 186 362 366 367 382 668 356 127 144 202 245 260 320 405 406 538 561 251 551 151 585 270 273 352 385 537 191 246 343 165 684"
+if {%prioritizeHeroOrder%==atk} setarr sortByArr "33 683 27 7 543 279 17 419 491 546 38 39 562 267 420 479 435 110 243 473 12 298 686 102 402 34 560 46 545 61 451 541 314 133 13 499 6 237 196 285 41 16 148 432 249 679 241 199 340 207 351 417 145 396 232 5 271 621 667 83 413 428 353 269 400 65 142 101 149 505 681 259 67 411 678 474 300 670 460 521 36 35 540 299 488 124 258 675 672 519 556 512 596 687 318 238 338 37 685 384 368 79 159 161 595 128 567 68 367 382 202 245 538 551 585 537 191 246 265 544 56 357 236 290 559 89 362 144 343 73 456 151 197 688 210 433 465 408 507 225 123 217 252 485 520 534 261 426 594 584 186 127 320 405 270 273 691 429 553 172 264 358 171 330 164 308 629 158 601 671 64 574 676 668 260 352 385 139 689 625 614 112 256 438 561 160 230 305 122 463 63 565 131 272 659 583 510 366 167 22 361 146 215 8 20 274 313 529 218 554 181 19 2 57 324 497 54 453 370 653 502 3 23 4 223 434 293 32 132 682 381 296 628 137 350 552 143 15 121 558 21 531 515 156 30 31 69 452 71 654 216 394 371 291 283 514 248 147 25 482 513 648 582 136 406 251 18 634 206 328 524 618 234 176 372 509 11 508 14 345 555 598 266 277 170 604 550 377 528 198 180 28 9 253 49 652 50 294 647 469 511 548 409 339 481 182 633 111 619 449 356 523 178 380 47 175 603 442 10 568 228 58 410 200 518 26 60 412 88 644 530 436 262 500 423 213 214 292 192 669 282 649 645 418 157 610 615 666 517 166 564 113 588 589 51 45 578 242 344 52 84 99 662 48 115 162 557 656 503 636 635 577 495 219 489 498 684 526 311 42 501 141 289 150 535 494 55 44 539 24 642 622 547 677 231 309 332 336 53 655 486 321 566 96 165 606 155 120 427 297 623 72 107 467 472 59 194 660 173 331 347 620 490 627 483 581 448 673 177 287 335 125 316 569 692 626 315 572 329 470 525 599 464 563 549 630 421 78 609 602 600 116 140 94 130 153 118 263 590 422 190 455 278 337 480 284 657 579 319 516 527 643 66 312 431 639 85 100 152 168 209 268 185 641 92 496 43 288 195 466 255 326 40 62 1 184 616 281 573 613 317 414 471 348 680 445 492 608 661 658 81 533 632 354 254 651 690 646 674 638 76 373 74 87 203 446 393 379 416 97 665 179 387 476 605 415 349 631 80 439 355 204 103 587 462 95 475 129 310 487 201 664 378 591 229 586 276 93 461 227 607 233 275 280 399 119 395 450 70 82 98 611 457 301 154 138 575 126 369 189 478 183 617 650 593 388 477 365 109 398 86 221 592 392 440 570 163 208 391 640 404 104 307 257 211 135 363 75 571 212 174 389 108 90 580 334 117 342 325 341 360 663 376 576 188 447 624 364 493 302 532 612 286 193 29 597 424"
+if {%prioritizeHeroOrder%==int} setarr sortByArr "63 623 563 330 308 452 309 331 639 184 361 23 293 558 206 28 241 132 297 279 629 305 434 69 648 347 543 4 32 15 482 18 14 9 26 60 564 503 642 197 313 653 121 47 535 40 223 50 326 491 243 12 181 30 25 213 435 110 358 171 20 19 2 513 289 155 177 125 140 1 201 102 264 350 31 11 49 294 548 282 636 655 566 472 483 549 431 641 450 67 8 324 628 137 141 185 81 631 395 597 133 582 88 645 113 467 17 61 148 218 682 296 552 156 345 550 649 157 588 684 287 43 62 420 207 65 357 22 57 381 71 618 234 170 647 469 511 51 495 55 53 421 116 319 533 665 174 29 481 449 656 635 577 24 332 107 627 448 516 527 632 97 617 360 612 16 37 555 528 412 72 66 80 95 249 35 21 634 176 652 111 619 48 44 486 446 183 341 546 402 545 56 654 136 251 253 182 633 10 644 262 589 489 96 581 630 609 643 92 254 690 646 355 70 650 391 302 532 196 285 432 417 515 409 356 418 52 219 311 150 321 692 78 600 312 496 674 439 664 90 325 193 679 384 604 530 436 615 498 42 673 354 651 638 462 611 640 493 473 314 396 371 406 598 339 523 175 423 610 84 179 98 135 108 161 362 99 363 39 267 13 499 561 143 442 568 526 59 153 398 419 686 541 237 505 460 675 238 338 368 215 531 394 266 377 603 662 501 194 173 335 229 560 5 271 370 3 216 58 45 76 74 529 82 211 670 36 494 593 286 298 6 41 351 667 269 400 149 521 258 672 68 246 544 144 405 273 668 260 352 366 167 554 291 524 277 200 557 620 118 168 288 281 393 415 457 301 388 477 365 221 212 663 376 188 7 479 83 85 100 378 591 119 189 75 559 456 131 54 509 569 268 275 280 199 300 127 500 414 46 678 556 685 191 178 455 616 471 27 145 413 428 142 124 519 318 245 538 551 236 290 151 520 584 186 270 553 172 64 160 214 242 130 573 317 387 476 129 310 276 227 233 399 369 109 392 334 34 596 382 265 112 165 580 488 101 146 103 487 571 342 38 367 202 585 272 344 572 416 208 257 117 683 340 353 259 474 299 512 537 73 225 485 426 320 691 429 689 614 256 659 274 497 514 372 228 518 292 669 547 606 316 626 94 590 373 203 605 204 475 461 607 478 86 592 163 404 307 389 447 624 364 451 232 159 252 380 666 126 104 79 343 123 438 445 87 379 162 621 411 540 465 408 217 534 261 594 574 510 248 578 539 120 209 195 466 255 492 658 93 687 128 89 158 671 676 625 463 453 502 283 508 599 464 613 587 586 576 385 147 440 139 410 115 329 278 608 570 595 122 565 660 525 422 190 284 661 154 562 681 567 688 210 433 230 337 657 579 680 349 138 575 507 601 231 164 152 517 166 622 677 480 348 192 490 470 602 180 336 263 427 33 198 315 328 583 424"
+if {%prioritizeHeroOrder%==lead} setarr sortByArr "543 279 435 110 133 491 243 102 408 148 419 249 546 196 285 267 541 237 562 420 402 545 432 473 314 686 560 479 683 499 241 67 431 197 213 207 65 417 436 338 629 649 505 271 340 330 308 264 679 396 362 300 290 165 521 258 259 299 675 238 670 351 667 413 298 525 69 358 321 460 269 400 544 100 559 678 556 428 124 519 318 265 101 474 512 232 621 361 305 384 161 368 662 672 83 199 236 553 596 488 411 540 132 313 653 181 45 172 202 681 75 293 636 324 218 149 616 210 623 121 223 171 552 143 167 456 691 429 463 570 164 434 350 628 137 533 370 685 146 514 422 513 682 296 156 529 115 18 381 554 291 301 145 584 270 160 497 452 558 206 11 234 170 107 176 150 561 68 246 405 273 668 260 352 366 524 378 127 191 245 551 520 186 382 272 225 485 426 320 274 373 343 502 385 348 482 88 550 71 618 253 182 371 144 131 585 252 654 515 216 367 353 451 438 217 128 507 472 582 634 175 394 509 159 534 140 251 84 215 531 538 537 648 155 641 113 345 528 72 391 406 277 221 151 112 73 689 614 256 659 475 86 123 465 248 687 158 625 453 122 433 230 583 111 523 99 266 594 574 510 565 567 141 157 619 409 607 595 184 26 647 555 633 153 233 228 79 563 535 289 125 294 548 467 357 469 511 652 356 604 640 598 526 603 501 335 200 500 162 261 89 671 688 601 309 331 639 297 347 564 177 287 116 481 449 332 92 442 568 372 283 508 198 282 615 214 242 518 676 642 412 339 486 262 82 85 503 645 44 489 418 292 669 547 666 147 139 410 328 588 495 325 610 494 579 655 577 96 498 557 344 284 656 173 76 635 66 136 219 530 74 539 231 192 180 566 627 589 630 194 620 590 622 677 336 185 95 692 626 94 517 549 97 496 98 118 178 142 130 572 483 527 581 312 660 421 448 690 650 600 673 606 316 278 166 490 427 319 609 651 288 415 414 471 476 203 599 464 329 470 602 263 674 354 578 680 201 632 643 646 638 179 281 455 573 317 195 255 492 613 608 661 337 657 480 315 183 70 78 90 466 658 190 254 229 477 376 227 445 209 450 631 395 446 355 423 363 398 377 393 457 388 365 268 387 204 461 120 665 64 439 163 80 462 605 404 87 379 587 349 617 664 663 591 275 280 310 487 342 611 593 399 109 103 93 586 447 126 168 189 369 307 440 575 326 276 208 478 592 138 58 6 392 152 211 416 380 174 257 212 119 580 571 576 154 360 341 493 108 188 389 624 612 193 302 117 532 286 334 135 569 81 59 63 23 28 4 32 15 14 9 60 47 40 50 12 30 25 20 19 2 1 31 49 8 17 61 43 62 22 57 51 55 53 24 16 37 35 21 48 56 10 644 52 42 39 13 5 3 36 41 7 54 46 27 34 38 104 33 597 684 29 516 311 129 364 424"
+if {%prioritizeHeroOrder%==alpha} setarr sortByArr "64 65 66 67 68 69 70 71 72 73 74 75 76 1 78 79 2 80 81 659 82 83 84 85 605 86 87 88 89 90 3 92 93 94 645 95 96 678 97 674 98 682 99 691 100 608 677 101 654 102 103 104 634 4 47 107 108 109 110 111 112 113 5 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 618 131 630 132 133 6 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 685 159 160 161 587 162 163 164 165 166 167 168 688 7 681 609 680 170 171 628 172 584 173 174 611 175 176 671 177 178 179 676 180 181 182 183 184 655 576 185 61 614 186 8 188 189 190 191 192 193 194 195 627 196 197 198 199 639 200 607 201 606 202 203 204 56 206 207 208 209 210 211 626 212 213 214 215 216 662 217 218 219 599 39 221 582 9 223 585 664 225 10 601 641 227 228 229 230 231 232 233 234 49 236 237 238 58 59 40 241 686 242 243 11 245 665 246 12 248 249 643 636 13 251 252 253 638 254 255 256 257 258 259 667 260 575 261 262 683 616 263 589 588 264 590 591 660 265 266 687 267 642 268 593 269 270 271 272 273 274 586 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 14 296 297 298 299 300 619 581 600 301 302 57 55 305 15 307 651 308 309 310 311 603 604 312 313 610 314 315 316 317 318 319 320 321 16 324 325 326 646 17 328 329 330 331 18 332 334 335 336 663 19 592 337 338 613 612 339 340 341 342 343 344 345 20 347 348 650 617 349 350 351 352 353 354 657 355 356 357 358 360 361 362 363 644 364 365 366 367 368 369 370 371 372 373 635 54 42 376 377 378 379 380 62 381 382 21 621 384 624 385 675 22 387 388 389 45 43 391 672 392 393 394 395 396 23 398 684 689 640 399 400 53 402 24 404 405 406 25 408 409 632 410 411 412 413 414 415 416 417 418 419 669 420 421 422 647 423 26 424 27 426 427 428 429 431 52 432 433 434 435 436 656 28 438 439 440 30 442 29 445 446 447 448 449 450 451 631 452 453 48 577 658 455 456 457 44 51 41 60 670 460 668 461 690 462 463 464 465 466 467 692 31 648 469 598 470 471 472 473 474 475 476 477 625 478 583 479 480 481 32 482 483 33 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 602 502 503 46 505 34 507 508 509 510 666 594 629 579 595 580 35 511 512 513 514 515 516 517 518 649 578 623 615 622 661 519 520 673 521 36 523 524 525 526 527 528 529 530 597 531 532 533 652 534 535 653 50 63 537 596 538 539 540 541 37 543 544 633 545 38 546 547 548 549 550 679 551 552 553 554 555 556 620 557 558 559 560 561 562 563 564 565 566 567 568 569 570 571 572 573 574"
+gosubreturn
+goto exitScript
+label waitResp
+set _starttime $c.getRawTime()$
+label waitRespStart
+iferror {$%_1%.ok$} goto respWait
+gosubreturn %_1%
+label respWait
+if {$c.getRawTime()$>{%_starttime%+%_2%*1000}} gosubreturn 0
+sleep 0.1
+goto waitRespStart
+goto exitScript
+label errorWithprioritizeHeroOrder
+echo "--ERROR  'prioritizeHeroOrder' can only be set to one of the following: [ id | alpha | pol | atk | int | lead ] -"
+goto exitScript
+label errorShowExtraOwnerInfoIfOwned
+echo "--ERROR  'showExtraOwnerInfoIfOwned' can only be set to one of the following: [ true | false ] -"
+goto exitScript
+label allDone
+echo "--------------------"
+echo "Finished searching through stats and found a total of %unownedHhCount% possibly unowned Historic Heroes."
+iferror %unownedHhNameList% goto skipUnownedHhNameList
+echo "Found the following possibly unowned Historic Heroes listed below..."
+echo %unownedHhNameList%
+label skipUnownedHhNameList
+echo "--------------------"
+label exitScript
+setsilence false
+

@@ -1,0 +1,1212 @@
+[
+  {
+    "instruction": "What topics are covered in A1-GettingStarted.md?",
+    "input": "",
+    "output": "The A1-GettingStarted.md document covers: Getting Started, The specimen, Launching on Linux, Launching on Windows, Launching on macOS, Troubleshooting, I'm having trouble importing `termmines`, There is no Debugger icon in my Tool Chest, There is no Debug / Launch icon in the global toolbar, There is no **gdb** option in the launch drop-down"
+  },
+  {
+    "instruction": "What topics are covered in A2-UITour.md?",
+    "input": "",
+    "output": "The A2-UITour.md document covers: A Tour of the Debugger, The Debugger Tool, Toolbar, Windows, Controlling the Target, Troubleshooting, The listings are not in sync, i.e., they do not move together., The listings seem to move together, but their contents differ., There is no step button., I can step, but I don't see the effects in the Terminal window."
+  },
+  {
+    "instruction": "What topics are covered in A3-Breakpoints.md?",
+    "input": "",
+    "output": "The A3-Breakpoints.md document covers: Using Breakpoints, Breakpoints, Examining Minesweeper Board Setup, Set the Breakpoints, Toggling the Breakpoints, Importing `libc`, Capturing the Random Seed, Locating the Mine Placement Algorithm, Exercise: Diagram the Mines, Optional Exercise: Replicate the Boards (Forward Engineering)"
+  },
+  {
+    "instruction": "What topics are covered in A4-MachineState.md?",
+    "input": "",
+    "output": "The A4-MachineState.md document covers: Examining Machine State: Memory, Registers, and Variables, Machine State, Patching, The Dynamic Listing, Cache Status Indication, Address Tracking, Module / Region Indicator, Go To, Compare, Exercise: Reverse Engineer the Board"
+  },
+  {
+    "instruction": "What topics are covered in A5-Navigation.md?",
+    "input": "",
+    "output": "The A5-Navigation.md document covers: Navigation, Coordinates, Trace Tabs, Threads, Stack, Exercise: Name the Function, Time, Sparse vs. Full Snapshots, Comparing Snapshots, Exercise: Find the Time"
+  },
+  {
+    "instruction": "What topics are covered in A6-MemoryMap.md?",
+    "input": "",
+    "output": "The A6-MemoryMap.md document covers: Memory Map, Regions, Modules, Optional Exercise: Find the Time Surgically, Static Mappings, Moving Knowledge from Dynamic to Static, Exercise: Export and Map `ncurses`, Exercise: Cheat Like the Devs"
+  },
+  {
+    "instruction": "What is the air-config-template.xml configuration for?",
+    "input": "",
+    "output": "The air-config-template.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the air-config.xml configuration for?",
+    "input": "",
+    "output": "The air-config.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the airmobile-config-template.xml configuration for?",
+    "input": "",
+    "output": "The airmobile-config-template.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the airmobile-config.xml configuration for?",
+    "input": "",
+    "output": "The airmobile-config.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What topics are covered in API_REFERENCE.md?",
+    "input": "",
+    "output": "The API_REFERENCE.md document covers: Svony Studio - API Reference, Core Modules, `src.core.config`, `src.core.project`, `src.core.swf_tools`, `src.core.sol_manager`, `src.core.search`, `src.core.patches`, Evony Modules, `src.evony.class_browser`"
+  },
+  {
+    "instruction": "What topics are covered in ARCHITECTURE.md?",
+    "input": "",
+    "output": "The ARCHITECTURE.md document covers: Flash Toolkit Architecture, System Overview, Data Flow, Tool Relationships, File Locations, Integration Points, Svony \u2194 Flash Toolkit, In Svony codebase:, Read account data, Analyze game client"
+  },
+  {
+    "instruction": "What topics are covered in AUTOEVONY_VS_CLIENT_ANALYSIS.md?",
+    "input": "",
+    "output": "The AUTOEVONY_VS_CLIENT_ANALYSIS.md document covers: \ud83d\udd0d AutoEvony vs EvonyClient - Hidden Features Analysis, \ud83d\udcca EXECUTIVE SUMMARY, \ud83c\udfaf HIDDEN FEATURES IN AUTOEVONY (Not in Client), 1. Random/Wildcard/Joker System, 2. Direct Bean Access (Client Hidden), 3. Script Engine Commands (Client Has NONE), 4. Glitch Detection & Automation, \ud83d\udd10 HIDDEN API COMMANDS, Commands Found in AutoEvony Source (Not Exposed in UI), Hidden Packet Types"
+  },
+  {
+    "instruction": "What topics are covered in B1-RemoteTargets.md?",
+    "input": "",
+    "output": "The B1-RemoteTargets.md document covers: Remote Targets, Module Mapping Caveats, Variation in Configuration, Using `gdbserver` over SSH, Using Trace RMI over SSH, Troubleshooting, Using `gdbserver` manually, Connecting Trace RMI manually, Rube Goldberg Configurations, Exercise: Debug your Friend's `termmines`"
+  },
+  {
+    "instruction": "What topics are covered in B2-Emulation.md?",
+    "input": "",
+    "output": "The B2-Emulation.md document covers: Emulation, P-code Emulation and Caveats, Use Cases, Extrapolation and Interpolation, Stepping Schedules, Exercise: Demonstrate the Cell Numbers, Emulating a Program Image, Initializing Other State, Stubbing External Calls, Wrapping Up"
+  },
+  {
+    "instruction": "What topics are covered in B4-Modeling.md?",
+    "input": "",
+    "output": "The B4-Modeling.md document covers: P-code Modeling, Modeling the Environment, Modeling by Java Callbacks, Modeling by Sleigh Semantics, Modeling by Structured Sleigh, Modeling System Calls, Using Custom Userop Libraries, Modeling Arithmetic Operations, The Model, Mapping the Model"
+  },
+  {
+    "instruction": "What does BATTLE_MECHANICS.md document?",
+    "input": "",
+    "output": "The BATTLE_MECHANICS.md file contains Evony battle mechanics documentation including combat formulas, troop effectiveness, and damage calculations."
+  },
+  {
+    "instruction": "What topics are covered in BATTLE_MECHANICS.md?",
+    "input": "",
+    "output": "The BATTLE_MECHANICS.md document covers: Evony Age II - Battle Mechanics, Overview, Combat Formula Foundation, Basic Attack Calculation, Full Combat Formula, Defense Calculation, Troop Combat Statistics, Base Troop Stats (Age II), Combat Priority Order, NPC Battle Data"
+  },
+  {
+    "instruction": "What data does an Evony player account contain?",
+    "input": "",
+    "output": "An Evony player account contains: castles (1 cities), buildings, troops, heroes, resources, research, and more. This data is serialized as JSON in the protocol."
+  },
+  {
+    "instruction": "What building types are in an Evony city?",
+    "input": "",
+    "output": "An Evony city contains buildings with type IDs: [31]. Each building has positionId, status, level, and timing data."
+  },
+  {
+    "instruction": "What data does an Evony player account contain?",
+    "input": "",
+    "output": "An Evony player account contains: castles (1 cities), buildings, troops, heroes, resources, research, and more. This data is serialized as JSON in the protocol."
+  },
+  {
+    "instruction": "What building types are in an Evony city?",
+    "input": "",
+    "output": "An Evony city contains buildings with type IDs: [31]. Each building has positionId, status, level, and timing data."
+  },
+  {
+    "instruction": "What topics are covered in BOT_SCRIPTING.md?",
+    "input": "",
+    "output": "The BOT_SCRIPTING.md document covers: Evony Bot Scripting Guide, Overview, AutoEvony Script Format, Basic Syntax, Core Commands, Variables, Operators, RoboEvony Task System, Task Configuration, Task Priorities"
+  },
+  {
+    "instruction": "What topics are covered in BSimTutorial_Basic_Queries.md?",
+    "input": "",
+    "output": "The BSimTutorial_Basic_Queries.md document covers: Basic BSim Queries , Registering a BSim Database, How to Query a BSim Database, Initiating a BSim Query, The BSim Search Dialog, Exercises, Exercise: Function Identification, Exercise: Changes to the Source Code, Exercise: Cross-architectural Matching, A Remark on Query Thresholds and Indices"
+  },
+  {
+    "instruction": "What topics are covered in BSimTutorial_BSim_Command_Line.md?",
+    "input": "",
+    "output": "The BSimTutorial_BSim_Command_Line.md document covers: BSim Databases from the Command Line , Generating Signature Files, Committing Signature Files, Aside: Creating a Database, Aside: Executable Categories and Function Tags"
+  },
+  {
+    "instruction": "What topics are covered in BSimTutorial_Creating_Database_From_GUI.md?",
+    "input": "",
+    "output": "The BSimTutorial_Creating_Database_From_GUI.md document covers: Creating and Populating a BSim Database from the Ghidra GUI , Creating the Database, Populating the Database"
+  },
+  {
+    "instruction": "What topics are covered in BSimTutorial_Enabling.md?",
+    "input": "",
+    "output": "The BSimTutorial_Enabling.md document covers: Starting Ghidra and Enabling the BSim Plugin:"
+  },
+  {
+    "instruction": "What topics are covered in BSimTutorial_Evaluating_Matches.md?",
+    "input": "",
+    "output": "The BSimTutorial_Evaluating_Matches.md document covers: Evaluating Matches and Applying Information, Exercise: Exploring the Highlights, Exercise: Locking and Unlocking Scrolling, Exercise: Applying Signatures, Exercise: Comparing Callees, Exercise: Multiple Comparisons"
+  },
+  {
+    "instruction": "What topics are covered in BSimTutorial_Exe_Results.md?",
+    "input": "",
+    "output": "The BSimTutorial_Exe_Results.md document covers: From Matching Functions to Matching Executables, Exercise"
+  },
+  {
+    "instruction": "What topics are covered in BSimTutorial_Filters.md?",
+    "input": "",
+    "output": "The BSimTutorial_Filters.md document covers: BSim Filters, Exercise: Filters"
+  },
+  {
+    "instruction": "What topics are covered in BSimTutorial_Ghidra_Command_Line.md?",
+    "input": "",
+    "output": "The BSimTutorial_Ghidra_Command_Line.md document covers: Ghidra Analysis from the Command Line , Importing and Analyzing the Exercise Files"
+  },
+  {
+    "instruction": "What topics are covered in BSimTutorial_Overview_Queries.md?",
+    "input": "",
+    "output": "The BSimTutorial_Overview_Queries.md document covers: Overview Queries, Exercise: Hit Counts and Self-Significance, Exercise: Selections and Queries, Exercise: Vector Hashes"
+  },
+  {
+    "instruction": "What topics are covered in BSimTutorial_Scripting.md?",
+    "input": "",
+    "output": "The BSimTutorial_Scripting.md document covers: Scripting and Visualization, Scripting BSim, Visualizing Features"
+  },
+  {
+    "instruction": "What is the bundle-config.xml configuration for?",
+    "input": "",
+    "output": "The bundle-config.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the bundle-config_1.xml configuration for?",
+    "input": "",
+    "output": "The bundle-config_1.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the bundle-config_10.xml configuration for?",
+    "input": "",
+    "output": "The bundle-config_10.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the bundle-config_11.xml configuration for?",
+    "input": "",
+    "output": "The bundle-config_11.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the bundle-config_12.xml configuration for?",
+    "input": "",
+    "output": "The bundle-config_12.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the bundle-config_13.xml configuration for?",
+    "input": "",
+    "output": "The bundle-config_13.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the bundle-config_14.xml configuration for?",
+    "input": "",
+    "output": "The bundle-config_14.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the bundle-config_15.xml configuration for?",
+    "input": "",
+    "output": "The bundle-config_15.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the bundle-config_16.xml configuration for?",
+    "input": "",
+    "output": "The bundle-config_16.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the bundle-config_2.xml configuration for?",
+    "input": "",
+    "output": "The bundle-config_2.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the bundle-config_3.xml configuration for?",
+    "input": "",
+    "output": "The bundle-config_3.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the bundle-config_4.xml configuration for?",
+    "input": "",
+    "output": "The bundle-config_4.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the bundle-config_5.xml configuration for?",
+    "input": "",
+    "output": "The bundle-config_5.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the bundle-config_6.xml configuration for?",
+    "input": "",
+    "output": "The bundle-config_6.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the bundle-config_7.xml configuration for?",
+    "input": "",
+    "output": "The bundle-config_7.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the bundle-config_8.xml configuration for?",
+    "input": "",
+    "output": "The bundle-config_8.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the bundle-config_9.xml configuration for?",
+    "input": "",
+    "output": "The bundle-config_9.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What topics are covered in CLI_REFERENCE.md?",
+    "input": "",
+    "output": "The CLI_REFERENCE.md document covers: Svony Studio - CLI Reference, Overview, Basic Usage, Global Options, Commands, Project Commands, SWF Commands, SWF to XML, XML to SWF, SOL Commands"
+  },
+  {
+    "instruction": "What is the com.jpexs.decompiler.flash.metainfo.xml configuration for?",
+    "input": "",
+    "output": "The com.jpexs.decompiler.flash.metainfo.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config.xml configuration for?",
+    "input": "",
+    "output": "The compile-config.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-configAIR2.xml configuration for?",
+    "input": "",
+    "output": "The compile-configAIR2.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-configAIR2_1.xml configuration for?",
+    "input": "",
+    "output": "The compile-configAIR2_1.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_1.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_1.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_10.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_10.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_11.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_11.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_12.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_12.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_13.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_13.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_14.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_14.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_15.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_15.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_16.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_16.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_17.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_17.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_18.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_18.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_19.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_19.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_2.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_2.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_20.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_20.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_21.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_21.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_22.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_22.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_23.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_23.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_24.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_24.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_25.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_25.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_26.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_26.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_27.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_27.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_28.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_28.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_29.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_29.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_3.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_3.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_4.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_4.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_5.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_5.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_6.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_6.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_7.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_7.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_8.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_8.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the compile-config_9.xml configuration for?",
+    "input": "",
+    "output": "The compile-config_9.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What topics are covered in complete-system-structure.md?",
+    "input": "",
+    "output": "The complete-system-structure.md document covers: Complete Project Structure, Advanced System Components, Monitoring System (/src/monitoring/), Advanced AI Components (/src/ai/), Enhanced Queue System (/src/queue/), Recovery System (/src/recovery/), Enhanced UI Components (/src/ui/), Configuration System (/src/config/), Integration Guidelines, Best Practices"
+  },
+  {
+    "instruction": "What topics are covered in COMPLETE_FEATURE_MATRIX.md?",
+    "input": "",
+    "output": "The COMPLETE_FEATURE_MATRIX.md document covers: SVONY STUDIO - COMPLETE FEATURE MATRIX AUDIT, 1:1 Verification: Markdown/Diagrams \u2192 Codebase \u2192 GUI, \ud83d\udcca EXECUTIVE SUMMARY, CRITICAL FINDING: Only 31.5% of documented features are accessible in GUI!, \ud83d\udd34 SECTION 1: FFDEC FEATURES (66 Documented \u2192 15 in GUI = 23%), From: docs/FFDEC_GAP_ANALYSIS.md, docs/FFDEC_IMPLEMENTATION_ROADMAP.md, \ud83d\udd34 SECTION 2: SOL MANAGEMENT (18 Documented \u2192 12 in GUI = 67%), From: docs/formats/SOL_FORMAT.md, docs/diagrams/sol_manager_panel.svg, \ud83d\udd34 SECTION 3: PROTOCOL ANALYSIS (22 Documented \u2192 4 in GUI = 18%), From: docs/evony/EVONY_PROTOCOL.md, docs/diagrams/amf_protocol.svg"
+  },
+  {
+    "instruction": "What topics are covered in COMPLETE_FIX_IMPLEMENTATION.md?",
+    "input": "",
+    "output": "The COMPLETE_FIX_IMPLEMENTATION.md document covers: COMPLETE FIX IMPLEMENTATION GUIDE, Every Line of Code to Reach 100% Completion, \ud83d\udea8 CRITICAL: READ FIRST, FIX #1: Import Missing Panels and Widgets, CURRENT CODE (BROKEN):, Lines 40-55 approximately, ... other imports, FIXED CODE:, Add these imports after line 55:, FIX #2: Replace Assets Tab with AssetBrowserPanel"
+  },
+  {
+    "instruction": "What topics are covered in contact-us.md?",
+    "input": "",
+    "output": "The contact-us.md document covers: Contact Us, If you would like to contact us, please send an email to: contact@cybertechniques.net"
+  },
+  {
+    "instruction": "What topics are covered in cuda-config.md?",
+    "input": "",
+    "output": "The cuda-config.md document covers: CUDA Configuration for Multi-GPU Setup (RTX 3090 Ti + Tesla P40), System Configuration, GPU-Specific Settings, config.json"
+  },
+  {
+    "instruction": "What topics are covered in DV_Verband_Deutscher_Virenliebhaber_The_German_Association_of_Virus_Lovers.md?",
+    "input": "",
+    "output": "The DV_Verband_Deutscher_Virenliebhaber_The_German_Association_of_Virus_Lovers.md document covers: Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in EPIC_HH_HUNTER_ACTION_PLAN.md?",
+    "input": "",
+    "output": "The EPIC_HH_HUNTER_ACTION_PLAN.md document covers: Epic HH Hunter - Comprehensive Action Plan, Executive Summary, Source Code Analysis Summary, Key APIs Discovered, Protocol Commands (from `protocol_commands.py`), Map & Field Commands, Report Commands  , Army Commands, Gap Analysis, What EXISTS (from user scripts):"
+  },
+  {
+    "instruction": "What topics are covered in EVONY_COMPLETE_DATA.md?",
+    "input": "",
+    "output": "The EVONY_COMPLETE_DATA.md document covers: Evony Game Data - Complete Reverse Engineering Index, Stage 1: Troop Type IDs, Stage 2: Building Type IDs, Stage 3: Item IDs (Full Inventory), Stage 4: Hero Data, Hero Object Properties, All Heroes by City, Stage 5: Equipment Data, Hero Equipment (from heroes), Stage 6: Colony Data"
+  },
+  {
+    "instruction": "What topics are covered in EVONY_GAME_IDS.md?",
+    "input": "",
+    "output": "The EVONY_GAME_IDS.md document covers: Evony Game IDs - Reverse Engineering Index, Troop Type IDs, Building Type IDs, Building Position IDs, Item IDs, Buff Type IDs, Fortification IDs, Hero Status IDs, Resource Keys, Castle Object Keys"
+  },
+  {
+    "instruction": "What topics are covered in EXTENDING.md?",
+    "input": "",
+    "output": "The EXTENDING.md document covers: \u2b22 Extending Svony Doc Viewer, \ud83d\udcc1 Content Structure, \ud83d\udcc4 Adding a New Document, Step 1: Create the Markdown File, Step 2: Register in Content Mapping, Category Options, \ud83d\udcca Adding a New Diagram, Step 1: Create the SVG File, Step 2: Register in Diagram Info, Step 3: Link to Documents"
+  },
+  {
+    "instruction": "What topics are covered in FAQ.md?",
+    "input": "",
+    "output": "The FAQ.md document covers: Svony Studio - Frequently Asked Questions, General Questions, What is Svony Studio?, Is Svony Studio free?, What platforms are supported?, What are the system requirements?, Installation Questions, Why do I need Java installed?, FFDec is not being detected. What should I do?, How do I update Svony Studio?"
+  },
+  {
+    "instruction": "What topics are covered in FEATURE_CHECKLIST.md?",
+    "input": "",
+    "output": "The FEATURE_CHECKLIST.md document covers: Svony Studio - Feature Checklist (78 Missing Features), Legend, 1. Live Bot Interface (12 Features), 2. Script Editor (10 Features), 3. Army Deployment (14 Features), 4. Hero Management (10 Features), 5. Map & Territory (12 Features), 6. Logging & Chat (10 Features), 7. Inventory & Items (5 Features), 8. Alliance Features (5 Features)"
+  },
+  {
+    "instruction": "What topics are covered in FFDEC_IMPLEMENTATION_ROADMAP.md?",
+    "input": "",
+    "output": "The FFDEC_IMPLEMENTATION_ROADMAP.md document covers: FFDec Feature Analysis & Svony Studio Implementation Roadmap, Executive Summary, Current State Analysis, Svony Studio Current Capabilities, FFDecWrapper Current Methods, IMPLEMENTED \u2705, MISSING \u274c, Gap Analysis: FFDec vs Svony Studio, 1. SWF Analysis & Extraction, 2. Content Editing"
+  },
+  {
+    "instruction": "What topics are covered in FINAL_COMPREHENSIVE_AUDIT.md?",
+    "input": "",
+    "output": "The FINAL_COMPREHENSIVE_AUDIT.md document covers: SVONY STUDIO - FINAL COMPREHENSIVE AUDIT, Enterprise-Grade Project Assessment, \ud83d\udea8 CRITICAL EXECUTIVE SUMMARY, CLAIMED: 95% Complete, ACTUAL: 45-55% Complete, GAP: 40-50%, \ud83d\udcca FEATURE INVENTORY (All 694 Features), Category Breakdown:, \ud83d\udd34 STUB FUNCTIONS IN main.py (CRITICAL), Found 12 Stub/Incomplete Functions:"
+  },
+  {
+    "instruction": "What is the flash-unicode-table.xml configuration for?",
+    "input": "",
+    "output": "The flash-unicode-table.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the flex-config-template.xml configuration for?",
+    "input": "",
+    "output": "The flex-config-template.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the flex-config.xml configuration for?",
+    "input": "",
+    "output": "The flex-config.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What is the framework-config.xml configuration for?",
+    "input": "",
+    "output": "The framework-config.xml is a Flash/Flex configuration file used to configure the ActionScript compiler and runtime settings for Evony."
+  },
+  {
+    "instruction": "What topics are covered in GAPS_AND_FAILSAFES.md?",
+    "input": "",
+    "output": "The GAPS_AND_FAILSAFES.md document covers: Gaps, Failsafes & Action Plan, Current State Analysis, \u2705 What's Working (Svony SOL Manager Pro), \u274c Gaps Identified, Failsafes Implemented, 1. SOL Validation (`swf_studio/validation.py`), Before any operation, For account config files, 2. Auto-Backup (`swf_studio/sol_editor.py`), Automatic backup before any write"
+  },
+  {
+    "instruction": "What data does an Evony player account contain?",
+    "input": "",
+    "output": "An Evony player account contains: castles (1 cities), buildings, troops, heroes, resources, research, and more. This data is serialized as JSON in the protocol."
+  },
+  {
+    "instruction": "What building types are in an Evony city?",
+    "input": "",
+    "output": "An Evony city contains buildings with type IDs: [31]. Each building has positionId, status, level, and timing data."
+  },
+  {
+    "instruction": "What data does an Evony player account contain?",
+    "input": "",
+    "output": "An Evony player account contains: castles (1 cities), buildings, troops, heroes, resources, research, and more. This data is serialized as JSON in the protocol."
+  },
+  {
+    "instruction": "What building types are in an Evony city?",
+    "input": "",
+    "output": "An Evony city contains buildings with type IDs: [31]. Each building has positionId, status, level, and timing data."
+  },
+  {
+    "instruction": "What topics are covered in IMPLEMENTATION_ROADMAP.md?",
+    "input": "",
+    "output": "The IMPLEMENTATION_ROADMAP.md document covers: SVONY STUDIO - IMPLEMENTATION ROADMAP, Complete Code Fixes for 100% Completion, \ud83c\udfaf PHASE 1: CRITICAL IMPORTS (Day 1), Fix 1: Add Missing Imports to main.py, ADD after line 51:, \ud83c\udfaf PHASE 2: FIX STUB FUNCTIONS (Days 1-3), Fix 2: _deobfuscate_swf() - Line 1531, Fix 3: _batch_decompile() - Line 1536, Fix 4: _protocol_sniffer() - Line 1545, Fix 5: _patch_server_url() - Line 1596"
+  },
+  {
+    "instruction": "What topics are covered in index.md?",
+    "input": "",
+    "output": "The index.md document covers: Cyber Techniques, A collaborative exploration, Welcome to the Cyber Techniques website www.cybertechniques.net, Definitions, What is cyber?, What are cyber techniques?, Assembly Language Quick Links, History, Analysis Tools, Archiver Tool"
+  },
+  {
+    "instruction": "What topics are covered in index_1.md?",
+    "input": "",
+    "output": "The index_1.md document covers: History - Groups"
+  },
+  {
+    "instruction": "What topics are covered in index_10.md?",
+    "input": "",
+    "output": "The index_10.md document covers: We start the tutorial by downloading putty, Then use upx to pack the putty executable, Use binwalk to see the contents of the unpacked putty executable, Use binwalk to see the contents of the packed putty executable, It is easy to see how just the packing of the executable alters what contents the program is able to easy extract from the executable<br/>, Below you can see the graphical results of the unpacked putty executable:, Below you can see the graphical results of the packed putty executable:"
+  },
+  {
+    "instruction": "What topics are covered in index_11.md?",
+    "input": "",
+    "output": "The index_11.md document covers: Tool Usage Tutorials"
+  },
+  {
+    "instruction": "What topics are covered in index_2.md?",
+    "input": "",
+    "output": "The index_2.md document covers: Python2.7"
+  },
+  {
+    "instruction": "What topics are covered in index_3.md?",
+    "input": "",
+    "output": "The index_3.md document covers: Malware, What is malware?, Where can I find real malware samples?, Real Samples"
+  },
+  {
+    "instruction": "What topics are covered in index_4.md?",
+    "input": "",
+    "output": "The index_4.md document covers: What is packing?"
+  },
+  {
+    "instruction": "What topics are covered in index_8.md?",
+    "input": "",
+    "output": "The index_8.md document covers: We start the tutorial by downloading putty, Then use upx to pack the putty executable, Use binvis on the unpacked putty executable, Run binvis using the packed putty executable, For the packed putty you should see a result like the following:, For the unpacked putty you should see a result like the following:, It is easy to see how there are differences in the visualizations shown between the packed and unpacked putty executables."
+  },
+  {
+    "instruction": "What topics are covered in index_9.md?",
+    "input": "",
+    "output": "The index_9.md document covers: We start the tutorial by downloading putty, Then use upx to pack the putty executable, Open the unpacked putty executable using the binviz program<br/>, The binviz program has very basic menu options. You can click in the menu to get different windows to be shown or hidden.<br/>, An example of the unpacked putty is shown below:, Below is an example of the packed putty, You can see how there are differences in the visualizations shown between the packed and unpacked putty executables."
+  },
+  {
+    "instruction": "What topics are covered in InstallationGuide.md?",
+    "input": "",
+    "output": "The InstallationGuide.md document covers: Ghidra Installation Guide, Table of Contents, Platforms Supported, Minimum Requirements, Hardware, Software, Installing Ghidra, Installation Notes, Java Notes, Debugger Notes"
+  },
+  {
+    "instruction": "What topics are covered in INSTALLATION_GUIDE.md?",
+    "input": "",
+    "output": "The INSTALLATION_GUIDE.md document covers: Svony Studio - Installation Guide, System Requirements, Minimum Requirements, Recommended Requirements, Required Software, Windows Installation, Step 1: Install Python, Step 2: Install Java, Step 3: Install FFDec, Step 4: Clone/Download Svony Studio"
+  },
+  {
+    "instruction": "What topics are covered in jquery.md?",
+    "input": "",
+    "output": "The jquery.md document covers: jQuery v3.7.1, jQuery License"
+  },
+  {
+    "instruction": "What topics are covered in jqueryUI.md?",
+    "input": "",
+    "output": "The jqueryUI.md document covers: jQuery UI v1.13.2, jQuery UI License"
+  },
+  {
+    "instruction": "What topics are covered in JVS_Janus_Virus_Syndicate.md?",
+    "input": "",
+    "output": "The JVS_Janus_Virus_Syndicate.md document covers: JVS (Janus Virus Syndicate), Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What data does an Evony player account contain?",
+    "input": "",
+    "output": "An Evony player account contains: castles (9 cities), buildings, troops, heroes, resources, research, and more. This data is serialized as JSON in the protocol."
+  },
+  {
+    "instruction": "What building types are in an Evony city?",
+    "input": "",
+    "output": "An Evony city contains buildings with type IDs: [7, 31]. Each building has positionId, status, level, and timing data."
+  },
+  {
+    "instruction": "What data does an Evony player account contain?",
+    "input": "",
+    "output": "An Evony player account contains: castles (9 cities), buildings, troops, heroes, resources, research, and more. This data is serialized as JSON in the protocol."
+  },
+  {
+    "instruction": "What building types are in an Evony city?",
+    "input": "",
+    "output": "An Evony city contains buildings with type IDs: [7, 31]. Each building has positionId, status, level, and timing data."
+  },
+  {
+    "instruction": "What does KEYBOARD_SHORTCUTS.md document?",
+    "input": "",
+    "output": "The KEYBOARD_SHORTCUTS.md file contains Evony encryption key documentation and cryptographic implementation details."
+  },
+  {
+    "instruction": "What topics are covered in KEYBOARD_SHORTCUTS.md?",
+    "input": "",
+    "output": "The KEYBOARD_SHORTCUTS.md document covers: Svony Studio - Keyboard Shortcuts Reference, Overview, Global Shortcuts, File Operations, Edit Operations, View Operations, Project Tree Shortcuts, Script Editor Shortcuts, Navigation, Editing"
+  },
+  {
+    "instruction": "What topics are covered in K_P_V_Team.md?",
+    "input": "",
+    "output": "The K_P_V_Team.md document covers: K.P.V. Team, Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in LineZer0_VX_Team.md?",
+    "input": "",
+    "output": "The LineZer0_VX_Team.md document covers: LineZer0 VX Team, Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in LINE_BY_LINE_AUDIT.md?",
+    "input": "",
+    "output": "The LINE_BY_LINE_AUDIT.md document covers: LINE-BY-LINE AUDIT REPORT, Every File, Every Function, Every Gap, \ud83d\udcc1 FILE INVENTORY, Total Files Analyzed: 78, \ud83d\udd0d MAIN.PY - DETAILED LINE AUDIT, FUNCTION-BY-FUNCTION STATUS, SUMMARY FOR MAIN.PY, \ud83d\udd0d /src/core/ MODULES AUDIT, ffdec_extended.py (1,886 lines), protocol_analyzer.py (578 lines)"
+  },
+  {
+    "instruction": "What topics are covered in Living_Turmoil.md?",
+    "input": "",
+    "output": "The Living_Turmoil.md document covers: Living Turmoil, Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in LT_RSA_Living_Turmoil_Ruthless_Stealth_Angels.md?",
+    "input": "",
+    "output": "The LT_RSA_Living_Turmoil_Ruthless_Stealth_Angels.md document covers: LT/RSA (Living Turmoil / Ruthless Stealth Angels), Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in Mandragora.md?",
+    "input": "",
+    "output": "The Mandragora.md document covers: Mandragora, Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in MASTER_AUDIT_REPORT.md?",
+    "input": "",
+    "output": "The MASTER_AUDIT_REPORT.md document covers: SVONY STUDIO - MASTER AUDIT REPORT, Complete 1:1 Feature Parity Analysis, \ud83d\udea8 EXECUTIVE VERDICT, PROJECT IS **NOT** 95% COMPLETE, The Truth:, \ud83d\udcca COMPLETE FEATURE COUNT, Total Features Identified from Docs/Diagrams: **347**, Harsh Reality:, \ud83d\udcc1 FILE-BY-FILE AUDIT, /main.py (1,732 lines) - Main Application"
+  },
+  {
+    "instruction": "What does MASTER_RESOURCE_INDEX.md document?",
+    "input": "",
+    "output": "The MASTER_RESOURCE_INDEX.md file contains Evony encryption key documentation and cryptographic implementation details."
+  },
+  {
+    "instruction": "What topics are covered in MASTER_RESOURCE_INDEX.md?",
+    "input": "",
+    "output": "The MASTER_RESOURCE_INDEX.md document covers: \ud83c\udfae SVONY STUDIO - MASTER RESOURCE INDEX, Comprehensive Evony Client, RoboEvony, AutoEvony & Bot Automation Reference, \ud83d\udcd1 TABLE OF CONTENTS, \ud83d\udcca EXECUTIVE SUMMARY, Resource Distribution by Drive, Key Resource Categories, \ud83d\udd11 CRITICAL DISCOVERIES, Extracted Encryption Keys (FROM SOURCE CODE), FROM: G:\\Local-Games-Projects\\evony_scripts_collection\\evony_full_decryptor.py, Static Encryption Keys (FROM CRYPTO MODULE)"
+  },
+  {
+    "instruction": "What topics are covered in Matrix.md?",
+    "input": "",
+    "output": "The Matrix.md document covers: Matrix, Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in Metaphase_VX_Team.md?",
+    "input": "",
+    "output": "The Metaphase_VX_Team.md document covers: Metaphase VX Team, Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in Mikees_World.md?",
+    "input": "",
+    "output": "The Mikees_World.md document covers: Mikee's World, Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in Misdirected_Youth.md?",
+    "input": "",
+    "output": "The Misdirected_Youth.md document covers: Misdirected Youth, Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in NoP.md?",
+    "input": "",
+    "output": "The NoP.md document covers: NoP, Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in No_Mercy.md?",
+    "input": "",
+    "output": "The No_Mercy.md document covers: No Mercy, Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in NPC_FARMING.md?",
+    "input": "",
+    "output": "The NPC_FARMING.md document covers: Evony Age II - NPC Farming Guide, Overview, NPC Level Data, NPC Garrison by Level, NPC Loot by Level, Optimal Attack Compositions, Minimum Archer Counts (Zero Loss), RoboEvony Default NPC10 Composition, Standard NPC10 attack composition, Losses per attack (approx)"
+  },
+  {
+    "instruction": "What topics are covered in NuKE.md?",
+    "input": "",
+    "output": "The NuKE.md document covers: NuKE, Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in PERFORMANCE.md?",
+    "input": "",
+    "output": "The PERFORMANCE.md document covers: Svony Studio - Performance Guide, Overview, System Requirements, Minimum vs Recommended, Memory Configuration, Set Java heap for FFDec, Or in config/settings.yaml, Benchmarks, SWF Decompilation Times, Asset Export Times"
+  },
+  {
+    "instruction": "What topics are covered in PERFORMANCE_BENCHMARKS.md?",
+    "input": "",
+    "output": "The PERFORMANCE_BENCHMARKS.md document covers: Svony Studio - Performance Benchmarks, Overview, Test Environment, Hardware Configuration, Test Files, Decompilation Benchmarks, Script Decompilation, Memory Usage, Export Benchmarks, Image Export (PNG)"
+  },
+  {
+    "instruction": "What topics are covered in Phalcon-Skism.md?",
+    "input": "",
+    "output": "The Phalcon-Skism.md document covers: Phalcon-Skism, Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in Power_Empire_Virii_Faction.md?",
+    "input": "",
+    "output": "The Power_Empire_Virii_Faction.md document covers: Power Empire Virii Faction, Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in Power_Heap_Research.md?",
+    "input": "",
+    "output": "The Power_Heap_Research.md document covers: Power Heap Research, Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What data does an Evony player account contain?",
+    "input": "",
+    "output": "An Evony player account contains: castles (2 cities), buildings, troops, heroes, resources, research, and more. This data is serialized as JSON in the protocol."
+  },
+  {
+    "instruction": "What building types are in an Evony city?",
+    "input": "",
+    "output": "An Evony city contains buildings with type IDs: [31]. Each building has positionId, status, level, and timing data."
+  },
+  {
+    "instruction": "What data does an Evony player account contain?",
+    "input": "",
+    "output": "An Evony player account contains: castles (2 cities), buildings, troops, heroes, resources, research, and more. This data is serialized as JSON in the protocol."
+  },
+  {
+    "instruction": "What building types are in an Evony city?",
+    "input": "",
+    "output": "An Evony city contains buildings with type IDs: [31]. Each building has positionId, status, level, and timing data."
+  },
+  {
+    "instruction": "What topics are covered in PVW_Pinoy_Virus_Writers.md?",
+    "input": "",
+    "output": "The PVW_Pinoy_Virus_Writers.md document covers: PVW (Pinoy Virus Writers), Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in QUICK_FIX_IMPLEMENTATION.md?",
+    "input": "",
+    "output": "The QUICK_FIX_IMPLEMENTATION.md document covers: SVONY STUDIO - QUICK FIX IMPLEMENTATION GUIDE, Priority Fixes to Reach 95% Completion, \ud83d\ude80 QUICK FIX #1: Connect AssetBrowserPanel, Step 1: Update main.py imports (line 51), Step 2: Replace _create_assets_tab method (replace lines 593-630), Step 3: Connect asset loading when SWF opens, \ud83d\ude80 QUICK FIX #2: Fix _deobfuscate_swf Stub, Replace lines 1531-1534 with:, \ud83d\ude80 QUICK FIX #3: Fix _batch_decompile Stub, Replace lines 1536-1543 with:"
+  },
+  {
+    "instruction": "What data does an Evony player account contain?",
+    "input": "",
+    "output": "An Evony player account contains: castles (9 cities), buildings, troops, heroes, resources, research, and more. This data is serialized as JSON in the protocol."
+  },
+  {
+    "instruction": "What building types are in an Evony city?",
+    "input": "",
+    "output": "An Evony city contains buildings with type IDs: [1, 2, 4, 6, 7, 21, 23, 24, 25, 26, 27, 29, 31, 32]. Each building has positionId, status, level, and timing data."
+  },
+  {
+    "instruction": "What data does an Evony player account contain?",
+    "input": "",
+    "output": "An Evony player account contains: castles (9 cities), buildings, troops, heroes, resources, research, and more. This data is serialized as JSON in the protocol."
+  },
+  {
+    "instruction": "What building types are in an Evony city?",
+    "input": "",
+    "output": "An Evony city contains buildings with type IDs: [1, 2, 4, 6, 7, 21, 23, 24, 25, 26, 27, 29, 31, 32]. Each building has positionId, status, level, and timing data."
+  },
+  {
+    "instruction": "What topics are covered in Rabid.md?",
+    "input": "",
+    "output": "The Rabid.md document covers: Rabid, Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in README.md?",
+    "input": "",
+    "output": "The README.md document covers: Directives, Variables, Example"
+  },
+  {
+    "instruction": "What topics are covered in README_1.md?",
+    "input": "",
+    "output": "The README_1.md document covers: JPEXS Free Flash Decompiler Library, Main application, Library JAR file, Dependencies, Basic library usage, SWF modification, HTML documentation, Authors and contact, Licenses + Acknowledgments"
+  },
+  {
+    "instruction": "What topics are covered in README_10.md?",
+    "input": "",
+    "output": "The README_10.md document covers: Debugger Ghidra Class, Table of Contents, Beginner Material, Advanced Material"
+  },
+  {
+    "instruction": "What topics are covered in README_11.md?",
+    "input": "",
+    "output": "The README_11.md document covers: SwiftDemangler"
+  },
+  {
+    "instruction": "What topics are covered in README_12.md?",
+    "input": "",
+    "output": "The README_12.md document covers: Utility"
+  },
+  {
+    "instruction": "What topics are covered in README_13.md?",
+    "input": "",
+    "output": "The README_13.md document covers: BSim Tutorial"
+  },
+  {
+    "instruction": "What topics are covered in README_2.md?",
+    "input": "",
+    "output": "The README_2.md document covers: GhidraDev Eclipse Plugin, Table of Contents, Change History, Minimum Requirements, Optional Requirements, Installing, Manual Installation in Eclipse (offline), Manual Installation in Eclipse (online), Automatic Installation through Ghidra, GhidraDev Features"
+  },
+  {
+    "instruction": "What topics are covered in README_3.md?",
+    "input": "",
+    "output": "The README_3.md document covers: pyEvony"
+  },
+  {
+    "instruction": "What topics are covered in README_4.md?",
+    "input": "",
+    "output": "The README_4.md document covers: EvonyMarketBreaker, Using python to run it:-, Using the executable file to run it:-, Proper settings for running the app:-"
+  },
+  {
+    "instruction": "What topics are covered in README_5.md?",
+    "input": "",
+    "output": "The README_5.md document covers: PyGhidra, Installation and Setup, API, pyghidra.start(), do things, pyghidra.started(), pyghidra.open_program(), pyghidra.run_script(), pyghidra.launcher.PyGhidraLauncher(), Handling Package Name Conflicts"
+  },
+  {
+    "instruction": "What topics are covered in README_6.md?",
+    "input": "",
+    "output": "The README_6.md document covers: EvonyScoutingApp, Download the zip file in release folder,extract it and run scoutapp.exe to use it., CHANGELOG"
+  },
+  {
+    "instruction": "What topics are covered in README_7.md?",
+    "input": "",
+    "output": "The README_7.md document covers: EvonyAmuletSpinnet, Using python to run it:-, Using the executable file to run it:-, Proper settings for running the app:-"
+  },
+  {
+    "instruction": "What topics are covered in README_8.md?",
+    "input": "",
+    "output": "The README_8.md document covers: AutoIt-Ripper, What is this, References, Supported AutoIt versions, Ready:, Unknown:, Installation, Running, EA05 for v3.00+, EA06 for v3.26+, Omitting `version` or passing None will try both versions"
+  },
+  {
+    "instruction": "What topics are covered in README_9.md?",
+    "input": "",
+    "output": "The README_9.md document covers: PyGhidra"
+  },
+  {
+    "instruction": "What topics are covered in Ready_Rangers_Liberation_Front.md?",
+    "input": "",
+    "output": "The Ready_Rangers_Liberation_Front.md document covers: Ready Rangers Liberation Front, Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in requirements-cuda.md?",
+    "input": "",
+    "output": "The requirements-cuda.md document covers: Core AI and Deep Learning with CUDA support, Computer Vision, Audio Processing, Numerical Processing, UI and System, Performance Optimization, Memory Management, Optional Development Tools"
+  },
+  {
+    "instruction": "What topics are covered in requirements.md?",
+    "input": "",
+    "output": "The requirements.md document covers: Core AI and Deep Learning, Computer Vision, Audio Processing, Numerical Processing, User Interface, System Integration, Additional Utilities, Optional but recommended for better performance, Remove the above line if you don't have a NVIDIA GPU"
+  },
+  {
+    "instruction": "What topics are covered in RESOURCES.md?",
+    "input": "",
+    "output": "The RESOURCES.md document covers: Evony Age II - External Resources, Overview, GitHub Repositories, Protocol & Framework Implementations, Bot Source Code, NeatBot Scripts, sonya75 Complete Collection, Related Game Server Source, Bot Downloads & Documentation, RoboEvony"
+  },
+  {
+    "instruction": "What topics are covered in Rioters.md?",
+    "input": "",
+    "output": "The Rioters.md document covers: Rioters, Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in ROADMAP_TO_100_PERCENT.md?",
+    "input": "",
+    "output": "The ROADMAP_TO_100_PERCENT.md document covers: ROADMAP TO 100% COMPLETION, Week-by-Week Implementation Plan, \ud83d\udcc5 PHASE 1: CRITICAL FIXES (Week 1), Day 1-2: Import Missing Components, Day 3-4: Fix Stub Functions (Part 1), Day 5-7: Fix Stub Functions (Part 2), Week 1 Deliverables:, \ud83d\udcc5 PHASE 2: MENU COMPLETION (Week 2), Day 1-3: FFDec Menu Items, Day 4-5: Replace Asset Menu Items"
+  },
+  {
+    "instruction": "What topics are covered in ROBOEVONY_FEATURE_ANALYSIS.md?",
+    "input": "",
+    "output": "The ROBOEVONY_FEATURE_ANALYSIS.md document covers: ROBOEVONY REFERENCE UI ANALYSIS, Complete Feature Extraction from Screenshots, \ud83d\udcf8 SCREENSHOT ANALYSIS, Screenshot 1: Main Bot Interface with Script Editor & Troop Table, Screenshot 2: New Army Dialog, Screenshot 3: Hero Equipment & Historic Heroes, Screenshot 4: Map View & Building List, Screenshot 5: Different Theme (Gold) & Transport Mission, Screenshot 6: Hero Management Panel, Screenshot 7: Empty Hero Recruitment Table"
+  },
+  {
+    "instruction": "What topics are covered in RSA_Ruthless_Stealth_Angels.md?",
+    "input": "",
+    "output": "The RSA_Ruthless_Stealth_Angels.md document covers: RSA (Ruthless Stealth Angels), Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in RVM_Russian_Virus_Makers.md?",
+    "input": "",
+    "output": "The RVM_Russian_Virus_Makers.md document covers: RVM (Russian Virus Makers), Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in Sector_Infector_Inc.md?",
+    "input": "",
+    "output": "The Sector_Infector_Inc.md document covers: Sector Infector Inc., Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in SECURITY.md?",
+    "input": "",
+    "output": "The SECURITY.md document covers: Svony Studio - Security Guide, Overview, Credential Security, Password Handling, BAD - Plaintext storage, GOOD - Environment variable, GOOD - Encrypted config, SOL File Security, cevony_sol.sol contents, Config File Protection"
+  },
+  {
+    "instruction": "What topics are covered in SG_Stealth_Group_former_SG_World_Wide.md?",
+    "input": "",
+    "output": "The SG_Stealth_Group_former_SG_World_Wide.md document covers: SG (Stealth Group; former SG World Wide), Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in ShadowVX_Group.md?",
+    "input": "",
+    "output": "The ShadowVX_Group.md document covers: ShadowVX Group, Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in Shadow_Dancer_Team.md?",
+    "input": "",
+    "output": "The Shadow_Dancer_Team.md document covers: Shadow Dancer Team, Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in Silicium_Revolte.md?",
+    "input": "",
+    "output": "The Silicium_Revolte.md document covers: Silicium Revolte, Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in Skamwerk_Labs.md?",
+    "input": "",
+    "output": "The Skamwerk_Labs.md document covers: Skamwerk Labs, Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in SLAM.md?",
+    "input": "",
+    "output": "The SLAM.md document covers: SLAM, Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in SMF.md?",
+    "input": "",
+    "output": "The SMF.md document covers: SMF, Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in SOS_Sign_Of_Scream.md?",
+    "input": "",
+    "output": "The SOS_Sign_Of_Scream.md document covers: SOS (Sign Of Scream), Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in SPS_Scientific_Programming_Society.md?",
+    "input": "",
+    "output": "The SPS_Scientific_Programming_Society.md document covers: SPS (Scientific Programming Society), Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in STREAMLINED_PIPELINE.md?",
+    "input": "",
+    "output": "The STREAMLINED_PIPELINE.md document covers: STREAMLINED SWF DEVELOPMENT & TESTING PIPELINE, Real-Time Edit \u2192 Build \u2192 Test \u2192 Debug Workflow, \ud83d\udd04 THE IDEAL WORKFLOW, \ud83d\udee0\ufe0f PIPELINE COMPONENTS TO IMPLEMENT, Component 1: Auto-Unpack System, Component 2: Hot Reload Editor, Component 3: Auto-Repack System, Component 4: Live Test Launcher, Component 5: Debug Proxy, Component 6: Script Debugger"
+  },
+  {
+    "instruction": "What topics are covered in SVAT_Special_Viruses_And_Trojans.md?",
+    "input": "",
+    "output": "The SVAT_Special_Viruses_And_Trojans.md document covers: SVAT (Special Viruses And Trojans), Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in SVL_Slovak_Virus_Laboratories.md?",
+    "input": "",
+    "output": "The SVL_Slovak_Virus_Laboratories.md document covers: SVL (Slovak Virus Laboratories), Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in SVS_Seoul_Virus_Society.md?",
+    "input": "",
+    "output": "The SVS_Seoul_Virus_Society.md document covers: SVS (Seoul Virus Society), Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in TAVC_Tula_Anti_Viral_Club.md?",
+    "input": "",
+    "output": "The TAVC_Tula_Anti_Viral_Club.md document covers: TAVC (Tula Anti & Viral Club), Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in TDJ_The_Diabolical_Judges.md?",
+    "input": "",
+    "output": "The TDJ_The_Diabolical_Judges.md document covers: TDJ (The Diabolical Judges), Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What data does an Evony player account contain?",
+    "input": "",
+    "output": "An Evony player account contains: castles (1 cities), buildings, troops, heroes, resources, research, and more. This data is serialized as JSON in the protocol."
+  },
+  {
+    "instruction": "What building types are in an Evony city?",
+    "input": "",
+    "output": "An Evony city contains buildings with type IDs: [1, 2, 3, 4, 5, 6, 7, 21, 22, 23, 25, 26, 27, 29, 30, 31, 32]. Each building has positionId, status, level, and timing data."
+  },
+  {
+    "instruction": "What topics are covered in The_Codebreakers.md?",
+    "input": "",
+    "output": "The The_Codebreakers.md document covers: The Codebreakers, Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in The_Kefrens.md?",
+    "input": "",
+    "output": "The The_Kefrens.md document covers: The Kefrens, Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in The_Trinity.md?",
+    "input": "",
+    "output": "The The_Trinity.md document covers: The Trinity, Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What data does an Evony player account contain?",
+    "input": "",
+    "output": "An Evony player account contains: castles (1 cities), buildings, troops, heroes, resources, research, and more. This data is serialized as JSON in the protocol."
+  },
+  {
+    "instruction": "What building types are in an Evony city?",
+    "input": "",
+    "output": "An Evony city contains buildings with type IDs: [31]. Each building has positionId, status, level, and timing data."
+  },
+  {
+    "instruction": "What data does an Evony player account contain?",
+    "input": "",
+    "output": "An Evony player account contains: castles (1 cities), buildings, troops, heroes, resources, research, and more. This data is serialized as JSON in the protocol."
+  },
+  {
+    "instruction": "What building types are in an Evony city?",
+    "input": "",
+    "output": "An Evony city contains buildings with type IDs: [31]. Each building has positionId, status, level, and timing data."
+  },
+  {
+    "instruction": "What topics are covered in TI_Technological_Illusions.md?",
+    "input": "",
+    "output": "The TI_Technological_Illusions.md document covers: TI (Technological Illusions), Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in TNN_The_Narkotic_Network.md?",
+    "input": "",
+    "output": "The TNN_The_Narkotic_Network.md document covers: TNN (The Narkotic Network ), Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in TPVO_OVEL_Taiwan_Power_Virus_Organisation_Organization_of_Virus_Examination_Lab.md?",
+    "input": "",
+    "output": "The TPVO_OVEL_Taiwan_Power_Virus_Organisation_Organization_of_Virus_Examination_Lab.md document covers: TPVO/OVEL (Taiwan Power Virus Organisation/Organization of Virus Examination Lab, Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in TridenT.md?",
+    "input": "",
+    "output": "The TridenT.md document covers: TridenT, Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in Trinity.md?",
+    "input": "",
+    "output": "The Trinity.md document covers: Trinity, Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in TROOP_DATA.md?",
+    "input": "",
+    "output": "The TROOP_DATA.md document covers: Evony Age II - Troop Data Reference, Overview, Troop Statistics, Complete Troop Table, Training Requirements, Building Requirements, Resource Costs, Training Time Formulas, Base Training Time, Queue Capacity"
+  },
+  {
+    "instruction": "What topics are covered in TROUBLESHOOTING.md?",
+    "input": "",
+    "output": "The TROUBLESHOOTING.md document covers: Svony Studio - Troubleshooting Guide, Quick Diagnostics, Run Diagnostic Check, Application Issues, Application Won't Start, Application Freezes, Slow Performance, FFDec Issues, FFDec Not Found, FFDec Crashes During Decompilation"
+  },
+  {
+    "instruction": "What topics are covered in UCSI_Ultimate_Chaos_Security_International.md?",
+    "input": "",
+    "output": "The UCSI_Ultimate_Chaos_Security_International.md document covers: UCSI (Ultimate Chaos Security International), Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in USER_GUIDE.md?",
+    "input": "",
+    "output": "The USER_GUIDE.md document covers: Svony Studio - User Guide, Table of Contents, Getting Started, System Requirements, Required External Tools, Optional Tools, Installation, 1. Extract Svony Studio, 2. Navigate to directory, 3. Run the launcher"
+  },
+  {
+    "instruction": "What topics are covered in V-Zone_Virus_Zone.md?",
+    "input": "",
+    "output": "The V-Zone_Virus_Zone.md document covers: V-Zone (Virus Zone), Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in VBB_Virus_Bits_Bytes.md?",
+    "input": "",
+    "output": "The VBB_Virus_Bits_Bytes.md document covers: VBB (Virus Bits & Bytes), Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in VDV_Verband_Deutscher_Virenliebhaber_The_German_Association_Of_Virus_Lovers.md?",
+    "input": "",
+    "output": "The VDV_Verband_Deutscher_Virenliebhaber_The_German_Association_Of_Virus_Lovers.md document covers: VDV (Verband Deutscher Virenliebhaber (The German Association of Virus Lovers)), Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in Viper_Viral_Inclined_Programming_Experts_Group.md?",
+    "input": "",
+    "output": "The Viper_Viral_Inclined_Programming_Experts_Group.md document covers: Viper (Viral Inclined Programming Experts Group), Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in ViroGenic_Junkies.md?",
+    "input": "",
+    "output": "The ViroGenic_Junkies.md document covers: ViroGenic Junkies, Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in Virulent_Graffiti.md?",
+    "input": "",
+    "output": "The Virulent_Graffiti.md document covers: Virulent Graffiti, Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What does VOFCA_Virus_and_Other_Fine_Code_Authors.md document?",
+    "input": "",
+    "output": "The VOFCA_Virus_and_Other_Fine_Code_Authors.md file contains Evony encryption key documentation and cryptographic implementation details."
+  },
+  {
+    "instruction": "What topics are covered in VOFCA_Virus_and_Other_Fine_Code_Authors.md?",
+    "input": "",
+    "output": "The VOFCA_Virus_and_Other_Fine_Code_Authors.md document covers: VOFCA (Virus and Other Fine Code Authors), Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in VXI_VX_India.md?",
+    "input": "",
+    "output": "The VXI_VX_India.md document covers: VXI (VX India), Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What data does an Evony player account contain?",
+    "input": "",
+    "output": "An Evony player account contains: castles (10 cities), buildings, troops, heroes, resources, research, and more. This data is serialized as JSON in the protocol."
+  },
+  {
+    "instruction": "What building types are in an Evony city?",
+    "input": "",
+    "output": "An Evony city contains buildings with type IDs: [1, 2, 4, 6, 7, 21, 23, 24, 25, 26, 27, 28, 29, 31, 32]. Each building has positionId, status, level, and timing data."
+  },
+  {
+    "instruction": "What data does an Evony player account contain?",
+    "input": "",
+    "output": "An Evony player account contains: castles (10 cities), buildings, troops, heroes, resources, research, and more. This data is serialized as JSON in the protocol."
+  },
+  {
+    "instruction": "What building types are in an Evony city?",
+    "input": "",
+    "output": "An Evony city contains buildings with type IDs: [1, 2, 4, 6, 7, 21, 23, 24, 25, 26, 27, 28, 29, 31, 32]. Each building has positionId, status, level, and timing data."
+  },
+  {
+    "instruction": "What topics are covered in WAVE_World_Association_of_Virus_Enhancement.md?",
+    "input": "",
+    "output": "The WAVE_World_Association_of_Virus_Enhancement.md document covers: WAVE (World Association of Virus Enhancement), Origin, Description, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in WhatsNew.md?",
+    "input": "",
+    "output": "The WhatsNew.md document covers: Ghidra: NSA Reverse Engineering Software, What's New in Ghidra 11.3, The not-so-fine print: Please Read!, PyGhidra, Visual Studio Code, Debugger, Emulator, Source File Information, Function Graph, String Translation and Text Search"
+  },
+  {
+    "instruction": "What data does an Evony player account contain?",
+    "input": "",
+    "output": "An Evony player account contains: castles (9 cities), buildings, troops, heroes, resources, research, and more. This data is serialized as JSON in the protocol."
+  },
+  {
+    "instruction": "What building types are in an Evony city?",
+    "input": "",
+    "output": "An Evony city contains buildings with type IDs: [1, 2, 4, 7, 21, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]. Each building has positionId, status, level, and timing data."
+  },
+  {
+    "instruction": "What data does an Evony player account contain?",
+    "input": "",
+    "output": "An Evony player account contains: castles (9 cities), buildings, troops, heroes, resources, research, and more. This data is serialized as JSON in the protocol."
+  },
+  {
+    "instruction": "What building types are in an Evony city?",
+    "input": "",
+    "output": "An Evony city contains buildings with type IDs: [1, 2, 4, 7, 21, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]. Each building has positionId, status, level, and timing data."
+  },
+  {
+    "instruction": "What data does an Evony player account contain?",
+    "input": "",
+    "output": "An Evony player account contains: castles (10 cities), buildings, troops, heroes, resources, research, and more. This data is serialized as JSON in the protocol."
+  },
+  {
+    "instruction": "What building types are in an Evony city?",
+    "input": "",
+    "output": "An Evony city contains buildings with type IDs: [1, 2, 4, 5, 6, 7, 21, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]. Each building has positionId, status, level, and timing data."
+  },
+  {
+    "instruction": "What topics are covered in Youths_Against_McAfee.md?",
+    "input": "",
+    "output": "The Youths_Against_McAfee.md document covers: Youths Against McAfee, Origin, Description, Magazine, Website, Reference"
+  },
+  {
+    "instruction": "What topics are covered in ZeroGravity.md?",
+    "input": "",
+    "output": "The ZeroGravity.md document covers: ZeroGravity, Origin, Description, Website, Reference"
+  }
+]

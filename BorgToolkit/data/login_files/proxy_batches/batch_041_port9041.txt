@@ -1,0 +1,13 @@
+# Proxy: SOCKS4 127.0.0.1:9041
+# Accounts: 10
+
+seaquest85@yahoo.com:smurf1
+shawn.ermel@yahoo.ca:shawne
+shewolf@citcom.net:Crusader2z991773!
+show_stopper@hotmail.co.uk:shawne
+sidnypearl@yahoo.com:shawne
+simoes134@hotmail.com:z991773Crusaderz2!
+simon.tamez@hotmail.com:tamez1291
+simon@small-voices.net:man4T33
+sixandclimbing69@gmail.com:293,631
+skinnerindustries@yahoo.com:shaggin78

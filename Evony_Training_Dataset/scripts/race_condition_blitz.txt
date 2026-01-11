@@ -1,0 +1,119 @@
+// BORG TOOLKIT - Race Condition Blitz
+// 100 rapid item uses with ZERO delays
+// Maximum chance to trigger race condition
+
+setsilence off
+echo ========================================
+echo RACE CONDITION BLITZ - 100 USES
+echo NO DELAYS - MAXIMUM SPEED
+echo ========================================
+
+// CHANGE THIS to your target item
+set item player.item.speed.1hr
+
+// BLITZ START - 100 rapid uses
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+useitem $item
+
+echo ========================================
+echo 100 USES FIRED
+echo Check inventory - how many consumed?
+echo ========================================

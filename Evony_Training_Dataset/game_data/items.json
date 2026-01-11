@@ -1,0 +1,83 @@
+{
+  "items": {
+    "speedup_5m": {
+      "id": 1,
+      "name": "5-Minute Speed Up",
+      "category": "speedup",
+      "value": 300
+    },
+    "speedup_15m": {
+      "id": 2,
+      "name": "15-Minute Speed Up",
+      "category": "speedup",
+      "value": 900
+    },
+    "speedup_30m": {
+      "id": 3,
+      "name": "30-Minute Speed Up",
+      "category": "speedup",
+      "value": 1800
+    },
+    "speedup_1h": {
+      "id": 4,
+      "name": "1-Hour Speed Up",
+      "category": "speedup",
+      "value": 3600
+    },
+    "speedup_8h": {
+      "id": 5,
+      "name": "8-Hour Speed Up",
+      "category": "speedup",
+      "value": 28800
+    },
+    "food_10k": {
+      "id": 101,
+      "name": "Food Package (10k)",
+      "category": "resource",
+      "resource": "food",
+      "amount": 10000
+    },
+    "food_100k": {
+      "id": 102,
+      "name": "Food Package (100k)",
+      "category": "resource",
+      "resource": "food",
+      "amount": 100000
+    },
+    "wood_10k": {
+      "id": 111,
+      "name": "Wood Package (10k)",
+      "category": "resource",
+      "resource": "wood",
+      "amount": 10000
+    },
+    "wood_100k": {
+      "id": 112,
+      "name": "Wood Package (100k)",
+      "category": "resource",
+      "resource": "wood",
+      "amount": 100000
+    },
+    "stone_10k": {
+      "id": 121,
+      "name": "Stone Package (10k)",
+      "category": "resource",
+      "resource": "stone",
+      "amount": 10000
+    },
+    "iron_10k": {
+      "id": 131,
+      "name": "Iron Package (10k)",
+      "category": "resource",
+      "resource": "iron",
+      "amount": 10000
+    },
+    "gold_1k": {
+      "id": 141,
+      "name": "Gold Package (1k)",
+      "category": "resource",
+      "resource": "gold",
+      "amount": 1000
+    }
+  }
+}

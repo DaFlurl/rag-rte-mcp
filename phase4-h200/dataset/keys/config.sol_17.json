@@ -1,0 +1,26 @@
+{
+  "now": {
+    "proxyPort": "8080",
+    "skypePw": "",
+    "proxyPw": "",
+    "skypeUn": "",
+    "secCode": "",
+    "proxyUn": "",
+    "autoLoginMaxTime": "10",
+    "username": "barryronnie1965@hotmail.com",
+    "serverIP": "216.66.17.168",
+    "proxyType": "",
+    "proxyHost": "",
+    "loginType": "ev",
+    "password": "nathan2002",
+    "autoScript": true,
+    "autoRun": true,
+    "theme": "Default Grey RE",
+    "server": "cc2",
+    "autoLogin": true,
+    "sid": "375",
+    "tokenExpires": NaN,
+    "autoLoginMinTime": "0",
+    "strserverAlias": "Parapet"
+  }
+}

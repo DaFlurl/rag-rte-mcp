@@ -1,0 +1,239 @@
+##### Troop Traing Goals ##### 
+set troopName s
+set split false
+set stdProd 100,100,100,100
+set trainingActive true 
+######################
+
+###   THIS SCRIPT NEEDS ROBOEVONY v1.45 OR LATER
+###   Script also expect all your barracks to be lvl 10
+
+###   The lines above should go in to each city goals and determine in order
+###   set troopName a
+###   		what troops should be trained in this city using the normal troop type abrevations 
+###   set split false
+###   		if the population should be split over all barracks (split true) 
+###   		or if the full city population should be put as one big batch in a single barrack (split false)
+###   set stdProd 100,100,100,100
+###   		what the production rate should be set to after troop training been done
+###   		percent food,wood,stone,iron production 
+###   trainingActive true
+###		this variable should be set to true or flase and decides if the city should be included in
+###		the troop training by this script or not
+ 
+###   The script locates and uses your BEST ATTACK HERO as a traveling trainghero
+###   and train troops in all your cities just by being run from one single city.
+###   All cities must have the above mentioned goal lines and at least 1 open slot in fh for the traveling hero.
+###   Your normnal troop goals should be either deactivated with //, removed or set at levels below your current troop count;
+###   no city should have red lines on the T tab 
+
+
+###   To run the script, all u need is to add this line in one city scrtipt
+
+include allCitiesTroopTraining //<-- Put this line in to one of your city script tabs
+
+
+  
+###    These lines down below (the actual script) should be placed in snippets without any changes
+
+
+[allCitiesTroopTraining]
+### BASIC VALUES AND SETTINGS
+//---------------------------------------------------------------------
+//            allCitiesTroopTraining
+//---------------------------------------------------------------------
+goalcommandwarning false
+set log $c.cm.logMsg(m_dyn.whereIsTroopTrainingActive())$
+setarray troopName ["nn1", "nn2", "wo", "w", "s", "p", "sw", "a", "t", "c", "cata", "b", "r", "cp"]
+setarray qds ["0", "0", "1", "1", "1", "1", "1", "2", "4", "3", "6", "5", "10", "8"]
+setarray troopAlias ["nn1", "nn2", "Workers", "Warriors", "Scouts", "Pikemen", "Swordsmen", "Archers", "Transporters", "Cavalry", "Cataphracts", "Ballistae", "BatteringRam", "Catapults"]
+setarr baseFoodCost "0 0 50 80 120 150 200 300 600 1000 2000 2500 4000 5000"
+setarr baseWoodCost "0 0 150 100 200 500 150 350 1500 600 500 600 6000 5000"
+setarr baseStoneCost "0 0 0 0 0 0 0 0 0 0 0 0 0 1200"
+setarr baseIronCost "0 0 110 150 150 100 400 300 350 500 2500 1800 1500 8000"
+setarr reliefSpeed "1 2 2 2 3 4 4 4 5 5 6"
+set log $c.cm.logMsg(m_dyn.findBestAttackHero())$
+set z0 "config zerofood:0"
+set zF "config zerofood:"
+
+### MAIN CITY LOOP
+label checkCityPopulation
+if {$m_dyn.cityRipeForQing()$} goto trainTroopsInThisCity
+sleep 12:00
+goto checkCityPopulation
+
+### SUBROUTINE
+//---------------------
+//      Troop Training
+//---------------------
+label trainTroopsInThisCity
+#
+#----------------------- READ TRAINING & ZEROFOOD SETTNGS FROM GOALS -------
+getindexof troopType troopName $c.ac[{%c%}].cm.getVar(troopName)$
+if {%troopType%<8} set buff DecProduceMilitiaEffortBuff
+if {%troopType%==9||%troopType%==10} set buff DecProcduceCavalryEffortBuf
+if {%troopType%==8||%troopType%>10} set buff DecProduceMachineEffortBuff
+set count {$c.ac[{%c%}].cm.resource.curPopulation$\%qds[{%troopType%}]%}
+set foodCost {%count%*{%baseFoodCost[{%troopType%}]%*{1-$c.cm.getBuff(%buff%).descName$*0.05}\1}}
+set woodCost {%count%*{%baseWoodCost[{%troopType%}]%*{1-$c.cm.getBuff(%buff%).descName$*0.05}\1}}
+set stoneCost {%count%*{%baseStoneCost[{%troopType%}]%*{1-$c.cm.getBuff(%buff%).descName$*0.05}\1}}
+set ironCost {%count%*{%baseIronCost[{%troopType%}]%*{1-$c.cm.getBuff(%buff%).descName$*0.05}\1}}
+set zNormal $c.ac[{%c%}].cm.getCfg(zerofood)$
+set r $c.ac[{%c%}].cm._setConfig(%z0%)$
+#
+#----------------------- CHECK FOOD AVAILABLITY AND BARRACK STATUS -----------
+if {$m_dyn.locateZeroFood(%c%)$} sleep @:$c.getDateFromTime(%eta%).toFormattedTimeString()$
+set bi $m_dyn.getShortestTroopQueue(%c%)$
+#
+#----------------------- DECIDES TRAININGHERO DESTINATION-----------------------------
+set d $m_dyn.findNextCity(%c%)$
+#
+#-----------------------  SKIP CITY IF ALL BARRACKS ARE FULL-----------------------------
+//if {%maxQ%&&$c.ac[%c%].cm.getVar(split)$} goto full
+if {%minQ%==10} goto full
+#
+#-----------------------  TRAINING SEQUENCE -------------------------------------------------------
+label productionOff
+set r $c.af.getInteriorCommands().modifyCommenceRate(%id%,0,0,0,0)$
+set r $c.af.getInteriorCommands().modifyTaxRate(%id%,0)$
+if {$c.ac[{%c%}].cm.resource.workPeople$>0} goto productionOff
+label recallFood
+iferror $c.ac[{%c%}].cm.zeroFoodArmies[0].armyId$ goto skipRecallFood
+if {$c.ac[{%c%}].castle.name$==Malbork||$c.ac[{%c%}].castle.name$==SumegiVar} goto skipRecallFood
+set r $c.af.getArmyCommands().callBackArmy(%id%,%foodArmyId%)$
+label skipRecallFood
+label waitFood
+sleep 0.1
+if {$c.ac[{%c%}].cm.resource.food.amount$<%foodCost%} goto waitFood
+if {$c.ac[{%c%}].castle.name$==Malbork||$c.ac[{%c%}].castle.name$==Neamt} sleep 2:00
+set r $c.af.getHeroCommand().promoteToChief(%id%,%heroId%)$
+set count {$c.ac[{%c%}].cm.resource.curPopulation$\%qds[{%troopType%}]%}
+echo "Training %count% %troopAlias[{%troopType%}]% in $c.ac[{%c%}].castle.name$ barracks %bi%, split batch: $c.ac[{%c%}].cm.getVar(split)$"
+echo "Need f:$c.formatNum(%foodCost%,0)$ w:$c.formatNum(%woodCost%,0)$ s:$c.formatNum(%stoneCost%,0)$ i:$c.formatNum(%ironCost%,0)$"
+set split $c.ac[{%c%}].cm.getVar(split)$
+#### Actual Training Line
+set r $c.af.getTroopCommands().produceTroop(%id%,%bi%,%troopType%,%count%,%split%,false)$  //<--
+######
+label waitQInfo
+sleep 0.1
+iferror $%r%.ok$ goto waitQInfo
+if {$%r%.ok$==1} echo "Training completed"
+if {$%r%.ok$!=1} echo "$%r%.errorMsg$"
+if {$%r%.ok$!=1} loop 2 recallFood
+echo "---------------------------------------------------------"
+#
+#----------------------- RESET CITY ----------------------------------------------------------------------
+set r $c.ac[{%c%}].cm.updateTroopQueue()$
+set r $c.af.getHeroCommand().promoteToChief(%id%,c.ac[{%c%}].cm.bestPoliticHero().id)$
+if {$c.ac[{%c%}].castle.name$==Malbork} goto recoverHeroEnergy
+set r $c.ac[{%c%}].cm._setConfig(%zF%%zNormal%)$
+label recoverHeroEnergy
+set r $c.af.getInteriorCommands().modifyCommenceRate(%id%,%prod%)$
+echo "Next training location: $c.ac[%d%].castle.name$"
+if {$c.ac[{%c%}].castle.name$!=Malbork&&$c.ac[{%c%}].castle.name$!=Neamt} sleep {1500-{$c.cm.getBaseTravelTime(c.ac[{%c%}].castle.fieldId,c.ac[{%d%}].castle.fieldId,c.getValue(Troop,s:1))$/{$c.ac[{%c%}].findHeroByName(%hero%).speed$/100+1}/%reliefSpeed[{$c.ac[{%c%}].cm.getBuildingLevel(c.buildingTypes.rs)$}]%}-10}
+#
+#-----------------------  SEND TRAINING HERO -------------------------------------------------------
+label full
+if {%minQ%==10} echo "All barracks in $c.ac[{%c%}].castle.name$ are full. No more trooptraining possible"
+sleep 10
+label sendHero
+echo $c.ac[{%c%}].qdeploy(reinforce,c.ac[{%d%}].castle.fieldId,%hero%,c.getValue(Troop,s:1))$
+set update $m_dyn.getShortestTroopQueue(%c%)$
+sleep {{$c.cm.getBaseTravelTime(c.ac[{%c%}].castle.fieldId,c.ac[{%d%}].castle.fieldId,c.getValue(Troop,s:1))$/{$c.ac[{%c%}].findHeroByName(%hero%).speed$/100+1}/%reliefSpeed[{$c.ac[{%c%}].cm.getBuildingLevel(c.buildingTypes.rs)$}]%}+10}
+#gosubreturn
+goto checkCityPopulation
+
+### ECMAScript FUNCTIONS 
+//---------------------/---------------------
+//           Find Best Hero
+//---------------------/---------------------
+function findBestAttackHero(){
+  var totA:Number=0, heroAtt:number=0, heroName:String, cityName:String, heroId:Number;
+  for each(i in c.ac){
+    if (i.cm.bestAttackHero()==null) totA = 0;
+    else totA = (i.cm.bestAttackHero().attack + i.cm.bestAttackHero().power)* (1 + i.cm.bestAttackHero().powerBuffAdded/100);
+    if (totA>heroAtt){
+      heroName = i.cm.bestAttackHero().name;
+      heroId = i.cm.bestAttackHero().id;
+      cityName = i.castle.name;
+      heroAtt = totA;}}
+  setVar("hero",  heroName);
+  setVar("heroId",  heroId);
+  msg = "The best Attack hero in this account, <b>" +heroName+ ": " + heroAtt + " atk</b>, is currently stationed in " +cityName;
+  return msg;}
+//---------------------/---------------------
+//    Find City in Turn
+//---------------------/---------------------
+function cityRipeForQing():Boolean{
+  var ripe:Boolean, trainer:String;
+  for each(j in c.ac){
+    if (j.isHeroInCastle(getVar('hero'))){
+      trainer = getVar('hero') + " is currently present in <b>" +j.castle.name+ "</b> where the population is at <b>" + c.formatNum(j.cm.resource.curPopulation/j.cm.resource.maxPopulation*100,1) + "&#37;</b>.";
+      if (j.cm.resource.curPopulation==j.cm.resource.maxPopulation){
+        setVar("c", c.ac.indexOf(j));
+        setVar("id", j.castle.id);
+        setVar("prod", j.cm.getVar('stdProd'));
+        ripe = true;}
+      else {
+        ripe = false;}}}
+  c.cm.logMsg(trainer);
+  return ripe;}
+//---------------------/---------------------
+//   Shortest Troop Queue
+//---------------------/---------------------
+function getShortestTroopQueue(x){
+  var barracks:Array = new Array(), batchesPerBarrack:Array = new Array();
+  c.ac[x].cm.updateTroopQueue();
+  for each (ivn in c.ac[x].cm.troopProduceQueue){
+    barracks.push(ivn.positionId);
+    batchesPerBarrack.push(ivn.allProduceQueueArray.length)}
+  c.af.getInteriorCommands().modifyTaxRate(c.ac[x].castle.id,0);
+  msg = "-----------------------------------------------------------------------------------------------------------------------------<br><tab><tab><tab><tab>   <tab><tab><tab><tab>Population in " +c.ac[x].castle.name+": "+c.ac[x].cm.resource.curPopulation+ " of " +c.ac[x].cm.resource.maxPopulation+ "<br><tab><tab><tab><tab>  <tab><tab><tab>   Current number of batches in the barracks";
+  c.cm.logMsg(msg);
+  msg = "<font color='#0B610B'><b>Barracks Q in <font color='#990050'><u><i>" +c.ac[x].castle.name+ "</i></u></font>: " +batchesPerBarrack.join(" ")+ "</b></font><br><tab><tab><tab><tab> -----------------------------------------------------------------------------------------------------------------------------";
+  c.cm.warLogMsg(msg);
+  setVar("maxQ", Math.max.apply(null,batchesPerBarrack));
+  setVar("minQ", Math.min.apply(null,batchesPerBarrack));
+  return barracks[batchesPerBarrack.indexOf(Math.min.apply(null,batchesPerBarrack))];}
+//---------------------/---------------------
+//        Food Availability
+//---------------------/---------------------
+function locateZeroFood(x):String{
+  var valleyFood:Number = 0, valleyFoodArmyId:int, valleyFoodArmyDirection:int, valleyFoodArmyEta:int, wait:String=false, msg:String; 
+  setVar("eta", 0);
+  if (c.ac[x].cm.localArmies.length==0) valleyFood = c.cm.resource.food.amount;
+  else {
+    for each (vFI in c.ac[x].cm.localArmies){
+      if (vFI.resource.food>valleyFood&&vFI.targetFieldId==c.ac[x].cm.fields[0].id){
+        valleyFoodArmyId = vFI.armyId;
+        valleyFood = vFI.resource.food;
+        valleyFoodArmyDirection = vFI.direction;
+        valleyFoodArmyEta = vFI.reachTime;}}
+    if (valleyFood==0) valleyFood = c.cm.resource.food.amount;
+    else if (valleyFoodArmyDirection==2){
+      wait = true;
+      c.cm.logMsg("Waiting for food to return, exected arrival <b>"+c.getDateFromTime(valleyFoodArmyEta).toFormattedTimeString()+"</b>");
+      setVar("eta", valleyFoodArmyEta);}}
+  if (valleyFood>=1000000000) msg = "<font color='#2E64FE'><b>" +c.ac[x].castle.name+ "</b> has <b>" +c.formatNum(valleyFood/1000000000,0)+ " bil</b> Food";
+  else if (valleyFood>100000000) msg = "<b>" +c.ac[x].castle.name +"</b> has <b>" +c.formatNum(valleyFood/1000000,0)+ " mil</b> Food";
+  else msg = "<font color='#FF0000'><b>" +c.ac[x].castle.name+ "</b> has only <b>" +c.formatNum(valleyFood/1000000,0)+ " mil</b> Food"; 
+  c.cm.logMsg(msg);
+  setVar("vF", valleyFood);
+  setVar("foodArmyId", valleyFoodArmyId);
+  return wait;}
+//---------------------/---------------------
+//  Find Next Active City
+//---------------------/---------------------
+function findNextCity(next){
+  if (++next == c.ac.length) next = 0;
+  if (c.ac[next].cm.getVar('trainingActive')=="false" && next==c.ac.length) next = 0;
+  return c.ac[next].cm.getVar('trainingActive')=="false" ? findNextCity(next) : next;}
+//---------------------/---------------------
+//         List Active Cities
+//---------------------/---------------------
+function whereIsTroopTrainingActive():String{
+var activeCities:String = "Trooptraining is active in: <b>", no:int; 
+  for each (h in  c.ac){
+    if (h.cm.getVar("trainingActive")=="true"){activeCities += h.castle.name + "  ";no += 1;}}
+  activeCities += "</b>Each city is visited with " + no/2 + " hour(s) interval.";
+ return activeCities;}

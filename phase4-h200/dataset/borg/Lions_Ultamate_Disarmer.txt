@@ -1,0 +1,41 @@
+setsilence true
+set troops "c:1000/0, cata:100/10"
+
+
+import com.evony.common.constants.TFConstants;
+import autoevony.common.Utils;
+function checkdraftable()
+	{
+		var m=Utils.trim(troops).split(",");
+		for (var j=0;j<m.length;j+=1) {
+			m[j]=Utils.trim(m[j].split("/")[0]);
+		}
+		var troop=c.getValue("Troop",m.join(","));
+	  var troopIntNames = new Array("", "", "peasants", "militia", "scouter", "pikemen", "swordsmen", "archer", "carriage", "lightCavalry", "heavyCavalry", "ballista", "batteringRam", "catapult", "trap", "abatis", "arrowTower", "rollingLogs", "rockfall");
+	  var totalTroopExpValue = 0;
+	  var draftTargetType = -1;
+	  var types = new Array(TFConstants.T_PEASANTS, TFConstants.T_MILITIA, TFConstants.T_SCOUTER, TFConstants.T_PIKEMAN, TFConstants.T_SWORDSMEN, TFConstants.T_ARCHER, TFConstants.T_LIGHTCAVALRY, TFConstants.T_HEAVYCAVALRY, TFConstants.T_CARRIAGE, TFConstants.T_BALLISTA, TFConstants.T_BATTERINGRAM, TFConstants.T_CATAPULT);
+	  var draftdata=[];
+	  var type;
+	  var isDraftable;
+	  for (var i=0;i<types.length;i+=1)
+	  {
+	  	type=types[i];
+		totalTroopExpValue = troop[troopIntNames[type]] * Utils.TROOP_EXP_VALUES[type];
+		isDraftable = Math.floor(totalTroopExpValue / 2147483647) % 2 == 0;
+		if (isDraftable) {
+			draftdata.push("<font color='#FF0000'>"+troopIntNames[type]+": "+troop[troopIntNames[type]]+", exp "+(totalTroopExpValue % 2147483647)+"</font>")
+		}
+		else {
+			draftdata.push("<font color='#00FF00'>"+troopIntNames[type]+": "+troop[troopIntNames[type]]+", dr in "+Utils.formatNum(Math.floor((totalTroopExpValue % 2147483647) / Utils.TROOP_EXP_VALUES[type])));
+		}
+		if (isDraftable) {
+			if (draftTargetType == -1) draftTargetType = type;
+			else if (totalTroopExpValue % 2147483647 > (troop[troopIntNames[draftTargetType]] * Utils.TROOP_EXP_VALUES[draftTargetType]) % 2147483647) draftTargetType = type;
+		}
+	  }
+	  if (draftTargetType!=-1) draftdata[types.indexOf(draftTargetType)]="<b>"+draftdata[types.indexOf(draftTargetType)]+"</b>";
+	  c.cm.logMsg("\n"+draftdata.join("\n"));
+	}
+
+set nv $m_dyn.checkdraftable()$

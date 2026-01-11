@@ -1,0 +1,30 @@
+add? gatepolicy 1 1 1 1 1
+16 views
+Subscribe
+PureHeart Evony's profile photo
+PureHeart Evony
+Dec 14, 2017, 4:36:55 PM
+to RE Portal & Forums
+On the new upcoming update can there be something added into this gatepolicy for banner wave attacks? Like extend the current gatepolicy or add in a completely different policy like here as an example:
+without change:
+
+config gate:0.08
+gatepolicy 1 1 1 1 1
+
+with change: or not changed but another added for banner attacks
+
+config gate:0.08
+gatepolicy 1 1 1 1 1
+config gatebanner:0.08
+gatepolicybanner 1 1 1 1 1
+
+I think this would be good to experiment some new defensive strategy's with not to get off topic but maybe add a 
+autouseitems Besiege_Enemy’s_Fort_to_Rescue_Ally’s_City -OR-
+autouseitems Besiege_Enemy’s_Fort_to_Rescue_Ally’s_City @.08 the send people banners or balista banners back home .08seconds before they land?
+thanks again for your support here on RE I think your doing great.
+Futuristic goals; these suggestions I think are not in dire need but I think the "many" would enjoy having a new feature like this.
+xThisIsMe's profile photo
+xThisIsMe
+Feb 12, 2018, 12:21:00 AM
+to RE Portal & Forums
+The suggestion of a goal for automatic besiege of banner attacks is a possibility and is currently being looked at as a new feature. However, the addition of a special gatepolicy option just for banner attacks is pointless since banner attacks always go through gates so it doesn't matter if they're open or closed.

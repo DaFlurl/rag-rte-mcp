@@ -1,0 +1,111 @@
+setsilence True
+set coords  0,0//set coords
+set troops a:2000,cp:198000
+set queentofight true//set if royal to fight
+set AttackFlag true//set to up hero lvl and gear up
+set food_lim 20000000//set min food to run
+set EnergyFlag true//select true to use strat on hero not fire
+
+# ---- don't change below this line ---- #
+
+
+set hero_up_lim 5
+autoheal true
+label start
+if {%AttackFlag%==true} goto prep_atk
+label prep_atk_done
+set nv $c.af.getHeroCommand().dischargeChief(c.castle.id)$
+if (c.cm.resource.gold < 1000000) set nv $c.af.getTradeCommands().newTrade(c.castle.id,0,1,10000000,0.001)$
+sleep $c.lag$
+if (c.cm.resource.food.amount < food_lim) goto no_food_err
+set f 0
+label send_wave
+if {{$c.cm.heroes[{%f%}].name$==Queen||$c.cm.heroes[{%f%}].name$==King}&&%queentofight%==true} set nV $c.af.getArmyCommands().newArmy(c.castle.id,c.getArmy(attack,c.getValue(Coordinate,c.getVar(coords)),c.cm.heroes[%f%].name,c.getValue(Troop,%troops%)))$
+set hero_base {$c.math.max(c.cm.heroes[%f%].power,c.cm.heroes[%f%].management,c.cm.heroes[%f%].stratagem)$-$c.cm.heroes[%f%].level$}
+if (c.cm.heroes[f].status == 0 && c.cm.heroes[f].level < 101 && hero_base < 101) set nV $c.af.getArmyCommands().newArmy(c.castle.id,c.getArmy(attack,c.getValue(Coordinate,c.getVar(coords)),c.cm.heroes[%f%].name,c.getValue(Troop,%troops%)))$
+set f {%f%+1}
+sleep $c.lag$
+if (f < c.cm.heroes.length) goto send_wave
+if (c.cm.localArmies.length == 0) goto no_wave_err
+set g 0
+set tim_com1 0
+set tim_com2 0
+label det_wait_time
+set tim_com1 {{$c.cm.localArmies[%g%].reachTime$-$c.getRawTime()$}/1000}
+set tim_com1 $c.math.max(%tim_com1%,0)$
+set tim_com2 $c.math.min(%tim_com1%,%tim_com2%)$
+set g {%g%+1}
+if (g < c.cm.localArmies.length) goto det_wait_time
+sleep {%tim_com2%+2}
+label recallcheck
+set x 0
+set y $c.cm.localArmies.length$
+if (y == 0) goto end_recall
+label recall1
+if ((c.cm.localArmies[x].reachTime + 5000) < c.getRawTime()) set nv $c.af.getHeroCommand().callBackHero(c.castle.id,c.cm.localArmies[%x%].heroid)$
+set x {%x%+1}
+if ( x < y ) goto recall1
+label end_recall
+label hero1
+set f 0
+label heroLoop
+if {%EnergyFlag%==true} goto apply_energy_item
+if (c.cm.heroes[f].isHero == 0 && c.cm.heroes[f].stamina < 4 && c.cm.heroes[f].status == 0 &&  c.cm.heroes[f].level < 101) set nv $c.af.getHeroCommand().fireHero(c.castle.id,c.cm.heroes[%f%].id)$
+label heroloop1
+set f {%f%+1}
+if (f < c.cm.heroes.length) goto heroLoop
+label refreshInn
+set k $c.cm.heroes.length$
+set l 0
+set nullVar $c.cm.updateInn()$
+sleep 1
+label hire_hero
+if (c.cm.heroes.length == c.cm.getBuildingLevel(c.buildingTypes.fh)) goto start
+set heroInInn $c.cm.innHeroes[%l%].name$
+set nv $c.af.getHeroCommand().hireHero(c.castle.id,c.cm.innHeroes[%l%].name)$
+sleep 1
+set hId $c.findHeroByName(%heroInInn%).id$
+set chn $c.changeheroname(%heroInInn%,%hId%)$
+set l {%l%+1}
+set k {%k%+1}
+if (k < c.cm.getBuildingLevel(c.buildingTypes.fh)) goto hire_hero
+goto start
+label prep_atk
+set h 0
+label loop_hero_prep
+if ((c.findHeroById(h).attack) > 0) goto loop_level_up
+if {%displayInfo%==true} echo "wear gear for: {$c.cm.heroes[%h%].name$}"
+set nv $c.af.getEquipmentCommands().WearAllEquipmenttech(c.cm.heroes[%h%].id,2)$
+label loop_level_up
+if (c.cm.heroes[h].experience > c.cm.heroes[h].upgradeExp && c.cm.heroes[h].level < 100) goto hero_level_up
+goto hero_level_up_end
+label hero_level_up
+set i 0
+label hero_level_up1
+if {%displayInfo%==true} echo "level up for: {$c.cm.heroes[%h%].name$}"
+set nv $c.af.getHeroCommand().levelUp(c.castle.id,c.cm.heroes[%h%].id)$
+set nv $c.af.getHeroCommand().addPoint2(c.castle.id,c.cm.heroes[%h%].id,0,1,0)$
+set i {%i%+1}
+if (c.cm.heroes[h].experience > c.cm.heroes[h].upgradeExp && c.cm.heroes[h].level < 101 && i < hero_up_lim) goto hero_level_up1
+label hero_level_up_end
+set h {%h%+1}
+if (h < c.cm.heroes.length) goto loop_hero_prep
+goto prep_atk_done
+label apply_energy_item
+set varTea hero.item.Tea
+set varWine hero.item.Lugui_Wine
+set varPanax hero.item.Panax_ginseng
+if (c.cm.heroes[f].stamina < 4 && c.cm.heroes[f].status == 0 && c.getItem(c.getVar(varTea)).count >0) set nv $c.af.getHeroCommand().useItem(c.castle.id,c.cm.heroes[%f%].id,c.getVar(varTea))$
+if (c.cm.heroes[f].stamina < 4 && c.cm.heroes[f].status == 0 && c.getItem(c.getVar(varWine)).count > 0) set nv $c.af.getHeroCommand().useItem(c.castle.id,c.cm.heroes[%f%].id,c.getVar(varWine))$
+if (c.cm.heroes[f].stamina < 4 && c.cm.heroes[f].status == 0 && c.getItem(c.getVar(varPanax)).count > 0) set nv $c.af.getHeroCommand().useItem(c.castle.id,c.cm.heroes[%f%].id,c.getVar(varPanax))$
+goto heroloop1
+label no_food_err
+echo "no food error, either RE is slow to respond or you ran out of rams"
+sleep 1
+goto start
+label no_wave_err
+echo "No waves sent error, check troop count, target can be attacked"
+sleep 10
+goto recallcheck
+label end
+

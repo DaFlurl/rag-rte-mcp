@@ -1,0 +1,35 @@
+//script by thenoob
+
+
+label resourceLimits
+setarr resourceMaxLimit "500000000 1000000 500000 1000000"//food lumber stone iron
+setarr resourceMinLimit "50000 50000 50000 50000"
+set minGold 10000
+set maxGold 1000000000
+set sellIncrease 10 //percent above bidding
+set buyDecrease 10 //percent below asking
+set sleepMarket 300 //sleep time between cycles
+
+
+//=======no changes below this line==================
+setarr resource "food wood stone iron"
+setarr resources "food lumber stone iron"
+set ResInd -1
+label resourceLoop
+set ResInd {%ResInd%+1}
+set buyAt {$m_city.cityManager.market[%ResInd%].sellersArray[4].price$-$m_city.cityManager.market[%ResInd%].sellersArray[4].price$*{%buyDecrease%/100}}
+set sellAt {$m_city.cityManager.market[%ResInd%].buyersArray[0].price$+$m_city.cityManager.market[%ResInd%].sellersArray[0].price$*{%sellIncrease%/100}}
+if {$m_city.cityManager.resource.%{resource[%ResInd%]}%.amount$>=%{resourceMinLimit[%ResInd%]}%} gosub sell
+if {$m_city.cityManager.resource.%{resource[%ResInd%]}%.amount$<=%{resourceMaxLimit[%ResInd%]}%} gosub buy
+loop 4 resourceLoop
+sleep %sleepMarket%
+
+gosubreturn
+label buy
+buyto %{resources[%ResInd%]}% %{resourceMaxLimit[%ResInd%]}% %buyAt% %minGold%
+sleep 3
+gosubreturn
+label sell
+sellto %{resources[%ResInd%]}% %{resourceMinLimit[%ResInd%]}% %sellAt% %maxGold%
+sleep 3
+gosubreturn

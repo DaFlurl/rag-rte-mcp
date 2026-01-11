@@ -1,0 +1,33 @@
+setsilence true
+set friendlyAlliances "alliancename,alliance name,allianceName,666,numbername"
+
+# Enter all your 'friendly' alliances in the list above to get the map color coded
+# I have chosen not to use the alliance diplomacy in the script because it's so 
+# common to have friendly alt alliances set as enemy  ..... 
+quickscanmap all 1
+set friendlly $c.setStatic(friends,c.getVar(friendlyAlliances))$
+set mapFile $m_dyn.createHCmap()$
+
+import flash.net.FileReference;
+function createHCmap(){
+var file:FileReference = new FileReference(), bgc:String, filename:String="HC-Map_of_"+c.serverCfg.serverAlias+"_"+c.serverCfg.serverName+".html";
+var hcList:String="<html><head><meta charset='utf-8'><title>HC-map "+c.serverCfg.serverName+"</title><style>table, th, td {border: 1px solid black; border-collapse: collapse; padding: 6px;}{table-layout: fixed;}</style></head><body bgcolor='#e6f2ff'><center>";
+hcList += "<h1>Map of HC 16 State Capitals on "+c.serverCfg.serverName+"</h1>Updated "+c.getDateFromTime(c.serverTimeRaw).toDateString()+"&nbsp;"+c.getDateFromTime(c.serverTimeRaw).toFormattedTimeString()+" Server Time <table><tr>";
+for (yi=0; yi<4; yi++){hcList += "</tr><tr>";for (xi=0;xi<4; xi++){x = 100+200*xi; y=100+200*yi;hcList += getMapData(x,y);}}
+hcList +="</tr></table><br><h1>Map of HC 14 & 16 on "+c.serverCfg.serverName+"</h1>Updated "+c.getDateFromTime(c.serverTimeRaw).toDateString()+"&nbsp;"+c.getDateFromTime(c.serverTimeRaw).toFormattedTimeString()+" Server Time<table><tr>";
+for (yi=0; yi<12; yi++){hcList += "</tr><tr>";for (xi=0;xi<12; xi++){x = 33+66*xi; y=33+66*yi;if (x%99==0&&y%99==0){x=Math.floor((100+200*xi)/3);y=Math.floor((100+200*yi)/3);}
+if (x==759&&y==759){x=0;y=0;}hcList += getMapData(x,y);}}
+hcList += "</tr></table><br><h1>Map of HC 12 "+c.serverCfg.serverName+"</h1>Updated "+c.getDateFromTime(c.serverTimeRaw).toDateString()+"&nbsp;"+c.getDateFromTime(c.serverTimeRaw).toFormattedTimeString()+" Server Time <table><tr>";
+for (yi=0; yi<44; yi++){hcList += "</tr><tr>";for (xi=0;xi<44; xi++){x = 9+18*xi; y=9+18*yi;hcList += getMapData(x,y);}}
+hcList +="</tr></table></center></html>"; deleteStatic('friends'); file.save(hcList,filename);}
+
+function getMapData(x,y){var friendly:Array = getStatic('friends').split(",")
+if (c.getMapDetail(c.getValue('Coordinate',x,y)).allianceName==null&&c.getMapDetail(c.getValue('Coordinate',x,y)).userName==null) bgc="#d0d0e1"
+else if (c.getMapDetail(c.getValue('Coordinate',x,y)).allianceName==null) bgc="#ffe699"
+else if (friendly.indexOf(c.getMapDetail(c.getValue('Coordinate',x,y)).allianceName)==-1) bgc = "#ffcce6";
+else bgc = "#adebad";
+if (x%100==0&&y%100==0&&x!=0) state ="<b><u>" + c.getMapDetail(c.getValue('Coordinate',x,y)).zoneName +"</u></b><br>";
+else state =""
+if (y==759&&x==693) mapData = "<td align='center' width='100' height='100' bgcolor='dddddd'>No 14<br></td>";
+else mapData = "<td align='center' width='100' height='100' bgcolor='"+bgc+"'>"+state+x+","+y+"<br>"+c.getMapDetail(c.getValue('Coordinate',x,y)).name+"<br>"+c.getMapDetail(c.getValue('Coordinate',x,y)).userName+"<br>("+c.getMapDetail(c.getValue('Coordinate',x,y)).allianceName+")</td>";
+return mapData;}

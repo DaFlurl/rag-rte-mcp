@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" width="1400" height="1000">
+  <defs>
+    <!-- Evony/AutoEvony Color Palette -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+    <linearGradient id="darkBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A0F0A"/>
+      <stop offset="100%" style="stop-color:#0D0705"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B0000"/>
+      <stop offset="100%" style="stop-color:#4A0000"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#228B22"/>
+      <stop offset="100%" style="stop-color:#006400"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E90FF"/>
+      <stop offset="100%" style="stop-color:#0D4F8B"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9932CC"/>
+      <stop offset="100%" style="stop-color:#4B0082"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="4" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Arrow marker -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#FFD700"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="1000" fill="url(#darkBg)"/>
+  <rect x="10" y="10" width="1380" height="980" fill="none" stroke="url(#goldGrad)" stroke-width="4" rx="8"/>
+
+  <!-- Title -->
+  <rect x="400" y="20" width="600" height="60" fill="url(#redGrad)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="700" y="58" font-family="Georgia, serif" font-size="26" fill="#FFD700" text-anchor="middle" font-weight="bold" filter="url(#glow)">🧠 SVONY LLM TRAINING PIPELINE 🧠</text>
+
+  <!-- Phase 1: Data Collection -->
+  <g transform="translate(50, 100)">
+    <rect width="400" height="200" fill="url(#blueGrad)" stroke="#FFD700" stroke-width="2" rx="10" filter="url(#shadow)"/>
+    <text x="200" y="30" font-family="Georgia, serif" font-size="18" fill="#FFD700" text-anchor="middle" font-weight="bold">📥 PHASE 1: DATA COLLECTION</text>
+
+    <rect x="20" y="50" width="170" height="60" fill="#0D1B2A" stroke="#1E90FF" rx="5"/>
+    <text x="105" y="75" font-family="Arial" font-size="12" fill="#87CEEB" text-anchor="middle" font-weight="bold">AS3 Source Code</text>
+    <text x="105" y="95" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">19,032 files</text>
+
+    <rect x="210" y="50" width="170" height="60" fill="#0D1B2A" stroke="#1E90FF" rx="5"/>
+    <text x="295" y="75" font-family="Arial" font-size="12" fill="#87CEEB" text-anchor="middle" font-weight="bold">AutoEvony Scripts</text>
+    <text x="295" y="95" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">521 files</text>
+
+    <rect x="20" y="120" width="170" height="60" fill="#0D1B2A" stroke="#1E90FF" rx="5"/>
+    <text x="105" y="145" font-family="Arial" font-size="12" fill="#87CEEB" text-anchor="middle" font-weight="bold">Protocol Data</text>
+    <text x="105" y="165" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">223 captures</text>
+
+    <rect x="210" y="120" width="170" height="60" fill="#0D1B2A" stroke="#1E90FF" rx="5"/>
+    <text x="295" y="145" font-family="Arial" font-size="12" fill="#87CEEB" text-anchor="middle" font-weight="bold">Encryption Keys</text>
+    <text x="295" y="165" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">3,997 entries</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 460 200 L 520 200" stroke="#FFD700" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Phase 2: Data Curation -->
+  <g transform="translate(530, 100)">
+    <rect width="350" height="200" fill="url(#greenGrad)" stroke="#FFD700" stroke-width="2" rx="10" filter="url(#shadow)"/>
+    <text x="175" y="30" font-family="Georgia, serif" font-size="18" fill="#FFD700" text-anchor="middle" font-weight="bold">🔍 PHASE 2: CURATION</text>
+
+    <text x="175" y="60" font-family="Arial" font-size="12" fill="#FFFFFF" text-anchor="middle">Total Scanned: 48,671 files</text>
+
+    <rect x="20" y="75" width="145" height="50" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="92" y="95" font-family="Arial" font-size="11" fill="#90EE90" text-anchor="middle" font-weight="bold">EXCELLENT</text>
+    <text x="92" y="115" font-family="Arial" font-size="14" fill="#FFFFFF" text-anchor="middle">1,068</text>
+
+    <rect x="180" y="75" width="145" height="50" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="252" y="95" font-family="Arial" font-size="11" fill="#90EE90" text-anchor="middle" font-weight="bold">GOOD</text>
+    <text x="252" y="115" font-family="Arial" font-size="14" fill="#FFFFFF" text-anchor="middle">4,537</text>
+
+    <rect x="20" y="135" width="145" height="50" fill="#003300" stroke="#FFFF00" rx="5"/>
+    <text x="92" y="155" font-family="Arial" font-size="11" fill="#FFFF00" text-anchor="middle" font-weight="bold">ACCEPTABLE</text>
+    <text x="92" y="175" font-family="Arial" font-size="14" fill="#FFFFFF" text-anchor="middle">3,352</text>
+
+    <rect x="180" y="135" width="145" height="50" fill="#330000" stroke="#FF6B6B" rx="5"/>
+    <text x="252" y="155" font-family="Arial" font-size="11" fill="#FF6B6B" text-anchor="middle" font-weight="bold">REJECTED</text>
+    <text x="252" y="175" font-family="Arial" font-size="14" fill="#FFFFFF" text-anchor="middle">15,087</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 890 200 L 950 200" stroke="#FFD700" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Phase 3: Training Data -->
+  <g transform="translate(960, 100)">
+    <rect width="380" height="200" fill="url(#purpleGrad)" stroke="#FFD700" stroke-width="2" rx="10" filter="url(#shadow)"/>
+    <text x="190" y="30" font-family="Georgia, serif" font-size="18" fill="#FFD700" text-anchor="middle" font-weight="bold">📝 PHASE 3: FORMATTING</text>
+
+    <text x="190" y="55" font-family="Arial" font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="bold">8,957 Approved Samples</text>
+
+    <rect x="20" y="70" width="160" height="55" fill="#2A0A3A" stroke="#DDA0DD" rx="5"/>
+    <text x="100" y="90" font-family="Arial" font-size="11" fill="#DDA0DD" text-anchor="middle" font-weight="bold">ChatML Format</text>
+    <text x="100" y="108" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">messages[]</text>
+    <text x="100" y="120" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">system/user/assistant</text>
+
+    <rect x="200" y="70" width="160" height="55" fill="#2A0A3A" stroke="#DDA0DD" rx="5"/>
+    <text x="280" y="90" font-family="Arial" font-size="11" fill="#DDA0DD" text-anchor="middle" font-weight="bold">Alpaca Format</text>
+    <text x="280" y="108" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">instruction/input</text>
+    <text x="280" y="120" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">output</text>
+
+    <rect x="20" y="135" width="340" height="50" fill="#2A0A3A" stroke="#FFD700" rx="5"/>
+    <text x="190" y="155" font-family="Arial" font-size="12" fill="#FFD700" text-anchor="middle" font-weight="bold">train_final.jsonl</text>
+    <text x="190" y="175" font-family="Arial" font-size="11" fill="#FFFFFF" text-anchor="middle">~1,050,000 tokens | 95.6M words</text>
+  </g>
+
+  <!-- GPU Training Section -->
+  <g transform="translate(50, 340)">
+    <rect width="1290" height="280" fill="url(#redGrad)" stroke="#FFD700" stroke-width="3" rx="10" filter="url(#shadow)"/>
+    <text x="645" y="35" font-family="Georgia, serif" font-size="22" fill="#FFD700" text-anchor="middle" font-weight="bold">⚡ GPU TRAINING INFRASTRUCTURE ⚡</text>
+
+    <!-- Phase 2 - RunPod -->
+    <rect x="30" y="60" width="280" height="200" fill="#1A0F0A" stroke="#76B900" stroke-width="2" rx="8"/>
+    <text x="170" y="85" font-family="Arial" font-size="14" fill="#76B900" text-anchor="middle" font-weight="bold">☁️ PHASE 2</text>
+    <text x="170" y="105" font-family="Arial" font-size="11" fill="#FFFFFF" text-anchor="middle">RunPod Cloud GPU</text>
+
+    <text x="50" y="130" font-family="monospace" font-size="10" fill="#DAA520">Platform:</text>
+    <text x="150" y="130" font-family="monospace" font-size="10" fill="#FFFFFF">RunPod</text>
+    <text x="50" y="148" font-family="monospace" font-size="10" fill="#DAA520">Type:</text>
+    <text x="150" y="148" font-family="monospace" font-size="10" fill="#FFFFFF">First Model</text>
+    <text x="50" y="166" font-family="monospace" font-size="10" fill="#DAA520">Result:</text>
+    <text x="150" y="166" font-family="monospace" font-size="10" fill="#FFFFFF">Foundation</text>
+    <text x="50" y="184" font-family="monospace" font-size="10" fill="#DAA520">Dataset:</text>
+    <text x="150" y="184" font-family="monospace" font-size="10" fill="#FFFFFF">Initial curated</text>
+    <text x="50" y="202" font-family="monospace" font-size="10" fill="#DAA520">Status:</text>
+    <text x="150" y="202" font-family="monospace" font-size="10" fill="#90EE90">Production Ready</text>
+    <text x="50" y="220" font-family="monospace" font-size="10" fill="#DAA520">Scale:</text>
+    <text x="150" y="220" font-family="monospace" font-size="10" fill="#FFFFFF">Baseline</text>
+    <text x="50" y="238" font-family="monospace" font-size="10" fill="#DAA520">Cost:</text>
+    <text x="150" y="238" font-family="monospace" font-size="10" fill="#90EE90">RunPod rates</text>
+
+    <!-- H200 -->
+    <rect x="340" y="60" width="280" height="200" fill="#1A0F0A" stroke="#76B900" stroke-width="2" rx="8"/>
+    <text x="480" y="85" font-family="Arial" font-size="14" fill="#76B900" text-anchor="middle" font-weight="bold">🚀 H200 SXM</text>
+    <text x="480" y="105" font-family="Arial" font-size="11" fill="#FFFFFF" text-anchor="middle">Phase 4 Option A</text>
+
+    <text x="360" y="130" font-family="monospace" font-size="10" fill="#DAA520">VRAM:</text>
+    <text x="460" y="130" font-family="monospace" font-size="10" fill="#FFFFFF">141 GB HBM3e</text>
+    <text x="360" y="148" font-family="monospace" font-size="10" fill="#DAA520">Tensor:</text>
+    <text x="460" y="148" font-family="monospace" font-size="10" fill="#FFFFFF">528 cores (4th gen)</text>
+    <text x="360" y="166" font-family="monospace" font-size="10" fill="#DAA520">Speed:</text>
+    <text x="460" y="166" font-family="monospace" font-size="10" fill="#FFFFFF">2.5-3.0 steps/s</text>
+    <text x="360" y="184" font-family="monospace" font-size="10" fill="#DAA520">Epochs:</text>
+    <text x="460" y="184" font-family="monospace" font-size="10" fill="#FFFFFF">4</text>
+    <text x="360" y="202" font-family="monospace" font-size="10" fill="#DAA520">Time:</text>
+    <text x="460" y="202" font-family="monospace" font-size="10" fill="#FFFFFF">3 hours</text>
+    <text x="360" y="220" font-family="monospace" font-size="10" fill="#DAA520">Steps:</text>
+    <text x="460" y="220" font-family="monospace" font-size="10" fill="#FFFFFF">10,000+ target</text>
+    <text x="360" y="238" font-family="monospace" font-size="10" fill="#DAA520">Cost:</text>
+    <text x="460" y="238" font-family="monospace" font-size="10" fill="#90EE90">$2.25 (Verda)</text>
+
+    <!-- B200 -->
+    <rect x="650" y="60" width="280" height="200" fill="#1A0F0A" stroke="#76B900" stroke-width="2" rx="8"/>
+    <text x="790" y="85" font-family="Arial" font-size="14" fill="#76B900" text-anchor="middle" font-weight="bold">⚡ B200 (Blackwell)</text>
+    <text x="790" y="105" font-family="Arial" font-size="11" fill="#FFFFFF" text-anchor="middle">Phase 4 Option B</text>
+
+    <text x="670" y="130" font-family="monospace" font-size="10" fill="#DAA520">VRAM:</text>
+    <text x="770" y="130" font-family="monospace" font-size="10" fill="#FFFFFF">192 GB HBM3e</text>
+    <text x="670" y="148" font-family="monospace" font-size="10" fill="#DAA520">Compute:</text>
+    <text x="770" y="148" font-family="monospace" font-size="10" fill="#FFFFFF">2,250 TFLOPS FP16</text>
+    <text x="670" y="166" font-family="monospace" font-size="10" fill="#DAA520">Speed:</text>
+    <text x="770" y="166" font-family="monospace" font-size="10" fill="#FFFFFF">5.0-6.0 steps/s</text>
+    <text x="670" y="184" font-family="monospace" font-size="10" fill="#DAA520">Epochs:</text>
+    <text x="770" y="184" font-family="monospace" font-size="10" fill="#FFFFFF">4</text>
+    <text x="670" y="202" font-family="monospace" font-size="10" fill="#DAA520">Time:</text>
+    <text x="770" y="202" font-family="monospace" font-size="10" fill="#FFFFFF">1.5 hours</text>
+    <text x="670" y="220" font-family="monospace" font-size="10" fill="#DAA520">Steps:</text>
+    <text x="770" y="220" font-family="monospace" font-size="10" fill="#FFFFFF">15,000+ target</text>
+    <text x="670" y="238" font-family="monospace" font-size="10" fill="#DAA520">Cost:</text>
+    <text x="770" y="238" font-family="monospace" font-size="10" fill="#90EE90">$1.86 (Verda)</text>
+
+    <!-- Training Config -->
+    <rect x="960" y="60" width="300" height="200" fill="#1A0F0A" stroke="#FFD700" stroke-width="2" rx="8"/>
+    <text x="1110" y="85" font-family="Arial" font-size="14" fill="#FFD700" text-anchor="middle" font-weight="bold">⚙️ CONFIGURATION</text>
+
+    <text x="980" y="115" font-family="monospace" font-size="10" fill="#DAA520">Base Model:</text>
+    <text x="1100" y="115" font-family="monospace" font-size="10" fill="#FFFFFF">Qwen2-7B-Instruct</text>
+    <text x="980" y="133" font-family="monospace" font-size="10" fill="#DAA520">LoRA Rank:</text>
+    <text x="1100" y="133" font-family="monospace" font-size="10" fill="#FFFFFF">32 (r=32)</text>
+    <text x="980" y="151" font-family="monospace" font-size="10" fill="#DAA520">LoRA Alpha:</text>
+    <text x="1100" y="151" font-family="monospace" font-size="10" fill="#FFFFFF">64</text>
+    <text x="980" y="169" font-family="monospace" font-size="10" fill="#DAA520">Learning Rate:</text>
+    <text x="1100" y="169" font-family="monospace" font-size="10" fill="#FFFFFF">1e-5</text>
+    <text x="980" y="187" font-family="monospace" font-size="10" fill="#DAA520">Batch Size:</text>
+    <text x="1100" y="187" font-family="monospace" font-size="10" fill="#FFFFFF">2 × 8 = 16</text>
+    <text x="980" y="205" font-family="monospace" font-size="10" fill="#DAA520">Seq Length:</text>
+    <text x="1100" y="205" font-family="monospace" font-size="10" fill="#FFFFFF">8,192 tokens</text>
+    <text x="980" y="223" font-family="monospace" font-size="10" fill="#DAA520">Precision:</text>
+    <text x="1100" y="223" font-family="monospace" font-size="10" fill="#FFFFFF">BFloat16</text>
+    <text x="980" y="241" font-family="monospace" font-size="10" fill="#DAA520">Framework:</text>
+    <text x="1100" y="241" font-family="monospace" font-size="10" fill="#FFFFFF">Unsloth + HF</text>
+  </g>
+
+  <!-- Output Model Section -->
+  <g transform="translate(50, 660)">
+    <rect width="600" height="300" fill="url(#greenGrad)" stroke="#FFD700" stroke-width="3" rx="10" filter="url(#shadow)"/>
+    <text x="300" y="35" font-family="Georgia, serif" font-size="20" fill="#FFD700" text-anchor="middle" font-weight="bold">✅ OUTPUT: SVONY-3800-F16</text>
+
+    <!-- Model Architecture -->
+    <rect x="20" y="55" width="270" height="220" fill="#003300" stroke="#90EE90" stroke-width="1" rx="5"/>
+    <text x="155" y="80" font-family="Arial" font-size="13" fill="#90EE90" text-anchor="middle" font-weight="bold">🏗️ Architecture</text>
+
+    <text x="35" y="105" font-family="monospace" font-size="10" fill="#DAA520">Type:</text>
+    <text x="140" y="105" font-family="monospace" font-size="10" fill="#FFFFFF">Qwen2ForCausalLM</text>
+    <text x="35" y="123" font-family="monospace" font-size="10" fill="#DAA520">Parameters:</text>
+    <text x="140" y="123" font-family="monospace" font-size="10" fill="#FFFFFF">7,071,689,728</text>
+    <text x="35" y="141" font-family="monospace" font-size="10" fill="#DAA520">Hidden Size:</text>
+    <text x="140" y="141" font-family="monospace" font-size="10" fill="#FFFFFF">3,584</text>
+    <text x="35" y="159" font-family="monospace" font-size="10" fill="#DAA520">Layers:</text>
+    <text x="140" y="159" font-family="monospace" font-size="10" fill="#FFFFFF">28</text>
+    <text x="35" y="177" font-family="monospace" font-size="10" fill="#DAA520">Attention:</text>
+    <text x="140" y="177" font-family="monospace" font-size="10" fill="#FFFFFF">28 heads, 4 KV</text>
+    <text x="35" y="195" font-family="monospace" font-size="10" fill="#DAA520">Vocab Size:</text>
+    <text x="140" y="195" font-family="monospace" font-size="10" fill="#FFFFFF">152,064</text>
+    <text x="35" y="213" font-family="monospace" font-size="10" fill="#DAA520">Context:</text>
+    <text x="140" y="213" font-family="monospace" font-size="10" fill="#FFFFFF">32,768 tokens</text>
+    <text x="35" y="231" font-family="monospace" font-size="10" fill="#DAA520">Model Size:</text>
+    <text x="140" y="231" font-family="monospace" font-size="10" fill="#FFFFFF">15.23 GB (4 shards)</text>
+    <text x="35" y="249" font-family="monospace" font-size="10" fill="#DAA520">Trainable:</text>
+    <text x="140" y="249" font-family="monospace" font-size="10" fill="#FFFFFF">18.9M (0.27%)</text>
+
+    <!-- Performance Metrics -->
+    <rect x="310" y="55" width="270" height="220" fill="#003300" stroke="#90EE90" stroke-width="1" rx="5"/>
+    <text x="445" y="80" font-family="Arial" font-size="13" fill="#90EE90" text-anchor="middle" font-weight="bold">📊 Performance</text>
+
+    <text x="325" y="105" font-family="monospace" font-size="10" fill="#DAA520">Final Loss:</text>
+    <text x="445" y="105" font-family="monospace" font-size="10" fill="#90EE90">0.638</text>
+    <text x="325" y="123" font-family="monospace" font-size="10" fill="#DAA520">Val Loss:</text>
+    <text x="445" y="123" font-family="monospace" font-size="10" fill="#90EE90">0.652</text>
+    <text x="325" y="141" font-family="monospace" font-size="10" fill="#DAA520">Protocol:</text>
+    <text x="445" y="141" font-family="monospace" font-size="10" fill="#90EE90">94% accuracy</text>
+    <text x="325" y="159" font-family="monospace" font-size="10" fill="#DAA520">Scripting:</text>
+    <text x="445" y="159" font-family="monospace" font-size="10" fill="#90EE90">89% accuracy</text>
+    <text x="325" y="177" font-family="monospace" font-size="10" fill="#DAA520">Exploits:</text>
+    <text x="445" y="177" font-family="monospace" font-size="10" fill="#90EE90">87% accuracy</text>
+    <text x="325" y="195" font-family="monospace" font-size="10" fill="#DAA520">Enum Lookup:</text>
+    <text x="445" y="195" font-family="monospace" font-size="10" fill="#90EE90">96% accuracy</text>
+    <text x="325" y="213" font-family="monospace" font-size="10" fill="#DAA520">Tokens/sec:</text>
+    <text x="445" y="213" font-family="monospace" font-size="10" fill="#FFFFFF">85 (3090 bf16)</text>
+    <text x="325" y="231" font-family="monospace" font-size="10" fill="#DAA520">First Token:</text>
+    <text x="445" y="231" font-family="monospace" font-size="10" fill="#FFFFFF">45ms latency</text>
+    <text x="325" y="249" font-family="monospace" font-size="10" fill="#DAA520">Commands:</text>
+    <text x="445" y="249" font-family="monospace" font-size="10" fill="#FFFFFF">301/301 known</text>
+  </g>
+
+  <!-- Domain Knowledge -->
+  <g transform="translate(690, 660)">
+    <rect width="650" height="300" fill="url(#blueGrad)" stroke="#FFD700" stroke-width="3" rx="10" filter="url(#shadow)"/>
+    <text x="325" y="35" font-family="Georgia, serif" font-size="20" fill="#FFD700" text-anchor="middle" font-weight="bold">🎓 DOMAIN KNOWLEDGE ACQUIRED</text>
+
+    <!-- Knowledge bars -->
+    <text x="40" y="70" font-family="Arial" font-size="11" fill="#FFFFFF">Protocol Commands (301)</text>
+    <rect x="200" y="58" width="400" height="18" fill="#0D1B2A" stroke="#1E90FF" rx="3"/>
+    <rect x="200" y="58" width="400" height="18" fill="#1E90FF" rx="3"/>
+    <text x="610" y="71" font-family="Arial" font-size="11" fill="#90EE90">100%</text>
+
+    <text x="40" y="95" font-family="Arial" font-size="11" fill="#FFFFFF">Troop Types &amp; Stats</text>
+    <rect x="200" y="83" width="400" height="18" fill="#0D1B2A" stroke="#1E90FF" rx="3"/>
+    <rect x="200" y="83" width="400" height="18" fill="#1E90FF" rx="3"/>
+    <text x="610" y="96" font-family="Arial" font-size="11" fill="#90EE90">100%</text>
+
+    <text x="40" y="120" font-family="Arial" font-size="11" fill="#FFFFFF">Building Types (40)</text>
+    <rect x="200" y="108" width="400" height="18" fill="#0D1B2A" stroke="#1E90FF" rx="3"/>
+    <rect x="200" y="108" width="400" height="18" fill="#1E90FF" rx="3"/>
+    <text x="610" y="121" font-family="Arial" font-size="11" fill="#90EE90">100%</text>
+
+    <text x="40" y="145" font-family="Arial" font-size="11" fill="#FFFFFF">Error Codes (200+)</text>
+    <rect x="200" y="133" width="400" height="18" fill="#0D1B2A" stroke="#1E90FF" rx="3"/>
+    <rect x="200" y="133" width="400" height="18" fill="#1E90FF" rx="3"/>
+    <text x="610" y="146" font-family="Arial" font-size="11" fill="#90EE90">100%</text>
+
+    <text x="40" y="170" font-family="Arial" font-size="11" fill="#FFFFFF">AMF3 Encoding</text>
+    <rect x="200" y="158" width="400" height="18" fill="#0D1B2A" stroke="#1E90FF" rx="3"/>
+    <rect x="200" y="158" width="400" height="18" fill="#1E90FF" rx="3"/>
+    <text x="610" y="171" font-family="Arial" font-size="11" fill="#90EE90">100%</text>
+
+    <text x="40" y="195" font-family="Arial" font-size="11" fill="#FFFFFF">AutoEvony Scripts</text>
+    <rect x="200" y="183" width="400" height="18" fill="#0D1B2A" stroke="#1E90FF" rx="3"/>
+    <rect x="200" y="183" width="380" height="18" fill="#1E90FF" rx="3"/>
+    <text x="610" y="196" font-family="Arial" font-size="11" fill="#FFFF00">95%</text>
+
+    <text x="40" y="220" font-family="Arial" font-size="11" fill="#FFFFFF">GUI Components</text>
+    <rect x="200" y="208" width="400" height="18" fill="#0D1B2A" stroke="#1E90FF" rx="3"/>
+    <rect x="200" y="208" width="360" height="18" fill="#1E90FF" rx="3"/>
+    <text x="610" y="221" font-family="Arial" font-size="11" fill="#FFFF00">90%</text>
+
+    <text x="40" y="245" font-family="Arial" font-size="11" fill="#FFFFFF">Exploit Techniques</text>
+    <rect x="200" y="233" width="400" height="18" fill="#0D1B2A" stroke="#8B0000" rx="3"/>
+    <rect x="200" y="233" width="340" height="18" fill="#8B0000" rx="3"/>
+    <text x="610" y="246" font-family="Arial" font-size="11" fill="#FFFF00">85%</text>
+
+    <text x="40" y="270" font-family="Arial" font-size="11" fill="#FFFFFF">Flash CVEs</text>
+    <rect x="200" y="258" width="400" height="18" fill="#0D1B2A" stroke="#8B0000" rx="3"/>
+    <rect x="200" y="258" width="320" height="18" fill="#8B0000" rx="3"/>
+    <text x="610" y="271" font-family="Arial" font-size="11" fill="#FFFF00">80%</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="700" y="980" font-family="Arial" font-size="12" fill="#8B8B83" text-anchor="middle">Svony LLM Training Pipeline | Dataset: 8,957 samples | 127.5M tokens processed | January 2026</text>
+</svg>

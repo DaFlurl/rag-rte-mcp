@@ -1,0 +1,79 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                    B200 FP16 TRAINING REQUIREMENTS                           ║
+# ║                    PyTorch 2.8+ REQUIRED for B200 Support                    ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ==============================================================================
+# CORE - PyTorch 2.8+ with CUDA 12.6 (REQUIRED FOR B200)
+# ==============================================================================
+# Install command: pip install torch>=2.8.0 --index-url https://download.pytorch.org/whl/cu126
+torch>=2.8.0
+torchvision>=0.20.0
+torchaudio>=2.5.0
+
+# ==============================================================================
+# TRANSFORMERS ECOSYSTEM
+# ==============================================================================
+transformers>=4.45.0
+datasets>=3.0.0
+accelerate>=1.0.0
+peft>=0.13.0
+trl>=0.12.0
+tokenizers>=0.20.0
+
+# ==============================================================================
+# QUANTIZATION & OPTIMIZATION
+# ==============================================================================
+bitsandbytes>=0.44.0
+
+# ==============================================================================
+# FLASH ATTENTION 2 (B200 OPTIMIZED)
+# ==============================================================================
+# Install: pip install flash-attn>=2.7.0 --no-build-isolation
+flash-attn>=2.7.0
+
+# ==============================================================================
+# UNSLOTH - 2X TRAINING SPEEDUP
+# ==============================================================================
+unsloth>=2024.12
+
+# ==============================================================================
+# UTILITIES
+# ==============================================================================
+sentencepiece>=0.2.0
+protobuf>=5.0.0
+scipy>=1.14.0
+einops>=0.8.0
+safetensors>=0.4.0
+huggingface-hub>=0.26.0
+
+# ==============================================================================
+# MONITORING & LOGGING
+# ==============================================================================
+wandb>=0.18.0
+tensorboard>=2.18.0
+tqdm>=4.66.0
+
+# ==============================================================================
+# INSTALL INSTRUCTIONS FOR B200
+# ==============================================================================
+# 
+# 1. Create virtual environment:
+#    python -m venv b200_env
+#    source b200_env/bin/activate  # Linux
+#    b200_env\Scripts\activate     # Windows
+#
+# 2. Install PyTorch 2.8+ with CUDA 12.6:
+#    pip install torch>=2.8.0 torchvision>=0.20.0 torchaudio>=2.5.0 \
+#        --index-url https://download.pytorch.org/whl/cu126
+#
+# 3. Install Flash Attention:
+#    pip install flash-attn>=2.7.0 --no-build-isolation
+#
+# 4. Install remaining requirements:
+#    pip install -r requirements_b200.txt
+#
+# 5. Install Unsloth (optional, 2x speedup):
+#    pip install unsloth
+#
+# ==============================================================================

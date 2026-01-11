@@ -1,0 +1,9 @@
+config trade:0,comfort:4,gate:.1,npclimit:1,dumping:10,hero:10,fasthero:65,nocapture:1,training:1,nocapture:1,training:30
+gatepolicy 2 2 2 2 2
+distancepolicy 30 15 30 30
+ballsused 100,200,300,400,500
+priorityFarming 5 b:500 b:500,t:500 10 480
+priorityFarming 4 b:400 b:400,t:400 10 480
+priorityFarming 3 b:300 b:300,t:300 10 480
+troop b:8000,t:8000
+troop c:1000000000

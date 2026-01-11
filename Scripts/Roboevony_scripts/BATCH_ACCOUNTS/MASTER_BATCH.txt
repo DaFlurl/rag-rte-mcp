@@ -1,0 +1,691 @@
+# MASTER BATCH EXTRACTION SCRIPT
+# Generated: 2025-12-31 11:40:55.708700
+# Total accounts: 85
+# 
+# INSTRUCTIONS:
+# 1. Load this script in RoboEvony
+# 2. It will login to each account and extract data
+# 3. Copy console output to save results
+#
+# Or run individual account scripts from BATCH_ACCOUNTS folder
+
+
+# ========== ACCOUNT 1: Borg ==========
+# Email: Tarasdbe@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 1/85: Borg"
+echo "=========================================="
+
+
+# ========== ACCOUNT 2: KingStevee ==========
+# Email: asermolaev@hotmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 2/85: KingStevee"
+echo "=========================================="
+
+
+# ========== ACCOUNT 3: Perkunas ==========
+# Email: andycadd@comcast.net
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 3/85: Perkunas"
+echo "=========================================="
+
+
+# ========== ACCOUNT 4: CrazyKiwi ==========
+# Email: janette-scott@hotmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 4/85: CrazyKiwi"
+echo "=========================================="
+
+
+# ========== ACCOUNT 5: HarleQuinZ ==========
+# Email: callingcrowes@hotmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 5/85: HarleQuinZ"
+echo "=========================================="
+
+
+# ========== ACCOUNT 6: CrazyJR ==========
+# Email: bigger.2008@hotmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 6/85: CrazyJR"
+echo "=========================================="
+
+
+# ========== ACCOUNT 7: Fulminata ==========
+# Email: bambie.khans@comcast.net
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 7/85: Fulminata"
+echo "=========================================="
+
+
+# ========== ACCOUNT 8: Savage ==========
+# Email: watsonj50@hotmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 8/85: Savage"
+echo "=========================================="
+
+
+# ========== ACCOUNT 9: Arizona ==========
+# Email: yucon2466@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 9/85: Arizona"
+echo "=========================================="
+
+
+# ========== ACCOUNT 10: CrazyDM ==========
+# Email: lyarrocks@hotmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 10/85: CrazyDM"
+echo "=========================================="
+
+
+# ========== ACCOUNT 11: 7of9 ==========
+# Email: fnice@q.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 11/85: 7of9"
+echo "=========================================="
+
+
+# ========== ACCOUNT 12: CRAZYTURK ==========
+# Email: toygarc@hotmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 12/85: CRAZYTURK"
+echo "=========================================="
+
+
+# ========== ACCOUNT 13: CrazyBudda ==========
+# Email: azndrugz@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 13/85: CrazyBudda"
+echo "=========================================="
+
+
+# ========== ACCOUNT 14: crazyww ==========
+# Email: chemistrywizard2@yahoo.ca
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 14/85: crazyww"
+echo "=========================================="
+
+
+# ========== ACCOUNT 15: CrazyRab ==========
+# Email: robcuaw2250@aol.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 15/85: CrazyRab"
+echo "=========================================="
+
+
+# ========== ACCOUNT 16: CrazyIvana ==========
+# Email: wally.nino@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 16/85: CrazyIvana"
+echo "=========================================="
+
+
+# ========== ACCOUNT 17: CrazyRill ==========
+# Email: terrillevony@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 17/85: CrazyRill"
+echo "=========================================="
+
+
+# ========== ACCOUNT 18: CrazyRoyal ==========
+# Email: hunygurl67@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 18/85: CrazyRoyal"
+echo "=========================================="
+
+
+# ========== ACCOUNT 19: CRAZYMOFO ==========
+# Email: grosy@musc.edu
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 19/85: CRAZYMOFO"
+echo "=========================================="
+
+
+# ========== ACCOUNT 20: crazylara ==========
+# Email: kakarot1973@hotmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 20/85: crazylara"
+echo "=========================================="
+
+
+# ========== ACCOUNT 21: CrazyDaisy ==========
+# Email: patrick_fnn@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 21/85: CrazyDaisy"
+echo "=========================================="
+
+
+# ========== ACCOUNT 22: CRAZYTJ ==========
+# Email: varun123patel@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 22/85: CRAZYTJ"
+echo "=========================================="
+
+
+# ========== ACCOUNT 23: CRAZYDIK ==========
+# Email: zak21@blueyonder.co.uk
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 23/85: CRAZYDIK"
+echo "=========================================="
+
+
+# ========== ACCOUNT 24: KRAZYTURK ==========
+# Email: jjjones@iinet.net.au
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 24/85: KRAZYTURK"
+echo "=========================================="
+
+
+# ========== ACCOUNT 25: CW ==========
+# Email: jnsmu97@aol.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 25/85: CW"
+echo "=========================================="
+
+
+# ========== ACCOUNT 26: balls ==========
+# Email: auto180@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 26/85: balls"
+echo "=========================================="
+
+
+# ========== ACCOUNT 27: lifeless ==========
+# Email: sixandclimbing69@gmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 27/85: lifeless"
+echo "=========================================="
+
+
+# ========== ACCOUNT 28: Likeaboss ==========
+# Email: Cotton_candy_for_u@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 28/85: Likeaboss"
+echo "=========================================="
+
+
+# ========== ACCOUNT 29: bungarian ==========
+# Email: revell753@hotmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 29/85: bungarian"
+echo "=========================================="
+
+
+# ========== ACCOUNT 30: Evana ==========
+# Email: jacquiehassiaoui@hotmail.co.uk
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 30/85: Evana"
+echo "=========================================="
+
+
+# ========== ACCOUNT 31: Gd306 ==========
+# Email: gdmarkus@hotmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 31/85: Gd306"
+echo "=========================================="
+
+
+# ========== ACCOUNT 32: Davidevony ==========
+# Email: davidenvoy@hotmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 32/85: Davidevony"
+echo "=========================================="
+
+
+# ========== ACCOUNT 33: zee ==========
+# Email: yucon1966@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 33/85: zee"
+echo "=========================================="
+
+
+# ========== ACCOUNT 34: RQ ==========
+# Email: jenspast1991@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 34/85: RQ"
+echo "=========================================="
+
+
+# ========== ACCOUNT 35: CoolArrow ==========
+# Email: Midnightemissary@gmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 35/85: CoolArrow"
+echo "=========================================="
+
+
+# ========== ACCOUNT 36: PAB ==========
+# Email: erich.schlegel@us.fujitsu.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 36/85: PAB"
+echo "=========================================="
+
+
+# ========== ACCOUNT 37: IamChoder ==========
+# Email: bill.prins@gmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 37/85: IamChoder"
+echo "=========================================="
+
+
+# ========== ACCOUNT 38: GhostRaider ==========
+# Email: dustysoccer0@hotmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 38/85: GhostRaider"
+echo "=========================================="
+
+
+# ========== ACCOUNT 39: Chodebitch ==========
+# Email: chrischen421@gmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 39/85: Chodebitch"
+echo "=========================================="
+
+
+# ========== ACCOUNT 40: Saphire ==========
+# Email: saphires1@hotmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 40/85: Saphire"
+echo "=========================================="
+
+
+# ========== ACCOUNT 41: David960 ==========
+# Email: diamonddave960@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 41/85: David960"
+echo "=========================================="
+
+
+# ========== ACCOUNT 42: Vorador ==========
+# Email: medri15@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 42/85: Vorador"
+echo "=========================================="
+
+
+# ========== ACCOUNT 43: ladytara ==========
+# Email: celticchef2000@aol.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 43/85: ladytara"
+echo "=========================================="
+
+
+# ========== ACCOUNT 44: Rigamortis ==========
+# Email: masterramrod@hotmail.co.uk
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 44/85: Rigamortis"
+echo "=========================================="
+
+
+# ========== ACCOUNT 45: fox ==========
+# Email: pllyankees@hotmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 45/85: fox"
+echo "=========================================="
+
+
+# ========== ACCOUNT 46: KangWR ==========
+# Email: ykamhong@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 46/85: KangWR"
+echo "=========================================="
+
+
+# ========== ACCOUNT 47: Tard ==========
+# Email: gutter_maintenance@iinet.net.au
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 47/85: Tard"
+echo "=========================================="
+
+
+# ========== ACCOUNT 48: ant ==========
+# Email: ypgros@gmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 48/85: ant"
+echo "=========================================="
+
+
+# ========== ACCOUNT 49: botkiller ==========
+# Email: iikissmygritsii@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 49/85: botkiller"
+echo "=========================================="
+
+
+# ========== ACCOUNT 50: Logaholic ==========
+# Email: skinnerindustries@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 50/85: Logaholic"
+echo "=========================================="
+
+
+# ========== ACCOUNT 51: TABBIKAT ==========
+# Email: zurt@mail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 51/85: TABBIKAT"
+echo "=========================================="
+
+
+# ========== ACCOUNT 52: lollian ==========
+# Email: piendro@gmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 52/85: lollian"
+echo "=========================================="
+
+
+# ========== ACCOUNT 53: GISELLE ==========
+# Email: gozdev@hotmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 53/85: GISELLE"
+echo "=========================================="
+
+
+# ========== ACCOUNT 54: ARCH77 ==========
+# Email: patchwork_77@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 54/85: ARCH77"
+echo "=========================================="
+
+
+# ========== ACCOUNT 55: Daneri ==========
+# Email: twoguys@mail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 55/85: Daneri"
+echo "=========================================="
+
+
+# ========== ACCOUNT 56: LORD_SAV ==========
+# Email: boozyfree@hushmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 56/85: LORD_SAV"
+echo "=========================================="
+
+
+# ========== ACCOUNT 57: renegade ==========
+# Email: jameson_mckee@live.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 57/85: renegade"
+echo "=========================================="
+
+
+# ========== ACCOUNT 58: killhappy1 ==========
+# Email: q_t_p_i_e99@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 58/85: killhappy1"
+echo "=========================================="
+
+
+# ========== ACCOUNT 59: Apache ==========
+# Email: jburkhardt0@gmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 59/85: Apache"
+echo "=========================================="
+
+
+# ========== ACCOUNT 60: 1bamf ==========
+# Email: fearmenows@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 60/85: 1bamf"
+echo "=========================================="
+
+
+# ========== ACCOUNT 61: Herbivore ==========
+# Email: tamezsimon@live.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 61/85: Herbivore"
+echo "=========================================="
+
+
+# ========== ACCOUNT 62: Herbivore2 ==========
+# Email: simon.tamez@hotmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 62/85: Herbivore2"
+echo "=========================================="
+
+
+# ========== ACCOUNT 63: Simon ==========
+# Email: simon@small-voices.net
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 63/85: Simon"
+echo "=========================================="
+
+
+# ========== ACCOUNT 64: OrrSimon ==========
+# Email: orrsimon78@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 64/85: OrrSimon"
+echo "=========================================="
+
+
+# ========== ACCOUNT 65: TKJ ==========
+# Email: andrew@flirtomatic.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 65/85: TKJ"
+echo "=========================================="
+
+
+# ========== ACCOUNT 66: kingbot ==========
+# Email: hgrowden@hotmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 66/85: kingbot"
+echo "=========================================="
+
+
+# ========== ACCOUNT 67: CrazyLeopard ==========
+# Email: crazy_leopard03@hotmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 67/85: CrazyLeopard"
+echo "=========================================="
+
+
+# ========== ACCOUNT 68: Siren ==========
+# Email: godivaevony@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 68/85: Siren"
+echo "=========================================="
+
+
+# ========== ACCOUNT 69: evonian ==========
+# Email: e.hi42@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 69/85: evonian"
+echo "=========================================="
+
+
+# ========== ACCOUNT 70: Algor ==========
+# Email: alanweller625@btinternet.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 70/85: Algor"
+echo "=========================================="
+
+
+# ========== ACCOUNT 71: Lori ==========
+# Email: elacetay12@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 71/85: Lori"
+echo "=========================================="
+
+
+# ========== ACCOUNT 72: killmegood ==========
+# Email: auto180@live.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 72/85: killmegood"
+echo "=========================================="
+
+
+# ========== ACCOUNT 73: MadMum ==========
+# Email: pttam@bigpond.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 73/85: MadMum"
+echo "=========================================="
+
+
+# ========== ACCOUNT 74: Elloo ==========
+# Email: scream.your.heartout@windowslive.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 74/85: Elloo"
+echo "=========================================="
+
+
+# ========== ACCOUNT 75: 85theenemy ==========
+# Email: lavaye18@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 75/85: 85theenemy"
+echo "=========================================="
+
+
+# ========== ACCOUNT 76: SavageTerritory ==========
+# Email: savage_territory@mocospace.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 76/85: SavageTerritory"
+echo "=========================================="
+
+
+# ========== ACCOUNT 77: BandedSnow ==========
+# Email: baseball_junky3@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 77/85: BandedSnow"
+echo "=========================================="
+
+
+# ========== ACCOUNT 78: Cobra ==========
+# Email: cobra-evony@hotmail.co.uk
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 78/85: Cobra"
+echo "=========================================="
+
+
+# ========== ACCOUNT 79: Catlinn ==========
+# Email: catlinn@yahoo.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 79/85: Catlinn"
+echo "=========================================="
+
+
+# ========== ACCOUNT 80: CatlinnStorm ==========
+# Email: catlinnstorm@gmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 80/85: CatlinnStorm"
+echo "=========================================="
+
+
+# ========== ACCOUNT 81: Madball1 ==========
+# Email: Madballcc2alt1@mail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 81/85: Madball1"
+echo "=========================================="
+
+
+# ========== ACCOUNT 82: Madball2 ==========
+# Email: Madballcc2alt2@mail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 82/85: Madball2"
+echo "=========================================="
+
+
+# ========== ACCOUNT 83: Madball3 ==========
+# Email: Madballcc2alt3@mail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 83/85: Madball3"
+echo "=========================================="
+
+
+# ========== ACCOUNT 84: Trickster ==========
+# Email: kenzoevony@gmail.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 84/85: Trickster"
+echo "=========================================="
+
+
+# ========== ACCOUNT 85: Deadp00l ==========
+# Email: tamezsimon@live.com
+# To extract this account, login and run BATCH_TROOP_EXTRACT.txt
+echo "=========================================="
+echo "ACCOUNT 85/85: Deadp00l"
+echo "=========================================="
+

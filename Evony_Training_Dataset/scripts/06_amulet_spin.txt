@@ -1,0 +1,22 @@
+// BORG TOOLKIT - Amulet Spinner
+// Rapid amulet spins for gambling rewards
+
+setsilence off
+
+echo ========================================
+echo AMULET SPINNER
+echo ========================================
+
+// Spin amulets rapidly
+set i 0
+label spinloop
+
+useitem player.box.gambling.3
+sleep 500
+
+set i i+1
+if i < 10 goto spinloop
+
+echo ========================================
+echo 10 spins complete!
+echo ========================================

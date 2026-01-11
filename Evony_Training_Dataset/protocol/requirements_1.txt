@@ -1,0 +1,34 @@
+# Evony Hub Requirements
+
+# Core dependencies
+schedule>=1.2.0          # Task scheduler
+watchdog>=3.0.0          # File system watcher
+
+# Protocol handling
+pyamf>=0.8.0             # AMF protocol (Python 2)
+# Py3AMF>=0.1.0          # AMF protocol (Python 3) - use local copy
+
+# Network
+requests>=2.31.0         # HTTP requests
+pysocks>=1.7.1           # SOCKS proxy support
+websocket-client>=1.6.0  # WebSocket support
+
+# GUI (optional)
+# tkinter is built-in
+
+# CLI enhancements
+colorama>=0.4.6          # Colored terminal output
+rich>=13.7.0             # Rich text formatting
+click>=8.1.7             # CLI framework
+
+# Data handling
+pandas>=2.1.0            # Data analysis
+openpyxl>=3.1.2          # Excel file support
+
+# Security/Crypto
+pycryptodome>=3.19.0     # Encryption utilities
+
+# Development (optional)
+pytest>=7.4.0            # Testing
+black>=23.12.0           # Code formatting
+mypy>=1.7.0              # Type checking

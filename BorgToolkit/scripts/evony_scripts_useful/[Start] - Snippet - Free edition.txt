@@ -1,0 +1,1753 @@
+//--The Nepoleonic Journal-Beta Edition-For Public				By ScriptGod Nepoleon	
+//--SCRIPT_CONTROLS: include start
+//--GOAL_CONTROLS: include default
+//--Copy the entire text into the snippets section of your 1.10 RE bot.
+//--Start an account, name it, build a lv1 cottage, and complete the be an evonian quest.
+//--Turn auto goals and scripts on. Log in with your bot and in the scripts put: include start
+//--Save the script and let it run. If you LINK or get any facebook visits they will be used.
+//--This version is designed for an account with a facebook and tested with 8+- visits a day.
+//--After you have the script running use \getfblinks in the chat menu and post your Wild Horses
+//--Collect as many cavalry from wild horses posts as you can and as many visits as you can.
+//--In the ACCOUNTSETTINGS and GOALSETTINGS are the variables for your account.
+//--A Complete Step by Step Index of all account settings is available.
+//--State name is first 3 letters of the state or the first initial of each word in the name.
+
+[ALLSETTINGS]
+set useFacebook ON
+set fieldType s
+[ACCOUNTSETTINGS]
+set manualLocation OFF
+set centerAround14 OFF
+set cityGrid ON
+set iWantCastle Inactive
+set mainAccount "Nepoleon"
+set homeState "ul"
+set manualCoord 0,0
+set gridDistance 5
+set flagType 1
+set govVar "Nepoleon"
+set startUpCycle 3
+include ALLSETTINGS
+[GOALSETTINGS]
+set rebuildCity OFF
+set finishKeyBuilds ON
+set autoUseFaceBook ON
+set controlZeroFood ON
+set dailyReset OFF
+set altType "Archer"
+include ALLSETTINGS
+
+//---------------------------------Do_Not_Change_Below_This_Line-----------------------------------//
+
+[start]
+setsilence true
+set castleName "Gold Amulet"
+set capTown "New city"
+if {$m_city.castle.name$==Flat} changecastlename {$m_city.allCities.indexOf(m_city)$+1}
+if {$m_city.castle.name$==%castleName%} changecastlename 0
+if {{$m_city.castle.name$==%capTown%}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(31,10)$==1}} changecastlename 01
+if {$m_city.castle.name$==%capTown%} changecastlename {$m_city.allCities.indexOf(m_city)$+1}
+if {{{$m_city.getRawTime()$-$m_city.player.playerInfo.lastLoginTime$}/60000\60}>=1} rereadgoals
+if {$m_city.allCities.indexOf(m_city)$+1!=1} goto checkCityStatus
+
+label checkMainStatus
+include ACCOUNTSETTINGS
+goalcommandwarning false
+if {{$m_city.cityManager.getBuildingsCountByTypeAndLvl(31,10)$==1}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(26,10)$==1}} goto gearCheckLoop
+label mainStatusReadout
+echo "$m_city.getDateFromTime(m_city.serverTimeRaw)$"
+sleep rnd:6:9
+if {{{$m_city.getRawTime()$-$m_city.cityManager.lastMaintenance$}/60000\60}<24} echo "{{$m_city.getRawTime()$-$m_city.cityManager.lastMaintenance$}/60000\60}Hrs since last Maintenance"
+label mainCityLoop
+set cityGold $m_city.cityManager.resource.gold$
+set cityFood $m_city.cityManager.resource.food.amount$
+set cityWood $m_city.cityManager.resource.wood.amount$
+set cityStone $m_city.cityManager.resource.stone.amount$
+set cityIron $m_city.cityManager.resource.iron.amount$
+set cityTotalRes {%cityGold%+%cityFood%+%cityWood%+%cityStone%+%cityIron%}
+if {$m_city.player.playerInfo.titleId$!=0} goto skipAccountBuilder
+include accountBuilder
+label skipAccountBuilder
+set resTargetLv 2
+if {!{{%cityTotalRes%>{500000}}&&{%cityGold%>100000}&&{%cityFood%>100000}&&{%cityWood%>100000}&&{%cityStone%>100000}&&{%cityIron%>100000}}} gosub openRespacks
+include useDailyamulets
+vote %govVar%
+if {{$m_city.player.playerInfo.castleCount$<=$m_city.player.playerInfo.titleId$}&&{$m_city.player.playerInfo.castleCount$<7}} gosub includeCreatesnippet
+include accountPromotion
+label gearCheckLoop
+sleep 10
+include gearLevelsnippet
+if {%gearLevel%>=9} goto skipGearup
+include gearUpsnippet
+label skipGearup
+include starUpgradeEngine
+goto mainStatusReadout
+
+label openRespacks
+setarray packName ["lesser_bonus_reward", "medium_bonus_reward", "greater_bonus_reward", "lesser_resources_reward", "medium_resources_reward", "greater_resources_reward"]
+set packNumber 0
+label oneFBItems
+set nullVar $m_city.accountTab.itemInfo.fetchPage(%packName[{%packNumber%}]%)$
+set onePack $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {{$m_city.allCities.indexOf(m_city)$+1==1}&&{%onePack%>$m_city.player.playerInfo.castleCount$}} useitem %packName[{%packNumber%}]%
+if {{$m_city.allCities.indexOf(m_city)$+1!=1}&&{%onePack%>{%resTargetLv%*2}-2}} useitem %packName[{%packNumber%}]%
+if {%onePack%>10} useitem %packName[{%packNumber%}]%
+if {%onePack%>20} useitem %packName[{%packNumber%}]%
+set packNumber {%packNumber%+1}
+if {%packNumber%<%packName.length%} goto oneFBItems
+gosubreturn
+
+label includeCreatesnippet
+if {%iWantCastle%!=ON} goto Createnewcity
+if {$m_city.player.playerInfo.medal$<88} goto Createnewcity
+label Createnewcity
+set xVar 0
+set yVar 0
+if {{%cityGrid%==ON}&&{%centerAround14%!=ON}&&{$m_city.player.playerInfo.castleCount$==1}} set xVar {%gridDistance%}
+if {{%cityGrid%==ON}&&{$m_city.player.playerInfo.castleCount$==2}} set xVar {-%gridDistance%}
+if {{%cityGrid%==ON}&&{$m_city.player.playerInfo.castleCount$==2}} set yVar {-%gridDistance%}
+if {{%cityGrid%==ON}&&{$m_city.player.playerInfo.castleCount$==3}} set xVar {%gridDistance%}
+if {{%cityGrid%==ON}&&{$m_city.player.playerInfo.castleCount$==3}} set yVar {%gridDistance%}
+if {{%cityGrid%==ON}&&{$m_city.player.playerInfo.castleCount$==4}} set xVar {%gridDistance%}
+if {{%cityGrid%==ON}&&{$m_city.player.playerInfo.castleCount$==4}} set yVar {-%gridDistance%}
+if {{%cityGrid%==ON}&&{$m_city.player.playerInfo.castleCount$==5}} set xVar {-%gridDistance%}
+if {{%cityGrid%==ON}&&{$m_city.player.playerInfo.castleCount$==5}} set yVar {%gridDistance%}
+if {{%cityGrid%==ON}&&{$m_city.player.playerInfo.castleCount$==6}} set xVar {-%gridDistance%}
+if {{%cityGrid%==ON}&&{$m_city.player.playerInfo.castleCount$==7}} set yVar {-%gridDistance%}
+include cityGrid
+gosubreturn
+
+label checkCityStatus
+if {{$m_city.cityManager.getBuildingsCountByTypeAndLvl(31,1)$==1}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(31,4)$==0}} set resTargetLv 1
+if {{$m_city.cityManager.getBuildingsCountByTypeAndLvl(31,4)$==1}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(31,7)$==0}} set resTargetLv 2
+if {{$m_city.cityManager.getBuildingsCountByTypeAndLvl(31,7)$==1}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(31,9)$==0}} set resTargetLv 3
+if {$m_city.cityManager.getBuildingsCountByTypeAndLvl(31,9)$==1} set resTargetLv 4
+if {$m_city.cityManager.getBuildingsCountByTypeAndLvl(31,10)$==1} set resTargetLv 5
+if {%resTargetLv%==1} set resLimit 50000
+if {%resTargetLv%==2} set resLimit 250000
+if {%resTargetLv%==3} set resLimit 500000
+if {%resTargetLv%==4} set resLimit 1000000
+if {%resTargetLv%==5} set resLimit 50000
+label supplyCityLoop
+set cityGold $m_city.cityManager.resource.gold$
+set cityFood $m_city.cityManager.resource.food.amount$
+set cityWood $m_city.cityManager.resource.wood.amount$
+set cityStone $m_city.cityManager.resource.stone.amount$
+set cityIron $m_city.cityManager.resource.iron.amount$
+set cityTotalRes {%cityGold%+%cityFood%+%cityWood%+%cityStone%+%cityIron%}
+if {!{{%cityTotalRes%>{%resLimit%*6}}&&{%cityGold%>%resLimit%}&&{%cityFood%>%resLimit%}&&{%cityWood%>%resLimit%}&&{%cityStone%>%resLimit%}&&{%cityIron%>%resLimit%}}} gosub openRespacks
+set cityBall $m_city.cityManager.allTroop.ballista$
+set cityTran $m_city.cityManager.allTroop.carriage$
+set cityArch $m_city.cityManager.allTroop.archer$
+set cityJunk {$m_city.castle.troop.militia$+$m_city.castle.troop.pikemen$+$m_city.castle.troop.swordsmen$+$m_city.castle.troop.lightCavalry$}
+set cityFoot $m_city.cityManager.allTroop.peasants$
+if {{$m_city.cityManager.getUsedRallySlots()$!=$m_city.cityManager.getMaxRallySlots()$}&&{$m_city.allCities[0].cityManager.allTroop.carriage$<2200}&&{%cityTran%!=0}} reinforce $m_city.allCities[0].coord$ none b:$m_city.castle.troop.carriage$
+if {{$m_city.cityManager.getUsedRallySlots()$!=$m_city.cityManager.getMaxRallySlots()$}&&{$m_city.allCities[0].cityManager.allTroop.ballista$<2200}&&{%cityBall%!=0}} reinforce $m_city.allCities[0].coord$ none b:$m_city.castle.troop.ballista$
+if {{$m_city.cityManager.getUsedRallySlots()$!=$m_city.cityManager.getMaxRallySlots()$}&&{%resTargetLv%==1}&&{%cityFoot%+%cityJunk%+%cityArch%!=0}} reinforce $m_city.allCities[0].coord$ none wo:$m_city.castle.troop.peasants$,w:$m_city.castle.troop.militia$,p:$m_city.castle.troop.pikemen$,sw:$m_city.castle.troop.swordsmen$,a:$m_city.castle.troop.archer$,c:$m_city.castle.troop.lightCavalry$
+if {{$m_city.cityManager.getUsedRallySlots()$!=$m_city.cityManager.getMaxRallySlots()$}&&{%resTargetLv%==2}&&{%cityJunk%+%cityArch%!=0}} reinforce $m_city.allCities[0].coord$ none w:$m_city.castle.troop.militia$,p:$m_city.castle.troop.pikemen$,sw:$m_city.castle.troop.swordsmen$,a:$m_city.castle.troop.archer$,c:$m_city.castle.troop.lightCavalry$
+if {{$m_city.cityManager.getUsedRallySlots()$!=$m_city.cityManager.getMaxRallySlots()$}&&{$m_city.player.playerInfo.titleId$<8}&&{%resTargetLv%>=3}&&{%cityJunk%!=0}} reinforce $m_city.allCities[0].coord$ none w:$m_city.castle.troop.militia$,p:$m_city.castle.troop.pikemen$,sw:$m_city.castle.troop.swordsmen$,c:$m_city.castle.troop.lightCavalry$
+sleep 450
+if {%cityTran%<=220} goto supplyCityLoop
+if {%cityBall%<=2200} goto supplyCityLoop
+if {$m_city.cityManager.getMaxRallySlots()$<=8} goto supplyCityLoop
+if {$m_city.cityManager.heroes.length$<=8} goto supplyCityLoop
+include gemFarming
+goto supplyCityLoop
+
+label trainSupplyTroops
+set lv4Racks {$m_city.cityManager.getBuildingsCountByTypeAndLvl(2,4)$-$m_city.cityManager.getBuildingsCountByTypeAndLvl(2,6)$}
+set lv6Racks $m_city.cityManager.getBuildingsCountByTypeAndLvl(2,6)$
+set lv9Racks $m_city.cityManager.getBuildingsCountByTypeAndLvl(2,9)$
+set trainAmount {$m_city.castle.resource.curPopulation$-$m_city.castle.resource.workPeople$}
+if {!{{%cityTotalRes%>3000000}&&{%cityFood%>500000}&&{%cityWood%>500000}&&{%cityIron%>500000}}} gosubreturn
+waitturn
+production 0 0 0 0
+settaxrate 0
+if {{%lv9Racks%!=0}&&{$m_city.cityManager.allTroop.ballista$<2200}} train! b:{%lv9Racks%*10}
+if {{%lv9Racks%!=0}&&{$m_city.cityManager.allTroop.ballista$<2200}} repeat 9
+if {$m_city.cityManager.allTroop.carriage$<2200} train! t:{%lv6Racks%*20}
+if {$m_city.cityManager.allTroop.carriage$<2200} repeat 6
+if {$m_city.allCities[0].cityManager.allTroop.archer$<250000} train! a:{%lv4Racks%*50}
+if {{$m_city.castle.resource.curPopulation$>15000}&&{$m_city.allCities[0].cityManager.allTroop.archer$>250000}&&{$m_city.allCities[0].cityManager.allTroop.militia$<$m_city.allCities[0].cityManager.allTroop.archer$}} train! w:%trainAmount%
+production 100 100 100 100
+comfort 4
+gosubreturn
+
+[accountPromotion]
+label setAccountVariables
+set safeBreakhero False
+set safeNPC5troops False
+set safeNPC5tech False
+set safeNPC10tech False
+set check1TroopOnly False
+set checkMainOnly False
+echo "Hello $m_city.player.playerInfo.userName$ your account is {{$m_city.getRawTime()$-$m_city.player.playerInfo.createrTime$}/60000\60}hrs old"
+if {$m_city.player.playerInfo.office$==Civilian} set accountOffice 0
+if {$m_city.player.playerInfo.office$==Lieutenant} set accountOffice 1
+if {$m_city.player.playerInfo.office$==Captain} set accountOffice 2
+if {$m_city.player.playerInfo.office$==Major} set accountOffice 3
+if {$m_city.player.playerInfo.office$==Colonel} set accountOffice 4
+if {$m_city.player.playerInfo.office$==General} set accountOffice 5
+set CrossNeeds 0
+set RoseNeeds 0 
+set LionNeeds 0
+set HonorNeeds 0
+set CourageNeeds 0
+set WisdomNeeds 0
+set FreedomNeeds 0
+set JusticeNeeds 0
+set NationNeeds 0
+if {%accountOffice%<=1} set CrossNeeds {%CrossNeeds%+5}
+if {%accountOffice%<=2} set RoseNeeds {%RoseNeeds%+5}
+if {%accountOffice%<=3} set LionNeeds {%LionNeeds%+5}
+if {%accountOffice%<=4} set HonorNeeds {%HonorNeeds%+5}
+if {$m_city.player.playerInfo.titleId$==0} set CrossNeeds {%CrossNeeds%+10}
+if {$m_city.player.playerInfo.titleId$==0} set RoseNeeds {%RoseNeeds%+5}
+if {$m_city.player.playerInfo.titleId$<=1} set RoseNeeds {%RoseNeeds%+10}
+if {$m_city.player.playerInfo.titleId$<=1} set LionNeeds {%LionNeeds%+5}
+if {$m_city.player.playerInfo.titleId$<=2} set LionNeeds {%LionNeeds%+10}
+if {$m_city.player.playerInfo.titleId$<=2} set HonorNeeds {%HonorNeeds%+5}
+if {$m_city.player.playerInfo.titleId$<=3} set HonorNeeds {%HonorNeeds%+10}
+if {$m_city.player.playerInfo.titleId$<=3} set CourageNeeds {%CourageNeeds%+5}
+if {$m_city.player.playerInfo.titleId$<=4} set CourageNeeds {%CourageNeeds%+10}
+if {$m_city.player.playerInfo.titleId$<=4} set WisdomNeeds {%WisdomNeeds%+5}
+if {$m_city.player.playerInfo.titleId$<=5} set WisdomNeeds {%WisdomNeeds%+10}
+if {$m_city.player.playerInfo.titleId$<=5} set FreedomNeeds {%FreedomNeeds%+5}
+if {$m_city.player.playerInfo.titleId$<=6} set FreedomNeeds {%FreedomNeeds%+10}
+if {$m_city.player.playerInfo.titleId$<=6} set JusticeNeeds {%JusticeNeeds%+5}
+if {$m_city.player.playerInfo.titleId$<=7} set JusticeNeeds {%JusticeNeeds%+10}
+if {$m_city.player.playerInfo.titleId$<=7} set NationNeeds {%NationNeeds%+5}
+if {$m_city.player.playerInfo.titleId$<=8} set JusticeNeeds {%JusticeNeeds%+30}
+if {$m_city.player.playerInfo.titleId$<=8} set NationNeeds {%NationNeeds%+15}
+setarray medalName ["Cross", "Rose", "Lion", "Honor", "Courage", "Wisdom", "Freedom", "Justice", "Nation"]
+set medalNumber 0
+label medalCountEngine
+set nullVar $m_city.accountTab.itemInfo.fetchPage(%medalName[{%medalNumber%}]%_Medal)$
+set %medalName[{%medalNumber%}]%Count $m_city.accountTab.itemInfo.itemsArray[0].count$
+set medalNumber {%medalNumber%+1}
+if {%medalNumber%<%medalName.length%} goto medalCountEngine
+if {{%CrossNeeds%-%CrossCount%}>0} echo "We Need {%CrossNeeds%-%CrossCount%} Cross Medals Still"
+if {{%RoseNeeds%-%RoseCount%}>0} echo "We Need {%RoseNeeds%-%RoseCount%} Rose Medals Still"
+if {{%LionNeeds%-%LionCount%}>0} echo "We Need {%LionNeeds%-%LionCount%} Lion Medals Still"
+if {{%HonorNeeds%-%HonorCount%}>0} echo "We Need {%HonorNeeds%-%HonorCount%} Honor Medals Still"
+if {{%CourageNeeds%-%CourageCount%}>0} echo "We Need {%CourageNeeds%-%CourageCount%} Courage Medals Still"
+if {{%WisdomNeeds%-%WisdomCount%}>0} echo "We Need {%WisdomNeeds%-%WisdomCount%} Wisdom Medals Still"
+if {{%FreedomNeeds%-%FreedomCount%}>0} echo "We Need {%FreedomNeeds%-%FreedomCount%} Freedom Medals Still"
+if {{%JusticeNeeds%-%JusticeCount%}>0} echo "We Need {%JusticeNeeds%-%JusticeCount%} Justice Medals Still"
+if {{%NationNeeds%-%NationCount%}>0} echo "We Need {%NationNeeds%-%NationCount%} Nation Medals Still"
+label accountTier1StatusCheck
+if {{{%CrossNeeds%-%CrossCount%}<=0}&&{{%RoseNeeds%-%RoseCount%}<=0}} goto accountTier2StatusCheck
+echo "Account is in Tier 1 and needs to farm Valleys for next Promotion"
+include roseFarming
+label accountTier2StatusCheck
+if {{{%LionNeeds%-%LionCount%}<=0}&&{{%HonorNeeds%-%HonorCount%}<=0}} goto accountTier3StatusCheck
+echo "Account is in Tier 2 and needs to farm Npc lv1's for next Promotion"
+include honorFarming
+label accountTier3StatusCheck
+if {$m_city.cityManager.researches[12].level$>8} goto skipArcherySpeedUp
+include speedUpresearch
+label skipArcherySpeedUp
+if {{{%CourageNeeds%-%CourageCount%}<=0}&&{{%WisdomNeeds%-%WisdomCount%}<=0}&&{{%FreedomNeeds%-%FreedomCount%}<0}} goto accountTier4StatusCheck
+echo "Account is in Tier 3 and needs to farm Npc lv5's for next Promotion"
+include freedomFarming
+label accountTier4StatusCheck
+if {{{%JusticeNeeds%-%JusticeCount%}<=0}&&{{%NationNeeds%-%NationCount%}<=0}} goto accountTier5StatusCheck
+echo "Account is in Tier 4 and needs to farm Npc lv10's for next Promotion"
+include breakStargear
+include justiceFarming
+label accountTier5StatusCheck
+echo "Account is in Tier 5 and needs no further Promotion"
+if {$m_city.cityManager.colonies.length$<1} echo "This Account is ready for colonization" 
+include gemFarming
+
+[accountBuilder]
+label accountBuilderRestart
+if {{%useFacebook%!=ON}&&{%useFacebook%!=OFF}&&{%useFacebook%!=LINK}} set useFacebook OFF
+if {%useFacebook%==OFF} echo "FaceBook will Not be Used, Set Focus on Resource Building"
+if {%useFacebook%==ON} echo "FaceBook Will be Used, Set Focus on Fast Promotion"
+if {%useFacebook%==LINK} echo "FaceBook Link is expected, Set Focus on Coins"
+if {{$m_city.castle.buildingsArray.length$==2}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(1,1)$==1}} goto accountStartUpTier1
+label accountStartUpTier1
+echo "This account was started Properly, Begining in:"
+echo "3"
+sleep 1
+echo "2"
+sleep 1
+echo "1"
+sleep 1
+set junk $m_city.actionFactory.getCommonCommands().addToFavorites()$
+set maintown true
+useitem aries_amulet
+upgrade c
+create f 1001
+gosub comQuest
+create s 1002
+create q 1003
+gosub comQuest
+create i 1004
+create inn
+gosub comQuest
+create fh
+gosub newbiesPack
+upgrade s
+gosub comQuest
+create wh
+gosub comBuild1
+create m
+gosub comBuild1
+create r
+gosub comQuest
+production 100 100 100 100
+gosub comQuest
+settaxrate 20
+gosub comQuest
+changecastlename 1
+gosub comQuest
+changeflag %flagType%
+sell iron 10 0.1
+gosub comQuest
+upgrade t
+gosub comBuild1
+gosub comBuild1
+create a
+gosub comBuild1
+create e
+gosub comBuild1
+upgrade i
+gosub comQuest
+upgrade i
+gosub comBuild1
+upgrade q
+create fo
+sleep 9
+upgrade fo
+gosub comBuild1
+create ws
+gosub comBuild1
+sleep 6
+gosub comQuest
+create w
+gosub comBuild2
+sell iron 10 0.1
+gosub comQuest
+levy wood
+upgrade a
+research lu
+set junk $m_city.cityManager.updateWallQueue()$
+sleep 6
+walldefense! tra 10
+echo "Account is growing properly, Waiting for Traps and current Build to complete to continue"
+set junk $m_city.cityManager.updateInn()$
+sleep 240
+getspamhero
+gosub comQuest
+waitnoresearch
+setmayor remove
+gosub comQuest
+setmayor pol
+research ag
+waitnobuilding
+gosub comQuest
+sleep 15
+set junk $m_city.cityManager.updateWallQueue()$
+sleep 6
+walldefense tra 100 demo
+gosub comQuest
+upgrade t
+gosub comBuild2
+gosub lordsPack
+gosub heroesPack
+gosub comQuest
+gosub medalBox
+research mas
+set buyAt {$m_city.cityManager.market[2].sellersArray[4].price$*1.25}
+buyto stone 50000 %buyAt% 40000
+usetechitem beginner_guidelines
+gosub comQuest
+label safeResourceCheck
+gosub tradeCheck
+gosub comQuest
+if {$m_city.castle.resource.stone.amount$<20000} goto safeComBuildCheck
+research mi
+upgrade w
+gosub comBuild2
+usetechitem beginner_guidelines
+gosub comQuest
+settaxrate 0
+gosub comQuest
+sleep 15
+upgrade t
+research mi
+usetechitem beginner_guidelines
+gosub comBuild3
+sleep 15
+gosub comQuest
+upgrade a
+gosub comBuild2
+gosub comQuest
+create! b
+gosub comQuest
+upgrade! b
+gosub comQuest
+waitnoresearch
+sleep 6
+research met
+usetechitem beginner_guidelines
+waitnobuilding
+upgrade a 
+gosub comBuild2
+gosub comQuest
+set junk $m_city.cityManager.updateWallQueue()$
+sleep 6
+research in
+waitnobuilding
+gosub comQuest
+sleep 15
+walldefense! ab 10
+set nullVar $m_city.accountTab.itemInfo.fetchPage(hero_enhancement_materials_package)$
+set fbLinkitem $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%fbLinkitem%!=0} gosub linkAccount
+upgrade! b
+demo! wh
+echo "Account is growing properly, Waiting for Abatis and current Build to complete to continue"
+waitnoresearch
+research ms 
+waitnobuilding
+train! s:1
+set junk $m_city.cityManager.updateWallQueue()$
+gosub comQuest
+sleep 6
+gosub comQuest
+walldefense ab 100 demo
+gosub comQuest
+create be
+waitnoresearch
+research mt
+waitnobuilding
+gosub comQuest
+if {%useFacebook%!=ON} untrain wo:$m_city.cityManager.allTroop.peasants$
+upgrade! w
+gosub comBuild3
+gosub comQuest
+upgrade! t
+usetechitem beginner_guidelines
+gosub comBuild2
+gosub comBuild2
+gosub comBuild2
+gosub comBuild2
+gosub comQuest
+upgrade a
+research ag
+echo "This account is Growing perfectly"
+buyitem Cast_A_Brick_to_Attract_A_Gem
+gosub comQuest
+usestratitem $m_city.coord$ Cast_A_Brick_to_Attract_A_Gem
+gosub comQuest
+buyitem wage_war_without_declaration
+gosub comQuest
+set coinType castle
+set coinLevel 5
+set coinRadius 0
+set coinCenter $m_city.coord$
+label finalAccBuildStage
+set coinRadius {%coinRadius%+10}
+scanmap %coinCenter% %coinRadius%
+setarr coinList $m_city.getMapFieldList(%coinType%,%coinLevel%,%coinRadius%,m_city.getValue(Coordinate,%coinCenter%))$
+if {%coinList[0]%==null} goto finalAccBuildStage
+if {%coinList.length%<3} goto finalAccBuildStage
+usestratitem %coinList[{%coinList.length%-1}]% wage_war_without_declaration
+gosub comQuest
+set junk $m_city.actionFactory.getMailCommands().sendMail(%mainAccount%,Hi,Quest)$
+gosub comQuest
+if {{%useFacebook%==OFF}||{%useFacebook%==ON}} teleport %homeState%
+gosub comQuest
+gosub comBuild3
+chatwc "Hello"
+gosub comQuest
+useheroitem $m_city.cityManager.bestAttackHero().name$ anabasis
+gosub comQuest
+uplevelhero $m_city.cityManager.bestAttackHero().name$
+addpointhero $m_city.cityManager.bestAttackHero().name$ 0 1 0
+gosub comQuest
+usebuilditem Hero_Hunting 1
+gosub comQuest
+uprise
+gosub comQuest
+gosub linkAccount
+gosub spinItemAmulet
+label createFields
+create! %fieldType%
+sleep %startUpCycle%
+upgrade! %fieldType%
+sleep %startUpCycle%
+upgrade! %fieldType%
+sleep %startUpCycle%
+loop 20 createFields
+upgrade! c
+label createCotts
+create! c
+sleep %startUpCycle%
+upgrade! c
+sleep %startUpCycle%
+upgrade! c
+sleep %startUpCycle%
+loop 5 createCotts
+waitnoresearch
+declarewar %coinList[{%coinList.length%-2}]%
+research lu
+goto exitAccbuilder
+label spinItemAmulet
+sleep %startUpCycle%
+set nullVar $m_city.accountTab.itemInfo.fetchPage(aries_amulet)$
+set spinItem $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%spinItem%==0} gosubreturn
+useitem aries_amulet
+goto spinItemAmulet
+label linkAccount
+echo "Checking for account link with Facebook"
+gosub newbiesPack
+gosub lordsPack
+gosub heroesPack
+gosub medalBox
+gosubreturn
+label comQuest
+sleep {%startUpCycle%-1}
+completequests routine
+sleep {%startUpCycle%-1}
+gosubreturn
+label comBuild1
+sleep %startUpCycle%
+set nullVar $m_city.accountTab.itemInfo.fetchPage(beginner_guidelines)$
+set bGuide $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%bGuide%>0} usebuilditem beginner_guidelines
+gosub comQuest
+gosubreturn
+label comBuild2
+sleep %startUpCycle%
+set nullVar $m_city.accountTab.itemInfo.fetchPage(primary_guidelines)$
+set pGuide $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%pGuide%>0} usebuilditem primary_guidelines
+gosub comQuest
+gosubreturn
+label comBuild3
+sleep %startUpCycle%
+set nullVar $m_city.accountTab.itemInfo.fetchPage(intermediate_guidelines)$
+set iGuide $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%iGuide%>0} usebuilditem intermediate_guidelines
+gosub comQuest
+gosubreturn
+label tradeCheck
+set tInd 0
+label checkTradeAmount
+set nullVar $m_city.accountTab.itemInfo.fetchPage(merchant_fleet)$
+set mFleet $m_city.accountTab.itemInfo.itemsArray[0].count$
+iferror $m_city.cityManager.transingTradesArray[{%tInd%}].amount$ goto skipTradeCheck
+if {{$m_city.cityManager.transingTradesArray[{%tInd%}].amount$>=8000}&&{%mFleet%>0}} usetradeitem merchant_fleet $m_city.cityManager.transingTradesArray[{%tInd%}].id$
+set tInd {%tInd%+1}
+if {%tInd%<$m_city.cityManager.transingTradesArray.length$} goto checkTradeAmount
+label skipTradeCheck
+gosubreturn
+label newbiesPack
+sleep %startUpCycle%
+set nullVar $m_city.accountTab.itemInfo.fetchPage(newbies_package)$
+set newbItem $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%newbItem%!=0} useitem newbies_package
+gosub comQuest
+gosubreturn
+label lordsPack
+sleep %startUpCycle%
+set nullVar $m_city.accountTab.itemInfo.fetchPage(package_for_lords)$
+set lordItem $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%lordItem%!=0} useitem package_for_lords
+gosub comQuest
+gosubreturn
+label heroesPack
+sleep %startUpCycle%
+set nullVar $m_city.accountTab.itemInfo.fetchPage(hero_enhancement_materials_package)$
+set heroItem $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%heroItem%!=0} useitem hero_enhancement_materials_package
+gosub comQuest
+gosubreturn
+label medalBox
+sleep %startUpCycle%
+set nullVar $m_city.accountTab.itemInfo.fetchPage(junior_medal_box)$
+set medbItem $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%medbItem%!=0} useitem junior_medal_box
+gosub comQuest
+gosubreturn
+label safeComBuildCheck
+if {{%useFacebook%==LINK}||{%useFacebook%==ON}} gosub facebookBoostsAB
+sleep 15
+gosub comQuest
+goto safeResourceCheck
+label facebookBoostsAB
+echo "Now you should do facebook visits if u can"
+set nullVar $m_city.accountTab.itemInfo.fetchPage(minor_bonus_reward)$
+set minBon $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%minBon%!=0} useitem minor_bonus_reward
+set nullVar $m_city.accountTab.itemInfo.fetchPage(minor_resources_reward)$
+set minRes $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%minRes%!=0} useitem minor_resources_reward
+set nullVar $m_city.accountTab.itemInfo.fetchPage(lesser_bonus_reward)$
+set lBon $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%lBon%!=0} useitem lesser_bonus_reward
+set nullVar $m_city.accountTab.itemInfo.fetchPage(lesser_resources_reward)$
+set lRes $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%lRes%!=0} useitem lesser_resources_reward
+gosubreturn
+label exitAccbuilder
+rereadgoals
+echo "Account builder stage 1 was successful"
+
+[cityGrid]
+label startNewgrid
+set radiusGrid 15
+if {$m_city.player.playerInfo.facebookId$==null} goto gridMasterNOFBsetup
+echo "collect 100 cav and 10k each resource to build next city"
+if {$m_city.cityManager.troop.lightCavalry$<100} goto waitNewgridtroops
+gosub openRespacks
+label gridMasterNOFBsetup
+echo "Ready for New City"
+label gridMastersetup
+set mainLocation $m_city.allCities[0].coord$
+if {%centerAround14%==ON} goto localHc14
+label foundLocal14
+if {%manualLocation%==ON} set mainLocation %manualCoord%
+set mainId $m_city.getValue(Coordinate,%mainLocation%)$
+set cityPlanid %mainId%
+set x {{%cityPlanid%|$m_city.player.mapSizeX$}+%xVar%}
+if {%x%>800} set x {%x%-800}
+if {%x%<0} set x {%x%+800}
+set y {{%cityPlanid%\$m_city.player.mapSizeX$}+%yVar%}
+if {%y%>800} set y {%y%-800}
+if {%y%<0} set y {%y%+800}
+set gridCoord {%x%,%y%}
+set typeGrid flat
+set levelGrid 1
+set centerGrid %gridCoord%
+set stateStart $m_city.stateNameFromFieldId(m_city.getValue(Coordinate,m_city.allCities[0].coord))$
+goto findGridtarget
+label addGridlevel
+set levelGrid {%levelGrid%+1}
+if {%levelGrid%>2} goto noneFoundInState
+goto findGridtarget
+label noneFoundInState
+echo "No new city flats in %stateStart% Limits"
+set xVar {%xVar%/2}
+set yVar {%yVar%/2}
+set xVar $m_city.math.round(%xVar%)$
+set yVar $m_city.math.round(%yVar%)$
+set radiusGrid {%radiusGrid%+%radiusGrid%}
+goto gridMastersetup
+label findGridtarget
+scanmap %centerGrid% %radiusGrid%
+setarr gridCoordslist "$m_city.getMapFieldList(%typeGrid%,%levelGrid%,%radiusGrid%,m_city.getValue(Coordinate,%centerGrid%))$"
+if {%gridCoordslist[0]%==null} goto addGridlevel
+set gridIndex 0
+label checkStategrid
+if {%gridIndex%==%gridCoordslist.length%} goto noneFoundInState
+set fieldId $m_city.getValue(Coordinate,%gridCoordslist[{%gridIndex%}]%)$
+if {%stateStart%==$m_city.stateNameFromFieldId(m_city.getValue(Coordinate,%gridCoordslist[{%gridIndex%}]%))$} goto foundTarget
+set gridIndex {%gridIndex%+1}
+goto checkStategrid
+label foundTarget
+set newcityGrid "%gridCoordslist[{%gridIndex%}]%"
+echo "closet flat lv%levelGrid% is at %newcityGrid% in %stateStart%"
+config nomayor:1
+setmayor remove
+sleep 6
+getspamhero
+if {$m_city.player.playerInfo.facebookId$==null} goto gridnoFBbuildcity
+attack %newcityGrid% any cav:100
+
+label gridnoFBbuildcity
+buildcity %newcityGrid%
+echo "City number {$m_city.player.playerInfo.castleCount$+1} scheduled for creation at %newcityGrid%"
+echo "Do not reset the bot until after city is completed"
+goto exitNewgrid
+label localHc14
+set hcType hc
+set hcLevel 14
+set hcRadius 60
+set hcCenter $m_city.allCities[0].coord$
+scanmap %hcCenter% %hcRadius%
+label hcRescan
+setarr hcList $m_city.getMapFieldList(%hcType%,%hcLevel%,%hcRadius%,m_city.getValue(Coordinate,%hcCenter%))$
+if {%hcList[0]%==null} goto setHCOwned
+set mainLocation %hcList[0]%
+goto foundLocal14
+label setHCOwned
+set hcType castle
+goto hcRescan
+label waitNewgridtroops
+sleep 300
+if {$m_city.cityManager.resource.gold$>100000} goto startNewgrid
+gosub openRespacks
+goto startNewgrid
+label exitNewgrid
+
+[roseFarming]
+label startRosesetup
+set trooptype a
+set rosePath 3
+set roseTimestamp {{$m_city.getRawTime()$-$m_city.player.playerInfo.createrTime$}/60000}
+label startRoseloop
+echo "Waiting for 500 Cavalry or 100 archers to begin Rose Farming"
+if {$m_city.cityManager.troop.lightCavalry$>500} goto useCavalrytroops
+if {$m_city.castle.troop.archer$>100} goto startValleysearch
+sleep 300
+if {{$m_city.cityManager.resource.gold$}>150000} goto startRoseloop
+gosub openRespacks
+goto startRoseloop
+label useCavalrytroops
+set rosePath 1
+set trooptype c
+label startValleysearch
+set valleyIndex 0
+set valleyLevel 1
+set valleyRadius 1
+set valleyCenter $m_city.coord$
+setarray valleyName ["flat", "forest", "lake", "hill", "swamp", "desert"]
+label rescanValley
+scanmap %valleyCenter% %valleyRadius%
+label retryValley
+set valleyType %valleyName[{%valleyIndex%}]%
+setarr valleyList $m_city.getMapFieldList(%valleyType%,%valleyLevel%,%valleyRadius%,m_city.getValue(Coordinate,%valleyCenter%))$
+if {%valleyList[0]%==null} goto setDifferentvalley
+set valleyTarget %valleyList[0]%
+goto foundValley
+label setDifferentvalley
+set valleyIndex {%valleyIndex%+1}
+if {%valleyIndex%==%valleyName.length%} goto addDistance
+goto retryValley
+label addDistance
+set valleyIndex 0
+set valleyRadius {%valleyRadius%+1}
+if {%valleyRadius%>5} goto increaseLevel
+goto rescanValley
+label increaseLevel
+set valleyRadius 1
+set valleyLevel {%valleyLevel%+1}
+if {{%trooptype%==a}&&{$m_city.castle.troop.archer$<%valleyLevel%00}} goto exitRosefarming
+if {{%trooptype%==c}&&{$m_city.castle.troop.lightCavalry$<%valleyLevel%00}} goto exitRosefarming
+if {%valleyLevel%==4} goto exitRosefarming
+goto retryValley
+label foundValley
+echo "The closet lv%valleyLevel% valley is at %valleyTarget%"
+label startFarmingroses
+if {{$m_city.cityManager.getBuildingsCountByTypeAndLvl(27,1)$==1}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(27,2)$==0}} set maxHerolimit 1
+if {{$m_city.cityManager.getBuildingsCountByTypeAndLvl(27,2)$==1}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(27,3)$==0}} set maxHerolimit 2 
+if {{$m_city.cityManager.getBuildingsCountByTypeAndLvl(27,3)$==1}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(27,4)$==0}} set maxHerolimit 3
+if {$m_city.cityManager.getBuildingsCountByTypeAndLvl(27,4)$==1} set maxHerolimit 4
+set junk $m_city.cityManager.updateInn()$
+sleep 10
+if {$m_city.cityManager.heroes.length$<%maxHerolimit%} getspamhero
+if {!$m_city.cityManager.isValley(m_city.getValue(Coordinate,%valleyTarget%))$} goto skipAbandonvalley
+abandon %valleyTarget%
+completequests routine
+label skipAbandonvalley
+if {$m_city.cityManager.resource.gold$>150000} goto skipResValley
+gosub openRespacks
+label skipResValley
+set nullVar $m_city.accountTab.itemInfo.fetchPage(rose_medal)$
+set varRose $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {{{$m_city.getRawTime()$-$m_city.player.playerInfo.createrTime$}/60000}>{%roseTimestamp%+180}} goto resetRosefarming
+if {{{$m_city.player.playerInfo.office$==Captain}&&{$m_city.player.playerInfo.titleId$==2}&&{%varRose%>=5}}||{{$m_city.player.playerInfo.office$==Major}&&{$m_city.player.playerInfo.titleId$==2}}} goto exitRosefarming
+if {{$m_city.cityManager.bestIdleAttackHero(5)$==null}||{$m_city.cityManager.getUsedRallySlots()$==%maxHerolimit%}||{$m_city.cityManager.getUsedRallySlots()$==$m_city.cityManager.getMaxRallySlots()$}} goto startFarmingroses
+if {{%trooptype%==a}&&{$m_city.castle.troop.archer$<%valleyLevel%00}} goto startFarmingroses
+if {{%trooptype%==c}&&{$m_city.castle.troop.lightCavalry$<%valleyLevel%00}} goto startFarmingroses
+attack %valleyTarget% any %trooptype%:%valleyLevel%00
+sleep 10
+goto startFarmingroses
+label resetRosefarming
+rereadgoals
+goto startRosesetup
+label exitRosefarming
+rereadgoals
+untrain c:{$m_city.cityManager.troop.lightCavalry$-150}
+
+[honorFarming]
+label startHonorsetup
+set honorTimestamp {{$m_city.getRawTime()$-$m_city.player.playerInfo.createrTime$}/60000\60}
+set npc1Type npc
+set npc1Level 1
+set npc1Radius 20
+set npc1Center $m_city.coord$
+label startHonorloop
+echo "Waiting for 6k warriors to begin Honor Farming"
+completequests routine
+if {{$m_city.castle.resource.curPopulation$>3000}&&{$m_city.cityManager.resource.food.amount$>250000}&&{$m_city.cityManager.resource.wood.amount$>300000}&&{$m_city.cityManager.resource.iron.amount$>150000}} gosub trainHonortroops
+if {$m_city.castle.troop.militia$>=6000} goto findNpclv1
+sleep 300
+if {{$m_city.cityManager.resource.gold$}>300000} goto startHonorloop
+gosub openRespacks
+goto startHonorloop
+label findNpclv1
+scanmap %npc1Center% %npc1Radius%
+setarr npc1List $m_city.getMapFieldList(%npc1Type%,%npc1Level%,%npc1Radius%,m_city.getValue(Coordinate,%npc1Center%))$
+if {%npc1List[0]%==null} goto exitHonorfarming
+set honorTarget %npc1List[0]%
+echo "We are farming Honor medals at the closet npc lv%npc1Level% %honorTarget%"
+goto startHonorfarming2
+label startHonorfarming
+completequests routine
+if {{{$m_city.getRawTime()$-$m_city.player.playerInfo.createrTime$}/60000\60}>{%honorTimestamp%+6}} goto resetHonorfarming
+sleep 390
+label startHonorfarming2
+attack %honorTarget% any w:3000
+if {{$m_city.player.playerInfo.office$==General}&&{$m_city.player.playerInfo.titleId$>=4}} goto exitHonorfarming
+if {{$m_city.castle.resource.curPopulation$>3000}&&{$m_city.cityManager.resource.food.amount$>250000}&&{$m_city.cityManager.resource.wood.amount$>300000}&&{$m_city.cityManager.resource.iron.amount$>150000}} gosub trainHonortroops
+if {{$m_city.cityManager.resource.gold$}>300000} goto startHonorfarming
+gosub openRespacks
+goto startHonorfarming
+label trainHonortroops
+production 0 0 0 0
+settaxrate 0
+train! w:3000
+production 100 100 100 100
+comfort 4
+settaxrate 0
+gosubreturn
+label resetHonorfarming
+rereadgoals
+goto startHonorsetup
+label exitHonorfarming
+rereadgoals
+
+[freedomFarming]
+label startFreedomsetup
+set freedomTimestamp {{$m_city.getRawTime()$-$m_city.player.playerInfo.createrTime$}/60000\60}
+set freedomPath 1
+set npc5Type npc
+set npc5Level 5
+set npc5Radius 10
+set npc5Center $m_city.coord$
+label startFreedomloop
+echo "Waiting for 1100 Ballista to begin Freedom Farming"
+completequests routine
+if {{$m_city.cityManager.researches[12].level$>=8}&&{$m_city.cityManager.researches[11].level$>=5}} set safeNPC5tech True
+if {{$m_city.cityManager.researches[12].level$>=8}&&{$m_city.cityManager.researches[11].level$>=5}} echo "Archery and Horseback Riding are both at safe levels to farm npc5"
+if {{$m_city.castle.resource.curPopulation$>10000}&&{$m_city.cityManager.resource.food.amount$>750000}&&{$m_city.cityManager.resource.wood.amount$>250000}&&{$m_city.cityManager.resource.iron.amount$>250000}} gosub trainFreedomtroops
+if {{$m_city.cityManager.allTroop.militia$>=150000}&&{$m_city.cityManager.getMaxRallySlots()$>=9}} goto changeTroopsused
+if {{%safeNPC5tech%==True}&&{$m_city.cityManager.allTroop.ballista$>=1100}} goto findNpclv5
+sleep 1800
+if {{$m_city.cityManager.resource.gold$}>1000000} goto startFreedomloop
+gosub openRespacks
+goto startFreedomloop
+label changeTroopsused 
+echo "Changing Troops used to Warriors to farm npc lv5"
+set freedomPath 2
+label findNpclv5
+scanmap %npc5Center% %npc5Radius%
+setarr npc5List $m_city.getMapFieldList(%npc5Type%,%npc5Level%,%npc5Radius%,m_city.getValue(Coordinate,%npc5Center%))$
+if {%npc5List[0]%==null} goto exitFreedomfarming
+set freedomTarget %npc5List[0]%
+echo "We are farming Freedom medals at the closet npc lv%npc5Level% %freedomTarget%"
+config npc:0
+goto startFreedomfarming2
+label startFreedomfarming
+completequests routine
+if {{{$m_city.getRawTime()$-$m_city.player.playerInfo.createrTime$}/60000\60}>{%freedomTimestamp%+12}} goto resetFreedomfarming
+sleep 390
+label startFreedomfarming2
+if {%freedomPath%==2} attack %freedomTarget% any w:90000
+if {%freedomPath%==1} attack %freedomTarget% any b:550,t:{$m_city.castle.troop.carriage$/3}
+set nullVar $m_city.accountTab.itemInfo.fetchPage(Freedom_Medal)$
+set freedomMedals $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {{$m_city.player.playerInfo.titleId$>=6}&&{%freedomMedals%>=10}} goto exitFreedomfarming
+if {{$m_city.castle.resource.curPopulation$>10000}&&{$m_city.cityManager.resource.food.amount$>750000}&&{$m_city.cityManager.resource.wood.amount$>900000}&&{$m_city.cityManager.resource.iron.amount$>450000}} gosub trainFreedomtroops
+if {{$m_city.cityManager.resource.gold$}>1000000} goto startFreedomfarming
+gosub openRespacks
+goto startFreedomfarming
+label trainFreedomtroops
+if {!{{$m_city.cityManager.resource.food.amount$>500000}&&{$m_city.cityManager.resource.wood.amount$>500000}&&{$m_city.cityManager.resource.iron.amount$>500000}}} gosubreturn
+production 0 0 0 0
+settaxrate 0
+train! a:10000
+production 100 100 100 100
+comfort 4
+settaxrate 0
+gosubreturn
+label resetFreedomfarming
+rereadgoals
+goto startFreedomsetup
+label exitFreedomfarming
+rereadgoals
+
+[justiceFarming]
+setsilence true
+label startJusticesetup
+set justiceTimestamp {{$m_city.getRawTime()$-$m_city.player.playerInfo.createrTime$}/60000\60}
+set npc10Type npc
+set npc10Level 10
+set npc10Radius 10
+set npc10Center $m_city.coord$
+label startJusticeloop
+echo "Waiting for troops to begin Justice Farming"
+completequests routine
+if {{$m_city.castle.resource.curPopulation$>10000}&&{$m_city.cityManager.resource.food.amount$>1500000}&&{$m_city.cityManager.resource.wood.amount$>1500000}&&{$m_city.cityManager.resource.iron.amount$>1500000}} gosub trainJusticetroops
+if {{$m_city.cityManager.researches[12].level$>=9}&&{$m_city.cityManager.researches[10].level$>=8}&&{$m_city.cityManager.researches[7].level$>=8}&&{$m_city.cityManager.researches[8].level$>=8}&&{$m_city.cityManager.researches[11].level$>=5}&&{$m_city.cityManager.researches[15].level$>=5}} set safeNPC10tech True
+if {%safeNPC10tech%==True} echo "All Researches for NPC10 Break are at or above minimum Levels"
+if {{$m_city.cityManager.bestAttackHero().power$>150}&&{$m_city.cityManager.bestAttackHero().level$>70}} set safeBreakhero True
+echo "$m_city.cityManager.bestAttackHero().name$ Hero is at lv$m_city.cityManager.bestAttackHero().level$ and att$m_city.cityManager.bestAttackHero().power$"
+if {%safeBreakhero%==True} echo "Current Break Hero is at or above minimum Levels"
+if {{%gearSet%>=5}&&{%safeNPC10tech%==True}&&{%safeBreakhero%==True}&&{$m_city.castle.troop.archer$>=400000}&&{$m_city.castle.troop.militia$>=600000}} goto findNpclv10
+sleep 1800
+if {{$m_city.cityManager.resource.gold$}>1000000} goto startJusticeloop
+gosub openRespacks
+goto startJusticeloop
+label findNpclv10
+scanmap %npc10Center% %npc10Radius%
+setarr npc10List $m_city.getMapFieldList(%npc10Type%,%npc10Level%,%npc10Radius%,m_city.getValue(Coordinate,%npc10Center%))$
+if {%npc10List[0]%==null} goto exitJusticefarming
+set justiceTarget %npc10List[0]%
+set rallyMax $m_city.cityManager.getRallyDispatchPerArmyLimit([Boolean])$
+echo "We are farming Justice medals at the closet npc lv%npc10Level% %justiceTarget%"
+include useWaritems
+goto sendBreakerwave
+label sendBreakerwave
+if {%warEamount%==0} aattack %justiceTarget% $m_city.cityManager.bestAttackHero().name$ wo:2000,w:2000,s:2000,p:2000,sw:2000,a:{%rallyMax%-10000}
+if {%warEamount%!=0} abigattack %justiceTarget% $m_city.cityManager.bestAttackHero().name$ wo:2000,w:2000,s:2000,p:2000,sw:2000,a:{{%rallyMax%*1.25}-10000}
+if {%warEamount%==0} aattack %justiceTarget% any wo:2000,w:2000,s:2000,p:2000,sw:2000,a:80000
+if {%warEamount%!=0} aattack %justiceTarget% any wo:2000,w:42000,s:3000,a:43000
+if {%warEamount%==0} aattack %justiceTarget% any wo:2000,w:32000,s:3000,a:53000
+if {%warEamount%!=0} aattack %justiceTarget% any wo:2000,w:52000,s:3000,a:33000
+label startJusticefarming
+completequests routine
+if {{{$m_city.getRawTime()$-$m_city.player.playerInfo.createrTime$}/60000\60}>{%justiceTimestamp%+24}} goto resetJusticefarming
+sleep 390
+attack %justiceTarget% any w:75000,a:25000
+if {$m_city.player.playerInfo.titleId$==9} goto exitJusticefarming
+if {{$m_city.castle.resource.curPopulation$>10000}&&{$m_city.cityManager.resource.food.amount$>1500000}&&{$m_city.cityManager.resource.wood.amount$>1500000}&&{$m_city.cityManager.resource.iron.amount$>1500000}} gosub trainJusticetroops
+if {$m_city.castle.troop.militia$<100000} goto exitJusticefarming
+if {$m_city.castle.troop.archer$<30000} goto exitJusticefarming
+goto startJusticefarming
+label trainJusticetroops
+if {!{{$m_city.cityManager.resource.food.amount$>500000}&&{$m_city.cityManager.resource.wood.amount$>500000}&&{$m_city.cityManager.resource.iron.amount$>500000}}} gosubreturn
+production 0 0 0 0
+settaxrate 0
+train! a:10000
+production 100 100 100 100
+comfort 4
+settaxrate 0
+gosubreturn
+label resetJusticefarming
+rereadgoals
+goto startJusticesetup
+label exitJusticefarming
+
+[captureCitysnippet]
+setsilence true
+label startBigsetup
+set cityNumber {$m_city.allCities.indexOf(m_city)$+1}
+set campTime "00:00"
+if {{$m_city.getLocalTime()$/3600}<5} goto exitCapture
+if {{$m_city.getLocalTime()$/3600}>3} set campTime 09:00
+if {{$m_city.getLocalTime()$/3600}>6} set campTime 12:00
+if {{$m_city.getLocalTime()$/3600}>9} set campTime 15:00
+if {{$m_city.getLocalTime()$/3600}>12} set campTime 18:00
+if {{$m_city.getLocalTime()$/3600}>15} set campTime 21:00
+if {{$m_city.getLocalTime()$/3600}>17} goto exitCapture
+set landSecond {{{$m_city.allCities.indexOf(m_city)$+1}*3}+4}
+if {$m_city.allCities.indexOf(m_city)$+1==1} set landSecond 00
+set bigType npc
+set bigRadius 20
+set bigCenter $m_city.allCities[0].coord$
+set bigCount 0
+label findBigtargets
+scanmap %bigCenter% %bigRadius%
+setarr bigList $m_city.getMapFieldList(%bigType%,%bigLevel%,%bigRadius%,m_city.getValue(Coordinate,%bigCenter%))$
+if {%bigList[0]%==null} goto exitCapture
+set targetBignpc "%bigList[0]%"
+config wartown:1
+recallall
+label waitBigWaves
+sleep 60
+if {$m_city.cityManager.localArmies.length$>3} goto waitBigWaves
+sleep 1
+echo "Now sending waves to Capture NPC lv%bigLevel% %targetBignpc% at %campTime%:%landSecond%"
+set rallyMax $m_city.cityManager.getRallyDispatchPerArmyLimit([Boolean])$
+sleep 2
+if {%bigLevel%==10} goto npc10Waves
+if {%bigLevel%==8} goto npc8Waves
+label npc8Waves
+if {$m_city.allCities.indexOf(m_city)$+1!=1} goto loy8Attacks
+config nomayor:1
+include useWaritems
+sleep 10
+setmayor remove
+calibrate
+sleep rnd:2:5
+aattack %targetBignpc% any w:90000 @:%campTime%:%landSecond%
+aattack %targetBignpc% any w:60000 @:%campTime%:{%landSecond%+3}
+aattack %targetBignpc% any w:20000 @:%campTime%:{%landSecond%+6}
+repeat 7
+goto exitCapture
+label loy8Attacks
+config nomayor:1
+sleep 10
+setmayor remove
+calibrate
+sleep rnd:2:5
+aattack %targetBignpc% any w:10000 @:%campTime%:%landSecond%
+repeat 9
+goto exitCapture
+label npc10Waves
+if {$m_city.allCities.indexOf(m_city)$+1!=1} goto loy10Attacks
+config nomayor:1
+include useWaritems
+sleep 10
+setmayor remove
+calibrate
+sleep rnd:2:5
+if {%warEamount%==0} aattack %targetBignpc% $m_city.cityManager.bestAttackHero().name$ wo:2000,w:2000,s:2000,p:2000,sw:2000,a:{%rallyMax%-10000} @:%campTime%:%landSecond%
+if {%warEamount%>0} abigattack %targetBignpc% $m_city.cityManager.bestAttackHero().name$ wo:2000,w:2000,s:2000,p:2000,sw:2000,a:{{%rallyMax%*1.25}-10000} @:%campTime%:%landSecond%
+aattack %targetBignpc% any w:60000,a:30000 @:%campTime%:{%landSecond%+3}
+aattack %targetBignpc% any w:20000,a:20000 @:%campTime%:{%landSecond%+6}
+repeat 7
+goto exitCapture
+label loy10Attacks
+config nomayor:1
+sleep 10
+setmayor remove
+calibrate
+sleep rnd:2:5
+aattack %targetBignpc% any w:20000 @:%campTime%:%landSecond%
+aattack %targetBignpc% any w:10000 @:%campTime%:{%landSecond%+1}
+repeat 7
+goto exitCapture
+label exitCapture
+
+[gemFarming]
+set heroesUsed any,!$m_city.cityManager.getBestPoliticsHero().name$,!$m_city.cityManager.bestAttackHero().name$
+setsilence true
+label startGemsetup
+set gemCount 0
+set gemType npc
+set gemLevel 5
+set gemRadius 1
+set gemCenter $m_city.coord$
+label rescanGemtargets
+scanmap %gemCenter% %gemRadius%
+label findGemtargets
+set gemIndex 0
+setarr gemList $m_city.getMapFieldList(%gemType%,%gemLevel%,%gemRadius%,m_city.getValue(Coordinate,%gemCenter%))$
+if {%gemList[{%gemIndex%}]%==null} goto nextLvsearch
+if {%gemCount%==0} goto createList
+if {%gemCount%==1} goto addTolist
+if {%gemCount%==2} goto finishList
+label createList
+setarray gemTarget ["%gemList[{%gemIndex%}]%"]
+set gemCount 1
+set gemIndex {%gemIndex%+1}
+goto addTolist
+label addTolist
+if {%gemIndex%==%gemList.length%} goto nextLvsearch
+if {%gemTarget[0]%==%gemList[{%gemIndex%}]%} goto skipAddtolist
+setarray gemTarget ["%gemTarget[0]%", "%gemList[{%gemIndex%}]%"]
+set gemCount 2
+label skipAddtolist
+set gemIndex {%gemIndex%+1}
+goto addTolist
+label nextLvsearch
+set gemLevel {%gemLevel%-1}
+if {%gemLevel%==0} goto increaseRadius
+goto findGemtargets
+label increaseRadius
+set gemRadius {%gemRadius%+1}
+if {%gemRadius%==20} goto exitScript
+set gemLevel 5
+goto rescanGemtargets
+label finishList
+if {%gemIndex%==%gemList.length%} goto nextLvsearch
+if {%gemTarget[0]%==%gemList[{%gemIndex%}]%} goto skipFinishlist
+if {%gemTarget[1]%==%gemList[{%gemIndex%}]%} goto skipFinishlist
+setarray gemTarget ["%gemTarget[0]%", "%gemTarget[1]%", "%gemList[{%gemIndex%}]%"]
+set gemCount 3
+label skipFinishlist
+set gemIndex {%gemIndex%+1}
+if {%gemTarget.length%!=3} goto nextLvsearch
+label exitSearch
+echo "We are farming Gems at %gemTarget[0]% %gemTarget[1]% %gemTarget[2]%"
+config npc:0
+set farmCount 0
+goto startGemfarming2
+label startGemfarming
+set farmCount 0
+sleep 390
+label startGemfarming2
+attack %gemTarget[{%farmCount%}]% %heroesUsed% b:550,t:55
+set farmCount {%farmCount%+1}
+if {%farmCount%==%gemTarget.length%} goto startGemfarming
+goto startGemfarming2
+label exitScript
+echo "We could not locate 3 npcs within 20 miles"
+setsilence false
+
+[useWaritems]
+set nullVar $m_city.accountTab.itemInfo.fetchPage(War_Horn)$
+set warBuff $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%warBuff%!=0} useitem War_Horn
+set nullVar $m_city.accountTab.itemInfo.fetchPage(Penicillin)$
+set penBuff $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%penBuff%!=0} useitem Penicillin
+set nullVar $m_city.accountTab.itemInfo.fetchPage(Corselet)$
+set corBuff $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%corBuff%!=0} useitem Corselet
+set nullVar $m_city.accountTab.itemInfo.fetchPage(War_Ensign)$
+set warEamount $m_city.accountTab.itemInfo.itemsArray[0].count$
+
+[useDailyamulets]
+label setAmmyCount
+set nullVar $m_city.accountTab.itemInfo.fetchPage(aries_amulet)$
+set aAmmi $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%aAmmi%<10} goto exituseAllammies
+label useAllammies
+set nullVar $m_city.accountTab.itemInfo.fetchPage(aries_amulet)$
+set aAmmi $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%aAmmi%==0} goto exituseAllammies
+useitem aries_amulet
+goto useAllammies
+label exituseAllammies
+
+[gearUpsnippet]
+setsilence true
+Echo "Your gear is ready to upgrade"
+
+[gearLevelsnippet]
+set gearLevel 10
+set typeIndex 1
+label gearCityloop
+if {$m_city.cityManager.getGearLevel({%typeIndex%})$<%gearLevel%} set gearLevel {$m_city.cityManager.getGearLevel({%typeIndex%})$}
+set typeIndex {%typeIndex%+1}
+if {%typeIndex%<15} goto gearCityloop
+echo "Current Lowest Gear Lv %gearLevel%"
+
+[starSetsnippet]
+set gearSet 15
+set iSet 0
+label gearSetLoop
+if {$m_city.cityManager.gears[{%iSet%}].typeId$!=3} set gearSet $m_city.math.min(%gearSet%,m_city.cityManager.gears[{%iSet%}].enhancedstarlv)$
+set iSet {%iSet%+1}
+if {%iSet%<$m_city.cityManager.gears.length$} goto gearSetLoop
+echo "Current Lowest Star Lv %gearSet%"
+
+[starUpgradeEngine]
+label masterStarSetup
+set starSet 15
+set iSet 0
+label starSetLoop
+if {$m_city.cityManager.gears[{%iSet%}].typeId$!=3} set starSet $m_city.math.min(%starSet%,m_city.cityManager.gears[{%iSet%}].enhancedstarlv)$
+set iSet {%iSet%+1}
+if {%iSet%<$m_city.cityManager.gears.length$} goto starSetLoop
+echo "Current Lowest Star Lv %starSet%"
+if {%starSet%==15} goto doneStar
+set starTarget {%starSet%+1}
+set starRecover %starSet%
+set minDel {%starSet%*100}
+set minFlaw {%starSet%*50}
+setarr levels "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14"
+setarr gemType "de de de de de de de fl fl fl fl fl fl fl fl"
+setarr gemCount "1 2 3 4 4 4 4 4 4 4 4 4 4 4 4"
+setarr gear "we shi mo ne cha ri he sho che ba ga be le fo"
+set recoverTime false
+gosub checkGems
+set i -1
+label nextGear
+if {%recoverTime%==true} goto doneStar
+set i {%i%+1}
+if {%i%>=%gear.length%} goto doneStar
+if {%i%==2} goto nextGear
+if {$m_city.cityManager.gears[{%i%}].level$+6==$m_city.cityManager.gears[{%i%}].enhancedstarlv$||$m_city.cityManager.gears[{%i%}].enhancedstarlv$==15||$m_city.cityManager.gears[{%i%}].enhancedstarlv$>=%starTarget%} goto nextGear
+if {$m_city.cityManager.gears[{%i%}].level$+6>$m_city.cityManager.gears[{%i%}].enhancedstarlv$&&$m_city.cityManager.gears[{%i%}].enhancedstarlv$!=15} goto startStar
+goto nextGear
+label startStar
+if {%recoverTime%==true&&$m_city.cityManager.gears[{%i%}].enhancedstarlv$>=%starTarget%} goto doneStar
+set currentLevel $m_city.cityManager.gears[{%i%}].enhancedstarlv$
+star %gear[{%i%}]% %gemType[{%currentLevel%}]% %gemCount[{%currentLevel%}]%
+set starttime $m_city.getRawTime()$
+label waitStar
+sleep 0.5
+if {$m_city.getRawTime()$>{%starttime%+10*1000}} goto startStar
+if {$m_city.cityManager.gears[{%i%}].enhancedstarlv$==%currentLevel%} goto waitStar
+if {$m_city.cityManager.gears[{%i%}].enhancedstarlv$<%currentLevel%} goto failedStar
+if {$m_city.cityManager.gears[{%i%}].enhancedstarlv$>=%starTarget%} goto nextGear
+gosub checkGems
+goto startStar
+label failedStar
+gosub checkGems
+goto startStar
+label checkGems
+set junk $m_city.accountTab.itemInfo.fetchPage(flawless_gem)$
+sleep 1
+set fCount $m_city.accountTab.itemInfo.itemsArray[0].count$
+set junk $m_city.accountTab.itemInfo.fetchPage(delicate_gem)$
+sleep 1
+set dCount $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%fCount%<=%minFlaw%||%dCount%<=%minDel%} goto notEnoughGems
+gosubreturn
+label notEnoughGems
+set recoverTime true
+set starTarget %starRecover%
+gosubreturn
+label doneStar
+echo "We can star no Further today"
+
+[breakStargear]
+set gearSet 15
+set iSet 0
+label breakSetLoop
+if {$m_city.cityManager.gears[{%iSet%}].typeId$!=3} set gearSet $m_city.math.min(%gearSet%,m_city.cityManager.gears[{%iSet%}].enhancedstarlv)$
+set iSet {%iSet%+1}
+if {%iSet%<$m_city.cityManager.gears.length$} goto breakSetLoop
+echo "Current Lowest Star Lv %gearSet%"
+label breakStarprocess
+setarray gearAbr2 ["", "we", "shi", "ne", "cha", "ri", "he", "sho", "che", "ba", "ga", "be", "le", "fo"]
+set myStarindex 0
+set gearSet {%gearSet%+1}
+if {%gearSet%>5} goto conBreakready
+label breakEvengear
+set gearName %gearAbr2[{$m_city.cityManager.gears[{%myStarindex%}].typeId$}]%
+set nullVar $m_city.accountTab.itemInfo.fetchPage(Flawless_gem)$
+set starFlaw $m_city.accountTab.itemInfo.itemsArray[0].count$
+set nullVar $m_city.accountTab.itemInfo.fetchPage(Delicate_gem)$
+set starDec $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {%starFlaw%<{10}} goto waitBreakupgrade
+if {%starDec%<20} goto waitBreakupgrade
+autostar %gearName% {%gearSet%} 0:0:de:1 1:1:de:2 2:2:de:3 3:5:de:4 6:5:fl:4
+set myStarindex {%myStarindex%+1}
+if {%myStarindex%<13} goto breakEvengear
+goto breakStarprocess
+label conBreakready
+echo "Congratulations your gear is Max for this time!"
+label waitBreakupgrade
+
+[speedUpresearch]
+label guidelineResearch
+setarray guidelineName ["beginner", "primary", "intermediate", "senior", "master", "ultimate"]
+set guidelineNumber 0
+label guidelineCountEngine
+set nullVar $m_city.accountTab.itemInfo.fetchPage(%guidelineName[{%guidelineNumber%}]%_guidelines)$
+set %guidelineName[{%guidelineNumber%}]%Count $m_city.accountTab.itemInfo.itemsArray[0].count$
+echo "%guidelineName[{%guidelineNumber%}]%_guidelines %{%guidelineName[{%guidelineNumber%}]%}Count%"
+set guidelineNumber {%guidelineNumber%+1}
+if {%guidelineNumber%<%guidelineName.length%} goto guidelineCountEngine
+label guidelineUseEngine
+set guidelineNumber {%guidelineNumber%-1}
+if {%guidelineNumber%==-1} goto guidelineExit
+if {%{%guidelineName[{%guidelineNumber%}]%}Count%==0} goto guidelineUseEngine
+if {%guidelineNumber%==0} set guidelineTime 0.25
+if {%guidelineNumber%==1} set guidelineTime 1
+if {%guidelineNumber%==2} set guidelineTime 2.5
+if {%guidelineNumber%==3} set guidelineTime 8
+if {%guidelineNumber%==4} set guidelineTime 30
+if {%guidelineNumber%==5} set guidelineTime 30
+label guidelineCurrentResearch
+if {{{{$m_city.getRawTime()$-$m_city.cityManager.researches[12].endTime$}/60000\60}*-1}<{%guidelineTime%}} goto guidelineUseEngine
+usetechitem %guidelineName[{%guidelineNumber%}]%_guidelines
+set %guidelineName[{%guidelineNumber%}]%Count {%{%guidelineName[{%guidelineNumber%}]%}Count%-1}
+if {%{%guidelineName[{%guidelineNumber%}]%}Count%!=0} goto guidelineCurrentResearch
+label guidelineExit
+
+//---------------------------------------------Goals-----------------------------------------------//
+
+[default]
+include GOALSETTINGS
+condgoal {$m_city.player.playerInfo.titleId$>0} include GoalTierSystem
+[GoalTierSystem]
+condgoal {$m_city.cityManager.getBuildingsCountByTypeAndLvl(31,10)$==1} set cityGoalTier 5
+condgoal {{$m_city.cityManager.getBuildingsCountByTypeAndLvl(31,9)$==1}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(31,10)$==0}} set cityGoalTier 4
+condgoal {{$m_city.cityManager.getBuildingsCountByTypeAndLvl(31,7)$==1}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(31,9)$==0}} set cityGoalTier 3
+condgoal {{$m_city.cityManager.getBuildingsCountByTypeAndLvl(31,4)$==1}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(31,7)$==0}} set cityGoalTier 2
+condgoal {{$m_city.cityManager.getBuildingsCountByTypeAndLvl(31,1)$==1}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(31,4)$==0}} set cityGoalTier 1
+condgoal {$m_city.allCities.indexOf(m_city)$+1!=1} include supplyConfigs
+condgoal {$m_city.allCities.indexOf(m_city)$+1==1} include mainConfigs
+condgoal {{%controlZeroFood%==ON}&&{$m_city.allCities.indexOf(m_city)$+1==1}&&{$m_city.allCities[0].cityManager.troop.ballista$>100000}} config zerofood:8
+condgoal {{%controlZeroFood%==ON}&&{$m_city.allCities.indexOf(m_city)$+1==1}&&{$m_city.allCities[0].cityManager.troop.scouter$>3000000}} config zerofood:8
+condgoal {{%controlZeroFood%==ON}&&{$m_city.allCities.indexOf(m_city)$+1==1}&&{$m_city.allCities[0].cityManager.troop.archer$>1000000}} config zerofood:8
+condgoal {%dailyReset%==ON} schedulepolicy 4:30 3:30
+condgoal {{$m_city.player.playerInfo.titleId$!=9}&&{$m_city.allCities.indexOf(m_city)$+1==1}&&{$m_city.player.playerInfo.titleId$>=4}} include priorityBreakHero
+condgoal {{$m_city.castle.troop.ballista$<2200}&&{$m_city.castle.troop.ballista$>50}} config npc:1
+condgoal {{$m_city.allCities.indexOf(m_city)$+1!=1}&&{%cityGoalTier%>=3}} include largeDefenses
+condgoal {{$m_city.allCities.indexOf(m_city)$+1==1}&&{%cityGoalTier%==5}} include largeDefenses
+condgoal {$m_city.allCities.indexOf(m_city)$+1!=1} include supplyBuilds
+condgoal {$m_city.allCities.indexOf(m_city)$+1==1} include mainBuilds
+condgoal {$m_city.allCities.indexOf(m_city)$+1==1} include start1Research
+condgoal {$m_city.allCities.indexOf(m_city)$+1==2} include start2Research
+condgoal {$m_city.allCities.indexOf(m_city)$+1==3} include start3Research
+condgoal {$m_city.allCities.indexOf(m_city)$+1==4} include start4Research
+condgoal {$m_city.allCities.indexOf(m_city)$+1==5} include start5Research
+condgoal {$m_city.allCities.indexOf(m_city)$+1==6} include start6Research
+condgoal {$m_city.allCities.indexOf(m_city)$+1==7} include start7Research
+condgoal {$m_city.allCities.indexOf(m_city)$+1==8} include start8Research
+condgoal {$m_city.allCities.indexOf(m_city)$+1==9} include start9Research
+condgoal {$m_city.allCities.indexOf(m_city)$+1==10} include start10Research
+condgoal {%cityGoalTier%<=4} include finalCityResearch
+condgoal {%cityGoalTier%==5} include finalNpcResearch
+condgoal {$m_city.allCities.indexOf(m_city)$+1!=1} include supplyTroops
+condgoal {$m_city.allCities.indexOf(m_city)$+1==1} include mainTroops
+condgoal {$m_city.allCities.indexOf(m_city)$+1==1} autouseitems Double_Saw,Arch_Saw,Minor_Speedup_pack,Furstin_Rienf._Pack
+condgoal {{$m_city.castle.name$==Flat}&&{%autoUseFaceBook%==ON}&&{$m_city.allCities[0].cityManager.resource.gold$>100000}} include countRespacks
+condgoal {{%cityGoalTier%==1}&&{$m_city.allCities.indexOf(m_city)$+1!=1}} include flatCityMovement
+condgoal {{%cityGoalTier%==2}&&{$m_city.allCities.indexOf(m_city)$+1!=1}} include smallCityMovement
+condgoal {{%cityGoalTier%==3}&&{$m_city.allCities.indexOf(m_city)$+1!=1}} include largeCityMovement
+condgoal {{%cityGoalTier%==4}&&{$m_city.allCities.indexOf(m_city)$+1!=1}} include finalCityMovement
+condgoal {{%cityGoalTier%==5}&&{$m_city.allCities.indexOf(m_city)$+1!=1}} include npc10CityMovement
+condgoal {{%cityGoalTier%==5}&&{$m_city.allCities.indexOf(m_city)$+1==1}} include npc10MainMovement
+
+[supplyConfigs]
+condgoal {%cityGoalTier%==1} include flatCityConfigs
+condgoal {%cityGoalTier%==2} include smallCityConfigs
+condgoal {%cityGoalTier%==3} include largeCityConfigs
+condgoal {%cityGoalTier%==4} include finalCityConfigs
+condgoal {%cityGoalTier%==5} include npc10CityConfigs
+[mainConfigs]
+condgoal {%cityGoalTier%==1} include flatMainConfigs
+condgoal {%cityGoalTier%==2} include smallMainConfigs
+condgoal {%cityGoalTier%==3} include largeMainConfigs
+condgoal {%cityGoalTier%==4} include finalMainConfigs
+condgoal {{%cityGoalTier%==5}&&{$m_city.player.playerInfo.titleId$!=9}} include npc10MainConfigs
+condgoal {{%cityGoalTier%==5}&&{$m_city.player.playerInfo.titleId$==9}} include prinzMainConfigs
+
+[flatCityConfigs]
+config hero:11,trade:1
+distancepolicy 20 20 20 20 20
+resourcelimits 153600,300000 153600,300000 153600,300000 153600,300000
+[smallCityConfigs]
+config hero:11,trade:1,buildnpc:5,dumping:0.2
+distancepolicy 20 6 20 20 20
+resourcelimits 384000,570000 384000,570000 384000,570000 384000,570000 
+[largeCityConfigs]
+config hero:11,trade:1,buildnpc:5,dumping:0.5
+distancepolicy 20 20 20 20 20
+resourcelimits 484000,770000 484000,770000 484000,770000 484000,770000 
+[finalCityConfigs]
+config hero:10,dumping:3,trade:1,valley:10
+config extrafood:-1
+config noreports:0
+config junkwave:1
+config junkscout:1
+config keepjunkarmyreports:1
+config keepjunkscoutreports:1
+config comfort:1
+config gate:.25
+config hiding:.15
+distancepolicy 20 20 20 20 20
+resourcelimits 5m,40m 2m,6m 2m,6m 2m,6m
+gatepolicy 2 2 2 2 2
+[npc10CityConfigs]
+config hero:10,dumping:3,trade:1,valley:10
+config extrafood:-1
+config noreports:0
+config junkwave:1
+config junkscout:1
+config keepjunkarmyreports:1
+config keepjunkscoutreports:1
+config comfort:1
+config gate:.25
+config hiding:.15
+distancepolicy 20 20 20 20 20
+resourcelimits 5m,20m 2500k,12m 3m,1b 2m,10m
+gatepolicy 2 2 2 2 2
+
+[flatMainConfigs]
+config hero:11,dumping:0.4,trade:2
+resourcelimits 50000,100000 50000,100000 50000,100000 50000,100000
+[smallMainConfigs]
+config hero:11,fasthero:30,herominattack:50,junkhero:7,dumping:0.4,trade:2,extrafood:-1,nocapture:1
+condgoal {$m_city.player.playerInfo.facebookId$!=null} config nomayor:1
+distancepolicy 10 5 20 10 1
+resourcelimits 150000,300000 250000,500000 150000,300000 100000,300000
+[largeMainConfigs]
+config hero:11,fasthero:50,herominattack:50,junkhero:7,dumping:0.8,trade:2,extrafood:-1
+distancepolicy 10 5 20 10 1
+resourcelimits 384000,1000000 384000,500000 384000,500000 384000,500000
+[finalMainConfigs]
+config hero:11,fasthero:50,herominattack:50,buildnpc:5,junkhero:7,dumping:1,trade:2,extrafood:-1
+distancepolicy 10 5 20 10 1
+resourcelimits 1536000,10000000 1536000,3000000 1536000,3000000 1536000,3000000
+config relogin:20
+[npc10MainConfigs]
+config hero:10,fasthero:65,herominattack:60,buildnpc:15,junkhero:7,dumping:2,trade:2,extrafood:-1
+config extrafood:-1
+config attackwarning:1
+config warreport:1
+config relogin:20
+maintpolicy 33 43
+distancepolicy 10 5 20 10 1
+resourcelimits 10000000,30000000 3000000,6000000 3000000,6000000 3000000,6000000
+rallymax npc:10,buildnpc:1,valley:1,keepresource:1,keeptroop:1,requesthelp:1,hiding:1,rainbow:1
+config relogin:20
+[prinzMainConfigs]
+config hero:10,dumping:3,trade:2,valley:10
+config extrafood:-1
+config attackwarning:1
+config warreport:1
+config relogin:20
+config noreports:0
+config junkwave:1
+config junkscout:1
+config keepjunkarmyreports:1
+config keepjunkscoutreports:1
+config comfort:1
+config gate:.25
+config hiding:.15
+maintpolicy 33 43
+distancepolicy 10 5 20 10 1
+resourcelimits 10m,30m 2500k,12m 3m,1b 2m,10m
+rallymax npc:10,buildnpc:1,valley:2,keepresource:1,keeptroop:2,requesthelp:2,hiding:2,rainbow:1
+gatepolicy 1 1 1 1 1
+autouseitems Speech_Text:7
+autouseitems Truce_Agreement:75:1
+config relogin:20
+
+[priorityBreakHero]
+condgoal {{$m_city.allCities[0].cityManager.troop.militia$>100000}&&{$m_city.cityManager.bestAttackHero().level$<70}} priorityfarming 6 w:100000 w:90000 25 60 $m_city.cityManager.bestAttackHero().name$
+condgoal {{$m_city.allCities[0].cityManager.troop.ballista$>550}&&{$m_city.cityManager.bestAttackHero().level$<70}} priorityfarming 5 b:550,t:200 b:550,t:200 20 60 $m_city.cityManager.bestAttackHero().name$
+condgoal {{$m_city.allCities[0].cityManager.troop.ballista$>250}&&{$m_city.cityManager.bestAttackHero().level$<70}} priorityfarming 4 b:250,t:100 b:250,t:100 20 60 $m_city.cityManager.bestAttackHero().name$
+condgoal {{$m_city.allCities[0].cityManager.troop.ballista$>150}&&{$m_city.cityManager.bestAttackHero().level$<70}} priorityfarming 3 b:150,t:50 b:150,t:50 20 60 $m_city.cityManager.bestAttackHero().name$
+
+[largeDefenses]
+fortification ab:10
+fortification ab:15
+fortification tra:10,tre:10,r:10,at:100
+fortification ab:1000,tra:1000
+fortification at:20500
+
+[supplyBuilds]
+condgoal {%cityGoalTier%<=3} include largeCityBuilds
+condgoal {%cityGoalTier%==4} include finalCityBuilds
+condgoal {%cityGoalTier%==5} include npc10CityBuilds
+[mainBuilds]
+condgoal {%cityGoalTier%<=3} include largeMainBuilds
+condgoal {%cityGoalTier%==4} include finalMainBuilds
+condgoal {%cityGoalTier%==5} include npc10MainBuilds
+
+[largeCityBuilds]
+condgoal {{$m_city.castle.troop.ballista$>550}&&{$m_city.castle.troop.carriage$>55}} build fh:5:1,r:6:1
+Build r:1:1
+Build c:2:7,s:3:13
+Build t:2:1,m:1:1
+Build a:2:1,ws:2:1
+Build a:3:1,w:1:1
+Build a:4:1,t:3:1,fh:2:1,s:5:13,c:4:7
+Build a:5:1,t:4:1
+Build c:5:7,s:9:19
+Build b:4:15
+Build b:9:10
+Build a:9:1
+Build t:7:1,c:8:7,s:9:28,m:3:1,fh:5:1,r:6:1
+Build fh:9:1,r:9:1,m:4:1
+Build b:9:11
+Build b:9:12
+Build b:9:13
+Build b:9:14
+Build b:9:15
+Build b:9:16
+Build b:9:17
+Build t:9:1,c:9:7,s:9:34,ws:9:1
+[finalCityBuilds]
+Build t:9:1,c:9:7,s:9:34,ws:9:1
+Build b:9:17,s:9:37,be:9:1,m:9:1,e:9:1,rs:9:1,fh:9:1,inn:9:1,a:9:1,ws:9:1
+condgoal {%finishKeyBuilds%==ON} include finishCityBuildings
+condgoal {%rebuildCity%==ON} Build c:0:7,f:0:0,q:0:0,i:0:0,fo:0:0,st:0:0
+[npc10CityBuilds]
+Build b:4:20
+Build c:0:5
+Build b:9:20
+Build f:9:40
+condgoal {%finishKeyBuilds%==ON} include finishCityBuildings
+condgoal {%rebuildCity%==ON} Build fo:0:0,st:0:0
+
+[largeMainBuilds]
+condgoal {$m_city.allCities[0].cityManager.troop.lightCavalry$>1000} build fh:3:1,r:4:1
+condgoal {$m_city.player.playerInfo.titleId$>=2} build b:1:13
+condgoal {$m_city.player.playerInfo.titleId$>=4} build b:4:13
+condgoal {%useFacebook%==OFF} Build c:5:7,s:9:19,fh:2:1,r:3:1
+Build %fieldType%:5:19,c:3:7,fh:2:1,r:3:1
+Build w:3:1,inn:5:1
+Build fh:4:1,s:7:1
+Build t:6:1,w:5:1
+Build fh:6:1,r:5:1,%fieldType%:9:25,c:7:7
+Build t:8:1,w:7:1
+Build ws:5:1,st:5:1,m:5:1,fo:5:1,b:5:1
+Build t:10:1
+Build fh:9:1,r:9:1
+Build c:9:7,%fieldType%:9:37
+Build b:4:13
+Build b:9:1
+Build a:9:1
+Build b:9:2
+Build b:9:3
+Build b:9:4
+Build b:9:5
+Build b:9:6
+Build b:6:13
+Build b:9:13
+Build c:9:5,w:9:1,t:9:1,ws:9:1,m:9:1,inn:9:1,rs:9:1
+[finalMainBuilds]
+Build t:10:1
+Build fh:9:1,r:9:1
+Build c:9:7,s:9:37
+Build b:4:13
+Build b:9:1
+Build a:9:1
+Build b:9:2
+Build b:9:3
+Build b:9:4
+Build b:9:5
+Build b:9:6
+Build b:6:13
+Build b:9:13
+Build c:9:5,w:9:1,t:9:1,ws:9:1,m:9:1,inn:9:1,rs:9:1
+Build t:9:1,c:9:5,w:9:1,%fieldType%:9:34,ws:9:1,m:9:1,inn:9:1,rs:9:1,a:9:1,fh:9:1,be:9:1,m:9:1,e:9:1
+condgoal {{%rebuildCity%==ON}&&{$m_city.castle.name$!=0}} Build c:0:7,st:0:0,fo:0:0,f:0:0,i:0:0,q:0:0
+Build b:9:17,%fieldType%:9:40
+condgoal {%finishKeyBuilds%==ON} include finishCityBuildings
+condgoal {%rebuildCity%==ON} Build c:0:7,f:0:0,q:0:0,i:0:0
+condgoal {%rebuildCity%==ON} Build fo:0:0,st:0:0
+[npc10MainBuilds]
+Build t:10:1
+Build fh:9:1,r:9:1
+Build c:9:7,s:9:37
+Build b:4:13
+Build b:9:1
+Build a:9:1
+Build b:9:2
+Build b:9:3
+Build b:9:4
+Build b:9:5
+Build b:9:6
+Build b:6:13
+Build b:9:13
+Build b:4:20
+Build c:0:5
+Build b:9:20
+Build f:9:40
+condgoal {%finishKeyBuilds%==ON} include finishCityBuildings
+condgoal {{$m_city.cityManager.researches[6].level$==10}&&{$m_city.cityManager.researches[11].level$==10}&&{%rebuildCity%==ON}} Build fo:0:0,st:0:0
+
+[finishCityBuildings]
+set incBuild 0
+set nullVar $m_city.accountTab.itemInfo.fetchPage(michelangelo's_script)$
+set michScript $m_city.accountTab.itemInfo.itemsArray[0].count$
+condgoal {{%michScript%>=$m_city.player.playerInfo.castleCount$}&&{%incBuild%==0}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(29,10)$==0}} include finishRallySpot
+condgoal {{%michScript%>=$m_city.player.playerInfo.castleCount$}&&{%incBuild%==0}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(27,10)$==0}} include finishFeastingHall
+condgoal {{%michScript%>=$m_city.player.playerInfo.castleCount$}&&{%incBuild%==0}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(26,10)$==0}} include finishWorkShop
+condgoal {{%michScript%>=$m_city.player.playerInfo.castleCount$}&&{%incBuild%==0}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(24,10)$==0}} include finishReliefStation
+condgoal {{%michScript%>={$m_city.player.playerInfo.castleCount$*17}}&&{%incBuild%==0}} include finishBarracks
+[finishMainBuildings]
+set incBuild 0
+set nullVar $m_city.accountTab.itemInfo.fetchPage(michelangelo's_script)$
+set michScript $m_city.accountTab.itemInfo.itemsArray[0].count$
+condgoal {{%michScript%>=1}&&{%incBuild%==0}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(29,10)$==0}} include finishRallySpot
+condgoal {{%michScript%>=1}&&{%incBuild%==0}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(27,10)$==0}} include finishFeastingHall
+condgoal {{%michScript%>=1}&&{%incBuild%==0}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(26,10)$==0}} include finishWorkShop
+condgoal {{%michScript%>=1}&&{%incBuild%==0}&&{$m_city.cityManager.getBuildingsCountByTypeAndLvl(24,10)$==0}} include finishReliefStation
+condgoal {{%michScript%>=17}&&{%incBuild%==0}} include finishBarracks
+[finishRallySpot]
+set incBuild 1
+Build r:10:1
+[finishFeastingHall]
+set incBuild 1
+Build fh:10:1
+[finishWorkShop]
+set incBuild 1
+Build ws:10:1
+[finishReliefStation]
+set incBuild 1
+Build rs:10:1
+[finishBarracks]
+set incBuild 1
+Build b:10:17
+
+[start1Research]
+Research ar:6
+Research met:5
+Research ar:9
+Research ho:8
+Research ar:10
+Research met:10
+[start2Research]
+Research lu:9
+Research con:10
+[start3Research]
+Research com:10
+Research ir:10
+[start4Research]
+Research mt:10
+Research lo:10
+[start5Research]
+Research med:10
+[start6Research]
+Research in:10
+[start7Research]
+Research lu:9
+[start8Research]
+Research mac:10
+[start9Research]
+Research en:10
+[start10Research]
+Research mi:9
+[finalCityResearch]
+Research met:9,in:10,ms:9,mt:10,ir:10,lo:10,com:10,con:10,med:10
+[finalNpcResearch]
+Research ms:10
+Research ho:10
+Research ag:10,lu:10,mas:10,mi:10,met:10,in:10,mt:10,ir:10,lo:10,com:10,ar:10,con:10,med:10,mac:10,en:10
+Research pr:10
+
+[supplyTroops]
+condgoal {%cityGoalTier%==2} include smallCityTroops
+condgoal {%cityGoalTier%==3} include largeCityTroops
+condgoal {%cityGoalTier%==4} include finalCityTroops
+condgoal {%cityGoalTier%==5} include npc10CityTroops
+[mainTroops]
+condgoal {%cityGoalTier%==2} include smallMainTroops
+condgoal {%cityGoalTier%==3} include largeMainTroops
+condgoal {%cityGoalTier%==4} include finalMainTroops
+condgoal {%cityGoalTier%==5} include npc10MainTroops
+
+[smallCityTroops]
+condgoal {$m_city.cityManager.getBuildingsCountByTypeAndLvl(2,1)$>=1} troop wo:500
+condgoal {$m_city.cityManager.getBuildingsCountByTypeAndLvl(2,6)$>=1} troop t:550
+condgoal {$m_city.cityManager.getBuildingsCountByTypeAndLvl(2,9)$>=1} troop b:550
+condgoal {$m_city.cityManager.getBuildingsCountByTypeAndLvl(2,9)$>=1} troop b:2200,t:220
+condgoal {$m_city.cityManager.getBuildingsCountByTypeAndLvl(2,9)$>=1} troop b:4400,t:2200
+[largeCityTroops]
+troop wo:500
+condgoal {$m_city.cityManager.getBuildingsCountByTypeAndLvl(2,6)$>=1} troop t:550
+condgoal {$m_city.cityManager.getBuildingsCountByTypeAndLvl(2,9)$>=1} troop b:550
+troop a:30000
+troop w:100000
+condgoal {$m_city.cityManager.getBuildingsCountByTypeAndLvl(2,9)$>=1} troop b:2200,t:2200
+condgoal {$m_city.cityManager.getBuildingsCountByTypeAndLvl(2,9)$>=1} troop b:4400,t:2200
+[finalCityTroops]
+troop wo:500
+troop b:2200,t:220
+troop a:30000
+troop w:100000
+troop b:4400,t:2200
+condgoal {{$m_city.player.playerInfo.titleId$==9}&&{%altType%==Scout}} troop r:3000,b:5000,sw:1000,p:1000,wo:1000,s:900000,c:1000,cata:1000
+condgoal {{$m_city.player.playerInfo.titleId$==9}&&{%altType%==Archer}} troop r:3000,b:5000,a:450000,sw:1000,p:1000,wo:1000,s:1000,c:1000,cata:1000
+condgoal {{$m_city.player.playerInfo.titleId$==9}&&{%altType%==Ballista}} troop r:3000,b:50000,sw:1000,p:1000,wo:1000,s:1000,c:1000,cata:1000
+[npc10CityTroops]
+troop wo:500
+troop b:2200,t:220
+troop a:30000
+troop w:100000
+troop t:2200,r:3000,b:5000,sw:1000,p:1000,wo:1000,s:1000,c:1000,cata:1000
+condgoal {{$m_city.player.playerInfo.titleId$==9}&&{%altType%==Scout}} troop r:3000,b:5000,sw:1000,p:1000,wo:1000,s:900000,c:1000,cata:1000
+condgoal {{$m_city.player.playerInfo.titleId$==9}&&{%altType%==Archer}} troop r:3000,b:5000,a:450000,sw:1000,p:1000,wo:1000,s:1000,c:1000,cata:1000
+condgoal {{$m_city.player.playerInfo.titleId$==9}&&{%altType%==Ballista}} troop r:3000,b:50000,sw:1000,p:1000,wo:1000,s:1000,c:1000,cata:1000
+
+[smallMainTroops]
+condgoal {%useFacebook%==OFF} troop a:300
+condgoal {%useFacebook%==OFF} troop wo:250
+condgoal {{$m_city.player.playerInfo.titleId$<=2}&&{$m_city.player.playerInfo.titleId$>=3}} troop w:12000
+condgoal {{$m_city.allCities[0].cityManager.allTroop.peasants$<250}&&{$m_city.player.playerInfo.titleId$>1}} troop wo:500
+condgoal {$m_city.cityManager.getBuildingsCountByTypeAndLvl(2,4)$>=1} troop a:5500
+[largeMainTroops]
+condgoal {$m_city.allCities[0].cityManager.allTroop.lightCavalry$<150} troop a:300
+condgoal {{$m_city.player.playerInfo.titleId$<=2}&&{$m_city.player.playerInfo.titleId$>=3}} troop w:12000
+condgoal {{$m_city.allCities[0].cityManager.allTroop.peasants$<250}&&{$m_city.player.playerInfo.titleId$>1}} troop wo:500
+condgoal {$m_city.cityManager.getBuildingsCountByTypeAndLvl(2,4)$>=1} troop a:11000
+[finalMainTroops]
+condgoal {$m_city.allCities[0].cityManager.allTroop.lightCavalry$<150} troop a:300
+condgoal {{$m_city.player.playerInfo.titleId$<=2}&&{$m_city.player.playerInfo.titleId$>=3}} troop w:12000
+condgoal {{$m_city.allCities[0].cityManager.allTroop.peasants$<250}&&{$m_city.player.playerInfo.titleId$>1}} troop wo:500
+condgoal {$m_city.cityManager.getBuildingsCountByTypeAndLvl(2,4)$>=1} troop a:5500
+condgoal {$m_city.allCities[0].cityManager.allTroop.archer$>5500} troop a:11000
+condgoal {$m_city.allCities[0].cityManager.allTroop.archer$>11000} troop a:22000
+condgoal {$m_city.allCities[0].cityManager.allTroop.archer$>22000} troop a:44000
+condgoal {$m_city.allCities[0].cityManager.allTroop.archer$>44000} troop a:88000
+[npc10MainTroops]
+condgoal {$m_city.allCities[0].cityManager.allTroop.lightCavalry$<150} troop a:300
+condgoal {{$m_city.player.playerInfo.titleId$<=2}&&{$m_city.player.playerInfo.titleId$>=3}} troop w:12000
+condgoal {{$m_city.allCities[0].cityManager.allTroop.peasants$<250}&&{$m_city.player.playerInfo.titleId$>1}} troop wo:500
+condgoal {$m_city.cityManager.getBuildingsCountByTypeAndLvl(2,4)$>=1} troop a:5500
+condgoal {$m_city.cityManager.getBuildingsCountByTypeAndLvl(2,9)$>=1} troop b:2200,t:220
+condgoal {{$m_city.cityManager.getBuildingsCountByTypeAndLvl(2,9)$>=1}&&{$m_city.allCities[0].cityManager.allTroop.ballista$>2200}} troop b:4400,t:2200
+condgoal {$m_city.allCities[0].cityManager.allTroop.archer$>5500} troop a:10000
+condgoal {$m_city.allCities[0].cityManager.allTroop.archer$>11000} troop a:20000
+condgoal {$m_city.allCities[0].cityManager.allTroop.archer$>22000} troop a:40000
+condgoal {{$m_city.cityManager.getBuildingsCountByTypeAndLvl(2,9)$>=1}&&{$m_city.allCities[0].cityManager.allTroop.ballista$>4400}} troop t:4400
+condgoal {$m_city.allCities[0].cityManager.allTroop.archer$>44000} troop a:84000,sw:1000,p:1000,wo:1000,s:1000,c:1000,w:1000
+condgoal {$m_city.allCities[0].cityManager.allTroop.archer$>88000} troop a:150000,w:100000,sw:2000,p:2000,wo:2000,s:2000,c:2000
+condgoal {$m_city.allCities[0].cityManager.allTroop.archer$>150000} troop w:400000,a:300000,sw:10000,p:10000,wo:10000,s:10000,c:10000
+condgoal {{$m_city.player.playerInfo.titleId$==9}&&{%altType%==Scout}} troop r:3,a:30,w:45,sw:25,p:25,wo:25,s:9,c:25,cata:10
+condgoal {{$m_city.player.playerInfo.titleId$==9}&&{%altType%==Archer}} troop r:3,a:30,w:75,sw:25,p:25,wo:25,s:9,c:25,cata:10
+condgoal {{$m_city.player.playerInfo.titleId$==9}&&{%altType%==Ballista}} troop r:3,a:30,w:45,sw:25,p:25,wo:25,s:9,c:25,cata:10
+condgoal {{$m_city.player.playerInfo.titleId$==9}&&{%altType%==Scout}} troop r:3000,b:5000,a:300000,w:450000,sw:25000,p:25000,wo:25000,s:9000000,c:25000,cata:10000
+condgoal {{$m_city.player.playerInfo.titleId$==9}&&{%altType%==Archer}} troop r:3000,b:5000,a:3000000,w:750000,sw:25000,p:25000,wo:25000,s:10000,c:25000,cata:10000
+condgoal {{$m_city.player.playerInfo.titleId$==9}&&{%altType%==Ballista}} troop r:3000,b:225000,a:300000,w:450000,sw:25000,p:25000,wo:25000,s:10000,c:25000,cata:10000
+condgoal {{$m_city.player.playerInfo.titleId$==9}&&{%altType%==Scout}} troop r:10000,b:10000,a:500000,w:750000,sw:25000,p:25000,wo:25000,s:90000000,c:25000,cata:25000
+condgoal {{$m_city.player.playerInfo.titleId$==9}&&{%altType%==Archer}} troop r:10000,b:10000,a:30000000,w:750000,sw:25000,p:25000,wo:25000,s:10000,c:25000,cata:25000
+condgoal {{$m_city.player.playerInfo.titleId$==9}&&{%altType%==Ballista}} troop r:10000,b:2250000,a:500000,w:750000,sw:25000,p:25000,wo:25000,s:10000,c:25000,cata:25000
+
+[countRespacks]
+set incApack 0
+set nullVar $m_city.accountTab.itemInfo.fetchPage(lesser_bonus_reward)$
+set lBon $m_city.accountTab.itemInfo.itemsArray[0].count$
+set nullVar $m_city.accountTab.itemInfo.fetchPage(medium_bonus_reward)$
+set mBon $m_city.accountTab.itemInfo.itemsArray[0].count$
+set nullVar $m_city.accountTab.itemInfo.fetchPage(greater_bonus_reward)$
+set gBon $m_city.accountTab.itemInfo.itemsArray[0].count$
+set nullVar $m_city.accountTab.itemInfo.fetchPage(lesser_resources_reward)$
+set lRes $m_city.accountTab.itemInfo.itemsArray[0].count$
+set nullVar $m_city.accountTab.itemInfo.fetchPage(medium_resources_reward)$
+set mRes $m_city.accountTab.itemInfo.itemsArray[0].count$
+set nullVar $m_city.accountTab.itemInfo.fetchPage(greater_resources_reward)$
+set gRes $m_city.accountTab.itemInfo.itemsArray[0].count$
+condgoal {{$m_city.castle.name$==Flat}&&{%incApack%==0}&&{%lBon%!=0}&&{%lBon%<3}&&{$m_city.cityManager.resource.gold$<100000}} include lesser1
+condgoal {{$m_city.castle.name$==Flat}&&{%incApack%==0}&&{%lRes%!=0}&&{%lRes%<3}&&{$m_city.cityManager.resource.gold$<100000}} include lesser2
+condgoal {{$m_city.castle.name$==Flat}&&{%incApack%==0}&&{%mBon%!=0}&&{%mBon%<3}&&{$m_city.cityManager.resource.gold$<100000}} include medium1
+condgoal {{$m_city.castle.name$==Flat}&&{%incApack%==0}&&{%mRes%!=0}&&{%mRes%<3}&&{$m_city.cityManager.resource.gold$<100000}} include medium2
+condgoal {{$m_city.castle.name$==Flat}&&{%incApack%==0}&&{%gBon%!=0}&&{%gBon%<3}&&{$m_city.cityManager.resource.gold$<100000}} include greater1
+condgoal {{$m_city.castle.name$==Flat}&&{%incApack%==0}&&{%gRes%!=0}&&{%gRes%<3}&&{$m_city.cityManager.resource.gold$<100000}} include greater2
+[lesser1]
+autouseitems lesser_bonus_reward 
+set incApack 1
+[lesser2]
+autouseitems lesser_resources_reward 
+set incApack 1
+[medium1]
+autouseitems medium_bonus_reward
+set incApack 1
+[medium2]
+autouseitems medium_resources_reward
+set incApack 1
+[greater1]
+autouseitems greater_bonus_reward
+set incApack 1
+[greater2]
+autouseitems greater_resources_reward
+set incApack 1
+
+[flatCityMovement]
+requesthelp $m_city.allCities[0].coord$ t:0 t:0 g:50k,f:50k,w:50k,s:50k,i:50k g:250k,f:250k,w:250k,s:250k,i:250k
+
+condgoal {{$m_city.allCities[0].cityManager.allTroop.ballista$>=4400}&&{$m_city.allCities[0].cityManager.allTroop.carriage$>=2200}} requesthelp $m_city.allCities[0].coord$ b:2200,t:220 b:4400,t:2200 f:0 f:0
+
+[smallCityMovement]
+condgoal {{$m_city.allCities[0].cityManager.allTroop.ballista$>2200}&&{$m_city.allCities[0].cityManager.allTroop.carriage$>220}} keeptroop $m_city.allCities[0].coord$ a:100,b:2200,t:2200 10
+condgoal {{$m_city.allCities[0].cityManager.allTroop.ballista$>=4400}&&{$m_city.allCities[0].cityManager.allTroop.carriage$>=2200}} requesthelp $m_city.allCities[0].coord$ b:2200,t:2200 b:4400,t:4400 f:0 f:0
+
+condgoal {{$m_city.allCities[0].cityManager.allTroop.ballista$<2200}&&{$m_city.allCities[0].cityManager.allTroop.carriage$<220}} keeptroop $m_city.allCities[0].coord$ a:100,b:100,t:10 10
+[largeCityMovement]
+condgoal {{$m_city.allCities[0].cityManager.allTroop.ballista$>2200}&&{$m_city.allCities[0].cityManager.allTroop.carriage$>220}} keeptroop $m_city.allCities[0].coord$ a:100,b:2200,t:2200 10
+condgoal {{$m_city.allCities[0].cityManager.allTroop.ballista$>=4400}&&{$m_city.allCities[0].cityManager.allTroop.carriage$>=2200}} requesthelp $m_city.allCities[0].coord$ b:2200,t:2200 b:4400,t:2200 f:0 f:0
+
+condgoal {{$m_city.allCities[0].cityManager.allTroop.ballista$<2200}&&{$m_city.allCities[0].cityManager.allTroop.carriage$<220}} keeptroop $m_city.allCities[0].coord$ a:100,b:100,t:10 10
+keepresource $m_city.allCities[0].coord$ f:1000000,g:1000000 500000
+[finalCityMovement]
+condgoal {$m_city.allCities[0].cityManager.allTroop.ballista$<2200} keeptroop $m_city.allCities[0].coord$ wo:500,w:1,p:1,sw:1,a:1,c:1,cata:1,s:1,b:1,t:1,cp:1,r:1 10
+condgoal {$m_city.allCities[0].cityManager.allTroop.ballista$>2200} keeptroop $m_city.allCities[0].coord$ wo:1000,w:100000,p:1000,sw:1000,a:30000,c:1000,cata:1000,s:1000,b:2200,t:2200,cp:1000,r:1000 1000
+condgoal {$m_city.allCities[0].cityManager.allTroop.ballista$>4400} requesthelp $m_city.allCities[0].coord$ t:220,b:2200 t:660,b:6600 f:0 f:0
+keepresource $m_city.allCities[0].coord$ f:100000000,g:10000000 10000000
+[npc10CityMovement]
+condgoal {$m_city.allCities[0].cityManager.allTroop.ballista$<2200} keeptroop $m_city.allCities[0].coord$ wo:500,w:1,p:1,sw:1,a:1,c:1,cata:1,s:1,b:1,t:1,cp:1,r:1 10
+condgoal {$m_city.allCities[0].cityManager.allTroop.ballista$>2200} keeptroop $m_city.allCities[0].coord$ wo:1000,w:100000,p:1000,sw:1000,a:30000,c:1000,cata:1000,s:1000,b:2200,t:2200,cp:1000,r:1000 1000
+condgoal {$m_city.allCities[0].cityManager.allTroop.ballista$>4400} requesthelp $m_city.allCities[0].coord$ t:220,b:2200 t:660,b:6600 f:0 f:0
+[npc10MainMovement]
+//condgoal {{%TroopProduction%==Dual}&&{$m_city.player.playerInfo.titleId$==9}} keeptroop $m_city.allCities[1].coord$ %secondaryTroop% 1000

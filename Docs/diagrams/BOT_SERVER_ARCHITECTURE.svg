@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" width="1200" height="850">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A0F0A"/>
+      <stop offset="100%" style="stop-color:#0D0705"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#228B22"/>
+      <stop offset="100%" style="stop-color:#006400"/>
+    </linearGradient>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E90FF"/>
+      <stop offset="100%" style="stop-color:#0D4F8B"/>
+    </linearGradient>
+    <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9932CC"/>
+      <stop offset="100%" style="stop-color:#4B0082"/>
+    </linearGradient>
+    <linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B0000"/>
+      <stop offset="100%" style="stop-color:#4A0000"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="3" dy="3" stdDeviation="3" flood-opacity="0.5"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#FFD700"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="850" fill="url(#g2)"/>
+  <rect x="10" y="10" width="1180" height="830" fill="none" stroke="url(#g1)" stroke-width="3" rx="5"/>
+
+  <!-- Title -->
+  <rect x="350" y="20" width="500" height="50" fill="url(#g3)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="600" y="52" font-family="Georgia, serif" font-size="24" fill="#FFD700" text-anchor="middle" font-weight="bold" filter="url(#glow)">🤖 BOT SERVER ARCHITECTURE</text>
+
+  <!-- Server Core -->
+  <g transform="translate(30, 90)">
+    <rect width="350" height="320" fill="url(#g3)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#shadow)"/>
+    <text x="175" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">🖥️ SERVER.PY CORE</text>
+
+    <rect x="15" y="50" width="320" height="50" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="175" y="72" font-family="Arial" font-size="11" fill="#90EE90" text-anchor="middle" font-weight="bold">evony_bot/server.py</text>
+    <text x="175" y="90" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">102,510 lines | Port 9999</text>
+
+    <rect x="15" y="110" width="155" height="80" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="92" y="130" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle" font-weight="bold">HTTP Server</text>
+    <text x="92" y="148" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">Flask-based</text>
+    <text x="92" y="163" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">REST API</text>
+    <text x="92" y="178" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">Web UI Dashboard</text>
+
+    <rect x="180" y="110" width="155" height="80" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="257" y="130" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle" font-weight="bold">Game Socket</text>
+    <text x="257" y="148" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">TCP Connection</text>
+    <text x="257" y="163" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">AMF3 Protocol</text>
+    <text x="257" y="178" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">Async Receiver</text>
+
+    <rect x="15" y="200" width="155" height="100" fill="#003300" stroke="#FFD700" rx="5"/>
+    <text x="92" y="220" font-family="Arial" font-size="10" fill="#FFD700" text-anchor="middle" font-weight="bold">EvonyClient</text>
+    <text x="92" y="238" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">connect(host, port)</text>
+    <text x="92" y="253" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">login(user, pass)</text>
+    <text x="92" y="268" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">send(cmd, data)</text>
+    <text x="92" y="283" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">recv() → parse</text>
+
+    <rect x="180" y="200" width="155" height="100" fill="#003300" stroke="#FFD700" rx="5"/>
+    <text x="257" y="220" font-family="Arial" font-size="10" fill="#FFD700" text-anchor="middle" font-weight="bold">Auto-Discovery</text>
+    <text x="257" y="238" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">castleIds[]</text>
+    <text x="257" y="253" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">heroIds[]</text>
+    <text x="257" y="268" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">questIds[]</text>
+    <text x="257" y="283" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">allianceInfo</text>
+  </g>
+
+  <!-- API Endpoints -->
+  <g transform="translate(410, 90)">
+    <rect width="350" height="320" fill="url(#g4)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#shadow)"/>
+    <text x="175" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">🔌 REST API ENDPOINTS</text>
+
+    <!-- Connection endpoints -->
+    <rect x="15" y="50" width="320" height="80" fill="#0D1B2A" stroke="#1E90FF" rx="5"/>
+    <text x="175" y="70" font-family="Arial" font-size="10" fill="#87CEEB" text-anchor="middle" font-weight="bold">Connection Management</text>
+    <text x="25" y="90" font-family="monospace" font-size="8" fill="#90EE90">POST /api/connect</text>
+    <text x="200" y="90" font-family="Arial" font-size="8" fill="#FFFFFF">→ Connect to server</text>
+    <text x="25" y="105" font-family="monospace" font-size="8" fill="#90EE90">POST /api/login</text>
+    <text x="200" y="105" font-family="Arial" font-size="8" fill="#FFFFFF">→ Authenticate user</text>
+    <text x="25" y="120" font-family="monospace" font-size="8" fill="#90EE90">POST /api/disconnect</text>
+    <text x="200" y="120" font-family="Arial" font-size="8" fill="#FFFFFF">→ Close connection</text>
+
+    <!-- Command endpoints -->
+    <rect x="15" y="140" width="320" height="80" fill="#0D1B2A" stroke="#1E90FF" rx="5"/>
+    <text x="175" y="160" font-family="Arial" font-size="10" fill="#87CEEB" text-anchor="middle" font-weight="bold">Command Execution</text>
+    <text x="25" y="180" font-family="monospace" font-size="8" fill="#FFD700">POST /api/send</text>
+    <text x="200" y="180" font-family="Arial" font-size="8" fill="#FFFFFF">→ Send AMF3 command</text>
+    <text x="25" y="195" font-family="monospace" font-size="8" fill="#FFD700">POST /api/send_template</text>
+    <text x="200" y="195" font-family="Arial" font-size="8" fill="#FFFFFF">→ Execute exploit</text>
+    <text x="25" y="210" font-family="monospace" font-size="8" fill="#90EE90">GET /api/templates</text>
+    <text x="200" y="210" font-family="Arial" font-size="8" fill="#FFFFFF">→ List 100+ exploits</text>
+
+    <!-- Status endpoints -->
+    <rect x="15" y="230" width="320" height="70" fill="#0D1B2A" stroke="#1E90FF" rx="5"/>
+    <text x="175" y="250" font-family="Arial" font-size="10" fill="#87CEEB" text-anchor="middle" font-weight="bold">Status &amp; Discovery</text>
+    <text x="25" y="270" font-family="monospace" font-size="8" fill="#90EE90">GET /api/status</text>
+    <text x="200" y="270" font-family="Arial" font-size="8" fill="#FFFFFF">→ Connection status</text>
+    <text x="25" y="285" font-family="monospace" font-size="8" fill="#90EE90">GET /api/discovered</text>
+    <text x="200" y="285" font-family="Arial" font-size="8" fill="#FFFFFF">→ Auto-discovered IDs</text>
+  </g>
+
+  <!-- External Connections -->
+  <g transform="translate(790, 90)">
+    <rect width="380" height="320" fill="url(#g5)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#shadow)"/>
+    <text x="190" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">🌐 EXTERNAL CONNECTIONS</text>
+
+    <!-- Evony Server -->
+    <rect x="15" y="50" width="350" height="80" fill="#2A0A3A" stroke="#DDA0DD" rx="5"/>
+    <text x="190" y="70" font-family="Arial" font-size="11" fill="#DDA0DD" text-anchor="middle" font-weight="bold">Evony Game Server</text>
+    <text x="190" y="90" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">cc2.evony.com → 216.66.17.168:443</text>
+    <text x="190" y="108" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">TCP/SSL + AMF3 Protocol</text>
+    <text x="190" y="123" font-family="Arial" font-size="9" fill="#90EE90" text-anchor="middle">301+ commands supported</text>
+
+    <!-- MCP Server -->
+    <rect x="15" y="140" width="350" height="80" fill="#2A0A3A" stroke="#DDA0DD" rx="5"/>
+    <text x="190" y="160" font-family="Arial" font-size="11" fill="#DDA0DD" text-anchor="middle" font-weight="bold">MCP Server (mcp_server.py)</text>
+    <text x="190" y="180" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">JSON-RPC over stdio</text>
+    <text x="190" y="198" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">68 tools | 55 handlers</text>
+    <text x="190" y="213" font-family="Arial" font-size="9" fill="#90EE90" text-anchor="middle">Claude Desktop / Windsurf Cascade</text>
+
+    <!-- Web UI -->
+    <rect x="15" y="230" width="350" height="70" fill="#2A0A3A" stroke="#DDA0DD" rx="5"/>
+    <text x="190" y="250" font-family="Arial" font-size="11" fill="#DDA0DD" text-anchor="middle" font-weight="bold">Web Dashboard</text>
+    <text x="190" y="270" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">http://localhost:9999</text>
+    <text x="190" y="288" font-family="Arial" font-size="9" fill="#90EE90" text-anchor="middle">Real-time packet logs, status, controls</text>
+  </g>
+
+  <!-- Exploit Engine -->
+  <g transform="translate(30, 430)">
+    <rect width="550" height="200" fill="url(#g6)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#shadow)"/>
+    <text x="275" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">💀 EXPLOIT ENGINE</text>
+
+    <rect x="15" y="50" width="170" height="130" fill="#4A0000" stroke="#FF6B6B" rx="5"/>
+    <text x="100" y="70" font-family="Arial" font-size="10" fill="#FF6B6B" text-anchor="middle" font-weight="bold">Integer Overflow</text>
+    <text x="100" y="90" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">archer_overflow</text>
+    <text x="100" y="105" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">catapult_overflow</text>
+    <text x="100" y="120" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">cavalry_overflow</text>
+    <text x="100" y="135" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">worker_overflow</text>
+    <text x="100" y="155" font-family="Arial" font-size="9" fill="#90EE90" text-anchor="middle">6 templates</text>
+    <text x="100" y="170" font-family="Arial" font-size="9" fill="#FFD700" text-anchor="middle">✅ WORKING</text>
+
+    <rect x="195" y="50" width="170" height="130" fill="#4A0000" stroke="#FFA500" rx="5"/>
+    <text x="280" y="70" font-family="Arial" font-size="10" fill="#FFA500" text-anchor="middle" font-weight="bold">Race Condition</text>
+    <text x="280" y="90" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">item_dupe</text>
+    <text x="280" y="105" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">quest_double</text>
+    <text x="280" y="120" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">reward_multi</text>
+    <text x="280" y="135" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">trade_race</text>
+    <text x="280" y="155" font-family="Arial" font-size="9" fill="#90EE90" text-anchor="middle">8 templates</text>
+    <text x="280" y="170" font-family="Arial" font-size="9" fill="#FFA500" text-anchor="middle">⚠️ TIMING</text>
+
+    <rect x="375" y="50" width="160" height="130" fill="#4A0000" stroke="#FFFF00" rx="5"/>
+    <text x="455" y="70" font-family="Arial" font-size="10" fill="#FFFF00" text-anchor="middle" font-weight="bold">Param Tampering</text>
+    <text x="455" y="90" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">negative_resource</text>
+    <text x="455" y="105" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">castle_spoof</text>
+    <text x="455" y="120" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">hero_id_inject</text>
+    <text x="455" y="135" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">quest_bypass</text>
+    <text x="455" y="155" font-family="Arial" font-size="9" fill="#90EE90" text-anchor="middle">12 templates</text>
+    <text x="455" y="170" font-family="Arial" font-size="9" fill="#FFFF00" text-anchor="middle">⚠️ VARIES</text>
+  </g>
+
+  <!-- Data Flow -->
+  <g transform="translate(610, 430)">
+    <rect width="560" height="200" fill="url(#g4)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#shadow)"/>
+    <text x="280" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">🔄 DATA FLOW</text>
+
+    <!-- Flow diagram -->
+    <rect x="20" y="55" width="100" height="40" fill="#0D1B2A" stroke="#87CEEB" rx="5"/>
+    <text x="70" y="80" font-family="Arial" font-size="10" fill="#87CEEB" text-anchor="middle">IDE/MCP</text>
+
+    <path d="M125 75 L165 75" stroke="#FFD700" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="170" y="55" width="100" height="40" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="220" y="80" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle">Bot Server</text>
+
+    <path d="M275 75 L315 75" stroke="#FFD700" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="320" y="55" width="100" height="40" fill="#4A0082" stroke="#DDA0DD" rx="5"/>
+    <text x="370" y="80" font-family="Arial" font-size="10" fill="#DDA0DD" text-anchor="middle">AMF3 Encode</text>
+
+    <path d="M425 75 L465 75" stroke="#FFD700" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="470" y="55" width="70" height="40" fill="#8B0000" stroke="#FF6B6B" rx="5"/>
+    <text x="505" y="80" font-family="Arial" font-size="10" fill="#FF6B6B" text-anchor="middle">Evony</text>
+
+    <!-- Return path -->
+    <path d="M505 100 L505 120 L70 120 L70 100" stroke="#90EE90" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+    <text x="285" y="135" font-family="Arial" font-size="9" fill="#90EE90" text-anchor="middle">Response (AMF3 decoded)</text>
+
+    <!-- Stats -->
+    <rect x="20" y="150" width="160" height="35" fill="#0D1B2A" stroke="#87CEEB" rx="5"/>
+    <text x="100" y="172" font-family="Arial" font-size="10" fill="#87CEEB" text-anchor="middle">Latency: ~150ms</text>
+
+    <rect x="200" y="150" width="160" height="35" fill="#0D1B2A" stroke="#87CEEB" rx="5"/>
+    <text x="280" y="172" font-family="Arial" font-size="10" fill="#87CEEB" text-anchor="middle">Throughput: 100+ cmd/s</text>
+
+    <rect x="380" y="150" width="160" height="35" fill="#0D1B2A" stroke="#90EE90" rx="5"/>
+    <text x="460" y="172" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle">Status: ✅ ACTIVE</text>
+  </g>
+
+  <!-- Key Features -->
+  <g transform="translate(30, 650)">
+    <rect width="1140" height="160" fill="#1A0F0A" stroke="url(#g1)" stroke-width="2" rx="8" filter="url(#shadow)"/>
+    <text x="570" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">⭐ KEY FEATURES</text>
+
+    <rect x="20" y="50" width="210" height="90" fill="#0D0705" stroke="#DAA520" rx="5"/>
+    <text x="125" y="72" font-family="Arial" font-size="11" fill="#DAA520" text-anchor="middle" font-weight="bold">Pure Python</text>
+    <text x="125" y="92" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">No external AMF libs</text>
+    <text x="125" y="107" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Custom encoder/decoder</text>
+    <text x="125" y="122" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Zero dependencies</text>
+
+    <rect x="250" y="50" width="210" height="90" fill="#0D0705" stroke="#DAA520" rx="5"/>
+    <text x="355" y="72" font-family="Arial" font-size="11" fill="#DAA520" text-anchor="middle" font-weight="bold">Auto-Discovery</text>
+    <text x="355" y="92" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Castle IDs from login</text>
+    <text x="355" y="107" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Hero IDs automatic</text>
+    <text x="355" y="122" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">No manual config needed</text>
+
+    <rect x="480" y="50" width="210" height="90" fill="#0D0705" stroke="#DAA520" rx="5"/>
+    <text x="585" y="72" font-family="Arial" font-size="11" fill="#DAA520" text-anchor="middle" font-weight="bold">100+ Exploits</text>
+    <text x="585" y="92" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Pre-built templates</text>
+    <text x="585" y="107" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">One-click execution</text>
+    <text x="585" y="122" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Result verification</text>
+
+    <rect x="710" y="50" width="210" height="90" fill="#0D0705" stroke="#DAA520" rx="5"/>
+    <text x="815" y="72" font-family="Arial" font-size="11" fill="#DAA520" text-anchor="middle" font-weight="bold">Real-Time Logs</text>
+    <text x="815" y="92" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Packet capture</text>
+    <text x="815" y="107" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Web UI dashboard</text>
+    <text x="815" y="122" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Debug logging</text>
+
+    <rect x="940" y="50" width="180" height="90" fill="#0D0705" stroke="#90EE90" rx="5"/>
+    <text x="1030" y="72" font-family="Arial" font-size="11" fill="#90EE90" text-anchor="middle" font-weight="bold">MCP Ready</text>
+    <text x="1030" y="92" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Claude Desktop</text>
+    <text x="1030" y="107" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Windsurf Cascade</text>
+    <text x="1030" y="122" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">55 handlers</text>
+  </g>
+
+  <text x="600" y="830" font-family="Arial" font-size="10" fill="#8B8B83" text-anchor="middle">Evony Bot Server | 102,510 lines | Port 9999 | 100+ Exploits | January 2026</text>
+</svg>

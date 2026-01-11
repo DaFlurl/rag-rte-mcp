@@ -1,0 +1,15 @@
+{
+  "now": {
+    "autoRun": true,
+    "autoLogin": true,
+    "server": "cc2",
+    "password": "ZX0107Zx0107",
+    "autoLoginMinTime": "1",
+    "serverIP": "216.66.17.168",
+    "secCode": "0123456789",
+    "autoScript": true,
+    "strserverAlias": "Parapet",
+    "autoLoginMaxTime": "600",
+    "username": "fnice@q.com"
+  }
+}

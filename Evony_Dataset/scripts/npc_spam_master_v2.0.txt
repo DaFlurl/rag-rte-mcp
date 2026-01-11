@@ -1,0 +1,300 @@
+// ============================================
+// NPC SPAM MASTER v2.0
+// Advanced NPC farming with full configuration
+// For AE2/RoboEvony - Per City/Account
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+
+// ==========================================
+// CONFIGURATION SECTION - EDIT THESE VALUES
+// ==========================================
+
+// === NPC TARGET SETTINGS ===
+set npcLevel 5
+set searchRadius 50
+set preferFlat 1
+set avoidAlliance 1
+
+// === TROOP CONFIGURATION ===
+set troopsPerWave 50000
+set troopType "archers"
+set minArchersToFarm 100000
+set reserveArchers 10000
+
+// === HERO SETTINGS ===
+set heroMode "rotate"
+set minHeroAttack 150
+set maxHeroesUsed 5
+
+// === WAVE SETTINGS ===
+set wavesPerNPC 2
+set delayBetweenWaves 2000
+set delayBetweenNPCs 5000
+set maxWavesPerCycle 50
+
+// === FEATURES ENABLE/DISABLE ===
+set enableAutoScan 1
+set scanInterval 300000
+set enableLootCheck 1
+set minLootValue 100000
+set enableHeroRotation 1
+set enableTroopReserve 1
+set enableCooldown 1
+set cooldownMinutes 5
+set enableLogging 1
+set enableMarchTimeCheck 1
+set maxMarchSeconds 300
+
+// === RUN MODE ===
+set runMode "loop"
+set maxCycles 0
+set timerMinutes 0
+
+// === ADVANCED ===
+set enableMultiTarget 1
+set maxSimultaneousAttacks 5
+set enableSmartTargeting 1
+set avoidRecentTargets 1
+set recentTargetCooldown 600
+
+// ==========================================
+// DO NOT EDIT BELOW THIS LINE
+// ==========================================
+
+set wavesSent 0
+set npcsHit 0
+set cyclesCompleted 0
+set heroIndex 0
+set currentNpcX 0
+set currentNpcY 0
+
+echo ============================================
+echo NPC SPAM MASTER v2.0
+echo Level: %npcLevel% | Troops/Wave: %troopsPerWave%
+echo Mode: %runMode% | Waves/NPC: %wavesPerNPC%
+echo ============================================
+
+// Validate
+gosub validateConfig
+if configValid = 0 then goto configError
+
+// Main execution
+if runMode = "once" then goto runOnce
+if runMode = "loop" then goto runLoop
+if runMode = "timer" then goto runTimer
+goto runLoop
+
+// ==========================================
+// RUN MODES
+// ==========================================
+label runOnce
+echo [MODE] Single cycle
+gosub executeFarmCycle
+goto complete
+
+label runLoop
+echo [MODE] Continuous farming
+label farmLoop
+gosub executeFarmCycle
+if enableCooldown = 1 then gosub doCooldown
+goto farmLoop
+
+label runTimer
+echo [MODE] Timer - every %timerMinutes% minutes
+label timerFarmLoop
+gosub executeFarmCycle
+set timerMs timerMinutes * 60000
+sleep %timerMs%
+goto timerFarmLoop
+
+// ==========================================
+// MAIN FARM CYCLE
+// ==========================================
+label executeFarmCycle
+echo ----------------------------------------
+echo [CYCLE] Starting NPC farm cycle...
+
+// Check troop availability
+gosub checkTroops
+if troopsReady = 0 then goto waitForTroops
+
+// Scan for NPCs
+if enableAutoScan = 1 then gosub scanForNPCs
+
+// Farm each NPC found
+set npcIndex 0
+label npcLoop
+
+gosub getNextNPC
+if currentNpcX = 0 then goto cycleComplete
+
+// Attack this NPC
+gosub attackNPC
+
+set npcIndex npcIndex + 1
+set npcsHit npcsHit + 1
+
+// Check wave limits
+if wavesSent >= maxWavesPerCycle then goto cycleComplete
+
+// Delay between NPCs
+sleep %delayBetweenNPCs%
+goto npcLoop
+
+label cycleComplete
+set cyclesCompleted cyclesCompleted + 1
+echo [CYCLE] Complete - NPCs hit: %npcsHit%, Waves: %wavesSent%
+return
+
+// ==========================================
+// SCAN FOR NPCS
+// ==========================================
+label scanForNPCs
+echo [SCAN] Scanning %searchRadius% tiles for level %npcLevel% NPCs...
+
+scanmap %searchRadius%
+sleep 3000
+
+findnpc %npcLevel%
+sleep 1000
+
+echo [SCAN] Scan complete
+return
+
+// ==========================================
+// GET NEXT NPC TARGET
+// ==========================================
+label getNextNPC
+// This would iterate through found NPCs
+// For now, use findnpc result
+
+set currentNpcX npcX
+set currentNpcY npcY
+
+if currentNpcX > 0 then echo [TARGET] Next NPC at %currentNpcX%,%currentNpcY%
+if currentNpcX = 0 then echo [TARGET] No more NPCs found
+
+return
+
+// ==========================================
+// ATTACK NPC
+// ==========================================
+label attackNPC
+echo [ATTACK] Attacking NPC at %currentNpcX%,%currentNpcY%...
+
+set waveIndex 0
+label npcWaveLoop
+
+// Get hero
+if enableHeroRotation = 1 then gosub rotateHero
+if enableHeroRotation = 0 then getspamhero
+
+// Build troop string
+if troopType = "archers" then set troops "a%troopsPerWave%"
+if troopType = "warriors" then set troops "w%troopsPerWave%"
+if troopType = "cavalry" then set troops "c%troopsPerWave%"
+if troopType = "mixed" then set troops "a%troopsPerWave%w1000"
+
+// Send attack
+echo [WAVE %waveIndex%] Sending %troopsPerWave% %troopType%...
+attack %currentNpcX% %currentNpcY% %currentHero% %troops%
+
+set wavesSent wavesSent + 1
+set waveIndex waveIndex + 1
+
+sleep %delayBetweenWaves%
+
+if waveIndex < wavesPerNPC then goto npcWaveLoop
+
+echo [ATTACK] NPC attack complete
+return
+
+// ==========================================
+// HERO ROTATION
+// ==========================================
+label rotateHero
+set heroIndex heroIndex + 1
+if heroIndex > maxHeroesUsed then set heroIndex 1
+
+// Get spam hero (rotates automatically)
+getspamhero
+set currentHero spamhero
+
+echo [HERO] Using hero %heroIndex%: %currentHero%
+return
+
+// ==========================================
+// CHECK TROOPS
+// ==========================================
+label checkTroops
+echo [CHECK] Checking troop availability...
+
+set troopsReady 1
+gettroops
+
+set availableArchers archers - reserveArchers
+if availableArchers < minArchersToFarm then set troopsReady 0
+
+if troopsReady = 1 then echo [CHECK] Archers available: %availableArchers%
+if troopsReady = 0 then echo [CHECK] Insufficient archers (need %minArchersToFarm%)
+
+return
+
+// ==========================================
+// WAIT FOR TROOPS
+// ==========================================
+label waitForTroops
+echo [WAIT] Waiting for troop training...
+
+// Start training if needed
+train archers 10000
+sleep 2000
+
+echo [WAIT] Sleeping 5 minutes...
+sleep 300000
+return
+
+// ==========================================
+// COOLDOWN
+// ==========================================
+label doCooldown
+set cooldownMs cooldownMinutes * 60000
+echo [COOLDOWN] Waiting %cooldownMinutes% minutes...
+sleep %cooldownMs%
+return
+
+// ==========================================
+// VALIDATE CONFIG
+// ==========================================
+label validateConfig
+set configValid 1
+
+if npcLevel < 1 then set configValid 0
+if npcLevel > 10 then set configValid 0
+if troopsPerWave < 1000 then set configValid 0
+if wavesPerNPC < 1 then set configValid 0
+
+if configValid = 1 then echo [CONFIG] Valid
+if configValid = 0 then echo [CONFIG] INVALID
+
+return
+
+// ==========================================
+// ERROR HANDLERS
+// ==========================================
+label configError
+echo [ERROR] Invalid configuration!
+stop
+
+// ==========================================
+// COMPLETION
+// ==========================================
+label complete
+echo ============================================
+echo NPC SPAM MASTER COMPLETE
+echo Cycles: %cyclesCompleted%
+echo NPCs Hit: %npcsHit%
+echo Total Waves: %wavesSent%
+echo ============================================
+stop

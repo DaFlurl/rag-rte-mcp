@@ -1,0 +1,29 @@
+set destination 298,693
+set troops sw:100k
+set keeptroops sw:80m
+
+function sending() {
+var k=c.getValue("Troop",keeptroops).toObject();
+var ok=true;
+for (var p in k) {
+if (c.cm.troop[p]<k[p]) {
+ok=false;
+break;
+}
+}
+if (!ok) {
+c.cm.logMsg("Finished sending troops");
+return;
+}
+var max=c.cm.getBuildingLevel(c.buildingTypes.rallyspot);
+for (var i=c.cm.localArmies.length;i<max;i++) {
+var m=c.getArmy("reinforce",c.getValue("Coordinate",destination),"",c.getValue("Troop",troops));
+c.af.getArmyCommands().newArmy(c.castle.id,m);
+}
+}
+
+label start
+set s $m_dyn.sending()$
+sleep 1
+goto start
+

@@ -1,0 +1,142 @@
+# Evony Knowledge RAG - Policy Configuration
+# Controls retrieval behavior, safety filters, and access modes
+
+version: "1.0"
+
+# Query modes
+modes:
+  research:
+    description: "Default - RE analysis, protocol docs, code navigation"
+    default: true
+    include:
+      - source_code
+      - protocol
+      - documentation
+      - scripts
+      - game_data
+      - tools
+    exclude:
+      - exploits
+    keys_allowed: true
+    
+  forensics:
+    description: "Stricter - blocks keys/accounts unless explicit"
+    include:
+      - source_code
+      - protocol
+      - documentation
+    exclude:
+      - exploits
+      - keys
+      - scripts
+    keys_allowed: false
+    
+  full_access:
+    description: "All categories including exploits (educational only)"
+    include:
+      - source_code
+      - protocol
+      - documentation
+      - scripts
+      - game_data
+      - tools
+      - keys
+      - exploits
+    exclude: []
+    keys_allowed: true
+
+# Category definitions
+categories:
+  source_code:
+    safe: true
+    train_include: true
+    description: "AS3/Python source files"
+    
+  protocol:
+    safe: true
+    train_include: true
+    description: "Protocol specifications and commands"
+    
+  documentation:
+    safe: true
+    train_include: true
+    description: "Guides, READMEs, technical docs"
+    
+  keys:
+    safe: true
+    train_include: true
+    sensitive: true
+    description: "Encryption keys and algorithms"
+    
+  scripts:
+    safe: true
+    train_include: true
+    description: "Bot automation scripts"
+    
+  exploits:
+    safe: false
+    train_include: false
+    retrieval_default: false
+    description: "Glitch mechanics documentation"
+    
+  game_data:
+    safe: true
+    train_include: true
+    description: "Game mechanics data"
+    
+  tools:
+    safe: true
+    train_include: true
+    description: "Analysis utilities"
+
+# Blocked query patterns (operational requests)
+blocked_patterns:
+  - "how (do i|can i|to) (use|exploit|abuse) .* (glitch|bug|exploit)"
+  - "give me .* (exploit|hack|cheat)"
+  - "step.?by.?step .* (glitch|exploit)"
+  - "working (exploit|hack|cheat)"
+  - "automate .* (attack|farm|resource)"
+
+# Allowed analysis patterns (educational)
+allowed_patterns:
+  - "how does .* work"
+  - "explain .* (mechanism|mechanics)"
+  - "what is .* (overflow|glitch)"
+  - "why does .* happen"
+  - "technical (details|explanation)"
+  - "where is .* defined"
+  - "what parameters"
+  - "how is .* structured"
+
+# Retrieval defaults
+retrieval:
+  k_lexical: 20
+  k_vector: 20
+  final_k: 8
+  max_chunk_chars: 1800
+  min_score: 0.01  # RRF scores are typically low (0.01-0.03)
+  evidence_level: normal  # brief | normal | verbose
+
+# Evidence display levels
+evidence_levels:
+  brief:
+    max_sources: 3
+    show_snippets: false
+    max_snippet_chars: 200
+    
+  normal:
+    max_sources: 5
+    show_snippets: true
+    max_snippet_chars: 500
+    
+  verbose:
+    max_sources: 10
+    show_snippets: true
+    max_snippet_chars: 1200
+
+# LM Studio configuration
+lmstudio:
+  url: "http://localhost:1234/v1"
+  model: "qwen3-vl-8b-instruct-abliterated-v2.0"
+  temperature: 0.7
+  max_tokens: 1024

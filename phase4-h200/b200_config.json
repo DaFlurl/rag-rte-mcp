@@ -1,0 +1,98 @@
+{
+  "training_config": {
+    "name": "B200 FP16 Epic Training",
+    "description": "Maximum performance training on NVIDIA B200 with FP16",
+    "version": "1.0.0"
+  },
+  
+  "hardware_requirements": {
+    "gpu": "NVIDIA B200",
+    "gpu_memory_gb": 192,
+    "cuda_version": ">=12.6",
+    "cudnn_version": ">=9.5",
+    "pytorch_version": ">=2.8.0"
+  },
+  
+  "model_config": {
+    "base_model": "huihui-ai/Huihui-Qwen3-4B-Instruct-2507-abliterated",
+    "max_seq_length": 4096,
+    "load_in_4bit": true,
+    "use_flash_attention": true,
+    "use_gradient_checkpointing": true,
+    "architecture": "Qwen3",
+    "parameters": "4B",
+    "abliterated": true
+  },
+  
+  "fp16_optimizations": {
+    "enabled": true,
+    "dtype": "float16",
+    "use_amp": true,
+    "grad_scaler": {
+      "init_scale": 65536.0,
+      "growth_factor": 2.0,
+      "backoff_factor": 0.5,
+      "growth_interval": 2000
+    },
+    "tensor_core_optimization": true,
+    "dimensions_multiple_of": 8
+  },
+  
+  "training_hyperparameters": {
+    "batch_size": 8,
+    "gradient_accumulation_steps": 4,
+    "effective_batch_size": 32,
+    "learning_rate": 0.0002,
+    "warmup_ratio": 0.03,
+    "num_epochs": 3,
+    "lr_scheduler": "cosine",
+    "max_grad_norm": 1.0
+  },
+  
+  "lora_config": {
+    "r": 64,
+    "alpha": 128,
+    "dropout": 0.0,
+    "target_modules": [
+      "q_proj", "k_proj", "v_proj", "o_proj",
+      "gate_proj", "up_proj", "down_proj"
+    ],
+    "bias": "none"
+  },
+  
+  "b200_optimizations": {
+    "use_fused_optimizer": true,
+    "use_torch_compile": true,
+    "compile_mode": "max-autotune",
+    "tf32_enabled": true,
+    "cudnn_benchmark": true,
+    "memory_efficient_attention": true
+  },
+  
+  "dataset": {
+    "path": "dataset/enums_cve/FINAL_VERIFIED_DATASET.jsonl",
+    "total_entries": 39529,
+    "verified_cves": 3472,
+    "verified_enums": 4326,
+    "verified_protocols": 280
+  },
+  
+  "milestones": {
+    "checkpoints": [100, 500, 1000, 2000, 3000, 5000, 7500, 10000],
+    "save_steps": 500,
+    "logging_steps": 10,
+    "eval_steps": 500
+  },
+  
+  "output": {
+    "output_dir": "output_b200_fp16",
+    "save_total_limit": 5,
+    "save_safetensors": true
+  },
+  
+  "performance_targets": {
+    "tokens_per_second": ">50000",
+    "memory_utilization": "<90%",
+    "gpu_utilization": ">95%"
+  }
+}

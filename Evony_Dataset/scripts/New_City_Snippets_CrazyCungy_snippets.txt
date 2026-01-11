@@ -1,0 +1,528 @@
+# Define default snippet for new or captured towns or towns with empty goal
+[default]
+config comfort:1,trade:0,gate:0.5
+troop a:200000,warr:1000,wo:1000,p:1000,sw:1000,cav:1000
+fortification ab:1000
+
+#-- New Account Goals v1.2 for RE,   by SeriousThisIsMe
+#-- ATTENTION!! -> This goal set is for RE only (not for AE)
+#-- 
+#-- Copy the entire contents to the snippets tab, or to each town's goal tab
+#-- if you prefer, and make any changes you want then "save" and "set goals".
+#-- This is stage 2 of a set for building brand new accounts from scratch. For
+#-- best results run the companion stage 1 'newAccountStarter_Script_for_RE' of
+#-- the same version and allow it to complete before loading these goals on a
+#-- brand new account to get it started.
+#-- 
+#-- ATTENTION: These goals have only been tested on and can only be guaranteed
+#-- to run on the latest versions of the RE bot so check the forum for updates.
+#-- 
+#-- Also, try not to rearrange or change the order of these goals because
+#-- the goals are read and processed by the bot from top to bottom and changing
+#-- the current order of some of the goals can break them and cause errors.
+#-- 
+#-- For your convenience, the training hero goals are already configured and
+#-- setup properly, you need only to change the values of the first three
+#-- variables in the "Initial Setup" section at the top.
+#-- There is also a variable named "warTown" there were you can enter the name
+#-- of your wartown. This is for when you have a wartown that you will port often
+#-- causing it to change coords and disrupt goal operations like troops/reso
+#-- transfers and reinforcements. By entering the name of you wartown here the
+#-- bot will get the current map location(coords) for the town name you enter and
+#-- assign them to the variable %warTownloc% so you can use that variable in place
+#-- of the coords for your wartown in goals. Example:
+#--      keeptroop %warTownloc% a:500000 5000
+#-- This becomes even more convienent as your wartown moves around the map more.
+#-- These goals also utilize conditional values heavily. Some of these are based
+#-- on which town it is, the town's name, number of troops, research levels,
+#-- account age, etc. This will make it more simple because there is much less
+#-- need to make changes to these goals since they will change for you. In order
+#-- to ensure the changes take place, it is necessary to reload the goals every
+#-- so often by simply pressing the "Set Goals" button again. You will need to do
+#-- this once every hour for the first few hours of an account's life, then again
+#-- about 3 hours later, then every 6 hours for the first 2-3 days, then about once
+#-- a day for a couple weeks. After that a couple times a week maybe.
+
+
+#============================================================
+#================Initial=Setup=&=Variables===================
+
+
+set useTrainingHero false
+set trainingHeroName heroNameHere
+set trainingHeroRestTown townNameHere
+
+set warTown "warTownNameHere"
+
+
+#============end=Initial=Setup=&=Variables===================
+#============================================================
+#================Initial=Autoconfiguration=DO=NOT=CHANGE=====
+
+
+condgoal {$c.getCityFromName(%warTown%)$!=null} set warTownloc $c.getCityFromName(%warTown%).coord$
+
+set isWarTown {$c.coord$==%warTownloc%}
+set isMainTown {$c.ac.indexOf(m_city)$==0}
+
+set hoursPlayed {{$c.getRawTime()$-$c.player.playerInfo.createrTime$}/60000\60}
+
+
+#============end=Autoconfiguration=DO=NOT=CHANGE=============
+#============================================================
+#================Misc=Configuration==========================
+
+
+config wartown:0
+#config keepreports:1
+#config keepreports:2
+#config debug:1
+#config debug:2
+#config debug:10
+#config debug:11
+#config debug:12
+#config debug:13
+#config abandon:2
+#config norescue:1
+
+#config noautoquest:0
+
+condgoal {%hoursPlayed%<37} rallymax npc:2
+condgoal {%hoursPlayed%<25} rallymax hiding:0,rainbow:0
+#rallymax npc:10,buildnpc:1,valley:1,keepresource:1,keeptroop:2,requesthelp:2,hiding:1,rainbow:1
+#warrallymax npc:10,buildnpc:1,valley:1,keepresource:1,keeptroop:2,requesthelp:2,hiding:1,rainbow:1
+
+#wartownpolicy 20:00 22:00
+
+
+#============end=Misc=Configuration==========================
+#============================================================
+#================Gate=Control=&=Defense======================
+
+
+config enemywarning:10
+config comfort:1
+config gate:.25
+config hiding:.15
+
+autouseitems Speech_Text:7
+autouseitems Truce_Agreement:75:1
+
+#condgatepolicy s:200000,a:400000 none 1 1 1 1 1
+#condgatepolicy a:400000 none 0 1 1 1 0 6
+#condgatepolicy a:200000 none 0 0 0 0 0 5
+#condgatepolicy a:50000 none 0 3 2 2 0 4
+
+condgoal {%hoursPlayed%<13} gatepolicy 2 2 2 2 2
+condgoal {%hoursPlayed%>12} gatepolicy 2 0 2 0 2
+#gatepolicy 2 0 2 0 2
+
+config noreports:0
+config junkwave:1
+config junkscout:1
+config keepjunkarmyreports:1
+config keepjunkscoutreports:1
+
+
+#============end=Gate=Control=&=Defense======================
+#============================================================
+#================Wall=Fortifications=========================
+
+
+fortification ab:2
+fortification ab:4
+fortification ab:6
+fortification ab:8
+fortification ab:10
+fortification ab:20
+fortification ab:30
+fortification ab:40
+fortification ab:50
+fortification ab:100
+fortification tra:10,at:10,r:10,tre:10
+condgoal {%hoursPlayed%>12} fortification tra:101,ab:101
+condgoal {%hoursPlayed%>12} fortification at:500
+condgoal {%hoursPlayed%>48} fortification tra:1001,ab:1001
+condgoal {%hoursPlayed%>48} fortification at:16099
+condgoal {%hoursPlayed%>48} fortification r:300,tre:500
+
+
+#============end=Wall=Fortifications=========================
+#============================================================
+#================Troop=Training=&=Moving=====================
+
+
+condgoal {%hoursPlayed%<73} config dumping:0.2
+condgoal {{%hoursPlayed%<169}&&{%hoursPlayed%>72}} config dumping:0.5
+condgoal {{%hoursPlayed%<337}&&{%hoursPlayed%>168}} config dumping:1
+condgoal {%hoursPlayed%>336} config dumping:1.5
+
+condgoal {{%hoursPlayed%<169}&&{%hoursPlayed%>2}} troop wo:250,w:100,t:100,b:50,a:500
+condgoal {{%hoursPlayed%<169}&&{%hoursPlayed%>5}} troop wo:1000,w:25000,a:5000,t:250,b:250
+condgoal {{%hoursPlayed%<337}&&{%hoursPlayed%>9}} troop w:50000,s:250,p:250,sw:250,a:7500,c:40,cata:20,b:500,t:650
+condgoal {{%hoursPlayed%<337}&&{%hoursPlayed%>12}} troop wo:2000,w:100000,s:1000,p:500,sw:500,a:10000,c:70,cata:50,t:1650,b:1400
+condgoal {{%hoursPlayed%<504}&&{%hoursPlayed%>15}} troop wo:5000,w:150000,s:2000,p:700,sw:700,a:25000,c:100,cata:100,t:5000,b:3500,r:10
+condgoal {{%hoursPlayed%<504}&&{%hoursPlayed%>24}} troop wo:10000,w:200000,s:5000,a:50000,r:25
+condgoal {{%hoursPlayed%<504}&&{%hoursPlayed%>24}} troop w:250000,s:15000,p:1500,sw:1500,a:100000,c:250,cata:250,r:50
+condgoal {%hoursPlayed%>168} troop t:3500,b:3500
+condgoal {%hoursPlayed%>168} troop w:100000
+condgoal {%hoursPlayed%>168} troop p:5000,sw:5000,c:50,cata:50
+condgoal {%hoursPlayed%>168} troop a:150000
+condgoal {%hoursPlayed%>168} troop p:15000,sw:15000,c:5000,cata:3000
+condgoal {%hoursPlayed%>168} troop b:10000,r:2500
+condgoal {%hoursPlayed%>168} troop a:250000
+condgoal {%hoursPlayed%>168} troop p:25000,sw:25000
+condgoal {%hoursPlayed%>168} troop w:250000
+condgoal {%hoursPlayed%>168} troop p:50000,sw:50000
+condgoal {%hoursPlayed%>168} troop a:350000
+condgoal {%hoursPlayed%>168} troop w:800000
+condgoal {%hoursPlayed%>168} troop s:100000
+condgoal {%hoursPlayed%>168} troop p:100000,sw:100000
+condgoal {%hoursPlayed%>168} troop s:200000
+condgoal {%hoursPlayed%>168} troop a:500000
+condgoal {%hoursPlayed%>168} troop c:20000
+condgoal {%hoursPlayed%>168} troop cata:10000
+condgoal {%hoursPlayed%>168} troop s:300000
+condgoal {%hoursPlayed%>168} troop t:10000
+condgoal {%hoursPlayed%>168} troop b:50000
+condgoal {%hoursPlayed%>168} troop p:150000,sw:150000
+condgoal {%hoursPlayed%>168} troop c:30000
+condgoal {%hoursPlayed%>168} troop cata:30000
+condgoal {%hoursPlayed%>168} troop s:500000
+condgoal {%hoursPlayed%>168} troop a:700000
+condgoal {%hoursPlayed%>168} troop c:50000,cata:50000
+
+#keeptroop xxx,yyy a:500000 5000
+
+#extratroop xxx,yyy a:1600000 a:500000
+
+#requesthelp xxx,yyy a:400000 a:1000000 s:1 s:9999999999999
+#requesthelp any wo:99999999,w:99999999,s:99999999,p:99999999,sw:99999999,a:99999999,c:99999999,cata:99999999,t:99999999,b:99999999,r:99999999,cp:99999999 wo:0,w:0,s:0,p:0,sw:0,a:0,c:0,cata:0,t:10000,b:5000,r:0,cp:0 s:0 s:0
+
+
+#============end=Troop=Training=&=Moving=====================
+#============================================================
+#================Building=Construction=Demo=&=Upgrading======
+
+
+build c:2:1,f:1:1,s:1:1,q:1:1,i:1:1
+
+build c:1:5,fh:1,inn:1,f:2:2,s:2:2,q:2:2,i:2:2
+build m:1,r:1,fh:1,t:2,b:1:1
+build a:1,be:2,r:2
+build e:1
+build c:2:5,i:3:1,f:5:1
+build st:1,fo:2
+build m:2,a:3,ws:2,b:1:15
+build c:3:5,f:3:5,s:3:5,q:4:2,i:3:4
+build w:1
+build t:3,r:3
+build f:4:5,s:5:7,q:6:2,i:5:5
+build r:4,fh:3,b:4:1
+build c:4:5,b:4:5
+build f:5:5,s:6:7,q:7:2,i:6:5
+build w:2
+build t:4
+build c:5:5,b:4:10,r:5,fh:5
+build s:7:9,q:8:2,i:7:6
+build m:4,rs:1,r:6,fh:6,a:5,ws:4
+build e:2,b:6:1
+build b:9:2
+build b:6:4,b:4:16
+build w:6,s:5,r:7,fh:6,be:7
+build w:7,be:8,r:9,fh:8
+build b:9:4,b:6:8
+build w:9,st:8,be:9,fh:9
+build f:9:1,s:9:1,q:9:1,i:9:1
+build ws:9:1,c:9:5,b:9:16,a:9,rs:9,st:9
+build t:6
+build c:7:5
+build f:9:7,s:9:11,q:9:2,i:9:8
+build t:7
+build c:8:5
+build f:9:9,s:9:12,q:9:2,i:9:8
+build t:8
+build c:9:5
+build f:9:12,s:9:12,q:9:2,i:9:8
+build t:9
+build f:9:15,s:9:12,q:9:2,i:9:8
+
+#build c:0:5,b:4:16
+#build b:6:16
+#build b:9:4
+#build b:9:8
+#build b:9:12
+#build b:9:16
+
+#build q:0:0
+#build f:9:38
+#build s:0:0
+#build f:9:39
+#build i:0:0
+#build f:9:40
+
+#build q:0:0
+#build f:0:34
+#build s:9:5
+#build f:0:30
+#build i:9:5
+#build f:0:25
+#build s:9:10
+#build f:0:21
+#build s:9:14
+#build f:0:18
+#build i:9:8
+
+
+#============end=Building=Construction=Demo=&=Upgrading======
+#============================================================
+#================Academy=Research============================
+
+
+research in:1,ms:1,mt:1
+research ms:2,ir:1
+research ms:4
+research ar:1
+research ag:1,lu:1,mas:1,mi:1,met:1,ir:1,lo:1,com:1,ar:2
+research ag:5,lu:5,mas:5,mi:5,con:3,ar:3
+research met:3,in:3,ms:5,mt:3,ir:3,lo:3,com:3,ho:1
+research ag:6,lu:6,mas:6,mi:6,con:4
+research met:5,in:5,ms:4,mt:5,ir:4,lo:4,com:4,ho:4,ar:6
+research ag:7,lu:7,mas:7,mi:7,con:5,med:3
+research ar:8
+research met:5,in:7,ms:5,mt:7,ir:5,lo:5,com:5,ho:6
+research mt:10,in:10,con:6,med:6
+research met:7,ms:7,ir:7,lo:7,com:7
+research ag:8,lu:8,mas:8,mi:8,con:7
+research met:8,ms:8,ir:8,lo:8,com:8
+research ho:7
+research ar:9
+research ho:8
+research ar:10
+research ho:9
+research met:9,ms:9,ir:9,lo:9,com:9,med:9,con:9
+research met:10,ms:10,ir:10,lo:10,com:10,med:10,con:10
+research ag:9,lu:9,mas:9,mi:9
+research en:10,mac:10
+research ho:10
+#research ag:10,lu:10,mas:10,mi:10,ho:10
+research pr:10
+#research st:10
+
+
+#============end=Academy=Research============================
+#============================================================
+#================Resource=&=Trading==========================
+
+
+config trade:1
+config extrafood:-1
+
+#config zerofood:12
+
+resourcelimits 5m,40m 2500k,12m 3m,1b 2m,10m
+
+#keepresource xxx,yyy f:100000000,g:120000000,w:10000000,i:5000000 500000
+
+#requesthelp xxx,yyy t:1 t:999999 w:30000000,i:20000000 w:60000000,i:40000000
+condgoal {%hoursPlayed%<37} requesthelp any t:0 t:0 g:500k,f:500k,w:500k,s:500k,i:400k g:750k,f:750k,w:750k,s:750k,i:650k
+condgoal {{%hoursPlayed%<97}&&{%hoursPlayed%>36}} requesthelp any t:0 t:0 g:1200k,f:1200k,w:1200k,s:1200k,i:1200k g:2m,f:2m,w:2m,s:2m,i:2m
+condgoal {{%hoursPlayed%<169}&&{%hoursPlayed%>96}} requesthelp any t:0 t:0 g:2m,f:2m,w:2m,s:2m,i:1500k g:4m,f:4m,w:4m,s:4m,i:4m
+condgoal {%hoursPlayed%>168} requesthelp any t:0 t:0 g:5m,f:5m,w:2500k,s:5m,i:2m g:10m,f:10m,w:5m,s:10m,i:4m
+
+
+#============end=Resource=&=Trading==========================
+#============================================================
+#================NPC=Farming=&=Building======================
+
+
+#condgoal {{%hoursPlayed%<1009}&&{%hoursPlayed%>120}} config buildnpc:4
+condgoal {{%hoursPlayed%<1009}&&{%hoursPlayed%>120}} config buildnpc:5
+#config buildnpc:20
+config npc:1
+config npclimit:20
+config training:1
+config safemaint:1
+
+condgoal {%hoursPlayed%<169} distancepolicy 20 20 30 30 5
+condgoal {%hoursPlayed%>168} distancepolicy 25 15 20 20 5
+
+condgoal {%hoursPlayed%<505} ballsused 25,55,170,250,550
+condgoal {%hoursPlayed%>504} ballsused 25,55,170,250,450
+
+#npclist xxx,yyy xxx,yyy xxx,yyy
+#npcavoidlist xxx,yyy xxx,yyy xxx,yyy
+
+
+#npcheroes Queen
+#notnpcheroes Queen
+#npcarea 90,90 110,110
+#npctroop b:400,t:400,warr:1000
+#npc10heroes Queen
+#npc10limit a:99999999
+#npc10troop wo:2000,w:2000,s:3000,a:91100,t:1900
+#npc10list xxx,yyy xxx,yyy xxx,yyy
+#npc10area 90,90 110,110
+
+#priorityfarming 10 a:1100000 a:91000,wo:2000,warr:2000,s:3000,t:2000 25 460 any,!Mayor,!Defender,!Queen
+#priorityfarming 9 w:1100000 w:85000,t:2500 25 460 any,!Mayor,!Defender,!Queen
+#priorityfarming 8 w:1100000 w:70000,t:2200 25 460 any,!Mayor,!Defender,!Queen
+
+
+#============end=NPC=Farming=&=Building======================
+#============================================================
+#================Valleys=&=Medal=Hunting=====================
+
+
+condgoal {%hoursPlayed%<169} config valley:3
+condgoal {%hoursPlayed%>168} config valley:10
+condgoal {%hoursPlayed%<268} config hunting:1
+
+valleytype lake,forest,hill
+#valleytype lake,grassland,swamp
+
+#huntingpos xxx,yyy
+#huntingtype Hill
+#huntingmax 30
+condgoal {%hoursPlayed%>168} valleytroop s:90000
+
+#config slowhunting:1
+#config slowhunting:5
+#slowhuntingpolicy 60 a:50000,p:1,sw:1 none none 20
+#slowhuntingpolicy [frequency] [w/p/sw_troop] [a_troop] [cav/w/p_troop] [cav/w_p_dist]
+
+
+#============end=Valleys=&=Medal=Hunting=====================
+#============================================================
+#================Hero=Settings=&=Config======================
+
+
+condgoal {%hoursPlayed%<672} config hero:21
+condgoal {%hoursPlayed%<672} config fasthero:67
+condgoal {%hoursPlayed%<672} config herominattack:30
+condgoal {%hoursPlayed%>671} config hero:1
+
+
+config reservedenergy:30
+config autogear:2
+
+#config junkhero:2
+config nomayor:0
+#config autogear:1
+#config nocapture:1
+
+#spamheroes hero1,hero2,hero3
+#notspamheroes hero1,hero2,hero3
+#nouplevelheroes hero1,hero2,hero3
+
+condgoal {{%useTrainingHero%}&&{$c.castle.name$!=%trainingHeroRestTown%}} traininghero %trainingHeroName%
+condgoal {{%useTrainingHero%}&&{$c.castle.name$==%trainingHeroRestTown%}} traininghero %trainingHeroName% {30*60*$c.ac.length$}
+condgoal {%useTrainingHero%} notnpcheroes %trainingHeroName%
+
+
+#============end=Hero=Settings=&=Config======================
+#============================================================
+#================Auto=Use=Items==============================
+
+
+condgoal {%isMainTown%} autouseitems Aries_Amulet
+
+condgoal {%isMainTown%} autouseitems Minor_Fortune_Pack
+condgoal {%isMainTown%} autouseitems Minor_Redistribution_Pack
+condgoal {%isMainTown%} autouseitems Minor_Speedup_pack
+condgoal {%isMainTown%} autouseitems Minor_Merchant_Pack
+condgoal {%isMainTown%} autouseitems Minor_Speaker_Pack
+condgoal {%isMainTown%} autouseitems Minor_Hero_Pack
+condgoal {%isMainTown%} autouseitems Minor_Exp._Pack
+condgoal {%isMainTown%} autouseitems Crude_Gemstone_Box
+condgoal {%isMainTown%} autouseitems Wood_Box
+condgoal {%isMainTown%} autouseitems Wooden_Chest
+condgoal {%isMainTown%} autouseitems Iron_Ore_Box
+condgoal {%isMainTown%} autouseitems Fabric_Box
+condgoal {%isMainTown%} autouseitems Riding_Reing
+condgoal {%isMainTown%} autouseitems Minor_Farming_Pack
+condgoal {%isMainTown%} autouseitems Minor_Lumbering_Pack
+condgoal {%isMainTown%} autouseitems Minor_Mining_Pack
+condgoal {%isMainTown%} autouseitems Junior_Medal_box
+condgoal {%isMainTown%} autouseitems Medium_Medal_Box
+condgoal {%isMainTown%} autouseitems Senior_Medal_Box
+condgoal {%isMainTown%} autouseitems Newbies_Package
+condgoal {%isMainTown%} autouseitems Package_for_Lords
+condgoal {%isMainTown%} autouseitems Hero_Enhancement_Materials_Package
+
+condgoal {%isMainTown%} autouseitems Penicillin
+condgoal {%isMainTown%} autouseitems War_Horn
+condgoal {%isMainTown%} autouseitems Ivory_Horn
+#condgoal {%isMainTown%} autouseitems Corselet
+#condgoal {%isMainTown%} autouseitems Ultra_Corselet
+
+condgoal {%isMainTown%} autouseitems Plowshares
+condgoal {%isMainTown%} autouseitems Iron_Rake
+condgoal {%isMainTown%} autouseitems Arch_Saw
+condgoal {%isMainTown%} autouseitems Double_Saw
+condgoal {%isMainTown%} autouseitems Quarrying_Tools
+condgoal {%isMainTown%} autouseitems Adv_Quarrying_Tools
+condgoal {%isMainTown%} autouseitems Blower
+condgoal {%isMainTown%} autouseitems Blast_Furnace
+
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Lesser_Gold_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Lesser_Food_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Lesser_Wood_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Lesser_Stone_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Lesser_Iron_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Lesser_Resources_Reward
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Lesser_Bonus_Reward
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Minor_Gold_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Minor_Food_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Minor_Wood_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Minor_Stone_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Minor_Iron_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Minor_Resources_Reward
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Minor_Bonus_Reward
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Medium_Gold_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Medium_Food_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Medium_Wood_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Medium_Stone_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Medium_Iron_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Medium_Resources_Reward
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Medium_Bonus_Reward
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Greater_Gold_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Greater_Food_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Greater_Wood_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Greater_Stone_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Greater_Iron_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Greater_Resources_Reward
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Greater_Bonus_Reward
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Royal_Gold_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Royal_Food_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Royal_Wood_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Royal_Stone_Pack
+condgoal {{%isMainTown%}&&{%hoursPlayed%<192}} autouseitems Royal_Iron_Pack
+
+#autouseitems Civillian_Rienf._Pack
+#autouseitems Knight_Rienf._Pack
+#autouseitems Baronet_Rienf._Pack
+#autouseitems Baron_Rienf._Pack
+#autouseitems Viscount_Rienf._Pack
+#autouseitems Earl_Rienf._Pack
+#autouseitems Marquis_Rienf._Pack
+#autouseitems Duke_Rienf._Pack
+#autouseitems Furstin_Rienf._Pack
+#autouseitems Prinzessin_Rienf._Pack
+
+
+#============end=Auto=Use=Items==============================
+#============================================================
+#================Maintown=settings===========================
+
+
+condgoal {%isMainTown%} maintown
+condgoal {%isMainTown%} config attackwarning:1
+condgoal {%isMainTown%} config warreport:1
+condgoal {%isMainTown%} config relogin:20
+
+condgoal {%isMainTown%} maintpolicy 33 43
+
+
+#============end=Maintown=settings===========================
+#============================================================

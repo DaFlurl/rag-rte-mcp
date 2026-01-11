@@ -1,0 +1,20 @@
+{
+  "now": {
+    "proxyPort": "8080",
+    "password": "Hoosier2010",
+    "proxyHost": "",
+    "serverIP": "216.66.17.168",
+    "secCode": "",
+    "autoScript": true,
+    "proxyPw": "",
+    "autoLoginMinTime": "1",
+    "autoLoginMaxTime": "600",
+    "autoLogin": true,
+    "strserverAlias": "Parapet",
+    "proxyType": "",
+    "server": "cc2",
+    "proxyUn": "",
+    "autoRun": true,
+    "username": "fearmenows@yahoo.com"
+  }
+}

@@ -1,0 +1,33 @@
+
+============================================================
+SORTING REPORT
+============================================================
+
+Kept: 655 files
+Trashed: 0 files
+Errors: 0 files
+
+--- TRASHED FILES BY REASON ---
+
+--- KEPT FILES (sample) ---
+  KEEP: #localWithNet_projects_evony_Extracted_AutoEvony.swf_config.sol.json
+  KEEP: accept.txt
+  KEEP: acceptquest.txt
+  KEEP: accounts_20260104_011725.json
+  KEEP: accounts_20260104_012004.json
+  KEEP: accounts_20260104_013113.json
+  KEEP: accounts_20260104_014928.json
+  KEEP: accounts_20260104_015156.json
+  KEEP: accounts_20260104_015324.json
+  KEEP: accounts_20260104_015628.json
+  KEEP: accounts_20260104_015906.json
+  KEEP: accounts_20260104_020341.json
+  KEEP: accounts_20260104_020503.json
+  KEEP: accounts_20260104_020604.json
+  KEEP: accounts_20260104_020654.json
+  KEEP: accounts_export_20251228_171024.json
+  KEEP: accounts_extracted.json
+  KEEP: ACCOUNTS_NEED_TESTING.txt
+  KEEP: accounts_userpass_20260104_011725.txt
+  KEEP: AI-Evony_Chat.txt
+  ... and 635 more kept files

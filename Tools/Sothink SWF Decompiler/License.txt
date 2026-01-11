@@ -1,0 +1,55 @@
+Sothink SWF Decompiler License Agreement
+SourceTec Software Co., LTD.
+
+END-USER LICENSE AGREEMENT FOR SOURCETEC SOFTWARE CO.LTD.SOFTWARE PRODUCT(S)
+
+IMPORTANT-READ CAREFULLY: This SourceTec End-User License Agreement ("EULA") is a legal agreement between you (either an individual or a single entity) and SourceTec Software Co. LTD for the SourceTec software product(s) identified above. By installing, copying, or otherwise using the SOFTWARE, you agree to be bound by the terms of this EULA. If you do not agree to the terms of this EULA, do not install or use the SOFTWARE. 
+
+
+
+1.GRANT OF LICENSE. 
+     
+Install and use the Software on a single computer. You must reproduce on any such copy all copyright notices and any other proprietary legends on the original copy of the Software. Install the Software on a storage device, such as a network server, and run the Software on an internal network,provided the number of concurrent users does not exceed the number of copies of the Software purchased.  A copy of the Software must be purchased for each such user. If you have purchased a multi-pack license for the Software product, such as a Ten-Pack license, or a license to make multiple installations of the Software, you may concurrently use the number of copies of the Software authorized by that purchase. Make copies of the End-User Product and distribute those copies for use solely by yourself or personnel employed by you, or by another party, solely for its own internal purposes. 
+
+
+2.COPYRIGHT:
+    
+The SOFTWARE is owned by SourceTec Software Co. LTD and is protected by People's Republic of China copyright laws and international treaty provisions.  You may not copy the printed materials accompanying the SOFTWARE (if any), nor print copies of any user documentation provided in on-line or electronic form. 
+    
+
+3.OTHER RESTRICTION:
+
+You may not make or distribute copies of the Software, or electronically transfer the Software from one computer to another or over a network. You may not decompile, reverse engineer, disassemble, or otherwise reduce the Software to a human-perceivable form. You may not rent, lease or sublicense the Software.  You may not modify the Software or create derivative works based upon the Software. 
+
+
+4.SUPPORT SERVICES:
+
+SourceTec provides tech support services related to the SOFTWARE ("Support Services"). Use of Support Services is governed by SourceTec policies and programs described in the user manual, in online documentation, and/or other SourceTec-provided materials. Any supplemental software code provided to you as part of the Support Services shall be considered part of the SOFTWARE and subject to the terms and conditions of this EULA. With respect to technical information you provide to SourceTec as part of the Support Services, SourceTec may use such information for its business purposes, including for product support and development. SourceTec will not utilize such technical information in a form that personally identifies you.
+
+
+5. INTERNET-BASED SERVICES COMPONENTS: 
+    
+The Software contains components that enable and facilitate the use of certain Internet-based services. You acknowledge and agree that we may automatically check the version of the Software and/or its components. The program will prompt users if new version releases; and the users can download the latest version from website after confirming upgrade.
+
+
+6. TERMINATION: 
+
+Without prejudice to any other rights, SourceTec may terminate this EULA if you fail to comply with the terms and conditions of this EULA. In such event, you must destroy all copies of the SOFTWARE.
+
+
+7. NO WARRANTIES:
+   
+SourceTec expressly disclaims any warranty for the SOFTWARE. THE SOFTWARE AND ANY RELATED  DOCUMENTATION IS PROVIDED "AS IS" WITHOUT WARRANT OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OR MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NONINFRINGEMENT. THE ENTIRE RISK ARISING OUT OF USE OR PERFORMANCE OF THE SOFTWARE PRODUCT REMAINS WITH YOU.
+
+
+8. LIMITATION OF LIABILITY. 
+
+To the maximum extent permitted by applicable law, in no event shall SourceTec or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or any other pecuniary loss) arising out of the use of or inability to use the SOFTWARE or the provision of or failure to provide Support Services, even if SourceTec has been advised of the possibility of such damages. 
+
+
+This program is protected by copyright law and international treaties.
+
+Should you have any questions concerning this EULA, or if you desire to contact SourceTec for any reason, please contact us at Email support@sothink.com. 
+http://www.sothink.com/
+
+END

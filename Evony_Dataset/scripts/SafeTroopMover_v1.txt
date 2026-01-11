@@ -1,0 +1,175 @@
+#======================================================================================================================
+# Safe Troop Mover v1.0 - Multi-City Glitch-Safe Transfers
+#======================================================================================================================
+# Calculates SAFE amounts to move between cities without breaking glitches
+# 
+# KEY CONCEPT: To preserve glitch parity (odd/even), you must send:
+#   - Exact MULTIPLES of the threshold (e.g., send 1x or 2x threshold)
+#   - OR send to cities with 0 glitches of that type
+#   - OR send to VALLEYS (uses half threshold, counts as valley glitch)
+#
+# This script shows you exactly how much you can safely send.
+#======================================================================================================================
+setsilence true
+
+#======================================================================================================================
+# CONFIGURATION
+#======================================================================================================================
+# Which troop type to analyze? (change this)
+# Options: wo, w, s, p, sw, a, c, cata, t, b, r, cp
+set TargetTroop cp
+
+# Minimum troops to keep in city
+set MinKeepInCity 10000000
+
+#======================================================================================================================
+# CONSTANTS
+#======================================================================================================================
+set INT32MAX 2147483647
+setarr troopNames "peasants militia scouter pikemen swordsmen archer lightCavalry heavyCavalry carriage ballista batteringRam catapult"
+setarr troopAbbr "wo w s p sw a c cata t b r cp"
+setarr cityThreshold "2147483648 2147483648 1073741824 715827883 715827883 536870912 238609295 126322568 429496730 85899346 42949673 17179870"
+setarr valleyThreshold "1073741824 1073741824 536870912 357913941 357913941 268435456 119304647 63161284 214748365 42949673 21474836 8589935"
+
+# Find troop index from abbreviation
+set troopIdx -1
+set searchIdx 0
+label findTroopIdx
+if {%searchIdx%>=12} goto troopNotFound
+if {%troopAbbr[{%searchIdx%}]%==%TargetTroop%} set troopIdx %searchIdx%
+if {%troopIdx%!=-1} goto foundTroop
+set searchIdx {%searchIdx%+1}
+goto findTroopIdx
+
+label troopNotFound
+echo "ERROR: Invalid troop abbreviation: %TargetTroop%"
+goto endScript
+
+label foundTroop
+set tName %troopNames[{%troopIdx%}]%
+set tCityThresh %cityThreshold[{%troopIdx%}]%
+set tValleyThresh %valleyThreshold[{%troopIdx%}]%
+
+#======================================================================================================================
+# INITIALIZE
+#======================================================================================================================
+set totalCities $m_city.allCities.length$
+set currentCityIndex 0
+set myCityName $m_city.name$
+set myCityTroops $c.castle.troop.%tName%$
+
+# Calculate my city's glitch state
+set myGlitches 0
+set myRemaining %myCityTroops%
+label calcMyGlitch
+if {%myRemaining%>=%tCityThresh%} set myGlitches {%myGlitches%+1}
+if {%myRemaining%>=%tCityThresh%} set myRemaining {%myRemaining%-%tCityThresh%}
+if {%myRemaining%>=%tCityThresh%} goto calcMyGlitch
+
+set myIsOdd {{{%myGlitches%}|2}==1}
+
+set LogMsg "<br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFD700'><b>  SAFE TROOP MOVER - %tName%</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════</b></font>"
+
+set LogMsg "%LogMsg%<br><br><font color='#00FFFF'><b>SOURCE: %myCityName%</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFFFFF'>  %tName%: %myCityTroops%</font>"
+set LogMsg "%LogMsg%<br><font color='#FFFFFF'>  Glitches: %myGlitches%</font>"
+if {%myIsOdd%==true} set LogMsg "%LogMsg% <font color='#00FF00'>(ODD - GENERATING)</font>"
+if {%myIsOdd%==false&&%myGlitches%>0} set LogMsg "%LogMsg% <font color='#FF0000'>(EVEN - NOT GENERATING)</font>"
+set LogMsg "%LogMsg%<br><font color='#FFFFFF'>  Remaining: %myRemaining% / %tCityThresh%</font>"
+
+# Calculate safe send amounts
+set safeToSend {%myCityTroops%-%MinKeepInCity%}
+if {%safeToSend%<0} set safeToSend 0
+
+# Safe multiples to send (preserves glitch count in destination)
+set oneThreshold %tCityThresh%
+set twoThreshold {%tCityThresh%*2}
+
+set LogMsg "%LogMsg%<br><br><font color='#FFD700'><b>SAFE SEND AMOUNTS (preserves glitch parity):</b></font>"
+set LogMsg "%LogMsg%<br><font color='#888888'>  1x threshold: %oneThreshold%</font>"
+set LogMsg "%LogMsg%<br><font color='#888888'>  2x threshold: %twoThreshold%</font>"
+set LogMsg "%LogMsg%<br><font color='#888888'>  Valley threshold: %tValleyThresh%</font>"
+
+#======================================================================================================================
+# SCAN ALL CITIES FOR SAFE DESTINATIONS
+#======================================================================================================================
+set LogMsg "%LogMsg%<br><br><font color='#FFD700'><b>DESTINATION ANALYSIS:</b></font>"
+
+label scanCityDest
+if {%currentCityIndex%>=%totalCities%} goto showSendCommands
+
+set destCity m_city.allCities[%currentCityIndex%]
+set destName $%destCity%.name$
+set destTroops $%destCity%.troop.%tName%$
+
+# Skip if same city
+if {%destName%==%myCityName%} goto nextDestCity
+
+# Calculate destination glitch state
+set destGlitches 0
+set destRemaining %destTroops%
+label calcDestGlitch
+if {%destRemaining%>=%tCityThresh%} set destGlitches {%destGlitches%+1}
+if {%destRemaining%>=%tCityThresh%} set destRemaining {%destRemaining%-%tCityThresh%}
+if {%destRemaining%>=%tCityThresh%} goto calcDestGlitch
+
+set destIsOdd {{{%destGlitches%}|2}==1}
+
+# Determine safety status
+set destStatus SAFE
+set destColor 00FF00
+
+# If dest has glitches, check if sending would break parity
+if {%destGlitches%>0&&%destIsOdd%==true} set destStatus "CAUTION-ODD"
+if {%destGlitches%>0&&%destIsOdd%==true} set destColor FFFF00
+if {%destGlitches%>0&&%destIsOdd%==false} set destStatus "CAUTION-EVEN"
+if {%destGlitches%>0&&%destIsOdd%==false} set destColor FF6600
+
+# Output destination info
+set LogMsg "%LogMsg%<br><br><font color='#%destColor%'><b>%destName%</b></font> - %destStatus%"
+set LogMsg "%LogMsg%<br><font color='#888888'>  Current: %destTroops% (%destGlitches% glitches)</font>"
+
+# Calculate space available before next glitch
+set spaceToNextGlitch {%tCityThresh%-%destRemaining%}
+set LogMsg "%LogMsg%<br><font color='#888888'>  Space to next glitch: %spaceToNextGlitch%</font>"
+
+# Recommendations
+if {%destGlitches%==0} set LogMsg "%LogMsg%<br><font color='#00FF00'>  ✓ SAFE: No glitches to break. Send any amount.</font>"
+if {%destGlitches%>0&&%destIsOdd%==true} set LogMsg "%LogMsg%<br><font color='#FFFF00'>  ⚠ ODD glitches. Send MULTIPLES of %tCityThresh% to preserve!</font>"
+if {%destGlitches%>0&&%destIsOdd%==false} set LogMsg "%LogMsg%<br><font color='#FF6600'>  ⚠ EVEN glitches. Send %spaceToNextGlitch% to ADD one glitch (make ODD)</font>"
+
+label nextDestCity
+set currentCityIndex {%currentCityIndex%+1}
+goto scanCityDest
+
+#======================================================================================================================
+# SHOW SEND COMMANDS
+#======================================================================================================================
+label showSendCommands
+
+set LogMsg "%LogMsg%<br><br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFD700'><b>  COMMAND EXAMPLES</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════</b></font>"
+
+set LogMsg "%LogMsg%<br><br><font color='#FFFFFF'>Send to city (exact multiples for safety):</font>"
+set LogMsg "%LogMsg%<br><font color='#00FFFF'>  reinforce [cityname] none %TargetTroop%:%oneThreshold%</font>"
+set LogMsg "%LogMsg%<br><font color='#00FFFF'>  deploy reinforce [x,y] none %TargetTroop%:%oneThreshold%</font>"
+
+set LogMsg "%LogMsg%<br><br><font color='#FFFFFF'>Send to valley (uses half threshold):</font>"
+set LogMsg "%LogMsg%<br><font color='#00FFFF'>  reinforce [valleyX,valleyY] none %TargetTroop%:%tValleyThresh%</font>"
+
+set LogMsg "%LogMsg%<br><br><font color='#FFFFFF'>Transport resources + troops:</font>"
+set LogMsg "%LogMsg%<br><font color='#00FFFF'>  Transport [x,y] %TargetTroop%:%oneThreshold%</font>"
+
+set LogMsg "%LogMsg%<br><br><font color='#888888'>Note: Replace [cityname] or [x,y] with actual destination</font>"
+
+set LogMsg "%LogMsg%<br><br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════</b></font>"
+
+# Output
+set out "$m_city.cityManager.warLogMsg(%LogMsg%)$"
+
+label endScript
+setsilence false
+echo "Safe Troop Mover complete!"

@@ -1,0 +1,49 @@
+{
+  "valid_entries": 355311,
+  "removed_entries": 11354,
+  "folder_stats": {
+    "enums_cve": {
+      "valid": 82742,
+      "removed": 993
+    },
+    "cve": {
+      "valid": 3743,
+      "removed": 4
+    },
+    "protocols": {
+      "valid": 0,
+      "removed": 0
+    },
+    "training_jsonl": {
+      "valid": 256024,
+      "removed": 9420
+    },
+    "autoevony": {
+      "valid": 0,
+      "removed": 0
+    },
+    "client": {
+      "valid": 0,
+      "removed": 0
+    },
+    "as_source": {
+      "valid": 0,
+      "removed": 0
+    },
+    "keys": {
+      "valid": 6292,
+      "removed": 889
+    },
+    "scripts": {
+      "valid": 0,
+      "removed": 0
+    },
+    "borg": {
+      "valid": 0,
+      "removed": 2
+    }
+  },
+  "issues": [
+    "Error reading C:\\Users\\Admin\\Downloads\\Evony_Decrypted\\phase4-h200\\dataset\\cve\\evony_verified_cves.json: Extra data: line 480 column 5 (char 108816)"
+  ]
+}

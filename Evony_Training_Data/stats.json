@@ -1,0 +1,14 @@
+{
+  "files_processed": 8916,
+  "pairs_generated": 36370,
+  "by_category": {
+    "exploits": 26,
+    "keys": 9,
+    "protocol": 640,
+    "scripts": 106,
+    "source_code": 35589
+  },
+  "train_size": 32733,
+  "val_size": 3637,
+  "generated": "2026-01-04T20:31:23.099019"
+}

@@ -1,0 +1,24 @@
+deploy reinforce 297,693 none sw:100000 g:10
+canceltrade
+buy food 99999999 0.2
+loop
+
+
+// alt feeder
+
+setarr TgtList "297,693"
+set i 0
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% c:100000 f:5000000
+repeat 5
+transport %CurrTgt% c:100000 f:5000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 1
+loop
+
+
+deploy reinforce 299,708 none cata:143750 g:20
+loop

@@ -1,0 +1,74 @@
+# First two lines go in city script
+# As your zerofood is usually lock on a return march due to camptime directly after maint
+# the script is set to use greater_resources_reward to provide food for re-caping valleys
+# To stock up on res packs, use this link https://apps.facebook.com/evonyoffical/facebook.Neighbor.php?SID=ca2#AddAllies
+# to visit allys from your facebook and get more res packs
+
+set start 0   // set start value to 1 if you want to keep your closest valley (for zerofood)
+include uplvlvalleys
+
+# put the remaining lines in snippets
+[upLvLValleys]
+setsilence true
+iferror %start% goto exit
+set noWaitMaint 1
+echo compiling a list of current valleys:
+iferror $m_city.cityManager.fields[{%start%}].id$ goto noValleys
+label checForNon10Valleys
+echo {$m_city.cityManager.fields[{%start%}].id$|800},{$m_city.cityManager.fields[{%start%}].id$\800} $m_city.cityManager.fields[{%start%}].name$ level $m_city.cityManager.fields[{%start%}].level$
+if {$m_city.cityManager.fields[{%start%}].level$<10} set c "{$m_city.cityManager.fields[{%start%}].id$|800},{$m_city.cityManager.fields[{%start%}].id$\800}"
+if {!{$m_city.cityManager.fields[{%start%}].level$<10}} set c "empty"
+set valley {{%start%}+1}
+label valleyLoop
+iferror $m_city.cityManager.fields[{%valley%}].id$ goto levelUp
+echo {$m_city.cityManager.fields[{%valley%}].id$|800},{$m_city.cityManager.fields[{%valley%}].id$\800} $m_city.cityManager.fields[{%valley%}].name$ level $m_city.cityManager.fields[{%valley%}].level$
+if {$m_city.cityManager.fields[{%valley%}].level$<10&&%c%!=empty} set c "%c% {$m_city.cityManager.fields[{%valley%}].id$|800},{$m_city.cityManager.fields[{%valley%}].id$\800}"
+if {$m_city.cityManager.fields[{%valley%}].level$<10&&%c%==empty} set c "{$m_city.cityManager.fields[{%valley%}].id$|800},{$m_city.cityManager.fields[{%valley%}].id$\800}"
+label nextValey
+set valley {%valley%+1}
+if {%valley%<$m_city.cityManager.fields.length$} goto valleyLoop
+label levelUp
+if {%c%==empty} goto noValleysToUpgrade
+echo "The following cords are set to be upgraded at maint: %c%"
+setarr exchangeCoords %c%
+label checkMaint
+if {$m_city.cityManager.maintenanceTime$>0} goto maintIsOn
+if {$m_city.cityManager.maintenanceTime$==0} sleep 5:00
+goto checkMaint
+label maintIsOn
+echo "Server maintenance is due in {{{$m_city.cityManager.maintenanceTime$-$m_city.getRawTime()$}\1000}\60}m:{{{$m_city.cityManager.maintenanceTime$-$m_city.getRawTime()$}\1000}|60}s"
+echo "The script will now abandon your non lvl 10 valley(s) in order to make them lvlup during maint"
+echo "The script will then recapture the valley(s) after maint"
+echo "Maint at $m_city.getDateFromTime(m_city.cityManager.maintenanceTime)$"
+sleep {{{$m_city.cityManager.maintenanceTime$-$m_city.getRawTime()$}/1000}-300}
+set abandon 0
+label abandonLoop
+abandon %exchangeCoords[{%abandon%}]%
+set abandon {%abandon%+1}
+if {%abandon%<%exchangeCoords.length%} goto abandonLoop
+config wartown:1,npc:0
+sleep {{{$m_city.cityManager.maintenanceTime$-$m_city.getRawTime()$}/1000}+1500}
+set capture 0
+label reCapture
+set hero $m_city.cityManager.bestIdleAttackHero().name$
+if {$c.cm.getUsedRallySlots()$>9} goto reCapture
+useitem greater_resources_reward
+settaxrate 0
+attack %exchangeCoords[{%capture%}]% %hero% s:100k
+set capture {%capture%+1}
+if {%capture%<%exchangeCoords.length%} goto reCapture
+set capture {%capture%-1}
+sleep {$m_city.getMapDistance(m_city.castle.fieldId,m_city.getValue(Coordinate,%exchangeCoords[{%capture%}]%))$/$m_city.cityManager.getTroopSpeed(m_city.getValue(Troop,s:1))$/{$m_city.findHeroByName(%hero%).speed$+100}*6000000} 
+label recallValleyCapers
+recall %exchangeCoords[{%capture%}]%
+set capture {%capture%-1}
+if {%capture%>=0} goto recallValleyCapers
+rereadgoals
+sleep 20:00:00
+loop
+label noValleysToUpgrade
+echo "This city has no valley(s) lvl9 or less"
+goto exit //end
+label noValleys
+echo "This city has no valleys, you better get some!"
+label exit

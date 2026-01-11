@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#333"/>
+    </marker>
+    <style>
+      .box { fill: #f7f7f7; stroke: #333; stroke-width: 2; rx: 14; ry: 14; }
+      .title { font: 700 22px 'Segoe UI', Arial, sans-serif; fill:#111; }
+      .text { font: 16px 'Segoe UI', Arial, sans-serif; fill:#111; }
+      .small { font: 13px 'Segoe UI', Arial, sans-serif; fill:#333; }
+      .line { stroke:#333; stroke-width:2; marker-end:url(#arrow); }
+    </style>
+  </defs>
+<text class="title" x="30" y="40">Flash Reverse-Engineering &amp; .SOL Handling Pipeline (Evony 2009–2013)</text>
+<rect class="box" x="40" y="90" width="360" height="170"/>
+<text class="title" x="58" y="124">1) Acquire & Inventory</text>
+<text class="text" x="58" y="154">Collect SWF(s), configs, cache</text>
+<text class="text" x="58" y="176">Identify Flash version (FP11)</text>
+<text class="text" x="58" y="198">Hash + snapshot everything</text>
+<rect class="box" x="520" y="90" width="360" height="170"/>
+<text class="title" x="538" y="124">2) Decompile / Inspect SWF</text>
+<text class="text" x="538" y="154">Dump tags & resources</text>
+<text class="text" x="538" y="176">Recover AS3/ABC structures</text>
+<text class="text" x="538" y="198">Find SharedObject usage</text>
+<rect class="box" x="1000" y="90" width="360" height="170"/>
+<text class="title" x="1018" y="124">3) Decode .SOL (LSO)</text>
+<text class="text" x="1018" y="154">Parse AMF0/AMF3 payloads</text>
+<text class="text" x="1018" y="176">Extract keys/values, blobs</text>
+<text class="text" x="1018" y="198">Normalize to JSON/MsgPack</text>
+<rect class="box" x="40" y="360" width="360" height="190"/>
+<text class="title" x="58" y="394">4) Edit + Validate</text>
+<text class="text" x="58" y="424">Schema inference + diffs</text>
+<text class="text" x="58" y="446">Round-trip encode tests</text>
+<text class="text" x="58" y="468">Corruption checks + backups</text>
+<rect class="box" x="520" y="360" width="360" height="190"/>
+<text class="title" x="538" y="394">5) Replay / Emulate</text>
+<text class="text" x="538" y="424">Re-run client / projector</text>
+<text class="text" x="538" y="446">Compare behavior vs baseline</text>
+<text class="text" x="538" y="468">Automate regression suite</text>
+<rect class="box" x="1000" y="360" width="360" height="190"/>
+<text class="title" x="1018" y="394">6) Package + Tooling</text>
+<text class="text" x="1018" y="424">CLI utilities + GUI editor</text>
+<text class="text" x="1018" y="446">Templates for common edits</text>
+<text class="text" x="1018" y="468">Logs + evidence bundle</text>
+<line class="line" x1="400" y1="175" x2="520" y2="175"/>
+<line class="line" x1="880" y1="175" x2="1000" y2="175"/>
+<line class="line" x1="1180" y1="260" x2="1180" y2="360"/>
+<line class="line" x1="1000" y1="455" x2="880" y2="455"/>
+<line class="line" x1="520" y1="455" x2="400" y2="455"/>
+<line class="line" x1="220" y1="550" x2="220" y2="590"/>
+<text class="small" x="55" y="720">Goal: safe round-trips (decode → edit → encode) with evidence artifacts and rollback at every stage.</text>
+</svg>

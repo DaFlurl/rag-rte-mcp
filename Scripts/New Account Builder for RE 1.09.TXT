@@ -1,0 +1,255 @@
+//start your account and build a lv1 cottage on any location.
+//Complete the be an evonian Quest and skip the tutorial.
+//save the account and give it a name. then copy this script into the new re 1.09.
+//(do not do anything further with the account or it will not complete quests in the correct order)
+
+
+set maintown true
+useitem aries_amulet
+upgrade c
+create f 1001
+gosub quest
+create s 1002
+create q 1003
+gosub quest
+create i 1004
+create inn
+gosub quest
+create fh
+useitem newbies_package
+upgrade s
+gosub quest
+create wh
+gosub speedup1
+create m
+gosub speedup1
+create r
+gosub quest
+production 100 100 100 100
+completequests routine
+settaxrate 20
+completequests routine
+changecastlename 1
+completequests routine
+sleep 3
+changeflag 1
+sell iron 10 0.1
+label step1
+gosub quest
+ifgoto ( m_city.castle.resource.wood.amount < 6000 ) cycle1
+ifgoto ( m_city.castle.resource.stone.amount < 5000 ) cycle1
+upgrade t
+gosub speedup1
+gosub speedup1
+create a
+gosub speedup1
+create e
+gosub speedup1
+upgrade i
+sleep 3
+upgrade i
+gosub speedup1
+upgrade q
+create fo
+sleep 3
+upgrade fo
+gosub speedup1
+create ws
+gosub speedup1
+sleep 3
+completequests routine
+create w
+gosub speedup2
+sell iron 10 0.1
+gosub quest
+levy wood
+upgrade a
+research lu
+set junk $m_city.cityManager.updateWallQueue()$
+sleep 6
+walldefense! tra 10
+echo "Account is growing properly"
+set junk $m_city.cityManager.updateInn()$
+sleep 240
+getspamhero
+gosub quest
+sleep 300
+research ag
+sleep 420
+label step2
+gosub quest
+sleep 15
+set junk $m_city.cityManager.updateWallQueue()$
+sleep 6
+ifgosub ( m_city.castle.fortification.trap > 99 ) wall1
+ifgoto ( m_city.castle.resource.wood.amount < 12000 ) cycle2
+ifgoto ( m_city.castle.resource.stone.amount < 10000 ) cycle2
+upgrade t
+gosub speedup2
+useitem package_for_lords
+useitem hero_enhancement_materials_package
+gosub quest
+useitem junior_medal_box
+research ms
+set buyDecrease 10
+set buyAt {$m_city.cityManager.market[2].sellersArray[4].price$+$m_city.cityManager.market[2].sellersArray[4].price$*.%buyDecrease%}
+buy stone 8000 %buyAt%
+usetradeitem merchant_fleet
+gosub gear1
+label safe
+gosub res
+gosub quest
+ifgoto ( m_city.castle.resource.stone.amount < 20000 ) safe
+upgrade w
+gosub speedup2
+set buyDecrease 10
+set buyAt {$m_city.cityManager.market[1].sellersArray[4].price$+$m_city.cityManager.market[1].sellersArray[4].price$*.%buyDecrease%}
+buy lumber 14000 %buyAt%
+usetradeitem merchant_fleet
+usetechitem beginner_guidelines
+gosub quest
+settaxrate 0
+label step3
+gosub quest
+sleep 15
+ifgoto ( m_city.castle.resource.wood.amount < 24000 ) cycle3
+ifgoto ( m_city.castle.resource.stone.amount < 20000 ) cycle3
+upgrade t
+gosub speedup3
+sleep 15
+gosub quest
+upgrade a
+gosub speedup2
+sleep 6
+upgrade a 
+gosub speedup2
+sleep 240
+create! b
+gosub quest
+upgrade b
+gosub speedup1
+upgrade b
+gosub speedup2
+upgrade b
+gosub speedup2
+upgrade fo
+gosub speedup1
+set junk $m_city.actionFactory.getMailCommands().sendMail(Nepoleon,Hi,Quest)$
+label step4
+gosub quest
+ifgoto ( m_city.castle.resource.food.amount < 2000 ) cycle4
+ifgoto ( m_city.castle.resource.wood.amount < 10000 ) cycle4
+ifgoto ( m_city.castle.resource.stone.amount < 6000 ) cycle4
+ifgoto ( m_city.castle.resource.iron.amount < 12000 ) cycle4
+upgrade fo
+gosub speedup2
+upgrade r
+teleport tuscany
+chatwc "Hello"
+gosub quest
+untrain c:{$m_city.cityManager.troop.lightCavalry$-100}
+untrain p:{$m_city.cityManager.troop.pikemen$}
+untrain sw:{$m_city.cityManager.troop.swordsmen$}
+waitnoresearch
+gosub create1Sawmill
+tech ms:2
+gosub create1Sawmill
+usetechitem beginner_guidelines
+usetechitem beginner_guidelines
+waitnoresearch
+gosub create1Sawmill
+tech ms(cat)
+gosub create1Sawmill
+usetechitem primary_guidelines
+waitnoresearch
+gosub create1Sawmill
+tech ms:4
+gosub create1Sawmill
+usetechitem intermediate_guidelines
+waitnoresearch
+gosub create1Sawmill
+goto exitAccbuilder
+label quest
+sleep 3
+completequests routine
+gosubreturn
+label speedup1
+sleep 3
+usebuilditem beginner_guidelines
+completequests routine
+gosubreturn
+label speedup2
+sleep 3
+usebuilditem primary_guidelines
+completequests routine
+gosubreturn
+label speedup3
+sleep 3
+usebuilditem intermediate_guidelines
+completequests routine
+gosubreturn
+label cycle1
+useitem minor_bonus_reward
+useitem minor_resources_reward
+gosub quest
+goto step1
+label cycle2
+useitem minor_bonus_reward
+useitem minor_resources_reward
+gosub quest
+settaxrate 0
+goto step2
+label cycle3
+echo "do facebook visits if u can"
+useitem minor_bonus_reward
+useitem minor_resources_reward
+useitem lesser_bonus_reward
+useitem lesser_resources_reward
+gosub quest
+goto step3
+label cycle4
+gosub openRespacks
+gosub quest
+goto step4
+label res
+gosub openRespacks
+gosubreturn
+label wall1
+walldefense tra 100 demo
+completequests routine
+gosubreturn
+label gear1
+gear foot
+gear legs
+gear belts
+gear gauntlets
+gear back
+gear chest
+gear shoulder
+gear head
+gear ring
+gear charm
+gear necklace
+gear shield
+gear weapon
+gosubreturn
+label create1Sawmill
+Create! s
+sleep 3
+settaxrate 0
+set junk $m_city.cityManager.updateResearch()$
+upgrade! s
+sleep 3
+gosubreturn
+label openRespacks
+echo "Ignore these error messages"
+useitem minor_bonus_reward
+useitem minor_resources_reward
+useitem lesser_bonus_reward
+useitem lesser_resources_reward
+useitem medium_resources_reward
+useitem medium_bonus_reward
+gosubreturn
+label exitAccbuilder
+rereadgoals
+echo "Account builder was successful"

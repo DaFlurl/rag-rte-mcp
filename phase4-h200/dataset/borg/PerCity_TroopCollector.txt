@@ -1,0 +1,64 @@
+#======================================================================================================================
+# Per-City Troop Data Collector v1.0
+#======================================================================================================================
+# Run this script from ANY city - it will output ALL troops for ALL cities
+# Copy the output and paste into the AI Optimizer tool
+#======================================================================================================================
+setsilence true
+
+set CityCount $m_city.allCities.length$
+set mcac m_city.allCities
+set cMaT .cityManager.allTroop.
+
+echo "═══════════════════════════════════════════════════════════════════════════════"
+echo "  PER-CITY TROOP DATA COLLECTOR - ALL CITIES"
+echo "═══════════════════════════════════════════════════════════════════════════════"
+echo "  Total Cities: %CityCount%"
+echo "  Copy this ENTIRE output for the AI Optimizer"
+echo "═══════════════════════════════════════════════════════════════════════════════"
+echo ""
+echo "START_DATA"
+
+set CityIndex 0
+label CITY_LOOP
+
+set CityName $%mcac%[{%CityIndex%}].name$
+set Workers $%mcac%[{%CityIndex%}]%cMaT%peasants$
+set Warriors $%mcac%[{%CityIndex%}]%cMaT%militia$
+set Scouts $%mcac%[{%CityIndex%}]%cMaT%scouter$
+set Pikemen $%mcac%[{%CityIndex%}]%cMaT%pikemen$
+set Swordsmen $%mcac%[{%CityIndex%}]%cMaT%swordsmen$
+set Archers $%mcac%[{%CityIndex%}]%cMaT%archer$
+set Cavalry $%mcac%[{%CityIndex%}]%cMaT%lightCavalry$
+set Cataphracts $%mcac%[{%CityIndex%}]%cMaT%heavyCavalry$
+set Transporters $%mcac%[{%CityIndex%}]%cMaT%carriage$
+set Ballista $%mcac%[{%CityIndex%}]%cMaT%ballista$
+set BatteringRams $%mcac%[{%CityIndex%}]%cMaT%batteringRam$
+set Catapults $%mcac%[{%CityIndex%}]%cMaT%catapult$
+
+echo "CITY:%CityName%"
+echo "wo:%Workers%"
+echo "w:%Warriors%"
+echo "s:%Scouts%"
+echo "p:%Pikemen%"
+echo "sw:%Swordsmen%"
+echo "a:%Archers%"
+echo "c:%Cavalry%"
+echo "cata:%Cataphracts%"
+echo "t:%Transporters%"
+echo "b:%Ballista%"
+echo "r:%BatteringRams%"
+echo "cp:%Catapults%"
+echo "---"
+
+set CityIndex {%CityIndex%+1}
+ifgoto ( %CityIndex% < %CityCount% ) CITY_LOOP
+
+echo "END_DATA"
+echo ""
+echo "═══════════════════════════════════════════════════════════════════════════════"
+echo "  DATA COLLECTION COMPLETE"
+echo "  Copy everything between START_DATA and END_DATA"
+echo "═══════════════════════════════════════════════════════════════════════════════"
+
+setsilence false

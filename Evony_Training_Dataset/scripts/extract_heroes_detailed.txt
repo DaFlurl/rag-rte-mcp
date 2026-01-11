@@ -1,0 +1,98 @@
+#===============================================================
+# DETAILED HEROES EXTRACTION SCRIPT v1.0
+# Extracts all hero data with stats and classification
+#===============================================================
+
+setsilence true //
+
+output "===HEROES_EXTRACTION_START==="
+output "TIMESTAMP:%date% %time%"
+output "EMAIL:%config.username%"
+
+iferror %player.name% goto NotLoggedIn
+output "PLAYER_NAME:%player.name%"
+
+#---------------------------------------------------------------
+# HERO SUMMARY
+#---------------------------------------------------------------
+output "---HERO_SUMMARY---"
+output "TOTAL_HEROES:%heroes.count%"
+
+# Count ring heroes (level 120+)
+set ringCount 0
+set hhCount 0
+set heroIdx 0
+
+:CountLoop
+iferror %heroes[%heroIdx%].name% goto EndCount
+
+# Check if level 120+ (ring hero)
+set lvl %heroes[%heroIdx%].level%
+if %lvl% >= 120 set ringCount %ringCount%+1
+
+set heroIdx %heroIdx%+1
+goto CountLoop
+
+:EndCount
+output "RING_HEROES:%ringCount%"
+output "---END_HERO_SUMMARY---"
+
+#---------------------------------------------------------------
+# DETAILED HERO LIST
+#---------------------------------------------------------------
+output "---HERO_DETAILS---"
+
+set idx 0
+:HeroDetailLoop
+iferror %heroes[%idx%].name% goto EndHeroDetails
+
+output "HERO_RECORD_START"
+output "INDEX:%idx%"
+output "NAME:%heroes[%idx%].name%"
+output "ID:%heroes[%idx%].id%"
+output "LEVEL:%heroes[%idx%].level%"
+output "EXPERIENCE:%heroes[%idx%].experience%"
+output "EXP_TO_NEXT:%heroes[%idx%].expToNext%"
+
+# Core Stats
+output "ATTACK:%heroes[%idx%].attack%"
+output "POLITICS:%heroes[%idx%].politics%"
+output "INTELLIGENCE:%heroes[%idx%].intelligence%"
+
+# Status
+output "LOYALTY:%heroes[%idx%].loyalty%"
+output "ENERGY:%heroes[%idx%].energy%"
+output "MAX_ENERGY:%heroes[%idx%].maxEnergy%"
+output "SPEED:%heroes[%idx%].speed%"
+output "LEADERSHIP:%heroes[%idx%].leadership%"
+output "SALARY:%heroes[%idx%].salary%"
+output "REMAIN_POINTS:%heroes[%idx%].remainPoints%"
+
+# Location
+output "CITY_ID:%heroes[%idx%].cityId%"
+output "CITY_NAME:%heroes[%idx%].city%"
+output "IS_MAYOR:%heroes[%idx%].isMayor%"
+output "STATUS:%heroes[%idx%].status%"
+
+# Classification
+set hlvl %heroes[%idx%].level%
+if %hlvl% >= 120 output "TYPE:RING"
+if %hlvl% < 120 output "TYPE:REGULAR"
+
+output "HERO_RECORD_END"
+
+set idx %idx%+1
+goto HeroDetailLoop
+
+:EndHeroDetails
+output "---END_HERO_DETAILS---"
+
+output "STATUS:SUCCESS"
+goto End
+
+:NotLoggedIn
+output "ERROR:Not logged in"
+output "STATUS:FAILED"
+
+:End
+output "===HEROES_EXTRACTION_END==="

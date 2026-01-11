@@ -1,0 +1,13 @@
+# Proxy: SOCKS4 127.0.0.1:9004
+# Accounts: 10
+
+barbaric691@gmail.com:edbuddy0709
+baritter@uiuc.edu:anann06
+barryronnie1965@hotmail.com:nathan2002
+bartolome_marino@yahoo.com:marheaven
+baseball_junky3@yahoo.com:besbol3
+bbb_ark1962@yahoo.com:BeatenbytheBalls42
+bbb_ark1963@yahoo.com:Gracie04
+bbb_ark1964@yahoo.com:Gracie04
+bbb_ark1965@yahoo.com:Gracie04
+bbb_ark1966@yahoo.com:Gracie04

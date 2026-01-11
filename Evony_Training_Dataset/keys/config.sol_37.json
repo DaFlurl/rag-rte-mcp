@@ -1,0 +1,26 @@
+{
+  "now": {
+    "proxyPort": "8080",
+    "skypePw": "",
+    "proxyPw": "",
+    "skypeUn": "",
+    "secCode": "",
+    "proxyUn": "",
+    "autoLoginMaxTime": "600",
+    "username": "domexdan@yahoo.com",
+    "serverIP": "216.66.17.168",
+    "proxyType": "",
+    "proxyHost": "",
+    "loginType": "ev",
+    "password": "chainer88",
+    "autoScript": false,
+    "autoRun": false,
+    "theme": "Ice Blue RE",
+    "server": "cc2",
+    "autoLogin": false,
+    "sid": "375",
+    "tokenExpires": NaN,
+    "autoLoginMinTime": "1",
+    "strserverAlias": "Parapet"
+  }
+}

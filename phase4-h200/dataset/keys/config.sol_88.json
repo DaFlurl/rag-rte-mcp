@@ -1,0 +1,26 @@
+{
+  "now": {
+    "autoScript": false,
+    "sid": "375",
+    "autoLogin": false,
+    "tokenExpires": NaN,
+    "proxyType": "",
+    "strserverAlias": "Parapet",
+    "proxyPort": "8080",
+    "skypePw": "",
+    "proxyPw": "",
+    "skypeUn": "",
+    "proxyUn": "",
+    "secCode": "",
+    "serverIP": "216.66.17.168",
+    "autoLoginMinTime": "1",
+    "username": "peterbrannan@hotmail.com",
+    "proxyHost": "",
+    "autoRun": false,
+    "password": "theBUSHsmells123",
+    "theme": "Autumn Leaves by Ioshik",
+    "loginType": "ev",
+    "server": "cc2",
+    "autoLoginMaxTime": "600"
+  }
+}

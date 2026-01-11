@@ -1,0 +1,57 @@
+setsilence true
+echo "The script 'AutoPolicy_v1.1 for RE v1.45' is now runing in this city"
+label checkMaint
+gosub checkPolicies
+if {$c.cm.maintenanceTime$>0} goto Draft10s
+label sleep
+if {$c.cm.maintenanceTime$<=0} sleep 3:00
+goto checkMaint
+
+label Draft10s
+gosub checkPolicies
+if {%R%==0} set string "<font color='#FF0000'><b>This city has no policies left to use before maint!</b></font>"
+if {%R%==0} goto noPoliciesLeft
+set arrivalTime 0
+set recallTime 0
+set s 0
+rescanmap $c.coord$ 20
+setarr draft10 $c.getMapFieldList(npc,10,20,c.getValue(Coordinate,c.coord))$
+set draft10.length %R%
+label scout
+set r $c.qdeploy(scout,c.getValue(Coordinate,%draft10[{%s%}]%),none,c.getValue(Troop,s:1))$
+set arrivalTime {$c.getRawTime()$+$c.cm.getBaseTravelTime(c.castle.fieldId,c.getValue(Coordinate,%draft10[{%s%}]%),c.getValue(Troop,s:1))$*1000}
+if {%arrivalTime%>=%recallTime%} set recallTime %arrivalTime%
+set s {%s%+1}
+if {%s%<%draft10.length%} goto scout
+if {%recallTime%>$c.getRawTime()$} sleep @:$c.getDateFromTime(%recallTime%).toFormattedTimeString()$
+sleep 5
+set d 0
+set string "<br><br><b><u>AutoPolicy Results $c.getDateFromTime(c.getRawTime()).date$/{$c.getDateFromTime(c.getRawTime()).month$+1} $c.getDateFromTime(c.getRawTime()).fullYear$ for $c.castle.name$</u></b><br>"
+label draft
+set r $c.af.getCapitalCommands().levyArmy(c.castle.id,c.getValue(Coordinate,%draft10[{%d%}]%))$
+gosub waitResp %r% 10
+if {$%r%.ok$==1} set string "%string% NPC10(%draft10[{%d%}]%): <b>$c.formatNum(%r%.amount)$ <i>$%r%.armyType$</i></b><br>"
+if {$%r%.ok$!=1} set string "%string% NPC10(%draft10[{%d%}]%): <font color='#FF0000'>$%r%.errorMsg$</font><br>"
+set d {%d%+1}
+if {%d%<%draft10.length%} goto draft
+goto noPoliciesLeft
+label checkPolicies
+set r $c.af.getCapitalCommands().getLeftPoliciesTimes(c.castle.id)$
+gosub waitResp %r% 10
+set R $%r%.amount$
+gosubreturn
+label waitResp
+set _starttime $c.getRawTime()$
+label waitRespStart
+iferror {$%_1%.ok$} goto respWait
+gosubreturn %_1%
+label respWait
+if {$c.getRawTime()$>{%_starttime%+%_2%*1000}} echo "A timeout occured while waiting for server response"
+if {$c.getRawTime()$>{%_starttime%+%_2%*1000}} gosubreturn 0
+sleep 0.1
+goto waitRespStart
+label noPoliciesLeft
+set string "<font color='#005500'>%string%</font><br><font color='#0000FF'>    &#169; 2016-11-01 &#60;&#126;Yozhik v Tumane&#126;&#62;&#8482;</font><br>"
+set draftResult $c.cm.warLogMsg(c.getVar(string))$
+if {$c.cm.maintenanceTime$>0} sleep @:$c.getDateFromTime(c.cm.maintenanceTime).toFormattedTimeString()$
+goto sleep

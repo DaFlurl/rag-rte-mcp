@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <defs>
+    <linearGradient id="tg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+    <linearGradient id="tg2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A0F0A"/>
+      <stop offset="100%" style="stop-color:#0D0705"/>
+    </linearGradient>
+    <linearGradient id="tg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E90FF"/>
+      <stop offset="100%" style="stop-color:#0D4F8B"/>
+    </linearGradient>
+    <linearGradient id="tg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#228B22"/>
+      <stop offset="100%" style="stop-color:#006400"/>
+    </linearGradient>
+    <linearGradient id="tg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9932CC"/>
+      <stop offset="100%" style="stop-color:#4B0082"/>
+    </linearGradient>
+    <linearGradient id="tg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B0000"/>
+      <stop offset="100%" style="stop-color:#4A0000"/>
+    </linearGradient>
+    <filter id="tglow">
+      <feGaussianBlur stdDeviation="2"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="tshad">
+      <feDropShadow dx="3" dy="3" stdDeviation="3" flood-opacity="0.5"/>
+    </filter>
+    <marker id="tarr" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L12,4 z" fill="#FFD700"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#tg2)"/>
+  <rect x="10" y="10" width="1180" height="680" fill="none" stroke="url(#tg1)" stroke-width="3" rx="5"/>
+
+  <!-- Title -->
+  <rect x="350" y="20" width="500" height="50" fill="url(#tg6)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#tshad)"/>
+  <text x="600" y="52" font-family="Georgia, serif" font-size="24" fill="#FFD700" text-anchor="middle" font-weight="bold" filter="url(#tglow)">🚀 SVONY TRAINING PHASES (RunPod)</text>
+
+  <!-- Phase 1+2 Iterative -->
+  <g transform="translate(30, 90)">
+    <rect width="420" height="250" fill="url(#tg3)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#tshad)"/>
+    <text x="210" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">📘 PHASE 1+2 (ITERATIVE)</text>
+    <text x="210" y="50" font-family="Arial" font-size="11" fill="#90EE90" text-anchor="middle">1x B200 (180GB) @ $5.19/hr</text>
+
+    <rect x="15" y="65" width="390" height="165" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="210" y="85" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle" font-weight="bold">RunPod Single B200</text>
+
+    <text x="25" y="108" font-family="monospace" font-size="9" fill="#DAA520">Dataset:</text>
+    <text x="120" y="108" font-family="monospace" font-size="9" fill="#FFFFFF">12,304 examples</text>
+    <text x="220" y="108" font-family="monospace" font-size="9" fill="#DAA520">Epochs:</text>
+    <text x="290" y="108" font-family="monospace" font-size="9" fill="#FFFFFF">10 total (3+7)</text>
+    <text x="25" y="125" font-family="monospace" font-size="9" fill="#DAA520">VRAM:</text>
+    <text x="120" y="125" font-family="monospace" font-size="9" fill="#FFFFFF">180 GB</text>
+    <text x="220" y="125" font-family="monospace" font-size="9" fill="#DAA520">CPU/RAM:</text>
+    <text x="290" y="125" font-family="monospace" font-size="9" fill="#FFFFFF">24 / 180GB</text>
+    <text x="25" y="142" font-family="monospace" font-size="9" fill="#DAA520">P1 Loss:</text>
+    <text x="120" y="142" font-family="monospace" font-size="9" fill="#FFFFFF">0.326</text>
+
+    <text x="210" y="175" font-family="Arial" font-size="10" fill="#FFD700" text-anchor="middle" font-weight="bold">→ Phase 2 DATA used in Phase 4</text>
+    <text x="210" y="195" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Protocol + AS3 + AutoEvony + Exploits</text>
+
+    <rect x="100" y="205" width="220" height="25" fill="#003366" stroke="#90EE90" rx="3"/>
+    <text x="210" y="223" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle">✅ COMPLETE</text>
+  </g>
+
+  <!-- Arrow 1+2→3 -->
+  <path d="M460 215 L510 215" stroke="#FFD700" stroke-width="3" marker-end="url(#tarr)"/>
+
+  <!-- Phase 3 -->
+  <g transform="translate(520, 90)">
+    <rect width="270" height="250" fill="url(#tg5)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#tshad)"/>
+    <text x="135" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">📙 PHASE 3 (SEPARATE)</text>
+    <text x="135" y="50" font-family="Arial" font-size="11" fill="#DDA0DD" text-anchor="middle">H200 SXM @ $3.59/hr</text>
+
+    <rect x="15" y="65" width="240" height="165" fill="#2A0A3A" stroke="#DDA0DD" rx="5"/>
+    <text x="135" y="85" font-family="Arial" font-size="10" fill="#DDA0DD" text-anchor="middle" font-weight="bold">RunPod H200 SXM</text>
+
+    <text x="25" y="108" font-family="monospace" font-size="9" fill="#DAA520">Dataset:</text>
+    <text x="120" y="108" font-family="monospace" font-size="9" fill="#FFFFFF">21,132 examples</text>
+    <text x="25" y="125" font-family="monospace" font-size="9" fill="#DAA520">Epochs:</text>
+    <text x="120" y="125" font-family="monospace" font-size="9" fill="#FFFFFF">4</text>
+    <text x="25" y="142" font-family="monospace" font-size="9" fill="#DAA520">Cost:</text>
+    <text x="120" y="142" font-family="monospace" font-size="9" fill="#FFFFFF">~$11</text>
+    <text x="25" y="159" font-family="monospace" font-size="9" fill="#DAA520">CVE data:</text>
+    <text x="120" y="159" font-family="monospace" font-size="9" fill="#FFFFFF">2,862 examples</text>
+
+    <text x="135" y="185" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle" font-weight="bold">→ Used in Phase 4 Merge</text>
+
+    <rect x="25" y="195" width="220" height="25" fill="#003366" stroke="#90EE90" rx="3"/>
+    <text x="135" y="213" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle">✅ COMPLETE</text>
+  </g>
+
+  <!-- Phase 4 - MASTERPIECE -->
+  <g transform="translate(350, 370)">
+    <rect width="500" height="280" fill="url(#tg6)" stroke="#FFD700" stroke-width="3" rx="10" filter="url(#tshad)"/>
+    <text x="250" y="35" font-family="Georgia, serif" font-size="20" fill="#FFD700" text-anchor="middle" font-weight="bold">⭐ PHASE 4: MASTERPIECE ⭐</text>
+    <text x="250" y="58" font-family="Arial" font-size="12" fill="#FF6B6B" text-anchor="middle">8x H200 (1,128GB VRAM) @ $23.92/hr</text>
+
+    <!-- Merge diagram -->
+    <rect x="75" y="75" width="160" height="50" fill="#4A0000" stroke="#90EE90" rx="5"/>
+    <text x="155" y="95" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle" font-weight="bold">Phase 2 Data</text>
+    <text x="155" y="110" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle">12,304 examples</text>
+
+    <rect x="265" y="75" width="160" height="50" fill="#4A0000" stroke="#DDA0DD" rx="5"/>
+    <text x="345" y="95" font-family="Arial" font-size="10" fill="#DDA0DD" text-anchor="middle" font-weight="bold">Phase 3 Data</text>
+    <text x="345" y="110" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle">21,132 examples</text>
+
+    <!-- Merge arrows -->
+    <path d="M155 130 L155 145 L250 145 L250 155" stroke="#FFD700" stroke-width="2"/>
+    <path d="M345 130 L345 145 L250 145" stroke="#FFD700" stroke-width="2"/>
+
+    <!-- Result -->
+    <rect x="100" y="160" width="300" height="90" fill="#2A0000" stroke="#FFD700" stroke-width="2" rx="8"/>
+    <text x="250" y="185" font-family="Georgia, serif" font-size="14" fill="#FFD700" text-anchor="middle" font-weight="bold">SVONY-3800-F16</text>
+    <text x="250" y="205" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">Train: 76,164 | Val: 8,463</text>
+    <text x="250" y="222" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">7x larger than Phase 1+2!</text>
+    <text x="250" y="240" font-family="Arial" font-size="11" fill="#90EE90" text-anchor="middle" font-weight="bold">✅ PRODUCTION READY</text>
+  </g>
+
+  <!-- Merge arrows from phases to Phase 4 -->
+  <path d="M165 340 L165 420 L350 420" stroke="#1E90FF" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#tarr)"/>
+  <path d="M805 340 L805 420 L850 420" stroke="#DDA0DD" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#tarr)"/>
+
+  <!-- Stats Panel -->
+  <g transform="translate(810, 90)">
+    <rect width="180" height="250" fill="#1A0F0A" stroke="url(#tg1)" stroke-width="2" rx="8" filter="url(#tshad)"/>
+    <text x="90" y="30" font-family="Georgia, serif" font-size="14" fill="#FFD700" text-anchor="middle" font-weight="bold">📊 DATASET STATS</text>
+
+    <text x="15" y="60" font-family="monospace" font-size="9" fill="#DAA520">Phase 1+2:</text>
+    <text x="15" y="78" font-family="monospace" font-size="10" fill="#FFFFFF">12,304 examples</text>
+
+    <text x="15" y="100" font-family="monospace" font-size="9" fill="#DAA520">Phase 3:</text>
+    <text x="15" y="118" font-family="monospace" font-size="10" fill="#FFFFFF">21,132 examples</text>
+
+    <text x="15" y="140" font-family="monospace" font-size="9" fill="#DAA520">Phase 4:</text>
+    <text x="15" y="158" font-family="monospace" font-size="10" fill="#90EE90">84,627 entries</text>
+
+    <text x="15" y="180" font-family="monospace" font-size="9" fill="#DAA520">Dupes removed:</text>
+    <text x="15" y="198" font-family="monospace" font-size="10" fill="#FF6B6B">141,118</text>
+
+    <text x="15" y="220" font-family="monospace" font-size="9" fill="#DAA520">Source files:</text>
+    <text x="15" y="238" font-family="monospace" font-size="10" fill="#FFFFFF">57 total</text>
+  </g>
+
+  <!-- Key Facts -->
+  <g transform="translate(1000, 90)">
+    <rect width="180" height="250" fill="url(#tg4)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#tshad)"/>
+    <text x="90" y="30" font-family="Georgia, serif" font-size="14" fill="#FFD700" text-anchor="middle" font-weight="bold">🖥️ P4 HARDWARE</text>
+
+    <text x="15" y="60" font-family="monospace" font-size="9" fill="#DAA520">Instance:</text>
+    <text x="15" y="78" font-family="monospace" font-size="9" fill="#FFFFFF">8H200.141S.176V</text>
+
+    <text x="15" y="100" font-family="monospace" font-size="9" fill="#DAA520">GPUs:</text>
+    <text x="15" y="118" font-family="monospace" font-size="10" fill="#90EE90">8x H200</text>
+
+    <text x="15" y="140" font-family="monospace" font-size="9" fill="#DAA520">VRAM:</text>
+    <text x="15" y="158" font-family="monospace" font-size="10" fill="#FFFFFF">1,128 GB</text>
+
+    <text x="15" y="180" font-family="monospace" font-size="9" fill="#DAA520">CPU/RAM:</text>
+    <text x="15" y="198" font-family="monospace" font-size="9" fill="#FFFFFF">176 / 1,450GB</text>
+
+    <text x="15" y="220" font-family="monospace" font-size="9" fill="#DAA520">Cost:</text>
+    <text x="15" y="238" font-family="monospace" font-size="10" fill="#FFD700">$23.92/hr</text>
+  </g>
+
+  <text x="600" y="680" font-family="Arial" font-size="10" fill="#8B8B83" text-anchor="middle">Svony LLM Training Phases | RunPod Cloud | Multi-Phase Merge | 100+ Epochs | January 2026</text>
+</svg>

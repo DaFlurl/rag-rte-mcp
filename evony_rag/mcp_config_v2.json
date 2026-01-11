@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "evony-knowledge": {
+      "command": "python",
+      "args": ["-m", "evony_rag.mcp_server_v2"],
+      "cwd": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted",
+      "env": {}
+    }
+  }
+}

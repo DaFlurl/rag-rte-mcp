@@ -1,0 +1,22 @@
+Ordinary comm quest ........first load the quest into the city you want to glitch. Then change the hero name to one in that city. 
+Then in the set send lines add the numbers of troops you want to glitch For example w:100m will send 100million warriors to the quest. You can only send a max of 2.1b troops anything over won’t send.
+Then issue quest on an alt and accept it. It is best to refresh the bot and let it run through all cities before entering the. Glitch script to recall the troops
+Always allow for triple glitch just incase better to be safe than sorry
+Comm quest where you can add troops
+This is best done from an empty city. You will need to accept quest from empty city first follow the same steps as above for normal quest but only send a few of each troop type
+Once you have accepted the quest then pause the bot and login live in the account your glitching
+Go to a city that has loads of troops and add them to the quest
+When adding troops you can only add a max of 2.1b each time so what I would do is add 100m of each troop type in one go and just keep sending them until I had the desired amount in the quest
+I would only add up to 700m if each troop type just incase of triple glitch
+You can only add troops to one quest though so if you have multiple quest running add the troops to the first quest and then you can run normal quests in other cities
+Once the quest is over you can then add more troops again
+If you want to accept multiple quests then you will need to change the set cqi 0 line
+0 being the first quest 1 the next 2 the next and so on
+
+(Driver)
+Let me know if you have any questions
+Oh and you can’t accept a quest if you allied to the suizeraine
+Steps above are for 1 account so they can be repeated on as many accounts as you want to glitch
+You can literally glitch all your accounts once from 1 comm quest
+
+500000000

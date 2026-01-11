@@ -1,0 +1,227 @@
+config wartown:0
+include adevasion
+//config trade:2
+config safemaint:1
+fortification tra:2,ab:2,at:2
+config extrafood:-1
+config gate:0.2
+gatepolicy 1 1 1 1 1 
+config comfort:1,keepreports:1
+config hero:1
+config lookahead:1
+autouseitems Advance_by_A_Hidden_Path:2
+autouseitems Speech_Text:6
+autouseitems Truce_Agreement:75:1
+keeptroop 500,298 wo:200000,w:591000000,s:43100000,a:556600000,t:400000,b:148900000,r:2800000,cp:430000,p:20000,sw:250,c:20000,cata:3000 1
+requesthelp 500,298 w:591000000 w:1 f:0 f:0
+requesthelp 500,298 sw:2000 sw:1 f:0 f:0
+requesthelp 500,298 p:2000 p:1 f:0 f:0
+requesthelp 500,298 c:2000 c:1 f:0 f:0
+requesthelp 500,298 cata:3000 cata:1 f:0 f:0
+requesthelp 500,298 b:3000000 b:1 f:0 f:0
+requesthelp 500,298 r:2800000 r:1 f:0 f:0
+requesthelp 500,298 a:556600000 a:1 f:0 f:0
+requesthelp 500,298 cp:430000 cp:1 f:0 f:0
+requesthelp 500,298 s:43100000 s:6100000 f:0 f:0
+fortification ab:100,at:50,tra:100
+fortification ab:10800,at:20000,trap:2600
+config dumping:3.5
+config zerofood:500
+config junkwave:500
+config autogear:3
+config nocapture:1,fhreserved:1,gate:0.2,hero:1,keepreports:1,warreport:1,autogear:3
+
+//SNIPPETS
+[adevasion]
+####################### advEvasion Configs #######################
+
+##-->  Turn On AdvEvasion  <--##
+config advevasion:1
+
+##-->  Debug AdvEvasion  <--##
+//config advevasiondbg:32
+
+##-->  Set timing and enough rally slots to move all layers  <--##
+config attackgap:2
+rallymax rainbow:4
+
+##-->  Set custom layer sizes to remain during evasion  <--##Displaying Castle Buffs:
+
+set pLayer 250
+set cLayer 15
+set factor 1.3
+//set numwaves 5
+//set healpercent 0.17
+//set pLayer {1.04248\{%healpercent%^{%numwaves%-1}}}
+
+
+####################### advEvasion Rules #######################
+
+##-->  Keep pike/sword/cav/phract in the city for evasion  <--##
+requesthelp any p:7500 p:700 g:0 g:0
+requesthelp any sw:7500 sw:700 g:0 g:0
+requesthelp any c:1000 c:70 g:0 g:0
+requesthelp any cata:1000 cata:70 g:0 g:0
+
+
+##-->  For naked workers  <--##
+advevasion wo:1,w:-1,s:-1,p:-1,sw:-1,a:-1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none c:0,cata:0
+
+##-->  For naked war  <--##
+advevasion wo:-1,w:1,s:-1,p:-1,sw:-1,a:-1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none c:0,cata:0
+
+##-->  For naked pike  <--##
+advevasion wo:-1,w:-1,s:-1,p:1,sw:-1,a:-1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:1
+
+##-->  For naked arch  <--##
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:-1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:1
+
+##-->  For non spam cav only, phract only, cav/phract combo only, or scout/cav/phract combo only waves  <--##
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:-1,a:-1,c:1001,cata:-1,b:-1,r:-1,cp:-1 none c:0,cata:0
+advevasion wo:-1,w:-1,s:1,p:-1,sw:-1,a:-1,c:1001,cata:-1,b:-1,r:-1,cp:-1 none c:0,cata:0
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:-1,a:-1,c:-1,cata:1001,b:-1,r:-1,cp:-1 none c:0,cata:0
+advevasion wo:-1,w:-1,s:1,p:-1,sw:-1,a:-1,c:-1,cata:1001,b:-1,r:-1,cp:-1 none c:0,cata:0
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:-1,a:-1,c:1,cata:1001,b:-1,r:-1,cp:-1 none c:0,cata:0
+advevasion wo:-1,w:-1,s:1,p:-1,sw:-1,a:-1,c:1,cata:1001,b:-1,r:-1,cp:-1 none c:0,cata:0
+
+##-->  For any arch/cav/phract waves with no layers  <--##
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:-1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:0,c:0,cata:0
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:-1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:0,c:0,cata:0
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:-1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:0,c:0,cata:0
+
+##-->  For any arch bow without cav/phract  <--##
+advevasion wo:-1,w:1,s:1,p:1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:1,w:1,s:-1,p:1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:-1,w:1,s:-1,p:1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:1,w:-1,s:1,p:1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:1,w:-1,s:-1,p:1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:-1,w:-1,s:1,p:1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:-1,w:-1,s:-1,p:1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:1,w:1,s:1,p:1,sw:-1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:1,w:1,s:1,p:-1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:1,w:1,s:-1,p:1,sw:-1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:1,w:1,s:-1,p:-1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:-1,w:1,s:-1,p:1,sw:-1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:-1,w:1,s:-1,p:-1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:-1,w:-1,s:-1,p:1,sw:-1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+
+##-->  For Rainbow with cav/phract  <--##
+advevasion wo:-1,w:1,s:1,p:1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:-1,p:1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:-1,p:1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:-1,s:1,p:1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:-1,s:-1,p:1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:1,p:1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:-1,p:1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:1,p:1,sw:-1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:1,p:-1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:-1,p:1,sw:-1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:-1,p:-1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:-1,p:1,sw:-1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:-1,p:-1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:-1,p:1,sw:-1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:1,p:1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:-1,p:1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:-1,p:1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:-1,s:1,p:1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:-1,s:-1,p:1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:1,p:1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:-1,p:1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:1,p:1,sw:-1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:1,p:-1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:-1,p:1,sw:-1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:-1,p:-1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:-1,p:1,sw:-1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:-1,p:-1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:-1,p:1,sw:-1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:1,p:1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:-1,p:1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:-1,p:1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:-1,s:1,p:1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:-1,s:-1,p:1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:1,p:1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:-1,p:1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:1,p:1,sw:-1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:1,p:-1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:-1,p:1,sw:-1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:-1,p:-1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:-1,p:1,sw:-1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:-1,p:-1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:-1,p:1,sw:-1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+
+##-->  For arch/warr/scout spam  <--##
+advevasion w:1,s:1,sw:-1,p:-1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:0,sw:0,c:0,cata:0
+advevasion w:1,s:1,sw:-1,p:-1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:0,sw:0,c:0,cata:0
+
+##-->  For scout/cav spam  <--##
+advevasion wo:-1,w:-1,s:1,p:-1,sw:-1,a:-1,c:1,cata:-1,b:-1,r:-1,cp:-1 none c:0,cata:0
+advevasion wo:-1,w:-1,s:1,p:-1,sw:-1,a:-1,c:-1,cata:1,b:-1,r:-1,cp:-1 none c:0,cata:0
+advevasion wo:-1,w:-1,s:1,p:-1,sw:-1,a:-1,c:1,cata:1,b:-1,r:-1,cp:-1 none c:0,cata:0
+
+##-->  For work/warr spam  <--##
+advevasion wo:1,w:1,s:-1,p:-1,sw:-1,a:-1,b:-1,r:-1,cp:-1,c:-1 none c:0,cata:0
+
+##-->  For war/pike/sword spam  <--##
+advevasion wo:-1,w:1,s:-1,p:1,sw:1,a:-1,b:-1,r:-1,cp:-1,c:-1 none c:0,cata:0
+
+##-->  For any arch/mech wave  <--##
+//advevasion a:80000,b:5000 none sw:0,c:0,cata:0,p:0
+advevasion a:90000,cp:10000 none p:{16000*%factor%},sw:0,c:10,cata:10
+advevasion a:90000,b:10000 none p:{16000*%factor%},sw:0,c:10,cata:10
+advevasion a:85000,cp:10000 none p:{16000*%factor%},sw:0,c:10,cata:10
+advevasion a:85000,b:10000 none p:{16000*%factor%},sw:0,c:10,cata:10
+advevasion a:80000,cp:10000 none p:{15900*%factor%},sw:0,c:10,cata:10
+advevasion a:80000,b:10000 none p:{15900*%factor%},sw:0,c:10,cata:10
+advevasion a:75000,cp:10000 none p:{14900*%factor%},sw:0,c:10,cata:10
+advevasion a:75000,b:10000 none p:{14900*%factor%},sw:0,c:10,cata:10
+advevasion a:70000,cp:10000 none p:{13900*%factor%},sw:0,c:10,cata:10
+advevasion a:70000,b:10000 none p:{13900*%factor%},sw:0,c:10,cata:10
+advevasion a:65000,cp:10000 none p:{13100*%factor%},sw:0,c:10,cata:10
+advevasion a:65000,b:10000 none p:{13100*%factor%},sw:0,c:10,cata:10
+advevasion a:60000,cp:10000 none p:{12200*%factor%},sw:0,c:10,cata:10
+advevasion a:60000,b:10000 none p:{12200*%factor%},sw:0,c:10,cata:10
+advevasion a:55000,cp:10000 none p:{11200*%factor%},sw:0,c:10,cata:10
+advevasion a:55000,b:10000 none p:{11200*%factor%},sw:0,c:10,cata:10
+advevasion a:50000,cp:10000 none p:{10300*%factor%},sw:0,c:10,cata:10
+advevasion a:50000,b:10000 none p:{10300*%factor%},sw:0,c:10,cata:10
+advevasion a:45000,cp:10000 none p:{9400*%factor%},sw:0,c:10,cata:10
+advevasion a:45000,b:10000 none p:{9400*%factor%},sw:0,c:10,cata:10
+advevasion a:40000,cp:10000 none p:{8400*%factor%},sw:0,c:10,cata:10
+advevasion a:40000,b:10000 none p:{8400*%factor%},sw:0,c:10,cata:10
+advevasion a:35000,cp:10000 none p:{7500*%factor%},sw:0,c:10,cata:10
+advevasion a:35000,b:10000 none p:{7500*%factor%},sw:0,c:10,cata:10
+advevasion a:30000,cp:10000 none p:{6600*%factor%},sw:0,c:10,cata:10
+advevasion a:30000,b:10000 none p:{6600*%factor%},sw:0,c:10,cata:10
+advevasion a:25000,cp:10000 none p:{5600*%factor%},sw:0,c:10,cata:10
+advevasion a:25000,b:10000 none p:{5600*%factor%},sw:0,c:10,cata:10
+advevasion a:20000,cp:10000 none p:{4700*%factor%},sw:0,c:10,cata:10
+advevasion a:20000,b:10000 none p:{4700*%factor%},sw:0,c:10,cata:10
+advevasion a:15000,cp:10000 none p:{3800*%factor%},sw:0,c:10,cata:10
+advevasion a:15000,b:10000 none p:{3800*%factor%},sw:0,c:10,cata:10
+advevasion a:10000,cp:10000 none p:{2800*%factor%},sw:0,c:10,cata:10
+advevasion a:10000,b:10000 none p:{2800*%factor%},sw:0,c:10,cata:10
+advevasion a:5000,cp:10000 none p:{1900*%factor%},sw:0,c:10,cata:10
+advevasion a:5000,b:10000 none p:{1900*%factor%},sw:0,c:10,cata:10
+advevasion a:1,cp:10000 none p:{1000*%factor%},sw:0,c:10,cata:10
+advevasion a:1,b:10000 none p:{1000*%factor%},sw:0,c:10,cata:10
+advevasion a:1,cp:1 none p:%pLayer%,sw:0,c:%cLayer%,cata:1
+advevasion a:1,b:1 none p:%pLayer%,sw:0,c:%cLayer%,cata:1
+
+##-->  For all possible remaining configs, to prevent evasion failure  <--##
+advevasion wo:1 none p:1,sw:1,c:1,cata:1
+advevasion w:1 none p:1,sw:1,c:1,cata:1
+advevasion p:1 none p:1,sw:1,c:1,cata:1
+advevasion sw:1 none p:1,sw:1,c:1,cata:1
+advevasion a:1 none p:1,sw:1,c:1,cata:1
+advevasion c:1 none p:1,sw:1,c:1,cata:1
+advevasion cata:1 none p:1,sw:1,c:1,cata:1
+advevasion t:1 none p:1,sw:1,c:1,cata:1
+advevasion b:1 none p:1,sw:1,c:1,cata:1
+advevasion r:1 none p:1,sw:1,c:1,cata:1
+advevasion cp:1 none p:1,sw:1,c:1,cata:1
+config gate:0.5
+gatepolicy 1 1 1 1 1

@@ -1,0 +1,22 @@
+{
+  "name": "Evony Packet Decoder",
+  "description": "Fast AMF3 packet decoding and protocol analysis",
+  "version": "1.0",
+  "inference": {
+    "temperature": 0.1,
+    "top_p": 0.95,
+    "top_k": 20,
+    "repeat_penalty": 1.0,
+    "max_tokens": 2048
+  },
+  "context": {
+    "system_prompt": "You are an Evony Age II packet decoder specialist.\nYou can decode and analyze:\n- Raw AMF3 binary data\n- Captured network traffic\n- Encrypted payloads\n- Command sequences\n\nWhen decoding packets:\n1. Parse AMF3 markers and data types\n2. Extract command IDs and parameters\n3. Identify the game action being performed\n4. Flag suspicious or malformed packets\n5. Reconstruct the full conversation flow\n\nOutput structured decoded data."
+  },
+  "load": {
+    "context_length": 16384,
+    "gpu_offload": "max",
+    "flash_attention": true,
+    "keep_in_memory": true
+  },
+  "recommended_model": "evony-7b-3800-rtx30801"
+}

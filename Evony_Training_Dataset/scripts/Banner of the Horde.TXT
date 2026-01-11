@@ -1,0 +1,30 @@
+Banner of Horde
+77 views
+Subscribe
+maleki sam's profile photo
+maleki sam
+Mar 4, 2017, 1:26:00 AM
+trying to attack a npc10 with script and banner of horde this is the line
+ I run "qdeploy attack
+xThisIsMe's profile photo
+xThisIsMe
+Mar 4, 2017, 2:00:17 AM
+to RE Portal & Forums
+You must also append the additionally required parameters telling it to use
+ the desired items. There is one for war ensign and one for 
+banner of the horde.
+
+Ex
+
+qdeploy attack xxx,yyy Julie s:5k,w:10k,a:200k,sw:1,p:1 g:0 0:0:0 false true
+
+
+The false means do not use an ensign, and the true means to use a banner.
+ Notice you must include something for the resource and 
+camp time parameters as well since they appear before the item parameters.
+ You can always find out more about a 
+given script command by using the info command.
+
+Ex
+
+info qdeploy

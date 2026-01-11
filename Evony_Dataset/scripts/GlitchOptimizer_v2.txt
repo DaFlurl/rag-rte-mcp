@@ -1,0 +1,209 @@
+#======================================================================================================================
+# Glitch Optimizer v2.0 - Move vs Untrain Decision Engine
+#======================================================================================================================
+# Enhanced version with intelligent MOVE vs UNTRAIN recommendations
+# 
+# KEY RULE: 
+#   < 1,000,000 troops to fix  →  UNTRAIN (quick, small loss)
+#   ≥ 1,000,000 troops to fix  →  MOVE to closest safe city (preserve troops)
+#
+# MOVING IS ALWAYS RECOMMENDED WHEN IN THE MILLIONS!
+#======================================================================================================================
+setsilence true
+
+#======================================================================================================================
+# CONFIGURATION
+#======================================================================================================================
+set AutoExecute false           // true = execute untrains automatically
+set MoveThreshold 1000000       // Above this = recommend MOVE instead of untrain
+set MaxUntrainAmount 100000000  // Safety limit for auto-untrain
+set ShowAllTroops false         // Show troops with no glitches too
+
+#======================================================================================================================
+# CONSTANTS
+#======================================================================================================================
+set INT32MAX 2147483647
+setarr troopNames "peasants militia scouter pikemen swordsmen archer lightCavalry heavyCavalry carriage ballista batteringRam catapult"
+setarr troopDisplay "Workers Warriors Scouts Pikemen Swordsmen Archers Cavalry Cataphracts Transporters Ballista BattRams Catapults"
+setarr troopAbbr "wo w s p sw a c cata t b r cp"
+setarr cityThreshold "2147483648 2147483648 1073741824 715827883 715827883 536870912 238609295 126322568 429496730 85899346 42949673 17179870"
+
+#======================================================================================================================
+# SCAN OTHER CITIES FOR SAFE DESTINATIONS
+#======================================================================================================================
+set totalCities $m_city.allCities.length$
+set myCityName $m_city.name$
+setarray safeCities []
+setarray safeCityNames []
+
+set scanIdx 0
+label scanForSafe
+if {%scanIdx%>=%totalCities%} goto doneScanSafe
+set scanCity m_city.allCities[%scanIdx%]
+set scanName $%scanCity%.name$
+if {%scanName%==%myCityName%} goto nextScanCity
+// This city could be a destination - add to list
+addtoarray safeCityNames %safeCityNames.length% %scanName%
+label nextScanCity
+set scanIdx {%scanIdx%+1}
+goto scanForSafe
+label doneScanSafe
+
+#======================================================================================================================
+# INITIALIZE OUTPUT
+#======================================================================================================================
+set cityName $m_city.name$
+set tc c.castle.troop
+set untrainCount 0
+set moveCount 0
+
+set LogMsg "<br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════════════</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFD700'><b>  GLITCH OPTIMIZER v2.0 - MOVE vs UNTRAIN</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFD700'><b>  City: %cityName%</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════════════</b></font>"
+
+if {%AutoExecute%==true} set LogMsg "%LogMsg%<br><font color='#FF0000'><b>⚠ AUTO-EXECUTE ENABLED</b></font>"
+if {%AutoExecute%==false} set LogMsg "%LogMsg%<br><font color='#00FF00'>✓ Preview mode (no changes)</font>"
+
+set LogMsg "%LogMsg%<br><font color='#888888'>Move threshold: %MoveThreshold% (above = recommend MOVE)</font>"
+
+set troopIndex 0
+
+#======================================================================================================================
+# ANALYZE EACH TROOP TYPE
+#======================================================================================================================
+label analyzeNextTroop
+if {%troopIndex%>=12} goto showSummary
+
+set tName %troopNames[{%troopIndex%}]%
+set tDisplay %troopDisplay[{%troopIndex%}]%
+set tAbbr %troopAbbr[{%troopIndex%}]%
+set tThreshold %cityThreshold[{%troopIndex%}]%
+
+set troopCount $%tc%.%tName%$
+
+// Calculate glitches
+set glitchCount 0
+set remaining %troopCount%
+label calcGlitchLoop
+if {%remaining%>=%tThreshold%} set glitchCount {%glitchCount%+1}
+if {%remaining%>=%tThreshold%} set remaining {%remaining%-%tThreshold%}
+if {%remaining%>=%tThreshold%} goto calcGlitchLoop
+
+set isOdd {{{%glitchCount%}|2}==1}
+
+// Skip if no glitches or already ODD
+if {%glitchCount%==0&&%ShowAllTroops%==false} goto nextTroopAnalyze
+if {%isOdd%==true&&%ShowAllTroops%==false} goto nextTroopAnalyze
+
+// Calculate fix amount
+set fixAmount {%remaining%+1}
+
+// Output header for this troop
+set LogMsg "%LogMsg%<br><br><font color='#CC2EFA'><b>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</b></font>"
+
+if {%glitchCount%==0} goto showNoGlitch
+if {%isOdd%==true} goto showOddGlitch
+
+// EVEN GLITCH - NEEDS FIX
+set LogMsg "%LogMsg%<br><font color='#FF6600'><b>%tDisplay%</b></font> - <font color='#FF0000'><b>EVEN (%glitchCount% glitches) - NOT GENERATING</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFFFFF'>  Count: %troopCount%</font>"
+set LogMsg "%LogMsg%<br><font color='#FFFFFF'>  Remaining: %remaining% / %tThreshold%</font>"
+set LogMsg "%LogMsg%<br><font color='#FFFFFF'>  Fix amount: %fixAmount%</font>"
+
+// DECISION: MOVE vs UNTRAIN
+if {%fixAmount%>=%MoveThreshold%} goto recommendMove
+goto recommendUntrain
+
+label recommendMove
+// ≥ 1M - RECOMMEND MOVE
+set moveCount {%moveCount%+1}
+set LogMsg "%LogMsg%<br><br><font color='#00FFFF'><b>  ► RECOMMENDATION: MOVE (preserves %fixAmount% troops)</b></font>"
+set LogMsg "%LogMsg%<br><font color='#00FF00'>    Moving is ALWAYS recommended when in the millions!</font>"
+
+// Show move commands
+set LogMsg "%LogMsg%<br><br><font color='#FFFFFF'>  MOVE COMMANDS:</font>"
+
+// To nearest city (send exact fix amount to city with 0 glitches)
+if {%safeCityNames.length%>0} set LogMsg "%LogMsg%<br><font color='#00FFFF'>    reinforce %safeCityNames[0]% none %tAbbr%:%fixAmount%</font>"
+if {%safeCityNames.length%>1} set LogMsg "%LogMsg%<br><font color='#00FFFF'>    reinforce %safeCityNames[1]% none %tAbbr%:%fixAmount%</font>"
+
+// Or send threshold multiple
+set LogMsg "%LogMsg%<br><font color='#888888'>    (or send 1x threshold: %tThreshold%)</font>"
+
+// Valley option
+set valleyThresh {%tThreshold%/2}
+set LogMsg "%LogMsg%<br><font color='#888888'>    Valley option: reinforce [x,y] none %tAbbr%:%valleyThresh%</font>"
+
+// Still show untrain as backup
+set LogMsg "%LogMsg%<br><br><font color='#FFFF00'>  UNTRAIN BACKUP (if no safe city):</font>"
+set LogMsg "%LogMsg%<br><font color='#FFFF00'>    untrain %tAbbr%:%fixAmount%</font>"
+goto nextTroopAnalyze
+
+label recommendUntrain
+// < 1M - RECOMMEND UNTRAIN
+set untrainCount {%untrainCount%+1}
+set LogMsg "%LogMsg%<br><br><font color='#00FF00'><b>  ► RECOMMENDATION: UNTRAIN (small amount: %fixAmount%)</b></font>"
+set LogMsg "%LogMsg%<br><font color='#00FFFF'>    untrain %tAbbr%:%fixAmount%</font>"
+set LogMsg "%LogMsg%<br><font color='#888888'>    Result: {%glitchCount%-1} glitches (ODD = GENERATING)</font>"
+
+// Auto-execute if enabled
+if {%AutoExecute%==false} goto skipAutoUntrain
+if {%fixAmount%>%MaxUntrainAmount%} goto skipAutoUntrain
+set LogMsg "%LogMsg%<br><font color='#FFD700'>    EXECUTING...</font>"
+untrain %tAbbr%:%fixAmount%
+set LogMsg "%LogMsg%<br><font color='#00FF00'>    ✓ DONE!</font>"
+label skipAutoUntrain
+goto nextTroopAnalyze
+
+label showNoGlitch
+set LogMsg "%LogMsg%<br><font color='#888888'><b>%tDisplay%</b></font> - <font color='#888888'>No glitches</font>"
+goto nextTroopAnalyze
+
+label showOddGlitch
+set LogMsg "%LogMsg%<br><font color='#00FF00'><b>%tDisplay%</b></font> - <font color='#00FF00'>ODD (%glitchCount% glitches) ✓ GENERATING</font>"
+goto nextTroopAnalyze
+
+label nextTroopAnalyze
+set troopIndex {%troopIndex%+1}
+goto analyzeNextTroop
+
+#======================================================================================================================
+# SUMMARY
+#======================================================================================================================
+label showSummary
+
+set LogMsg "%LogMsg%<br><br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════════════</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFD700'><b>  SUMMARY</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════════════</b></font>"
+
+set totalFixes {%untrainCount%+%moveCount%}
+set LogMsg "%LogMsg%<br><font color='#FFFFFF'>  Total fixes needed: %totalFixes%</font>"
+set LogMsg "%LogMsg%<br><font color='#00FF00'>  Recommend UNTRAIN: %untrainCount% (small amounts < 1M)</font>"
+set LogMsg "%LogMsg%<br><font color='#00FFFF'>  Recommend MOVE: %moveCount% (large amounts ≥ 1M)</font>"
+
+if {%totalFixes%==0} set LogMsg "%LogMsg%<br><br><font color='#00FF00'><b>  ✓ All troop types are generating food!</b></font>"
+
+// Available destinations
+set LogMsg "%LogMsg%<br><br><font color='#FFFFFF'>  Available destination cities:</font>"
+set destIdx 0
+label showDestCities
+if {%destIdx%>=%safeCityNames.length%} goto doneDestCities
+if {%destIdx%>=5} goto doneDestCities
+set LogMsg "%LogMsg%<br><font color='#00FFFF'>    • %safeCityNames[{%destIdx%}]%</font>"
+set destIdx {%destIdx%+1}
+goto showDestCities
+label doneDestCities
+
+// Key reminder
+set LogMsg "%LogMsg%<br><br><font color='#FFD700'><b>  ╔════════════════════════════════════════════════════════╗</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFD700'><b>  ║  MOVING IS ALWAYS RECOMMENDED WHEN IN THE MILLIONS!   ║</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFD700'><b>  ╚════════════════════════════════════════════════════════╝</b></font>"
+
+set LogMsg "%LogMsg%<br><br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════════════</b></font>"
+
+// Output
+set out "$m_city.cityManager.warLogMsg(%LogMsg%)$"
+
+setsilence false
+echo "Glitch Optimizer v2.0 complete! UNTRAIN: %untrainCount%, MOVE: %moveCount%"

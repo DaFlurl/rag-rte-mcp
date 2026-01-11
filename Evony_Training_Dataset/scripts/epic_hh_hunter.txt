@@ -1,0 +1,460 @@
+//=============================================================================
+// EPIC HH HUNTER v1.0 - Complete Historic Hero Hunting System
+// By: BorgToolkit
+// 
+// FEATURES:
+// - Phase 1: Stats-based HH ownership detection
+// - Phase 2: Map scanning for L10 NPCs across all 16 states
+// - Phase 3: Scout NPCs and parse reports for HH defenders
+// - Phase 4: Auto-capture when HH found
+// - Full tracking database and progress logging
+//
+// USAGE: include epic_hh_hunter
+//=============================================================================
+
+[epic_hh_hunter]
+setsilence true
+
+//=============================================================================
+// CONFIGURATION - Modify these settings as needed
+//=============================================================================
+
+// Scanning Settings
+set scanRadius 100              // Radius around each region center
+set scanAllStates true          // true = scan all 16 states, false = only targetStates
+setarr targetStates "Friesland" // States to scan if scanAllStates=false
+
+// Scout Settings  
+set scoutsPerBatch 5            // Scouts to send before checking reports
+set scoutWaitTime 30            // Seconds to wait for scout reports
+set rescoutIntervalHours 2      // Hours before re-scouting an NPC
+
+// HH Search Settings
+set searchForHeroesList "all"   // "all" or comma-separated HH names
+set prioritizeByStats "atk"     // atk, pol, int, lead (for sorting results)
+
+// Capture Settings
+set autoCaptureEnabled false    // Auto-send capture waves when HH found
+set captureHeroMinAtk 250       // Minimum hero attack for capture attempts
+
+// Logging Settings
+set verboseLogging true         // Show detailed progress messages
+set logToWarLog true            // Also log to war log tab
+
+//=============================================================================
+// STATE COORDINATES - All 16 regions
+//=============================================================================
+setarray stateNames ["Friesland", "Saxony", "North March", "Bohemia", "Lower Lorraine", "Franconia", "Thuringia", "Moravia", "Upper Lorraine", "Swabia", "Bavaria", "Carinthia", "Burgundy", "Lombardy", "Tuscany", "Romagna"]
+setarray stateCenters ["100,100", "300,100", "500,100", "700,100", "100,300", "300,300", "500,300", "700,300", "100,500", "300,500", "500,500", "700,500", "100,700", "300,700", "500,700", "700,700"]
+
+//=============================================================================
+// TRACKING ARRAYS - Runtime data
+//=============================================================================
+setarr scannedNPCs ""           // NPCs we've already scouted
+setarr scannedTimestamps ""     // When we scouted them
+setarr foundHHLocations ""      // Coords where HH were found
+setarr foundHHNames ""          // Names of HH found
+setarr unownedHHList ""         // HH that are not owned (from stats)
+set totalNPCsScanned 0
+set totalHHFound 0
+
+//=============================================================================
+// MAIN EXECUTION
+//=============================================================================
+label mainStart
+gosub logMessage "=========================================="
+gosub logMessage "EPIC HH HUNTER v1.0 - Starting Hunt"
+gosub logMessage "=========================================="
+
+// Phase 1: Check stats for unowned HH
+gosub logMessage "[PHASE 1] Checking Statistics for Unowned HH..."
+gosub phase1_statsCheck
+
+// Phase 2: Scan map for L10 NPCs  
+gosub logMessage "[PHASE 2] Scanning Map for Level 10 NPCs..."
+gosub phase2_mapScan
+
+// Phase 3: Scout NPCs and parse for HH
+gosub logMessage "[PHASE 3] Scouting NPCs for Historic Heroes..."
+gosub phase3_scoutParse
+
+// Phase 4: Report results
+gosub logMessage "[PHASE 4] Hunt Complete - Results Summary"
+gosub phase4_results
+
+goto exitHunter
+
+//=============================================================================
+// PHASE 1: STATS-BASED HH CHECK
+// Uses statistics page to find which HH are NOT owned by any player
+//=============================================================================
+label phase1_statsCheck
+gosub logMessage "Fetching hero statistics page..."
+
+// Load HH database
+gosub loadHHDatabase
+
+// Fetch stats and check ownership
+set statsPage 0
+set unownedCount 0
+set hhCheckIndex 0
+
+label statsCheckLoop
+if {%hhCheckIndex%>=%hhArr.length%} goto statsCheckDone
+
+// Fetch hero stats page for this HH
+set currentHHName %hhArr[{%hhCheckIndex%}]%
+set fetchResult $m_city.accountTab.statInfo.heroes.fetchPage(%currentHHName%)$
+sleep 0.5
+
+// Check if hero is owned
+iferror $%fetchResult%.userName$ goto hhNotOwned
+if {$%fetchResult%.userName$==null} goto hhNotOwned
+goto hhIsOwned
+
+label hhNotOwned
+// This HH is not owned - add to unowned list
+addtoarray unownedHHList %unownedHHList.length% %currentHHName%
+set unownedCount {%unownedCount%+1}
+if {%verboseLogging%==true} gosub logMessage "  [UNOWNED] %currentHHName%"
+goto nextHHCheck
+
+label hhIsOwned
+if {%verboseLogging%==true} gosub logMessage "  [OWNED] %currentHHName% - Owner: $%fetchResult%.userName$"
+
+label nextHHCheck
+set hhCheckIndex {%hhCheckIndex%+1}
+
+// Progress update every 50 heroes
+if {{%hhCheckIndex%|50}==0} gosub logMessage "  Progress: %hhCheckIndex%/%hhArr.length% heroes checked..."
+
+goto statsCheckLoop
+
+label statsCheckDone
+gosub logMessage "Phase 1 Complete: Found %unownedCount% unowned Historic Heroes"
+gosubreturn
+
+//=============================================================================
+// PHASE 2: MAP SCANNING
+// Scans all regions for Level 10 NPCs
+//=============================================================================
+label phase2_mapScan
+set stateIndex 0
+set totalL10NPCs 0
+setarr allL10NPCs ""
+
+label scanStateLoop
+if {%stateIndex%>=%stateNames.length%} goto mapScanDone
+
+set currentState %stateNames[{%stateIndex%}]%
+set currentCenter %stateCenters[{%stateIndex%}]%
+
+// Check if we should scan this state
+if {%scanAllStates%!=true} goto checkTargetState
+goto doScanState
+
+label checkTargetState
+getindexof stateMatch targetStates %currentState%
+if {%stateMatch%==-1} goto skipState
+
+label doScanState
+gosub logMessage "  Scanning %currentState% (center: %currentCenter%)..."
+
+// Scan the map region
+scanmap %currentCenter% %scanRadius%
+sleep 1
+
+// Get all L10 NPCs in this region
+set npcResult $c.getMapFieldList(npc,10,%scanRadius%,c.getValue(Coordinate,%currentCenter%))$
+if {%npcResult%==null} goto noNPCsInRegion
+
+setarr regionNPCs "%npcResult%"
+set regionCount %regionNPCs.length%
+
+// Add to master list
+set npcIdx 0
+label addNPCLoop
+if {%npcIdx%>=%regionNPCs.length%} goto doneAddingNPCs
+addtoarray allL10NPCs %allL10NPCs.length% %regionNPCs[{%npcIdx%}]%
+set npcIdx {%npcIdx%+1}
+goto addNPCLoop
+
+label doneAddingNPCs
+set totalL10NPCs {%totalL10NPCs%+%regionCount%}
+gosub logMessage "    Found %regionCount% L10 NPCs in %currentState%"
+goto nextState
+
+label noNPCsInRegion
+gosub logMessage "    No L10 NPCs found in %currentState%"
+goto nextState
+
+label skipState
+if {%verboseLogging%==true} gosub logMessage "    Skipping %currentState% (not in target list)"
+
+label nextState
+set stateIndex {%stateIndex%+1}
+goto scanStateLoop
+
+label mapScanDone
+gosub logMessage "Phase 2 Complete: Found %totalL10NPCs% L10 NPCs across map"
+gosubreturn
+
+//=============================================================================
+// PHASE 3: SCOUT AND PARSE
+// Scouts each L10 NPC and parses report for HH defenders
+//=============================================================================
+label phase3_scoutParse
+set scoutIndex 0
+set batchCount 0
+setarr pendingScouts ""
+
+if {%allL10NPCs.length%==0} goto noNPCsToScout
+
+label scoutLoop
+if {%scoutIndex%>=%allL10NPCs.length%} goto processRemainingScouts
+
+set npcCoord %allL10NPCs[{%scoutIndex%}]%
+
+// Check if already scouted recently
+gosub checkIfRecentlyScouted %npcCoord%
+if {%wasRecentlyScouted%==true} goto skipThisNPC
+
+// Send scout
+if {%verboseLogging%==true} gosub logMessage "  Scouting NPC at %npcCoord%..."
+scout %npcCoord% none s:1
+addtoarray pendingScouts %pendingScouts.length% %npcCoord%
+set batchCount {%batchCount%+1}
+
+// Process batch when full
+if {%batchCount%>=%scoutsPerBatch%} goto processBatch
+goto nextScout
+
+label processBatch
+gosub logMessage "  Processing scout batch (%batchCount% scouts)..."
+sleep %scoutWaitTime%
+gosub processScoutReports
+set batchCount 0
+setarr pendingScouts ""
+goto nextScout
+
+label skipThisNPC
+if {%verboseLogging%==true} gosub logMessage "  Skipping %npcCoord% (recently scouted)"
+
+label nextScout
+set scoutIndex {%scoutIndex%+1}
+set totalNPCsScanned {%totalNPCsScanned%+1}
+
+// Progress update
+if {{%scoutIndex%|25}==0} gosub logMessage "  Progress: %scoutIndex%/%allL10NPCs.length% NPCs processed..."
+
+goto scoutLoop
+
+label processRemainingScouts
+if {%pendingScouts.length%>0} goto processFinalBatch
+goto scoutParseDone
+
+label processFinalBatch
+gosub logMessage "  Processing final scout batch..."
+sleep %scoutWaitTime%
+gosub processScoutReports
+
+label scoutParseDone
+gosub logMessage "Phase 3 Complete: Scanned %totalNPCsScanned% NPCs, Found %totalHHFound% Historic Heroes"
+gosubreturn
+
+label noNPCsToScout
+gosub logMessage "No NPCs to scout!"
+gosubreturn
+
+//=============================================================================
+// SUBROUTINE: Process Scout Reports
+// Fetches recent scout reports and parses for HH
+//=============================================================================
+label processScoutReports
+set reportResult $c.af.getReportCommands().receiveReportList(0,20,3)$
+sleep 1
+
+iferror $%reportResult%.reportsArray$ gosubreturn
+
+set reportIdx 0
+label reportLoop
+iferror $%reportResult%.reportsArray[{%reportIdx%}]$ goto reportsDone
+
+// Read this report
+set reportId $%reportResult%.reportsArray[{%reportIdx%}].id$
+set readResult $c.af.getReportCommands().markAsRead(%reportId%)$
+sleep 0.5
+
+iferror $%readResult%.report$ goto nextReport
+
+// Get report content
+set reportContent $%readResult%.report.content$
+iferror %reportContent% goto nextReport
+
+// Check for successful scout
+set successCheck $c.getValue(String,%reportContent%).indexOf(isSuccess="true")$
+if {%successCheck%<0} goto nextReport
+
+// Get target coordinates from report
+iferror $%readResult%.report.targetPos$ goto nextReport
+set targetCoord $%readResult%.report.targetPos$
+
+// === CRITICAL: Check for Historic Hero in report ===
+gosub parseReportForHH %reportContent% %targetCoord%
+
+label nextReport
+set reportIdx {%reportIdx%+1}
+goto reportLoop
+
+label reportsDone
+gosubreturn
+
+//=============================================================================
+// SUBROUTINE: Parse Report for Historic Hero
+// Checks if scout report contains an HH defender
+//=============================================================================
+label parseReportForHH
+set rptContent %_1%
+set rptCoord %_2%
+
+// Method 1: Check for isHero="1" (indicates Historic Hero)
+set isHeroCheck $c.getValue(String,%rptContent%).indexOf(isHero="1")$
+if {%isHeroCheck%>0} goto foundPotentialHH
+
+// Method 2: Check for heroName field
+set heroNameCheck $c.getValue(String,%rptContent%).indexOf(heroName=")$
+if {%heroNameCheck%<0} gosubreturn
+
+// Extract hero name
+set heroStart {%heroNameCheck%+10}
+set heroEnd $c.getValue(String,%rptContent%).indexOf(",%heroStart%)$
+if {%heroEnd%<=%heroStart%} gosubreturn
+
+set extractedHeroName $c.getValue(String,%rptContent%).substring(%heroStart%,%heroEnd%)$
+
+// Check if this hero is in our HH database
+gosub checkIfHH %extractedHeroName%
+if {%isHistoricHero%!=true} gosubreturn
+
+label foundPotentialHH
+// We found a Historic Hero!
+set totalHHFound {%totalHHFound%+1}
+addtoarray foundHHLocations %foundHHLocations.length% %rptCoord%
+addtoarray foundHHNames %foundHHNames.length% %extractedHeroName%
+
+// Mark as scouted
+addtoarray scannedNPCs %scannedNPCs.length% %rptCoord%
+addtoarray scannedTimestamps %scannedTimestamps.length% $c.getRawTime()$
+
+gosub logMessage "!!! HH FOUND !!! %extractedHeroName% at %rptCoord%"
+
+// Auto-capture if enabled
+if {%autoCaptureEnabled%==true} gosub attemptCapture %rptCoord%
+
+gosubreturn
+
+//=============================================================================
+// SUBROUTINE: Check if Hero is Historic
+//=============================================================================
+label checkIfHH
+set checkName %_1%
+set isHistoricHero false
+
+set hhIdx 0
+label hhMatchLoop
+if {%hhIdx%>=%hhArr.length%} gosubreturn
+
+if {%checkName%==%hhArr[{%hhIdx%}]%} goto matchedHH
+set hhIdx {%hhIdx%+1}
+goto hhMatchLoop
+
+label matchedHH
+set isHistoricHero true
+gosubreturn
+
+//=============================================================================
+// SUBROUTINE: Check if Recently Scouted
+//=============================================================================
+label checkIfRecentlyScouted
+set checkCoord %_1%
+set wasRecentlyScouted false
+
+getindexof scoutedIdx scannedNPCs %checkCoord%
+if {%scoutedIdx%==-1} gosubreturn
+
+// Check timestamp
+set lastScoutTime %scannedTimestamps[{%scoutedIdx%}]%
+set timeDiff {$c.getRawTime()$-%lastScoutTime%}
+set hoursDiff {%timeDiff%/3600000}
+
+if {%hoursDiff%<%rescoutIntervalHours%} set wasRecentlyScouted true
+gosubreturn
+
+//=============================================================================
+// SUBROUTINE: Attempt Capture
+//=============================================================================
+label attemptCapture
+set captureCoord %_1%
+gosub logMessage "Attempting capture at %captureCoord%..."
+
+// Check if we have a suitable hero
+set bestHero $c.cm.bestAttackHero()$
+if {$%bestHero%.power$<%captureHeroMinAtk%} goto captureHeroTooWeak
+
+// Send capture wave
+set captureResult $c.af.getArmyCommands().newArmy(c.castle.id,c.getArmy(attack,c.getValue(Coordinate,%captureCoord%),$%bestHero%.name$,c.getValue(Troop,a:90000,w:5000)))$
+gosub logMessage "Capture wave sent with $%bestHero%.name$"
+gosubreturn
+
+label captureHeroTooWeak
+gosub logMessage "WARNING: Best hero attack ($%bestHero%.power$) below minimum (%captureHeroMinAtk%)"
+gosubreturn
+
+//=============================================================================
+// PHASE 4: RESULTS SUMMARY
+//=============================================================================
+label phase4_results
+gosub logMessage "=========================================="
+gosub logMessage "HUNT RESULTS SUMMARY"
+gosub logMessage "=========================================="
+gosub logMessage "Unowned HH (from stats): %unownedHHList.length%"
+gosub logMessage "L10 NPCs scanned: %totalNPCsScanned%"
+gosub logMessage "Historic Heroes found: %totalHHFound%"
+gosub logMessage "=========================================="
+
+if {%totalHHFound%>0} goto showFoundHH
+gosub logMessage "No Historic Heroes found in NPCs this scan."
+gosubreturn
+
+label showFoundHH
+gosub logMessage "FOUND HH LOCATIONS:"
+set showIdx 0
+label showFoundLoop
+if {%showIdx%>=%foundHHLocations.length%} gosubreturn
+gosub logMessage "  - %foundHHNames[{%showIdx%}]% at %foundHHLocations[{%showIdx%}]%"
+set showIdx {%showIdx%+1}
+goto showFoundLoop
+
+//=============================================================================
+// SUBROUTINE: Log Message
+//=============================================================================
+label logMessage
+set logMsg %_1%
+echo %logMsg%
+if {%logToWarLog%==true} set junk $c.cm.warLogMsg(%logMsg%)$
+gosubreturn
+
+//=============================================================================
+// LOAD HH DATABASE
+// Complete list of 692 Historic Heroes
+//=============================================================================
+label loadHHDatabase
+include hh_database
+gosubreturn
+
+//=============================================================================
+// EXIT
+//=============================================================================
+label exitHunter
+gosub logMessage "Epic HH Hunter complete."
+setsilence false

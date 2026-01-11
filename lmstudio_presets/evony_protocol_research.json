@@ -1,0 +1,22 @@
+{
+  "name": "Evony Protocol Research",
+  "description": "In-depth protocol reverse engineering",
+  "version": "1.0",
+  "inference": {
+    "temperature": 0.4,
+    "top_p": 0.9,
+    "top_k": 50,
+    "repeat_penalty": 1.05,
+    "max_tokens": 4096
+  },
+  "context": {
+    "system_prompt": "You are an Evony Age II protocol reverse engineer.\nYour expertise covers:\n- AMF3 binary protocol encoding/decoding\n- 301+ documented protocol commands\n- Packet capture analysis from PCAP files\n- Client-server communication patterns\n\nWhen analyzing protocols:\n1. Decode AMF3 payloads to human-readable format\n2. Identify command IDs and parameter structures\n3. Map packet flows to game actions\n4. Document undocumented or obfuscated commands\n5. Explain encryption and obfuscation layers\n\nProvide byte-level analysis when relevant."
+  },
+  "load": {
+    "context_length": 32768,
+    "gpu_offload": "max",
+    "flash_attention": true,
+    "keep_in_memory": true
+  },
+  "recommended_model": "evony-qwen3-8b-phase2pf16"
+}

@@ -1,0 +1,108 @@
+ Base Class Descriptor at (
+ Class Hierarchy Descriptor'
+ Complete Object Locator'
+ Type Descriptor'
+!This program cannot be run in DOS mode.
+<requestedExecutionLevel level="asInvoker" uiAccess="false"/>
+BeginPath
+CoGetInstanceFromFile
+CoSetProxyBlanket
+CopyFileExW
+CopyFileW
+CreateAcceleratorTableW
+CreateDirectoryW
+CreateFile2
+CreateFileW
+DeleteFileW
+DestroyAcceleratorTable
+DragQueryFileW
+EndPath
+FileTimeToLocalFileTime
+FileTimeToSystemTime
+FindFirstFileW
+FindNextFileW
+FlushFileBuffers
+FtpGetFileSize
+FtpOpenFileW
+GetCurrentDirectoryW
+GetFileAttributesW
+GetFileInformationByHandleExW
+GetFileSize
+GetFileType
+GetFileVersionInfoSizeW
+GetFileVersionInfoW
+GetFullPathNameW
+GetLongPathNameW
+GetModuleFileNameW
+GetMonitorInfoW
+GetOpenFileNameW
+GetPrivateProfileSectionNamesW
+GetPrivateProfileSectionW
+GetPrivateProfileStringW
+GetRunningObjectTable
+GetSaveFileNameW
+GetSecurityDescriptorDacl
+GetShortPathNameW
+GetSystemDirectoryW
+GetSystemTimeAsFileTime
+GetSystemWow64DirectoryW
+GetTempFileNameW
+GetTempPathW
+GetWindowsDirectoryW
+IcmpCreateFile
+InitializeSecurityDescriptor
+InternetReadFile
+LoadUserProfileW
+LocalFileTimeToFileTime
+MonitorFromPoint
+MonitorFromRect
+MoveFileW
+OleSetMenuDescriptor
+ReadFile
+RemoveDirectoryW
+SHFileOperationW
+SHGetFolderPathW
+SHGetPathFromIDListW
+SetCurrentDirectoryW
+SetDefaultDllDirectories
+SetEndOfFile
+SetFileAttributesW
+SetFileInformationByHandleW
+SetFilePointerEx
+SetFileTime
+SetSecurityDescriptorDacl
+SetViewportOrgEx
+ShellExecuteExW
+ShellExecuteW
+StrokeAndFillPath
+StrokePath
+SystemTimeToFileTime
+TranslateAcceleratorW
+UnloadUserProfile
+WriteFile
+WritePrivateProfileSectionW
+WritePrivateProfileStringW
+__vectorcall
+`copy constructor closure'
+`default constructor closure'
+`dynamic atexit destructor for '
+`eh vector constructor iterator'
+`eh vector copy constructor iterator'
+`eh vector destructor iterator'
+`eh vector vbase constructor iterator'
+`eh vector vbase copy constructor iterator'
+`local vftable constructor closure'
+`managed vector constructor iterator'
+`managed vector copy constructor iterator'
+`managed vector destructor iterator'
+`scalar deleting destructor'
+`vbase destructor'
+`vector constructor iterator'
+`vector copy constructor iterator'
+`vector deleting destructor'
+`vector destructor iterator'
+`vector vbase constructor iterator'
+`vector vbase copy constructor iterator'
+name is too long in (*MARK), (*PRUNE), (*SKIP), or (*THEN)
+operator
+syntax error in subpattern name (missing terminator)

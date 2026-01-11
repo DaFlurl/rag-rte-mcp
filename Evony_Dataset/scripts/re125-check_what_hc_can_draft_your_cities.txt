@@ -1,0 +1,50 @@
+#Needs RoboEvony v1.25 or later
+
+setsilence true
+setarr friendlyAlliances "01 0121 024 0241 214 250 251 252 253 254 255 256 258 27 28 2828 424 4578 45781 45782 45783 4848 4949 5050 666_271 APEX Chaos CURLY Dogma dread EFU Eternal Evilness Fate Guvs HART ISISRPUS kilAndre KISS_286 Nemal Oblivion Rufus RWB sluefoot SubEFU Sword S370HSSV Unbroken WAW WHATWAS"
+set i 0
+label checkDraftingHC
+delete  HC12holder
+delete  HC14holder
+delete  HC16holder
+set n12x {{$c.ac[{%i%}].castle.fieldId$|800\18}*18+9}
+set n12y {{$c.ac[{%i%}].castle.fieldId$\800\18}*18+9}
+set n14x {{$c.ac[{%i%}].castle.fieldId$|800\66}*66+33}
+set n14y {{$c.ac[{%i%}].castle.fieldId$\800\66}*66+33}
+set n16x {{$c.ac[{%i%}].castle.fieldId$|800\200}*200+100}
+set n16y {{$c.ac[{%i%}].castle.fieldId$\800\200}*200+100}
+scanmap %n12x%,%n12y% 1
+scanmap %n14x%,%n14y% 1
+scanmap %n16x%,%n16y% 1
+if {%n12x%>799||%n12y%>799||$c.ac[{%i%}].castle.powerlevel$<3} set HC12holder "null HC12 can draft this city"
+if {%n14x%>799||%n14y%>799||{{{$c.ac[{%i%}].castle.fieldId$|800\66-1}|3}==0&&{{$c.ac[{%i%}].castle.fieldId$\800\66-1}|3}==0}||$c.ac[{%i%}].castle.powerlevel$<2} set HC14holder "null HC14 can draft this city"
+iferror %HC12holder% set HC12holder "$m_city.getMapDetail(m_city.getValue(Coordinate,%n12x%,%n12y%)).userName$&#40;$m_city.getMapDetail(m_city.getValue(Coordinate,%n12x%,%n12y%)).allianceName$&#41;"
+iferror %HC14holder% set HC14holder "$m_city.getMapDetail(m_city.getValue(Coordinate,%n14x%,%n14y%)).userName$&#40;$m_city.getMapDetail(m_city.getValue(Coordinate,%n14x%,%n14y%)).allianceName$&#41;"
+iferror %HC16holder% set HC16holder "$m_city.getMapDetail(m_city.getValue(Coordinate,%n16x%,%n16y%)).userName$&#40;$m_city.getMapDetail(m_city.getValue(Coordinate,%n16x%,%n16y%)).allianceName$&#41;"
+label colors
+getindexof enemy12 friendlyAlliances $m_city.getMapDetail(m_city.getValue(Coordinate,%n12x%,%n12y%)).allianceName$
+set c12 0404B4
+if {%enemy12%<0} set c12 FF0000
+if {$m_city.getMapDetail(m_city.getValue(Coordinate,%n12x%,%n12y%)).userName$==null} set c12 000000
+if {$m_city.getMapDetail(m_city.getValue(Coordinate,%n12x%,%n12y%)).userName$!=null&&$m_city.getMapDetail(m_city.getValue(Coordinate,%n12x%,%n12y%)).allianceName$==null} set c12 BF00FF
+if {$m_city.getMapDetail(m_city.getValue(Coordinate,%n12x%,%n12y%)).allianceName$==$c.cm.player.playerInfo.alliance$} set c12 0B610B
+getindexof enemy14 friendlyAlliances $m_city.getMapDetail(m_city.getValue(Coordinate,%n14x%,%n14y%)).allianceName$
+set c14 0404B4
+if {%enemy14%<0} set c14 FF0000
+if {$m_city.getMapDetail(m_city.getValue(Coordinate,%n14x%,%n14y%)).userName$==null} set c14 000000
+if {$m_city.getMapDetail(m_city.getValue(Coordinate,%n14x%,%n14y%)).userName$!=null&&$m_city.getMapDetail(m_city.getValue(Coordinate,%n14x%,%n14y%)).allianceName$==null} set c14 BF00FF
+if {$m_city.getMapDetail(m_city.getValue(Coordinate,%n14x%,%n14y%)).allianceName$==$c.cm.player.playerInfo.alliance$} set c14 0B610B
+getindexof enemy16 friendlyAlliances $m_city.getMapDetail(m_city.getValue(Coordinate,%n16x%,%n16y%)).allianceName$
+set c16 0404B4
+if {%enemy16%<0} set c16 FF0000
+if {$m_city.getMapDetail(m_city.getValue(Coordinate,%n16x%,%n16y%)).userName$==null} set c16 000000
+if {$m_city.getMapDetail(m_city.getValue(Coordinate,%n16x%,%n16y%)).userName$!=null&&$m_city.getMapDetail(m_city.getValue(Coordinate,%n16x%,%n16y%)).allianceName$==null} set c16 BF00FF
+if {$m_city.getMapDetail(m_city.getValue(Coordinate,%n16x%,%n16y%)).allianceName$==$c.cm.player.playerInfo.alliance$} set c16 0B610B
+set info[{%i%}] "<br><font color='#0404B4'>          <u>Your city <b>$c.ac[{%i%}].castle.name$</b> can be drafted from&#58;</u></font><br><font color='#%c12%'>             HC12&#40;%n12x%&#44;%n12y%&#41; $m_city.getMapDetail(m_city.getValue(Coordinate,%n12x%,%n12y%)).name$ by %HC12holder%</font><br><font color='#%c14%'>             HC14&#40;%n14x%&#44;%n14y%&#41; $m_city.getMapDetail(m_city.getValue(Coordinate,%n14x%,%n14y%)).name$ by %HC14holder%</font><br><font color='#%c16%'>             HC16&#40;%n16x%&#44;%n16y%&#41; $m_city.getMapDetail(m_city.getValue(Coordinate,%n16x%,%n16y%)).name$ by %HC16holder%</font>"
+set i {%i%+1}
+if {%i%<$c.ac.length$} goto checkDraftingHC
+set i 0
+label print
+set l $c.cm.logMsg(%info[{%i%}]%)$
+set i {%i%+1}
+if {%i%<%info.length%} goto print

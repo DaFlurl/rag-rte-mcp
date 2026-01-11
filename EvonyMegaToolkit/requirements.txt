@@ -1,0 +1,25 @@
+# Evony Mega Toolkit Requirements
+
+# Core
+schedule>=1.2.0          # Task scheduling
+
+# GUI (main interface)
+tkinter                  # Built-in (included with Python)
+customtkinter>=5.2.0     # Modern tkinter (optional)
+ttkthemes>=3.2.2         # GUI themes
+
+# Protocol
+pyamf>=0.8.0             # AMF protocol
+pysocks>=1.7.1           # SOCKS proxy
+
+# Network
+requests>=2.31.0         # HTTP client
+
+# Data
+pandas>=2.1.0            # Data analysis
+
+# CLI enhancements
+colorama>=0.4.6          # Colored output
+
+# Optional AI
+# openai>=1.0.0          # AI script generation (optional)

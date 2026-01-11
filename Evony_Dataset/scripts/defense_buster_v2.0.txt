@@ -1,0 +1,216 @@
+// ============================================
+// DEFENSE BUSTER v2.0
+// Break through fortified targets
+// For AE2/RoboEvony - Heavy Assault
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+
+// ==========================================
+// CONFIGURATION - EDIT THESE
+// ==========================================
+
+// === TARGET ===
+set targetX 0
+set targetY 0
+set targetType "fortified"
+
+// === ASSAULT PHASES ===
+set enablePhase1_Scout 1
+set enablePhase2_Fortification 1
+set enablePhase3_Troops 1
+set enablePhase4_Cleanup 1
+
+// === PHASE 1: SCOUTING ===
+set scoutWaves 3
+set scoutDelay 5000
+
+// === PHASE 2: FORTIFICATION CLEAR ===
+set useCatapults 1
+set catapultCount 5000
+set fortWaves 5
+set fortDelay 3000
+
+// === PHASE 3: TROOP ASSAULT ===
+set archerWaves 20
+set archerCount 100000
+set assaultDelay 2000
+
+// === PHASE 4: CLEANUP ===
+set cleanupWaves 5
+set cleanupArchers 50000
+
+// === FEATURES ===
+set enableTroopCheck 1
+set minCatapults 10000
+set minArchers 500000
+set enableCooldown 1
+set cooldownMinutes 10
+set enableLogging 1
+
+// === RUN MODE ===
+set runMode "once"
+
+// ==========================================
+// DO NOT EDIT BELOW
+// ==========================================
+
+set totalWaves 0
+set phaseComplete 0
+
+echo ============================================
+echo DEFENSE BUSTER v2.0
+echo Target: %targetX%,%targetY%
+echo Type: %targetType%
+echo ============================================
+
+// Validate
+if targetX = 0 then if targetY = 0 then goto noTarget
+
+// Check resources
+if enableTroopCheck = 1 then gosub checkResources
+if resourcesOK = 0 then goto insufficientResources
+
+// Execute phases
+if enablePhase1_Scout = 1 then gosub phase1
+if enablePhase2_Fortification = 1 then gosub phase2
+if enablePhase3_Troops = 1 then gosub phase3
+if enablePhase4_Cleanup = 1 then gosub phase4
+
+goto complete
+
+// ==========================================
+// PHASE 1: RECONNAISSANCE
+// ==========================================
+label phase1
+echo ========================================
+echo [PHASE 1] RECONNAISSANCE
+echo ========================================
+
+set i 0
+label scoutLoop
+
+echo [SCOUT %i%] Scouting target...
+getspamhero
+scout %targetX% %targetY% spamhero 1
+sleep %scoutDelay%
+
+set i i + 1
+if i < scoutWaves then goto scoutLoop
+
+echo [PHASE 1] Recon complete - %scoutWaves% scouts sent
+sleep 10000
+return
+
+// ==========================================
+// PHASE 2: FORTIFICATION DESTRUCTION
+// ==========================================
+label phase2
+echo ========================================
+echo [PHASE 2] FORTIFICATION DESTRUCTION
+echo ========================================
+
+if useCatapults = 0 then return
+
+set i 0
+label fortLoop
+
+echo [SIEGE %i%] Sending %catapultCount% catapults...
+getspamhero
+attack %targetX% %targetY% spamhero p%catapultCount%
+set totalWaves totalWaves + 1
+sleep %fortDelay%
+
+set i i + 1
+if i < fortWaves then goto fortLoop
+
+echo [PHASE 2] Fort destruction complete - %fortWaves% siege waves
+echo [PHASE 2] Waiting for impact...
+sleep 30000
+return
+
+// ==========================================
+// PHASE 3: MAIN ASSAULT
+// ==========================================
+label phase3
+echo ========================================
+echo [PHASE 3] MAIN ASSAULT
+echo ========================================
+
+set i 0
+label assaultLoop
+
+echo [ASSAULT %i%] Sending %archerCount% archers...
+getspamhero
+attack %targetX% %targetY% spamhero a%archerCount%
+set totalWaves totalWaves + 1
+sleep %assaultDelay%
+
+set i i + 1
+if i < archerWaves then goto assaultLoop
+
+echo [PHASE 3] Main assault complete - %archerWaves% waves
+return
+
+// ==========================================
+// PHASE 4: CLEANUP
+// ==========================================
+label phase4
+echo ========================================
+echo [PHASE 4] CLEANUP OPERATIONS
+echo ========================================
+
+set i 0
+label cleanupLoop
+
+echo [CLEANUP %i%] Mopping up...
+getspamhero
+attack %targetX% %targetY% spamhero a%cleanupArchers%
+set totalWaves totalWaves + 1
+sleep 3000
+
+set i i + 1
+if i < cleanupWaves then goto cleanupLoop
+
+echo [PHASE 4] Cleanup complete
+return
+
+// ==========================================
+// CHECK RESOURCES
+// ==========================================
+label checkResources
+echo [CHECK] Verifying assault resources...
+
+set resourcesOK 1
+gettroops
+
+if useCatapults = 1 then if catapults < minCatapults then set resourcesOK 0
+if archers < minArchers then set resourcesOK 0
+
+if resourcesOK = 1 then echo [CHECK] Resources: READY
+if resourcesOK = 0 then echo [CHECK] Resources: INSUFFICIENT
+
+return
+
+// ==========================================
+// ERRORS
+// ==========================================
+label noTarget
+echo [ERROR] No target set!
+stop
+
+label insufficientResources
+echo [ERROR] Not enough troops for assault
+echo Need: %minCatapults% catapults, %minArchers% archers
+stop
+
+// ==========================================
+// COMPLETE
+// ==========================================
+label complete
+echo ============================================
+echo DEFENSE BUSTER COMPLETE
+echo Total Waves: %totalWaves%
+echo Target: %targetX%,%targetY%
+echo ============================================
+stop

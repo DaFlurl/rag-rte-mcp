@@ -1,0 +1,59 @@
+setsilence true //
+set cqi 0
+set hero GerarddeRidefort //
+set send1 w:100m,s:100m,p:2500000,sw:2500000,c:1000000,cata:85500,a:100m,cp:2550000,b:10m,r:2550000
+set send2 w:40m,a:15m
+
+set r $c.af.getCommissionQuestCommands().getAllCommissionQuest()$
+sleep 1
+iferror $%r%.ok$ repeat 0
+set CQC $%r%.commissionQuestBeanArray.length$
+echo $%r%.toDebugString()$
+set scantgt $%r%.commissionQuestBeanArray[%cqi%].position$
+scandetail %scantgt% 0
+set mapVal $c.getValue(Coordinate,%scantgt%)$
+set mapObj c.getMapDetail(%mapVal%)
+echo $%mapObj%.toDebugString()$
+set cqid $%r%.commissionQuestBeanArray[%cqi%].id$
+set cqt $c.castleId$
+set tgt %scantgt%
+
+waithero %hero%
+changeherogear %hero% atk
+set afacq $c.af.getCommissionQuestCommands().acceptCommissionQuest(%cqt%,%cqid%,c.getArmy(10,m_city.getValue(Coordinate,%tgt%),%hero%,c.getValue(Troop,%send1%)))$
+sleep 1
+set adacpa $c.af.getCommissionQuestCommands().addCommissionQuestArmy(%cqt%,%cqid%,c.getArmy(10,m_city.getValue(Coordinate,%tgt%),none,c.getValue(Troop,%send2%)))$
+sleep 1
+if {$%afacq%.msg$==null} echo $%afacq%.errorMsg$
+if {$%adacpa%.msg$==null} echo $%adacpa%.errorMsg$
+if {$%afacq%.msg$!=null} echo $%afacq%.msg$
+if {$%adacpa%.msg$!=null} echo $%adacpa%.msg$
+
+set i 0
+set MPID $c.player.playerInfo.id$
+
+iferror %test% set test false
+set r $c.af.getCommissionQuestCommands().getAllCommissionQuest()$
+sleep 1
+iferror $%r%.ok$ repeat 0
+if {%test%!=false} echo $%r%.toDebugString()$
+set CQC $%r%.commissionQuestBeanArray.length$
+set id $%r%.commissionQuestBeanArray[{%i%}].id$
+label rankloop
+set r2 $c.af.getCommissionQuestCommands().getCommissionQuestArmyRanking(%id%)$
+sleep 1
+iferror $%r2%.ok$ repeat 0
+set pid $%r2%.armyRankBeanArray[{%i%}].playerId$
+if {%pid%==%MPID%} set MyRank "$%r2%.armyRankBeanArray[{%i%}].rank$"
+if {%pid%==%MPID%} goto endrankcheck
+set i {%i%+1}
+if {%test%!=false} echo $%r2%.toDebugString()$
+echo "%i% of $%r2%.armyRankBeanArray.length$"
+if {%i%<$%r2%.armyRankBeanArray.length$} goto rankloop
+set r3 $c.af.getCommissionQuestCommands().getCommissionQuestArmyInfo(%id%,%pid%)$
+sleep 1
+iferror $%r3%.ok$ repeat 0
+if {%test%!=false} echo $%r3%.toDebugString()$
+label endrankcheck
+echo "I am Ranked %MyRank% of $%r2%.armyRankBeanArray.length$"
+setsilence true

@@ -1,0 +1,254 @@
+// ============================================
+// KEEP TROOP FEEDER v2.0
+// Continuous troop/resource feeding to target
+// Uses REAL keeptroop/keepresource commands
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+// REAL COMMANDS FROM CityState.as:
+// keeptroop coords troop minCount
+// keepresource coords resource minCount
+// dumptroop coords cond tr
+// dumpresource coords cond res
+// ============================================
+
+// ==========================================
+// CONFIGURATION - EDIT THESE
+// ==========================================
+
+// === TARGET ===
+set targetX 0
+set targetY 0
+set targetCoords "0,0"
+
+// === TROOP FEEDING ===
+set enableTroopFeed 1
+set feedTroopType "archer"
+set feedTroopCode "a"
+set troopsToKeep 1000000
+set minTroopsBeforeSend 100000
+
+// === RESOURCE FEEDING ===
+set enableResourceFeed 1
+set feedFood 1
+set foodToKeep 10000000
+set feedGold 0
+set goldToKeep 1000000
+set feedWood 0
+set woodToKeep 1000000
+set feedStone 0
+set stoneToKeep 1000000
+set feedIron 0
+set ironToKeep 1000000
+
+// === DUMP MODE ===
+// Dumps ALL excess to target
+set enableDumpMode 0
+set dumpWhenOver 50000000
+
+// === TIMING ===
+set checkInterval 60000
+set feedDelay 5000
+
+// === FEATURES ===
+set enableContinuous 1
+set enableLogging 1
+set enableSafetyReserve 1
+set reserveTroops 50000
+set reserveResources 1000000
+
+// === RUN MODE ===
+set runMode "continuous"
+
+// ==========================================
+// DO NOT EDIT BELOW
+// ==========================================
+
+set feedCycles 0
+set troopsSent 0
+set resourcesSent 0
+
+echo ============================================
+echo KEEP TROOP FEEDER v2.0
+echo Target: %targetX%,%targetY%
+echo Troop Feed: %enableTroopFeed% | Resource Feed: %enableResourceFeed%
+echo ============================================
+
+// Build coords string
+set targetCoords "%targetX%,%targetY%"
+
+// Validate
+if targetX = 0 then if targetY = 0 then goto noTarget
+
+// Setup feeding using real commands
+if enableTroopFeed = 1 then gosub setupTroopFeed
+if enableResourceFeed = 1 then gosub setupResourceFeed
+if enableDumpMode = 1 then gosub setupDumpMode
+
+// Main loop
+if runMode = "once" then goto feedOnce
+if runMode = "continuous" then goto feedContinuous
+goto feedOnce
+
+// ==========================================
+// SETUP TROOP FEEDING (Real Command)
+// ==========================================
+label setupTroopFeed
+echo [SETUP] Configuring keeptroop...
+
+// keeptroop coords troop minCount
+// This tells AE2 to automatically send troops
+// whenever city has more than minCount
+keeptroop %targetCoords% %feedTroopCode%:%troopsToKeep% %minTroopsBeforeSend%
+
+echo [SETUP] Keeptroop configured for %feedTroopType%
+return
+
+// ==========================================
+// SETUP RESOURCE FEEDING (Real Command)
+// ==========================================
+label setupResourceFeed
+echo [SETUP] Configuring keepresource...
+
+// keepresource coords resource minCount
+if feedFood = 1 then keepresource %targetCoords% food %foodToKeep%
+if feedGold = 1 then keepresource %targetCoords% gold %goldToKeep%
+if feedWood = 1 then keepresource %targetCoords% wood %woodToKeep%
+if feedStone = 1 then keepresource %targetCoords% stone %stoneToKeep%
+if feedIron = 1 then keepresource %targetCoords% iron %ironToKeep%
+
+echo [SETUP] Keepresource configured
+return
+
+// ==========================================
+// SETUP DUMP MODE (Real Command)
+// ==========================================
+label setupDumpMode
+echo [SETUP] Configuring dump mode...
+
+// dumptroop coords cond tr
+// dumpresource coords cond res
+// Dumps when condition met
+set dumpCond "food:%dumpWhenOver%"
+set dumpTroops "%feedTroopCode%:all"
+
+dumptroop %targetCoords% %dumpCond% %dumpTroops%
+
+echo [SETUP] Dump mode configured
+return
+
+// ==========================================
+// SINGLE FEED CYCLE
+// ==========================================
+label feedOnce
+echo [FEED] Single feed cycle...
+
+gosub checkAndFeed
+goto complete
+
+// ==========================================
+// CONTINUOUS FEEDING
+// ==========================================
+label feedContinuous
+echo [FEED] Continuous feeding mode...
+
+label feedLoop
+
+gosub checkAndFeed
+
+set feedCycles feedCycles + 1
+echo [FEED] Cycle %feedCycles% complete
+
+sleep %checkInterval%
+goto feedLoop
+
+// ==========================================
+// CHECK AND FEED
+// ==========================================
+label checkAndFeed
+echo [CHECK] Checking resources and troops...
+
+// Manual feeding backup (in case keeptroop not working)
+if enableTroopFeed = 1 then gosub manualTroopFeed
+if enableResourceFeed = 1 then gosub manualResourceFeed
+
+return
+
+// ==========================================
+// MANUAL TROOP FEED
+// ==========================================
+label manualTroopFeed
+gettroops
+
+// Check if we have excess troops
+set excessTroops archers - reserveTroops
+if excessTroops < minTroopsBeforeSend then return
+
+// Send excess troops
+echo [TROOP] Sending %excessTroops% %feedTroopType%...
+getspamhero power
+reinforce %targetX% %targetY% spamhero %feedTroopCode%%excessTroops%
+
+set troopsSent troopsSent + excessTroops
+sleep %feedDelay%
+return
+
+// ==========================================
+// MANUAL RESOURCE FEED
+// ==========================================
+label manualResourceFeed
+getresources
+
+// Check and send excess resources
+if feedFood = 1 then gosub sendExcessFood
+if feedGold = 1 then gosub sendExcessGold
+
+return
+
+label sendExcessFood
+set excessFood food - reserveResources
+if excessFood < 1000000 then return
+
+echo [RESOURCE] Sending %excessFood% food...
+// transport command would go here
+set resourcesSent resourcesSent + excessFood
+return
+
+label sendExcessGold
+set excessGold gold - reserveResources
+if excessGold < 100000 then return
+
+echo [RESOURCE] Sending %excessGold% gold...
+set resourcesSent resourcesSent + excessGold
+return
+
+// ==========================================
+// STOP FEEDING
+// ==========================================
+label stopFeeding
+echo [STOP] Stopping all feeding...
+
+endkeeptroop
+endkeepresource
+
+echo [STOP] Feeding stopped
+return
+
+// ==========================================
+// ERROR HANDLERS
+// ==========================================
+label noTarget
+echo [ERROR] Set target coordinates!
+stop
+
+// ==========================================
+// COMPLETION
+// ==========================================
+label complete
+echo ============================================
+echo KEEP TROOP FEEDER COMPLETE
+echo Feed Cycles: %feedCycles%
+echo Troops Sent: %troopsSent%
+echo Resources Sent: %resourcesSent%
+echo ============================================
+stop

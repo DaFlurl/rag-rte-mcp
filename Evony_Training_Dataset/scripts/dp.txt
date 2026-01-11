@@ -1,0 +1,49 @@
+// [dP]
+setsilence true
+set UD 2147483647
+setarr troopName "peasants militia scouter pikemen swordsmen archer carriage lightCavalry heavyCavalry ballista batteringRam catapult"
+setarr exp "225 305 695 900 1350 1350 2975 2850 8750 10000 13750 29000"
+setarr name "Workers Warriors Scouts Pikemen Swordsmen Archers Transporters Cavalry Cataphracts Ballistae BatteringRam Catapults"
+set draftableValue.length 0
+set draftableTroop.length 0
+set draftableListValue.length 0
+set draftableListTroop.length 0
+set t 0
+label tLoop
+if {{{$c.cm.troop.%troopName[{%t%}]%$*%exp[{%t%}]%\%UD%}|2}==0} addtoarray draftableValue %draftableValue.length% {{$c.cm.troop.%troopName[{%t%}]%$*%exp[{%t%}]%/%UD%-{$c.cm.troop.%troopName[{%t%}]%$*%exp[{%t%}]%\%UD%}}*100000\1/1000}
+if {{{$c.cm.troop.%troopName[{%t%}]%$*%exp[{%t%}]%\%UD%}|2}==0} addtoarray draftableTroop %draftableTroop.length% %name[{%t%}]%
+set t {%t%+1}
+if {%t%<%troopName.length%} goto tLoop
+if {draftableValue.length==0} set string "You have no troops that can be drafted in $c.castle.name$"
+if {draftableValue.length==0} goto result
+join draftValues draftableValue ","
+set maxDraft $c.math.max(%draftValues%)$
+getindexof beDrafted draftableValue %maxDraft%
+set troopDrafted %draftableTroop[{%beDrafted%}]%
+set string "<br><br>    <font color='#AA0000'><b><u>%draftableTroop[{%beDrafted%}]% are curently the highest draftable troops in $c.castle.name$ at %draftableValue[{%beDrafted%}]%&#37;</u></b></font><br>"
+if {%draftableTroop.length%==1} goto result
+label sortedList
+addtoarray draftableListValue %draftableListValue.length% %maxDraft%
+addtoarray draftableListTroop %draftableListTroop.length% %troopDrafted%
+delete draftableTroop[{%beDrafted%}]
+delete draftableValue[{%beDrafted%}]
+delete draftValues
+label maxLoop
+join draftValues draftableValue ","
+set max $c.math.max(%draftValues%)$
+getindexof next draftableValue %max%
+addtoarray draftableListValue %draftableListValue.length% %draftableValue[{%next%}]%
+addtoarray draftableListTroop %draftableListTroop.length% %draftableTroop[{%next%}]%
+delete draftableTroop[{%next%}]
+delete draftableValue[{%next%}]
+delete draftValues
+if {%draftableValue.length%>0} goto maxLoop
+set string "%string%<br>    <i><u>the full list of draftable troops:</u></i><br>"
+set v 0
+label vLoop
+set string "%string%    %draftableListTroop[{%v%}]%: %draftableListValue[{%v%}]%&#37;<br>"
+set v {%v%+1}
+if {%v%<%draftableListTroop.length%} goto vLoop
+set string "%string% <br><font color='#0000FF'>    calculated by &#169;&#60;&#126;Yozhik v Tumane&#126;&#62;&#8482;</font><br>"
+label result
+set log $c.cm.logMsg(c.getVar(string),#0088FF)$

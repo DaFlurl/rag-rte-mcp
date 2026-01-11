@@ -1,0 +1,267 @@
+// ============================================
+// MASS ACCOUNT COORDINATOR v2.0
+// Coordinate 10-100+ accounts for attacks
+// For AE2/RoboEvony - Borg's Army
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+// PURPOSE: Coordinate massive account fleets
+// Borg has 100+ accounts with 10B-100B troops
+// ============================================
+
+// ==========================================
+// CONFIGURATION - EDIT THESE
+// ==========================================
+
+// === TARGET ===
+set targetX 0
+set targetY 0
+set targetName "MassTarget"
+
+// === ACCOUNT FLEET SETTINGS ===
+set totalAccounts 100
+set citiesPerAccount 10
+set wavesPerCity 5
+set troopsPerWave 100000
+
+// === ACCOUNT TIERS (by troop count) ===
+// Tier 1: 100B+ accounts (heavy hitters)
+set tier1Accounts 5
+set tier1Waves 20
+set tier1Troops 500000
+
+// Tier 2: 50B-100B accounts
+set tier2Accounts 10
+set tier2Waves 15
+set tier2Troops 300000
+
+// Tier 3: 10B-50B accounts
+set tier3Accounts 20
+set tier3Waves 10
+set tier3Troops 100000
+
+// Tier 4: <10B accounts (support)
+set tier4Accounts 65
+set tier4Waves 5
+set tier4Troops 50000
+
+// === COORDINATION MODE ===
+set coordMode "staggered"
+set staggerDelay 1000
+set syncArrival 0
+
+// === TROOP TYPE ===
+set primaryTroop "archer"
+set troopCode "a"
+
+// === TIMING ===
+set accountDelay 500
+set cityDelay 200
+set waveDelay 100
+
+// === FEATURES ===
+set enableTierSystem 1
+set enableLoadBalancing 1
+set enableHeroRotation 1
+set enableLogging 1
+set enableStats 1
+
+// === RUN MODE ===
+set runMode "once"
+
+// ==========================================
+// DO NOT EDIT BELOW
+// ==========================================
+
+set totalWavesSent 0
+set accountsProcessed 0
+set citiesProcessed 0
+
+echo ============================================
+echo MASS ACCOUNT COORDINATOR v2.0
+echo Target: %targetX%,%targetY%
+echo Accounts: %totalAccounts%
+echo Total Potential Waves: %totalAccounts% x %citiesPerAccount% x %wavesPerCity%
+echo ============================================
+
+// Validate
+if targetX = 0 then if targetY = 0 then goto noTarget
+
+// Execute mass coordination
+if enableTierSystem = 1 then goto tieredAttack
+goto simpleAttack
+
+// ==========================================
+// TIERED ATTACK (By account strength)
+// ==========================================
+label tieredAttack
+echo ----------------------------------------
+echo [TIERED] Executing tiered account attack...
+
+// Tier 1: Heavy hitters first
+echo [TIER1] Deploying %tier1Accounts% heavy accounts...
+set currentTier 1
+set tierWaves %tier1Waves%
+set tierTroops %tier1Troops%
+set tierCount %tier1Accounts%
+gosub executeTier
+
+// Tier 2: Medium accounts
+echo [TIER2] Deploying %tier2Accounts% medium accounts...
+set currentTier 2
+set tierWaves %tier2Waves%
+set tierTroops %tier2Troops%
+set tierCount %tier2Accounts%
+gosub executeTier
+
+// Tier 3: Light accounts
+echo [TIER3] Deploying %tier3Accounts% light accounts...
+set currentTier 3
+set tierWaves %tier3Waves%
+set tierTroops %tier3Troops%
+set tierCount %tier3Accounts%
+gosub executeTier
+
+// Tier 4: Support accounts
+echo [TIER4] Deploying %tier4Accounts% support accounts...
+set currentTier 4
+set tierWaves %tier4Waves%
+set tierTroops %tier4Troops%
+set tierCount %tier4Accounts%
+gosub executeTier
+
+goto complete
+
+// ==========================================
+// EXECUTE TIER
+// ==========================================
+label executeTier
+echo [TIER%currentTier%] Processing %tierCount% accounts...
+
+set tierAcct 0
+label tierAccountLoop
+
+// Process each city in account
+gosub processAccount
+
+set tierAcct tierAcct + 1
+set accountsProcessed accountsProcessed + 1
+
+sleep %accountDelay%
+
+if tierAcct < tierCount then goto tierAccountLoop
+
+echo [TIER%currentTier%] Complete - %tierAcct% accounts processed
+return
+
+// ==========================================
+// PROCESS SINGLE ACCOUNT (All Cities)
+// ==========================================
+label processAccount
+echo [ACCT %accountsProcessed%] Processing account...
+
+set cityIdx 0
+label accountCityLoop
+
+// Process each city
+gosub processCity
+
+set cityIdx cityIdx + 1
+set citiesProcessed citiesProcessed + 1
+
+sleep %cityDelay%
+
+if cityIdx < citiesPerAccount then goto accountCityLoop
+
+return
+
+// ==========================================
+// PROCESS SINGLE CITY (All Waves)
+// ==========================================
+label processCity
+
+set waveIdx 0
+label cityWaveLoop
+
+// Get hero
+getspamhero power
+
+// Send wave
+attack %targetX% %targetY% spamhero %troopCode%%tierTroops%
+
+set waveIdx waveIdx + 1
+set totalWavesSent totalWavesSent + 1
+
+sleep %waveDelay%
+
+if waveIdx < tierWaves then goto cityWaveLoop
+
+return
+
+// ==========================================
+// SIMPLE ATTACK (No tiers)
+// ==========================================
+label simpleAttack
+echo [SIMPLE] Simple mass attack mode...
+
+set acctIdx 0
+label simpleAccountLoop
+
+// Process account
+set cityIdx 0
+label simpleCityLoop
+
+// Process city
+set waveIdx 0
+label simpleWaveLoop
+
+getspamhero power
+attack %targetX% %targetY% spamhero %troopCode%%troopsPerWave%
+set totalWavesSent totalWavesSent + 1
+
+sleep %waveDelay%
+set waveIdx waveIdx + 1
+if waveIdx < wavesPerCity then goto simpleWaveLoop
+
+sleep %cityDelay%
+set cityIdx cityIdx + 1
+if cityIdx < citiesPerAccount then goto simpleCityLoop
+
+sleep %accountDelay%
+set acctIdx acctIdx + 1
+set accountsProcessed accountsProcessed + 1
+if acctIdx < totalAccounts then goto simpleAccountLoop
+
+goto complete
+
+// ==========================================
+// STATISTICS
+// ==========================================
+label showStats
+echo ========================================
+echo [STATS] Mass Attack Statistics
+echo ========================================
+echo Accounts Processed: %accountsProcessed%
+echo Cities Processed: %citiesProcessed%
+echo Total Waves Sent: %totalWavesSent%
+echo ========================================
+return
+
+// ==========================================
+// ERROR HANDLERS
+// ==========================================
+label noTarget
+echo [ERROR] Set target coordinates!
+stop
+
+// ==========================================
+// COMPLETION
+// ==========================================
+label complete
+if enableStats = 1 then gosub showStats
+
+echo ============================================
+echo MASS ACCOUNT COORDINATOR COMPLETE
+echo Total Waves: %totalWavesSent%
+echo ============================================
+stop

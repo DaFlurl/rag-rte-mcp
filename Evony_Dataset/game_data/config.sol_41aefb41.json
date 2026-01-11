@@ -1,0 +1,26 @@
+{
+  "now": {
+    "proxyPw": "",
+    "skypeUn": "",
+    "secCode": "",
+    "proxyUn": "",
+    "autoLoginMaxTime": "600",
+    "username": "nauticalterm@gmail.com",
+    "serverIP": "216.66.17.168",
+    "proxyHost": "",
+    "proxyType": "",
+    "loginType": "ev",
+    "password": "valhalla9",
+    "autoScript": false,
+    "autoRun": false,
+    "theme": "Default Grey RE",
+    "server": "cc2",
+    "autoLogin": false,
+    "sid": "375",
+    "tokenExpires": NaN,
+    "autoLoginMinTime": "1",
+    "strserverAlias": "Parapet",
+    "proxyPort": "8080",
+    "skypePw": ""
+  }
+}

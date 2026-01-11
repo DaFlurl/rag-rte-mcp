@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#333"/>
+    </marker>
+    <style>
+      .box { fill: #f8f8f8; stroke: #333; stroke-width: 2; rx: 14; ry: 14; }
+      .title { font: 700 22px sans-serif; fill: #111; }
+      .text { font: 15px sans-serif; fill: #111; }
+      .small { font: 12px sans-serif; fill: #555; }
+      .line { stroke: #333; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+<text class="title" x="20" y="40">Extended Flash/AMF/LSO Tool Landscape</text>
+<rect class="box" x="40" y="80" width="400" height="200"/>
+<text class="title" x="55" y="110">AMF & LSO Codecs (Multi‑Lang)</text>
+<text class="text" x="55" y="135">rust-flash-lso (Rust)</text>
+<text class="text" x="55" y="157">Py3AMF (Python)</text>
+<text class="text" x="55" y="179">goamf (Go; AMF3 only)</text>
+<text class="text" x="55" y="201">AMF.net (C#; AMF0/AMF3)</text>
+<text class="text" x="55" y="223">Parse::Flash::Cookie (Perl)</text>
+<rect class="box" x="520" y="80" width="400" height="200"/>
+<text class="title" x="535" y="110">.SOL Editors & Viewers</text>
+<text class="text" x="535" y="135">SolVE (Java; SWT)</text>
+<text class="text" x="535" y="157">.sol Editor (Java)</text>
+<text class="text" x="535" y="179">fmoo/soltool (Python CLI)</text>
+<text class="text" x="535" y="201">Minerva (AIR/HTML)</text>
+<text class="text" x="535" y="223">FlashCookiesView (Windows GUI)</text>
+<rect class="box" x="1000" y="80" width="420" height="200"/>
+<text class="title" x="1015" y="110">SWF Parsing & Decompilation</text>
+<text class="text" x="1015" y="135">py3swf (Python)</text>
+<text class="text" x="1015" y="157">extract_swf (Python script)</text>
+<text class="text" x="1015" y="179">JPEXS FFDec (Java)</text>
+<text class="text" x="1015" y="201">RABCDAsm / Flasm</text>
+<text class="text" x="1015" y="223">Pyswf / Ming / yaswfp</text>
+<rect class="box" x="40" y="330" width="400" height="240"/>
+<text class="title" x="55" y="360">ActionScript & ABC Tools</text>
+<text class="text" x="55" y="385">RABCDAsm (assembler/disassembler)</text>
+<text class="text" x="55" y="407">abcd (MITRE) – minimal ABC disassembler</text>
+<text class="text" x="55" y="429">as3commons-bytecode (Java)</text>
+<text class="text" x="55" y="451">amf.js (JavaScript AMF + ByteArray)</text>
+<text class="text" x="55" y="473">SWFREtools, swfdecrypt (various)</text>
+<rect class="box" x="520" y="330" width="400" height="240"/>
+<text class="title" x="535" y="360">Runtime / Emulation</text>
+<text class="text" x="535" y="385">Ruffle (Rust Flash emulator)</text>
+<text class="text" x="535" y="407">Lightspark (C++)</text>
+<text class="text" x="535" y="429">Gnash (C++)</text>
+<text class="text" x="535" y="451">ProjectorRays (Director)</text>
+<rect class="box" x="1000" y="330" width="420" height="240"/>
+<text class="title" x="1015" y="360">Projector / File Extraction</text>
+<text class="text" x="1015" y="385">extract_swf (from projectors)</text>
+<text class="text" x="1015" y="407">Flash Player Projector tools</text>
+<text class="text" x="1015" y="429">flashcookiesview (view/delete LSOs)</text>
+<text class="text" x="1015" y="451">Evercookie (JS persistent cookie tool)</text>
+<text class="text" x="1015" y="473">CyberChef (AMF decode ops)</text>
+<line class="line" x1="240" y1="280" x2="240" y2="330"/>
+<line class="line" x1="720" y1="280" x2="720" y2="330"/>
+<line class="line" x1="1210" y1="280" x2="1210" y2="330"/>
+<text class="small" x="50" y="870">Tools span multiple languages – pick the best fit for your pipeline (Rust for speed, Python for flexibility, C# for integration, etc.)</text>
+</svg>

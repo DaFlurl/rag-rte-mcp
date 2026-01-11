@@ -1,0 +1,24 @@
+{
+  "compilation_date": "2026-01-06T10:14:40.478670",
+  "phase": "4",
+  "target": "h200_8-12_hours",
+  "statistics": {
+    "total_files": 8621,
+    "total_size_mb": 290.98,
+    "as_files": 6556,
+    "training_files": 57,
+    "duplicates_removed": 730,
+    "errors": 0
+  },
+  "sources": {
+    "autoevony": "AS3_Scripts_(AutoEvony2_NEW.swf)",
+    "client": "AS3_Scripts_(EvonyClient1921.swf)",
+    "evony_source": "Evony_Source",
+    "training": "Evony_Training_Data + training + evony_phase3",
+    "keys": "Evony_Training_Dataset/keys",
+    "protocols": "Evony_Training_Dataset/protocol",
+    "borg": "BorgToolkit",
+    "cve": "CVE_Research"
+  },
+  "target_met": false
+}

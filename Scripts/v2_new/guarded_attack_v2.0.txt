@@ -1,0 +1,140 @@
+// ============================================
+// GUARDED ATTACK v2.0
+// Scout-protected coordinated attacks
+// Uses REAL guardedattack command
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+// REAL COMMAND FROM CityState.as:
+// guardedattack coords attackTroop nScouts defendTroop
+// setguard coords defendTroop
+// endguardedattack
+// ============================================
+
+// ==========================================
+// CONFIGURATION - EDIT THESE
+// ==========================================
+
+// === TARGET ===
+set targetX 0
+set targetY 0
+
+// === ATTACK TROOPS ===
+set attackTroopString "a:100000,c:10000"
+set attackArchers 100000
+set attackCavalry 10000
+
+// === SCOUT CONFIGURATION ===
+set scoutCount 100
+set scoutBeforeEachWave 1
+
+// === DEFENSE/GUARD TROOPS ===
+set defendTroopString "a:50000"
+set guardArchers 50000
+
+// === WAVE SETTINGS ===
+set totalWaves 10
+set waveDelay 5000
+
+// === FEATURES ===
+set enableGuardMode 1
+set enableAutoScout 1
+set enableDefenseCheck 1
+set enableLogging 1
+
+// === RUN MODE ===
+set runMode "once"
+
+// ==========================================
+// DO NOT EDIT BELOW
+// ==========================================
+
+set wavesSent 0
+
+echo ============================================
+echo GUARDED ATTACK v2.0
+echo Target: %targetX%,%targetY%
+echo Scout Count: %scoutCount%
+echo ============================================
+
+// Validate
+if targetX = 0 then if targetY = 0 then goto noTarget
+
+// Setup guard
+if enableGuardMode = 1 then gosub setupGuard
+
+// Execute guarded attack
+gosub executeGuardedAttack
+
+goto complete
+
+// ==========================================
+// SETUP GUARD (Real Command)
+// ==========================================
+label setupGuard
+echo [GUARD] Setting up guard troops...
+
+// setguard coords defendTroop
+set coordString "%targetX%,%targetY%"
+setguard %coordString% %defendTroopString%
+
+echo [GUARD] Guard configured
+return
+
+// ==========================================
+// EXECUTE GUARDED ATTACK (Real Command)
+// ==========================================
+label executeGuardedAttack
+echo [ATTACK] Starting guarded attack...
+
+// guardedattack coords attackTroop nScouts defendTroop
+// This is the real command that:
+// 1. Scouts first
+// 2. If clear, sends attack
+// 3. Keeps guard troops ready
+
+set coordString "%targetX%,%targetY%"
+
+set wavesSent 0
+label guardedLoop
+
+echo [WAVE %wavesSent%] Sending guarded attack...
+
+// Use real guardedattack command
+guardedattack %coordString% %attackTroopString% %scoutCount% %defendTroopString%
+
+set wavesSent wavesSent + 1
+sleep %waveDelay%
+
+if wavesSent < totalWaves then goto guardedLoop
+
+echo [ATTACK] All guarded waves sent
+return
+
+// ==========================================
+// END GUARDED ATTACK
+// ==========================================
+label endGuarded
+echo [END] Ending guarded attack mode...
+
+endguardedattack
+
+echo [END] Guarded mode ended
+return
+
+// ==========================================
+// ERROR HANDLERS
+// ==========================================
+label noTarget
+echo [ERROR] Set target coordinates!
+stop
+
+// ==========================================
+// COMPLETION
+// ==========================================
+label complete
+echo ============================================
+echo GUARDED ATTACK COMPLETE
+echo Waves Sent: %wavesSent%
+echo ============================================
+stop

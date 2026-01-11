@@ -1,0 +1,46 @@
+ 
+iLO Channel Interface (CHIF) Driver will be installed on Windows nodes, if it is not already present. This will help ensure complete inventory and recommended updates.
+sum_service_x64.exe started successfully on port 63001 and secure port 63002. FTP is disabled.
+Launching default web browser to SUM login URL:
+    https://localhost:63002/index.html?session_id=t3034132520&lang=en
+    SUM is supported on the latest versions of Chrome, Firefox, Internet Explorer and Microsoft Edge.
+SUM engine is now running.  Use the web browser to interact with SUM. This process will exit once SUM engine is shutdown from the user interface.
+
+https://localhost:63002/index.html?session_id=t3034132520&lang=en
+
+
+https://flixeasy.com/
+
+===================================================================================
+===================================================================================
+Use Powershell:
+Be sure to change the ID below with your ID or it will fail. 
+------------------------------------------------------------
+New-SelfSignedCertificate -certstorelocation cert:\localmachine\my -dnsname "TestCert1"
+
+--------------------------------------------
+$pwd = ConvertTo-SecureString -String "Password" -Force -AsPlainText
+
+--------------------------------------------
+Export-PfxCertificate -cert cert:\localMachine\my\5663345E048BFD700866449B286F777DAB8D3C12 -FilePath root-authority.pfx -Password $pwd
+Featured playlist
+
+====================================================================================
+====================================================================================
+
+-----------------------------------------------------------------------------
+
+2022 works fine on Gen9, this is all I needed for a ML350 Gen9
+
+Perform all firmware upgrades in Linux Install Windows Server 2022 without 
+Intelligent Provisioning Install cp040885.exe first (Chipset) cp048869.exe Array,
+ cp037465.exe Array notifications, cp038692.exe Matrox Video, cp037927.exe iLO
+missed cp047524.exe Agent Management Service, and running of Service Packs 
+for Gen9 and Gen10
+
+cp040885.compsig
+cp048869.compsig
+cp047524.compsig
+cp038692.compsig
+cp037927.compsig
+cp037465.compsig

@@ -1,0 +1,159 @@
+Tutorial: How To Use [Beta]							By ScriptGod/Nepoleon
+
+I)~STARTING_AN_ACCOUNT~
+
+Step 1:
+ Go To Evony.com and start an account on na60.
+
+Step 2:
+ Build 1 cottage to lv 1. DO NOT BUILD ANYTHING ELSE!
+
+Step 3:
+ Save the account with the blue button on the bottom right.
+
+WARNING:
+ DO NOT COMPLETE ANY QUESTS, OR RENAME CITY, EXC.
+
+Step 4:
+ Load the RE v1.12a flash file and log into this new account with autogoals and autoscripts on.
+
+Step 5:
+ Copy, Paste, and Save the entire [Start].txt in the snippets.
+
+Step 6:
+ Check the homestate, flagType, mainAccount, and startUpCycle are all correctly set before Continuing.
+
+Step 7:
+ Type: include start :in script section of your new account. Save and Run.
+
+
+
+II)~RUNNING_AN_ACCOUNT_WITHOUT_FACEBOOK~
+
+Step 1:
+ After approx 120 mins If able transport 100k gold to this alt 
+
+Step 2:
+ Let the account run: 5 days Baronet : 7 days Baron : 10 days Viscount : 15 days Marquis : 25 days Furstin
+
+Recomendations:
+ DO NOT Cycle Until first 2 hrs of account builder is completed.
+ (Cycle Means Switch this account with another, Do Not Turn Off during First 2 Hrs)
+
+
+III)~RUNNING_AN_ACCOUNT_WITH_FACEBOOK~
+
+Step 1:
+ After approx 120 mins TYPE: \getfblinks : In command wondow and collect your wild ponnies post.
+
+Step 2:
+ Copy and Paste your wild Ponnies post to our ALLFBPOST skype room for na60.
+
+Step 3:
+ Load your facebook account and click as many wild ponnies posts as possible.
+
+
+IMPORTANT_NOTE:
+ Using auto clicker on these posts greatly increases the daily maximum.
+
+Step 4:
+ Click any post from na60 and goto (my allies) in the top right corner to do visits.
+
+Step 5:
+ If your pc can handle it right clicking on allies and open in new window alows u to load multiple allies.
+
+Step 6:
+ Let the account run: 12 hrs Baronet : 72 hrs Baron : 120 hrs Viscount : 12 days Marquis : 20 days Furstin
+
+Recomendations:
+ Daily visits to maximize resources.
+ Daily Bot reset to clear its flash storage.
+ DO NOT Cycle Until Baron rank is reached.
+
+
+IV)~Example_SETTINGS~
+
+Example 1: Basic Alt
+:For an alt account in Upper Lorraine, Voting and mailing Nepoleon, 30 miles between cities, with Facebook.
+
+[ALLSETTINGS]
+set useFacebook ON
+set fieldType s
+[ACCOUNTSETTINGS]
+set manualLocation OFF
+set centerAround14 OFF
+set cityGrid ON
+set iWantCastle ON
+set mainAccount "Nepoleon"
+set homeState "ul"
+set manualCoord 0,0
+set gridDistance 30
+set flagType 1
+set govVar "Nepoleon"
+set startUpCycle 3
+include ALLSETTINGS
+[GOALSETTINGS]
+set rebuildCity OFF
+set finishKeyBuilds ON
+set autoUseFaceBook ON
+set controlZeroFood ON
+set dailyReset OFF
+set altType "Archer"
+include ALLSETTINGS
+
+
+V)~SETTINGS_Glossary~
+
+[ALLSETTINGS] - This Heading is For Account Controls: Things that effect both goals and scripts.
+
+set useFacebook OFF
+~useFacebook (ON/OFF) tells the bot what to build in what priority, without fb it builds res first.
+set fieldType s
+~fieldType ( f s q i ) controls what fields your alts will make. Adjust this to the highest priced res.
+
+[ACCOUNTSETTINGS] - This Heading is for script only Controls, City location, Account layout.
+
+set govAccount "Govenor"
+~govAccount (Name) is who u will vote for daily.
+set mainAccount "YourStrongestAcc"
+~mainAccount (Name) is who u will mail for starting quest.
+set manualLocation OFF
+~manualLocation (ON/OFF) gives you control over exact city locations.
+set centerAround14 OFF
+~centerAround14 (ON/OFF) gives you the option to build cities around the closest 14.
+set cityGrid ON
+~cityGrid (ON/OFF) Spaces all cities out evenly from each other. (Recommended ON)
+set iWantCastle Inactive
+~iWantCastle (ON/OFF) //Option inactivated.
+set homeState "Tus"
+~homeState (first 3 digits/first 2 initials of state name) Tells bot what state to random to when starting.
+set manualCoord 0,0
+~manualCoord (xxx,yyy) sets the coord for manualLocation to position your cities.
+set gridDistance 12
+~gridDistance (miles) Sets spacing for cityGrid.
+set flagType 1
+~flagType (flag) Tells the bot what flag u want it to have in when starting.
+set startUpCycle 3
+~startUpCycle (seconds) sets the amount of sleep between tasks when starting an account, important to adjust.
+
+[GOALSETTINGS] - This Heading is for goal only Controls.
+
+set rebuildCity OFF
+~rebuildCity (ON/OFF) controls if Unneeded builds get removed in all cities.
+set finishKeyBuilds ON
+~finishKeyBuilds (ON/OFF) controls if Mich scripts get used as they are farmed on important buildings.
+set autoUseFaceBook ON
+~autoUseFaceBook (ON/OFF) controls if your new cities will autouseitems for visit packs.
+set controlZeroFood ON
+~controlZeroFood (ON/OFF) controls if this account uses zerofood in its main city.
+set dailyReset OFF
+~dailyReset (ON/OFF) controls if this account will schedulepolicy to turn off for 1 hr a day.
+set altType "Archer"
+~altType (Archer, Ballista, Scout) Sets what final troop type this alt will make after done promotion.
+
+
+
+
+This Version is tested with and without facebook to get to Marquis rank with minimal input needed.
+Please Point out any errors you experiance, Its still a work in progress. Hope everyone likes it.
+I will be hosting an alliance named REV on na60 all learning and serious scripters are welcome to join.

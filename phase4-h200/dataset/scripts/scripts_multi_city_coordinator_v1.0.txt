@@ -1,0 +1,196 @@
+// ============================================
+// MULTI-CITY COORDINATOR v1.0
+// Coordinate actions across all cities
+// Author: Borg Automation Suite
+// ============================================
+
+// Configuration
+set totalCities 10
+set currentCity 1
+set actionDelay 2000
+set cycleDelay 300000
+
+echo ========================================
+echo MULTI-CITY COORDINATOR v1.0
+echo Managing %totalCities% cities
+echo ========================================
+
+// Main coordination loop
+label mainLoop
+
+echo [COORD] Starting coordination cycle...
+
+// Reset city counter
+set currentCity 1
+
+// Loop through all cities
+label cityLoop
+
+echo ========================================
+echo [CITY %currentCity%/%totalCities%]
+echo ========================================
+
+// Execute city actions
+gosub doCity
+
+// Move to next city
+set currentCity currentCity + 1
+if currentCity <= totalCities then goto cityLoop
+
+// All cities processed
+echo ========================================
+echo [COORD] All cities processed
+echo Next cycle in %cycleDelay%ms
+echo ========================================
+
+sleep %cycleDelay%
+goto mainLoop
+
+// ==========================================
+// PER-CITY ACTIONS
+// ==========================================
+label doCity
+echo [CITY] Executing standard actions...
+
+// 1. Complete available quests
+echo [QUEST] Completing quests...
+completequests
+sleep 1000
+
+// 2. Building management
+echo [BUILD] Checking buildings...
+waitnobuilding
+upgrade cottage lowestalikelevel
+sleep 500
+upgrade barracks lowestalikelevel
+sleep 500
+
+// 3. Research management
+echo [RESEARCH] Checking research...
+waitnoresearch
+research next
+sleep 500
+
+// 4. Training management
+echo [TRAIN] Checking training...
+waitnotraining
+train archers 500
+sleep 500
+
+// 5. Resource collection
+echo [LEVY] Collecting resources...
+levy population
+sleep 500
+comfort praying
+sleep 500
+
+// 6. Hero management
+echo [HERO] Managing heroes...
+setmayor politics
+sleep 500
+
+echo [CITY] City actions complete
+sleep %actionDelay%
+return
+
+// ==========================================
+// RESOURCE BALANCING
+// ==========================================
+label balanceResources
+echo [BALANCE] Balancing resources across cities...
+
+// Check each city's resources
+// Send from surplus to deficit cities
+
+// Example: Send food from city 1 to city 2
+// sendresources city2X city2Y 0 1000000 0 0 0
+
+echo [BALANCE] Resource balancing complete
+return
+
+// ==========================================
+// TROOP DISTRIBUTION
+// ==========================================
+label distributeTroops
+echo [TROOPS] Distributing troops...
+
+// Analyze troop needs per city
+// Send troops from high to low
+
+// Example: Reinforce city 2
+// reinforce city2X city2Y heroName a10000
+
+echo [TROOPS] Troop distribution complete
+return
+
+// ==========================================
+// SYNCHRONIZED ATTACKS
+// ==========================================
+label syncAttack
+echo [ATTACK] Preparing synchronized attack...
+
+set targetX 100
+set targetY 100
+
+// Send from all cities to arrive at same time
+// Calculate march times and stagger sends
+
+echo [ATTACK] Sending wave from city 1...
+attack %targetX% %targetY% hero1 a10000
+sleep 100
+
+echo [ATTACK] Sending wave from city 2...
+// Switch to city 2
+attack %targetX% %targetY% hero2 a10000
+sleep 100
+
+echo [ATTACK] Synchronized attack launched
+return
+
+// ==========================================
+// MASS OPERATIONS
+// ==========================================
+label massLevy
+echo [MASS] Executing mass levy on all cities...
+set i 1
+label levyLoop
+levy population
+sleep 500
+levy gold
+sleep 500
+set i i + 1
+if i <= totalCities then goto levyLoop
+echo [MASS] Mass levy complete
+return
+
+label massComfort
+echo [MASS] Executing mass comfort on all cities...
+set i 1
+label comfortLoop
+comfort praying
+sleep 500
+comfort festival
+sleep 500
+set i i + 1
+if i <= totalCities then goto comfortLoop
+echo [MASS] Mass comfort complete
+return
+
+// ==========================================
+// ERROR HANDLER
+// ==========================================
+label error
+echo [ERROR] Coordination error in city %currentCity%
+echo Skipping to next city...
+set currentCity currentCity + 1
+if currentCity <= totalCities then goto cityLoop
+goto mainLoop
+
+// ==========================================
+// SHUTDOWN
+// ==========================================
+label done
+echo ========================================
+echo MULTI-CITY COORDINATOR STOPPED
+echo ========================================
+stop

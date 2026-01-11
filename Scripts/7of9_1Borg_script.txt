@@ -1,0 +1,195 @@
+setarr sendTroopType "cata"
+setarr howManyToKeep "0"
+setarr sendToLocations "315,692"
+
+//===============DO=NOT=CHANGE=BELOW=THIS=LINE===============
+setsilence true
+setarray troopIntNames ["peasants", "militia", "scouter", "pikemen", "swordsmen", "archer", "lightCavalry", "heavyCavalry", "carriage", "ballista", "batteringRam", "catapult"]
+setarray troopExtNames ["Worker", "Warrior", "Scout", "Pikemen", "Swordsmen", "Archer", "Cavalry", "Cataphract", "Transporter", "Ballista", "BatteringRam", "Catapult"]
+setarray troopAbbr ["wo", "w", "s", "p", "sw", "a", "c", "cata", "t", "b", "r", "cp"]
+set t "allTroop"
+set i 0
+label checkDest
+if {$c.getCityFromCoord(%sendToLocations[{%i%}]%)$==null} set t "troop"
+set i {%i%+1}
+if {%i%<%sendToLocations.length%} goto checkDest
+set r getRallyDispatchPerArmyLimit
+if {%sendTroopType.length%==%howManyToKeep.length%} goto isValidArrLength
+echo "Error!  Number of values entered do not match in variables 'sendTroopType' and 'howManyToKeep'!"
+echo "For every troop type entered you need to enter an amount to keep, even if it's 0."
+goto exitScript
+label isValidArrLength
+if {%sendToLocations.length%==%sendTroopType.length%||%sendToLocations.length%==1} goto isValidDestinationArrLength
+echo "Error!  Number of destination coordinates entered does not match the number of troop types entered!"
+echo "You must either enter a single destination or a destination for each troop type."
+goto exitScript
+label isValidDestinationArrLength
+echo "Begin moving troops..."
+set totalTroopsMoved null
+set troopStr empty
+set currentTroopAmount 0
+set sendTroopTypeIndex -1
+label nextSendTroopType
+set sendTroopTypeIndex {%sendTroopTypeIndex%+1}
+if {!{%sendTroopType.length%>%sendTroopTypeIndex%}} goto doneSendingAllTroops
+set indexTN -1
+label findTroopName
+set indexTN {%indexTN%+1}
+if {%sendTroopType[{%sendTroopTypeIndex%}]%==%troopAbbr[{%indexTN%}]%} goto foundTroopName
+if {{%indexTN%+1}==%troopAbbr.length%} goto couldNotFindTroopName
+goto findTroopName
+label couldNotFindTroopName
+echo "WARNING!  Invalid value of ' %sendTroopType[{%sendTroopTypeIndex%}]% ' has been entered for variable 'sendTroopType'!"
+echo "--'sendTroopType' is not among [ wo w s p sw a c cata t b r cp ]. Skipping to next troop type entered."
+goto nextSendTroopType
+label foundTroopName
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}>-1} goto howManyToKeepIsValid
+echo "ATTENTION!  Invalid value of ' %howManyToKeep[{%sendTroopTypeIndex%}]% ' has been entered for troop type ' %sendTroopType[{%sendTroopTypeIndex%}]% '"
+echo "--'howManyToKeep' is set to more than your current troop count. Skipping to next troop type entered."
+goto nextSendTroopType
+label howManyToKeepIsValid
+if {%sendToLocations.length%==1} set destInd 0
+if {%sendToLocations.length%>1} set destInd %sendTroopTypeIndex%
+set destination %sendToLocations[{%destInd%}]%
+if {%totalTroopsMoved%!=null} set totalTroopsMoved "%totalTroopsMoved%, {$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%} %troopExtNames[{%indexTN%}]%(s) to (%destination%)"
+if {%totalTroopsMoved%==null} set totalTroopsMoved "{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%} %troopExtNames[{%indexTN%}]%(s) to (%destination%)"
+label startSendingTroops
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%+%currentTroopAmount%}>$c.cm.%r%(true)$} goto sendFull
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}<1&&%troopStr%==empty} goto doneSendingTroops
+if {%troopStr%==empty} goto makeNewTroopStr
+set troopStr "%troopStr%,%troopAbbr[{%indexTN%}]%:{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}"
+goto skipMakeNewTroopStr
+label makeNewTroopStr
+set troopStr "%troopAbbr[{%indexTN%}]%:{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}"
+label skipMakeNewTroopStr
+set currentTroopAmount {%currentTroopAmount%+{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}}
+iferror %sendTroopType[{%sendTroopTypeIndex%+1}]% goto skipAddAnotherTroopType
+set isNextsendToLocations false
+iferror %sendToLocations[{%sendTroopTypeIndex%+1}]% goto noNextsendToLocations
+if {!{%destination%==%sendToLocations[{%sendTroopTypeIndex%+1}]%}} goto noNextsendToLocations
+set isNextsendToLocations true
+label noNextsendToLocations
+if {{%sendToLocations.length%==1||%isNextsendToLocations%}&&{%currentTroopAmount%<$c.cm.%r%(true)$}} goto doneSendingTroops
+label skipAddAnotherTroopType
+goto sendTroopsNow
+label sendFull
+if {%troopStr%==empty} goto makeNewFullTroopStr
+set troopStr "%troopStr%,%troopAbbr[{%indexTN%}]%:{$c.cm.%r%(true)$-%currentTroopAmount%}"
+goto skipMakeNewFullTroopStr
+label makeNewFullTroopStr
+set troopStr "%troopAbbr[{%indexTN%}]%:$c.cm.%r%(true)$"
+label skipMakeNewFullTroopStr
+label sendTroopsNow
+reinforce %destination% none %troopStr%
+set currentTroopAmount 0
+set troopStr empty
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}>0} goto startSendingTroops
+label doneSendingTroops
+goto nextSendTroopType
+label doneSendingAllTroops
+if {%currentTroopAmount%>0} goto sendTroopsNow
+if {%totalTroopsMoved%==null} goto noTroopsMoved
+echo "Finished moving troops!"
+echo "A total of: %totalTroopsMoved% have been moved."
+goto exitScript
+label noTroopsMoved
+echo "ATTENTION:  No troops have been moved!"
+label exitScript
+setsilence false
+loop
+
+
+
+
+
+
+
+
+
+// Transport 293,688 t:100000 f:1000000000
+
+
+
+
+
+// alt feeder
+setarr TgtList "300,690"
+//setarr TgtList "300,690"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 f:1000000000
+repeat 10
+transport %CurrTgt% t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 25
+loop
+
+Transport 301,699 t:100000 f:100m
+Transport 301,699 t:100000 f:100m
+Transport 300,700 t:100000 f:100m
+Transport 300,700 t:100000 f:100m
+Transport 300,700 t:100000 f:100m
+Transport 301,699 t:100000 f:100m
+Transport 300,700 t:100000 f:100m
+Transport 300,700 t:100000 f:100m
+Transport 300,700 t:100000 f:100m
+Transport 300,700 t:100000 f:100m
+Sleep 00:00:058
+loop
+
+
+//useitem Daily_Gift
+//useitem Daily_Gift1
+//useitem Daily_Gift_2018
+//loop 10
+
+
+
+scanrec 0,0 799,799 
+
+//Legendry hero script
+setsilence true
+set minPol 100
+set minAtk 110
+set minIntel 110
+
+gosub improvehero %minPol% %minAtk% %minIntel%
+if {%_0%==0} goto end
+sleep 4:00:00
+loop
+goto end
+
+# syntax: gosub improvehero minPol minAtk minIntel
+# return 0 if success, -1 if still need improvement, -2 iferror expression goto label
+label improvehero
+set resp $m_city.actionFactory.getHeroCommand().GetRandomHero()$
+label improvehero_start
+gosub waitresponse %resp% 10
+if {%_0%==1} gosubreturn -2
+# echo $%resp%.toDebugString()$
+set _h %resp%.randomherobean
+echo "Current hero attributes: $%_h%.management$ $%_h%.power$ $%_h%.stratagem$, reset: $%_h%.resetcount$"
+set _pol {$%_h%.management$>=%_1%}
+set _atk {$%_h%.power$>=%_2%}
+set _intel {$%_h%.stratagem$>=%_3%}
+if {%_pol%&&%_atk%&&%_intel%} gosubreturn 0 // all good attributes
+if {$%_h%.resetcount$==0} gosubreturn -1 // no more spins
+set resp $m_city.actionFactory.getHeroCommand().RetSetHeroAttri(%_pol%,%_atk%,%_intel%,false)$
+goto improvehero_start
+
+# syntax: gosub waitresponse responseHandle maxTimeInSecond
+# return: 0 if response is available, 1 if time out
+label waitresponse
+set _starttime $m_city.getRawTime()$
+label waitresponse_start
+iferror {$%_1%.ok$} waitresponse_wait
+gosubreturn 0
+
+label waitresponse_wait
+if {$m_city.getRawTime()$>{%_starttime%+%_2%*1000}} gosubreturn 1
+sleep 0.05
+goto waitresponse_start

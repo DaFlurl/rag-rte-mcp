@@ -1,0 +1,19 @@
+
+from IDGAF on the Skype room:
+scanrec 799,0 0,799             // Entire Map
+scanrec 0,0 199,199             //Friesland
+scanrec 0,200 199,399         //Lower Lorraine
+scanrec 0,400 199,599         //Upper Lorraine
+scanrec 0,600 199,799         //Burgundy
+scanrec 200,0 399,199         //Saxony
+scanrec 200,200 399,399     //Franconia
+scanrec 200,400 399,599     //Swabia
+scanrec 200,600 399,799     //Lombardy
+scanrec 400,0 599,199         //North March
+scanrec 400,200 599,399     //Thuringia
+scanrec 400,400 599,599     //Bavaria
+scanrec 400,600 599,799     //Tuscany
+scanrec 600,0 799,199         //Bohemia
+scanrec 600,200 799,399     //Moravia
+scanrec 600,400 799,599     //Carinthia
+scanrec 600,600 799,799     //Romagna

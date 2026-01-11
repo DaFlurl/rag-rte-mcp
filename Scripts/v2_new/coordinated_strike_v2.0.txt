@@ -1,0 +1,308 @@
+// ============================================
+// COORDINATED STRIKE v2.0
+// Multi-city synchronized attack system
+// For AE2/RoboEvony - Cross-City Coordination
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+
+// ==========================================
+// CONFIGURATION SECTION - EDIT THESE VALUES
+// ==========================================
+
+// === TARGET ===
+set targetX 0
+set targetY 0
+set targetName "Target"
+set targetType "city"
+
+// === WAVE CONFIGURATION ===
+set totalWaves 100
+set archerPerWave 100000
+set arrivalSpacing 0
+set useAllCities 1
+
+// === TIMING ===
+set launchDelay 500
+set staggerMode "simultaneous"
+set arrivalTime 0
+
+// === CITIES TO USE ===
+set city1Active 1
+set city1X 0
+set city1Y 0
+set city2Active 1
+set city2X 0
+set city2Y 0
+set city3Active 1
+set city3X 0
+set city3Y 0
+set city4Active 0
+set city4X 0
+set city4Y 0
+set city5Active 0
+set city5X 0
+set city5Y 0
+
+// === FEATURES ENABLE/DISABLE ===
+set enablePreScout 1
+set scoutFromCity 1
+set enableMarchTimeCalc 1
+set enableWaveBalancing 1
+set enableHeroOptimize 1
+set enableSafetyChecks 1
+set minTroopsPerCity 50000
+set enableLogging 1
+set enableConfirmation 0
+
+// === RUN MODE ===
+set runMode "once"
+
+// ==========================================
+// DO NOT EDIT BELOW THIS LINE
+// ==========================================
+
+set totalSent 0
+set citiesUsed 0
+set aborted 0
+
+echo ============================================
+echo COORDINATED STRIKE v2.0
+echo Target: %targetName% (%targetX%,%targetY%)
+echo Total Waves: %totalWaves%
+echo Mode: %staggerMode%
+echo ============================================
+
+// Pre-flight checks
+gosub validateTarget
+if targetValid = 0 then goto invalidTarget
+
+gosub countActiveCities
+echo [INFO] Active cities: %citiesUsed%
+
+if enablePreScout = 1 then gosub scoutTarget
+
+if enableConfirmation = 1 then gosub confirmLaunch
+
+// Execute strike
+gosub executeStrike
+
+goto complete
+
+// ==========================================
+// EXECUTE COORDINATED STRIKE
+// ==========================================
+label executeStrike
+echo ----------------------------------------
+echo [STRIKE] Initiating coordinated attack...
+
+// Calculate waves per city
+set wavesPerCity totalWaves / citiesUsed
+echo [CALC] Waves per city: %wavesPerCity%
+
+// Launch from each city
+if city1Active = 1 then gosub launchFromCity1
+if city2Active = 1 then gosub launchFromCity2
+if city3Active = 1 then gosub launchFromCity3
+if city4Active = 1 then gosub launchFromCity4
+if city5Active = 1 then gosub launchFromCity5
+
+echo [STRIKE] All waves launched!
+return
+
+// ==========================================
+// LAUNCH FROM CITY 1
+// ==========================================
+label launchFromCity1
+echo [CITY1] Launching %wavesPerCity% waves...
+
+set cityWaves 0
+label city1Loop
+
+// Check troops
+if enableSafetyChecks = 1 then gosub checkCityTroops
+if cityTroopsOK = 0 then goto city1Done
+
+// Get hero and send
+getspamhero
+attack %targetX% %targetY% spamhero a%archerPerWave%
+
+set cityWaves cityWaves + 1
+set totalSent totalSent + 1
+
+sleep %launchDelay%
+
+if cityWaves < wavesPerCity then goto city1Loop
+
+label city1Done
+echo [CITY1] Sent %cityWaves% waves
+return
+
+// ==========================================
+// LAUNCH FROM CITY 2
+// ==========================================
+label launchFromCity2
+echo [CITY2] Launching %wavesPerCity% waves...
+
+set cityWaves 0
+label city2Loop
+
+getspamhero
+attack %targetX% %targetY% spamhero a%archerPerWave%
+
+set cityWaves cityWaves + 1
+set totalSent totalSent + 1
+
+sleep %launchDelay%
+
+if cityWaves < wavesPerCity then goto city2Loop
+
+echo [CITY2] Sent %cityWaves% waves
+return
+
+// ==========================================
+// LAUNCH FROM CITY 3
+// ==========================================
+label launchFromCity3
+echo [CITY3] Launching %wavesPerCity% waves...
+
+set cityWaves 0
+label city3Loop
+
+getspamhero
+attack %targetX% %targetY% spamhero a%archerPerWave%
+
+set cityWaves cityWaves + 1
+set totalSent totalSent + 1
+
+sleep %launchDelay%
+
+if cityWaves < wavesPerCity then goto city3Loop
+
+echo [CITY3] Sent %cityWaves% waves
+return
+
+// ==========================================
+// LAUNCH FROM CITY 4
+// ==========================================
+label launchFromCity4
+echo [CITY4] Launching %wavesPerCity% waves...
+
+set cityWaves 0
+label city4Loop
+
+getspamhero
+attack %targetX% %targetY% spamhero a%archerPerWave%
+
+set cityWaves cityWaves + 1
+set totalSent totalSent + 1
+
+sleep %launchDelay%
+
+if cityWaves < wavesPerCity then goto city4Loop
+
+echo [CITY4] Sent %cityWaves% waves
+return
+
+// ==========================================
+// LAUNCH FROM CITY 5
+// ==========================================
+label launchFromCity5
+echo [CITY5] Launching %wavesPerCity% waves...
+
+set cityWaves 0
+label city5Loop
+
+getspamhero
+attack %targetX% %targetY% spamhero a%archerPerWave%
+
+set cityWaves cityWaves + 1
+set totalSent totalSent + 1
+
+sleep %launchDelay%
+
+if cityWaves < wavesPerCity then goto city5Loop
+
+echo [CITY5] Sent %cityWaves% waves
+return
+
+// ==========================================
+// PRE-SCOUT TARGET
+// ==========================================
+label scoutTarget
+echo [SCOUT] Scouting target...
+
+getspamhero
+scout %targetX% %targetY% spamhero 1
+
+echo [SCOUT] Waiting for report...
+sleep 15000
+return
+
+// ==========================================
+// COUNT ACTIVE CITIES
+// ==========================================
+label countActiveCities
+set citiesUsed 0
+
+if city1Active = 1 then set citiesUsed citiesUsed + 1
+if city2Active = 1 then set citiesUsed citiesUsed + 1
+if city3Active = 1 then set citiesUsed citiesUsed + 1
+if city4Active = 1 then set citiesUsed citiesUsed + 1
+if city5Active = 1 then set citiesUsed citiesUsed + 1
+
+return
+
+// ==========================================
+// CHECK CITY TROOPS
+// ==========================================
+label checkCityTroops
+set cityTroopsOK 1
+gettroops
+
+if archers < minTroopsPerCity then set cityTroopsOK 0
+
+return
+
+// ==========================================
+// VALIDATE TARGET
+// ==========================================
+label validateTarget
+set targetValid 1
+
+if targetX = 0 then if targetY = 0 then set targetValid 0
+
+return
+
+// ==========================================
+// CONFIRM LAUNCH
+// ==========================================
+label confirmLaunch
+echo ============================================
+echo STRIKE CONFIRMATION
+echo Target: %targetX%,%targetY%
+echo Waves: %totalWaves%
+echo Cities: %citiesUsed%
+echo ============================================
+echo Press any key or wait 10 seconds...
+sleep 10000
+return
+
+// ==========================================
+// ERROR HANDLERS
+// ==========================================
+label invalidTarget
+echo [ERROR] Invalid target coordinates!
+stop
+
+// ==========================================
+// COMPLETION
+// ==========================================
+label complete
+echo ============================================
+echo COORDINATED STRIKE COMPLETE
+echo Total Waves Sent: %totalSent%
+echo Cities Used: %citiesUsed%
+echo Target: %targetX%,%targetY%
+echo ============================================
+stop

@@ -1,0 +1,21 @@
+LOST HISTORIC HEROES FROM INACTIVE ACCOUNTS
+These heroes may have returned to the game server!
+Search these coordinates on CC2 server to find them.
+======================================================================
+
+Total: 2 historic heroes from 2 inactive accounts
+
+HERO LIST (sorted by name):
+----------------------------------------------------------------------
+Henry Hudson                                  (689,490) - chupu.69@hotmail.ca
+Marco Polo                                    (693,369) - satchman69@hotmail.com
+
+
+GROUPED BY ACCOUNT:
+----------------------------------------------------------------------
+
+chupu.69@hotmail.ca:
+  - Henry Hudson at (689,490)
+
+satchman69@hotmail.com:
+  - Marco Polo at (693,369)

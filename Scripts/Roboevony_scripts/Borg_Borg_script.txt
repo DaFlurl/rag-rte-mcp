@@ -1,0 +1,146 @@
+
+
+
+
+
+setsilence true
+canceltrade
+set sellfood 100000000000
+label searchtrades
+set s $c.af.getTradeCommands().searchTrades(0)$
+label wait
+sleep .1
+iferror $%s%.ok$ goto wait
+set price $%s%.buyersArray[0].price$
+set amount $%s%.buyersArray[0].amount$
+setsilence false
+set totalamount $c.cm.resource.food.amount$
+set am {%totalamount%-%sellfood%}
+if {%am%<0} goto end
+set amount $c.math.min(%amount%,%am%,99999999)$
+sell food %amount% %price%
+sleep 1
+label end
+loop
+
+
+//-- Simple fast troop moving script v1.2,   by SeriousThisIsMe
+//-- ATTENTION!! -> This script is for RE only (not for AE)
+//-- This script will move all of the selected troops out of a town leaving only the
+//-- entered amounts behind with no need to calculate troop amounts.
+//-- 1) Copy this entire script to the "Script" tab under the town with the troops.
+//-- 2) Enter troop types from the following:  wo w s p sw a c cata t b r cp
+//--    **Be sure to enter the troops in the order you want them moved!**
+//-- 3) Enter the amounts of those troops you would like to keep in this town.
+//-- 4) Enter the coords of the destination to reinforce the troops to. You can enter
+//--    coords for a single destination if all the troops are going to the same place,
+//--    but if you want some troops to go to different places then you need to specify
+//--    the destination coords for every troop type. The destinations can be any
+//--    location that can normally be reinforced such as one of your towns, a valley
+//--    owned by you (for quick valley transfer), an alliance member's town, or a
+//--    valley owned by a member of your alliance.
+//-- 5) Click "Run"
+
+
+setarr sendTroopType "s p sw a c cata b r cp"
+setarr howManyToKeep "3000000 3000000 3000000 40000000 1000000 4000000 26000000 17000000 40000000"
+setarr sendToLocations "302,700"
+
+//===============DO=NOT=CHANGE=BELOW=THIS=LINE===============
+setsilence true
+setarray troopIntNames ["peasants", "militia", "scouter", "pikemen", "swordsmen", "archer", "lightCavalry", "heavyCavalry", "carriage", "ballista", "batteringRam", "catapult"]
+setarray troopExtNames ["Worker", "Warrior", "Scout", "Pikemen", "Swordsmen", "Archer", "Cavalry", "Cataphract", "Transporter", "Ballista", "BatteringRam", "Catapult"]
+setarray troopAbbr ["wo", "w", "s", "p", "sw", "a", "c", "cata", "t", "b", "r", "cp"]
+set t "allTroop"
+set i 0
+label checkDest
+if {$c.getCityFromCoord(%sendToLocations[{%i%}]%)$==null} set t "troop"
+set i {%i%+1}
+if {%i%<%sendToLocations.length%} goto checkDest
+set r getRallyDispatchPerArmyLimit
+if {%sendTroopType.length%==%howManyToKeep.length%} goto isValidArrLength
+echo "Error!  Number of values entered do not match in variables 'sendTroopType' and 'howManyToKeep'!"
+echo "For every troop type entered you need to enter an amount to keep, even if it's 0."
+goto exitScript
+label isValidArrLength
+if {%sendToLocations.length%==%sendTroopType.length%||%sendToLocations.length%==1} goto isValidDestinationArrLength
+echo "Error!  Number of destination coordinates entered does not match the number of troop types entered!"
+echo "You must either enter a single destination or a destination for each troop type."
+goto exitScript
+label isValidDestinationArrLength
+echo "Begin moving troops..."
+set totalTroopsMoved null
+set troopStr empty
+set currentTroopAmount 0
+set sendTroopTypeIndex -1
+label nextSendTroopType
+set sendTroopTypeIndex {%sendTroopTypeIndex%+1}
+if {!{%sendTroopType.length%>%sendTroopTypeIndex%}} goto doneSendingAllTroops
+set indexTN -1
+label findTroopName
+set indexTN {%indexTN%+1}
+if {%sendTroopType[{%sendTroopTypeIndex%}]%==%troopAbbr[{%indexTN%}]%} goto foundTroopName
+if {{%indexTN%+1}==%troopAbbr.length%} goto couldNotFindTroopName
+goto findTroopName
+label couldNotFindTroopName
+echo "WARNING!  Invalid value of ' %sendTroopType[{%sendTroopTypeIndex%}]% ' has been entered for variable 'sendTroopType'!"
+echo "--'sendTroopType' is not among [ wo w s p sw a c cata t b r cp ]. Skipping to next troop type entered."
+goto nextSendTroopType
+label foundTroopName
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}>-1} goto howManyToKeepIsValid
+echo "ATTENTION!  Invalid value of ' %howManyToKeep[{%sendTroopTypeIndex%}]% ' has been entered for troop type ' %sendTroopType[{%sendTroopTypeIndex%}]% '"
+echo "--'howManyToKeep' is set to more than your current troop count. Skipping to next troop type entered."
+goto nextSendTroopType
+label howManyToKeepIsValid
+if {%sendToLocations.length%==1} set destInd 0
+if {%sendToLocations.length%>1} set destInd %sendTroopTypeIndex%
+set destination %sendToLocations[{%destInd%}]%
+if {%totalTroopsMoved%!=null} set totalTroopsMoved "%totalTroopsMoved%, {$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%} %troopExtNames[{%indexTN%}]%(s) to (%destination%)"
+if {%totalTroopsMoved%==null} set totalTroopsMoved "{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%} %troopExtNames[{%indexTN%}]%(s) to (%destination%)"
+label startSendingTroops
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%+%currentTroopAmount%}>$c.cm.%r%(true)$} goto sendFull
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}<1&&%troopStr%==empty} goto doneSendingTroops
+if {%troopStr%==empty} goto makeNewTroopStr
+set troopStr "%troopStr%,%troopAbbr[{%indexTN%}]%:{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}"
+goto skipMakeNewTroopStr
+label makeNewTroopStr
+set troopStr "%troopAbbr[{%indexTN%}]%:{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}"
+label skipMakeNewTroopStr
+set currentTroopAmount {%currentTroopAmount%+{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}}
+iferror %sendTroopType[{%sendTroopTypeIndex%+1}]% goto skipAddAnotherTroopType
+set isNextsendToLocations false
+iferror %sendToLocations[{%sendTroopTypeIndex%+1}]% goto noNextsendToLocations
+if {!{%destination%==%sendToLocations[{%sendTroopTypeIndex%+1}]%}} goto noNextsendToLocations
+set isNextsendToLocations true
+label noNextsendToLocations
+if {{%sendToLocations.length%==1||%isNextsendToLocations%}&&{%currentTroopAmount%<$c.cm.%r%(true)$}} goto doneSendingTroops
+label skipAddAnotherTroopType
+goto sendTroopsNow
+label sendFull
+if {%troopStr%==empty} goto makeNewFullTroopStr
+set troopStr "%troopStr%,%troopAbbr[{%indexTN%}]%:{$c.cm.%r%(true)$-%currentTroopAmount%}"
+goto skipMakeNewFullTroopStr
+label makeNewFullTroopStr
+set troopStr "%troopAbbr[{%indexTN%}]%:$c.cm.%r%(true)$"
+label skipMakeNewFullTroopStr
+label sendTroopsNow
+reinforce %destination% none %troopStr%
+set currentTroopAmount 0
+set troopStr empty
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}>0} goto startSendingTroops
+label doneSendingTroops
+goto nextSendTroopType
+label doneSendingAllTroops
+if {%currentTroopAmount%>0} goto sendTroopsNow
+if {%totalTroopsMoved%==null} goto noTroopsMoved
+echo "Finished moving troops!"
+echo "A total of: %totalTroopsMoved% have been moved."
+goto exitScript
+label noTroopsMoved
+echo "ATTENTION:  No troops have been moved!"
+label exitScript
+setsilence false
+sleep 1
+loop 10
+sleep 20
+loop

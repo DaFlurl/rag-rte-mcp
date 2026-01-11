@@ -1,0 +1,69 @@
+setsilence true
+set troopType all //or enter one of wo,w,s,p,sw,a,c,cata,t,b,r or cp
+
+
+//===============DO=NOT=CHANGE=BELOW=THIS=LINE===============
+echo "Now looking for best atk hero in this account"
+set cityInList 0
+set heroAttack 0 
+label findBestHero
+set totAtk {{$m_city.allCities[{%cityInList%}].cityManager.bestAttackHero().attack$+$m_city.allCities[{%cityInList%}].cityManager.bestAttackHero().power$}*1.$m_city.allCities[{%cityInList%}].cityManager.bestAttackHero().powerBuffAdded$}
+if {%totAtk%>%heroAttack%} set Hero $m_city.allCities[{%cityInList%}].cityManager.bestAttackHero().name$
+if {%totAtk%>%heroAttack%} set City $m_city.allCities[{%cityInList%}].castle.name$
+if {%totAtk%>%heroAttack%} set heroAttack %totAtk%
+label searchInNextCity
+#echo "Finished looking at heroes in $m_city.allCities[{%cityInList%}].castle.name$"
+set cityInList {%cityInList%+1}
+if {%cityInList%<$m_city.allCities.length$} goto findBestHero
+echo "The best Attack hero in this account, %Hero%: %heroAttack% atk, is currently stationed in %City%"
+set troopType $m_city.getValue(String,%troopType%).toLowerCase()$
+if {!{%heroAttack%>1000}} goto skipLimitHeroAttack
+echo "Maximum effective hero attack is limited to 1000. Resetting entered value of %heroAttack% to 1000."
+set heroAttack 1000
+label skipLimitHeroAttack
+setarray troopNameGame ["Worker", "Warrior", "Scout", "Pikemen", "Swordsmen", "Archer", "Cavalry", "Cataphract", "Transporter", "Ballista", "BatteringRam", "Catapult"]
+setarray troopName ["wo", "w", "s", "p", "sw", "a", "c", "cata", "t", "b", "r", "cp"]
+setarray trainBaseTimes ["50", "24", "98", "150", "224", "350", "500", "1500", "1000", "3000", "4500", "6000"]
+setarray barracksLvlReq ["1", "1", "2", "2", "3", "4", "5", "7", "6", "9", "9", "10"]
+set string "<br>          <b><u>Theoretical daily production</u></b>"
+set pre1 "m_city.allCities"
+set pre2 ".cityManager.getBuildingsCountByTypeAndLvl(m_city.buildingTypes.barrack,"
+set allBarr 0
+set i 0
+label cntBarr
+set allBarr {%allBarr%+$%pre1%[%i%]%pre2%1)$}
+set i {%i%+1}
+loop $m_city.allCities.length$ cntBarr
+echo "-- Found a total of %allBarr% barracks."
+label checkDoAllTroops
+if {%troopType%==all} goto doAllTroops
+getindexof i troopName %troopType%
+if {!{%i%<0}} goto foundTroopName
+echo "--< ATTENTION >-- The entered troopType value '(%troopType%)' was not found and is invalid. Resetting to default value 'all'"
+set troopType all
+goto checkDoAllTroops
+label doAllTroops
+set i 0
+label doNextTroops
+label foundTroopName
+if {!{%i%>7}} set techLevel {$m_city.cityManager.researches[6].level$}
+if {%i%>7} set techLevel {$m_city.cityManager.researches[4].level$}
+set trainingTimeInSec {%trainBaseTimes[{%i%}]%*{0.9^%techLevel%}*{0.998605367071^%heroAttack%}}
+set reqBarrCnt 0
+set ii 0
+label getreqBarrCnt
+set reqBarrCnt {%reqBarrCnt%+$%pre1%[%ii%]%pre2%%barracksLvlReq[{%i%}]%)$}
+set ii {%ii%+1}
+loop $m_city.allCities.length$ getreqBarrCnt
+#echo "----------"
+#echo "The training time for a single %troopNameGame[{%i%}]% is {%trainingTimeInSec%\60}m:$m_city.formatNum({%trainingTimeInSec%|60},3)$s."
+#echo "You can train $m_city.formatNum({86400/%trainingTimeInSec%},0)$ %troopNameGame[{%i%}]%(s) per day per barracks."
+#echo "You have a total of %reqBarrCnt% level %barracksLvlReq[{%i%}]% or higher barracks that can train a maximum of $m_city.formatNum({{86400/%trainingTimeInSec%}*{%reqBarrCnt%}},0)$ %troopNameGame[{%i%}]%(s) per day."
+set string "%string%<br>           $m_city.formatNum({{86400/%trainingTimeInSec%}*{%reqBarrCnt%}},0)$ %troopNameGame[{%i%}]%(s)"
+if {!{%troopType%==all}} goto doneWithTroops
+set i {%i%+1}
+if {%i%<%troopName.length%} goto doNextTroops
+label doneWithTroops
+set string "%string%<br><font color='#0000FF'>    &#169; 2016-08-12 &#60;&#126;Yozhik v Tumane&#126;&#62;&#8482;</font><br>"
+echo "----------"
+set log $c.cm.warLogMsg(c.getVar(string),#CC5555)$

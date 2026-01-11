@@ -1,0 +1,31 @@
+﻿// Decompiled by AS3 Sorcerer 6.78
+// www.buraks.com/as3sorcerer
+
+//mx.containers.utilityClasses.FlexChildInfo
+
+package mx.containers.utilityClasses
+{
+    import mx.core.IUIComponent;
+    import mx.core.mx_internal; 
+
+    use namespace mx_internal;
+
+    public class FlexChildInfo 
+    {
+
+        mx_internal static const VERSION:String = "3.6.0.21751";
+
+        public var flex:Number = 0;
+        public var preferred:Number = 0;
+        public var percent:Number;
+        public var width:Number;
+        public var height:Number;
+        public var size:Number = 0;
+        public var max:Number;
+        public var min:Number;
+        public var child:IUIComponent;
+
+
+    }
+}//package mx.containers.utilityClasses
+

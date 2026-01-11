@@ -1,0 +1,366 @@
+[
+  {
+    "instruction": "How do I use the addTroopsToBuilding protocol command in Evony?",
+    "input": "",
+    "output": "The `addTroopsToBuilding` command is used to add troops to a building for defense.\n\nUsage:\n```\ncmd addTroopsToBuilding [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the addTroopsToBuilding protocol command handler",
+    "input": "",
+    "output": "```python\ndef addTroopsToBuilding(self, **params):\n    '''Add troops to a building for defense'''\n    command = {\n        'cmd': 'addTroopsToBuilding',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the armyGo protocol command in Evony?",
+    "input": "",
+    "output": "The `armyGo` command is used to send army to march to a location.\n\nUsage:\n```\ncmd armyGo [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the armyGo protocol command handler",
+    "input": "",
+    "output": "```python\ndef armyGo(self, **params):\n    '''Send army to march to a location'''\n    command = {\n        'cmd': 'armyGo',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the attackNpc protocol command in Evony?",
+    "input": "",
+    "output": "The `attackNpc` command is used to attack an npc city or valley.\n\nUsage:\n```\ncmd attackNpc [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the attackNpc protocol command handler",
+    "input": "",
+    "output": "```python\ndef attackNpc(self, **params):\n    '''Attack an NPC city or valley'''\n    command = {\n        'cmd': 'attackNpc',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the buildCombo protocol command in Evony?",
+    "input": "",
+    "output": "The `buildCombo` command is used to execute multiple building commands.\n\nUsage:\n```\ncmd buildCombo [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the buildCombo protocol command handler",
+    "input": "",
+    "output": "```python\ndef buildCombo(self, **params):\n    '''Execute multiple building commands'''\n    command = {\n        'cmd': 'buildCombo',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the cancelBuild protocol command in Evony?",
+    "input": "",
+    "output": "The `cancelBuild` command is used to cancel a building construction.\n\nUsage:\n```\ncmd cancelBuild [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the cancelBuild protocol command handler",
+    "input": "",
+    "output": "```python\ndef cancelBuild(self, **params):\n    '''Cancel a building construction'''\n    command = {\n        'cmd': 'cancelBuild',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the cancelResearch protocol command in Evony?",
+    "input": "",
+    "output": "The `cancelResearch` command is used to cancel ongoing research.\n\nUsage:\n```\ncmd cancelResearch [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the cancelResearch protocol command handler",
+    "input": "",
+    "output": "```python\ndef cancelResearch(self, **params):\n    '''Cancel ongoing research'''\n    command = {\n        'cmd': 'cancelResearch',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the changeName protocol command in Evony?",
+    "input": "",
+    "output": "The `changeName` command is used to change city or player name.\n\nUsage:\n```\ncmd changeName [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the changeName protocol command handler",
+    "input": "",
+    "output": "```python\ndef changeName(self, **params):\n    '''Change city or player name'''\n    command = {\n        'cmd': 'changeName',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the chat protocol command in Evony?",
+    "input": "",
+    "output": "The `chat` command is used to send a chat message.\n\nUsage:\n```\ncmd chat [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the chat protocol command handler",
+    "input": "",
+    "output": "```python\ndef chat(self, **params):\n    '''Send a chat message'''\n    command = {\n        'cmd': 'chat',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the collectResource protocol command in Evony?",
+    "input": "",
+    "output": "The `collectResource` command is used to collect resources from a valley.\n\nUsage:\n```\ncmd collectResource [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the collectResource protocol command handler",
+    "input": "",
+    "output": "```python\ndef collectResource(self, **params):\n    '''Collect resources from a valley'''\n    command = {\n        'cmd': 'collectResource',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the createArmy protocol command in Evony?",
+    "input": "",
+    "output": "The `createArmy` command is used to create a new army formation.\n\nUsage:\n```\ncmd createArmy [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the createArmy protocol command handler",
+    "input": "",
+    "output": "```python\ndef createArmy(self, **params):\n    '''Create a new army formation'''\n    command = {\n        'cmd': 'createArmy',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the demolishBuilding protocol command in Evony?",
+    "input": "",
+    "output": "The `demolishBuilding` command is used to demolish a building.\n\nUsage:\n```\ncmd demolishBuilding [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the demolishBuilding protocol command handler",
+    "input": "",
+    "output": "```python\ndef demolishBuilding(self, **params):\n    '''Demolish a building'''\n    command = {\n        'cmd': 'demolishBuilding',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the disbandArmy protocol command in Evony?",
+    "input": "",
+    "output": "The `disbandArmy` command is used to disband an army formation.\n\nUsage:\n```\ncmd disbandArmy [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the disbandArmy protocol command handler",
+    "input": "",
+    "output": "```python\ndef disbandArmy(self, **params):\n    '''Disband an army formation'''\n    command = {\n        'cmd': 'disbandArmy',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the getBuffList protocol command in Evony?",
+    "input": "",
+    "output": "The `getBuffList` command is used to get list of active buffs.\n\nUsage:\n```\ncmd getBuffList [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the getBuffList protocol command handler",
+    "input": "",
+    "output": "```python\ndef getBuffList(self, **params):\n    '''Get list of active buffs'''\n    command = {\n        'cmd': 'getBuffList',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the getCastleInfo protocol command in Evony?",
+    "input": "",
+    "output": "The `getCastleInfo` command is used to get detailed castle information.\n\nUsage:\n```\ncmd getCastleInfo [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the getCastleInfo protocol command handler",
+    "input": "",
+    "output": "```python\ndef getCastleInfo(self, **params):\n    '''Get detailed castle information'''\n    command = {\n        'cmd': 'getCastleInfo',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the getPackageList protocol command in Evony?",
+    "input": "",
+    "output": "The `getPackageList` command is used to get available item packages.\n\nUsage:\n```\ncmd getPackageList [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the getPackageList protocol command handler",
+    "input": "",
+    "output": "```python\ndef getPackageList(self, **params):\n    '''Get available item packages'''\n    command = {\n        'cmd': 'getPackageList',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the getTroopProduceQueue protocol command in Evony?",
+    "input": "",
+    "output": "The `getTroopProduceQueue` command is used to get troop training queue.\n\nUsage:\n```\ncmd getTroopProduceQueue [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the getTroopProduceQueue protocol command handler",
+    "input": "",
+    "output": "```python\ndef getTroopProduceQueue(self, **params):\n    '''Get troop training queue'''\n    command = {\n        'cmd': 'getTroopProduceQueue',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the heroLevelUp protocol command in Evony?",
+    "input": "",
+    "output": "The `heroLevelUp` command is used to level up a hero.\n\nUsage:\n```\ncmd heroLevelUp [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the heroLevelUp protocol command handler",
+    "input": "",
+    "output": "```python\ndef heroLevelUp(self, **params):\n    '''Level up a hero'''\n    command = {\n        'cmd': 'heroLevelUp',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the itemUse protocol command in Evony?",
+    "input": "",
+    "output": "The `itemUse` command is used to use an item from inventory.\n\nUsage:\n```\ncmd itemUse [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the itemUse protocol command handler",
+    "input": "",
+    "output": "```python\ndef itemUse(self, **params):\n    '''Use an item from inventory'''\n    command = {\n        'cmd': 'itemUse',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the moveTroop protocol command in Evony?",
+    "input": "",
+    "output": "The `moveTroop` command is used to move troops between locations.\n\nUsage:\n```\ncmd moveTroop [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the moveTroop protocol command handler",
+    "input": "",
+    "output": "```python\ndef moveTroop(self, **params):\n    '''Move troops between locations'''\n    command = {\n        'cmd': 'moveTroop',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the newBuilding protocol command in Evony?",
+    "input": "",
+    "output": "The `newBuilding` command is used to start construction of new building.\n\nUsage:\n```\ncmd newBuilding [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the newBuilding protocol command handler",
+    "input": "",
+    "output": "```python\ndef newBuilding(self, **params):\n    '''Start construction of new building'''\n    command = {\n        'cmd': 'newBuilding',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the newResearch protocol command in Evony?",
+    "input": "",
+    "output": "The `newResearch` command is used to start new research.\n\nUsage:\n```\ncmd newResearch [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the newResearch protocol command handler",
+    "input": "",
+    "output": "```python\ndef newResearch(self, **params):\n    '''Start new research'''\n    command = {\n        'cmd': 'newResearch',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the recruitHero protocol command in Evony?",
+    "input": "",
+    "output": "The `recruitHero` command is used to recruit a new hero.\n\nUsage:\n```\ncmd recruitHero [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the recruitHero protocol command handler",
+    "input": "",
+    "output": "```python\ndef recruitHero(self, **params):\n    '''Recruit a new hero'''\n    command = {\n        'cmd': 'recruitHero',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the setDefenseTroop protocol command in Evony?",
+    "input": "",
+    "output": "The `setDefenseTroop` command is used to set troops for city defense.\n\nUsage:\n```\ncmd setDefenseTroop [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the setDefenseTroop protocol command handler",
+    "input": "",
+    "output": "```python\ndef setDefenseTroop(self, **params):\n    '''Set troops for city defense'''\n    command = {\n        'cmd': 'setDefenseTroop',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the speedUp protocol command in Evony?",
+    "input": "",
+    "output": "The `speedUp` command is used to speed up construction/research/training.\n\nUsage:\n```\ncmd speedUp [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the speedUp protocol command handler",
+    "input": "",
+    "output": "```python\ndef speedUp(self, **params):\n    '''Speed up construction/research/training'''\n    command = {\n        'cmd': 'speedUp',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the trainTroop protocol command in Evony?",
+    "input": "",
+    "output": "The `trainTroop` command is used to train troops in barracks.\n\nUsage:\n```\ncmd trainTroop [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the trainTroop protocol command handler",
+    "input": "",
+    "output": "```python\ndef trainTroop(self, **params):\n    '''Train troops in barracks'''\n    command = {\n        'cmd': 'trainTroop',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "How do I use the upgradeBuilding protocol command in Evony?",
+    "input": "",
+    "output": "The `upgradeBuilding` command is used to upgrade existing building.\n\nUsage:\n```\ncmd upgradeBuilding [parameters]\n```\n\nThis is part of the Evony client-server protocol.",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  },
+  {
+    "instruction": "Implement the upgradeBuilding protocol command handler",
+    "input": "",
+    "output": "```python\ndef upgradeBuilding(self, **params):\n    '''Upgrade existing building'''\n    command = {\n        'cmd': 'upgradeBuilding',\n        **params\n    }\n    return self.send_command(command)\n```",
+    "source": "protocol_commands",
+    "category": "protocol_commands"
+  }
+]

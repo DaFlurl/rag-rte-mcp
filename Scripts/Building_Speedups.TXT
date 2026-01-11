@@ -1,0 +1,264 @@
+Carloscape skype.
+
+That's because building speed depends on your 
+pol's mayor stats (gear, base stats and starset)
+
+So what I would suggest you to do, is to do it 
+manually for one city, checking out the times.
+
+Then you could build your own script 
+based on those times
+
+for example: create f
+
+sleep 0:01
+
+usebuilditem beginner_guidelines
+
+Since they are 24 of those you could either 
+make them all at once, or make a script 
+that builds one up to 14, and loop that 
+script 23 more times
+
+10:10 AM
+yeah thats what I need thank you
+how about lv10 to lv14 what items are those
+
+Carloscape, 10:13 AM
+upgrade f level10
+
+upgrade f level11
+
+actually in order to be able to get to 10, 
+you'll need to do that starting at 9
+
+upgrade f level9
+
+since the bot won't use a michaelangelo script 
+otherwise
+
+and the build items change according 
+to how long it will take and how many 
+do you have, so you get to choose 
+between master, intermediate, primary etc.
+
+The bot lets you sort your items by speedups
+
+----------------------------------------------
+Example:
+
+upgrade f
+sleep 0:01
+usebuilditem beginner_guidelines
+loop
+----------------------------------------------
+
+[=] Speed_Ups [=]
+
+usebuilditem Beginner_Guidelines = 
+15 mins
+
+usebuilditem Primary_Guidelines = 
+1 Hour
+
+usebuilditem Intermediate_Guidelines = 
+Shorten construction or research time by 
+2 and a half hours.
+
+usebuilditem Senior_Guidelines = 
+8 Hours
+
+Master_Guidelines = 
+usebuilditem Shorten construction or research time by
+ 10 to 30 hours.
+
+usebuilditem Ultimate_Guidelines = 
+Shorten construction or research time by 30%.
+
+usebuilditem Master_Work_of_the_Stonecutter = 
+Shorten construction or research time by 50%.
+
+usebuilditem Michelangelo's_Script = 
+It's a must for further upgrades for advanced 
+buildings and resource fields.
+
+[=] construction of Fortified units [=]
+
+usebuilditem Archimedes'_Note = 
+Shorten the remaining time of construction of 
+Fortified units by 30%. 
+Limit to one application for each construction
+ in queue.
+
+[=] Market [=]
+
+Merchant_Fleet = 
+Instantly finish the transportation from Market.
+
+[=] Troop Training [=]
+
+Napoleon's_Diary = 
+Shorten remaining time of a training troops 30%. 
+Can be only applied one to a training group.
+
+usebuilditem Intermediate_Guidelines
+upgrade f level9
+sleep 0:01
+usebuilditem Intermediate_Guidelines
+upgrade f level10
+sleep 0:01
+usebuilditem Intermediate_Guidelines
+upgrade f level11
+sleep 0:01
+usebuilditem Intermediate_Guidelines
+upgrade f level12
+sleep 0:01
+usebuilditem Intermediate_Guidelines
+upgrade f level13
+sleep 0:01
+usebuilditem Intermediate_Guidelines
+upgrade f level14
+sleep 0:01
+usebuilditem Intermediate_Guidelines
+sleep 0:03
+loop
+
+build b:10:1
+build b:10:1
+build s:10:1
+build i:10:1
+build q:10
+build f:10:40
+
+Carloscape, 10:13 AM
+upgrade f level10
+
+upgrade f level11
+
+actually in order to be able to get to 10, you'll need to do that starting at 9
+
+upgrade f level9
+
+since the bot won't use a michaelangelo script otherwise
+
+and the build items change according to how long it will take and how many do you have, so you get to choose between master, intermediate, primary etc.
+
+The bot lets you sort your items by speedups
+
+demo b
+usebuilditem dynamite
+
+demo should work the same as upgrade
+
+if you are doing it via script then you need to establish level as well
+
+demo b level14
+
+sleep 0:01
+
+usebuilditem dynamite
+
+
+demo b level14
+
+sleep 0:01
+
+usebuilditem dynamite
+
+sleep 0:01
+
+usebuilditem Beginner_Guidelines
+usebuilditem Michelangelo's_Script
+usebuilditem Intermediate_Guidelines
+usebuilditem Michelangelo's_Script
+upgrade c level9
+upgrade c level10
+upgrade f level9
+upgrade f level9
+upgrade f level10
+upgrade f level11
+usebuilditem Michelangelo's_Script
+upgrade f
+sleep 0:01
+usebuilditem Intermediate_Guidelines
+upgrade f level10
+sleep 0:01
+usebuilditem Beginner_Guidelines
+sleep 1
+loop 
+
+
+// usebuilditem Intermediate_Guidelines
+// usebuilditem Michelangelo's_Script
+
+
+usebuilditem Beginner_Guidelines
+usebuilditem Michelangelo's_Script
+upgrade f
+upgrade f level3
+upgrade f level4
+upgrade f level5
+upgrade f level6
+upgrade f level7
+upgrade f level8
+upgrade f level9
+upgrade f level10
+upgrade f level11
+usebuilditem Michelangelo's_Script
+sleep 0:01
+usebuilditem Intermediate_Guidelines
+usebuilditem Beginner_Guidelines
+sleep 1
+loop 
+
+
+usebuilditem Intermediate_Guidelinesusebuilditem Beginner_Guidelines
+usebuilditem Michelangelo's_Script
+upgrade f
+usebuilditem Intermediate_Guidelines
+usebuilditem Beginner_Guidelines
+upgrade f level5
+upgrade f level6
+upgrade f level7
+upgrade f level8
+upgrade f level9
+upgrade f level10
+upgrade f level11
+usebuilditem Michelangelo's_Script
+usebuilditem Intermediate_Guidelines
+usebuilditem Beginner_Guidelines
+upgrade f level6
+upgrade f level7
+upgrade f level8
+upgrade f level9
+upgrade f level10
+upgrade f level11
+usebuilditem Michelangelo's_Script
+usebuilditem Intermediate_Guidelines
+usebuilditem Beginner_Guidelines
+loop 
+
+
+
+
+// usebuilditem Intermediate_Guidelines
+// usebuilditem Michelangelo's_Script
+
+
+// deploy reinforce 0,9  none cata:100000 f:1
+
+setarr TgtList "116,502"
+set i 0
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% c:70000 f:14000000
+repeat 1
+transport %CurrTgt% c:70000 f:14000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 3
+loop
+
+
+

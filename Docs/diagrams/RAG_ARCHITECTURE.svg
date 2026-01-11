@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="evGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+    <linearGradient id="evDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A0F0A"/>
+      <stop offset="100%" style="stop-color:#0D0705"/>
+    </linearGradient>
+    <linearGradient id="evPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9932CC"/>
+      <stop offset="100%" style="stop-color:#4B0082"/>
+    </linearGradient>
+    <linearGradient id="evBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E90FF"/>
+      <stop offset="100%" style="stop-color:#0D4F8B"/>
+    </linearGradient>
+    <linearGradient id="evGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#228B22"/>
+      <stop offset="100%" style="stop-color:#006400"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="3" dy="3" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <marker id="arw" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#FFD700"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#evDark)"/>
+  <rect x="10" y="10" width="1180" height="780" fill="none" stroke="url(#evGold)" stroke-width="3" rx="5"/>
+
+  <!-- Title -->
+  <rect x="350" y="20" width="500" height="50" fill="url(#evPurple)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="600" y="52" font-family="Georgia, serif" font-size="24" fill="#FFD700" text-anchor="middle" font-weight="bold" filter="url(#glow)">🧠 RAG KNOWLEDGE ARCHITECTURE</text>
+
+  <!-- Knowledge Sources -->
+  <g transform="translate(30, 90)">
+    <rect width="350" height="300" fill="url(#evBlue)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#shadow)"/>
+    <text x="175" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">📚 KNOWLEDGE SOURCES</text>
+
+    <rect x="15" y="50" width="155" height="70" fill="#0D1B2A" stroke="#1E90FF" rx="5"/>
+    <text x="92" y="75" font-family="Arial" font-size="11" fill="#87CEEB" text-anchor="middle" font-weight="bold">AS3 Source</text>
+    <text x="92" y="92" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">19,032 files</text>
+    <text x="92" y="107" font-family="Arial" font-size="9" fill="#8B8B83" text-anchor="middle">Decompiled client</text>
+
+    <rect x="180" y="50" width="155" height="70" fill="#0D1B2A" stroke="#1E90FF" rx="5"/>
+    <text x="257" y="75" font-family="Arial" font-size="11" fill="#87CEEB" text-anchor="middle" font-weight="bold">Protocol Docs</text>
+    <text x="257" y="92" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">301 commands</text>
+    <text x="257" y="107" font-family="Arial" font-size="9" fill="#8B8B83" text-anchor="middle">AMF3 specs</text>
+
+    <rect x="15" y="130" width="155" height="70" fill="#0D1B2A" stroke="#1E90FF" rx="5"/>
+    <text x="92" y="155" font-family="Arial" font-size="11" fill="#87CEEB" text-anchor="middle" font-weight="bold">Exploit Research</text>
+    <text x="92" y="172" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">219 findings</text>
+    <text x="92" y="187" font-family="Arial" font-size="9" fill="#8B8B83" text-anchor="middle">CVEs, vulns</text>
+
+    <rect x="180" y="130" width="155" height="70" fill="#0D1B2A" stroke="#1E90FF" rx="5"/>
+    <text x="257" y="155" font-family="Arial" font-size="11" fill="#87CEEB" text-anchor="middle" font-weight="bold">AutoEvony</text>
+    <text x="257" y="172" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">521 scripts</text>
+    <text x="257" y="187" font-family="Arial" font-size="9" fill="#8B8B83" text-anchor="middle">Bot commands</text>
+
+    <rect x="15" y="210" width="320" height="70" fill="#0D1B2A" stroke="#FFD700" rx="5"/>
+    <text x="175" y="235" font-family="Arial" font-size="11" fill="#FFD700" text-anchor="middle" font-weight="bold">Svony-3800-F16 LLM</text>
+    <text x="175" y="252" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">7B params | 8,957 training samples</text>
+    <text x="175" y="267" font-family="Arial" font-size="9" fill="#8B8B83" text-anchor="middle">Domain expert fine-tuned model</text>
+  </g>
+
+  <!-- Processing Pipeline -->
+  <g transform="translate(420, 90)">
+    <rect width="350" height="300" fill="url(#evGreen)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#shadow)"/>
+    <text x="175" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">⚙️ RAG PIPELINE</text>
+
+    <rect x="25" y="50" width="300" height="50" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="175" y="70" font-family="Arial" font-size="11" fill="#90EE90" text-anchor="middle" font-weight="bold">1. QUERY EMBEDDING</text>
+    <text x="175" y="88" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Convert query to vector (768-dim)</text>
+
+    <path d="M175 105 L175 120" stroke="#90EE90" stroke-width="2" marker-end="url(#arw)"/>
+
+    <rect x="25" y="125" width="300" height="50" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="175" y="145" font-family="Arial" font-size="11" fill="#90EE90" text-anchor="middle" font-weight="bold">2. VECTOR SEARCH</text>
+    <text x="175" y="163" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Find top-k similar documents (cosine)</text>
+
+    <path d="M175 180 L175 195" stroke="#90EE90" stroke-width="2" marker-end="url(#arw)"/>
+
+    <rect x="25" y="200" width="300" height="50" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="175" y="220" font-family="Arial" font-size="11" fill="#90EE90" text-anchor="middle" font-weight="bold">3. CONTEXT ASSEMBLY</text>
+    <text x="175" y="238" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Combine retrieved chunks with query</text>
+
+    <path d="M175 255 L175 270" stroke="#90EE90" stroke-width="2" marker-end="url(#arw)"/>
+
+    <rect x="25" y="275" width="300" height="50" fill="#003300" stroke="#FFD700" rx="5"/>
+    <text x="175" y="295" font-family="Arial" font-size="11" fill="#FFD700" text-anchor="middle" font-weight="bold">4. LLM GENERATION</text>
+    <text x="175" y="313" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Generate answer with Svony-3800</text>
+  </g>
+
+  <!-- Output/Results -->
+  <g transform="translate(810, 90)">
+    <rect width="350" height="300" fill="url(#evPurple)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#shadow)"/>
+    <text x="175" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">📤 RAG CAPABILITIES</text>
+
+    <rect x="15" y="50" width="320" height="55" fill="#2A0A3A" stroke="#DDA0DD" rx="5"/>
+    <text x="175" y="72" font-family="Arial" font-size="11" fill="#DDA0DD" text-anchor="middle" font-weight="bold">Protocol Queries</text>
+    <text x="175" y="90" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">"What does troop.produceTroop do?"</text>
+
+    <rect x="15" y="115" width="320" height="55" fill="#2A0A3A" stroke="#DDA0DD" rx="5"/>
+    <text x="175" y="137" font-family="Arial" font-size="11" fill="#DDA0DD" text-anchor="middle" font-weight="bold">Exploit Analysis</text>
+    <text x="175" y="155" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">"Find integer overflow vulnerabilities"</text>
+
+    <rect x="15" y="180" width="320" height="55" fill="#2A0A3A" stroke="#DDA0DD" rx="5"/>
+    <text x="175" y="202" font-family="Arial" font-size="11" fill="#DDA0DD" text-anchor="middle" font-weight="bold">Code Search</text>
+    <text x="175" y="220" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">"Find TFConstants troop definitions"</text>
+
+    <rect x="15" y="245" width="320" height="55" fill="#2A0A3A" stroke="#DDA0DD" rx="5"/>
+    <text x="175" y="267" font-family="Arial" font-size="11" fill="#DDA0DD" text-anchor="middle" font-weight="bold">Cross-Reference</text>
+    <text x="175" y="285" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">"What uses HeroConstants.H_IDLE?"</text>
+  </g>
+
+  <!-- Arrows between sections -->
+  <path d="M380 240 L420 240" stroke="#FFD700" stroke-width="3" marker-end="url(#arw)"/>
+  <path d="M770 240 L810 240" stroke="#FFD700" stroke-width="3" marker-end="url(#arw)"/>
+
+  <!-- Vector Database -->
+  <g transform="translate(30, 420)">
+    <rect width="550" height="180" fill="#1A0F0A" stroke="url(#evGold)" stroke-width="2" rx="8" filter="url(#shadow)"/>
+    <text x="275" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">🗄️ VECTOR DATABASE</text>
+
+    <rect x="20" y="50" width="160" height="110" fill="#0D0705" stroke="#DAA520" rx="5"/>
+    <text x="100" y="75" font-family="Arial" font-size="11" fill="#DAA520" text-anchor="middle" font-weight="bold">Embeddings</text>
+    <text x="100" y="95" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">Dimension: 768</text>
+    <text x="100" y="110" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">Model: all-MiniLM-L6</text>
+    <text x="100" y="125" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">Vectors: 50,000+</text>
+    <text x="100" y="140" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">Index: HNSW</text>
+
+    <rect x="195" y="50" width="160" height="110" fill="#0D0705" stroke="#DAA520" rx="5"/>
+    <text x="275" y="75" font-family="Arial" font-size="11" fill="#DAA520" text-anchor="middle" font-weight="bold">Chunks</text>
+    <text x="275" y="95" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">Size: 512 tokens</text>
+    <text x="275" y="110" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">Overlap: 50 tokens</text>
+    <text x="275" y="125" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">Total: 95,000+</text>
+    <text x="275" y="140" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">Metadata: ✓</text>
+
+    <rect x="370" y="50" width="160" height="110" fill="#0D0705" stroke="#DAA520" rx="5"/>
+    <text x="450" y="75" font-family="Arial" font-size="11" fill="#DAA520" text-anchor="middle" font-weight="bold">Search</text>
+    <text x="450" y="95" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">Algorithm: ANN</text>
+    <text x="450" y="110" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">Metric: Cosine</text>
+    <text x="450" y="125" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">Top-K: 5-20</text>
+    <text x="450" y="140" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">Latency: &lt;100ms</text>
+  </g>
+
+  <!-- MCP Integration -->
+  <g transform="translate(610, 420)">
+    <rect width="550" height="180" fill="#1A0F0A" stroke="url(#evGold)" stroke-width="2" rx="8" filter="url(#shadow)"/>
+    <text x="275" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">🔌 MCP INTEGRATION</text>
+
+    <rect x="20" y="50" width="250" height="110" fill="#0D0705" stroke="#87CEEB" rx="5"/>
+    <text x="145" y="75" font-family="Arial" font-size="11" fill="#87CEEB" text-anchor="middle" font-weight="bold">RAG Tools</text>
+    <text x="145" y="95" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">rag_query - Natural language Q&amp;A</text>
+    <text x="145" y="110" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">rag_search - Semantic search</text>
+    <text x="145" y="125" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">rag_index - Index documents</text>
+    <text x="145" y="140" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">cross_reference - Lookups</text>
+
+    <rect x="280" y="50" width="250" height="110" fill="#0D0705" stroke="#87CEEB" rx="5"/>
+    <text x="405" y="75" font-family="Arial" font-size="11" fill="#87CEEB" text-anchor="middle" font-weight="bold">IDE Integration</text>
+    <text x="405" y="95" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">Windsurf Cascade ✓</text>
+    <text x="405" y="110" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">Claude Desktop ✓</text>
+    <text x="405" y="125" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">VS Code + Continue ✓</text>
+    <text x="405" y="140" font-family="monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">JSON-RPC / stdio</text>
+  </g>
+
+  <!-- Performance Stats -->
+  <g transform="translate(30, 630)">
+    <rect width="1130" height="130" fill="url(#evGreen)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#shadow)"/>
+    <text x="565" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">📊 RAG PERFORMANCE METRICS</text>
+
+    <rect x="30" y="50" width="200" height="65" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="130" y="75" font-family="Arial" font-size="12" fill="#90EE90" text-anchor="middle" font-weight="bold">Query Latency</text>
+    <text x="130" y="100" font-family="Arial" font-size="20" fill="#FFFFFF" text-anchor="middle" font-weight="bold">~100ms</text>
+
+    <rect x="260" y="50" width="200" height="65" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="360" y="75" font-family="Arial" font-size="12" fill="#90EE90" text-anchor="middle" font-weight="bold">Accuracy</text>
+    <text x="360" y="100" font-family="Arial" font-size="20" fill="#FFFFFF" text-anchor="middle" font-weight="bold">94%</text>
+
+    <rect x="490" y="50" width="200" height="65" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="590" y="75" font-family="Arial" font-size="12" fill="#90EE90" text-anchor="middle" font-weight="bold">Documents</text>
+    <text x="590" y="100" font-family="Arial" font-size="20" fill="#FFFFFF" text-anchor="middle" font-weight="bold">20,000+</text>
+
+    <rect x="720" y="50" width="200" height="65" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="820" y="75" font-family="Arial" font-size="12" fill="#90EE90" text-anchor="middle" font-weight="bold">Coverage</text>
+    <text x="820" y="100" font-family="Arial" font-size="20" fill="#FFFFFF" text-anchor="middle" font-weight="bold">301/301 cmds</text>
+
+    <rect x="950" y="50" width="150" height="65" fill="#003300" stroke="#FFD700" rx="5"/>
+    <text x="1025" y="75" font-family="Arial" font-size="12" fill="#FFD700" text-anchor="middle" font-weight="bold">Status</text>
+    <text x="1025" y="100" font-family="Arial" font-size="16" fill="#90EE90" text-anchor="middle" font-weight="bold">✅ ACTIVE</text>
+  </g>
+
+  <text x="600" y="780" font-family="Arial" font-size="10" fill="#8B8B83" text-anchor="middle">Evony RTE RAG Architecture | Svony-3800-F16 + Vector Search | January 2026</text>
+</svg>

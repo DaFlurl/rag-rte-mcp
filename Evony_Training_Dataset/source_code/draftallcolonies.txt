@@ -1,0 +1,63 @@
+
+[DraftAll]
+setsilence true
+set msg "<font color='#CC2EFA'> <u>$c.player.playerInfo.userName$'s Colony draft result $c.getDateFromTime(c.getRawTime())$ ------</u></font>"
+set warLog $c.cm.warLogMsg(%msg%)$
+setarray armyTypes ["workers", "warriors", "scouts", "pikemen", "swordsmen", "archers", "cavalry", "cataphracts", "transporters", "ballista", "battering rams", "catapults"]
+setarray draftTotals ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]
+set totDraft "<br><b><u>No colony troop drafts were recieved for $c.player.playerInfo.userName$ at $c.getDateFromTime(c.getRawTime())$</u></b><br>"
+set i 0
+set c 0
+label coloLoop
+if {%i%>=$c.allCities[{%c%}].cm.colonies.length$} goto nextcity
+set cc "c.allCities[{%c%}].cm.colonies[{%i%}]"
+set r $c.af.getColonyCommands().overviewColonialCastle(c.allCities[{%c%}].castle.id,{%cc%}.castleId)$
+label waitforit
+sleep 0.1
+iferror $%r%.ok$ goto waitforit
+if {$%r%.ok$==1} gosub levy
+if {$%r%.ok$==-134} echo "$%cc%.position$: $%r%.errorMsg$ until $c.getDateFromTime(%cc%.endTime).toLocaleTimeString()$"
+label nextColo
+set i {%i%+1}
+goto coloLoop
+label levy
+set r $c.af.getColonyCommands().levyArmy(c.allCities[{%c%}].castle.id,{%cc%}.castleId)$
+label waitresponse
+sleep 0.1
+iferror $%r%.ok$ goto waitresponse
+if {$%r%.ok$==1} set msg "<font color='#CC2EFA'> ------ <b>$%r%.amount$ $%r%.armyType$</b> from $%cc%.cityName$ <i>by $%cc%.lordName$&#40;$%cc%.allianceName$&#41;</i> to your city <b>$c.allCities[{%c%}].castle.name$</b></font>"
+if {$%r%.ok$!=1} goto skip
+getindexof gotDrafted armyTypes $%r%.armyType$
+set draftTotals[%gotDrafted%] {%draftTotals[{%gotDrafted%}]%+$%r%.amount$}
+label skip
+if {$%r%.ok$==-134} set msg "<font color='#FF0000'>$%cc%.cityName$ <i>by $%cc%.lordName$&#40;$%cc%.allianceName$&#41;</i>: <b>$%r%.errorMsg$</b></font>"
+if {$%r%.ok$==-141} set msg "<font color='#FF0000'>$%cc%.cityName$ <i>by $%cc%.lordName$&#40;$%cc%.allianceName$&#41;</i>: <b>Policy Decree used but there were no troops in the city</b></font>"
+set log $c.cm.warLogMsg(%msg%)$
+set sup $c.af.getColonyCommands().setDeployTroops(c.allCities[{%c%}].castle.id,{%cc%}.castleId,c.getValue(Troop,wo:0,w:0,s:0,p:0,sw:0,a:0,c:0,cata:0,t:0,b:0,r:0,cp:0))$
+label waitSetSup
+sleep $c.lag$
+iferror $%sup%.ok$ goto waitSetSup
+if {$%sup%.ok$!=1} echo "$%cc%.position$: $%sup%.errorMsg$ on your colony $%cc%.cityName$ by $%cc%.lordName$"
+if {$%sup%.ok$==1} echo "$%cc%.position$: Suppression setting successfully changed for your colony $%cc%.cityName$ by $%cc%.lordName$"
+set supValue $c.af.getColonyCommands().getDeployTroopsInfo(c.allCities[{%c%}].castle.id,{%cc%}.castleId)$
+label waitValue
+sleep $c.lag$
+iferror $%supValue%.ok$ goto waitValue
+echo "Current sup settings for $%cc%.position$: wo:$%supValue%.troopBean.peasants$,w:$%supValue%.troopBean.militia$,s:$%supValue%.troopBean.scouter$,p:$%supValue%.troopBean.pikemen$,sw:$%supValue%.troopBean.swordsmen$,a:$%supValue%.troopBean.archer$,c:$%supValue%.troopBean.lightCavalry$,cata:$%supValue%.troopBean.heavyCavalry$,t:$%supValue%.troopBean.carriage$,b:$%supValue%.troopBean.ballista$,r::$%supValue%.troopBean.batteringRam$,cp:$%supValue%.troopBean.catapult$"
+gosubreturn
+label nextcity
+set i 0
+set c {%c%+1}
+if {%c%<$c.allCities.length$} goto coloLoop
+label summaryReport
+join checkValue draftTotals ","
+set checkValue $c.math.max(%checkValue%)$
+if {%checkValue%>0} set totDraft "<br><b><u>The total drafts for $c.player.playerInfo.userName$ $c.getDateFromTime(c.getRawTime()).date$/{$c.getDateFromTime(c.getRawTime()).month$+1} $c.getDateFromTime(c.getRawTime()).fullYear$</u></b><br>"
+set ToTi 0
+label createReportLoop
+if {%draftTotals[{%ToTi%}]%<1} goto nextArmyType
+set totDraft "%totDraft% $c.formatNum(%draftTotals[{%ToTi%}]%)$ %armyTypes[{%ToTi%}]% <br>"
+label nextArmyType
+set ToTi {%ToTi%+1}
+if {%ToTi%<%armyTypes.length%} goto createReportLoop
+set wLog $c.cm.warLogMsg(c.getVar(totDraft),#CC2EFA)$

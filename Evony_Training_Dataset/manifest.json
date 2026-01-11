@@ -1,0 +1,36 @@
+{
+  "name": "Evony Training Dataset",
+  "version": "1.0",
+  "created": "2026-01-04T20:27:02.041493",
+  "description": "Curated, deduplicated dataset for Evony AI training",
+  "stats": {
+    "files_copied": 8957,
+    "files_failed": 0,
+    "total_size": 95325063,
+    "by_category": {
+      "source_code": 7469,
+      "documentation": 0,
+      "exploits": 67,
+      "scripts": 106,
+      "keys": 1230,
+      "protocol": 85,
+      "game_data": 0,
+      "tools": 0
+    },
+    "by_quality": {
+      "EXCELLENT": 1068,
+      "GOOD": 4537,
+      "ACCEPTABLE": 3352
+    }
+  },
+  "categories": {
+    "source_code": "AS3/Python/JS source files",
+    "documentation": "Protocol docs, guides, README files",
+    "exploits": "Glitch documentation and exploit code",
+    "scripts": "Bot automation scripts",
+    "keys": "Encryption keys and algorithms",
+    "protocol": "Protocol specifications and commands",
+    "game_data": "Game mechanics data",
+    "tools": "Analysis and utility tools"
+  }
+}

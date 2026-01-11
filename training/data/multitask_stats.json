@@ -1,0 +1,15 @@
+{
+  "total_examples": 10029,
+  "train_examples": 9026,
+  "val_examples": 1003,
+  "bucket_distribution": {
+    "evidence_explain": 3434,
+    "gui_widget_map": 2692,
+    "gui_action_plan": 1149,
+    "query_synthesis": 561,
+    "evidence_summarize": 830,
+    "patch_plan": 596,
+    "patch_validate": 767
+  },
+  "generated_at": "2026-01-05T09:40:32.481437"
+}

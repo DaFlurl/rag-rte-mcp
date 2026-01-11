@@ -1,0 +1,106 @@
+# Axolotl Fine-Tuning Configuration
+# Evony Knowledge Model
+# https://github.com/OpenAccess-AI-Collective/axolotl
+
+# RECOMMENDED: Qwen2.5-14B Abliterated (uncensored, 128K context)
+base_model: huihui-ai/Qwen2.5-14B-Instruct-abliterated
+# Alternatives: huihui-ai/Qwen2.5-7B-Instruct-abliterated
+model_type: AutoModelForCausalLM
+tokenizer_type: AutoTokenizer
+trust_remote_code: true
+
+# Load in 4-bit for memory efficiency
+load_in_8bit: false
+load_in_4bit: true
+
+# Dataset
+datasets:
+  - path: Evony_Training_Data/evony_final_5k.json
+    type: alpaca
+    data_files:
+      - evony_final_5k.json
+
+dataset_prepared_path: ./prepared_data
+val_set_size: 0.1
+output_dir: ./evony_axolotl_output
+
+# Sequence settings
+sequence_len: 2048
+sample_packing: true
+pad_to_sequence_len: true
+
+# Adapter / LoRA
+adapter: qlora
+lora_model_dir:
+
+lora_r: 32
+lora_alpha: 64
+lora_dropout: 0.05
+lora_target_linear: true
+lora_fan_in_fan_out:
+lora_target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+
+# Wandb logging
+wandb_project: evony-knowledge-model
+wandb_entity:
+wandb_watch:
+wandb_name: evony-mistral-qlora
+wandb_log_model:
+
+# Training hyperparameters
+gradient_accumulation_steps: 4
+micro_batch_size: 2
+num_epochs: 3
+optimizer: adamw_bnb_8bit
+lr_scheduler: cosine
+learning_rate: 2e-5
+train_on_inputs: false
+group_by_length: false
+bf16: true
+fp16: false
+tf32: false
+gradient_checkpointing: true
+early_stopping_patience:
+resume_from_checkpoint:
+local_rank:
+logging_steps: 1
+xformers_attention:
+flash_attention: true
+
+# Evaluation
+eval_steps: 50
+eval_batch_size: 2
+save_steps: 100
+save_total_limit: 3
+
+# DeepSpeed (optional for multi-GPU)
+deepspeed:
+fsdp:
+fsdp_config:
+
+# Special tokens
+special_tokens:
+  bos_token: "<s>"
+  eos_token: "</s>"
+  unk_token: "<unk>"
+  pad_token: "<pad>"
+
+# Chat template for Mistral
+chat_template: mistral
+
+# Prompts
+system_prompt: |
+  You are an expert assistant specializing in the Evony game. You have deep knowledge of:
+  - Protocol commands and server communication
+  - Data structures (Bean classes) and their fields
+  - Game mechanics including combat, resources, and buildings
+  - AutoEvony scripting and automation
+  - Security, encryption, and exploits
+  Provide accurate, technical, and helpful responses.

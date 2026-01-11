@@ -1,0 +1,33 @@
+# Svony Automation Requirements
+
+# Core
+schedule>=1.2.0          # Task scheduling
+watchdog>=3.0.0          # File monitoring
+
+# Protocol
+pyamf>=0.8.0             # AMF protocol
+pysocks>=1.7.1           # SOCKS proxy
+
+# Network
+requests>=2.31.0         # HTTP client
+aiohttp>=3.9.0           # Async HTTP
+websockets>=12.0         # WebSocket
+
+# Data
+pandas>=2.1.0            # Data analysis
+openpyxl>=3.1.2          # Excel support
+
+# GUI
+customtkinter>=5.2.0     # Modern tkinter
+ttkthemes>=3.2.2         # Themes
+
+# CLI
+colorama>=0.4.6          # Colors
+rich>=13.7.0             # Rich text
+click>=8.1.7             # CLI framework
+
+# Crypto
+pycryptodome>=3.19.0     # Encryption
+
+# Development
+pytest>=7.4.0            # Testing

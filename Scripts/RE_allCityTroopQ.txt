@@ -1,0 +1,30 @@
+setsilence true     // || script created by Ioshik (-<~Yozhik v Tumane~>-)
+set doAllCities Yes // if No, the script will only show curent city
+set cl 1
+set castles "$m_city.allCities[0].castle.name$"
+label castlArrLoop
+set castles "%castles% $m_city.allCities[{%cl%}].castle.name$"
+set cl {%cl%+1}
+if {%cl%<$m_city.allCities.length$} goto castlArrLoop
+setarr cities %castles%
+if {%doAllCities%==Yes} set y 0
+if {!{%doAllCities%==Yes}} getindexof y cities $m_city.castle.name$
+label allCityLoop
+echo "Now checkng barracks in $m_city.allCities[{%y%}].castle.name$"
+set x 0
+iferror $m_city.allCities[{%y%}].cityManager.troopProduceQueue[{%x%}].allProduceQueueArray.length$ goto finishedCountBatches
+set QNo $m_city.allCities[{%y%}].cityManager.troopProduceQueue[{%x%}].allProduceQueueArray.length$
+label countBatches
+set x {%x%+1}
+iferror $m_city.allCities[{%y%}].cityManager.troopProduceQueue[{%x%}].allProduceQueueArray.length$ goto finishedCountBatches
+set QNo "%QNo% $m_city.allCities[{%y%}].cityManager.troopProduceQueue[{%x%}].allProduceQueueArray.length$"
+goto countBatches
+label finishedCountBatches
+echo "---------------------------------------------------------"
+echo "      Population in $m_city.allCities[{%y%}].castle.name$ $m_city.allCities[{%y%}].cityManager.resource.curPopulation$ of $m_city.allCities[{%y%}].cityManager.resource.maxPopulation$"
+echo "       Current troop training status in barracks"
+echo Barracks Q: "%QNo%"
+echo "---------------------------------------------------------"
+if {!{%doAllCities%==Yes}} goto end
+set y {%y%+1}
+if {%y%<$m_city.allCities.length$} goto allCityLoop

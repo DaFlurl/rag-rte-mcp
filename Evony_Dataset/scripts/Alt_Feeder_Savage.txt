@@ -1,0 +1,213 @@
+// alt feeder
+setarr TgtList "0,0"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 f:1000000000
+repeat 3
+transport %CurrTgt% t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+loop
+
+// ===========================================
+// Reinforce Transfer // Working
+
+
+// alt feeder
+setarr TgtList "313,694"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy reinforce none %CurrTgt%"
+reinforce %CurrTgt% none t:100000 f:1000000000
+repeat 3
+reinforce %CurrTgt% none t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+loop
+
+
+==============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// alt feeder
+setarr TgtList "574,70 535,45 456,58"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 f:1000000000
+repeat 4
+transport %CurrTgt% t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+loop
+
+// alt feeder
+setarr TgtList "303,703 304,699 301,699"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 f:1000000000
+repeat 3
+transport %CurrTgt% t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+loop
+
+
+
+// alt feeder
+setarr TgtList "574,70 535,45 456,58"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 f:1000000000
+repeat 4
+transport %CurrTgt% t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+
+
+// alt feeder
+setarr TgtList "304,699"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 f:1000000000
+repeat 4
+transport %CurrTgt% t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+loop
+
+// alt feeder
+setarr TgtList "304,699"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 f:1000000000
+repeat 4
+transport %CurrTgt% t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+loop
+
+
+// alt feeder
+setarr TgtList "304,699"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 f:1000000000
+repeat 4
+transport %CurrTgt% t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+loop
+
+// alt feeder
+setarr TgtList "574,70 535,45 456,58"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 f:1000000000
+repeat 4
+transport %CurrTgt% t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+loop
+
+
+// alt feeder
+setarr TgtList "304,699"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 f:1000000000
+repeat 4
+transport %CurrTgt% t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+loop
+
+// alt feeder
+setarr TgtList "302,696 301,699"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 f:1000000000
+repeat 5
+transport %CurrTgt% t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+loop
+
+// alt feeder
+setarr TgtList "574,70 535,45 456,58"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 f:1000000000
+repeat 4
+transport %CurrTgt% t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+loop
+
+
+// alt feeder
+setarr TgtList "304,699"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 f:1000000000
+repeat 3
+transport %CurrTgt% t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+loop
+
+
+
+
+
+
+

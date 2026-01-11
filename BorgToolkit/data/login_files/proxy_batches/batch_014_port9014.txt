@@ -1,0 +1,13 @@
+# Proxy: SOCKS4 127.0.0.1:9014
+# Accounts: 10
+
+e3alex@hotmail.com:stop123
+e44alex@hotmail.com:stop123
+e5alex@hotmail.com:stop123
+e7alex@hotmail.com:stop123
+ebraff@yahoo.com:Wombat091
+edward660@hotmail.com:fruit123
+el_yiyo4@yahoo.com:0ne2$even9
+elacetay12@yahoo.com:beplaced66
+elperl4@gmail.com:Bankai!
+elperl4@yahoo.com:ogsec7

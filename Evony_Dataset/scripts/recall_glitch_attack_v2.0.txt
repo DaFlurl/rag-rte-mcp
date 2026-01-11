@@ -1,0 +1,160 @@
+// ============================================
+// RECALL GLITCH ATTACK v2.0
+// Exploit recall timing for rapid attacks
+// For AE2/RoboEvony - Advanced Combat
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+
+// ==========================================
+// CONFIGURATION - EDIT THESE
+// ==========================================
+
+// === TARGET ===
+set targetX 0
+set targetY 0
+
+// === GLITCH SETTINGS ===
+set useRecallGlitch 1
+set recallItemCode "player.trick.qlbx"
+set glitchDelay 50
+set wavesPerGlitch 5
+
+// === TROOPS ===
+set archerCount 100000
+set useAllArchers 0
+
+// === TIMING ===
+set waveDelay 100
+set totalWaves 50
+set cooldownSeconds 30
+
+// === FEATURES ===
+set enableTroopCheck 1
+set minArchers 500000
+set enableLogging 1
+set enableSafeMode 1
+
+// === RUN MODE ===
+set runMode "loop"
+
+// ==========================================
+// DO NOT EDIT BELOW
+// ==========================================
+
+set wavesSent 0
+set glitchesUsed 0
+
+echo ============================================
+echo RECALL GLITCH ATTACK v2.0
+echo Target: %targetX%,%targetY%
+echo Glitch Mode: %useRecallGlitch%
+echo ============================================
+
+// Validate
+if targetX = 0 then if targetY = 0 then goto noTarget
+
+// Check troops
+if enableTroopCheck = 1 then gosub checkTroops
+if troopsReady = 0 then goto insufficientTroops
+
+// Main execution
+if runMode = "once" then goto runOnce
+if runMode = "loop" then goto runLoop
+goto runOnce
+
+label runOnce
+gosub executeGlitchAttack
+goto complete
+
+label runLoop
+label loopStart
+gosub executeGlitchAttack
+echo [COOLDOWN] Waiting %cooldownSeconds%s...
+set cooldownMs cooldownSeconds * 1000
+sleep %cooldownMs%
+goto loopStart
+
+// ==========================================
+// GLITCH ATTACK SEQUENCE
+// ==========================================
+label executeGlitchAttack
+echo ----------------------------------------
+echo [GLITCH] Starting recall glitch attack...
+
+set wavesSent 0
+
+label glitchLoop
+
+// Step 1: Send attack wave
+echo [WAVE %wavesSent%] Sending troops...
+getspamhero
+attack %targetX% %targetY% spamhero a%archerCount%
+sleep %glitchDelay%
+
+// Step 2: Use recall item immediately
+if useRecallGlitch = 1 then gosub useRecallItem
+
+// Step 3: Resend same troops (they're back!)
+echo [GLITCH] Resending recalled troops...
+attack %targetX% %targetY% spamhero a%archerCount%
+sleep %waveDelay%
+
+set wavesSent wavesSent + 1
+
+// Continue until wave limit
+if wavesSent < totalWaves then goto glitchLoop
+
+echo [GLITCH] Attack complete - %wavesSent% waves sent
+return
+
+// ==========================================
+// USE RECALL ITEM
+// ==========================================
+label useRecallItem
+echo [RECALL] Using recall amulet...
+
+// The trick is precise timing
+useitem %recallItemCode%
+sleep %glitchDelay%
+
+set glitchesUsed glitchesUsed + 1
+return
+
+// ==========================================
+// CHECK TROOPS
+// ==========================================
+label checkTroops
+echo [CHECK] Verifying troops...
+
+set troopsReady 1
+gettroops
+
+if archers < minArchers then set troopsReady 0
+
+if troopsReady = 1 then echo [CHECK] Archers: %archers% - READY
+if troopsReady = 0 then echo [CHECK] Archers: %archers% - NEED %minArchers%
+
+return
+
+// ==========================================
+// ERRORS
+// ==========================================
+label noTarget
+echo [ERROR] Set target coordinates!
+stop
+
+label insufficientTroops
+echo [ERROR] Not enough archers!
+echo Need: %minArchers%
+stop
+
+// ==========================================
+// COMPLETE
+// ==========================================
+label complete
+echo ============================================
+echo RECALL GLITCH ATTACK COMPLETE
+echo Waves: %wavesSent% | Glitches: %glitchesUsed%
+echo ============================================
+stop

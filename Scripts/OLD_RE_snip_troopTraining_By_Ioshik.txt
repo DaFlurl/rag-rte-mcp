@@ -1,0 +1,242 @@
+//========================== Put this part in city script ================================================================
+setsilence true		// don't change this line  || script created by Ioshik (-<~Yozhik v Tumane~>-)
+include citylist	// don't change this line either
+set hideFood Yes	// Enter Yes or No if you want the script to send remaining food to a valley after training troops
+set leave 500000	// You must leave some food behind to be used for the troop deployment
+set camp 1		// Use the format hh:mm:ss if you want to add camptime and have food recalled instantly (need higher "leave")
+set Hero scriptSelect   // Hero to be used for training, enter a name or 'scriptSelect' to let the bot find your best hero
+set train wo		// Edit for type of troops to train using wo  w  s  p  sw  a  c  cata  t  b  r  cp 
+set splitBatch Yes	// Yes will divide the population to train in all barracks, No to put all pop in a single barrack each time
+set sendHero Yes	// Yes will send the traininghero to city entered as "Next"
+set Next %cityName%	// Enter the name of the city (inside the %Atlantis% ) where the traininghero should go next
+include training	// don't change this line  || script created by Ioshik (-<~Yozhik v Tumane~>-)
+//========================== Put this part in city script ================================================================
+
+//--!--!-- These remaining lines all go in to your snippets; do not edit these lines --! --!--\\
+[citylist]
+set ci 0
+label getAllCityCoords
+iferror $m_city.allCities[{%ci%}].castle.name$ goto gotAllCityCoords
+set $m_city.allCities[{%ci%}].castle.name$ $m_city.allCities[{%ci%}].coord$
+set ci {%ci%+1}
+goto getAllCityCoords
+label gotAllCityCoords
+set HV {$m_city.cityManager.fields[0].id$|800},{$m_city.cityManager.fields[0].id$\800}
+
+[training]
+include validation
+include bestHero
+include barracksCounter
+label hideFood
+settaxrate 0
+if {%hideFood%==Yes&&$m_city.cityManager.resource.food.amount$>4000000} reinforce %HV% none t:{{$m_city.cityManager.resource.food.amount$-%leave%}/10000+1} f:{$m_city.cityManager.resource.food.amount$-%leave%} %camp%
+if {%hideFood%==Yes&&$m_city.cityManager.resource.food.amount$>4000000} goto hideFood
+include barracksAndQueues
+if {$m_city.cityManager.resource.curPopulation$<$m_city.cityManager.resource.maxPopulation$} sleep 15:00
+if {$m_city.cityManager.resource.curPopulation$<$m_city.cityManager.resource.maxPopulation$} goto hideFood
+waithero %Hero%
+if {%splitBatch%==No} goto findShortestQueue
+if {$m_city.cityManager.troopProduceQueue[0].allProduceQueueArray.length$==10} goto full
+label getFood
+if {$m_city.cityManager.maintenanceTime$>0} gosub maint
+settaxrate 0
+if {$m_city.cityManager.resource.food.amount$<10000000} recall %HV%
+waitresource f:10000000
+production 0 0 0 0
+settaxrate 0
+if {%splitBatch%==No} goto trainSingle
+print "-----------------------------------------------------------------"
+train! %train%:{$m_city.cityManager.resource.curPopulation$\%qd%} %Hero%
+print "-----------------------------------------------------------------"
+label send
+setmayor pol
+if {%sendHero%==Yes} reinforce %Next% %Hero% s:1
+goto hideFood
+label trainSingle
+print "-----------------------------------------------------------------"
+train! %train%:{$m_city.cityManager.resource.curPopulation$\%qd%} %Hero% %B[{%Bi%}]%
+print "-----------------------------------------------------------------"
+goto send
+label findShortestQueue
+iferror %Bi% set Bi 0
+set sQi 0
+set sQb 10
+label searchLoop
+if {$m_city.cityManager.troopProduceQueue[{%sQi%}].allProduceQueueArray.length$<%sQb%} set Bi %sQi%
+set sQb $m_city.cityManager.troopProduceQueue[{%Bi%}].allProduceQueueArray.length$
+set sQi {%sQi%+1}
+if {%sQi%<%BarracksLength%} goto searchLoop
+if {%sQb%==10} goto full
+echo "Barrack no %Bi% has the smallest number of batches: $m_city.cityManager.troopProduceQueue[{%Bi%}].allProduceQueueArray.length$: and will be used for the next troops training"
+goto getFood
+label full
+echo "-"
+echo "-"
+echo "-"
+if {%sendHero%==Yes} echo "All barracks are full, Traininghero is sent dirctly to %Next%"
+if {%sendHero%==No} echo "All barracks are full, script will pause for 1h"
+echo "-"
+if {%sendHero%==Yes} reinforce %Next% %Hero% s:1
+if {%sendHero%==No} sleep 1:00:00
+echo "-"
+goto hideFood
+label maint
+echo "Server maintenance is due in {{{$m_city.cityManager.maintenanceTime$-$m_city.getRawTime()$}\1000}\60}m:{{{$m_city.cityManager.maintenanceTime$-$m_city.getRawTime()$}\1000}|60}s"
+echo "The script will pause to avoid having food arriving in the city during maint"
+echo "The activity is scheduled to resume 30minutes after beginning of maint"
+sleep {{{$m_city.cityManager.maintenanceTime$-$m_city.getRawTime()$}/1000}+1800}
+gosubreturn
+
+[bestHero]
+setsilence true
+set troopType %train%
+set cityInList 0
+if {!{%Hero%==scriptSelect}} goto userSelectedHero
+echo "Now looking for best atk hero in this account"
+set heroAttack 0 
+label findBestHero
+set totAtk {{$m_city.allCities[{%cityInList%}].cityManager.bestAttackHero().attack$+$m_city.allCities[{%cityInList%}].cityManager.bestAttackHero().power$}*1.$m_city.cityManager.bestAttackHero().powerBuffAdded$}
+if {%totAtk%>%heroAttack%} set Hero $m_city.allCities[{%cityInList%}].cityManager.bestAttackHero().name$
+if {%totAtk%>%heroAttack%} set City $m_city.allCities[{%cityInList%}].castle.name$
+if {%totAtk%>%heroAttack%} set heroAttack %totAtk%
+label searchInNextCity
+echo "Finished looking at heroes in $m_city.allCities[{%cityInList%}].castle.name$"
+set cityInList {%cityInList%+1}
+if {%cityInList%<$m_city.allCities.length$} goto findBestHero
+echo "The best Attack hero in this account, %Hero%: %heroAttack% atk, is currently stationed in %City%"
+goto calculateToopTrainingTime
+label userSelectedHero
+if {!{%Hero%==$m_city.cityManager.bestAttackHero().name$}} goto findSelectedHero
+set heroAttack {{$m_city.cityManager.bestAttackHero().attack$+$m_city.cityManager.bestAttackHero().power$}*1.$m_city.cityManager.bestAttackHero().powerBuffAdded$}
+set City $m_city.castle.name$
+echo "You have chosen wisely! Your selected hero is the best attack hero in this town"
+goto calculateToopTrainingTime
+label findSelectedHero
+echo "<ATTENTION!> The hero you have selected is not the best attack hero in this town!!"
+echo "The hero might be in another city! Hang on, I'll find it for you..."
+set heroInList 0
+label searchAllCities
+if {%Hero%==$m_city.allCities[%cityInList%].cityManager.heroes[%heroInList%].name$} goto foundSelectedHero
+set heroInList {%heroInList%+1}
+if {%heroInList%<$m_city.allCities[{%cityInList%}].cityManager.heroes.length$} goto searchAllCities
+set heroInList 0
+set cityInList {%cityInList%+1}
+if {%cityInList%<$m_city.allCities.length$} goto searchAllCities
+echo "The hero you specified can not be found in any of your cities"
+goto end
+label foundSelectedHero
+set heroAttack {{$m_city.allCities[{%cityInList%}].cityManager.heroes[%heroInList%].attack$+$m_city.allCities[{%cityInList%}].cityManager.heroes[%heroInList%].power$}*1.$m_city.allCities[%cityInList%].cityManager.heroes[%heroInList%].powerBuffAdded$}
+set City $m_city.allCities[%cityInList%].castle.name$
+echo "Your selcetd trainignhero is curently located in %City%"
+if {%City%==$m_city.castle.name$} echo "--< It is however not the best attack hero in this tow, consider choosing another hero >--"
+label calculateToopTrainingTime
+set troopType $m_city.getValue(String,%troopType%).toLowerCase()$
+if {!{%heroAttack%>1000}} goto skipLimitHeroAttack
+echo "Maximum effective hero attack is limited to 1000. Resetting entered value of %heroAttack% to 1000."
+set heroAttack 1000
+label skipLimitHeroAttack
+setarray troopNameGame ["Worker", "Warrior", "Scout", "Pikemen", "Swordsmen", "Archer", "Cavalry", "Cataphract", "Transporter", "Ballista", "BatteringRam", "Catapult"]
+setarray troopName ["wo", "w", "s", "p", "sw", "a", "c", "cata", "t", "b", "r", "cp"]
+setarray trainBaseTimes ["50", "24", "98", "150", "224", "350", "500", "1500", "1000", "3000", "4500", "6000"]
+setarray barracksLvlReq ["1", "1", "2", "2", "3", "4", "5", "7", "6", "9", "9", "10"]
+setarray barrCntPerLvl ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]
+label checkValidTroopName
+getindexof i troopName %troopType%
+if {!{%i%<0}} goto validTroopName
+echo "--< ATTENTION >-- The entered troopType value '(%troopType%)' was not found and is invalid. Check your troop type in 'set train ?' and make sure it has a valid entry"
+goto end
+label validTroopName
+echo "- Counting barracks of each level for $m_city.allCities.length$ cities. This may take a minute, please wait..."
+set i 0
+label checkBarracksInCity
+set ii $m_city.allCities[{%i%}].cityManager.buildings.length$
+label checkNextBuildingIndex
+set ii {%ii%-1}
+if {%ii%<0} goto endOfBuildings
+if {$m_city.allCities[{%i%}].cityManager.buildings[{%ii%}].positionId$>40} goto endOfBuildings
+if {!{$m_city.allCities[{%i%}].cityManager.buildings[{%ii%}].name$==Barracks}} goto checkNextBuildingIndex
+set barrCntPerLvl[{$m_city.allCities[{%i%}].cityManager.buildings[{%ii%}].level$}] {%barrCntPerLvl[{$m_city.allCities[{%i%}].cityManager.buildings[{%ii%}].level$}]%+1}
+goto checkNextBuildingIndex
+label endOfBuildings
+echo "-- Completed counting barracks in $m_city.allCities[{%i%}].castle.name$"
+set i {%i%+1}
+if {%i%<$m_city.allCities.length$} goto checkBarracksInCity
+echo "-- Found a total of {%barrCntPerLvl[1]%+%barrCntPerLvl[2]%+%barrCntPerLvl[3]%+%barrCntPerLvl[4]%+%barrCntPerLvl[5]%+%barrCntPerLvl[6]%+%barrCntPerLvl[7]%+%barrCntPerLvl[8]%+%barrCntPerLvl[9]%+%barrCntPerLvl[10]%} barracks."
+label doneWithBarracks
+getindexof i troopName %troopType%
+if {!{%i%>7}} set techLevel {$m_city.cityManager.researches[6].level$}
+if {%i%>7} set techLevel {$m_city.cityManager.researches[4].level$}
+set trainingTimeInSec {%trainBaseTimes[{%i%}]%*{0.9^%techLevel%}*{0.998605367071^%heroAttack%}}
+set reqBarracksCount 0
+set ii %barracksLvlReq[{%i%}]%
+label getReqBarracksCount
+set reqBarracksCount {%reqBarracksCount%+%barrCntPerLvl[{%ii%}]%}
+set ii {%ii%+1}
+if {%ii%<%barrCntPerLvl.length%} goto getReqBarracksCount
+echo "----------"
+echo "Your best atk hero is %Hero% with an atk value of %heroAttack%"
+echo "%Hero% is curently staioned in %City%"
+echo "The training time for a single %troopNameGame[{%i%}]% is {%trainingTimeInSec%\60}m {%trainingTimeInSec%|60}s."
+echo "You can train {{86400/%trainingTimeInSec%}\1} %troopNameGame[{%i%}]%(s) per day per barracks."
+echo "You have a total of %reqBarracksCount% level %barracksLvlReq[{%i%}]% or higher barracks that can train a maximum of {{{86400/%trainingTimeInSec%}*{%reqBarracksCount%}}\1} %troopNameGame[{%i%}]%(s) per day."
+echo "----------"
+gosubreturn
+
+[validation]
+if {{!{%hideFood%==Yes}}&&{!{%hideFood%==No}}} echo "<--Attention!--> %hideFood% is not a valid value for the variable hideFood; use Yes or No"
+if {{!{%hideFood%==Yes}}&&{!{%hideFood%==No}}} goto end
+if {{!{%splitBatch%==Yes}}&&{!{%splitBatch%==No}}} echo "<--Attention!--> %splitBatch% is not a valid value for the variable splitBatch; use Yes or No"
+if {{!{%splitBatch%==Yes}}&&{!{%splitBatch%==No}}} goto end
+if {{!{%sendHero%==Yes}}&&{!{%sendHero%==No}}} echo "<--Attention!--> %sendHero% is not a valid value for the variable sendHero; use Yes or No"
+if {{!{%sendHero%==Yes}}&&{!{%sendHero%==No}}} goto end
+
+[barracksCounter]
+echo "-"
+if {%hideFood%==Yes} echo "Preparing $m_city.castle.name$ for training troops Using food hidden at %HV%"
+if {%hideFood%==No} echo "Preparing $m_city.castle.name$ for training troops without including food hiding"
+echo "This only takes a few minutes so please be patient"
+echo "-"
+set BarracksLength $m_city.cityManager.troopProduceQueue.length$
+set barracksPosIdsStr $m_city.cityManager.troopProduceQueue[0].positionId$
+set ivn 1
+label produceQueueLoop
+set barracksPosIdsStr "%barracksPosIdsStr% $m_city.cityManager.troopProduceQueue[{%ivn%}].positionId$"
+set ivn {%ivn%+1}
+if {%ivn%<$m_city.cityManager.troopProduceQueue.length$} goto produceQueueLoop
+setarr B %barracksPosIdsStr%
+setarr tT "wo w s p sw a c cata t b r cp"
+setarr qds "1 1 1 1 1 2 3 6 4 5 10 8"
+setarr names "Workers Warriors Scouts Pikemen Swordsmen Archers Cavalry Cataphract Transporters Ballistae Batteringrams Catapults"
+getindexof ix tT %train%
+set qd %qds[{%ix%}]%
+set name %names[{%ix%}]%
+echo "Ctiy $m_city.castle.name$ has %BarracksLength% Barracks for troop training"
+if {%splitBatch%==Yes} echo "All barracks will be used in each batch for training %name% with hero %Hero%"
+if {%splitBatch%==Yes} echo "When the city population reches $m_city.cityManager.resource.maxPopulation$ the script will train {$m_city.cityManager.resource.maxPopulation$/%qd%\%BarracksLength%} %name% in each Barrack (tot: {$m_city.cityManager.resource.maxPopulation$\%qd%})"
+iferror %trainingTimeInSec% goto skipTime
+if {%splitBatch%==Yes} echo "That batch will be finished in {{{{$m_city.cityManager.resource.maxPopulation$/%qd%\%BarracksLength%}*%trainingTimeInSec%}/60}\60} h {{{{{$m_city.cityManager.resource.maxPopulation$/%qd%\%BarracksLength%}*%trainingTimeInSec%}/60}|60}\1} min {{{{$m_city.cityManager.resource.maxPopulation$/%qd%\%BarracksLength%}*%trainingTimeInSec%}|60}\1} s"
+label skipTime
+if {%splitBatch%==No} echo "All population will be used to make one big batch of {$m_city.cityManager.resource.maxPopulation$\1} %name% in a single barrack"
+iferror %trainingTimeInSec% goto skipTime2
+if {%splitBatch%==No} echo "That batch will be finished in {{{{$m_city.cityManager.resource.maxPopulation$\%qd%}*%trainingTimeInSec%}/60}\60} h {{{{{$m_city.cityManager.resource.maxPopulation$\%qd%}*%trainingTimeInSec%}/60}|60}\1} min {{{{$m_city.cityManager.resource.maxPopulation$\%qd%}*%trainingTimeInSec%}|60}\1} s"
+label skipTime2
+gosubreturn
+
+[barracksAndQueues]
+set x 1
+set QNo $m_city.cityManager.troopProduceQueue[{0}].allProduceQueueArray.length$
+label countBatches
+set QNo "%QNo% $m_city.cityManager.troopProduceQueue[{%x%}].allProduceQueueArray.length$"
+set x {%x%+1}
+iferror $m_city.cityManager.troopProduceQueue[{%x%}].allProduceQueueArray.length$ goto finishedCountBatches
+goto countBatches
+label finishedCountBatches
+production 0 0 0 0
+settaxrate 0
+echo "---------------------------------------------------------"
+echo "      Population in $m_city.castle.name$ $m_city.cityManager.resource.curPopulation$ of $m_city.cityManager.resource.maxPopulation$"
+echo "       Curent troop training status in barracks"
+echo Barracks Q: "%QNo%"
+echo "---------------------------------------------------------"
+production 100 100 100 100 
+// || script created by Ioshik (-<~Yozhik v Tumane~>-) ||

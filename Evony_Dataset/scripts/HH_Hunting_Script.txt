@@ -1,0 +1,933 @@
+// -- HH Hunting Via. Statistics
+//-- This script will attempt to identify any non player owned Historic Heroes
+//-- that are still avaliable for capture from NPC's by searching through the hero
+//-- statistics to validate player ownership. The list of names was collected from
+//-- within the game to ensure it is error free. The base stats of the heroes in the
+//-- "prioritizeHeroOrder" option comes from the list at 'www.evonyadvancedguide.com'
+//-- so may contain incorrect or missing data. If you set 'searchForHeroesList' to
+//-- 'all' it will attempt to collect the ownership data for the entire list of heroes
+//-- in descending order sorted by the value type you prefer by entering one of the
+//-- six following options for 'prioritizeHeroOrder'. The available options to choose
+//-- from are...  [  id | alpha | pol | atk | int | lead  ]          If you optionally
+//-- set 'searchForHeroesList' to a list of heroId's instead of searching for all
+//-- HH's, it will always search for them in the order you entered them into the list
+//-- no matter the specified search order. The entered list must have at least 1 valid
+//-- heroId, can contain as many valid heroId's as you choose, and must be in the
+//-- same exact format as this example list...  [  "33 683 27 7 543  279 17"  ]
+//-- You can also elect to show more than just the owner's name for heroes that are
+//-- currently owned to include additional player stats (such as: alliance name,
+//-- prestige, honor, star level, rank, title, etc.) if you wish to use this to hunt
+//-- for player owned HH's instead. Just set 'showExtraOwnerInfoIfOwned' to 'true'
+//-- to show the extra info and set it to 'false' to not show the extra info. Turning
+//-- this option on will almost double the total time needed for this script to
+//-- complete a full search of all HH's which is why it's optional. Finally, you can
+//-- optionally choose to show results only for those HH's owned by a specific player
+//-- by entering a single player's name for the variable 'showResultsForPlayer'. If
+//-- you enter an invalid player name it will attempt to default to 'all' and
+//-- continue to work normally. Also, by specifying a player, it will set
+//-- 'showExtraOwnerInfoIfOwned' to 'false'. It will always alert you if it discovers
+//-- an unowned HH no matter the settings entered.
+
+
+set searchForHeroesList "all"
+set prioritizeHeroOrder atk
+set showExtraOwnerInfoIfOwned false
+set showResultsForPlayer "all"
+
+set compForLagTimeSeconds 3
+set checkAgainLoopsForUnownedHh 4
+
+
+//===============DO=NOT=CHANGE=BELOW=THIS=LINE===============
+setsilence true
+ifgoto ( {{%prioritizeHeroOrder%!=id}&&{%prioritizeHeroOrder%!=Id}&&{%prioritizeHeroOrder%!=II}&&{%prioritizeHeroOrder%!=pol}&&{%prioritizeHeroOrder%!=Pol}&&{%prioritizeHeroOrder%!=POL}&&{%prioritizeHeroOrder%!=atk}&&{%prioritizeHeroOrder%!=Atk}&&{%prioritizeHeroOrder%!=ATK}&&{%prioritizeHeroOrder%!=int}&&{%prioritizeHeroOrder%!=Int}&&{%prioritizeHeroOrder%!=INT}&&{%prioritizeHeroOrder%!=lead}&&{%prioritizeHeroOrder%!=Lead}&&{%prioritizeHeroOrder%!=LEAD}&&{%prioritizeHeroOrder%!=alpha}&&{%prioritizeHeroOrder%!=Alpha}&&{%prioritizeHeroOrder%!=ALPHA}} = true ) errorWithprioritizeHeroOrder
+ifgoto ( {{%showExtraOwnerInfoIfOwned%!=True}&&{%showExtraOwnerInfoIfOwned%!=true}&&{%showExtraOwnerInfoIfOwned%!=TRUE}&&{%showExtraOwnerInfoIfOwned%!=False}&&{%showExtraOwnerInfoIfOwned%!=false}&&{%showExtraOwnerInfoIfOwned%!=FALSE}} = true ) errorShowExtraOwnerInfoIfOwned
+iferror $m_city.accountTab.statInfo.heroes.beansArray.length$ printHeroStatsError
+set showProgressAt 10
+ifgoto ( {{%showResultsForPlayer%==all}||{%showResultsForPlayer%==All}||{%showResultsForPlayer%==ALL}} = true ) showResultsForPlayerIsValid
+setarr titlesArr "Civilian Knight Baronet Baron Viscount Earl Marquis Duke Furstin Prinzessin"
+set checkPlayerAgainIndex 0
+label checkPlayerAgain1
+set statPlayersPageIndex 0
+label fetchNewPlayersPage1
+set statPlayersPageIndex {%statPlayersPageIndex%+1}
+set junkVar2 $m_city.accountTab.statInfo.players.fetchPage(%statPlayersPageIndex%,2,%showResultsForPlayer%)$
+sleep 3
+repeat {{%compForLagTimeSeconds%\3}*{%checkPlayerAgainIndex%+1}}
+sleep {%compForLagTimeSeconds%|3}
+set beansPlayersArrayIndex -1
+label getNextPlayerInStats1
+set beansPlayersArrayIndex {%beansPlayersArrayIndex%+1}
+ifgoto ( %beansPlayersArrayIndex% >= $m_city.accountTab.statInfo.players.beansArray.length$ ) doneWithThisPlayersPage1
+ifgoto ( $m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.userName$ != %showResultsForPlayer% ) getNextPlayerInStats1
+echo "--"
+echo "--------------------"
+echo "==> Preparing to look for Historic heroes owned by %showResultsForPlayer% of $m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.alliance$ [rank=$m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.ranking$] [prestige=$m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.prestige$] [honor=$m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.honor$] [starset=$m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.starlv$] [cities=$m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.castleCount$] [title=%titlesArr[{$m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.titleId$}]%] [office=$m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.office$] [flag=$m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.flag$]"
+echo "--------------------"
+set showProgressAt 50
+set showExtraOwnerInfoIfOwned false
+goto showResultsForPlayerIsValid
+label doneWithThisPlayersPage1
+ifgoto ( %statPlayersPageIndex% < $m_city.accountTab.statInfo.players.totalPage$ ) fetchNewPlayersPage1
+set checkPlayerAgainIndex {%checkPlayerAgainIndex%+1}
+ifgoto ( %checkPlayerAgainIndex% < {%checkAgainLoopsForUnownedHh%+1} ) checkPlayerAgain1
+echo "--"
+echo "ATTENTION -- Invalid player name entered for 'showResultsForPlayer'. Player not found in Stats. Please check for any typos or extra spaces. Resetting to the default value 'all' instead."
+echo "--"
+set showResultsForPlayer "all"
+label showResultsForPlayerIsValid
+ifgoto ( {{%showExtraOwnerInfoIfOwned%==False}||{%showExtraOwnerInfoIfOwned%==false}||{%showExtraOwnerInfoIfOwned%==FALSE}} = true ) skipShowExtraOwnerInfoIfOwned1
+iferror $m_city.accountTab.statInfo.players.beansArray.length$ printPlayersStatsError
+setarr titlesArr "Civilian Knight Baronet Baron Viscount Earl Marquis Duke Furstin Prinzessin"
+label skipShowExtraOwnerInfoIfOwned1
+ifgoto ( %compForLagTimeSeconds% >= 3 ) compForLagTimeSecondsIsValid
+echo "ATTENTION -- 'compForLagTimeSeconds' has been set too low. Resetting to the minimum required value of '3' seconds."
+set compForLagTimeSeconds 3
+label compForLagTimeSecondsIsValid
+echo "-- Now creating the prioritized list of Historic Heroes. This can take up to a minute."
+gosub setHhArr
+ifgoto ( {{%searchForHeroesList%==all}||{%searchForHeroesList%==All}||{%searchForHeroesList%==ALL}} = true ) doAllHeroes
+setarr preSortByArr "%searchForHeroesList%"
+set preSortByArrIndex 0
+label verifyPreSortByArr
+iferror %hhArr[{%preSortByArr[{%preSortByArrIndex%}]%}]% errorInPreSortByArr
+iferror %sortByStr% createSortByStr
+set sortByStr "%sortByStr% %preSortByArr[{%preSortByArrIndex%}]%"
+goto skipCreateSortByStr
+label createSortByStr
+set sortByStr %preSortByArr[{%preSortByArrIndex%}]%
+label skipCreateSortByStr
+goto skipErrorInPreSortByArr
+label errorInPreSortByArr
+echo "--"
+echo "ATTENTION -- Invalid value of '%preSortByArr[{%preSortByArrIndex%}]%' entered for 'searchForHeroesList' at index %preSortByArrIndex%. Check for any typos or extra spaces."
+echo "-- HeroId does not exist! Skipping invalid value and moving to the next entry."
+echo "--"
+label skipErrorInPreSortByArr
+set preSortByArrIndex {%preSortByArrIndex%+1}
+ifgoto ( %preSortByArrIndex% < %preSortByArr.length% ) verifyPreSortByArr
+iferror %sortByStr% sortByStrIsEmtpy
+setarr sortByArr "%sortByStr%"
+goto skipSortByStrIsEmtpy
+label sortByStrIsEmtpy
+echo "--"
+echo "ATTENTION -- No valid heroId's entered for 'searchForHeroesList'. Please check for any typos or extra spaces. At least one valid heroId must be entered, or use the shortcut keyword 'all' to check for all Historic Heroes. Resetting to the default value 'all' instead."
+echo "--"
+goto doAllHeroes
+label skipSortByStrIsEmtpy
+goto skipDoAllHeroes
+label doAllHeroes
+gosub setSortByArr
+label skipDoAllHeroes
+set ownedHhCount 0
+set unownedHhCount 0
+echo "-- Now searching for %sortByArr.length% Historic Heroes and checking for ownership in stats..."
+echo "--------------------"
+set index 0
+label checkNextHH
+set currentId %sortByArr[{%index%}]%
+set heroNameStr "%hhArr[{%currentId%}]%"
+gosub checkHeroInStats
+gosub addHeroId
+set index {%index%+1}
+ifgoto ( {%index%|%showProgressAt%} != 0 ) skipPostProgress
+echo "-- Finished checking for %index% out of %sortByArr.length% Historic Heroes. Found %ownedHhCount% owned and %unownedHhCount% unowned so far."
+echo "--------------------"
+label skipPostProgress
+ifgoto ( %index% < %sortByArr.length% ) checkNextHH
+goto allDone
+goto exitScript
+label addHeroId
+ifgoto ( %isHeroOwned% = false ) heroIsFree
+set ownedHhCount {%ownedHhCount%+1}
+goto exitAddHeroId
+label heroIsFree
+iferror %unownedHhNameList% createUnownedHhNameList
+set unownedHhNameList "%unownedHhNameList% | %heroNameStr%"
+goto skipCreateUnownedHhNameList
+label createUnownedHhNameList
+set unownedHhNameList "---  %heroNameStr%"
+label skipCreateUnownedHhNameList
+set unownedHhCount {%unownedHhCount%+1}
+label exitAddHeroId
+gosubreturn
+goto exitScript
+label checkHeroInStats
+set doubleCheckIndex 0
+set checkAgainIndex 0
+label checkAgain
+setarr heroNameArr "%heroNameStr%"
+set sStr %heroNameArr[0]%
+goto skipNameIsTooCommon
+label nameIsTooCommon
+iferror %heroNameArr[1]% skipNameIsTooCommon
+set sStr "%heroNameArr[0]% %heroNameArr[1]%"
+label skipNameIsTooCommon
+set statPageIndex 0
+label fetchNewPage
+set statPageIndex {%statPageIndex%+1}
+set junkVar1 $m_city.accountTab.statInfo.heroes.fetchPage(%statPageIndex%,3,%sStr%)$
+sleep 3
+repeat {%compForLagTimeSeconds%\3}
+sleep {%compForLagTimeSeconds%|3}
+ifgoto ( %currentId% = 146 ) nameIsCaesar
+ifgoto ( $m_city.accountTab.statInfo.heroes.totalPage$ > 5 ) nameIsTooCommon
+label nameIsCaesar
+set beansArrayIndex -1
+label getNextHeroInStats
+set beansArrayIndex {%beansArrayIndex%+1}
+ifgoto ( %beansArrayIndex% >= $m_city.accountTab.statInfo.heroes.beansArray.length$ ) doneWithThisPage
+ifgoto ( $m_city.accountTab.statInfo.heroes.beansArray[{%beansArrayIndex%}].rawData.isHero$ != 1 ) getNextHeroInStats
+ifgoto ( {{{%currentId%>513}&&{%currentId%<519}}||{%currentId%==576}||{%currentId%==578}||{%currentId%==584}||{%currentId%==586}||{%currentId%==615}||{%currentId%==622}||{%currentId%==623}||{%currentId%==649}} = true ) doOtherCompare
+ifgoto ( $m_city.accountTab.statInfo.heroes.beansArray[{%beansArrayIndex%}].rawData.name$ != %heroNameStr% ) getNextHeroInStats
+goto skipDoOtherCompare
+label doOtherCompare
+ifgoto ( {$m_city.accountTab.statInfo.heroes.beansArray[{%beansArrayIndex%}].rawData.name$!=%heroNameStr%} = true ) getNextHeroInStats
+label skipDoOtherCompare
+ifgoto ( {{%currentId%==424}||{%currentId%==51}||{%currentId%==44}||{%currentId%==26}} = false ) skipDoublesCheck
+ifgoto ( %doubleCheckIndex% > 0 ) skipDoublesCheck
+set doubleCheckIndex {%doubleCheckIndex%+1}
+goto getNextHeroInStats
+label skipDoublesCheck
+ifgoto ( {{%showExtraOwnerInfoIfOwned%==False}||{%showExtraOwnerInfoIfOwned%==false}||{%showExtraOwnerInfoIfOwned%==FALSE}} = true ) skipShowExtraOwnerInfoIfOwned
+set currentHhStats "[$m_city.accountTab.statInfo.heroes.beansArray[{%beansArrayIndex%}].rawData.grade$] [$m_city.accountTab.statInfo.heroes.beansArray[{%beansArrayIndex%}].rawData.management$/$m_city.accountTab.statInfo.heroes.beansArray[{%beansArrayIndex%}].rawData.power$/$m_city.accountTab.statInfo.heroes.beansArray[{%beansArrayIndex%}].rawData.stratagem$]"
+set currentHhOwner "$m_city.accountTab.statInfo.heroes.beansArray[{%beansArrayIndex%}].rawData.kind$"
+set checkPlayerAgainIndex 0
+label checkPlayerAgain
+set statPlayersPageIndex 0
+label fetchNewPlayersPage
+set statPlayersPageIndex {%statPlayersPageIndex%+1}
+set junkVar2 $m_city.accountTab.statInfo.players.fetchPage(%statPlayersPageIndex%,2,%currentHhOwner%)$
+sleep 3
+repeat {{%compForLagTimeSeconds%\3}*{%checkPlayerAgainIndex%+1}}
+sleep {%compForLagTimeSeconds%|3}
+set beansPlayersArrayIndex -1
+label getNextPlayerInStats
+set beansPlayersArrayIndex {%beansPlayersArrayIndex%+1}
+ifgoto ( %beansPlayersArrayIndex% >= $m_city.accountTab.statInfo.players.beansArray.length$ ) doneWithThisPlayersPage
+ifgoto ( $m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.userName$ != %currentHhOwner% ) getNextPlayerInStats
+echo "==> [%currentId%] %heroNameStr% %currentHhStats% is owned by %currentHhOwner% of $m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.alliance$ [rank=$m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.ranking$] [prestige=$m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.prestige$] [honor=$m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.honor$] [starset=$m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.starlv$] [cities=$m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.castleCount$] [title=%titlesArr[{$m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.titleId$}]%] [office=$m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.office$] [flag=$m_city.accountTab.statInfo.players.beansArray[{%beansPlayersArrayIndex%}].rawData.flag$]"
+echo "--------------------"
+goto skipDoNotShowExtraOwnerInfoIfOwned
+label doneWithThisPlayersPage
+ifgoto ( %statPlayersPageIndex% < $m_city.accountTab.statInfo.players.totalPage$ ) fetchNewPlayersPage
+set checkPlayerAgainIndex {%checkPlayerAgainIndex%+1}
+ifgoto ( %checkPlayerAgainIndex% < {%checkAgainLoopsForUnownedHh%+1} ) checkPlayerAgain
+echo "=>===>  %heroNameStr% %currentHhStats% is owned by %currentHhOwner%"
+echo "=>===>  ATTENTION - Failed to retrieve extra Owner info from stats. Please try again manually after the script has completed running."
+echo "--------------------"
+goto skipDoNotShowExtraOwnerInfoIfOwned
+label skipShowExtraOwnerInfoIfOwned
+ifgoto ( {{%showResultsForPlayer%!=all}&&{%showResultsForPlayer%!=All}&&{%showResultsForPlayer%!=ALL}&&{%showResultsForPlayer%!=$m_city.accountTab.statInfo.heroes.beansArray[{%beansArrayIndex%}].rawData.kind$}} = true ) skipDoNotShowExtraOwnerInfoIfOwned
+echo "=>===>  [%currentId%] %heroNameStr% [$m_city.accountTab.statInfo.heroes.beansArray[{%beansArrayIndex%}].rawData.grade$] $m_city.accountTab.statInfo.heroes.beansArray[{%beansArrayIndex%}].rawData.management$/$m_city.accountTab.statInfo.heroes.beansArray[{%beansArrayIndex%}].rawData.power$/$m_city.accountTab.statInfo.heroes.beansArray[{%beansArrayIndex%}].rawData.stratagem$  is owned by  $m_city.accountTab.statInfo.heroes.beansArray[{%beansArrayIndex%}].rawData.kind$"
+echo "--------------------"
+label skipDoNotShowExtraOwnerInfoIfOwned
+set isHeroOwned true
+goto gotHeroInfo
+label doneWithThisPage
+ifgoto ( %statPageIndex% < $m_city.accountTab.statInfo.heroes.totalPage$ ) fetchNewPage
+ifgoto ( %checkAgainIndex% >= %checkAgainLoopsForUnownedHh% ) skipCheckAgain
+sleep %compForLagTimeSeconds%
+repeat {%checkAgainIndex%+2}
+set checkAgainIndex {%checkAgainIndex%+1}
+goto checkAgain
+label skipCheckAgain
+echo "****************[ * * * ATTENTION * * * ]***************"
+echo "* *"
+echo "*****[  Stats show  [%currentId%] %heroNameStr%  has no owner!  ]*****"
+echo "* *"
+echo "********************************************************"
+set isHeroOwned false
+label gotHeroInfo
+gosubreturn
+goto exitScript
+label setHhArr
+set hhArr.length 693
+set hhArr[1] "AlbertusMagnus"
+set hhArr[2] "Aldus Manutius"
+set hhArr[3] "Amerigo Vespucci"
+set hhArr[4] "Antonio Pierozzi"
+set hhArr[5] "Arnold von Winkelried"
+set hhArr[6] "Bertrand Du Guesclin"
+set hhArr[7] "Chevalier de Bayard"
+set hhArr[8] "Donatello"
+set hhArr[9] "Francesco Petrarca"
+set hhArr[10] "Francis of Assisi"
+set hhArr[11] "Geoffrey Chaucer"
+set hhArr[12] "George of Antioch"
+set hhArr[13] "Gerard de Ridefort"
+set hhArr[14] "Hildegard von Bingen"
+set hhArr[15] "Ibn Khaldun"
+set hhArr[16] "Jan Zizka"
+set hhArr[17] "Joan of Arc"
+set hhArr[18] "Johannes Faustes"
+set hhArr[19] "john gutenberg"
+set hhArr[20] "John Wycliffe"
+set hhArr[21] "Machiavelli"
+set hhArr[22] "Marco Polo"
+set hhArr[23] "Martin Luther"
+set hhArr[24] "Meister Eckhart"
+set hhArr[25] "Michaelangelo"
+set hhArr[26] "Nicolaus Copernicus"
+set hhArr[27] "Niels Ebbesen"
+set hhArr[28] "Paracelsus"
+set hhArr[29] "Peter the Hermit"
+set hhArr[30] "Peter Abelard"
+set hhArr[31] "Raphael"
+set hhArr[32] "Roger Bacon"
+set hhArr[33] "Roger De Moulins"
+set hhArr[34] "Simon De Montfort"
+set hhArr[35] "sir william wallace"
+set hhArr[36] "Taticius"
+set hhArr[37] "Vasco De Gama"
+set hhArr[38] "vlad tepes"
+set hhArr[39] "Flavius Belisarius"
+set hhArr[40] "Gaius Terentius Varro"
+set hhArr[41] "Publius Cornelius Scipio"
+set hhArr[42] "Lucius Cornelius Sulla"
+set hhArr[43] "Marcus Vipsanius Agrippa"
+set hhArr[44] "Publius Cornelius Lentulus Sura"
+set hhArr[45] "Marcus Tullius Cicero"
+set hhArr[46] "Silvius Brabo"
+set hhArr[47] "Appianus"
+set hhArr[48] "Plutarchus"
+set hhArr[49] "Gaius Cornelius Tacitus"
+set hhArr[50] "Titus Livius"
+set hhArr[51] "Publius Cornelius Lentulus Sura"
+set hhArr[52] "Origenes Adamantius"
+set hhArr[53] "Maximus of Ephesus"
+set hhArr[54] "Lucius Annaeus Seneca"
+set hhArr[55] "Iamblichus"
+set hhArr[56] "Epictetus"
+set hhArr[57] "Hypatia of Alexandria"
+set hhArr[58] "Gaius Plinius Caecilius Secund"
+set hhArr[59] "Gaius Plinius Secundus"
+set hhArr[60] "Publius Ovidius Naso"
+set hhArr[61] "Diogenes Laertios"
+set hhArr[62] "Lukianos"
+set hhArr[63] "Titus Lucretius Carus"
+set hhArr[64] "Abbas I"
+set hhArr[65] "Abel of Denmark "
+set hhArr[66] "Abu al-Makarim"
+set hhArr[67] "Abu Tammam"
+set hhArr[68] "Achaeus"
+set hhArr[69] "Adam Smith"
+set hhArr[70] "Adelard of Bath"
+set hhArr[71] "Aeschylus"
+set hhArr[72] "Aethelstan"
+set hhArr[73] "Afonso de Albuquerque"
+set hhArr[74] "Agesilaus II"
+set hhArr[75] "Akbar"
+set hhArr[76] "Al Hassan Addakhil"
+set hhArr[78] "Albrecht Durer"
+set hhArr[79] "Albrecht von Wallenstein"
+set hhArr[80] "Aldus Manutius, the Elder"
+set hhArr[81] "Aldus Manutius, the Younger"
+set hhArr[82] "Alexander I of Scotland"
+set hhArr[83] "Alexander Suvorov"
+set hhArr[84] "Alexander the Great"
+set hhArr[85] "Alexius I Comnenus"
+set hhArr[86] "Alfonso de Borja"
+set hhArr[87] "Alix of France"
+set hhArr[88] "Al-Shahrazuri"
+set hhArr[89] "alvar Nunez Cabeza de Vaca"
+set hhArr[90] "Amanieu de Sescars"
+set hhArr[92] "Amin al-Din Rashid"
+set hhArr[93] "Amy Robsart"
+set hhArr[94] "Andrea Doria"
+set hhArr[95] "Andrea Palladio"
+set hhArr[96] "Andreas Vesalius"
+set hhArr[97] "Angelo Poliziano"
+set hhArr[98] "Anna Comnena"
+set hhArr[99] "Anne Boleyn"
+set hhArr[100] "Anne of Cleves"
+set hhArr[101] "Anno von Sangerhausen"
+set hhArr[102] "Antipater"
+set hhArr[103] "Antoine de Bourbon"
+set hhArr[104] "Antonia Minor"
+set hhArr[107] "Appius Claudius Caudex"
+set hhArr[108] "Arbella Stuart"
+set hhArr[109] "Archibald Douglas"
+set hhArr[110] "Arêtes III, King of the Nabata"
+set hhArr[111] "Aristillus"
+set hhArr[112] "Aristobulus II, King of Judea"
+set hhArr[113] "Aristotle"
+set hhArr[115] "Artaxerxes II of Persia"
+set hhArr[116] "Ashurbanipal"
+set hhArr[117] "Askia Muhammad I"
+set hhArr[118] "Atia Balba Caesonia"
+set hhArr[119] "Aulus Gabinius"
+set hhArr[120] "Aurelia Cotta"
+set hhArr[121] "Avicenna"
+set hhArr[122] "Babur"
+set hhArr[123] "Baeda Maryam"
+set hhArr[124] "Baldwin I of Constantinople"
+set hhArr[125] "Baldwin I of Edessa"
+set hhArr[126] "Baldwin I, Count of Hainaut"
+set hhArr[127] "Baldwin Iron Arm"
+set hhArr[128] "Barbarossa Hayreddin Pasha"
+set hhArr[129] "Barnim I, Duke of Pomerania"
+set hhArr[130] "Bartholomew Diaz de Novaes"
+set hhArr[131] "Bayezid II"
+set hhArr[132] "Benjamin Franklin"
+set hhArr[133] "Beowulf"
+set hhArr[135] "Bess of Hardwick"
+set hhArr[136] "Bishop Hungar"
+set hhArr[137] "Boethius"
+set hhArr[138] "Bogislaw IV, Duke of Pomerania"
+set hhArr[139] "Bohemond I"
+set hhArr[140] "Boris Godunov"
+set hhArr[141] "Brian Boru"
+set hhArr[142] "Brunhilde"
+set hhArr[143] "Brutus"
+set hhArr[144] "Burchard von Schwanden"
+set hhArr[145] "Burebista (King of Dacia)"
+set hhArr[146] "Caesar"
+set hhArr[147] "Caligula"
+set hhArr[148] "Canute the Great"
+set hhArr[149] "Canute VI of Denmark"
+set hhArr[150] "Cardinal Richelieu"
+set hhArr[151] "Casimir Pulaski"
+set hhArr[152] "Castiglione Baldassare"
+set hhArr[153] "Catherine de Medici"
+set hhArr[154] "Catherine Howard"
+set hhArr[155] "Catherine II"
+set hhArr[156] "Catherine of Aragon"
+set hhArr[157] "Catherine of Siena"
+set hhArr[158] "Cesare Borgia"
+set hhArr[159] "Changamire"
+set hhArr[160] "Charlemagne"
+set hhArr[161] "Charles Cornwallis"
+set hhArr[162] "Charles III"
+set hhArr[163] "Charles IX of France"
+set hhArr[164] "Charles Martel"
+set hhArr[165] "Charles of Provence"
+set hhArr[166] "Charles the Bald"
+set hhArr[167] "Charles V"
+set hhArr[168] "Charles VII of France"
+set hhArr[170] "Christopher Columbus"
+set hhArr[171] "Christopher I of Denmark"
+set hhArr[172] "Cicero"
+set hhArr[173] "Claudius"
+set hhArr[174] "Constantine XI"
+set hhArr[175] "Cosimo de' Medici"
+set hhArr[176] "Cristopher Columbus"
+set hhArr[177] "Cyrus II"
+set hhArr[178] "David Beaton"
+set hhArr[179] "David I"
+set hhArr[180] "Demetrius of Pharos"
+set hhArr[181] "Desiderius Erasmus"
+set hhArr[182] "Dhuoda"
+set hhArr[183] "Diane de Poitiers"
+set hhArr[184] "Dicaearchus"
+set hhArr[185] "Diogenes"
+set hhArr[186] "Don Quixote"
+set hhArr[188] "Duncan I"
+set hhArr[189] "Duncan II"
+set hhArr[190] "Eadred I"
+set hhArr[191] "Earl of Shrewsbury"
+set hhArr[192] "Edgar the Etheling"
+set hhArr[193] "Edith of England"
+set hhArr[194] "Edmund I"
+set hhArr[195] "Edmund II"
+set hhArr[196] "Edward IV of England"
+set hhArr[197] "Edward Jenner"
+set hhArr[198] "Edward VI"
+set hhArr[199] "El Cid"
+set hhArr[200] "Eleanor of Aquitaine"
+set hhArr[201] "Elizabeth I"
+set hhArr[202] "Emma Queen of Franks"
+set hhArr[203] "Emperor Taizu"
+set hhArr[204] "Empress Matilda"
+set hhArr[206] "Erastosthenes"
+set hhArr[207] "Eric IV of Denmark"
+set hhArr[208] "Eric V of Denmark"
+set hhArr[209] "Eric VI of Denmark"
+set hhArr[210] "Ethan Allen"
+set hhArr[211] "Ethelbald"
+set hhArr[212] "Ethelwulf"
+set hhArr[213] "Euripedes"
+set hhArr[214] "Ferdinand II"
+set hhArr[215] "Ferdinand II of Aragon"
+set hhArr[216] "Ferdinand Magellan"
+set hhArr[217] "Fernando Alvarez de Toledo, Duke of Alba"
+set hhArr[218] "Ferrarius"
+set hhArr[219] "Filippo Brunelleschi"
+set hhArr[221] "Frances II of France"
+set hhArr[223] "Francis Bacon"
+set hhArr[225] "Francis Marion"
+set hhArr[227] "Fredegund"
+set hhArr[228] "Frederick Barbarossa"
+set hhArr[229] "Frederick I Barbarossa"
+set hhArr[230] "Frederick II, Duke of Swabia"
+set hhArr[231] "Frederick III"
+set hhArr[232] "Fredrick II"
+set hhArr[233] "Fulk III of Anjou"
+set hhArr[234] "Gaius Cilnius Maecenas"
+set hhArr[236] "Gaius Duilus"
+set hhArr[237] "Gaius Julius Caesar Augustus"
+set hhArr[238] "Gaius Marius"
+set hhArr[241] "Galileo Galilei"
+set hhArr[242] "Gaspard de Coligny"
+set hhArr[243] "Genghis Khan"
+set hhArr[245] "Geoffrey II of Anjou"
+set hhArr[246] "Geoffrey Plantagenet"
+set hhArr[248] "George Villiers, 1st Duke of Buckingham"
+set hhArr[249] "George Washington"
+set hhArr[251] "Gerardus Mercator"
+set hhArr[252] "Gerhard von Malberg"
+set hhArr[253] "Giordano Bruno"
+set hhArr[254] "Giovanni Bellini"
+set hhArr[255] "Giovanni Bicci de Medici"
+set hhArr[256] "Giovanni Paolo"
+set hhArr[257] "Giovanni Sforza"
+set hhArr[258] "Girart de Roussillon"
+set hhArr[259] "Gjergj Kastrioti Skanderbeg"
+set hhArr[260] "Godfrid Haraldsson"
+set hhArr[261] "Gottfried von Hohenlohe"
+set hhArr[262] "Gottschalk of Orbais"
+set hhArr[263] "Günther von Wüllersleben"
+set hhArr[264] "Guru Nanak"
+set hhArr[265] "Hamilcar Barca"
+set hhArr[266] "Hammurabi"
+set hhArr[267] "Hannibal"
+set hhArr[268] "Harald Klak Halfdansson"
+set hhArr[269] "Hartmann von Heldrungen"
+set hhArr[270] "Hasdrubal the Fair"
+set hhArr[271] "Heinrich von Hohenlohe"
+set hhArr[272] "Heinrich von Tunna"
+set hhArr[273] "Heinrich Walpot von Bassenheim"
+set hhArr[274] "Henri I de Bourbon"
+set hhArr[275] "Henry Hudson"
+set hhArr[276] "Henry II de Bourbon"
+set hhArr[277] "Henry II of England"
+set hhArr[278] "Henry III"
+set hhArr[279] "Henry IV"
+set hhArr[280] "Henry Stuart, Lord Darnley"
+set hhArr[281] "Henry the Lion"
+set hhArr[282] "Henry the Navigator"
+set hhArr[283] "Henry the Proud"
+set hhArr[284] "Henry the Young King"
+set hhArr[285] "Henry V of England"
+set hhArr[286] "Henry VI of England"
+set hhArr[287] "Henry VI, Holy Roman Emperor"
+set hhArr[288] "Henry VII of England"
+set hhArr[289] "Henry VIII"
+set hhArr[290] "Hermann von Salza"
+set hhArr[291] "Hernán Cortés"
+set hhArr[292] "Hernando de Soto"
+set hhArr[293] "Herodotus"
+set hhArr[294] "Hieronymus Bosch"
+set hhArr[296] "Hincmar of Rheims"
+set hhArr[297] "Hippocrates"
+set hhArr[298] "Horatio Nelson"
+set hhArr[299] "Howard of Effingham"
+set hhArr[300] "Huayna Capac"
+set hhArr[301] "Humfrid"
+set hhArr[302] "Huneberc"
+set hhArr[305] "Ibn al-Haythan"
+set hhArr[307] "Igor of Kiev"
+set hhArr[308] "Isaac Israeli ben Solomon"
+set hhArr[309] "Isaac Newton"
+set hhArr[310] "Isabella d'Este"
+set hhArr[311] "Isabella of Castile"
+set hhArr[312] "Jacobus Arminius"
+set hhArr[313] "Jacques Cartier"
+set hhArr[314] "James Cook"
+set hhArr[315] "James Hepburn, Earl of Bothwell"
+set hhArr[316] "James II"
+set hhArr[317] "James VI of Scotland"
+set hhArr[318] "James Wolfe"
+set hhArr[319] "Jan Hus"
+set hhArr[320] "Jan Karol Chodkiewicz "
+set hhArr[321] "Jan van Eyck"
+set hhArr[324] "Jane Austen"
+set hhArr[325] "Jean Boudin"
+set hhArr[326] "Jeanne d'Evreux"
+set hhArr[328] "Joan of England, Queen of Sicily"
+set hhArr[329] "Joan of Kent"
+set hhArr[330] "Johann Georg Faust"
+set hhArr[331] "Johann Sebastian Bach"
+set hhArr[332] "Johannes Gutenberg"
+set hhArr[334] "John Cabot"
+set hhArr[335] "John Calvin"
+set hhArr[336] "John Carver"
+set hhArr[337] "John Hancock"
+set hhArr[338] "John Hunyadi"
+set hhArr[339] "John Keats"
+set hhArr[340] "John Kourkouas"
+set hhArr[341] "John Milton"
+set hhArr[342] "John of England"
+set hhArr[343] "John Paul Jones"
+set hhArr[344] "John Sobieski"
+set hhArr[345] "John Wesley"
+set hhArr[347] "Joseph Caro"
+set hhArr[348] "Juan Borgia"
+set hhArr[349] "Kasimir II, Duke of Pomerania"
+set hhArr[350] "Kassia"
+set hhArr[351] "Konrad von Feuchtwangen"
+set hhArr[352] "Konrad von Thüringen"
+set hhArr[353] "Koxinga"
+set hhArr[354] "Lacydes of Cyrene"
+set hhArr[355] "Lancelot Andrewes"
+set hhArr[356] "Leif Ericson"
+set hhArr[357] "Leon Battista Alberti"
+set hhArr[358] "Leonardo da Vinci"
+set hhArr[360] "Li Shangyin"
+set hhArr[361] "Livy"
+set hhArr[362] "Lord Thomas Howard"
+set hhArr[363] "Lorenzo de' Medici"
+set hhArr[364] "Lothair I"
+set hhArr[365] "Lothair III, Holy Roman Emperor"
+set hhArr[366] "Louis of Bourbon-Condé"
+set hhArr[367] "Louis the German"
+set hhArr[368] "Louis the Pious"
+set hhArr[369] "Louis the Stammerer"
+set hhArr[370] "Louis XI of France"
+set hhArr[371] "Louis XIV"
+set hhArr[372] "Louis XVI"
+set hhArr[373] "Louise of Savoy"
+set hhArr[376] "Lucius Sergius Catilina"
+set hhArr[377] "Lucreza Borgia 1"
+set hhArr[378] "Lucrezia Borgia 2"
+set hhArr[379] "Ludovico Sforza"
+set hhArr[380] "Luigi Pulci"
+set hhArr[381] "Lupus Servatus"
+set hhArr[382] "MacBeth"
+set hhArr[384] "Malcolm I of Scotland"
+set hhArr[385] "Manius Curius Dentatus"
+set hhArr[387] "Marcus Antonius"
+set hhArr[388] "Marcus Junious Brutus"
+set hhArr[389] "Marcus Porcius Cato"
+set hhArr[391] "Margaret Beaufort"
+set hhArr[392] "Margaret Douglas"
+set hhArr[393] "Margaret of Anjou"
+set hhArr[394] "Margaret Tudor"
+set hhArr[395] "Marguerite of Navarre"
+set hhArr[396] "Marquis de Lafayette"
+set hhArr[398] "Mary I of Scotland"
+set hhArr[399] "Matthew Stewart, 4th Earl of Lennox"
+set hhArr[400] "Matthias Corvinus of Hungary"
+set hhArr[402] "Mehmed II"
+set hhArr[404] "Mestwin I, Duke of Pomerania "
+set hhArr[405] "Mestwin II, Duke of Pomerania"
+set hhArr[406] "Michael Drayton"
+set hhArr[408] "Michel de Ruyter"
+set hhArr[409] "Michelangelo"
+set hhArr[410] "Mithridates II"
+set hhArr[411] "Miyamoto Musashi"
+set hhArr[412] "Moliere"
+set hhArr[413] "Montcalm"
+set hhArr[414] "Montezuma I"
+set hhArr[415] "Muhammad ibn Saud"
+set hhArr[416] "Muncimir of Croatia"
+set hhArr[417] "Murad II"
+set hhArr[418] "Myles Coverdale"
+set hhArr[419] "Nadar Shah"
+set hhArr[420] "Napoleon Bonaparte"
+set hhArr[421] "Nennius"
+set hhArr[422] "Niccolo de Conti"
+set hhArr[423] "Nicholas the Great"
+set hhArr[424] "Nicolaus Copernicus"
+set hhArr[426] "Ogier the Dane"
+set hhArr[427] "Olaudah Equiano"
+set hhArr[428] "Olga Prekrasa of Kiev"
+set hhArr[429] "Oliver Cromwell"
+set hhArr[431] "Origen"
+set hhArr[432] "Otto I"
+set hhArr[433] "Otto von Kerpen"
+set hhArr[434] "Ovid"
+set hhArr[435] "Pachacuti"
+set hhArr[436] "Paolo Uccello"
+set hhArr[438] "Paul Revere"
+set hhArr[439] "Paulina Busa"
+set hhArr[440] "Pepin the Short"
+set hhArr[442] "Peter the Great"
+set hhArr[445] "Petronilla of Aquitaine"
+set hhArr[446] "Philaenis of Samos"
+set hhArr[447] "Philip V"
+set hhArr[448] "Philippe de Commines"
+set hhArr[449] "Philochorus"
+set hhArr[450] "Photios I of Constantinople"
+set hhArr[451] "Pierre Terrail LeVieux Seigneur de Bayard"
+set hhArr[452] "Plato"
+set hhArr[453] "Pliny the Younger"
+set hhArr[455] "Pope Urban II"
+set hhArr[456] "Poppo von Osterna"
+set hhArr[457] "Ptolemy Keraunos"
+set hhArr[460] "Qianlong Emperor"
+set hhArr[461] "Queen Anne"
+set hhArr[462] "Quintus Fabius Pictor"
+set hhArr[463] "Quintus Fulvius Flaccus"
+set hhArr[464] "Quintus Servilius Caepio the Younger"
+set hhArr[465] "Raimondo Montecuccoli"
+set hhArr[466] "Raja Raja Cholal"
+set hhArr[467] "Ralpacan"
+set hhArr[469] "René Descartes"
+set hhArr[470] "Richard III of England"
+set hhArr[471] "Richard Neville, Earl of Warwick"
+set hhArr[472] "Richard Plantagenet, 3rd Duke of York"
+set hhArr[473] "Richard the Lionheart"
+set hhArr[474] "Robert Blake"
+set hhArr[475] "Robert Browne"
+set hhArr[476] "Robert Cecil"
+set hhArr[477] "Robert Devereux, 2nd Earl of Essex"
+set hhArr[478] "Robert Dudley, 1st Earl of Leicester"
+set hhArr[479] "Robin Hood"
+set hhArr[480] "Rodrigo Borgia"
+set hhArr[481] "Roger Ascham"
+set hhArr[482] "Roger Bacon 1"
+set hhArr[483] "Roger Bacon 2"
+set hhArr[485] "Rorik of Dorestad"
+set hhArr[486] "Rubens"
+set hhArr[487] "Rudolph of France"
+set hhArr[488] "Rurik"
+set hhArr[489] "Sa'adiah ben Yosef Gaon"
+set hhArr[490] "Saint Zachary"
+set hhArr[491] "Saladin"
+set hhArr[492] "Salvestro de' Medici"
+set hhArr[493] "Samuel Daniel"
+set hhArr[494] "Samuel de Champlain"
+set hhArr[495] "Sandro Botticelli 1"
+set hhArr[496] "Sandro Botticelli 2"
+set hhArr[497] "Sargon"
+set hhArr[498] "Saxo Grammaticus"
+set hhArr[499] "Sejong the Great"
+set hhArr[500] "Sennacherib"
+set hhArr[501] "Shah Abbas "
+set hhArr[502] "Shah Jahan"
+set hhArr[503] "Shulgi"
+set hhArr[505] "Simeon I"
+set hhArr[507] "Sir Agravain"
+set hhArr[508] "Sir Edward Coke"
+set hhArr[509] "Sir Francis Drake"
+set hhArr[510] "Sir Gawain"
+set hhArr[511] "Socrates"
+set hhArr[512] "Sonni Ali"
+set hhArr[513] "Sophocles"
+set hhArr[514] "St. Anselm"
+set hhArr[515] "St. Bernard of Clairvaux"
+set hhArr[516] "St. Bruno of Cologne"
+set hhArr[517] "St. Edmund Campion"
+set hhArr[518] "St. Edward the Confessor"
+set hhArr[519] "Stephen III of Moldavia"
+set hhArr[520] "Sviatopolk II of Pomerania"
+set hhArr[521] "Tamerlane"
+set hhArr[523] "Tertullian"
+set hhArr[524] "Thaddeus Kosciuszko"
+set hhArr[525] "Theodora the Armenian"
+set hhArr[526] "Theophilos"
+set hhArr[527] "Thomas Campion"
+set hhArr[528] "Thomas Cranmer"
+set hhArr[529] "Thomas Cromwell"
+set hhArr[530] "Thomas Erastus"
+set hhArr[531] "Thomas Jefferson"
+set hhArr[532] "Thomas Malory"
+set hhArr[533] "Thucidides"
+set hhArr[534] "Tippu Sultan"
+set hhArr[535] "Titian"
+set hhArr[537] "Tokugawa Ieyasu"
+set hhArr[538] "Tupac Inca Yupanqui"
+set hhArr[539] "Utu-hengal"
+set hhArr[540] "Valdemar I of Denmark"
+set hhArr[541] "Valdemar II of Denmark"
+set hhArr[543] "Vasco NuÃ±ez de Balboa"
+set hhArr[544] "Viracocha"
+set hhArr[545] "Vlad Dracula"
+set hhArr[546] "Vlad the Impaler"
+set hhArr[547] "Vladimir I "
+set hhArr[548] "Vladimir the Great"
+set hhArr[549] "Voltaire"
+set hhArr[550] "Walter Raleigh"
+set hhArr[551] "Wartislaw III, Duke of Pomerania"
+set hhArr[552] "Willem Barentsz"
+set hhArr[553] "William Bradford"
+set hhArr[554] "William Cecil"
+set hhArr[555] "William Herschel"
+set hhArr[556] "William III"
+set hhArr[557] "William Pitt the Elder"
+set hhArr[558] "William Shakespeare"
+set hhArr[559] "William Tell"
+set hhArr[560] "William the Conqueror"
+set hhArr[561] "William VIII, Duke of Aquitain"
+set hhArr[562] "William Wallace"
+set hhArr[563] "Wolfgang Amadeus Mozart"
+set hhArr[564] "Xenophon"
+set hhArr[565] "Yi Jongmu"
+set hhArr[566] "Zara Yaqob"
+set hhArr[567] "Zheng He"
+set hhArr[568] "Zhu Di"
+set hhArr[569] "Zhu Gaozhi"
+set hhArr[570] "Zhu Jianshen"
+set hhArr[571] "Zhu Qizhen"
+set hhArr[572] "Zhu Youtang"
+set hhArr[573] "Zhu Zhanji"
+set hhArr[574] "Zorayda"
+set hhArr[575] "Godwin"
+set hhArr[576] "Diego Sarmiento de Acuna. Conde de Gondomar"
+set hhArr[577] "Pope Gregory XIII"
+set hhArr[578] "St. Hildebrand, Pope Gregory VII"
+set hhArr[579] "Sir Richard Grenville"
+set hhArr[580] "Sir Thomas Gresham"
+set hhArr[581] "Hugo Grotius"
+set hhArr[582] "Francesco Guicciardini"
+set hhArr[583] "Robert Guiscard"
+set hhArr[584] "Claude de Lorraine. Duke of Guise"
+set hhArr[585] "Francis de Lorraine, 2nd Duke of Guise"
+set hhArr[586] "Henry de Lorraine. 3rd Duke of Guise"
+set hhArr[587] "Charles de Lorraine, 4th Duke of Guise"
+set hhArr[588] "Guru Arjan Dev"
+set hhArr[589] "Guru Amar Das"
+set hhArr[590] "Gustavus I"
+set hhArr[591] "Gustavus II"
+set hhArr[592] "John Hampden"
+set hhArr[593] "Harold II"
+set hhArr[594] "Sir John Hawkins"
+set hhArr[595] "Sir Richard Hawkins"
+set hhArr[596] "Toyotomi Hideyoshi"
+set hhArr[597] "Thomas Hobbes"
+set hhArr[598] "Richard Hooker"
+set hhArr[599] "Filips van Montmorency, Graaf van Hoorn"
+set hhArr[600] "Humayun"
+set hhArr[601] "Francisco de Ibarra"
+set hhArr[602] "Shah Ismail I Safavi"
+set hhArr[603] "Ivan III the Great of Russia"
+set hhArr[604] "Ivan IV of Russia"
+set hhArr[605] "Alfgifu of Northampton"
+set hhArr[606] "Emma of Normandy"
+set hhArr[607] "Elfthryth"
+set hhArr[608] "Anne of Denmark"
+set hhArr[609] "Christina of Markyate"
+set hhArr[610] "Jahangir"
+set hhArr[611] "Cornelius Otto Jansen"
+set hhArr[612] "John Jewel"
+set hhArr[613] "John III of Portugal"
+set hhArr[614] "Don John of Austria"
+set hhArr[615] "St. John of the Cross"
+set hhArr[616] "Guiliano della Rovere, Pope Julius II"
+set hhArr[617] "Kabir"
+set hhArr[618] "Bartolomé de Las Casas"
+set hhArr[619] "Hugh Latimer"
+set hhArr[620] "William Laud"
+set hhArr[621] "Mahmud of Ghazna"
+set hhArr[622] "St. Leo IX"
+set hhArr[623] "St. Ignatius Loyola"
+set hhArr[624] "Malcolm III of Scotland"
+set hhArr[625] "Robert Devereux, 3rd Earl of Essex"
+set hhArr[626] "Ethelred II the Unready"
+set hhArr[627] "Edmund Spenser"
+set hhArr[628] "Christopher Marlowe"
+set hhArr[629] "Sir Philip Sidney"
+set hhArr[630] "Ben Jonson"
+set hhArr[631] "Pieter Bruegel (the Elder)"
+set hhArr[632] "Michelangelo Merisi da Caravaggio"
+set hhArr[633] "Vittore Carpaccio"
+set hhArr[634] "Antonio Allegri Correggio"
+set hhArr[635] "Lucas Cranach (the Elder)"
+set hhArr[636] "Gerard David"
+set hhArr[638] "Giorgione (Giorgio da Castelfranco)"
+set hhArr[639] "El Greco (Domenicos Theotocopoulos)"
+set hhArr[640] "Mathis Grunewald"
+set hhArr[641] "Frans Hals"
+set hhArr[642] "Hans Holbein (the Younger)"
+set hhArr[643] "Georges de La Tour"
+set hhArr[644] "Lorenzo Lotto"
+set hhArr[645] "Andrea Mantegna"
+set hhArr[646] "Joachim Patinir"
+set hhArr[647] "Nicholas Poussin"
+set hhArr[648] "Raphael (Raffaello Sanzio)"
+set hhArr[649] "St. Francis Xavier"
+set hhArr[650] "Juan Sanchez Cotan"
+set hhArr[651] "Il Sassetta (Stefano di Giovanni) "
+set hhArr[652] "Tintoretto (Jacopo Comin Robusti)"
+set hhArr[653] "Titian (Tiziano Vecellio)"
+set hhArr[654] "Anthony Van Dyck"
+set hhArr[655] "Diego de Silva Velázquez"
+set hhArr[656] "Paolo Veronese"
+set hhArr[657] "Lamoral Egmont, Count of Gavre"
+set hhArr[658] "Pope Paul III (Alessandro Farnese)"
+set hhArr[659] "Alessandro Farnese, Duke of Parma"
+set hhArr[660] "Guy Fawkes"
+set hhArr[661] "Stephen Gardiner"
+set hhArr[662] "Ferdinand V of Spain (Ferdinand II of Castile)"
+set hhArr[663] "John Foxe"
+set hhArr[664] "Francis I"
+set hhArr[665] "Geoffrey of Monmouth"
+set hhArr[666] "Sir Humphrey Gilbert"
+set hhArr[667] "Godfrey of Bouillon"
+set hhArr[668] "Queen Aliquippa"
+set hhArr[669] "Nancy Ward"
+set hhArr[670] "Punyaslok Rajmata Ahilyadevi"
+set hhArr[671] "Cuhtuhlatah"
+set hhArr[672] "Margaret Corbin"
+set hhArr[673] "Sybil Ludington"
+set hhArr[674] "Ann Bates"
+set hhArr[675] "Manuela Beltran"
+set hhArr[676] "Deborah Sampson"
+set hhArr[677] "Anne-Josèphe Théroigne de Méricourt"
+set hhArr[678] "Angelique Brulon"
+set hhArr[679] "Wang Cong'er"
+set hhArr[680] "Christina of Saxony"
+set hhArr[681] "Christina Gyllenstierna"
+set hhArr[682] "Anna Rheinholdsdotter Leuhusen"
+set hhArr[683] "Granuaile (Gráinne Ní Mháille or Grace O'Malley)"
+set hhArr[684] "Mary I of Scotland (Mary Queen of Scots)"
+set hhArr[685] "Chand Bibi"
+set hhArr[686] "Gao Guiying"
+set hhArr[687] "Hannah Duston"
+set hhArr[688] "Charlotte Stanley, Countess of Derby"
+set hhArr[689] "Mary Read"
+set hhArr[690] "Queen Nanny of the Maroons"
+set hhArr[691] "Anne Hutchinson"
+set hhArr[692] "Rani Rudrama Devi"
+gosubreturn
+goto exitScript
+label setSortByArr
+ifgoto ( {{%prioritizeHeroOrder%==id}||{%prioritizeHeroOrder%==Id}||{%prioritizeHeroOrder%==ID}} = true ) doNotChangeOrder
+ifgoto ( {{%prioritizeHeroOrder%!=pol}&&{%prioritizeHeroOrder%!=Pol}&&{%prioritizeHeroOrder%!=POL}} = true ) notPol
+setarr sortByArr "116 140 177 40 62 526 72 104 107 175 201 287 311 603 335 33 500 266 431 467 472 497 84 155 176 216 277 42 531 99 146 170 215 604 43 394 423 691 125 160 59 54 429 442 453 501 509 515 523 550 553 141 156 289 52 529 1 172 662 10 370 371 48 568 143 150 167 639 291 377 51 528 554 184 45 74 85 115 120 179 194 664 228 616 593 281 283 316 378 388 457 578 569 94 100 130 153 11 591 288 301 387 535 653 573 494 242 660 55 613 344 21 44 477 76 118 173 178 213 214 58 292 317 365 393 692 476 502 514 539 605 87 109 162 576 188 606 626 229 248 263 590 586 315 379 380 398 24 410 414 415 422 471 508 666 580 572 642 276 331 363 372 75 93 154 190 206 334 347 348 447 455 622 547 620 571 86 3 677 117 138 147 152 168 680 192 198 200 204 209 212 221 231 575 268 278 307 592 337 349 373 392 404 440 445 461 475 480 492 602 518 557 570 608 126 129 163 174 180 195 208 227 257 284 309 310 328 329 332 336 663 342 657 369 23 53 416 669 26 427 466 470 487 490 579 661 103 587 189 607 203 233 255 275 280 624 389 399 30 658 478 517 525 119 166 211 599 286 297 376 28 29 464 4 9 31 36 181 223 237 17 25 35 69 563 564 81 121 148 193 253 364 434 656 503 108 135 681 655 185 627 196 683 264 293 22 395 432 450 631 482 493 34 513 37 560 326 499 70 636 623 597 533 541 38 549 6 32 82 90 630 183 8 39 259 282 285 14 298 302 319 325 19 358 391 632 419 562 67 424 558 47 49 113 249 18 60 98 232 421 648 46 516 532 2 80 5 197 641 267 57 313 314 612 341 354 360 635 640 420 27 439 41 486 527 652 545 50 20 479 133 7 171 611 230 643 254 588 271 294 600 305 651 330 617 355 412 647 435 452 690 462 483 649 540 78 88 645 132 686 13 299 345 577 685 495 71 110 61 265 646 361 95 488 544 102 124 164 56 581 402 66 92 97 674 682 654 218 219 582 243 665 638 258 15 308 312 321 650 621 675 411 448 451 473 629 543 566 122 142 678 241 16 381 672 474 489 496 498 519 673 555 556 101 158 688 609 667 357 418 463 469 491 511 512 63 139 199 96 157 210 12 296 300 340 644 530 546 548 679 236 384 433 436 465 524 83 601 589 446 670 596 73 628 671 687 279 290 610 318 689 408 413 428 615 409 64 565 149 131 324 368 79 618 137 159 161 207 272 274 339 350 351 353 417 625 481 505 507 595 552 559 659 145 182 225 269 400 456 598 583 510 633 574 634 614 65 89 111 123 128 136 676 217 234 238 252 262 619 338 396 460 485 520 521 534 567 112 256 261 438 449 426 594 68 584 186 362 366 367 382 668 356 127 144 202 245 260 320 405 406 538 561 251 551 151 585 270 273 352 385 537 191 246 343 165 684"
+goto exitSetSortByArrSub
+label notPol
+ifgoto ( {{%prioritizeHeroOrder%!=atk}&&{%prioritizeHeroOrder%!=Atk}&&{%prioritizeHeroOrder%!=ATK}} = true ) notAtk
+setarr sortByArr "33 683 27 7 543 279 17 419 491 546 38 39 562 267 420 479 435 110 243 473 12 298 686 102 402 34 560 46 545 61 451 541 314 133 13 499 6 237 196 285 41 16 148 432 249 679 241 199 340 207 351 417 145 396 232 5 271 621 667 83 413 428 353 269 400 65 142 101 149 505 681 259 67 411 678 474 300 670 460 521 36 35 540 299 488 124 258 675 672 519 556 512 596 687 318 238 338 37 685 384 368 79 159 161 595 128 567 68 367 382 202 245 538 551 585 537 191 246 265 544 56 357 236 290 559 89 362 144 343 73 456 151 197 688 210 433 465 408 507 225 123 217 252 485 520 534 261 426 594 584 186 127 320 405 270 273 691 429 553 172 264 358 171 330 164 308 629 158 601 671 64 574 676 668 260 352 385 139 689 625 614 112 256 438 561 160 230 305 122 463 63 565 131 272 659 583 510 366 167 22 361 146 215 8 20 274 313 529 218 554 181 19 2 57 324 497 54 453 370 653 502 3 23 4 223 434 293 32 132 682 381 296 628 137 350 552 143 15 121 558 21 531 515 156 30 31 69 452 71 654 216 394 371 291 283 514 248 147 25 482 513 648 582 136 406 251 18 634 206 328 524 618 234 176 372 509 11 508 14 345 555 598 266 277 170 604 550 377 528 198 180 28 9 253 49 652 50 294 647 469 511 548 409 339 481 182 633 111 619 449 356 523 178 380 47 175 603 442 10 568 228 58 410 200 518 26 60 412 88 644 530 436 262 500 423 213 214 292 192 669 282 649 645 418 157 610 615 666 517 166 564 113 588 589 51 45 578 242 344 52 84 99 662 48 115 162 557 656 503 636 635 577 495 219 489 498 684 526 311 42 501 141 289 150 535 494 55 44 539 24 642 622 547 677 231 309 332 336 53 655 486 321 566 96 165 606 155 120 427 297 623 72 107 467 472 59 194 660 173 331 347 620 490 627 483 581 448 673 177 287 335 125 316 569 692 626 315 572 329 470 525 599 464 563 549 630 421 78 609 602 600 116 140 94 130 153 118 263 590 422 190 455 278 337 480 284 657 579 319 516 527 643 66 312 431 639 85 100 152 168 209 268 185 641 92 496 43 288 195 466 255 326 40 62 1 184 616 281 573 613 317 414 471 348 680 445 492 608 661 658 81 533 632 354 254 651 690 646 674 638 76 373 74 87 203 446 393 379 416 97 665 179 387 476 605 415 349 631 80 439 355 204 103 587 462 95 475 129 310 487 201 664 378 591 229 586 276 93 461 227 607 233 275 280 399 119 395 450 70 82 98 611 457 301 154 138 575 126 369 189 478 183 617 650 593 388 477 365 109 398 86 221 592 392 440 570 163 208 391 640 404 104 307 257 211 135 363 75 571 212 174 389 108 90 580 334 117 342 325 341 360 663 376 576 188 447 624 364 493 302 532 612 286 193 29 597 424"
+goto exitSetSortByArrSub
+label notAtk
+ifgoto ( {{%prioritizeHeroOrder%!=int}&&{%prioritizeHeroOrder%!=Int}&&{%prioritizeHeroOrder%!=INT}} = true ) notInt
+setarr sortByArr "63 623 563 330 308 452 309 331 639 184 361 23 293 558 206 28 241 132 297 279 629 305 434 69 648 347 543 4 32 15 482 18 14 9 26 60 564 503 642 197 313 653 121 47 535 40 223 50 326 491 243 12 181 30 25 213 435 110 358 171 20 19 2 513 289 155 177 125 140 1 201 102 264 350 31 11 49 294 548 282 636 655 566 472 483 549 431 641 450 67 8 324 628 137 141 185 81 631 395 597 133 582 88 645 113 467 17 61 148 218 682 296 552 156 345 550 649 157 588 684 287 43 62 420 207 65 357 22 57 381 71 618 234 170 647 469 511 51 495 55 53 421 116 319 533 665 174 29 481 449 656 635 577 24 332 107 627 448 516 527 632 97 617 360 612 16 37 555 528 412 72 66 80 95 249 35 21 634 176 652 111 619 48 44 486 446 183 341 546 402 545 56 654 136 251 253 182 633 10 644 262 589 489 96 581 630 609 643 92 254 690 646 355 70 650 391 302 532 196 285 432 417 515 409 356 418 52 219 311 150 321 692 78 600 312 496 674 439 664 90 325 193 679 384 604 530 436 615 498 42 673 354 651 638 462 611 640 493 473 314 396 371 406 598 339 523 175 423 610 84 179 98 135 108 161 362 99 363 39 267 13 499 561 143 442 568 526 59 153 398 419 686 541 237 505 460 675 238 338 368 215 531 394 266 377 603 662 501 194 173 335 229 560 5 271 370 3 216 58 45 76 74 529 82 211 670 36 494 593 286 298 6 41 351 667 269 400 149 521 258 672 68 246 544 144 405 273 668 260 352 366 167 554 291 524 277 200 557 620 118 168 288 281 393 415 457 301 388 477 365 221 212 663 376 188 7 479 83 85 100 378 591 119 189 75 559 456 131 54 509 569 268 275 280 199 300 127 500 414 46 678 556 685 191 178 455 616 471 27 145 413 428 142 124 519 318 245 538 551 236 290 151 520 584 186 270 553 172 64 160 214 242 130 573 317 387 476 129 310 276 227 233 399 369 109 392 334 34 596 382 265 112 165 580 488 101 146 103 487 571 342 38 367 202 585 272 344 572 416 208 257 117 683 340 353 259 474 299 512 537 73 225 485 426 320 691 429 689 614 256 659 274 497 514 372 228 518 292 669 547 606 316 626 94 590 373 203 605 204 475 461 607 478 86 592 163 404 307 389 447 624 364 451 232 159 252 380 666 126 104 79 343 123 438 445 87 379 162 621 411 540 465 408 217 534 261 594 574 510 248 578 539 120 209 195 466 255 492 658 93 687 128 89 158 671 676 625 463 453 502 283 508 599 464 613 587 586 576 385 147 440 139 410 115 329 278 608 570 595 122 565 660 525 422 190 284 661 154 562 681 567 688 210 433 230 337 657 579 680 349 138 575 507 601 231 164 152 517 166 622 677 480 348 192 490 470 602 180 336 263 427 33 198 315 328 583 424"
+goto exitSetSortByArrSub
+label notInt
+ifgoto ( {{%prioritizeHeroOrder%!=lead}&&{%prioritizeHeroOrder%!=Lead}&&{%prioritizeHeroOrder%!=LEAD}} = true ) notLead
+setarr sortByArr "543 279 435 110 133 491 243 102 408 148 419 249 546 196 285 267 541 237 562 420 402 545 432 473 314 686 560 479 683 499 241 67 431 197 213 207 65 417 436 338 629 649 505 271 340 330 308 264 679 396 362 300 290 165 521 258 259 299 675 238 670 351 667 413 298 525 69 358 321 460 269 400 544 100 559 678 556 428 124 519 318 265 101 474 512 232 621 361 305 384 161 368 662 672 83 199 236 553 596 488 411 540 132 313 653 181 45 172 202 681 75 293 636 324 218 149 616 210 623 121 223 171 552 143 167 456 691 429 463 570 164 434 350 628 137 533 370 685 146 514 422 513 682 296 156 529 115 18 381 554 291 301 145 584 270 160 497 452 558 206 11 234 170 107 176 150 561 68 246 405 273 668 260 352 366 524 378 127 191 245 551 520 186 382 272 225 485 426 320 274 373 343 502 385 348 482 88 550 71 618 253 182 371 144 131 585 252 654 515 216 367 353 451 438 217 128 507 472 582 634 175 394 509 159 534 140 251 84 215 531 538 537 648 155 641 113 345 528 72 391 406 277 221 151 112 73 689 614 256 659 475 86 123 465 248 687 158 625 453 122 433 230 583 111 523 99 266 594 574 510 565 567 141 157 619 409 607 595 184 26 647 555 633 153 233 228 79 563 535 289 125 294 548 467 357 469 511 652 356 604 640 598 526 603 501 335 200 500 162 261 89 671 688 601 309 331 639 297 347 564 177 287 116 481 449 332 92 442 568 372 283 508 198 282 615 214 242 518 676 642 412 339 486 262 82 85 503 645 44 489 418 292 669 547 666 147 139 410 328 588 495 325 610 494 579 655 577 96 498 557 344 284 656 173 76 635 66 136 219 530 74 539 231 192 180 566 627 589 630 194 620 590 622 677 336 185 95 692 626 94 517 549 97 496 98 118 178 142 130 572 483 527 581 312 660 421 448 690 650 600 673 606 316 278 166 490 427 319 609 651 288 415 414 471 476 203 599 464 329 470 602 263 674 354 578 680 201 632 643 646 638 179 281 455 573 317 195 255 492 613 608 661 337 657 480 315 183 70 78 90 466 658 190 254 229 477 376 227 445 209 450 631 395 446 355 423 363 398 377 393 457 388 365 268 387 204 461 120 665 64 439 163 80 462 605 404 87 379 587 349 617 664 663 591 275 280 310 487 342 611 593 399 109 103 93 586 447 126 168 189 369 307 440 575 326 276 208 478 592 138 58 6 392 152 211 416 380 174 257 212 119 580 571 576 154 360 341 493 108 188 389 624 612 193 302 117 532 286 334 135 569 81 59 63 23 28 4 32 15 14 9 60 47 40 50 12 30 25 20 19 2 1 31 49 8 17 61 43 62 22 57 51 55 53 24 16 37 35 21 48 56 10 644 52 42 39 13 5 3 36 41 7 54 46 27 34 38 104 33 597 684 29 516 311 129 364 424"
+goto exitSetSortByArrSub
+label notLead
+ifgoto ( {{%prioritizeHeroOrder%!=alpha}&&{%prioritizeHeroOrder%!=Alpha}&&{%prioritizeHeroOrder%!=ALPHA}} = true ) notAlpha
+setarr sortByArr "64 65 66 67 68 69 70 71 72 73 74 75 76 1 78 79 2 80 81 659 82 83 84 85 605 86 87 88 89 90 3 92 93 94 645 95 96 678 97 674 98 682 99 691 100 608 677 101 654 102 103 104 634 4 47 107 108 109 110 111 112 113 5 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 618 131 630 132 133 6 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 685 159 160 161 587 162 163 164 165 166 167 168 688 7 681 609 680 170 171 628 172 584 173 174 611 175 176 671 177 178 179 676 180 181 182 183 184 655 576 185 61 614 186 8 188 189 190 191 192 193 194 195 627 196 197 198 199 639 200 607 201 606 202 203 204 56 206 207 208 209 210 211 626 212 213 214 215 216 662 217 218 219 599 39 221 582 9 223 585 664 225 10 601 641 227 228 229 230 231 232 233 234 49 236 237 238 58 59 40 241 686 242 243 11 245 665 246 12 248 249 643 636 13 251 252 253 638 254 255 256 257 258 259 667 260 575 261 262 683 616 263 589 588 264 590 591 660 265 266 687 267 642 268 593 269 270 271 272 273 274 586 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 14 296 297 298 299 300 619 581 600 301 302 57 55 305 15 307 651 308 309 310 311 603 604 312 313 610 314 315 316 317 318 319 320 321 16 324 325 326 646 17 328 329 330 331 18 332 334 335 336 663 19 592 337 338 613 612 339 340 341 342 343 344 345 20 347 348 650 617 349 350 351 352 353 354 657 355 356 357 358 360 361 362 363 644 364 365 366 367 368 369 370 371 372 373 635 54 42 376 377 378 379 380 62 381 382 21 621 384 624 385 675 22 387 388 389 45 43 391 672 392 393 394 395 396 23 398 684 689 640 399 400 53 402 24 404 405 406 25 408 409 632 410 411 412 413 414 415 416 417 418 419 669 420 421 422 647 423 26 424 27 426 427 428 429 431 52 432 433 434 435 436 656 28 438 439 440 30 442 29 445 446 447 448 449 450 451 631 452 453 48 577 658 455 456 457 44 51 41 60 670 460 668 461 690 462 463 464 465 466 467 692 31 648 469 598 470 471 472 473 474 475 476 477 625 478 583 479 480 481 32 482 483 33 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 602 502 503 46 505 34 507 508 509 510 666 594 629 579 595 580 35 511 512 513 514 515 516 517 518 649 578 623 615 622 661 519 520 673 521 36 523 524 525 526 527 528 529 530 597 531 532 533 652 534 535 653 50 63 537 596 538 539 540 541 37 543 544 633 545 38 546 547 548 549 550 679 551 552 553 554 555 556 620 557 558 559 560 561 562 563 564 565 566 567 568 569 570 571 572 573 574"
+goto exitSetSortByArrSub
+label notAlpha
+label doNotChangeOrder
+setarr sortByArr "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 78 79 80 81 82 83 84 85 86 87 88 89 90 92 93 94 95 96 97 98 99 100 101 102 103 104 107 108 109 110 111 112 113 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 206 207 208 209 210 211 212 213 214 215 216 217 218 219 221 223 225 227 228 229 230 231 232 233 234 236 237 238 241 242 243 245 246 248 249 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 296 297 298 299 300 301 302 305 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 324 325 326 328 329 330 331 332 334 335 336 337 338 339 340 341 342 343 344 345 347 348 349 350 351 352 353 354 355 356 357 358 360 361 362 363 364 365 366 367 368 369 370 371 372 373 376 377 378 379 380 381 382 384 385 387 388 389 391 392 393 394 395 396 398 399 400 402 404 405 406 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 426 427 428 429 431 432 433 434 435 436 438 439 440 442 445 446 447 448 449 450 451 452 453 455 456 457 460 461 462 463 464 465 466 467 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 505 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 523 524 525 526 527 528 529 530 531 532 533 534 535 537 538 539 540 541 543 544 545 546 547 548 549 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569 570 571 572 573 574 575 576 577 578 579 580 581 582 583 584 585 586 587 588 589 590 591 592 593 594 595 596 597 598 599 600 601 602 603 604 605 606 607 608 609 610 611 612 613 614 615 616 617 618 619 620 621 622 623 624 625 626 627 628 629 630 631 632 633 634 635 636 638 639 640 641 642 643 644 645 646 647 648 649 650 651 652 653 654 655 656 657 658 659 660 661 662 663 664 665 666 667 668 669 670 671 672 673 674 675 676 677 678 679 680 681 682 683 684 685 686 687 688 689 690 691 692"
+label exitSetSortByArrSub
+gosubreturn
+goto exitScript
+label errorWithprioritizeHeroOrder
+echo "--ERROR  'prioritizeHeroOrder' can only be set to one of the following: [ id | alpha | pol | atk | int | lead ] -"
+goto exitScript
+label errorShowExtraOwnerInfoIfOwned
+echo "--ERROR  'showExtraOwnerInfoIfOwned' can only be set to one of the following: [ true | false ] -"
+goto exitScript
+label printHeroStatsError
+echo "Please make sure you have viewed the 'Account->Statistics->Heroes' tab before running this script"
+goto exitScript
+label printPlayersStatsError
+echo "Please make sure you have viewed the 'Account->Statistics->Players' tab before running this script"
+goto exitScript
+label allDone
+echo "--------------------"
+echo "Finished searching through stats and found a total of %unownedHhCount% possibly unowned Historic Heroes."
+iferror %unownedHhNameList% skipUnownedHhNameList
+echo "Found the following possibly unowned Historic Heroes listed below..."
+echo %unownedHhNameList%
+label skipUnownedHhNameList
+echo "--------------------"
+label exitScript
+setsilence false

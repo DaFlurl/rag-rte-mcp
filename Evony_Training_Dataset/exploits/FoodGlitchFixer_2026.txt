@@ -1,0 +1,111 @@
+#======================================================================================================================
+# Food Glitch Counter + Fixer v2.0 - Enhanced Ogliss Script with Untrain Commands
+#======================================================================================================================
+# Original script by Ogliss - Enhanced to output UNTRAIN commands for EVEN glitches
+# This script when run in a city will output all Food Glitch information to the war log tab
+#======================================================================================================================
+setsilence true //
+#======================================================================================================================
+# Mode can be set to either Full or Lite
+# Lite will display food generation status from any food glitches for that troop type
+# Full will display current valley/city glitch numbers, progress towards the next glitch for each troop type as well as food generation status from any food glitches for that troop type
+set Mode full //
+# output can be set to either Log or WarLog
+set Output WarLog //
+#======================================================================================================================
+set ii 0
+set Generating 0
+set NotGenerating 0
+set NotGlitching 0
+set totalglitchcount 0
+iferror %ignored.length% setarray ignored ["none"]
+iferror %extrainfo% set extrainfo All
+#set test 100000
+set MyCInd $c.ac.indexOf(m_city)$
+iferror %i% set i 0
+iferror %c% set c 0
+iferror %logi% set logi 0
+set tc c.castle.troop
+set tv c.castle.troop
+setarray tNames ["wo", "w", "s", "p", "sw", "a", "c", "cata", "t", "b", "r", "cp"]
+set CityCount $m_city.allCities.length$ // number of cities, automatically detected
+set cMaT .cityManager.allTroop.
+set mcac m_city.allCities
+set gltccind 0
+iferror %test% set test 0
+setarr gltctt2 "peasants militia scouter pikemen swordsmen archer lightCavalry heavyCavalry carriage ballista batteringRam catapult FoodProduced troopCostFood"
+setarr fpt "1 1 2 3 3 4 9 17 5 25 50 125"
+setarray gltctt3 ["Workers", "Warriors", "Scouts", "Pikemen", "Swordsmen", "Archers", "Cavalry", "Cataphracts", "Transporters", "Ballista", "Battering Rams", "Catapults", "Food Produced per hour", "Food Eaten per hour"]
+setarray gltcctc ["$%tc%.peasants$", "$%tc%.militia$", "$%tc%.scouter$", "$%tc%.pikemen$", "$%tc%.swordsmen$", "$%tc%.archer$", "$%tc%.lightCavalry$", "$%tc%.heavyCavalry$", "$%tc%.carriage$", "$%tc%.ballista$", "$%tc%.batteringRam$", "$%tc%.catapult$"]
+setarray gltcctv ["{$%tv%.peasants$-%gltcctc[0]%}", "{$%tv%.militia$-%gltcctc[1]%}", "{$%tv%.scouter$-%gltcctc[2]%}", "{$%tv%.pikemen$-%gltcctc[3]%}", "{$%tv%.swordsmen$-%gltcctc[4]%}", "{$%tv%.archer$-%gltcctc[5]%}", "{$%tv%.lightCavalry$-%gltcctc[6]%}", "{$%tv%.heavyCavalry$-%gltcctc[7]%}", "{$%tv%.carriage$-%gltcctc[8]%}", "{$%tv%.ballista$-%gltcctc[9]%}", "{$%tv%.batteringRam$-%gltcctc[10]%}", "{$%tv%.catapult$-%gltcctc[11]%}"]
+label totalcount
+set fullmsg null
+#Glitch triggering number
+set glitchnumber 2147483647
+#incity troop glitch numbers
+setarr cfrn "{{{%glitchnumber%/%fpt[0]%}\1}+1} {{{%glitchnumber%/%fpt[1]%}\1}+1} {{{%glitchnumber%/%fpt[2]%}\1}+1} {{{%glitchnumber%/%fpt[3]%}\1}+1} {{{%glitchnumber%/%fpt[4]%}\1}+1} {{{%glitchnumber%/%fpt[5]%}\1}+1} {{{%glitchnumber%/%fpt[6]%}\1}+1} {{{%glitchnumber%/%fpt[7]%}\1}+1} {{{%glitchnumber%/%fpt[8]%}\1}+1} {{{%glitchnumber%/%fpt[9]%}\1}+1} {{{%glitchnumber%/%fpt[10]%}\1}+1} {{{%glitchnumber%/%fpt[11]%}\1}+1}"
+#Valley/Sup troop glitch numbers
+setarr vfrn "{{{%glitchnumber%/%fpt[0]%}\1}/2\1+1} {{{%glitchnumber%/%fpt[1]%}\1}/2\1+1} {{{%glitchnumber%/%fpt[2]%}\1}/2\1+1} {{{%glitchnumber%/%fpt[3]%}\1}/2\1+1} {{{%glitchnumber%/%fpt[4]%}\1}/2\1+1} {{{%glitchnumber%/%fpt[5]%}\1}/2\1+1} {{{%glitchnumber%/%fpt[6]%}\1}/2\1+1} {{{%glitchnumber%/%fpt[7]%}\1}/2\1+1} {{{%glitchnumber%/%fpt[8]%}\1}/2\1+1} {{{%glitchnumber%/%fpt[9]%}\1}/2\1+1} {{{%glitchnumber%/%fpt[10]%}\1}/2\1+1} {{{%glitchnumber%/%fpt[11]%}\1}/2\1+1}"
+#troops in city
+setarr totaltroopcountn "{%gltcctc[0]%+%test%} {%gltcctc[1]%+{%test%*10}} {%gltcctc[2]%+{%test%*5}} {%gltcctc[3]%+{%test%*3}} {%gltcctc[4]%+{%test%*20}} {%gltcctc[5]%+{%test%*30}} {%gltcctc[6]%+{%test%*14}} {%gltcctc[7]%+{%test%*16}} {%gltcctc[8]%+{%test%*2}} {%gltcctc[9]%+{%test%*3}} {%gltcctc[10]%+{%test%*4}} {%gltcctc[11]%+{%test%*5}}"
+set LogMsg "<br><font color='#CC2EFA'> ----------</font><font color='#FF0000'>Food Glitch Information for This City</font><font color='#CC2EFA'> ----------</font>"
+label checkcounts
+#if {%test%!=0&&%gltctt3[{%logi%}]%!=Archers} setsilence true
+#if {%test%!=0&&%gltctt3[{%logi%}]%==Archers} setsilence false
+set CompletedVGlitch 0
+set CompletedCGlitch 0
+label countVglitch
+if {%gltcctv[{%logi%}]%>{%vfrn[{%logi%}]%+{%vfrn[{%logi%}]%*%CompletedVGlitch%}}} set CompletedVGlitch {%CompletedVGlitch%+1}
+if {%gltcctv[{%logi%}]%>{%vfrn[{%logi%}]%+{%vfrn[{%logi%}]%*%CompletedVGlitch%}}} goto countVglitch
+set comppletedVglitchnum {%vfrn[{%logi%}]%*%CompletedVGlitch%}
+set tvgp {{{{%gltcctv[{%logi%}]%-%comppletedVglitchnum%}/%vfrn[{%logi%}]%}*100}\1}
+label countCglitch
+if {%gltcctc[{%logi%}]%>{%cfrn[{%logi%}]%+{%cfrn[{%logi%}]%*%CompletedCGlitch%}}} set CompletedCGlitch {%CompletedCGlitch%+1}
+if {%gltcctc[{%logi%}]%>{%cfrn[{%logi%}]%+{%cfrn[{%logi%}]%*%CompletedCGlitch%}}} goto countCglitch
+set comppletedCglitchnum {%cfrn[{%logi%}]%*%CompletedCGlitch%}
+set tcgp {{{{%gltcctc[{%logi%}]%-%comppletedCglitchnum%}/%cfrn[{%logi%}]%}*100}\1}
+label choosemessage
+set Generation {{{%CompletedCGlitch%+%CompletedVGlitch%}|2}==1}
+set totalglitchcount {%totalglitchcount%+{%CompletedCGlitch%+%CompletedVGlitch%}}
+if {%Generation%==true} set Generating {%Generating%+1}
+if {%Generation%==false&&{%CompletedCGlitch%+%CompletedVGlitch%}>0} set NotGenerating {%NotGenerating%+1}
+if {%Generation%==false&&{%CompletedCGlitch%+%CompletedVGlitch%}==0} set NotGlitching {%NotGlitching%+1}
+if {{%Mode%==Lite||%Mode%==lite}&&{%CompletedVGlitch%==0&&%CompletedCGlitch%==0}} goto skiptroop
+set msg "<font color='#000000'> Type:</font><font color='#CC2EFA'><b> %gltctt3[{%logi%}]%</b></font>"
+if {{%Mode%==Lite||%Mode%==lite}&&{%CompletedVGlitch%!=0}} set msg "%msg%    <font color='#000000'>Valley Glitches: </font><font color='#CC2EFA'><b>%CompletedVGlitch%</b></font>"
+if {{%Mode%==Lite||%Mode%==lite}&&{%CompletedCGlitch%!=0}} set msg "%msg%    <font color='#000000'>City Glitches: </font><font color='#CC2EFA'><b>%CompletedCGlitch%</b></font>"
+if {{%Mode%==Full||%Mode%==full}&&{%gltcctv[{%logi%}]%!=0}} set msg "%msg%<br>    <font color='#000000'>Valley Glitches: </font><font color='#CC2EFA'><b>%CompletedVGlitch%</b></font>"
+if {{%Mode%==Full||%Mode%==full}&&{%CompletedVGlitch%==0}&&{%gltcctv[{%logi%}]%!=0}} set msg "%msg%<br>      <font color='#000000'>Valley Glitch Progess: </font><font color='#CC2EFA'><b>%tvgp% percent</b></font><br>      <font color='#000000'>Valley Glitch Details: </font><font color='#CC2EFA'><b>{%gltcctv[{%logi%}]%-%comppletedVglitchnum%}</b></font><font color='#000000'> / </font><font color='#CC2EFA'><b>%vfrn[{%logi%}]%</b></font><font color='#000000'> need </font><font color='#CC2EFA'><b>{%vfrn[{%logi%}]%-{%gltcctv[{%logi%}]%-%comppletedVglitchnum%}}</b></font>"
+if {{%Mode%==Full||%Mode%==full}&&{%CompletedCGlitch%!=0}} set msg "%msg%<br>    <font color='#000000'>City Glitches: </font><font color='#CC2EFA'><b>%CompletedCGlitch%</b></font>"
+if {{%Mode%==Full||%Mode%==full}&&{%CompletedCGlitch%>=0||%CompletedVGlitch%>0}} set msg "%msg%<br>      <font color='#000000'>City Glitch Progess: </font><font color='#CC2EFA'><b>%tcgp% percent</b></font><br>      <font color='#000000'>City Glitch Details:</font> <font color='#CC2EFA'><b>{%gltcctc[{%logi%}]%-%comppletedCglitchnum%}</b></font><font color='#000000'> / </font><font color='#CC2EFA'><b>%cfrn[{%logi%}]%</b></font><font color='#000000'> need </font><font color='#CC2EFA'><b>{%cfrn[{%logi%}]%-{%gltcctc[{%logi%}]%-%comppletedCglitchnum%}}</b></font>"
+if {{%Mode%==Full||%Mode%==full}&&{%CompletedCGlitch%>0||%CompletedVGlitch%>0}} set msg "%msg%<br>"
+if {{%CompletedCGlitch%>0||%CompletedVGlitch%>0}&&%Generation%==true} set msg "%msg%  Food Generation: <font color='#CC2EFA'><b>%Generation%!</b></font> <br><font color='#008000'><b>This Troop type Should be generating food!</b></font>"
+if {{%CompletedCGlitch%>0||%CompletedVGlitch%>0}&&%Generation%==false} set msg "%msg%  Food Generation: <font color='#CC2EFA'><b>%Generation%!</b></font> <br><font color='#FF0000'><b>you need an odd number of glitches to generate food!</b></font><br><font color='#00FFFF'><b>  FIX: untrain %tNames[{%logi%}]%:{{%gltcctc[{%logi%}]%-%comppletedCglitchnum%}+1}</b></font>"
+set LogMsg "%LogMsg%<br> %msg%"
+label skiptroop
+set logi {%logi%+1}
+if  {%logi%<%tNames.length%} goto checkcounts
+if {%Generating%!=0} set LogMsg "%LogMsg%<br> <font color='#CC2EFA'> ----------</font><font color='#000000'>Total Food Glitch results for This City</font><font color='#CC2EFA'> ----------</font>"
+if {%Generating%!=0} set Generated {%Generating%*%glitchnumber%}
+set UsedFood {$c.cm.resource.troopCostFood$+{%Generated%}}
+set NetFood {$c.cm.resource.troopCostFood$-$c.cm.resource.troopCostFood$-$c.cm.resource.troopCostFood$}
+if {%NetFood%<0} set NetColour FF0000
+if {%NetFood%>0} set NetColour 008000
+if {%Generating%!=0} set LogMsg "%LogMsg%<br> <font color='#000000'>total troop glitches: <font color='#CC2EFA'><b>%totalglitchcount%</b></font>"
+if {%Generating%!=0} set LogMsg "%LogMsg%<br> <font color='#000000'>total generating troop types: </font><font color='#008000'><b>%Generating%</b></font>/<font color='#FF0000'><b>{%NotGenerating%}</b></font>/<font color='#CC2EFA'><b>{%Generating%+%NotGenerating%}</b></font>/<font color='#000000'><b>{%NotGlitching%}</b></font><br><font color='#000000'> Total Generated: </font><font color='#008000'><b>%Generated%</b></font><br><font color='#000000'> Being Used: </font><font color='#FF0000'><b>%UsedFood%</b></font><br><font color='#000000'> Net Food: </font><font color='#%NetColour%'><b>%NetFood%</b></font>"
+if {%test%==0} gosub log 
+if {%test%!=0} gosub log 
+goto enddraftall
+label log
+if {%Output%==Log||%Output%==log} goto logCity
+if {%Output%==WarLog||%Output%==warlog} goto logWar
+goto errend
+label logWar
+set out "$m_city.cityManager.warLogMsg(%LogMsg%)$"
+gosubreturn
+label logCity
+set out "$m_city.cityManager.logMsg(%LogMsg%)$"
+gosubreturn
+label errend
+echo "Oops, Something went wrong"
+label enddraftall

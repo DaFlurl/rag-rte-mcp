@@ -1,0 +1,37 @@
+setsilence true
+set t $c.af.getQuestCommands().getQuestType(c.castle.id,1)$
+gosub waitResp %t% 10
+label questTypes
+set i 0
+label loopTypes
+echo "--"
+if {$%t%.typesArray[{%i%}].recommend$} echo "Quest is recommended by the tutrial"
+echo $%t%.typesArray[{%i%}].name$ Quest
+set r $c.af.getQuestCommands().getQuestList(c.castle.id,%t%.typesArray[{%i%}].typeId)$
+gosub waitResp %r% 10
+set ii 0
+label loopQuests
+echo "Award: $%r%.questsArray[{%ii%}].award$"
+echo "$%r%.questsArray[{%ii%}].manual$"
+set iii 0
+label loopTargets
+echo "Requirements: $%r%.questsArray[{%ii%}].targetsArray[{%iii%}].name$"
+set iii {%iii%+1}
+if {%iii%<$%r%.questsArray[{%ii%}].targetsArray.length$} goto loopTargets
+set ii {%ii%+1}
+if {%ii%<$%r%.questsArray.length$} goto loopQuests
+set i {%i%+1}
+sleep 2
+if {%i%<$%t%.typesArray.length$} goto loopTypes
+goto exit
+label waitResp
+set _starttime $c.getRawTime()$
+label waitRespStart
+iferror {$%_1%.ok$} goto respWait
+gosubreturn %_1%
+label respWait
+if {$c.getRawTime()$>{%_starttime%+%_2%*1000}} echo "A timeout occured while waiting for server response"
+if {$c.getRawTime()$>{%_starttime%+%_2%*1000}} gosubreturn 0
+sleep 0.1
+goto waitRespStart
+label exit

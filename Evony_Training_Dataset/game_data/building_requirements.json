@@ -1,0 +1,1765 @@
+{
+  "buildings": {
+    "townhall": {
+      "id": 1,
+      "name": "Town Hall",
+      "position": "inside",
+      "max_level": 10,
+      "unlocks": [
+        "cottage",
+        "warehouse",
+        "granary",
+        "barracks"
+      ],
+      "requirements": {},
+      "levels": {
+        "1": {
+          "food": 150,
+          "wood": 225,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 120,
+          "population": 10
+        },
+        "2": {
+          "food": 689,
+          "wood": 1033,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 417,
+          "population": 20
+        },
+        "3": {
+          "food": 1681,
+          "wood": 2522,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 866,
+          "population": 30
+        },
+        "4": {
+          "food": 3166,
+          "wood": 4750,
+          "stone": 2533,
+          "iron": 0,
+          "time_seconds": 1455,
+          "population": 40
+        },
+        "5": {
+          "food": 5173,
+          "wood": 7760,
+          "stone": 4139,
+          "iron": 0,
+          "time_seconds": 2174,
+          "population": 50
+        },
+        "6": {
+          "food": 7727,
+          "wood": 11590,
+          "stone": 6181,
+          "iron": 3863,
+          "time_seconds": 3018,
+          "population": 60
+        },
+        "7": {
+          "food": 10846,
+          "wood": 16270,
+          "stone": 8677,
+          "iron": 5423,
+          "time_seconds": 3984,
+          "population": 70
+        },
+        "8": {
+          "food": 14550,
+          "wood": 21826,
+          "stone": 11640,
+          "iron": 7275,
+          "time_seconds": 5066,
+          "population": 80
+        },
+        "9": {
+          "food": 18854,
+          "wood": 28282,
+          "stone": 15083,
+          "iron": 9427,
+          "time_seconds": 6263,
+          "population": 90
+        },
+        "10": {
+          "food": 23773,
+          "wood": 35660,
+          "stone": 19018,
+          "iron": 11886,
+          "time_seconds": 7571,
+          "population": 100
+        }
+      }
+    },
+    "cottage": {
+      "id": 3,
+      "name": "Cottage",
+      "position": "inside",
+      "max_level": 10,
+      "effect": "population",
+      "requirements": {
+        "townhall": 1
+      },
+      "levels": {
+        "1": {
+          "food": 150,
+          "wood": 225,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 120,
+          "population": 10
+        },
+        "2": {
+          "food": 689,
+          "wood": 1033,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 417,
+          "population": 20
+        },
+        "3": {
+          "food": 1681,
+          "wood": 2522,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 866,
+          "population": 30
+        },
+        "4": {
+          "food": 3166,
+          "wood": 4750,
+          "stone": 2533,
+          "iron": 0,
+          "time_seconds": 1455,
+          "population": 40
+        },
+        "5": {
+          "food": 5173,
+          "wood": 7760,
+          "stone": 4139,
+          "iron": 0,
+          "time_seconds": 2174,
+          "population": 50
+        },
+        "6": {
+          "food": 7727,
+          "wood": 11590,
+          "stone": 6181,
+          "iron": 3863,
+          "time_seconds": 3018,
+          "population": 60
+        },
+        "7": {
+          "food": 10846,
+          "wood": 16270,
+          "stone": 8677,
+          "iron": 5423,
+          "time_seconds": 3984,
+          "population": 70
+        },
+        "8": {
+          "food": 14550,
+          "wood": 21826,
+          "stone": 11640,
+          "iron": 7275,
+          "time_seconds": 5066,
+          "population": 80
+        },
+        "9": {
+          "food": 18854,
+          "wood": 28282,
+          "stone": 15083,
+          "iron": 9427,
+          "time_seconds": 6263,
+          "population": 90
+        },
+        "10": {
+          "food": 23773,
+          "wood": 35660,
+          "stone": 19018,
+          "iron": 11886,
+          "time_seconds": 7571,
+          "population": 100
+        }
+      }
+    },
+    "barracks": {
+      "id": 2,
+      "name": "Barracks",
+      "position": "inside",
+      "max_level": 10,
+      "trains": [
+        "worker",
+        "warrior",
+        "scout",
+        "pikeman",
+        "swordsman"
+      ],
+      "requirements": {
+        "townhall": 1,
+        "rally_spot": 1
+      },
+      "levels": {
+        "1": {
+          "food": 150,
+          "wood": 225,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 120,
+          "population": 10
+        },
+        "2": {
+          "food": 689,
+          "wood": 1033,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 417,
+          "population": 20
+        },
+        "3": {
+          "food": 1681,
+          "wood": 2522,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 866,
+          "population": 30
+        },
+        "4": {
+          "food": 3166,
+          "wood": 4750,
+          "stone": 2533,
+          "iron": 0,
+          "time_seconds": 1455,
+          "population": 40
+        },
+        "5": {
+          "food": 5173,
+          "wood": 7760,
+          "stone": 4139,
+          "iron": 0,
+          "time_seconds": 2174,
+          "population": 50
+        },
+        "6": {
+          "food": 7727,
+          "wood": 11590,
+          "stone": 6181,
+          "iron": 3863,
+          "time_seconds": 3018,
+          "population": 60
+        },
+        "7": {
+          "food": 10846,
+          "wood": 16270,
+          "stone": 8677,
+          "iron": 5423,
+          "time_seconds": 3984,
+          "population": 70
+        },
+        "8": {
+          "food": 14550,
+          "wood": 21826,
+          "stone": 11640,
+          "iron": 7275,
+          "time_seconds": 5066,
+          "population": 80
+        },
+        "9": {
+          "food": 18854,
+          "wood": 28282,
+          "stone": 15083,
+          "iron": 9427,
+          "time_seconds": 6263,
+          "population": 90
+        },
+        "10": {
+          "food": 23773,
+          "wood": 35660,
+          "stone": 19018,
+          "iron": 11886,
+          "time_seconds": 7571,
+          "population": 100
+        }
+      }
+    },
+    "stable": {
+      "id": 20,
+      "name": "Stable",
+      "position": "inside",
+      "max_level": 10,
+      "trains": [
+        "cavalry",
+        "cataphract"
+      ],
+      "requirements": {
+        "townhall": 4,
+        "barracks": 4
+      },
+      "levels": {
+        "1": {
+          "food": 150,
+          "wood": 225,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 120,
+          "population": 10
+        },
+        "2": {
+          "food": 689,
+          "wood": 1033,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 417,
+          "population": 20
+        },
+        "3": {
+          "food": 1681,
+          "wood": 2522,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 866,
+          "population": 30
+        },
+        "4": {
+          "food": 3166,
+          "wood": 4750,
+          "stone": 2533,
+          "iron": 0,
+          "time_seconds": 1455,
+          "population": 40
+        },
+        "5": {
+          "food": 5173,
+          "wood": 7760,
+          "stone": 4139,
+          "iron": 0,
+          "time_seconds": 2174,
+          "population": 50
+        },
+        "6": {
+          "food": 7727,
+          "wood": 11590,
+          "stone": 6181,
+          "iron": 3863,
+          "time_seconds": 3018,
+          "population": 60
+        },
+        "7": {
+          "food": 10846,
+          "wood": 16270,
+          "stone": 8677,
+          "iron": 5423,
+          "time_seconds": 3984,
+          "population": 70
+        },
+        "8": {
+          "food": 14550,
+          "wood": 21826,
+          "stone": 11640,
+          "iron": 7275,
+          "time_seconds": 5066,
+          "population": 80
+        },
+        "9": {
+          "food": 18854,
+          "wood": 28282,
+          "stone": 15083,
+          "iron": 9427,
+          "time_seconds": 6263,
+          "population": 90
+        },
+        "10": {
+          "food": 23773,
+          "wood": 35660,
+          "stone": 19018,
+          "iron": 11886,
+          "time_seconds": 7571,
+          "population": 100
+        }
+      }
+    },
+    "workshop": {
+      "id": 26,
+      "name": "Workshop",
+      "position": "inside",
+      "max_level": 10,
+      "trains": [
+        "transporter",
+        "ballista",
+        "battering_ram",
+        "catapult"
+      ],
+      "requirements": {
+        "townhall": 4,
+        "barracks": 4
+      },
+      "levels": {
+        "1": {
+          "food": 150,
+          "wood": 225,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 120,
+          "population": 10
+        },
+        "2": {
+          "food": 689,
+          "wood": 1033,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 417,
+          "population": 20
+        },
+        "3": {
+          "food": 1681,
+          "wood": 2522,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 866,
+          "population": 30
+        },
+        "4": {
+          "food": 3166,
+          "wood": 4750,
+          "stone": 2533,
+          "iron": 0,
+          "time_seconds": 1455,
+          "population": 40
+        },
+        "5": {
+          "food": 5173,
+          "wood": 7760,
+          "stone": 4139,
+          "iron": 0,
+          "time_seconds": 2174,
+          "population": 50
+        },
+        "6": {
+          "food": 7727,
+          "wood": 11590,
+          "stone": 6181,
+          "iron": 3863,
+          "time_seconds": 3018,
+          "population": 60
+        },
+        "7": {
+          "food": 10846,
+          "wood": 16270,
+          "stone": 8677,
+          "iron": 5423,
+          "time_seconds": 3984,
+          "population": 70
+        },
+        "8": {
+          "food": 14550,
+          "wood": 21826,
+          "stone": 11640,
+          "iron": 7275,
+          "time_seconds": 5066,
+          "population": 80
+        },
+        "9": {
+          "food": 18854,
+          "wood": 28282,
+          "stone": 15083,
+          "iron": 9427,
+          "time_seconds": 6263,
+          "population": 90
+        },
+        "10": {
+          "food": 23773,
+          "wood": 35660,
+          "stone": 19018,
+          "iron": 11886,
+          "time_seconds": 7571,
+          "population": 100
+        }
+      }
+    },
+    "academy": {
+      "id": 25,
+      "name": "Academy",
+      "position": "inside",
+      "max_level": 10,
+      "effect": "research",
+      "requirements": {
+        "townhall": 2
+      },
+      "levels": {
+        "1": {
+          "food": 150,
+          "wood": 225,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 120,
+          "population": 10
+        },
+        "2": {
+          "food": 689,
+          "wood": 1033,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 417,
+          "population": 20
+        },
+        "3": {
+          "food": 1681,
+          "wood": 2522,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 866,
+          "population": 30
+        },
+        "4": {
+          "food": 3166,
+          "wood": 4750,
+          "stone": 2533,
+          "iron": 0,
+          "time_seconds": 1455,
+          "population": 40
+        },
+        "5": {
+          "food": 5173,
+          "wood": 7760,
+          "stone": 4139,
+          "iron": 0,
+          "time_seconds": 2174,
+          "population": 50
+        },
+        "6": {
+          "food": 7727,
+          "wood": 11590,
+          "stone": 6181,
+          "iron": 3863,
+          "time_seconds": 3018,
+          "population": 60
+        },
+        "7": {
+          "food": 10846,
+          "wood": 16270,
+          "stone": 8677,
+          "iron": 5423,
+          "time_seconds": 3984,
+          "population": 70
+        },
+        "8": {
+          "food": 14550,
+          "wood": 21826,
+          "stone": 11640,
+          "iron": 7275,
+          "time_seconds": 5066,
+          "population": 80
+        },
+        "9": {
+          "food": 18854,
+          "wood": 28282,
+          "stone": 15083,
+          "iron": 9427,
+          "time_seconds": 6263,
+          "population": 90
+        },
+        "10": {
+          "food": 23773,
+          "wood": 35660,
+          "stone": 19018,
+          "iron": 11886,
+          "time_seconds": 7571,
+          "population": 100
+        }
+      }
+    },
+    "forge": {
+      "id": 22,
+      "name": "Forge",
+      "position": "inside",
+      "max_level": 10,
+      "effect": "equipment",
+      "requirements": {
+        "townhall": 3
+      },
+      "levels": {
+        "1": {
+          "food": 150,
+          "wood": 225,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 120,
+          "population": 10
+        },
+        "2": {
+          "food": 689,
+          "wood": 1033,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 417,
+          "population": 20
+        },
+        "3": {
+          "food": 1681,
+          "wood": 2522,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 866,
+          "population": 30
+        },
+        "4": {
+          "food": 3166,
+          "wood": 4750,
+          "stone": 2533,
+          "iron": 0,
+          "time_seconds": 1455,
+          "population": 40
+        },
+        "5": {
+          "food": 5173,
+          "wood": 7760,
+          "stone": 4139,
+          "iron": 0,
+          "time_seconds": 2174,
+          "population": 50
+        },
+        "6": {
+          "food": 7727,
+          "wood": 11590,
+          "stone": 6181,
+          "iron": 3863,
+          "time_seconds": 3018,
+          "population": 60
+        },
+        "7": {
+          "food": 10846,
+          "wood": 16270,
+          "stone": 8677,
+          "iron": 5423,
+          "time_seconds": 3984,
+          "population": 70
+        },
+        "8": {
+          "food": 14550,
+          "wood": 21826,
+          "stone": 11640,
+          "iron": 7275,
+          "time_seconds": 5066,
+          "population": 80
+        },
+        "9": {
+          "food": 18854,
+          "wood": 28282,
+          "stone": 15083,
+          "iron": 9427,
+          "time_seconds": 6263,
+          "population": 90
+        },
+        "10": {
+          "food": 23773,
+          "wood": 35660,
+          "stone": 19018,
+          "iron": 11886,
+          "time_seconds": 7571,
+          "population": 100
+        }
+      }
+    },
+    "marketplace": {
+      "id": 23,
+      "name": "Marketplace",
+      "position": "inside",
+      "max_level": 10,
+      "effect": "trade",
+      "requirements": {
+        "townhall": 2
+      },
+      "levels": {
+        "1": {
+          "food": 150,
+          "wood": 225,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 120,
+          "population": 10
+        },
+        "2": {
+          "food": 689,
+          "wood": 1033,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 417,
+          "population": 20
+        },
+        "3": {
+          "food": 1681,
+          "wood": 2522,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 866,
+          "population": 30
+        },
+        "4": {
+          "food": 3166,
+          "wood": 4750,
+          "stone": 2533,
+          "iron": 0,
+          "time_seconds": 1455,
+          "population": 40
+        },
+        "5": {
+          "food": 5173,
+          "wood": 7760,
+          "stone": 4139,
+          "iron": 0,
+          "time_seconds": 2174,
+          "population": 50
+        },
+        "6": {
+          "food": 7727,
+          "wood": 11590,
+          "stone": 6181,
+          "iron": 3863,
+          "time_seconds": 3018,
+          "population": 60
+        },
+        "7": {
+          "food": 10846,
+          "wood": 16270,
+          "stone": 8677,
+          "iron": 5423,
+          "time_seconds": 3984,
+          "population": 70
+        },
+        "8": {
+          "food": 14550,
+          "wood": 21826,
+          "stone": 11640,
+          "iron": 7275,
+          "time_seconds": 5066,
+          "population": 80
+        },
+        "9": {
+          "food": 18854,
+          "wood": 28282,
+          "stone": 15083,
+          "iron": 9427,
+          "time_seconds": 6263,
+          "population": 90
+        },
+        "10": {
+          "food": 23773,
+          "wood": 35660,
+          "stone": 19018,
+          "iron": 11886,
+          "time_seconds": 7571,
+          "population": 100
+        }
+      }
+    },
+    "inn": {
+      "id": 21,
+      "name": "Inn",
+      "position": "inside",
+      "max_level": 10,
+      "effect": "hero_recruitment",
+      "requirements": {
+        "townhall": 2,
+        "feasting_hall": 1
+      },
+      "levels": {
+        "1": {
+          "food": 150,
+          "wood": 225,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 120,
+          "population": 10
+        },
+        "2": {
+          "food": 689,
+          "wood": 1033,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 417,
+          "population": 20
+        },
+        "3": {
+          "food": 1681,
+          "wood": 2522,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 866,
+          "population": 30
+        },
+        "4": {
+          "food": 3166,
+          "wood": 4750,
+          "stone": 2533,
+          "iron": 0,
+          "time_seconds": 1455,
+          "population": 40
+        },
+        "5": {
+          "food": 5173,
+          "wood": 7760,
+          "stone": 4139,
+          "iron": 0,
+          "time_seconds": 2174,
+          "population": 50
+        },
+        "6": {
+          "food": 7727,
+          "wood": 11590,
+          "stone": 6181,
+          "iron": 3863,
+          "time_seconds": 3018,
+          "population": 60
+        },
+        "7": {
+          "food": 10846,
+          "wood": 16270,
+          "stone": 8677,
+          "iron": 5423,
+          "time_seconds": 3984,
+          "population": 70
+        },
+        "8": {
+          "food": 14550,
+          "wood": 21826,
+          "stone": 11640,
+          "iron": 7275,
+          "time_seconds": 5066,
+          "population": 80
+        },
+        "9": {
+          "food": 18854,
+          "wood": 28282,
+          "stone": 15083,
+          "iron": 9427,
+          "time_seconds": 6263,
+          "population": 90
+        },
+        "10": {
+          "food": 23773,
+          "wood": 35660,
+          "stone": 19018,
+          "iron": 11886,
+          "time_seconds": 7571,
+          "population": 100
+        }
+      }
+    },
+    "feasting_hall": {
+      "id": 27,
+      "name": "Feasting Hall",
+      "position": "inside",
+      "max_level": 10,
+      "effect": "hero_capacity",
+      "requirements": {
+        "townhall": 2
+      },
+      "levels": {
+        "1": {
+          "food": 150,
+          "wood": 225,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 120,
+          "population": 10
+        },
+        "2": {
+          "food": 689,
+          "wood": 1033,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 417,
+          "population": 20
+        },
+        "3": {
+          "food": 1681,
+          "wood": 2522,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 866,
+          "population": 30
+        },
+        "4": {
+          "food": 3166,
+          "wood": 4750,
+          "stone": 2533,
+          "iron": 0,
+          "time_seconds": 1455,
+          "population": 40
+        },
+        "5": {
+          "food": 5173,
+          "wood": 7760,
+          "stone": 4139,
+          "iron": 0,
+          "time_seconds": 2174,
+          "population": 50
+        },
+        "6": {
+          "food": 7727,
+          "wood": 11590,
+          "stone": 6181,
+          "iron": 3863,
+          "time_seconds": 3018,
+          "population": 60
+        },
+        "7": {
+          "food": 10846,
+          "wood": 16270,
+          "stone": 8677,
+          "iron": 5423,
+          "time_seconds": 3984,
+          "population": 70
+        },
+        "8": {
+          "food": 14550,
+          "wood": 21826,
+          "stone": 11640,
+          "iron": 7275,
+          "time_seconds": 5066,
+          "population": 80
+        },
+        "9": {
+          "food": 18854,
+          "wood": 28282,
+          "stone": 15083,
+          "iron": 9427,
+          "time_seconds": 6263,
+          "population": 90
+        },
+        "10": {
+          "food": 23773,
+          "wood": 35660,
+          "stone": 19018,
+          "iron": 11886,
+          "time_seconds": 7571,
+          "population": 100
+        }
+      }
+    },
+    "embassy": {
+      "id": 28,
+      "name": "Embassy",
+      "position": "inside",
+      "max_level": 10,
+      "effect": "reinforcement_capacity",
+      "requirements": {
+        "townhall": 2
+      },
+      "levels": {
+        "1": {
+          "food": 150,
+          "wood": 225,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 120,
+          "population": 10
+        },
+        "2": {
+          "food": 689,
+          "wood": 1033,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 417,
+          "population": 20
+        },
+        "3": {
+          "food": 1681,
+          "wood": 2522,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 866,
+          "population": 30
+        },
+        "4": {
+          "food": 3166,
+          "wood": 4750,
+          "stone": 2533,
+          "iron": 0,
+          "time_seconds": 1455,
+          "population": 40
+        },
+        "5": {
+          "food": 5173,
+          "wood": 7760,
+          "stone": 4139,
+          "iron": 0,
+          "time_seconds": 2174,
+          "population": 50
+        },
+        "6": {
+          "food": 7727,
+          "wood": 11590,
+          "stone": 6181,
+          "iron": 3863,
+          "time_seconds": 3018,
+          "population": 60
+        },
+        "7": {
+          "food": 10846,
+          "wood": 16270,
+          "stone": 8677,
+          "iron": 5423,
+          "time_seconds": 3984,
+          "population": 70
+        },
+        "8": {
+          "food": 14550,
+          "wood": 21826,
+          "stone": 11640,
+          "iron": 7275,
+          "time_seconds": 5066,
+          "population": 80
+        },
+        "9": {
+          "food": 18854,
+          "wood": 28282,
+          "stone": 15083,
+          "iron": 9427,
+          "time_seconds": 6263,
+          "population": 90
+        },
+        "10": {
+          "food": 23773,
+          "wood": 35660,
+          "stone": 19018,
+          "iron": 11886,
+          "time_seconds": 7571,
+          "population": 100
+        }
+      }
+    },
+    "rally_spot": {
+      "id": 29,
+      "name": "Rally Spot",
+      "position": "inside",
+      "max_level": 10,
+      "effect": "army_capacity",
+      "requirements": {
+        "townhall": 1
+      },
+      "levels": {
+        "1": {
+          "food": 150,
+          "wood": 225,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 120,
+          "population": 10
+        },
+        "2": {
+          "food": 689,
+          "wood": 1033,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 417,
+          "population": 20
+        },
+        "3": {
+          "food": 1681,
+          "wood": 2522,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 866,
+          "population": 30
+        },
+        "4": {
+          "food": 3166,
+          "wood": 4750,
+          "stone": 2533,
+          "iron": 0,
+          "time_seconds": 1455,
+          "population": 40
+        },
+        "5": {
+          "food": 5173,
+          "wood": 7760,
+          "stone": 4139,
+          "iron": 0,
+          "time_seconds": 2174,
+          "population": 50
+        },
+        "6": {
+          "food": 7727,
+          "wood": 11590,
+          "stone": 6181,
+          "iron": 3863,
+          "time_seconds": 3018,
+          "population": 60
+        },
+        "7": {
+          "food": 10846,
+          "wood": 16270,
+          "stone": 8677,
+          "iron": 5423,
+          "time_seconds": 3984,
+          "population": 70
+        },
+        "8": {
+          "food": 14550,
+          "wood": 21826,
+          "stone": 11640,
+          "iron": 7275,
+          "time_seconds": 5066,
+          "population": 80
+        },
+        "9": {
+          "food": 18854,
+          "wood": 28282,
+          "stone": 15083,
+          "iron": 9427,
+          "time_seconds": 6263,
+          "population": 90
+        },
+        "10": {
+          "food": 23773,
+          "wood": 35660,
+          "stone": 19018,
+          "iron": 11886,
+          "time_seconds": 7571,
+          "population": 100
+        }
+      }
+    },
+    "beacon_tower": {
+      "id": 30,
+      "name": "Beacon Tower",
+      "position": "inside",
+      "max_level": 10,
+      "effect": "warning_time",
+      "requirements": {
+        "townhall": 2
+      },
+      "levels": {
+        "1": {
+          "food": 150,
+          "wood": 225,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 120,
+          "population": 10
+        },
+        "2": {
+          "food": 689,
+          "wood": 1033,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 417,
+          "population": 20
+        },
+        "3": {
+          "food": 1681,
+          "wood": 2522,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 866,
+          "population": 30
+        },
+        "4": {
+          "food": 3166,
+          "wood": 4750,
+          "stone": 2533,
+          "iron": 0,
+          "time_seconds": 1455,
+          "population": 40
+        },
+        "5": {
+          "food": 5173,
+          "wood": 7760,
+          "stone": 4139,
+          "iron": 0,
+          "time_seconds": 2174,
+          "population": 50
+        },
+        "6": {
+          "food": 7727,
+          "wood": 11590,
+          "stone": 6181,
+          "iron": 3863,
+          "time_seconds": 3018,
+          "population": 60
+        },
+        "7": {
+          "food": 10846,
+          "wood": 16270,
+          "stone": 8677,
+          "iron": 5423,
+          "time_seconds": 3984,
+          "population": 70
+        },
+        "8": {
+          "food": 14550,
+          "wood": 21826,
+          "stone": 11640,
+          "iron": 7275,
+          "time_seconds": 5066,
+          "population": 80
+        },
+        "9": {
+          "food": 18854,
+          "wood": 28282,
+          "stone": 15083,
+          "iron": 9427,
+          "time_seconds": 6263,
+          "population": 90
+        },
+        "10": {
+          "food": 23773,
+          "wood": 35660,
+          "stone": 19018,
+          "iron": 11886,
+          "time_seconds": 7571,
+          "population": 100
+        }
+      }
+    },
+    "walls": {
+      "id": 31,
+      "name": "Walls",
+      "position": "wall",
+      "max_level": 10,
+      "effect": "defense",
+      "requirements": {
+        "townhall": 1
+      },
+      "levels": {
+        "1": {
+          "food": 150,
+          "wood": 225,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 120,
+          "population": 10
+        },
+        "2": {
+          "food": 689,
+          "wood": 1033,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 417,
+          "population": 20
+        },
+        "3": {
+          "food": 1681,
+          "wood": 2522,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 866,
+          "population": 30
+        },
+        "4": {
+          "food": 3166,
+          "wood": 4750,
+          "stone": 2533,
+          "iron": 0,
+          "time_seconds": 1455,
+          "population": 40
+        },
+        "5": {
+          "food": 5173,
+          "wood": 7760,
+          "stone": 4139,
+          "iron": 0,
+          "time_seconds": 2174,
+          "population": 50
+        },
+        "6": {
+          "food": 7727,
+          "wood": 11590,
+          "stone": 6181,
+          "iron": 3863,
+          "time_seconds": 3018,
+          "population": 60
+        },
+        "7": {
+          "food": 10846,
+          "wood": 16270,
+          "stone": 8677,
+          "iron": 5423,
+          "time_seconds": 3984,
+          "population": 70
+        },
+        "8": {
+          "food": 14550,
+          "wood": 21826,
+          "stone": 11640,
+          "iron": 7275,
+          "time_seconds": 5066,
+          "population": 80
+        },
+        "9": {
+          "food": 18854,
+          "wood": 28282,
+          "stone": 15083,
+          "iron": 9427,
+          "time_seconds": 6263,
+          "population": 90
+        },
+        "10": {
+          "food": 23773,
+          "wood": 35660,
+          "stone": 19018,
+          "iron": 11886,
+          "time_seconds": 7571,
+          "population": 100
+        }
+      }
+    },
+    "warehouse": {
+      "id": 8,
+      "name": "Warehouse",
+      "position": "inside",
+      "max_level": 10,
+      "effect": "resource_protection",
+      "requirements": {
+        "townhall": 1
+      },
+      "levels": {
+        "1": {
+          "food": 150,
+          "wood": 225,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 120,
+          "population": 10
+        },
+        "2": {
+          "food": 689,
+          "wood": 1033,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 417,
+          "population": 20
+        },
+        "3": {
+          "food": 1681,
+          "wood": 2522,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 866,
+          "population": 30
+        },
+        "4": {
+          "food": 3166,
+          "wood": 4750,
+          "stone": 2533,
+          "iron": 0,
+          "time_seconds": 1455,
+          "population": 40
+        },
+        "5": {
+          "food": 5173,
+          "wood": 7760,
+          "stone": 4139,
+          "iron": 0,
+          "time_seconds": 2174,
+          "population": 50
+        },
+        "6": {
+          "food": 7727,
+          "wood": 11590,
+          "stone": 6181,
+          "iron": 3863,
+          "time_seconds": 3018,
+          "population": 60
+        },
+        "7": {
+          "food": 10846,
+          "wood": 16270,
+          "stone": 8677,
+          "iron": 5423,
+          "time_seconds": 3984,
+          "population": 70
+        },
+        "8": {
+          "food": 14550,
+          "wood": 21826,
+          "stone": 11640,
+          "iron": 7275,
+          "time_seconds": 5066,
+          "population": 80
+        },
+        "9": {
+          "food": 18854,
+          "wood": 28282,
+          "stone": 15083,
+          "iron": 9427,
+          "time_seconds": 6263,
+          "population": 90
+        },
+        "10": {
+          "food": 23773,
+          "wood": 35660,
+          "stone": 19018,
+          "iron": 11886,
+          "time_seconds": 7571,
+          "population": 100
+        }
+      }
+    },
+    "farm": {
+      "id": 7,
+      "name": "Farm",
+      "position": "outside",
+      "max_level": 10,
+      "produces": "food",
+      "requirements": {},
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 120,
+          "population": 0
+        },
+        "2": {
+          "food": 459,
+          "wood": 689,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 417,
+          "population": 0
+        },
+        "3": {
+          "food": 1121,
+          "wood": 1681,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 866,
+          "population": 0
+        },
+        "4": {
+          "food": 2111,
+          "wood": 3166,
+          "stone": 1688,
+          "iron": 0,
+          "time_seconds": 1455,
+          "population": 0
+        },
+        "5": {
+          "food": 3449,
+          "wood": 5173,
+          "stone": 2759,
+          "iron": 0,
+          "time_seconds": 2174,
+          "population": 0
+        },
+        "6": {
+          "food": 5151,
+          "wood": 7727,
+          "stone": 4121,
+          "iron": 2575,
+          "time_seconds": 3018,
+          "population": 0
+        },
+        "7": {
+          "food": 7231,
+          "wood": 10846,
+          "stone": 5785,
+          "iron": 3615,
+          "time_seconds": 3984,
+          "population": 0
+        },
+        "8": {
+          "food": 9700,
+          "wood": 14550,
+          "stone": 7760,
+          "iron": 4850,
+          "time_seconds": 5066,
+          "population": 0
+        },
+        "9": {
+          "food": 12569,
+          "wood": 18854,
+          "stone": 10055,
+          "iron": 6284,
+          "time_seconds": 6263,
+          "population": 0
+        },
+        "10": {
+          "food": 15848,
+          "wood": 23773,
+          "stone": 12679,
+          "iron": 7924,
+          "time_seconds": 7571,
+          "population": 0
+        }
+      }
+    },
+    "sawmill": {
+      "id": 4,
+      "name": "Sawmill",
+      "position": "outside",
+      "max_level": 10,
+      "produces": "wood",
+      "requirements": {},
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 120,
+          "population": 0
+        },
+        "2": {
+          "food": 459,
+          "wood": 689,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 417,
+          "population": 0
+        },
+        "3": {
+          "food": 1121,
+          "wood": 1681,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 866,
+          "population": 0
+        },
+        "4": {
+          "food": 2111,
+          "wood": 3166,
+          "stone": 1688,
+          "iron": 0,
+          "time_seconds": 1455,
+          "population": 0
+        },
+        "5": {
+          "food": 3449,
+          "wood": 5173,
+          "stone": 2759,
+          "iron": 0,
+          "time_seconds": 2174,
+          "population": 0
+        },
+        "6": {
+          "food": 5151,
+          "wood": 7727,
+          "stone": 4121,
+          "iron": 2575,
+          "time_seconds": 3018,
+          "population": 0
+        },
+        "7": {
+          "food": 7231,
+          "wood": 10846,
+          "stone": 5785,
+          "iron": 3615,
+          "time_seconds": 3984,
+          "population": 0
+        },
+        "8": {
+          "food": 9700,
+          "wood": 14550,
+          "stone": 7760,
+          "iron": 4850,
+          "time_seconds": 5066,
+          "population": 0
+        },
+        "9": {
+          "food": 12569,
+          "wood": 18854,
+          "stone": 10055,
+          "iron": 6284,
+          "time_seconds": 6263,
+          "population": 0
+        },
+        "10": {
+          "food": 15848,
+          "wood": 23773,
+          "stone": 12679,
+          "iron": 7924,
+          "time_seconds": 7571,
+          "population": 0
+        }
+      }
+    },
+    "quarry": {
+      "id": 5,
+      "name": "Quarry",
+      "position": "outside",
+      "max_level": 10,
+      "produces": "stone",
+      "requirements": {},
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 120,
+          "population": 0
+        },
+        "2": {
+          "food": 459,
+          "wood": 689,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 417,
+          "population": 0
+        },
+        "3": {
+          "food": 1121,
+          "wood": 1681,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 866,
+          "population": 0
+        },
+        "4": {
+          "food": 2111,
+          "wood": 3166,
+          "stone": 1688,
+          "iron": 0,
+          "time_seconds": 1455,
+          "population": 0
+        },
+        "5": {
+          "food": 3449,
+          "wood": 5173,
+          "stone": 2759,
+          "iron": 0,
+          "time_seconds": 2174,
+          "population": 0
+        },
+        "6": {
+          "food": 5151,
+          "wood": 7727,
+          "stone": 4121,
+          "iron": 2575,
+          "time_seconds": 3018,
+          "population": 0
+        },
+        "7": {
+          "food": 7231,
+          "wood": 10846,
+          "stone": 5785,
+          "iron": 3615,
+          "time_seconds": 3984,
+          "population": 0
+        },
+        "8": {
+          "food": 9700,
+          "wood": 14550,
+          "stone": 7760,
+          "iron": 4850,
+          "time_seconds": 5066,
+          "population": 0
+        },
+        "9": {
+          "food": 12569,
+          "wood": 18854,
+          "stone": 10055,
+          "iron": 6284,
+          "time_seconds": 6263,
+          "population": 0
+        },
+        "10": {
+          "food": 15848,
+          "wood": 23773,
+          "stone": 12679,
+          "iron": 7924,
+          "time_seconds": 7571,
+          "population": 0
+        }
+      }
+    },
+    "ironmine": {
+      "id": 6,
+      "name": "Ironmine",
+      "position": "outside",
+      "max_level": 10,
+      "produces": "iron",
+      "requirements": {},
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 120,
+          "population": 0
+        },
+        "2": {
+          "food": 459,
+          "wood": 689,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 417,
+          "population": 0
+        },
+        "3": {
+          "food": 1121,
+          "wood": 1681,
+          "stone": 0,
+          "iron": 0,
+          "time_seconds": 866,
+          "population": 0
+        },
+        "4": {
+          "food": 2111,
+          "wood": 3166,
+          "stone": 1688,
+          "iron": 0,
+          "time_seconds": 1455,
+          "population": 0
+        },
+        "5": {
+          "food": 3449,
+          "wood": 5173,
+          "stone": 2759,
+          "iron": 0,
+          "time_seconds": 2174,
+          "population": 0
+        },
+        "6": {
+          "food": 5151,
+          "wood": 7727,
+          "stone": 4121,
+          "iron": 2575,
+          "time_seconds": 3018,
+          "population": 0
+        },
+        "7": {
+          "food": 7231,
+          "wood": 10846,
+          "stone": 5785,
+          "iron": 3615,
+          "time_seconds": 3984,
+          "population": 0
+        },
+        "8": {
+          "food": 9700,
+          "wood": 14550,
+          "stone": 7760,
+          "iron": 4850,
+          "time_seconds": 5066,
+          "population": 0
+        },
+        "9": {
+          "food": 12569,
+          "wood": 18854,
+          "stone": 10055,
+          "iron": 6284,
+          "time_seconds": 6263,
+          "population": 0
+        },
+        "10": {
+          "food": 15848,
+          "wood": 23773,
+          "stone": 12679,
+          "iron": 7924,
+          "time_seconds": 7571,
+          "population": 0
+        }
+      }
+    }
+  }
+}

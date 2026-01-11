@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="kg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+    <linearGradient id="kg2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A0F0A"/>
+      <stop offset="100%" style="stop-color:#0D0705"/>
+    </linearGradient>
+    <linearGradient id="kg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9932CC"/>
+      <stop offset="100%" style="stop-color:#4B0082"/>
+    </linearGradient>
+    <linearGradient id="kg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#228B22"/>
+      <stop offset="100%" style="stop-color:#006400"/>
+    </linearGradient>
+    <filter id="kglow">
+      <feGaussianBlur stdDeviation="2"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="kshad">
+      <feDropShadow dx="3" dy="3" stdDeviation="3" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#kg2)"/>
+  <rect x="10" y="10" width="1180" height="780" fill="none" stroke="url(#kg1)" stroke-width="3" rx="5"/>
+
+  <!-- Title -->
+  <rect x="350" y="20" width="500" height="50" fill="url(#kg3)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#kshad)"/>
+  <text x="600" y="52" font-family="Georgia, serif" font-size="24" fill="#FFD700" text-anchor="middle" font-weight="bold" filter="url(#kglow)">📚 EVONY KNOWLEDGE BASE</text>
+
+  <!-- Source Code -->
+  <g transform="translate(30, 90)">
+    <rect width="370" height="320" fill="url(#kg4)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#kshad)"/>
+    <text x="185" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">📁 SOURCE CODE (19,032 files)</text>
+
+    <rect x="15" y="50" width="165" height="120" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="97" y="70" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle" font-weight="bold">Client Core</text>
+    <text x="97" y="88" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">GameClient.as</text>
+    <text x="97" y="100" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">ServerConnection.as</text>
+    <text x="97" y="112" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">ResponseDispatcher.as</text>
+    <text x="97" y="124" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">PacketHandler.as</text>
+    <text x="97" y="140" font-family="Arial" font-size="8" fill="#FFD700" text-anchor="middle">~500 files</text>
+    <text x="97" y="155" font-family="Arial" font-size="8" fill="#90EE90" text-anchor="middle">HIGH VALUE</text>
+
+    <rect x="190" y="50" width="165" height="120" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="272" y="70" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle" font-weight="bold">Constants</text>
+    <text x="272" y="88" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">TFConstants.as</text>
+    <text x="272" y="100" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">ErrorCode.as</text>
+    <text x="272" y="112" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">HeroConstants.as</text>
+    <text x="272" y="124" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">BuildingTypes.as</text>
+    <text x="272" y="140" font-family="Arial" font-size="8" fill="#FFD700" text-anchor="middle">~100 files</text>
+    <text x="272" y="155" font-family="Arial" font-size="8" fill="#90EE90" text-anchor="middle">CRITICAL</text>
+
+    <rect x="15" y="180" width="165" height="120" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="97" y="200" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle" font-weight="bold">Data Beans</text>
+    <text x="97" y="218" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">ArmyBean.as</text>
+    <text x="97" y="230" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">CastleBean.as</text>
+    <text x="97" y="242" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">HeroBean.as</text>
+    <text x="97" y="254" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">ResourceBean.as</text>
+    <text x="97" y="270" font-family="Arial" font-size="8" fill="#FFD700" text-anchor="middle">~300 files</text>
+    <text x="97" y="285" font-family="Arial" font-size="8" fill="#90EE90" text-anchor="middle">HIGH VALUE</text>
+
+    <rect x="190" y="180" width="165" height="120" fill="#003300" stroke="#FFFF00" rx="5"/>
+    <text x="272" y="200" font-family="Arial" font-size="10" fill="#FFFF00" text-anchor="middle" font-weight="bold">GUI/View</text>
+    <text x="272" y="218" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">modules/*.as</text>
+    <text x="272" y="230" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">windows/*.as</text>
+    <text x="272" y="242" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">panels/*.as</text>
+    <text x="272" y="254" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">dialogs/*.as</text>
+    <text x="272" y="270" font-family="Arial" font-size="8" fill="#FFD700" text-anchor="middle">~8,000 files</text>
+    <text x="272" y="285" font-family="Arial" font-size="8" fill="#FFFF00" text-anchor="middle">MEDIUM VALUE</text>
+  </g>
+
+  <!-- Protocol Data -->
+  <g transform="translate(420, 90)">
+    <rect width="370" height="320" fill="#1A0F0A" stroke="url(#kg1)" stroke-width="2" rx="8" filter="url(#kshad)"/>
+    <text x="185" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">📡 PROTOCOL DATA</text>
+
+    <rect x="15" y="50" width="340" height="80" fill="#0D0705" stroke="#DAA520" rx="5"/>
+    <text x="185" y="70" font-family="Arial" font-size="11" fill="#DAA520" text-anchor="middle" font-weight="bold">301+ Commands Documented</text>
+    <text x="185" y="90" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">army.*, building.*, city.*, hero.*, troop.*</text>
+    <text x="185" y="105" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">quest.*, shop.*, trade.*, mail.*, alliance.*</text>
+    <text x="185" y="120" font-family="Arial" font-size="9" fill="#90EE90" text-anchor="middle">100% command coverage</text>
+
+    <rect x="15" y="140" width="340" height="80" fill="#0D0705" stroke="#DAA520" rx="5"/>
+    <text x="185" y="160" font-family="Arial" font-size="11" fill="#DAA520" text-anchor="middle" font-weight="bold">AMF3 Packet Captures</text>
+    <text x="185" y="180" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">223 captured packet sessions</text>
+    <text x="185" y="195" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Request/response pairs documented</text>
+    <text x="185" y="210" font-family="Arial" font-size="9" fill="#90EE90" text-anchor="middle">Decode examples included</text>
+
+    <rect x="15" y="230" width="340" height="70" fill="#0D0705" stroke="#DAA520" rx="5"/>
+    <text x="185" y="250" font-family="Arial" font-size="11" fill="#DAA520" text-anchor="middle" font-weight="bold">Error Codes (200+)</text>
+    <text x="185" y="270" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">ErrorCode.as: -1 to -200+ mapped</text>
+    <text x="185" y="285" font-family="Arial" font-size="9" fill="#90EE90" text-anchor="middle">Human-readable meanings</text>
+  </g>
+
+  <!-- Exploit Research -->
+  <g transform="translate(810, 90)">
+    <rect width="360" height="320" fill="#4A0000" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#kshad)"/>
+    <text x="180" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">💀 EXPLOIT RESEARCH</text>
+
+    <rect x="15" y="50" width="330" height="60" fill="#2A0000" stroke="#FF6B6B" rx="5"/>
+    <text x="180" y="72" font-family="Arial" font-size="11" fill="#FF6B6B" text-anchor="middle" font-weight="bold">219 Vulnerability Findings</text>
+    <text x="180" y="92" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Integer overflow, race condition, packet replay</text>
+
+    <rect x="15" y="120" width="160" height="80" fill="#2A0000" stroke="#FFA500" rx="5"/>
+    <text x="95" y="142" font-family="Arial" font-size="10" fill="#FFA500" text-anchor="middle" font-weight="bold">Overflow Calc</text>
+    <text x="95" y="160" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">INT32_MAX</text>
+    <text x="95" y="175" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">= 2,147,483,647</text>
+    <text x="95" y="190" font-family="Arial" font-size="8" fill="#90EE90" text-anchor="middle">All thresholds</text>
+
+    <rect x="185" y="120" width="160" height="80" fill="#2A0000" stroke="#FFA500" rx="5"/>
+    <text x="265" y="142" font-family="Arial" font-size="10" fill="#FFA500" text-anchor="middle" font-weight="bold">100+ Templates</text>
+    <text x="265" y="160" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">Pre-built exploits</text>
+    <text x="265" y="175" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">One-click exec</text>
+    <text x="265" y="190" font-family="Arial" font-size="8" fill="#90EE90" text-anchor="middle">Verified working</text>
+
+    <rect x="15" y="210" width="330" height="90" fill="#2A0000" stroke="#90EE90" rx="5"/>
+    <text x="180" y="232" font-family="Arial" font-size="11" fill="#90EE90" text-anchor="middle" font-weight="bold">Flash CVE Database</text>
+    <text x="180" y="252" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">2,862 Flash/ActionScript CVEs indexed</text>
+    <text x="180" y="270" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Security research documentation</text>
+    <text x="180" y="288" font-family="Arial" font-size="9" fill="#FFD700" text-anchor="middle">Cross-referenced with Evony code</text>
+  </g>
+
+  <!-- AutoEvony Scripts -->
+  <g transform="translate(30, 430)">
+    <rect width="370" height="180" fill="url(#kg3)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#kshad)"/>
+    <text x="185" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">🤖 AUTOEVONY (521 scripts)</text>
+
+    <rect x="15" y="50" width="165" height="110" fill="#2A0A3A" stroke="#DDA0DD" rx="5"/>
+    <text x="97" y="70" font-family="Arial" font-size="10" fill="#DDA0DD" text-anchor="middle" font-weight="bold">Bot Commands</text>
+    <text x="97" y="90" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">autoAttack.cs</text>
+    <text x="97" y="102" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">autoTrain.cs</text>
+    <text x="97" y="114" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">autoBuild.cs</text>
+    <text x="97" y="126" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">autoQuest.cs</text>
+    <text x="97" y="145" font-family="Arial" font-size="8" fill="#90EE90" text-anchor="middle">Complete automation</text>
+
+    <rect x="190" y="50" width="165" height="110" fill="#2A0A3A" stroke="#DDA0DD" rx="5"/>
+    <text x="272" y="70" font-family="Arial" font-size="10" fill="#DDA0DD" text-anchor="middle" font-weight="bold">Game Logic</text>
+    <text x="272" y="90" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">TroopManager.cs</text>
+    <text x="272" y="102" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">ResourceCalc.cs</text>
+    <text x="272" y="114" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">BattleSimulator.cs</text>
+    <text x="272" y="126" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">PathFinding.cs</text>
+    <text x="272" y="145" font-family="Arial" font-size="8" fill="#90EE90" text-anchor="middle">Strategy algorithms</text>
+  </g>
+
+  <!-- Encryption Data -->
+  <g transform="translate(420, 430)">
+    <rect width="370" height="180" fill="#1A0F0A" stroke="url(#kg1)" stroke-width="2" rx="8" filter="url(#kshad)"/>
+    <text x="185" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">🔐 ENCRYPTION (3,997 keys)</text>
+
+    <rect x="15" y="50" width="165" height="110" fill="#0D0705" stroke="#DAA520" rx="5"/>
+    <text x="97" y="70" font-family="Arial" font-size="10" fill="#DAA520" text-anchor="middle" font-weight="bold">Static Keys</text>
+    <text x="97" y="90" font-family="monospace" font-size="7" fill="#FFFFFF" text-anchor="middle">EvonyGameKey2009</text>
+    <text x="97" y="102" font-family="monospace" font-size="7" fill="#FFFFFF" text-anchor="middle">EvonyNetKey2009</text>
+    <text x="97" y="114" font-family="monospace" font-size="7" fill="#FFFFFF" text-anchor="middle">PlayEvony</text>
+    <text x="97" y="126" font-family="monospace" font-size="7" fill="#FFFFFF" text-anchor="middle">Celebrate</text>
+    <text x="97" y="145" font-family="Arial" font-size="8" fill="#90EE90" text-anchor="middle">All extracted</text>
+
+    <rect x="190" y="50" width="165" height="110" fill="#0D0705" stroke="#DAA520" rx="5"/>
+    <text x="272" y="70" font-family="Arial" font-size="10" fill="#DAA520" text-anchor="middle" font-weight="bold">Algorithms</text>
+    <text x="272" y="90" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">AES-128-CBC</text>
+    <text x="272" y="102" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">Blowfish</text>
+    <text x="272" y="114" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">SHA1 (password)</text>
+    <text x="272" y="126" font-family="monospace" font-size="8" fill="#FFFFFF" text-anchor="middle">MD5 (checksum)</text>
+    <text x="272" y="145" font-family="Arial" font-size="8" fill="#90EE90" text-anchor="middle">Implementations ready</text>
+  </g>
+
+  <!-- LLM Model -->
+  <g transform="translate(810, 430)">
+    <rect width="360" height="180" fill="url(#kg4)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#kshad)"/>
+    <text x="180" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">🧠 SVONY-3800-F16</text>
+
+    <rect x="15" y="50" width="330" height="110" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="180" y="72" font-family="Arial" font-size="11" fill="#90EE90" text-anchor="middle" font-weight="bold">Fine-Tuned Domain Expert</text>
+    <text x="180" y="95" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">8,957 approved training samples</text>
+    <text x="180" y="112" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">100+ epochs across phases (RunPod)</text>
+    <text x="180" y="129" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Multi-phase merged model</text>
+    <text x="180" y="148" font-family="Arial" font-size="9" fill="#FFD700" text-anchor="middle">94% Protocol Accuracy | 96% Enum Lookup</text>
+  </g>
+
+  <!-- Statistics -->
+  <g transform="translate(30, 630)">
+    <rect width="1140" height="130" fill="#1A0F0A" stroke="url(#kg1)" stroke-width="2" rx="8" filter="url(#kshad)"/>
+    <text x="570" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">📊 KNOWLEDGE BASE STATISTICS</text>
+
+    <rect x="30" y="50" width="170" height="60" fill="#0D0705" stroke="#90EE90" rx="5"/>
+    <text x="115" y="72" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle" font-weight="bold">Total Files</text>
+    <text x="115" y="95" font-family="Arial" font-size="18" fill="#FFFFFF" text-anchor="middle" font-weight="bold">48,671</text>
+
+    <rect x="220" y="50" width="170" height="60" fill="#0D0705" stroke="#90EE90" rx="5"/>
+    <text x="305" y="72" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle" font-weight="bold">Approved</text>
+    <text x="305" y="95" font-family="Arial" font-size="18" fill="#FFFFFF" text-anchor="middle" font-weight="bold">8,957</text>
+
+    <rect x="410" y="50" width="170" height="60" fill="#0D0705" stroke="#DAA520" rx="5"/>
+    <text x="495" y="72" font-family="Arial" font-size="10" fill="#DAA520" text-anchor="middle" font-weight="bold">Commands</text>
+    <text x="495" y="95" font-family="Arial" font-size="18" fill="#FFFFFF" text-anchor="middle" font-weight="bold">301+</text>
+
+    <rect x="600" y="50" width="170" height="60" fill="#0D0705" stroke="#DAA520" rx="5"/>
+    <text x="685" y="72" font-family="Arial" font-size="10" fill="#DAA520" text-anchor="middle" font-weight="bold">Exploits</text>
+    <text x="685" y="95" font-family="Arial" font-size="18" fill="#FFFFFF" text-anchor="middle" font-weight="bold">100+</text>
+
+    <rect x="790" y="50" width="170" height="60" fill="#0D0705" stroke="#FFD700" rx="5"/>
+    <text x="875" y="72" font-family="Arial" font-size="10" fill="#FFD700" text-anchor="middle" font-weight="bold">Training Epochs</text>
+    <text x="875" y="95" font-family="Arial" font-size="18" fill="#FFFFFF" text-anchor="middle" font-weight="bold">100+</text>
+
+    <rect x="980" y="50" width="130" height="60" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="1045" y="72" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle" font-weight="bold">Status</text>
+    <text x="1045" y="95" font-family="Arial" font-size="14" fill="#90EE90" text-anchor="middle" font-weight="bold">✅ READY</text>
+  </g>
+
+  <text x="600" y="780" font-family="Arial" font-size="10" fill="#8B8B83" text-anchor="middle">Evony Knowledge Base | 48,671 files | 8,957 approved | 100+ exploits | January 2026</text>
+</svg>

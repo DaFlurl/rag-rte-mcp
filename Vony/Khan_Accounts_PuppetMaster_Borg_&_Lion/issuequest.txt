@@ -1,0 +1,10 @@
+setsilence true
+set centamount 60
+
+function acceptquest() {
+	return c.af.getCommissionQuestCommands().issueCommissionQuest(c.castle.id,1,int(c.castle.fieldId%800),int(c.castle.fieldId/800),int(centamount));
+}
+
+set afacq $m_dyn.acceptquest()$
+sleep 1
+if {$%afacq%.msg$==null} echo $%afacq%.errorMsg$

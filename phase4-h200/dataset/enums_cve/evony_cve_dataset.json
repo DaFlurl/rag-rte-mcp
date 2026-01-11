@@ -1,0 +1,889 @@
+{
+  "metadata": {
+    "title": "Flash Player CVE Dataset for Evony Training",
+    "target_versions": {
+      "evony_client": "Flash Player 10.0.x (Nov 2009)",
+      "autoevony": "Flash Player 10.0.x - 10.1.x (Jul 2010)"
+    },
+    "flex_sdk": {
+      "evony_client": "3.5.0.12683",
+      "autoevony": "3.6.0.21751"
+    },
+    "selection_criteria": "CVEs where affected versions include 10.x or 'X and earlier' where X >= 10",
+    "total_cves": 87,
+    "categories": ["ByteArray", "Vector", "Memory", "Type Confusion", "Integer Overflow", "Heap", "Socket", "AMF", "XSS", "Sandbox"],
+    "verified_by": "Cross-referenced CVE-2015-5119 with GameClient.as ByteArray usage"
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2015-5119",
+      "name": "ByteArray Use-After-Free (Hacking Team)",
+      "severity": "CRITICAL",
+      "cvss": 10.0,
+      "affected_versions": "Flash 9.0 - 18.0.0.194",
+      "applies_to_evony": true,
+      "category": "ByteArray",
+      "evony_code_location": "com/evony/net/client/GameClient.as",
+      "pattern": "ByteArray valueOf() override during assignment causes UAF",
+      "description": "Use-after-free in ByteArray class in ActionScript 3 allows remote code execution via crafted Flash content that overrides valueOf function",
+      "exploit_available": true,
+      "metasploit_module": "exploit/multi/browser/adobe_flash_hacking_team_uaf"
+    },
+    {
+      "cve_id": "CVE-2015-5122",
+      "name": "opaqueBackground Use-After-Free",
+      "severity": "CRITICAL",
+      "cvss": 10.0,
+      "affected_versions": "Flash 9.0 - 18.0.0.203",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "TextLine opaqueBackground property UAF",
+      "description": "Use-after-free in opaqueBackground property in ActionScript 3 allows arbitrary code execution"
+    },
+    {
+      "cve_id": "CVE-2015-5123",
+      "name": "BitmapData Memory Corruption",
+      "severity": "CRITICAL",
+      "cvss": 10.0,
+      "affected_versions": "Flash 9.0 - 18.0.0.203",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "evony_code_location": "Graphics rendering throughout",
+      "pattern": "BitmapData class memory corruption"
+    },
+    {
+      "cve_id": "CVE-2015-0311",
+      "name": "ByteArray Uncompress UAF",
+      "severity": "CRITICAL",
+      "cvss": 10.0,
+      "affected_versions": "Flash 9.0 - 16.0.0.287",
+      "applies_to_evony": true,
+      "category": "ByteArray",
+      "evony_code_location": "com/evony/net/client/GameClient.as",
+      "pattern": "ByteArray uncompress() zlib decompression UAF via domainMemory",
+      "description": "When decompressing ByteArray with zlib, rollback frees buffer without notifying domainMemory subscribers",
+      "exploit_available": true,
+      "metasploit_module": "exploit/multi/browser/adobe_flash_uncompress_zlib_uaf"
+    },
+    {
+      "cve_id": "CVE-2015-0313",
+      "name": "ByteArray Worker UAF",
+      "severity": "CRITICAL",
+      "cvss": 10.0,
+      "affected_versions": "Flash 9.0 - 16.0.0.296",
+      "applies_to_evony": true,
+      "category": "ByteArray",
+      "pattern": "ByteArray freed by worker while domainMemory holds reference",
+      "description": "Use-after-free when ByteArray assigned to domainMemory is freed from ActionScript worker",
+      "exploit_available": true
+    },
+    {
+      "cve_id": "CVE-2010-3654",
+      "name": "Flash Button Remote Code Execution",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.x and 10.0.x, Flash 10.1.85.3 and earlier",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "SWF movie button handling vulnerability",
+      "description": "Vulnerability in handling of certain SWF movies within versions 9.x and 10.0 of Adobe Flash Player",
+      "exploit_available": true,
+      "metasploit_module": "exploit/windows/browser/adobe_flashplayer_button"
+    },
+    {
+      "cve_id": "CVE-2010-2884",
+      "name": "Flash Player Critical Memory Corruption",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 10.1.82.76 and earlier",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Critical vulnerability exploited in wild",
+      "description": "Critical vulnerability could cause crash and allow attacker to take control of affected system"
+    },
+    {
+      "cve_id": "CVE-2010-1297",
+      "name": "Memory Corruption via SWF",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.x - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "authplay.dll memory corruption",
+      "description": "Memory corruption vulnerability in Adobe Flash Player and Reader"
+    },
+    {
+      "cve_id": "CVE-2009-1862",
+      "name": "Unspecified Flash/Reader Vulnerability",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.x - 10.0.22.87",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Unspecified vulnerability affecting Flash and Reader"
+    },
+    {
+      "cve_id": "CVE-2011-0611",
+      "name": "SWF Memory Corruption (Zero-Day)",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 10.2.153.1 and earlier (all 10.x)",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Memory corruption via SWF embedded in DOC/XLS",
+      "description": "Exploited in wild via Flash embedded in Microsoft Word/Excel files",
+      "exploit_available": true,
+      "metasploit_module": "exploit/windows/browser/adobe_flashplayer_flash10o"
+    },
+    {
+      "cve_id": "CVE-2011-0609",
+      "name": "Flash Content Memory Corruption",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 10.2.154.13 and earlier",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Crafted Flash content in Excel spreadsheet",
+      "description": "Allows remote code execution via crafted SWF in Excel"
+    },
+    {
+      "cve_id": "CVE-2010-0186",
+      "name": "Security Bypass Vulnerability",
+      "severity": "HIGH",
+      "cvss": 7.5,
+      "affected_versions": "Flash 10.0.42.34 and earlier",
+      "applies_to_evony": true,
+      "category": "Sandbox",
+      "pattern": "Security bypass in Flash sandbox"
+    },
+    {
+      "cve_id": "CVE-2010-0187",
+      "name": "Denial of Service",
+      "severity": "MEDIUM",
+      "cvss": 5.0,
+      "affected_versions": "Flash 10.0.42.34 and earlier",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Crash via malformed content"
+    },
+    {
+      "cve_id": "CVE-2007-4324",
+      "name": "ActionScript 3 Port Scanner",
+      "severity": "MEDIUM",
+      "cvss": 5.0,
+      "affected_versions": "Flash 9.0.47.0 - 9.0.124.0 and later",
+      "applies_to_evony": true,
+      "category": "Sandbox",
+      "evony_code_location": "com/evony/net/client/GameClient.as (Socket)",
+      "pattern": "Socket timing side-channel for port scanning",
+      "description": "Bypass Security Sandbox Model via timing discrepancies from SecurityErrorEvent to determine if port is open"
+    },
+    {
+      "cve_id": "CVE-2008-5499",
+      "name": "Flash Player Integer Overflow",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.x - 10.0.12.36",
+      "applies_to_evony": true,
+      "category": "Integer Overflow",
+      "pattern": "Integer overflow in Flash Player"
+    },
+    {
+      "cve_id": "CVE-2009-0520",
+      "name": "Multiple Memory Corruption",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.x - 10.0.12.36",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Multiple memory corruption vulnerabilities"
+    },
+    {
+      "cve_id": "CVE-2009-0519",
+      "name": "Flash Input Validation",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.x - 10.0.12.36",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Input validation vulnerability"
+    },
+    {
+      "cve_id": "CVE-2015-3113",
+      "name": "Heap Buffer Overflow",
+      "severity": "CRITICAL",
+      "cvss": 10.0,
+      "affected_versions": "Flash 9.0 - 18.0.0.194",
+      "applies_to_evony": true,
+      "category": "Heap",
+      "pattern": "Heap buffer overflow exploited in wild",
+      "exploit_available": true
+    },
+    {
+      "cve_id": "CVE-2015-0359",
+      "name": "ByteArray writeBytes UAF",
+      "severity": "CRITICAL",
+      "cvss": 10.0,
+      "affected_versions": "Flash 9.0 - 17.0.0.134",
+      "applies_to_evony": true,
+      "category": "ByteArray",
+      "evony_code_location": "com/evony/net/client/GameClient.as",
+      "pattern": "writeBytes() method causes UAF when exceeding capacity"
+    },
+    {
+      "cve_id": "CVE-2014-0515",
+      "name": "Buffer Overflow in Pixel Bender",
+      "severity": "CRITICAL",
+      "cvss": 10.0,
+      "affected_versions": "Flash 9.0 - 13.0.0.182",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Pixel Bender component buffer overflow"
+    },
+    {
+      "cve_id": "CVE-2014-0502",
+      "name": "Double Free Vulnerability",
+      "severity": "CRITICAL",
+      "cvss": 10.0,
+      "affected_versions": "Flash 9.0 - 12.0.0.44",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Double free vulnerability"
+    },
+    {
+      "cve_id": "CVE-2013-0634",
+      "name": "Remote Memory Corruption",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 11.5.502.146",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Memory corruption via SWF in Word document"
+    },
+    {
+      "cve_id": "CVE-2012-5054",
+      "name": "Matrix3D Integer Overflow",
+      "severity": "CRITICAL",
+      "cvss": 10.0,
+      "affected_versions": "Flash 9.0 - 11.4.402.278",
+      "applies_to_evony": true,
+      "category": "Integer Overflow",
+      "pattern": "Matrix3D copyRawDataTo integer overflow"
+    },
+    {
+      "cve_id": "CVE-2012-0767",
+      "name": "XSS Zero-Day",
+      "severity": "HIGH",
+      "cvss": 6.8,
+      "affected_versions": "Flash 9.0 - 11.1.102.55",
+      "applies_to_evony": true,
+      "category": "XSS",
+      "evony_code_location": "ExternalInterface usage",
+      "pattern": "Cross-site scripting via Flash content"
+    },
+    {
+      "cve_id": "CVE-2012-0779",
+      "name": "Object Type Confusion",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 11.2.202.228",
+      "applies_to_evony": true,
+      "category": "Type Confusion",
+      "pattern": "Object type confusion in Flash"
+    },
+    {
+      "cve_id": "CVE-2012-0752",
+      "name": "MP4 Parsing Memory Corruption",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 11.1.102.55",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Memory corruption in MP4 parser"
+    },
+    {
+      "cve_id": "CVE-2012-0754",
+      "name": "Native Code Execution",
+      "severity": "CRITICAL",
+      "cvss": 10.0,
+      "affected_versions": "Flash 9.0 - 11.1.102.55",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Remote native code execution"
+    },
+    {
+      "cve_id": "CVE-2011-2110",
+      "name": "Bounds Checking Memory Corruption",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 10.3.181.23 and earlier",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Memory corruption due to bounds checking failure"
+    },
+    {
+      "cve_id": "CVE-2011-0620",
+      "name": "Integer Overflow in Flash",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 10.2.159.1 and earlier",
+      "applies_to_evony": true,
+      "category": "Integer Overflow",
+      "pattern": "Integer overflow vulnerability"
+    },
+    {
+      "cve_id": "CVE-2011-0618",
+      "name": "Input Validation Buffer Overflow",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 10.2.159.1 and earlier",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Buffer overflow due to input validation failure"
+    },
+    {
+      "cve_id": "CVE-2016-4117",
+      "name": "Type Confusion RCE",
+      "severity": "CRITICAL",
+      "cvss": 10.0,
+      "affected_versions": "Flash 9.0 - 21.0.0.226",
+      "applies_to_evony": true,
+      "category": "Type Confusion",
+      "pattern": "Type confusion allows arbitrary code execution"
+    },
+    {
+      "cve_id": "CVE-2016-1019",
+      "name": "Type Confusion Zero-Day",
+      "severity": "CRITICAL",
+      "cvss": 10.0,
+      "affected_versions": "Flash 9.0 - 21.0.0.197",
+      "applies_to_evony": true,
+      "category": "Type Confusion",
+      "pattern": "Type confusion exploited in wild"
+    },
+    {
+      "cve_id": "CVE-2016-1010",
+      "name": "Integer Overflow Heap Corruption",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 20.0.0.306",
+      "applies_to_evony": true,
+      "category": "Integer Overflow",
+      "pattern": "Integer overflow causes heap corruption"
+    },
+    {
+      "cve_id": "CVE-2015-8446",
+      "name": "Heap Overflow via Shader",
+      "severity": "CRITICAL",
+      "cvss": 10.0,
+      "affected_versions": "Flash 9.0 - 19.0.0.245",
+      "applies_to_evony": true,
+      "category": "Heap",
+      "pattern": "Heap overflow in shader component"
+    },
+    {
+      "cve_id": "CVE-2015-8651",
+      "name": "Integer Overflow Type Confusion",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 20.0.0.228",
+      "applies_to_evony": true,
+      "category": "Integer Overflow",
+      "pattern": "Integer overflow leads to type confusion"
+    },
+    {
+      "cve_id": "CVE-2015-7645",
+      "name": "Type Confusion in ActionScript",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 19.0.0.185",
+      "applies_to_evony": true,
+      "category": "Type Confusion",
+      "pattern": "ActionScript type confusion vulnerability"
+    },
+    {
+      "cve_id": "CVE-2014-4671",
+      "name": "JSONP SWF Bypass",
+      "severity": "HIGH",
+      "cvss": 7.5,
+      "affected_versions": "Flash 9.0 - 14.0.0.125",
+      "applies_to_evony": true,
+      "category": "Sandbox",
+      "pattern": "Same Origin Policy bypass via JSONP"
+    },
+    {
+      "cve_id": "CVE-2014-0322",
+      "name": "IE Flash Zero-Day",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 12.0.0.44",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "UAF in Flash through IE"
+    },
+    {
+      "cve_id": "CVE-2013-5330",
+      "name": "Memory Corruption Arbitrary Code",
+      "severity": "CRITICAL",
+      "cvss": 10.0,
+      "affected_versions": "Flash 9.0 - 11.9.900.117",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Memory corruption for arbitrary code execution"
+    },
+    {
+      "cve_id": "CVE-2013-3361",
+      "name": "Memory Corruption in SWF",
+      "severity": "CRITICAL",
+      "cvss": 10.0,
+      "affected_versions": "Flash 9.0 - 11.8.800.94",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Memory corruption via crafted SWF"
+    },
+    {
+      "cve_id": "CVE-2008-5363",
+      "name": "CRLF Injection in ActionScript",
+      "severity": "MEDIUM",
+      "cvss": 5.8,
+      "affected_versions": "Flash 9.0.16 and earlier",
+      "applies_to_evony": true,
+      "category": "XSS",
+      "evony_code_location": "XML handling in protocol",
+      "pattern": "CRLF injection via XML.addRequestHeader",
+      "description": "HTTP Request Splitting via ActionScript XML functions"
+    },
+    {
+      "cve_id": "CVE-2008-5108",
+      "name": "XSS via ActionScript",
+      "severity": "MEDIUM",
+      "cvss": 4.3,
+      "affected_versions": "Flash 9.0.124.0 and earlier",
+      "applies_to_evony": true,
+      "category": "XSS",
+      "pattern": "XSS via loose ActionScript attribute interpretation"
+    },
+    {
+      "cve_id": "CVE-2008-5362",
+      "name": "DNS Rebinding in Flash",
+      "severity": "HIGH",
+      "cvss": 6.8,
+      "affected_versions": "Flash 9.0.115.0 and earlier",
+      "applies_to_evony": true,
+      "category": "Sandbox",
+      "evony_code_location": "Socket connections",
+      "pattern": "DNS rebinding attack vulnerability"
+    },
+    {
+      "cve_id": "CVE-2010-2160",
+      "name": "URL Parsing Memory Corruption",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Memory corruption in URL parsing"
+    },
+    {
+      "cve_id": "CVE-2010-2161",
+      "name": "SWF File Integer Overflow",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Integer Overflow",
+      "pattern": "Integer overflow in SWF parsing"
+    },
+    {
+      "cve_id": "CVE-2010-2162",
+      "name": "Flash Heap Buffer Overflow",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Heap",
+      "pattern": "Heap buffer overflow vulnerability"
+    },
+    {
+      "cve_id": "CVE-2010-2163",
+      "name": "Multiple Memory Corruption",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Multiple memory corruption issues"
+    },
+    {
+      "cve_id": "CVE-2010-2164",
+      "name": "Flash Pointer Overflow",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Pointer overflow vulnerability"
+    },
+    {
+      "cve_id": "CVE-2010-2165",
+      "name": "Flash Memory Corruption DoS",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Memory corruption leading to DoS or RCE"
+    },
+    {
+      "cve_id": "CVE-2010-2166",
+      "name": "Flash Memory Corruption RCE",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Memory corruption for remote code execution"
+    },
+    {
+      "cve_id": "CVE-2010-2171",
+      "name": "Flash Use After Free",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Use after free vulnerability"
+    },
+    {
+      "cve_id": "CVE-2010-2173",
+      "name": "Memory Corruption via Font",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Memory corruption via malformed font"
+    },
+    {
+      "cve_id": "CVE-2010-2174",
+      "name": "Heap Overflow in Font",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Heap",
+      "pattern": "Heap overflow in font handling"
+    },
+    {
+      "cve_id": "CVE-2010-2175",
+      "name": "Invalid Pointer Dereference",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Invalid pointer dereference"
+    },
+    {
+      "cve_id": "CVE-2010-2176",
+      "name": "Stack Overflow in Flash",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Stack overflow vulnerability"
+    },
+    {
+      "cve_id": "CVE-2010-2177",
+      "name": "Integer Overflow via SWF",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Integer Overflow",
+      "pattern": "Integer overflow via crafted SWF"
+    },
+    {
+      "cve_id": "CVE-2010-2178",
+      "name": "Policy File Cross-Domain",
+      "severity": "MEDIUM",
+      "cvss": 5.8,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Sandbox",
+      "evony_code_location": "Security.loadPolicyFile usage",
+      "pattern": "Cross-domain policy file bypass"
+    },
+    {
+      "cve_id": "CVE-2010-2179",
+      "name": "XSS in Flash Content",
+      "severity": "MEDIUM",
+      "cvss": 4.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "XSS",
+      "pattern": "Cross-site scripting via Flash content"
+    },
+    {
+      "cve_id": "CVE-2010-2180",
+      "name": "Click Hijacking",
+      "severity": "HIGH",
+      "cvss": 6.8,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Sandbox",
+      "pattern": "Click hijacking vulnerability"
+    },
+    {
+      "cve_id": "CVE-2010-2181",
+      "name": "Information Disclosure",
+      "severity": "HIGH",
+      "cvss": 6.4,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Information disclosure vulnerability"
+    },
+    {
+      "cve_id": "CVE-2010-2182",
+      "name": "Buffer Overflow RCE",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Buffer overflow for RCE"
+    },
+    {
+      "cve_id": "CVE-2010-2183",
+      "name": "Memory Corruption in Loader",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "evony_code_location": "Loader/URLLoader usage",
+      "pattern": "Memory corruption in content loader"
+    },
+    {
+      "cve_id": "CVE-2010-2184",
+      "name": "Heap Corruption RCE",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Heap",
+      "pattern": "Heap corruption for remote code execution"
+    },
+    {
+      "cve_id": "CVE-2010-2185",
+      "name": "Type Confusion Memory",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Type Confusion",
+      "pattern": "Type confusion memory issue"
+    },
+    {
+      "cve_id": "CVE-2010-2186",
+      "name": "Object Confusion RCE",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Type Confusion",
+      "pattern": "Object confusion for RCE"
+    },
+    {
+      "cve_id": "CVE-2010-2187",
+      "name": "ActionScript Integer Overflow",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Integer Overflow",
+      "pattern": "Integer overflow in ActionScript"
+    },
+    {
+      "cve_id": "CVE-2010-2188",
+      "name": "Flash libTIFF Overflow",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "libTIFF buffer overflow"
+    },
+    {
+      "cve_id": "CVE-2010-2189",
+      "name": "Stack Corruption RCE",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.45.2",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Stack corruption for RCE"
+    },
+    {
+      "cve_id": "CVE-2009-3794",
+      "name": "Heap Overflow in Parsing",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.32.18",
+      "applies_to_evony": true,
+      "category": "Heap",
+      "pattern": "Heap overflow in content parsing"
+    },
+    {
+      "cve_id": "CVE-2009-3796",
+      "name": "Data Injection Vulnerability",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.32.18",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Data injection leading to RCE"
+    },
+    {
+      "cve_id": "CVE-2009-3797",
+      "name": "Memory Corruption Parser",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.32.18",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Memory corruption in parser"
+    },
+    {
+      "cve_id": "CVE-2009-3798",
+      "name": "Invalid Memory Reference",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.32.18",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Invalid memory reference vulnerability"
+    },
+    {
+      "cve_id": "CVE-2009-3799",
+      "name": "Integer Overflow Array",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.32.18",
+      "applies_to_evony": true,
+      "category": "Integer Overflow",
+      "evony_code_location": "Vector/Array usage",
+      "pattern": "Integer overflow in array handling"
+    },
+    {
+      "cve_id": "CVE-2009-3800",
+      "name": "Multiple Corruption Issues",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.32.18",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Multiple memory corruption vulnerabilities"
+    },
+    {
+      "cve_id": "CVE-2009-3951",
+      "name": "Information Disclosure Local",
+      "severity": "HIGH",
+      "cvss": 7.1,
+      "affected_versions": "Flash 9.0 - 10.0.32.18",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "evony_code_location": "SharedObject usage",
+      "pattern": "Local information disclosure via SharedObject"
+    },
+    {
+      "cve_id": "CVE-2010-0378",
+      "name": "Mouse Pointer Memory Corruption",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.42.34",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Memory corruption via mouse pointer"
+    },
+    {
+      "cve_id": "CVE-2010-0379",
+      "name": "Use After Free in Flash",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 10.0.42.34",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Use after free vulnerability"
+    },
+    {
+      "cve_id": "CVE-2015-8655",
+      "name": "Full Page Heap Spray",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 20.0.0.228",
+      "applies_to_evony": true,
+      "category": "Heap",
+      "pattern": "Full page heap spray technique"
+    },
+    {
+      "cve_id": "CVE-2015-8654",
+      "name": "Type Confusion Crafted SWF",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 20.0.0.228",
+      "applies_to_evony": true,
+      "category": "Type Confusion",
+      "pattern": "Type confusion via crafted SWF"
+    },
+    {
+      "cve_id": "CVE-2015-8653",
+      "name": "UAF in DisplayObject",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 20.0.0.228",
+      "applies_to_evony": true,
+      "category": "Memory",
+      "pattern": "Use after free in DisplayObject"
+    },
+    {
+      "cve_id": "CVE-2015-8652",
+      "name": "Heap Buffer Overflow PNG",
+      "severity": "CRITICAL",
+      "cvss": 9.3,
+      "affected_versions": "Flash 9.0 - 20.0.0.228",
+      "applies_to_evony": true,
+      "category": "Heap",
+      "pattern": "Heap buffer overflow in PNG handling"
+    }
+  ],
+  "evony_specific_patterns": {
+    "ByteArray_in_evony": [
+      "mainBuffer:ByteArray for packet buffering",
+      "tempBuffer:ByteArray for socket reads",
+      "writeBytes() for packet assembly",
+      "readBytes() for packet parsing",
+      "AMF serialization/deserialization"
+    ],
+    "Socket_in_evony": [
+      "com.evony.net.client.GameClient uses Socket",
+      "Direct TCP connection to game server",
+      "Binary protocol over socket"
+    ],
+    "SharedObject_in_evony": [
+      "EvonyClient.as line 55 uses SharedObject",
+      "Local storage for settings/credentials"
+    ],
+    "ExternalInterface_in_evony": [
+      "EvonyClient.as line 32 uses ExternalInterface",
+      "JavaScript bridge for browser communication"
+    ],
+    "Vector_in_evony": [
+      "Vector.<*> used throughout for typed arrays",
+      "Vector.<uint> for numeric data",
+      "Vector.<Object> for game entities"
+    ]
+  }
+}

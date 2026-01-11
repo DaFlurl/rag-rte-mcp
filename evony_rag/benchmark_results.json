@@ -1,0 +1,28 @@
+{
+  "kg": {
+    "entities": 101853,
+    "relationships": 173199,
+    "load_time_ms": 913.1686687469482,
+    "avg_query_ms": 1.225137710571289
+  },
+  "hybrid": {
+    "chunks": 16962,
+    "embeddings_shape": "(16962, 768)",
+    "load_time_ms": 9747.01476097107,
+    "bm25_avg_ms": 3.1661033630371094
+  },
+  "expansion": {
+    "avg_time_ms": 290.5547618865967,
+    "avg_kg_terms": 1.6666666666666667
+  },
+  "hype": {
+    "chunks": 16962,
+    "questions": 169620,
+    "avg_per_chunk": 10.0
+  },
+  "pipeline": {
+    "avg_time_ms": 1194.0744400024414,
+    "min_time_ms": 1098.6545085906982,
+    "max_time_ms": 1304.3854236602783
+  }
+}

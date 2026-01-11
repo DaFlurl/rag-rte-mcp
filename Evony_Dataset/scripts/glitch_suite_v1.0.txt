@@ -1,0 +1,184 @@
+// ============================================
+// GLITCH AUTOMATION SUITE v1.0
+// Food flip, troop transfer, commission glitches
+// Author: Borg Automation Suite
+// TIMING CRITICAL - 50-500ms windows
+// ============================================
+
+// Configuration
+set glitchType "food"
+set targetCity 0
+set glitchDelay 100
+
+echo ========================================
+echo GLITCH AUTOMATION SUITE v1.0
+echo Type: %glitchType%
+echo ========================================
+
+// Main menu
+label menu
+echo [MENU] Select glitch type:
+echo 1. Food Flip Glitch
+echo 2. Troop Transfer Glitch  
+echo 3. Commission Quest Glitch
+echo 4. Resource Overflow Glitch
+
+// Set glitchType variable to control flow
+if glitchType = food then goto foodFlip
+if glitchType = troop then goto troopTransfer
+if glitchType = quest then goto commissionQuest
+if glitchType = overflow then goto resourceOverflow
+
+goto foodFlip
+
+// ==========================================
+// FOOD FLIP GLITCH
+// Exploits timing between production tick
+// ==========================================
+label foodFlip
+echo [GLITCH] Executing Food Flip...
+
+// Step 1: Set production to 0% food
+echo [STEP 1] Setting food production to 0%
+production 100 100 100 0
+sleep 50
+
+// Step 2: Train max troops to consume food
+echo [STEP 2] Queue max troop training
+train archers 100000
+sleep 50
+
+// Step 3: Immediately flip production back
+echo [STEP 3] Flipping production to 100% food
+production 0 0 0 100
+sleep 50
+
+// Step 4: Cancel troop training
+echo [STEP 4] Cancel training
+// canceltraining
+sleep 100
+
+echo [GLITCH] Food flip complete
+echo Check food production rate
+
+// Reset production
+production 100 100 100 100
+sleep 1000
+
+goto glitchComplete
+
+// ==========================================
+// TROOP TRANSFER GLITCH
+// Instant troop movement via timing exploit
+// ==========================================
+label troopTransfer
+echo [GLITCH] Executing Troop Transfer...
+
+// Step 1: Send troops with recall timing
+echo [STEP 1] Deploying troops...
+set targetX 100
+set targetY 100
+deploy %targetX% %targetY% attackHero a10000
+sleep 100
+
+// Step 2: Use recall item at precise moment
+echo [STEP 2] Using recall amulet...
+useitem player.trick.qlbx
+sleep 50
+
+// Step 3: Resend immediately
+echo [STEP 3] Resending troops...
+deploy %targetX% %targetY% attackHero a10000
+sleep 100
+
+echo [GLITCH] Troop transfer complete
+goto glitchComplete
+
+// ==========================================
+// COMMISSION QUEST GLITCH
+// Farm commission quests for resources
+// ==========================================
+label commissionQuest
+echo [GLITCH] Executing Commission Quest Farm...
+
+label questLoop
+// Step 1: Accept quest
+echo [STEP 1] Accepting commission quest...
+acceptquest commission
+sleep 500
+
+// Step 2: Add army to quest if needed
+echo [STEP 2] Adding quest army...
+questaddarmy
+sleep 200
+
+// Step 3: Complete quest rapidly
+echo [STEP 3] Completing quest...
+completequests
+sleep 200
+
+// Step 4: Collect rewards
+echo [STEP 4] Collecting rewards...
+// Rewards auto-collected
+
+// Loop for multiple quests
+echo [LOOP] Continuing quest farm...
+sleep 1000
+goto questLoop
+
+// ==========================================
+// RESOURCE OVERFLOW GLITCH
+// Exploit warehouse capacity limits
+// ==========================================
+label resourceOverflow
+echo [GLITCH] Executing Resource Overflow...
+
+// Step 1: Fill warehouse to capacity
+echo [STEP 1] Checking warehouse capacity...
+getresources
+sleep 100
+
+// Step 2: Receive resources exceeding cap
+echo [STEP 2] Triggering overflow...
+// This requires incoming trade/transport
+// at precise moment of capacity check
+
+// Step 3: Resources bypass cap check
+echo [STEP 3] Overflow triggered
+
+goto glitchComplete
+
+// ==========================================
+// GLITCH NUMBERS REFERENCE
+// ==========================================
+// Food Glitch Numbers (troops vs production):
+// 10m archers = ~5m food/hr consumption
+// Level 9 farms = ~2m food/hr production
+// Flip timing: 50-100ms window
+//
+// Undraftable Numbers:
+// 1,234,567 archers = undraftable threshold
+// 999,999 scouts = scout cap
+//
+// Commission Quest Timing:
+// Accept -> Complete: 200-500ms
+// Reward claim: immediate
+
+// ==========================================
+// COMPLETION
+// ==========================================
+label glitchComplete
+echo ========================================
+echo GLITCH EXECUTION COMPLETE
+echo ========================================
+echo Review results and verify glitch success
+stop
+
+// ==========================================
+// ERROR HANDLER
+// ==========================================
+label error
+echo [ERROR] Glitch timing failed
+echo Retrying in 5 seconds...
+sleep 5000
+goto menu

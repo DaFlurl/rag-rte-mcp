@@ -1,0 +1,19 @@
+// BORG TOOLKIT - Valley Troop Hiding
+// Sends troops to valley to STOP food consumption
+// This ALWAYS works - it's a game mechanic exploit
+
+setsilence off
+
+echo ========================================
+echo VALLEY TROOP HIDING
+echo Troops in valleys don't eat food!
+echo ========================================
+
+// Send all troops to distant valley
+// Change 500,500 to your target valley coords
+reinforce 500,500 any all none
+
+echo ========================================
+echo Troops sent! No more food consumption
+echo Recall with: recall 500,500
+echo ========================================

@@ -1,0 +1,33 @@
+# RunPod Training Requirements - H100/A100 Optimized
+# Install: pip install -r requirements.txt
+
+# Unsloth (fast LoRA training)
+unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git
+
+# Core ML
+torch>=2.1.0
+transformers>=4.36.0
+datasets>=2.14.0
+accelerate>=0.25.0
+
+# PEFT + Training
+peft>=0.7.0
+trl>=0.7.0
+bitsandbytes>=0.41.0
+
+# Qwen VL support
+qwen-vl-utils
+
+# Utilities
+huggingface_hub>=0.19.0
+safetensors>=0.4.0
+sentencepiece
+tokenizers>=0.15.0
+
+# Monitoring
+tensorboard
+tqdm
+
+# RunPod specific
+runpod
+python-dotenv

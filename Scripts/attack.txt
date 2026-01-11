@@ -1,0 +1,12 @@
+attack 226,625 any,!Rossivous cata:33k
+repeat 
+
+( have a RH i sowed from Ross in the city i dont want it to dismiss or use to hit just in case i get attacked)
+and then goalls
+config wartown:1
+config norescue:1
+config comfort:3,gate:0.9,autogear:3 //,nocapture:1,fhreserved:2
+config dumping:1,embopen:0
+config hero:10
+config junkhero:8 // tells the bot the 8 worst heros can be fired
+config fasthero:15 // tries to keep heros at like lvl 15 just so i can hit faster(edited)

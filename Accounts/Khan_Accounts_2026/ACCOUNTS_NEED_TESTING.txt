@@ -1,0 +1,297 @@
+# ACCOUNTS WITH CONFLICTING PASSWORDS - NEED TESTING
+# Generated: 2026-01-04 15:00
+# Total accounts needing verification: 71
+# Format: email | password1 | password2 | ...
+#============================================================
+
+12antonius1972@gmail.com
+  Option 1: $BGrB7u76  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: 55@nton  (from: Khans_v2/Stealth2, Khans_v3/Stealth2)
+
+antonspreckley@yahoo.co.uk
+  Option 1: buckden810446  (from: Khans_v2/Stealth, Khans_v2/Stealth2, Khans_v3/Stealth)
+  Option 2: 25sydneystreet  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+auto180@yahoo.com
+  Option 1: yonkers265  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: cupcake  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins, Evony_Accounts.txt)
+
+azndrugz@yahoo.com
+  Option 1: timeline1  (from: Khans_v2/Borg, Khans_v2/Borg, Khans_v3/Borg)
+  Option 2: chen1107  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+baseball_junky3@yahoo.com
+  Option 1: cookie  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: besbol3  (from: Evony_Accounts.txt, Evony_Accounts2.txt, Evony_Accounts_-_Copy.txt)
+
+bbb_ark1962@yahoo.com
+  Option 1: BeatenbytheBalls42  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: Prince1  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+bigger.2007@outlook.com
+  Option 1: cedric26051990  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: 69arvida1967  (from: Khans_v2/Stealth, Khans_v3/Stealth)
+  Option 3: tace67071019cireta1967kissmyass69  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+bobsfakeid2@yahoo.com
+  Option 1: $BGrB7u76  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: MiaAnderson1996  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+buckskinhorse@hotmail.com
+  Option 1: pocojet1  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: pocojet  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+catlinn@yahoo.com
+  Option 1: april13  (from: Khans_v2/Mudslinger, Khans_v3/Mudslinger)
+  Option 2: 2017-04-13  (from: Khans_v2/Tri, Khans_v3/Tri)
+
+chuckc417@yahoo.com
+  Option 1: Shr140414  (from: Khans_v2/Khan Logs, Khans_v2/Khans Mains, Khans_v2/Shawne old)
+  Option 2: 8^Losangele  (from: Khans_v2/16 Holders, Khans_v3/16 Holders)
+
+dakota_taz@hotmail.com
+  Option 1: april13  (from: Khans_v2/Mudslinger, Khans_v3/Mudslinger)
+  Option 2: 2017-04-13  (from: Khans_v2/Tri, Khans_v3/Tri)
+
+dakota_taz@softhome.net
+  Option 1: april13  (from: Khans_v2/Mudslinger, Khans_v3/Mudslinger)
+  Option 2: 2017-04-13  (from: Khans_v2/Tri, Khans_v3/Tri)
+
+dakurls.evony@yahoo.com
+  Option 1: april13  (from: Khans_v2/Mudslinger, Khans_v3/Mudslinger)
+  Option 2: 2017-04-13  (from: Khans_v2/Tri, Khans_v3/Tri)
+
+dalefreeburg@yahoo.com
+  Option 1: 7sPtEzAkURV9g7Ab  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: One2$even9  (from: Khans_v2/Khan Logs, Khans_v3/Khan Logs)
+  Option 3: 0ne2$even9  (from: Khans_v2/MadBall, Khans_v3/MadBall)
+
+danman5625@yahoo.com
+  Option 1: babycat9a7xcx9  (from: Khans_v2/Khan Logs, Khans_v2/Khans Mains, Khans_v2/Hugo)
+  Option 2: dirtyboy6907  (from: Khans_v2/MadBall, Khans_v3/MadBall)
+
+ebraff@yahoo.com
+  Option 1: Wombat091  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Khans_v2/Khan Logs)
+  Option 2: Wombat091tenabutter@gmail.com  (from: Evony_Accounts.XLSX/Sheet1)
+  Option 3: Wombat  (from: Khans_v2/Khans Alts, Khans_v3/Khans Alts)
+  Option 4: Wombat091tenabutter@gmail.com,brigadeog  (from: Khans_v3/855)
+
+elacetay12@yahoo.com
+  Option 1: cookie  (from: Khans_v2/Borg, Khans_v3/Borg)
+  Option 2: beplaced66  (from: Evony_Accounts.txt, Evony_Accounts2.txt, Evony_Accounts_-_Copy.txt)
+
+gozdev@hotmail.com
+  Option 1: 20467480.0  (from: Khans_v2/Borg, Khans_v3/Borg)
+  Option 2: 20467480  (from: Evony_Accounts.txt, Evony_Accounts2.txt, Evony_Accounts_-_Copy.txt)
+
+hpu357@yahoo.com
+  Option 1: 5656planes  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: Viper7  (from: Khans_v3/Stealth2)
+
+hurlothrumbo@iprimus.com.au
+  Option 1: 0ne2$even9  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: One2$even9  (from: Khans_v2/Khan Logs, Khans_v2/Khans Alts, Khans_v3/Khan Logs)
+
+jasonj@generator.com
+  Option 1: argo999  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: lion999  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+jburkhardt0@gmail.com
+  Option 1: cookie  (from: Khans_v2/Borg, Khans_v3/Borg)
+  Option 2: [4:19:34  (from: Master_list.txt, Master_list3.txt, Master_list3_.txt)
+
+jenn1131@gmail.com
+  Option 1: hNa3Hw8d#k#!GSZFy2%f  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Khans_v2/Khan Logs)
+  Option 2: moocat  (from: Khans_v2/Khans Alts, Khans_v3/Khans Alts)
+
+jhoopes01@yahoo.com
+  Option 1: 85418541  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: 85418541.0  (from: Khans_v2/Mudslinger, Khans_v2/Tri, Khans_v3/Sheet21)
+
+jnsmu97@aol.com
+  Option 1: yonkers265  (from: Khans_v2/Khan Logs, Khans_v2/Khans Alts, Khans_v3/Khan Logs)
+  Option 2: brendan11  (from: Khans_v2/Borg, Khans_v3/Borg, Evony_Accounts.txt)
+
+kakarot1973@hotmail.com
+  Option 1: 1qaz2wsxed  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: 911922933.0  (from: Khans_v2/Borg, Khans_v3/Borg)
+  Option 3: 911922933  (from: Evony_Accounts.txt, Evony_Accounts2.txt, Evony_Accounts_-_Copy.txt)
+
+katastrophe.2012@hotmail.com
+  Option 1: 69arvida1967  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: tace10076707cireta1967kissmyass69  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+kistari@cox.net
+  Option 1: Sunnyvale  (from: Khans_v2/Khan Logs, Khans_v3/Khan Logs)
+  Option 2: @r04BIS  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+legacy-nj@juno.com
+  Option 1: Crusader2z991773!  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: V1kingFl00t  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+lestathorsesdogs@hotmail.com
+  Option 1: april13  (from: Khans_v2/Mudslinger, Khans_v3/Mudslinger)
+  Option 2: 2017-04-13  (from: Khans_v2/Tri, Khans_v3/Tri)
+
+lionclaw6@gmail.com
+  Option 1: ragnarok9  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Khans_v3/855)
+  Option 2: valhalla9  (from: Khans_v2/Lion, Khans_v3/Lion)
+
+m4rt1n4d4ms@gmail.com
+  Option 1: 196721  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Khans_v3/855)
+  Option 2: 196721.0  (from: Khans_v3/Sheet21)
+
+maltese_minx@hotmail.com
+  Option 1: sgathach9  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: thelionrampant9  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+martingerard07@aol.com
+  Option 1: 196721  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: 196721.0  (from: Khans_v2/Stealth, Khans_v2/Stealth2, Khans_v2/Copy of Ogs Logins)
+
+martyevony5@yahoo.com
+  Option 1: 0ne2$even10  (from: Khans_v2/Khans Alts, Khans_v3/Khans Alts)
+  Option 2: 0ne2$even9  (from: Khans_v2/MadBall, Khans_v3/MadBall)
+
+mattzac@live.com
+  Option 1: Viper7  (from: Khans_v2/Stealth2, Khans_v3/Stealth2)
+  Option 2: Chefrey24  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+mikehmike@yahoo.com
+  Option 1: 7sPtEzAkURV9g7Ab  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: 0ne2$even9  (from: Khans_v2/MadBall, Khans_v3/MadBall)
+
+minotavros78@yahoo.com
+  Option 1: flik123  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: .....  (from: Khans_v2/MadBall, Khans_v3/MadBall)
+
+mistersergio13@gmail.com
+  Option 1: Smoofers777  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: steve123  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+mopar_evony@yahoo.com
+  Option 1: april13  (from: Khans_v2/Mudslinger, Khans_v3/Mudslinger)
+  Option 2: 2017-04-13  (from: Khans_v2/Tri, Khans_v3/Tri)
+
+mrqbiii@yahoo.com
+  Option 1: cheesehead  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: curious1  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+mud.slinger@yahoo.com
+  Option 1: april13  (from: Khans_v2/Mudslinger, Khans_v3/Mudslinger)
+  Option 2: 2017-04-13  (from: Khans_v2/Tri, Khans_v3/Tri)
+
+mymechanics@aol.com
+  Option 1: $BGrB7u76  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: gt35turbo  (from: Khans_v2/MadBall, Khans_v3/MadBall)
+
+nelsonsantiago@verizon.net
+  Option 1: heartless1  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Khans_v3/855)
+  Option 2: carbon  (from: Khans_v2/Khan Logs, Khans_v2/Khans Alts, Khans_v3/Khan Logs)
+
+nigel.abrown@blueyonder.co.uk
+  Option 1: googlymooglypuddingandpie6  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: Shikai!  (from: Khans_v2/Copy of Ogs Logins, Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+peterbrannan@hotmail.com
+  Option 1: theBUSHsmells123  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: stop123  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+piendro@gmail.com
+  Option 1: brendan11  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: tinkerbell1  (from: Khans_v2/Borg, Khans_v2/Borg, Khans_v3/Borg)
+
+plymouthtrailduster@yahoo.com
+  Option 1: april13  (from: Khans_v2/Mudslinger, Khans_v3/Mudslinger)
+  Option 2: 2017-04-13  (from: Khans_v2/Tri, Khans_v3/Tri)
+
+prince_medo_eg@hotmail.com
+  Option 1: jojo1999  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: 0ne2$even9  (from: Khans_v2/MadBall, Khans_v3/MadBall)
+
+q_t_p_i_e99@yahoo.com
+  Option 1: 102905  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: 102905.0  (from: Khans_v2/Borg, Khans_v3/Sheet21, Khans_v3/Borg)
+
+ram2009alexander@gmail.com
+  Option 1: 196721  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Khans_v3/855)
+  Option 2: 196721.0  (from: Khans_v3/Sheet21)
+
+realtree.evony@yahoo.com
+  Option 1: april13  (from: Khans_v2/Mudslinger, Khans_v3/Mudslinger)
+  Option 2: 2017-04-13  (from: Khans_v2/Tri, Khans_v3/Tri)
+
+revell753@hotmail.com
+  Option 1: vadar01  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: Vadar01  (from: Khans_v2/Borg, Khans_v3/Borg, Evony_Accounts.txt)
+
+richardblack1@comcast.net
+  Option 1: Crusader2z991773!  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: Loco464299  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+rtharp02@gmail.com
+  Option 1: G0dzilla  (from: Khans_v2/Stealth2, Khans_v2/Copy of Ogs Logins, Khans_v3/Stealth2)
+  Option 2: DBobbyD  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+santana2603@gmail.com
+  Option 1: yugioh10  (from: Khans_v2/Stealth2, Khans_v3/Stealth2)
+  Option 2: ogsec7  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+satch.coffin@mail.com
+  Option 1: argo999  (from: Khans_v2/Stealth, Khans_v2/Stealth2, Khans_v3/Stealth)
+  Option 2: sheldon111  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+satch229@gmail.com
+  Option 1: argo999  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: sheldon111  (from: Khans_v2/Stealth2)
+
+satchman69@hotmail.com
+  Option 1: sheldon111  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: argo999  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+
+simoes134@hotmail.com
+  Option 1: z991773Crusaderz2!  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: Crusader2z991773!  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+sleddog218@yahoo.com
+  Option 1: Crusaderz991773!  (from: Khans_v2/Stealth2, Khans_v3/Stealth2)
+  Option 2: Outrage218  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+tarasdbe@yahoo.com
+  Option 1: bojangles5  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: brendan11  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+toy64@live.co.uk
+  Option 1: z991773Crusaderz2!  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: Crusader2z991773!  (from: Khans_v2/Stealth2, Khans_v3/Stealth2)
+  Option 3: z991773Crazies4  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+treacy@rollanet.org
+  Option 1: goose321  (from: Khans_v2/Khan Logs, Khans_v2/MadBall, Khans_v3/Khan Logs)
+  Option 2: thecakeisalie7  (from: Khans_v2/Khans Alts, Khans_v2/MadBall, Khans_v3/Khans Alts)
+  Option 3: goose32  (from: Khans_v2/Tri, Khans_v3/Tri)
+
+varun123patel@yahoo.com
+  Option 1: valhalla9  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Khans_v3/855)
+  Option 2: toygar78  (from: Khans_v2/Borg, Khans_v3/Borg, Evony_Accounts.txt)
+
+ykamhong@yahoo.com
+  Option 1: 000000  (from: Khans_v2/Borg, Khans_v3/855, Khans_v3/855)
+  Option 2: 40tr  (from: Khans_v3/Sheet21)
+
+zigzag@1904.dk
+  Option 1: Bobbel1.  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: Bobbell1  (from: Khans_v2/Khans Mains, Khans_v3/Khans Mains)
+
+zsk54321@gmail.com
+  Option 1: viper7  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: ogsec7  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+zsk54321@yahoo.com
+  Option 1: Football234  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: cheezehead77  (from: Khans_v2/Copy of Ogs Logins, Khans_v3/Copy of Ogs Logins)
+
+zurt@mail.com
+  Option 1: 20467480  (from: Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1, Evony_Accounts.XLSX/Sheet1)
+  Option 2: 20467480.0  (from: Khans_v2/Merida, Khans_v2/Khans Alts, Khans_v2/Borg)
+

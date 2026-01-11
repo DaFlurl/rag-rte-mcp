@@ -1,0 +1,26 @@
+{
+  "now": {
+    "proxyPw": "",
+    "skypeUn": "",
+    "secCode": "",
+    "proxyUn": "",
+    "autoLoginMaxTime": "15",
+    "username": "callingcrowes@hotmail.com",
+    "serverIP": "216.66.17.168",
+    "proxyHost": "",
+    "proxyType": "",
+    "loginType": "ev",
+    "password": "VVkitten7",
+    "autoScript": true,
+    "autoRun": true,
+    "theme": "Burgundy by Ioshik",
+    "server": "cc2",
+    "autoLogin": true,
+    "sid": "375",
+    "tokenExpires": NaN,
+    "autoLoginMinTime": "0",
+    "strserverAlias": "Parapet",
+    "proxyPort": "8080",
+    "skypePw": ""
+  }
+}

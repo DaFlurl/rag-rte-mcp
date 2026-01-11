@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "file": "C:\\Users\\Admin\\AppData\\Roaming\\Macromedia\\Flash Player\\#SharedObjects\\YUGK6X86\\#localWithNet\\projects\\evony_Extracted\\AutoEvony.swf\\config.sol",
+  "name": "config",
+  "data": {
+    "now": {
+      "tokenExpires": NaN,
+      "strserverAlias": "Parapet",
+      "proxyPort": "8080",
+      "autoLoginMaxTime": "5",
+      "skypePw": "",
+      "proxyPw": "",
+      "skypeUn": "",
+      "autoLogin": false,
+      "loginType": "ev",
+      "proxyUn": "",
+      "serverIP": "216.66.17.168",
+      "autoRun": true,
+      "proxyHost": "",
+      "autoScript": false,
+      "username": "revell753@hotmail.com",
+      "secCode": "",
+      "theme": "Classic Blue RE",
+      "proxyType": "",
+      "autoLoginMinTime": "0",
+      "server": "cc2",
+      "password": "vadar01",
+      "sid": "375"
+    }
+  }
+}

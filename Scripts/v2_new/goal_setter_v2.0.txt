@@ -1,0 +1,183 @@
+// ============================================
+// GOAL SETTER v2.0
+// Set building, troop, tech, fort goals
+// Uses REAL goal commands from CityState.as
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+// REAL COMMANDS FROM CityState.as:
+// troopgoal troops
+// fortificationgoal troops
+// buildinggoals str
+// techgoals str
+// resetgoals
+// ============================================
+
+// ==========================================
+// CONFIGURATION - EDIT THESE
+// ==========================================
+
+// === TROOP GOALS ===
+set enableTroopGoals 1
+set troopGoalString "a:1000000,c:100000,C:50000"
+
+// === FORTIFICATION GOALS ===
+set enableFortGoals 1
+set fortGoalString "trap:10000,abatis:10000,tower:5000,log:5000,trebs:1000"
+
+// === BUILDING GOALS ===
+set enableBuildingGoals 1
+set buildingGoalString "cottage:9,barracks:9,forge:9,workshop:9,academy:9,warehouse:9"
+
+// === TECH GOALS ===
+set enableTechGoals 1
+set techGoalString "agriculture:10,lumbering:10,masonry:10,mining:10,metalcasting:10"
+
+// === RESET OPTIONS ===
+set resetBeforeSet 0
+
+// === FEATURES ===
+set enableLogging 1
+
+// === RUN MODE ===
+set runMode "setall"
+
+// ==========================================
+// DO NOT EDIT BELOW
+// ==========================================
+
+set goalsSet 0
+
+echo ============================================
+echo GOAL SETTER v2.0
+echo ============================================
+
+// Reset if enabled
+if resetBeforeSet = 1 then gosub resetAllGoals
+
+// Set goals based on mode
+if runMode = "setall" then goto setAllGoals
+if runMode = "troops" then goto setTroopGoalsOnly
+if runMode = "forts" then goto setFortGoalsOnly
+if runMode = "buildings" then goto setBuildingGoalsOnly
+if runMode = "tech" then goto setTechGoalsOnly
+goto setAllGoals
+
+// ==========================================
+// RESET ALL GOALS (Real Command)
+// ==========================================
+label resetAllGoals
+echo [RESET] Resetting all goals...
+
+resetgoals
+
+echo [RESET] Goals cleared
+sleep 1000
+return
+
+// ==========================================
+// SET ALL GOALS
+// ==========================================
+label setAllGoals
+echo [GOALS] Setting all goals...
+
+if enableTroopGoals = 1 then gosub setTroopGoals
+if enableFortGoals = 1 then gosub setFortGoals
+if enableBuildingGoals = 1 then gosub setBuildingGoals
+if enableTechGoals = 1 then gosub setTechGoals
+
+goto complete
+
+// ==========================================
+// SET TROOP GOALS (Real Command)
+// ==========================================
+label setTroopGoals
+label setTroopGoalsOnly
+echo [TROOP] Setting troop goals: %troopGoalString%
+
+// troopgoal troops
+// Format: troopType:count,troopType:count
+troopgoal %troopGoalString%
+
+set goalsSet goalsSet + 1
+echo [TROOP] Troop goals set
+sleep 1000
+
+if runMode = "troops" then goto complete
+return
+
+// ==========================================
+// SET FORTIFICATION GOALS (Real Command)
+// ==========================================
+label setFortGoals
+label setFortGoalsOnly
+echo [FORT] Setting fortification goals: %fortGoalString%
+
+// fortificationgoal troops
+// Format: fortType:count,fortType:count
+// trap, abatis, tower, log, trebs
+fortificationgoal %fortGoalString%
+
+set goalsSet goalsSet + 1
+echo [FORT] Fort goals set
+sleep 1000
+
+if runMode = "forts" then goto complete
+return
+
+// ==========================================
+// SET BUILDING GOALS (Real Command)
+// ==========================================
+label setBuildingGoals
+label setBuildingGoalsOnly
+echo [BUILD] Setting building goals: %buildingGoalString%
+
+// buildinggoals str
+// Format: buildingType:level,buildingType:level
+buildinggoals %buildingGoalString%
+
+set goalsSet goalsSet + 1
+echo [BUILD] Building goals set
+sleep 1000
+
+if runMode = "buildings" then goto complete
+return
+
+// ==========================================
+// SET TECH GOALS (Real Command)
+// ==========================================
+label setTechGoals
+label setTechGoalsOnly
+echo [TECH] Setting tech goals: %techGoalString%
+
+// techgoals str
+// Format: techType:level,techType:level
+techgoals %techGoalString%
+
+set goalsSet goalsSet + 1
+echo [TECH] Tech goals set
+sleep 1000
+
+if runMode = "tech" then goto complete
+return
+
+// ==========================================
+// CHECK RESEARCH (Real Command)
+// ==========================================
+label checkCurrentResearch
+echo [CHECK] Checking current research levels...
+
+checkresearch
+
+sleep 2000
+return
+
+// ==========================================
+// COMPLETION
+// ==========================================
+label complete
+echo ============================================
+echo GOAL SETTER COMPLETE
+echo Goals Set: %goalsSet%
+echo ============================================
+stop

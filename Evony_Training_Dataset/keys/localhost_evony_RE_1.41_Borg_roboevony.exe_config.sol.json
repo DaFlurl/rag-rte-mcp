@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "file": "C:\\Users\\Admin\\AppData\\Roaming\\Macromedia\\Flash Player\\#SharedObjects\\YUGK6X86\\localhost\\evony\\RE_1.41_Borg\\roboevony.exe\\config.sol",
+  "name": "config",
+  "data": {
+    "now": {
+      "proxyPort": "8080",
+      "skypePw": "",
+      "proxyPw": "",
+      "skypeUn": "",
+      "secCode": "patricia1",
+      "proxyUn": "",
+      "autoLoginMaxTime": "3",
+      "username": "Tarasdbe@yahoo.com",
+      "serverIP": "216.66.17.168",
+      "proxyType": "",
+      "proxyHost": "",
+      "loginType": "ev",
+      "password": "bojangles5",
+      "autoScript": false,
+      "autoRun": true,
+      "theme": "Classic Blue RE",
+      "server": "cc2",
+      "autoLogin": true,
+      "sid": "375",
+      "tokenExpires": NaN,
+      "autoLoginMinTime": "0",
+      "strserverAlias": "Parapet"
+    }
+  }
+}

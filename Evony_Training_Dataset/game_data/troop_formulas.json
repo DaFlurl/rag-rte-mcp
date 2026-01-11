@@ -1,0 +1,403 @@
+{
+  "troops": {
+    "worker": {
+      "id": 2,
+      "name": "Worker",
+      "tier": 1,
+      "type": "support",
+      "stats": {
+        "attack": 5,
+        "defense": 5,
+        "life": 50,
+        "speed": 180,
+        "range": 20,
+        "load": 200
+      },
+      "cost": {
+        "food": 50,
+        "wood": 0,
+        "stone": 0,
+        "iron": 0
+      },
+      "population": 1,
+      "train_time": 15,
+      "requirements": {
+        "barracks": 1
+      },
+      "overflow_threshold": 42949673,
+      "strong_vs": [],
+      "weak_vs": [
+        "archer"
+      ]
+    },
+    "warrior": {
+      "id": 3,
+      "name": "Warrior",
+      "tier": 1,
+      "type": "infantry",
+      "stats": {
+        "attack": 10,
+        "defense": 10,
+        "life": 100,
+        "speed": 200,
+        "range": 30,
+        "load": 20
+      },
+      "cost": {
+        "food": 100,
+        "wood": 0,
+        "stone": 0,
+        "iron": 0
+      },
+      "population": 1,
+      "train_time": 30,
+      "requirements": {
+        "barracks": 1
+      },
+      "overflow_threshold": 21474837,
+      "strong_vs": [
+        "scout"
+      ],
+      "weak_vs": [
+        "pikeman",
+        "archer"
+      ]
+    },
+    "scout": {
+      "id": 4,
+      "name": "Scout",
+      "tier": 1,
+      "type": "cavalry",
+      "stats": {
+        "attack": 5,
+        "defense": 5,
+        "life": 50,
+        "speed": 3000,
+        "range": 20,
+        "load": 5
+      },
+      "cost": {
+        "food": 150,
+        "wood": 0,
+        "stone": 0,
+        "iron": 0
+      },
+      "population": 1,
+      "train_time": 30,
+      "requirements": {
+        "barracks": 2
+      },
+      "overflow_threshold": 14316558,
+      "strong_vs": [],
+      "weak_vs": [
+        "warrior"
+      ]
+    },
+    "pikeman": {
+      "id": 5,
+      "name": "Pikeman",
+      "tier": 2,
+      "type": "infantry",
+      "stats": {
+        "attack": 25,
+        "defense": 30,
+        "life": 150,
+        "speed": 200,
+        "range": 50,
+        "load": 30
+      },
+      "cost": {
+        "food": 200,
+        "wood": 100,
+        "stone": 0,
+        "iron": 0
+      },
+      "population": 1,
+      "train_time": 45,
+      "requirements": {
+        "barracks": 3
+      },
+      "overflow_threshold": 7158278,
+      "strong_vs": [
+        "cavalry",
+        "cataphract"
+      ],
+      "weak_vs": [
+        "archer"
+      ]
+    },
+    "swordsman": {
+      "id": 6,
+      "name": "Swordsman",
+      "tier": 3,
+      "type": "infantry",
+      "stats": {
+        "attack": 50,
+        "defense": 50,
+        "life": 250,
+        "speed": 220,
+        "range": 30,
+        "load": 35
+      },
+      "cost": {
+        "food": 250,
+        "wood": 100,
+        "stone": 0,
+        "iron": 50
+      },
+      "population": 1,
+      "train_time": 60,
+      "requirements": {
+        "barracks": 5,
+        "iron_working": 3
+      },
+      "overflow_threshold": 5368709,
+      "strong_vs": [
+        "warrior",
+        "pikeman"
+      ],
+      "weak_vs": [
+        "cavalry",
+        "archer"
+      ]
+    },
+    "archer": {
+      "id": 7,
+      "name": "Archer",
+      "tier": 2,
+      "type": "ranged",
+      "stats": {
+        "attack": 35,
+        "defense": 15,
+        "life": 100,
+        "speed": 250,
+        "range": 1200,
+        "load": 25
+      },
+      "cost": {
+        "food": 350,
+        "wood": 150,
+        "stone": 0,
+        "iron": 0
+      },
+      "population": 1,
+      "train_time": 45,
+      "requirements": {
+        "barracks": 4,
+        "archery": 1
+      },
+      "overflow_threshold": 6135037,
+      "strong_vs": [
+        "worker",
+        "warrior",
+        "pikeman",
+        "swordsman"
+      ],
+      "weak_vs": [
+        "cavalry"
+      ]
+    },
+    "cavalry": {
+      "id": 8,
+      "name": "Cavalry",
+      "tier": 3,
+      "type": "cavalry",
+      "stats": {
+        "attack": 75,
+        "defense": 50,
+        "life": 350,
+        "speed": 1000,
+        "range": 100,
+        "load": 50
+      },
+      "cost": {
+        "food": 500,
+        "wood": 200,
+        "stone": 0,
+        "iron": 100
+      },
+      "population": 2,
+      "train_time": 90,
+      "requirements": {
+        "stable": 2,
+        "horseback_riding": 2
+      },
+      "overflow_threshold": 4294967,
+      "strong_vs": [
+        "archer",
+        "siege"
+      ],
+      "weak_vs": [
+        "pikeman"
+      ]
+    },
+    "cataphract": {
+      "id": 9,
+      "name": "Cataphract",
+      "tier": 4,
+      "type": "cavalry",
+      "stats": {
+        "attack": 100,
+        "defense": 100,
+        "life": 500,
+        "speed": 750,
+        "range": 80,
+        "load": 70
+      },
+      "cost": {
+        "food": 700,
+        "wood": 300,
+        "stone": 100,
+        "iron": 200
+      },
+      "population": 3,
+      "train_time": 120,
+      "requirements": {
+        "stable": 5,
+        "horseback_riding": 5
+      },
+      "overflow_threshold": 3067833,
+      "strong_vs": [
+        "archer",
+        "siege",
+        "cavalry"
+      ],
+      "weak_vs": [
+        "pikeman"
+      ]
+    },
+    "transporter": {
+      "id": 10,
+      "name": "Transporter",
+      "tier": 1,
+      "type": "support",
+      "stats": {
+        "attack": 5,
+        "defense": 5,
+        "life": 50,
+        "speed": 150,
+        "range": 20,
+        "load": 5000
+      },
+      "cost": {
+        "food": 500,
+        "wood": 500,
+        "stone": 0,
+        "iron": 0
+      },
+      "population": 1,
+      "train_time": 60,
+      "requirements": {
+        "workshop": 1
+      },
+      "overflow_threshold": 4294967,
+      "strong_vs": [],
+      "weak_vs": [
+        "all"
+      ]
+    },
+    "ballista": {
+      "id": 11,
+      "name": "Ballista",
+      "tier": 3,
+      "type": "siege",
+      "stats": {
+        "attack": 200,
+        "defense": 50,
+        "life": 600,
+        "speed": 100,
+        "range": 1400,
+        "load": 100
+      },
+      "cost": {
+        "food": 2500,
+        "wood": 1000,
+        "stone": 500,
+        "iron": 500
+      },
+      "population": 4,
+      "train_time": 180,
+      "requirements": {
+        "workshop": 4,
+        "engineering": 3
+      },
+      "overflow_threshold": 858993,
+      "strong_vs": [
+        "fortifications"
+      ],
+      "weak_vs": [
+        "cavalry"
+      ]
+    },
+    "battering_ram": {
+      "id": 12,
+      "name": "Battering Ram",
+      "tier": 3,
+      "type": "siege",
+      "stats": {
+        "attack": 150,
+        "defense": 100,
+        "life": 800,
+        "speed": 120,
+        "range": 20,
+        "load": 150
+      },
+      "cost": {
+        "food": 5000,
+        "wood": 2000,
+        "stone": 500,
+        "iron": 500
+      },
+      "population": 5,
+      "train_time": 240,
+      "requirements": {
+        "workshop": 5,
+        "engineering": 4
+      },
+      "overflow_threshold": 429496,
+      "strong_vs": [
+        "walls",
+        "fortifications"
+      ],
+      "weak_vs": [
+        "cavalry",
+        "archer"
+      ]
+    },
+    "catapult": {
+      "id": 13,
+      "name": "Catapult",
+      "tier": 4,
+      "type": "siege",
+      "stats": {
+        "attack": 450,
+        "defense": 30,
+        "life": 400,
+        "speed": 80,
+        "range": 1500,
+        "load": 200
+      },
+      "cost": {
+        "food": 30000,
+        "wood": 10000,
+        "stone": 5000,
+        "iron": 5000
+      },
+      "population": 8,
+      "train_time": 360,
+      "requirements": {
+        "workshop": 9,
+        "engineering": 8
+      },
+      "overflow_threshold": 71582,
+      "strong_vs": [
+        "walls",
+        "fortifications",
+        "buildings"
+      ],
+      "weak_vs": [
+        "cavalry"
+      ]
+    }
+  }
+}

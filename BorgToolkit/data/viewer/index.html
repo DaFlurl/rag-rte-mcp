@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Borg Account Data Viewer</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #1a1a2e; color: #eee; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; text-align: center; }
+        .header h1 { font-size: 28px; margin-bottom: 5px; }
+        .header p { opacity: 0.8; }
+        .tabs { display: flex; background: #16213e; flex-wrap: wrap; }
+        .tab { padding: 12px 20px; cursor: pointer; border-bottom: 3px solid transparent; transition: all 0.3s; }
+        .tab:hover { background: #1f4068; }
+        .tab.active { border-bottom-color: #667eea; background: #1f4068; }
+        .content { padding: 20px; max-width: 1400px; margin: 0 auto; }
+        .section { display: none; }
+        .section.active { display: block; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; background: #16213e; border-radius: 8px; overflow: hidden; }
+        th { background: #667eea; padding: 12px; text-align: left; font-weight: 600; }
+        td { padding: 10px 12px; border-bottom: 1px solid #2a2a4a; }
+        tr:hover { background: #1f4068; }
+        .card { background: #16213e; border-radius: 8px; padding: 20px; margin: 15px 0; }
+        .card h3 { color: #667eea; margin-bottom: 15px; border-bottom: 1px solid #2a2a4a; padding-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .stat { background: #1f4068; padding: 15px; border-radius: 6px; }
+        .stat-label { font-size: 12px; color: #888; text-transform: uppercase; }
+        .stat-value { font-size: 24px; font-weight: bold; color: #667eea; }
+        .odd { background: #2ecc71; color: #000; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
+        .even { background: #e74c3c; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
+        .search { padding: 10px; width: 100%; background: #1f4068; border: none; color: #fff; border-radius: 6px; margin-bottom: 15px; }
+        .city-header { background: #764ba2; color: #fff; padding: 10px 15px; margin: 20px 0 10px 0; border-radius: 6px; font-weight: bold; }
+        code { background: #2a2a4a; padding: 2px 6px; border-radius: 4px; font-size: 12px; }
+        .small { font-size: 11px; color: #888; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏰 Borg Account Data Viewer</h1>
+        <p>Tarasdbe@yahoo.com | Server: cc2 | 10 Cities</p>
+    </div>
+    
+    <div class="tabs">
+        <div class="tab active" onclick="showTab('overview')">Overview</div>
+        <div class="tab" onclick="showTab('cities')">Cities</div>
+        <div class="tab" onclick="showTab('troops')">Troops</div>
+        <div class="tab" onclick="showTab('glitches')">Glitches</div>
+        <div class="tab" onclick="showTab('heroes')">Heroes</div>
+        <div class="tab" onclick="showTab('items')">Items</div>
+        <div class="tab" onclick="showTab('buildings')">Buildings</div>
+        <div class="tab" onclick="showTab('resources')">Resources</div>
+        <div class="tab" onclick="showTab('colonies')">Colonies</div>
+        <div class="tab" onclick="showTab('fields')">Fields</div>
+        <div class="tab" onclick="showTab('friends')">Friends</div>
+    </div>
+    
+    <div class="content">
+<div id="overview" class="section active">
+        <div class="grid">
+            <div class="stat">
+                <div class="stat-label">Player Name</div>
+                <div class="stat-value">Borg</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Alliance</div>
+                <div class="stat-value">None</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Prestige</div>
+                <div class="stat-value">267,009,832</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Cities</div>
+                <div class="stat-value">10</div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3>Your Cities</h3>
+            <table>
+                <tr><th>#</th><th>City Name</th><th>Coords</th><th>Power Level</th><th>ID</th></tr>
+<tr><td>1</td><td><b>aattack</b></td><td>(3, 796)</td><td>4</td><td><code>1245939</code></td></tr>
+<tr><td>2</td><td><b>battack</b></td><td>(796, 7)</td><td>4</td><td><code>1246888</code></td></tr>
+<tr><td>3</td><td><b>Borg</b></td><td>(790, 796)</td><td>4</td><td><code>1764326</code></td></tr>
+<tr><td>4</td><td><b>f</b></td><td>(799, 9)</td><td>4</td><td><code>1247325</code></td></tr>
+<tr><td>5</td><td><b>Falana</b></td><td>(0, 799)</td><td>4</td><td><code>1722538</code></td></tr>
+<tr><td>6</td><td><b>Hindu</b></td><td>(8, 7)</td><td>4</td><td><code>1247067</code></td></tr>
+<tr><td>7</td><td><b>Jerusalem</b></td><td>(300, 700)</td><td>1</td><td><code>1393911</code></td></tr>
+<tr><td>8</td><td><b>LOLA</b></td><td>(2, 1)</td><td>4</td><td><code>1401064</code></td></tr>
+<tr><td>9</td><td><b>Mojo</b></td><td>(793, 796)</td><td>4</td><td><code>1246669</code></td></tr>
+<tr><td>10</td><td><b>﻿Atlantis</b></td><td>(0, 0)</td><td>0</td><td><code>1393834</code></td></tr>
+</table></div></div><div id="cities" class="section"><div class="city-header">🏰 [1] aattack (3, 796)</div>
+        <div class="grid">
+            <div class="stat"><div class="stat-label">Power Level</div><div class="stat-value">4</div></div>
+            <div class="stat"><div class="stat-label">Heroes</div><div class="stat-value">10</div></div>
+            <div class="stat"><div class="stat-label">Colonies</div><div class="stat-value">21</div></div>
+            <div class="stat"><div class="stat-label">Buildings</div><div class="stat-value">61</div></div>
+        </div><div class="city-header">🏰 [2] battack (796, 7)</div>
+        <div class="grid">
+            <div class="stat"><div class="stat-label">Power Level</div><div class="stat-value">4</div></div>
+            <div class="stat"><div class="stat-label">Heroes</div><div class="stat-value">10</div></div>
+            <div class="stat"><div class="stat-label">Colonies</div><div class="stat-value">11</div></div>
+            <div class="stat"><div class="stat-label">Buildings</div><div class="stat-value">57</div></div>
+        </div><div class="city-header">🏰 [3] Borg (790, 796)</div>
+        <div class="grid">
+            <div class="stat"><div class="stat-label">Power Level</div><div class="stat-value">4</div></div>
+            <div class="stat"><div class="stat-label">Heroes</div><div class="stat-value">10</div></div>
+            <div class="stat"><div class="stat-label">Colonies</div><div class="stat-value">0</div></div>
+            <div class="stat"><div class="stat-label">Buildings</div><div class="stat-value">73</div></div>
+        </div><div class="city-header">🏰 [4] f (799, 9)</div>
+        <div class="grid">
+            <div class="stat"><div class="stat-label">Power Level</div><div class="stat-value">4</div></div>
+            <div class="stat"><div class="stat-label">Heroes</div><div class="stat-value">10</div></div>
+            <div class="stat"><div class="stat-label">Colonies</div><div class="stat-value">3</div></div>
+            <div class="stat"><div class="stat-label">Buildings</div><div class="stat-value">59</div></div>
+        </div><div class="city-header">🏰 [5] Falana (0, 799)</div>
+        <div class="grid">
+            <div class="stat"><div class="stat-label">Power Level</div><div class="stat-value">4</div></div>
+            <div class="stat"><div class="stat-label">Heroes</div><div class="stat-value">10</div></div>
+            <div class="stat"><div class="stat-label">Colonies</div><div class="stat-value">0</div></div>
+            <div class="stat"><div class="stat-label">Buildings</div><div class="stat-value">74</div></div>
+        </div><div class="city-header">🏰 [6] Hindu (8, 7)</div>
+        <div class="grid">
+            <div class="stat"><div class="stat-label">Power Level</div><div class="stat-value">4</div></div>
+            <div class="stat"><div class="stat-label">Heroes</div><div class="stat-value">10</div></div>
+            <div class="stat"><div class="stat-label">Colonies</div><div class="stat-value">4</div></div>
+            <div class="stat"><div class="stat-label">Buildings</div><div class="stat-value">55</div></div>
+        </div><div class="city-header">🏰 [7] Jerusalem (300, 700)</div>
+        <div class="grid">
+            <div class="stat"><div class="stat-label">Power Level</div><div class="stat-value">1</div></div>
+            <div class="stat"><div class="stat-label">Heroes</div><div class="stat-value">10</div></div>
+            <div class="stat"><div class="stat-label">Colonies</div><div class="stat-value">0</div></div>
+            <div class="stat"><div class="stat-label">Buildings</div><div class="stat-value">74</div></div>
+        </div><div class="city-header">🏰 [8] LOLA (2, 1)</div>
+        <div class="grid">
+            <div class="stat"><div class="stat-label">Power Level</div><div class="stat-value">4</div></div>
+            <div class="stat"><div class="stat-label">Heroes</div><div class="stat-value">10</div></div>
+            <div class="stat"><div class="stat-label">Colonies</div><div class="stat-value">13</div></div>
+            <div class="stat"><div class="stat-label">Buildings</div><div class="stat-value">74</div></div>
+        </div><div class="city-header">🏰 [9] Mojo (793, 796)</div>
+        <div class="grid">
+            <div class="stat"><div class="stat-label">Power Level</div><div class="stat-value">4</div></div>
+            <div class="stat"><div class="stat-label">Heroes</div><div class="stat-value">10</div></div>
+            <div class="stat"><div class="stat-label">Colonies</div><div class="stat-value">6</div></div>
+            <div class="stat"><div class="stat-label">Buildings</div><div class="stat-value">57</div></div>
+        </div><div class="city-header">🏰 [10] ﻿Atlantis (0, 0)</div>
+        <div class="grid">
+            <div class="stat"><div class="stat-label">Power Level</div><div class="stat-value">0</div></div>
+            <div class="stat"><div class="stat-label">Heroes</div><div class="stat-value">8</div></div>
+            <div class="stat"><div class="stat-label">Colonies</div><div class="stat-value">0</div></div>
+            <div class="stat"><div class="stat-label">Buildings</div><div class="stat-value">74</div></div>
+        </div></div><div id="troops" class="section">
+        <div class="card"><h3>Troops by City</h3>
+        <table><tr><th>City</th><th>Coords</th><th>Workers</th><th>Warriors</th><th>Scouts</th><th>Pikemen</th><th>Swordsmen</th><th>Archers</th><th>Cavalry</th><th>Cataphracts</th><th>Transporters</th><th>Ballista</th><th>BattRams</th><th>Catapults</th><th>Total</th><th>Food/hr</th></tr>
+<tr><td><b>aattack</b></td><td>(3,796)</td><td>113,978,408</td><td>103,585,768</td><td>2,013,950,001</td><td>2,055,981,926</td><td>2,042,499,980</td><td>2,065,874,532</td><td>2,052,525,640</td><td>1,768,515,952</td><td>1,290,090,190</td><td>1,546,188,228</td><td>1,894,185,554</td><td>1,973,664,920</td><td><b>18,921,041,099</b></td><td>4,597,925,942</td></tr>
+<tr><td><b>battack</b></td><td>(796,7)</td><td>148,620</td><td>443,057,548</td><td>2,050,653,682</td><td>2,139,688,156</td><td>1,766,726,062</td><td>1,858,002,390</td><td>2,040,755,770</td><td>2,021,161,088</td><td>1,298,490,190</td><td>1,889,653,284</td><td>1,803,886,208</td><td>1,375,368,820</td><td><b>18,687,591,818</b></td><td>1,429,478,186</td></tr>
+<tr><td><b>Borg</b></td><td>(790,796)</td><td>1,605,400,000</td><td>1,403,600,000</td><td>2,040,500,001</td><td>2,125,201,164</td><td>1,955,822,426</td><td>1,949,737,882</td><td>1,908,874,360</td><td>1,768,515,952</td><td>1,288,490,190</td><td>1,889,785,612</td><td>1,889,785,612</td><td>1,202,590,900</td><td><b>21,028,304,099</b></td><td>3,509,709,618</td></tr>
+<tr><td><b>f</b></td><td>(799,9)</td><td>2,474,997</td><td>375,080,013</td><td>2,033,939,749</td><td>2,132,499,372</td><td>1,842,090,136</td><td>1,910,612,736</td><td>1,951,600,000</td><td>2,021,161,026</td><td>1,288,490,190</td><td>1,889,785,612</td><td>1,717,986,920</td><td>1,408,749,340</td><td><b>18,574,470,091</b></td><td>773,872,232</td></tr>
+<tr><td><b>Falana</b></td><td>(0,799)</td><td>169,763,004</td><td>13,749,512</td><td>2,037,127,513</td><td>2,128,142,064</td><td>2,002,800,000</td><td>1,911,693,607</td><td>1,943,654,644</td><td>2,026,602,080</td><td>1,331,530,117</td><td>2,067,984,304</td><td>1,977,604,958</td><td>1,822,026,220</td><td><b>19,432,678,023</b></td><td>1,671,778,231</td></tr>
+<tr><td><b>Hindu</b></td><td>(8,7)</td><td>134,857,182</td><td>95,709,863</td><td>1,920,201,617</td><td>2,006,775,781</td><td>1,837,925,326</td><td>2,070,472,548</td><td>1,963,468,248</td><td>1,768,515,952</td><td>1,434,830,090</td><td>1,720,986,920</td><td>1,890,785,612</td><td>1,907,345,440</td><td><b>18,751,874,579</b></td><td>-487,300,118</td></tr>
+<tr><td><b>Jerusalem</b></td><td>(300,700)</td><td>16,158,480</td><td>126,977,072</td><td>2,010,239,541</td><td>2,002,621,888</td><td>2,001,476,352</td><td>1,684,134,144</td><td>1,670,265,065</td><td>2,021,161,088</td><td>1,717,986,920</td><td>2,061,584,304</td><td>1,803,886,266</td><td>1,958,505,180</td><td><b>19,074,996,300</b></td><td>208,137,747</td></tr>
+<tr><td><b>LOLA</b></td><td>(2,1)</td><td>16,865,176</td><td>219,280,359</td><td>2,049,772,099</td><td>2,116,500,000</td><td>1,720,342,525</td><td>1,924,000,010</td><td>1,882,347,340</td><td>2,021,161,088</td><td>1,588,720,000</td><td>1,717,986,744</td><td>1,975,684,800</td><td>1,805,120,000</td><td><b>19,037,780,141</b></td><td>-810,975,576</td></tr>
+<tr><td><b>Mojo</b></td><td>(793,796)</td><td>144,572</td><td>23,556</td><td>2,057,080,002</td><td>2,097,635,680</td><td>2,009,250,000</td><td>1,998,620,624</td><td>1,995,373,670</td><td>2,021,161,088</td><td>1,466,954,008</td><td>591,045,150</td><td>1,803,886,266</td><td>1,443,109,080</td><td><b>17,484,283,696</b></td><td>4,369,196,124</td></tr>
+<tr><td><b>﻿Atlantis</b></td><td>(0,0)</td><td>75,937,960</td><td>300,546,496</td><td>2,038,812,800</td><td>1,956,464,128</td><td>2,075,971,968</td><td>1,610,612,736</td><td>1,892,924,291</td><td>1,768,515,968</td><td>1,717,986,944</td><td>1,717,986,944</td><td>1,803,886,208</td><td>1,786,706,432</td><td><b>18,746,352,875</b></td><td>1,375,485,187</td></tr>
+<tr style='background:#667eea;'><td><b>TOTAL</b></td><td></td><td><b>2,135,728,399</b></td><td><b>3,081,610,187</b></td><td><b>20,252,277,005</b></td><td><b>20,761,510,159</b></td><td><b>19,254,904,775</b></td><td><b>18,983,761,209</b></td><td><b>19,301,789,028</b></td><td><b>19,206,471,282</b></td><td><b>14,423,568,839</b></td><td><b>17,092,987,102</b></td><td><b>18,561,578,404</b></td><td><b>16,683,186,332</b></td><td><b>189,739,372,721</b></td><td></td></tr></table></div></div><div id="glitches" class="section">
+        <div class="card"><h3>Glitch Analysis</h3>
+        <table><tr><th>City</th><th>Coords</th><th>Troop</th><th>Count</th><th>Glitches</th><th>Status</th><th>Untrain Command</th></tr><tr><td><b>aattack</b></td><td>(3,796)</td><td>Scouts</td><td>2,013,950,001</td><td>1</td><td><span class="odd">ODD ✓</span></td><td><code>untrain s:940208178</code></td></tr>
+<tr><td><b>aattack</b></td><td>(3,796)</td><td>Pikemen</td><td>2,055,981,926</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain p:624326161</code></td></tr>
+<tr><td><b>aattack</b></td><td>(3,796)</td><td>Swordsmen</td><td>2,042,499,980</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain sw:610844215</code></td></tr>
+<tr><td><b>aattack</b></td><td>(3,796)</td><td>Archers</td><td>2,065,874,532</td><td>3</td><td><span class="odd">ODD ✓</span></td><td><code>untrain a:455261797</code></td></tr>
+<tr><td><b>aattack</b></td><td>(3,796)</td><td>Cavalry</td><td>2,052,525,640</td><td>8</td><td><span class="even">EVEN ✗</span></td><td><code>untrain c:143651281</code></td></tr>
+<tr><td><b>aattack</b></td><td>(3,796)</td><td>Cataphracts</td><td>1,768,515,952</td><td>14</td><td><span class="even">EVEN ✗</span></td><td><code>untrain cata:1</code></td></tr>
+<tr><td><b>aattack</b></td><td>(3,796)</td><td>Transporters</td><td>1,290,090,190</td><td>3</td><td><span class="odd">ODD ✓</span></td><td><code>untrain t:1600001</code></td></tr>
+<tr><td><b>aattack</b></td><td>(3,796)</td><td>Ballista</td><td>1,546,188,228</td><td>18</td><td><span class="even">EVEN ✗</span></td><td><code>untrain b:1</code></td></tr>
+<tr><td><b>aattack</b></td><td>(3,796)</td><td>BattRams</td><td>1,894,185,554</td><td>44</td><td><span class="even">EVEN ✗</span></td><td><code>untrain r:4399943</code></td></tr>
+<tr><td><b>aattack</b></td><td>(3,796)</td><td>Catapults</td><td>1,973,664,920</td><td>114</td><td><span class="even">EVEN ✗</span></td><td><code>untrain cp:15159741</code></td></tr>
+<tr><td><b>battack</b></td><td>(796,7)</td><td>Scouts</td><td>2,050,653,682</td><td>1</td><td><span class="odd">ODD ✓</span></td><td><code>untrain s:976911859</code></td></tr>
+<tr><td><b>battack</b></td><td>(796,7)</td><td>Pikemen</td><td>2,139,688,156</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain p:708032391</code></td></tr>
+<tr><td><b>battack</b></td><td>(796,7)</td><td>Swordsmen</td><td>1,766,726,062</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain sw:335070297</code></td></tr>
+<tr><td><b>battack</b></td><td>(796,7)</td><td>Archers</td><td>1,858,002,390</td><td>3</td><td><span class="odd">ODD ✓</span></td><td><code>untrain a:247389655</code></td></tr>
+<tr><td><b>battack</b></td><td>(796,7)</td><td>Cavalry</td><td>2,040,755,770</td><td>8</td><td><span class="even">EVEN ✗</span></td><td><code>untrain c:131881411</code></td></tr>
+<tr><td><b>battack</b></td><td>(796,7)</td><td>Cataphracts</td><td>2,021,161,088</td><td>16</td><td><span class="even">EVEN ✗</span></td><td><code>untrain cata:1</code></td></tr>
+<tr><td><b>battack</b></td><td>(796,7)</td><td>Transporters</td><td>1,298,490,190</td><td>3</td><td><span class="odd">ODD ✓</span></td><td><code>untrain t:10000001</code></td></tr>
+<tr><td><b>battack</b></td><td>(796,7)</td><td>Ballista</td><td>1,889,653,284</td><td>21</td><td><span class="odd">ODD ✓</span></td><td><code>untrain b:85767019</code></td></tr>
+<tr><td><b>battack</b></td><td>(796,7)</td><td>BattRams</td><td>1,803,886,208</td><td>41</td><td><span class="odd">ODD ✓</span></td><td><code>untrain r:42949616</code></td></tr>
+<tr><td><b>battack</b></td><td>(796,7)</td><td>Catapults</td><td>1,375,368,820</td><td>80</td><td><span class="even">EVEN ✗</span></td><td><code>untrain cp:979221</code></td></tr>
+<tr><td><b>Borg</b></td><td>(790,796)</td><td>Scouts</td><td>2,040,500,001</td><td>1</td><td><span class="odd">ODD ✓</span></td><td><code>untrain s:966758178</code></td></tr>
+<tr><td><b>Borg</b></td><td>(790,796)</td><td>Pikemen</td><td>2,125,201,164</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain p:693545399</code></td></tr>
+<tr><td><b>Borg</b></td><td>(790,796)</td><td>Swordsmen</td><td>1,955,822,426</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain sw:524166661</code></td></tr>
+<tr><td><b>Borg</b></td><td>(790,796)</td><td>Archers</td><td>1,949,737,882</td><td>3</td><td><span class="odd">ODD ✓</span></td><td><code>untrain a:339125147</code></td></tr>
+<tr><td><b>Borg</b></td><td>(790,796)</td><td>Cavalry</td><td>1,908,874,360</td><td>8</td><td><span class="even">EVEN ✗</span></td><td><code>untrain c:1</code></td></tr>
+<tr><td><b>Borg</b></td><td>(790,796)</td><td>Cataphracts</td><td>1,768,515,952</td><td>14</td><td><span class="even">EVEN ✗</span></td><td><code>untrain cata:1</code></td></tr>
+<tr><td><b>Borg</b></td><td>(790,796)</td><td>Transporters</td><td>1,288,490,190</td><td>3</td><td><span class="odd">ODD ✓</span></td><td><code>untrain t:1</code></td></tr>
+<tr><td><b>Borg</b></td><td>(790,796)</td><td>Ballista</td><td>1,889,785,612</td><td>22</td><td><span class="even">EVEN ✗</span></td><td><code>untrain b:1</code></td></tr>
+<tr><td><b>Borg</b></td><td>(790,796)</td><td>BattRams</td><td>1,889,785,612</td><td>44</td><td><span class="even">EVEN ✗</span></td><td><code>untrain r:1</code></td></tr>
+<tr><td><b>Borg</b></td><td>(790,796)</td><td>Catapults</td><td>1,202,590,900</td><td>70</td><td><span class="even">EVEN ✗</span></td><td><code>untrain cp:1</code></td></tr>
+<tr><td><b>f</b></td><td>(799,9)</td><td>Scouts</td><td>2,033,939,749</td><td>1</td><td><span class="odd">ODD ✓</span></td><td><code>untrain s:960197926</code></td></tr>
+<tr><td><b>f</b></td><td>(799,9)</td><td>Pikemen</td><td>2,132,499,372</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain p:700843607</code></td></tr>
+<tr><td><b>f</b></td><td>(799,9)</td><td>Swordsmen</td><td>1,842,090,136</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain sw:410434371</code></td></tr>
+<tr><td><b>f</b></td><td>(799,9)</td><td>Archers</td><td>1,910,612,736</td><td>3</td><td><span class="odd">ODD ✓</span></td><td><code>untrain a:300000001</code></td></tr>
+<tr><td><b>f</b></td><td>(799,9)</td><td>Cavalry</td><td>1,951,600,000</td><td>8</td><td><span class="even">EVEN ✗</span></td><td><code>untrain c:42725641</code></td></tr>
+<tr><td><b>f</b></td><td>(799,9)</td><td>Cataphracts</td><td>2,021,161,026</td><td>15</td><td><span class="odd">ODD ✓</span></td><td><code>untrain cata:126322507</code></td></tr>
+<tr><td><b>f</b></td><td>(799,9)</td><td>Transporters</td><td>1,288,490,190</td><td>3</td><td><span class="odd">ODD ✓</span></td><td><code>untrain t:1</code></td></tr>
+<tr><td><b>f</b></td><td>(799,9)</td><td>Ballista</td><td>1,889,785,612</td><td>22</td><td><span class="even">EVEN ✗</span></td><td><code>untrain b:1</code></td></tr>
+<tr><td><b>f</b></td><td>(799,9)</td><td>BattRams</td><td>1,717,986,920</td><td>40</td><td><span class="even">EVEN ✗</span></td><td><code>untrain r:1</code></td></tr>
+<tr><td><b>f</b></td><td>(799,9)</td><td>Catapults</td><td>1,408,749,340</td><td>82</td><td><span class="even">EVEN ✗</span></td><td><code>untrain cp:1</code></td></tr>
+<tr><td><b>Falana</b></td><td>(0,799)</td><td>Scouts</td><td>2,037,127,513</td><td>1</td><td><span class="odd">ODD ✓</span></td><td><code>untrain s:963385690</code></td></tr>
+<tr><td><b>Falana</b></td><td>(0,799)</td><td>Pikemen</td><td>2,128,142,064</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain p:696486299</code></td></tr>
+<tr><td><b>Falana</b></td><td>(0,799)</td><td>Swordsmen</td><td>2,002,800,000</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain sw:571144235</code></td></tr>
+<tr><td><b>Falana</b></td><td>(0,799)</td><td>Archers</td><td>1,911,693,607</td><td>3</td><td><span class="odd">ODD ✓</span></td><td><code>untrain a:301080872</code></td></tr>
+<tr><td><b>Falana</b></td><td>(0,799)</td><td>Cavalry</td><td>1,943,654,644</td><td>8</td><td><span class="even">EVEN ✗</span></td><td><code>untrain c:34780285</code></td></tr>
+<tr><td><b>Falana</b></td><td>(0,799)</td><td>Cataphracts</td><td>2,026,602,080</td><td>16</td><td><span class="even">EVEN ✗</span></td><td><code>untrain cata:5440993</code></td></tr>
+<tr><td><b>Falana</b></td><td>(0,799)</td><td>Transporters</td><td>1,331,530,117</td><td>3</td><td><span class="odd">ODD ✓</span></td><td><code>untrain t:43039928</code></td></tr>
+<tr><td><b>Falana</b></td><td>(0,799)</td><td>Ballista</td><td>2,067,984,304</td><td>24</td><td><span class="even">EVEN ✗</span></td><td><code>untrain b:6400001</code></td></tr>
+<tr><td><b>Falana</b></td><td>(0,799)</td><td>BattRams</td><td>1,977,604,958</td><td>46</td><td><span class="even">EVEN ✗</span></td><td><code>untrain r:1920001</code></td></tr>
+<tr><td><b>Falana</b></td><td>(0,799)</td><td>Catapults</td><td>1,822,026,220</td><td>106</td><td><span class="even">EVEN ✗</span></td><td><code>untrain cp:960001</code></td></tr>
+<tr><td><b>Hindu</b></td><td>(8,7)</td><td>Scouts</td><td>1,920,201,617</td><td>1</td><td><span class="odd">ODD ✓</span></td><td><code>untrain s:846459794</code></td></tr>
+<tr><td><b>Hindu</b></td><td>(8,7)</td><td>Pikemen</td><td>2,006,775,781</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain p:575120016</code></td></tr>
+<tr><td><b>Hindu</b></td><td>(8,7)</td><td>Swordsmen</td><td>1,837,925,326</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain sw:406269561</code></td></tr>
+<tr><td><b>Hindu</b></td><td>(8,7)</td><td>Archers</td><td>2,070,472,548</td><td>3</td><td><span class="odd">ODD ✓</span></td><td><code>untrain a:459859813</code></td></tr>
+<tr><td><b>Hindu</b></td><td>(8,7)</td><td>Cavalry</td><td>1,963,468,248</td><td>8</td><td><span class="even">EVEN ✗</span></td><td><code>untrain c:54593889</code></td></tr>
+<tr><td><b>Hindu</b></td><td>(8,7)</td><td>Cataphracts</td><td>1,768,515,952</td><td>14</td><td><span class="even">EVEN ✗</span></td><td><code>untrain cata:1</code></td></tr>
+<tr><td><b>Hindu</b></td><td>(8,7)</td><td>Transporters</td><td>1,434,830,090</td><td>3</td><td><span class="odd">ODD ✓</span></td><td><code>untrain t:146339901</code></td></tr>
+<tr><td><b>Hindu</b></td><td>(8,7)</td><td>Ballista</td><td>1,720,986,920</td><td>20</td><td><span class="even">EVEN ✗</span></td><td><code>untrain b:3000001</code></td></tr>
+<tr><td><b>Hindu</b></td><td>(8,7)</td><td>BattRams</td><td>1,890,785,612</td><td>44</td><td><span class="even">EVEN ✗</span></td><td><code>untrain r:1000001</code></td></tr>
+<tr><td><b>Hindu</b></td><td>(8,7)</td><td>Catapults</td><td>1,907,345,440</td><td>111</td><td><span class="odd">ODD ✓</span></td><td><code>untrain cp:379871</code></td></tr>
+<tr><td><b>Jerusalem</b></td><td>(300,700)</td><td>Scouts</td><td>2,010,239,541</td><td>1</td><td><span class="odd">ODD ✓</span></td><td><code>untrain s:936497718</code></td></tr>
+<tr><td><b>Jerusalem</b></td><td>(300,700)</td><td>Pikemen</td><td>2,002,621,888</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain p:570966123</code></td></tr>
+<tr><td><b>Jerusalem</b></td><td>(300,700)</td><td>Swordsmen</td><td>2,001,476,352</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain sw:569820587</code></td></tr>
+<tr><td><b>Jerusalem</b></td><td>(300,700)</td><td>Archers</td><td>1,684,134,144</td><td>3</td><td><span class="odd">ODD ✓</span></td><td><code>untrain a:73521409</code></td></tr>
+<tr><td><b>Jerusalem</b></td><td>(300,700)</td><td>Cavalry</td><td>1,670,265,065</td><td>7</td><td><span class="odd">ODD ✓</span></td><td><code>untrain c:1</code></td></tr>
+<tr><td><b>Jerusalem</b></td><td>(300,700)</td><td>Cataphracts</td><td>2,021,161,088</td><td>16</td><td><span class="even">EVEN ✗</span></td><td><code>untrain cata:1</code></td></tr>
+<tr><td><b>Jerusalem</b></td><td>(300,700)</td><td>Transporters</td><td>1,717,986,920</td><td>4</td><td><span class="even">EVEN ✗</span></td><td><code>untrain t:1</code></td></tr>
+<tr><td><b>Jerusalem</b></td><td>(300,700)</td><td>Ballista</td><td>2,061,584,304</td><td>24</td><td><span class="even">EVEN ✗</span></td><td><code>untrain b:1</code></td></tr>
+<tr><td><b>Jerusalem</b></td><td>(300,700)</td><td>BattRams</td><td>1,803,886,266</td><td>42</td><td><span class="even">EVEN ✗</span></td><td><code>untrain r:1</code></td></tr>
+<tr><td><b>Jerusalem</b></td><td>(300,700)</td><td>Catapults</td><td>1,958,505,180</td><td>114</td><td><span class="even">EVEN ✗</span></td><td><code>untrain cp:1</code></td></tr>
+<tr><td><b>LOLA</b></td><td>(2,1)</td><td>Scouts</td><td>2,049,772,099</td><td>1</td><td><span class="odd">ODD ✓</span></td><td><code>untrain s:976030276</code></td></tr>
+<tr><td><b>LOLA</b></td><td>(2,1)</td><td>Pikemen</td><td>2,116,500,000</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain p:684844235</code></td></tr>
+<tr><td><b>LOLA</b></td><td>(2,1)</td><td>Swordsmen</td><td>1,720,342,525</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain sw:288686760</code></td></tr>
+<tr><td><b>LOLA</b></td><td>(2,1)</td><td>Archers</td><td>1,924,000,010</td><td>3</td><td><span class="odd">ODD ✓</span></td><td><code>untrain a:313387275</code></td></tr>
+<tr><td><b>LOLA</b></td><td>(2,1)</td><td>Cavalry</td><td>1,882,347,340</td><td>7</td><td><span class="odd">ODD ✓</span></td><td><code>untrain c:212082276</code></td></tr>
+<tr><td><b>LOLA</b></td><td>(2,1)</td><td>Cataphracts</td><td>2,021,161,088</td><td>16</td><td><span class="even">EVEN ✗</span></td><td><code>untrain cata:1</code></td></tr>
+<tr><td><b>LOLA</b></td><td>(2,1)</td><td>Transporters</td><td>1,588,720,000</td><td>3</td><td><span class="odd">ODD ✓</span></td><td><code>untrain t:300229811</code></td></tr>
+<tr><td><b>LOLA</b></td><td>(2,1)</td><td>Ballista</td><td>1,717,986,744</td><td>19</td><td><span class="odd">ODD ✓</span></td><td><code>untrain b:85899171</code></td></tr>
+<tr><td><b>LOLA</b></td><td>(2,1)</td><td>BattRams</td><td>1,975,684,800</td><td>45</td><td><span class="odd">ODD ✓</span></td><td><code>untrain r:42949516</code></td></tr>
+<tr><td><b>LOLA</b></td><td>(2,1)</td><td>Catapults</td><td>1,805,120,000</td><td>105</td><td><span class="odd">ODD ✓</span></td><td><code>untrain cp:1233651</code></td></tr>
+<tr><td><b>Mojo</b></td><td>(793,796)</td><td>Scouts</td><td>2,057,080,002</td><td>1</td><td><span class="odd">ODD ✓</span></td><td><code>untrain s:983338179</code></td></tr>
+<tr><td><b>Mojo</b></td><td>(793,796)</td><td>Pikemen</td><td>2,097,635,680</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain p:665979915</code></td></tr>
+<tr><td><b>Mojo</b></td><td>(793,796)</td><td>Swordsmen</td><td>2,009,250,000</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain sw:577594235</code></td></tr>
+<tr><td><b>Mojo</b></td><td>(793,796)</td><td>Archers</td><td>1,998,620,624</td><td>3</td><td><span class="odd">ODD ✓</span></td><td><code>untrain a:388007889</code></td></tr>
+<tr><td><b>Mojo</b></td><td>(793,796)</td><td>Cavalry</td><td>1,995,373,670</td><td>8</td><td><span class="even">EVEN ✗</span></td><td><code>untrain c:86499311</code></td></tr>
+<tr><td><b>Mojo</b></td><td>(793,796)</td><td>Cataphracts</td><td>2,021,161,088</td><td>16</td><td><span class="even">EVEN ✗</span></td><td><code>untrain cata:1</code></td></tr>
+<tr><td><b>Mojo</b></td><td>(793,796)</td><td>Transporters</td><td>1,466,954,008</td><td>3</td><td><span class="odd">ODD ✓</span></td><td><code>untrain t:178463819</code></td></tr>
+<tr><td><b>Mojo</b></td><td>(793,796)</td><td>Ballista</td><td>591,045,150</td><td>6</td><td><span class="even">EVEN ✗</span></td><td><code>untrain b:75649075</code></td></tr>
+<tr><td><b>Mojo</b></td><td>(793,796)</td><td>BattRams</td><td>1,803,886,266</td><td>42</td><td><span class="even">EVEN ✗</span></td><td><code>untrain r:1</code></td></tr>
+<tr><td><b>Mojo</b></td><td>(793,796)</td><td>Catapults</td><td>1,443,109,080</td><td>84</td><td><span class="even">EVEN ✗</span></td><td><code>untrain cp:1</code></td></tr>
+<tr><td><b>﻿Atlantis</b></td><td>(0,0)</td><td>Scouts</td><td>2,038,812,800</td><td>1</td><td><span class="odd">ODD ✓</span></td><td><code>untrain s:965070977</code></td></tr>
+<tr><td><b>﻿Atlantis</b></td><td>(0,0)</td><td>Pikemen</td><td>1,956,464,128</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain p:524808363</code></td></tr>
+<tr><td><b>﻿Atlantis</b></td><td>(0,0)</td><td>Swordsmen</td><td>2,075,971,968</td><td>2</td><td><span class="even">EVEN ✗</span></td><td><code>untrain sw:644316203</code></td></tr>
+<tr><td><b>﻿Atlantis</b></td><td>(0,0)</td><td>Archers</td><td>1,610,612,736</td><td>3</td><td><span class="odd">ODD ✓</span></td><td><code>untrain a:1</code></td></tr>
+<tr><td><b>﻿Atlantis</b></td><td>(0,0)</td><td>Cavalry</td><td>1,892,924,291</td><td>7</td><td><span class="odd">ODD ✓</span></td><td><code>untrain c:222659227</code></td></tr>
+<tr><td><b>﻿Atlantis</b></td><td>(0,0)</td><td>Cataphracts</td><td>1,768,515,968</td><td>14</td><td><span class="even">EVEN ✗</span></td><td><code>untrain cata:17</code></td></tr>
+<tr><td><b>﻿Atlantis</b></td><td>(0,0)</td><td>Transporters</td><td>1,717,986,944</td><td>4</td><td><span class="even">EVEN ✗</span></td><td><code>untrain t:25</code></td></tr>
+<tr><td><b>﻿Atlantis</b></td><td>(0,0)</td><td>Ballista</td><td>1,717,986,944</td><td>20</td><td><span class="even">EVEN ✗</span></td><td><code>untrain b:25</code></td></tr>
+<tr><td><b>﻿Atlantis</b></td><td>(0,0)</td><td>BattRams</td><td>1,803,886,208</td><td>41</td><td><span class="odd">ODD ✓</span></td><td><code>untrain r:42949616</code></td></tr>
+<tr><td><b>﻿Atlantis</b></td><td>(0,0)</td><td>Catapults</td><td>1,786,706,432</td><td>103</td><td><span class="odd">ODD ✓</span></td><td><code>untrain cp:17179823</code></td></tr>
+</table></div></div><div id="heroes" class="section">
+        <input type="text" class="search" placeholder="Search heroes..." onkeyup="filterTable(this, 'heroes-table')">
+        <div class="card"><h3>All Heroes (98)</h3>
+        <table id="heroes-table"><tr><th>City</th><th>Hero Name</th><th>Level</th><th>Politics</th><th>Attack</th><th>Intel</th><th>Loyalty</th></tr><tr><td>aattack</td><td><b>Superpoli</b></td><td>100</td><td>569</td><td>20</td><td>14</td><td>100</td></tr>
+<tr><td>aattack</td><td><b>Cynthia</b></td><td>55</td><td>0</td><td>172</td><td>42</td><td>100</td></tr>
+<tr><td>aattack</td><td><b>Elroy</b></td><td>67</td><td>0</td><td>18</td><td>173</td><td>100</td></tr>
+<tr><td>aattack</td><td><b>Maureen</b></td><td>68</td><td>0</td><td>173</td><td>43</td><td>100</td></tr>
+<tr><td>aattack</td><td><b>Martin</b></td><td>66</td><td>0</td><td>18</td><td>50</td><td>100</td></tr>
+<tr><td>aattack</td><td><b>Bblythe</b></td><td>65</td><td>0</td><td>20</td><td>60</td><td>100</td></tr>
+<tr><td>aattack</td><td><b>Stanley</b></td><td>64</td><td>0</td><td>16</td><td>19</td><td>100</td></tr>
+<tr><td>aattack</td><td><b>Amanda</b></td><td>69</td><td>0</td><td>32</td><td>48</td><td>100</td></tr>
+<tr><td>aattack</td><td><b>June</b></td><td>55</td><td>0</td><td>30</td><td>196</td><td>100</td></tr>
+<tr><td>aattack</td><td><b>Lester</b></td><td>64</td><td>0</td><td>27</td><td>191</td><td>100</td></tr>
+<tr><td>battack</td><td><b>Rex</b></td><td>100</td><td>569</td><td>16</td><td>50</td><td>100</td></tr>
+<tr><td>battack</td><td><b>Janice</b></td><td>100</td><td>0</td><td>169</td><td>58</td><td>100</td></tr>
+<tr><td>battack</td><td><b>Kevin</b></td><td>69</td><td>0</td><td>30</td><td>192</td><td>100</td></tr>
+<tr><td>battack</td><td><b>Camille</b></td><td>69</td><td>0</td><td>18</td><td>30</td><td>100</td></tr>
+<tr><td>battack</td><td><b>Nicole</b></td><td>69</td><td>0</td><td>21</td><td>40</td><td>100</td></tr>
+<tr><td>battack</td><td><b>Howar</b></td><td>62</td><td>0</td><td>40</td><td>29</td><td>100</td></tr>
+<tr><td>battack</td><td><b>Elvis</b></td><td>58</td><td>0</td><td>17</td><td>19</td><td>100</td></tr>
+<tr><td>battack</td><td><b>Janice</b></td><td>51</td><td>0</td><td>12</td><td>20</td><td>100</td></tr>
+<tr><td>battack</td><td><b>Doris</b></td><td>65</td><td>0</td><td>214</td><td>12</td><td>100</td></tr>
+<tr><td>battack</td><td><b>Cathy</b></td><td>58</td><td>0</td><td>196</td><td>43</td><td>100</td></tr>
+<tr><td>Borg</td><td><b>Hippocrates</b></td><td>150</td><td>569</td><td>48</td><td>96</td><td>100</td></tr>
+<tr><td>Borg</td><td><b>108038560</b></td><td>100</td><td>0</td><td>241</td><td>20</td><td>100</td></tr>
+<tr><td>Borg</td><td><b>Quincy</b></td><td>100</td><td>0</td><td>221</td><td>68</td><td>100</td></tr>
+<tr><td>Borg</td><td><b>Elma</b></td><td>100</td><td>0</td><td>99</td><td>32</td><td>100</td></tr>
+<tr><td>Borg</td><td><b>Angelo</b></td><td>16</td><td>0</td><td>73</td><td>32</td><td>100</td></tr>
+<tr><td>Borg</td><td><b>Edith</b></td><td>3</td><td>0</td><td>58</td><td>25</td><td>100</td></tr>
+<tr><td>Borg</td><td><b>Tobias</b></td><td>3</td><td>0</td><td>67</td><td>58</td><td>100</td></tr>
+<tr><td>Borg</td><td><b>Porter</b></td><td>8</td><td>0</td><td>64</td><td>25</td><td>100</td></tr>
+<tr><td>Borg</td><td><b>Winston</b></td><td>6</td><td>0</td><td>62</td><td>32</td><td>100</td></tr>
+<tr><td>Borg</td><td><b>Louis</b></td><td>2</td><td>0</td><td>65</td><td>37</td><td>90</td></tr>
+<tr><td>f</td><td><b>John of England</b></td><td>150</td><td>569</td><td>23</td><td>62</td><td>100</td></tr>
+<tr><td>f</td><td><b>Marjorie</b></td><td>52</td><td>0</td><td>154</td><td>28</td><td>100</td></tr>
+<tr><td>f</td><td><b>Elizabeth</b></td><td>64</td><td>0</td><td>26</td><td>38</td><td>100</td></tr>
+<tr><td>f</td><td><b>Henry</b></td><td>56</td><td>0</td><td>32</td><td>156</td><td>100</td></tr>
+<tr><td>f</td><td><b>Samantha</b></td><td>58</td><td>0</td><td>41</td><td>20</td><td>100</td></tr>
+<tr><td>f</td><td><b>Rod</b></td><td>57</td><td>0</td><td>52</td><td>167</td><td>100</td></tr>
+<tr><td>f</td><td><b>Oswald</b></td><td>61</td><td>0</td><td>23</td><td>195</td><td>100</td></tr>
+<tr><td>f</td><td><b>Morgan</b></td><td>58</td><td>0</td><td>37</td><td>182</td><td>100</td></tr>
+<tr><td>f</td><td><b>Ira</b></td><td>60</td><td>0</td><td>32</td><td>160</td><td>100</td></tr>
+<tr><td>f</td><td><b>Marcia</b></td><td>69</td><td>0</td><td>45</td><td>18</td><td>100</td></tr>
+<tr><td>Falana</td><td><b>Thucidides</b></td><td>150</td><td>0</td><td>190</td><td>85</td><td>100</td></tr>
+<tr><td>Falana</td><td><b>Cuhtuhlatah</b></td><td>150</td><td>0</td><td>230</td><td>55</td><td>100</td></tr>
+<tr><td>Falana</td><td><b>St. Bruno of Cologne</b></td><td>150</td><td>0</td><td>193</td><td>84</td><td>100</td></tr>
+<tr><td>Falana</td><td><b>Crazypoli</b></td><td>120</td><td>569</td><td>83</td><td>52</td><td>100</td></tr>
+<tr><td>Falana</td><td><b>Maxine</b></td><td>64</td><td>0</td><td>212</td><td>48</td><td>100</td></tr>
+<tr><td>Falana</td><td><b>Yvonne</b></td><td>56</td><td>0</td><td>39</td><td>52</td><td>100</td></tr>
+<tr><td>Falana</td><td><b>Dempsey</b></td><td>68</td><td>0</td><td>169</td><td>35</td><td>100</td></tr>
+<tr><td>Falana</td><td><b>Verne</b></td><td>62</td><td>0</td><td>36</td><td>164</td><td>100</td></tr>
+<tr><td>Falana</td><td><b>Elton</b></td><td>4</td><td>0</td><td>69</td><td>28</td><td>100</td></tr>
+<tr><td>Falana</td><td><b>Parker</b></td><td>3</td><td>0</td><td>68</td><td>36</td><td>100</td></tr>
+<tr><td>Hindu</td><td><b>CrazyRab</b></td><td>120</td><td>569</td><td>358</td><td>102</td><td>100</td></tr>
+<tr><td>Hindu</td><td><b>Tim</b></td><td>68</td><td>0</td><td>22</td><td>206</td><td>100</td></tr>
+<tr><td>Hindu</td><td><b>Coral</b></td><td>63</td><td>0</td><td>27</td><td>55</td><td>100</td></tr>
+<tr><td>Hindu</td><td><b>Nancy</b></td><td>68</td><td>0</td><td>15</td><td>189</td><td>100</td></tr>
+<tr><td>Hindu</td><td><b>Christian</b></td><td>57</td><td>0</td><td>60</td><td>173</td><td>100</td></tr>
+<tr><td>Hindu</td><td><b>Mabel</b></td><td>60</td><td>0</td><td>16</td><td>183</td><td>100</td></tr>
+<tr><td>Hindu</td><td><b>Agnes</b></td><td>61</td><td>0</td><td>162</td><td>20</td><td>100</td></tr>
+<tr><td>Hindu</td><td><b>Tab</b></td><td>53</td><td>0</td><td>169</td><td>37</td><td>100</td></tr>
+<tr><td>Hindu</td><td><b>Constance</b></td><td>67</td><td>0</td><td>30</td><td>188</td><td>100</td></tr>
+<tr><td>Hindu</td><td><b>Jodie</b></td><td>55</td><td>0</td><td>36</td><td>40</td><td>100</td></tr>
+<tr><td>Jerusalem</td><td><b>Philaenis of Samos</b></td><td>150</td><td>0</td><td>188</td><td>82</td><td>100</td></tr>
+<tr><td>Jerusalem</td><td><b>Rudolph of France</b></td><td>150</td><td>569</td><td>33</td><td>62</td><td>100</td></tr>
+<tr><td>Jerusalem</td><td><b>St. Ignatius Loyola</b></td><td>150</td><td>0</td><td>190</td><td>88</td><td>95</td></tr>
+<tr><td>Jerusalem</td><td><b>Al-Shahrazuri</b></td><td>150</td><td>0</td><td>206</td><td>87</td><td>95</td></tr>
+<tr><td>Jerusalem</td><td><b>CrazyLT</b></td><td>120</td><td>0</td><td>319</td><td>74</td><td>100</td></tr>
+<tr><td>Jerusalem</td><td><b>CrazyLT</b></td><td>120</td><td>0</td><td>329</td><td>82</td><td>100</td></tr>
+<tr><td>Jerusalem</td><td><b>CrazyLT</b></td><td>120</td><td>0</td><td>313</td><td>56</td><td>100</td></tr>
+<tr><td>Jerusalem</td><td><b>CrazyLT</b></td><td>120</td><td>0</td><td>317</td><td>81</td><td>100</td></tr>
+<tr><td>Jerusalem</td><td><b>CrazyLT</b></td><td>120</td><td>0</td><td>351</td><td>100</td><td>100</td></tr>
+<tr><td>Jerusalem</td><td><b>Borg</b></td><td>120</td><td>0</td><td>329</td><td>110</td><td>100</td></tr>
+<tr><td>LOLA</td><td><b>CrazyBudda</b></td><td>120</td><td>0</td><td>323</td><td>73</td><td>100</td></tr>
+<tr><td>LOLA</td><td><b>Crazypol</b></td><td>120</td><td>569</td><td>105</td><td>63</td><td>100</td></tr>
+<tr><td>LOLA</td><td><b>CrazyLT</b></td><td>120</td><td>0</td><td>348</td><td>106</td><td>100</td></tr>
+<tr><td>LOLA</td><td><b>FoShizzle</b></td><td>120</td><td>0</td><td>348</td><td>100</td><td>100</td></tr>
+<tr><td>LOLA</td><td><b>CrazyTurk</b></td><td>120</td><td>0</td><td>333</td><td>120</td><td>100</td></tr>
+<tr><td>LOLA</td><td><b>Brady</b></td><td>100</td><td>0</td><td>37</td><td>189</td><td>100</td></tr>
+<tr><td>LOLA</td><td><b>Athena</b></td><td>100</td><td>0</td><td>25</td><td>8</td><td>100</td></tr>
+<tr><td>LOLA</td><td><b>Webb</b></td><td>94</td><td>0</td><td>23</td><td>13</td><td>100</td></tr>
+<tr><td>LOLA</td><td><b>Dinah</b></td><td>51</td><td>0</td><td>151</td><td>15</td><td>100</td></tr>
+<tr><td>LOLA</td><td><b>Solomon</b></td><td>54</td><td>0</td><td>162</td><td>46</td><td>100</td></tr>
+<tr><td>Mojo</td><td><b>Zazz</b></td><td>120</td><td>0</td><td>115</td><td>83</td><td>100</td></tr>
+<tr><td>Mojo</td><td><b>CrazyLT</b></td><td>120</td><td>569</td><td>112</td><td>100</td><td>100</td></tr>
+<tr><td>Mojo</td><td><b>Saxon</b></td><td>59</td><td>0</td><td>49</td><td>196</td><td>100</td></tr>
+<tr><td>Mojo</td><td><b>Fabian</b></td><td>56</td><td>0</td><td>48</td><td>51</td><td>100</td></tr>
+<tr><td>Mojo</td><td><b>Blithe</b></td><td>61</td><td>0</td><td>18</td><td>176</td><td>100</td></tr>
+<tr><td>Mojo</td><td><b>Erica</b></td><td>68</td><td>0</td><td>188</td><td>23</td><td>100</td></tr>
+<tr><td>Mojo</td><td><b>Vita</b></td><td>61</td><td>0</td><td>31</td><td>196</td><td>100</td></tr>
+<tr><td>Mojo</td><td><b>Rosemary</b></td><td>61</td><td>0</td><td>29</td><td>23</td><td>100</td></tr>
+<tr><td>Mojo</td><td><b>Alma</b></td><td>65</td><td>0</td><td>50</td><td>35</td><td>100</td></tr>
+<tr><td>Mojo</td><td><b>Morton</b></td><td>51</td><td>0</td><td>43</td><td>33</td><td>100</td></tr>
+<tr><td>﻿Atlantis</td><td><b>Queen</b></td><td>100</td><td>0</td><td>184</td><td>85</td><td>1</td></tr>
+<tr><td>﻿Atlantis</td><td><b>Leif Ericson</b></td><td>150</td><td>0</td><td>210</td><td>80</td><td>100</td></tr>
+<tr><td>﻿Atlantis</td><td><b>Nancy Ward</b></td><td>150</td><td>569</td><td>55</td><td>60</td><td>100</td></tr>
+<tr><td>﻿Atlantis</td><td><b>Henry IV</b></td><td>150</td><td>0</td><td>232</td><td>104</td><td>100</td></tr>
+<tr><td>﻿Atlantis</td><td><b>Tess</b></td><td>100</td><td>0</td><td>229</td><td>49</td><td>100</td></tr>
+<tr><td>﻿Atlantis</td><td><b>Ansel</b></td><td>100</td><td>0</td><td>50</td><td>222</td><td>100</td></tr>
+<tr><td>﻿Atlantis</td><td><b>Armstrong</b></td><td>100</td><td>0</td><td>42</td><td>231</td><td>100</td></tr>
+<tr><td>﻿Atlantis</td><td><b>Murphy</b></td><td>100</td><td>0</td><td>210</td><td>5</td><td>100</td></tr>
+</table></div></div><div id="items" class="section">
+        <input type="text" class="search" placeholder="Search items..." onkeyup="filterTable(this, 'items-table')">
+        <div class="card"><h3>Inventory (196 items)</h3>
+        <table id="items-table"><tr><th>#</th><th>Item ID</th><th>Count</th><th>Category</th></tr><tr><td>1</td><td><code>consume.1.a</code></td><td>296,540</td><td>Consumable</td></tr>
+<tr><td>2</td><td><code>enhanced.star.1</code></td><td>159,465</td><td>Other</td></tr>
+<tr><td>3</td><td><code>consume.move.1</code></td><td>119,021</td><td>Consumable</td></tr>
+<tr><td>4</td><td><code>player.queue.building</code></td><td>95,646</td><td>Other</td></tr>
+<tr><td>5</td><td><code>equipment.tech.upgrade.book1</code></td><td>81,238</td><td>Equipment</td></tr>
+<tr><td>6</td><td><code>consume.blueprint.1</code></td><td>79,458</td><td>Consumable</td></tr>
+<tr><td>7</td><td><code>hero.loyalty.5</code></td><td>68,080</td><td>Hero</td></tr>
+<tr><td>8</td><td><code>enhanced.star.2</code></td><td>65,150</td><td>Other</td></tr>
+<tr><td>9</td><td><code>hero.loyalty.6</code></td><td>64,307</td><td>Hero</td></tr>
+<tr><td>10</td><td><code>hero.loyalty.7</code></td><td>55,049</td><td>Hero</td></tr>
+<tr><td>11</td><td><code>hero.reset.1</code></td><td>45,529</td><td>Hero</td></tr>
+<tr><td>12</td><td><code>consume.refreshtavern.1</code></td><td>43,569</td><td>Consumable</td></tr>
+<tr><td>13</td><td><code>equipment.tech.upgrade.2</code></td><td>29,421</td><td>Equipment</td></tr>
+<tr><td>14</td><td><code>equipment.tech.upgrade.3</code></td><td>29,274</td><td>Equipment</td></tr>
+<tr><td>15</td><td><code>equipment.tech.upgrade.4</code></td><td>28,867</td><td>Equipment</td></tr>
+<tr><td>16</td><td><code>equipment.tech.upgrade.1</code></td><td>28,756</td><td>Equipment</td></tr>
+<tr><td>17</td><td><code>equipment.tech.upgrade.5</code></td><td>28,446</td><td>Equipment</td></tr>
+<tr><td>18</td><td><code>consume.2.a</code></td><td>15,726</td><td>Consumable</td></tr>
+<tr><td>19</td><td><code>player.box.hero.a</code></td><td>14,861</td><td>Chest</td></tr>
+<tr><td>20</td><td><code>player.troop.1.b</code></td><td>10,649</td><td>Other</td></tr>
+<tr><td>21</td><td><code>player.troop.1.a</code></td><td>10,631</td><td>Other</td></tr>
+<tr><td>22</td><td><code>player.attackinc.1.b</code></td><td>10,491</td><td>Other</td></tr>
+<tr><td>23</td><td><code>hero.loyalty.3</code></td><td>8,210</td><td>Hero</td></tr>
+<tr><td>24</td><td><code>hero.loyalty.4</code></td><td>7,885</td><td>Hero</td></tr>
+<tr><td>25</td><td><code>hero.loyalty.9</code></td><td>7,399</td><td>Hero</td></tr>
+<tr><td>26</td><td><code>consume.2.b.1</code></td><td>7,053</td><td>Consumable</td></tr>
+<tr><td>27</td><td><code>hero.loyalty.8</code></td><td>6,209</td><td>Hero</td></tr>
+<tr><td>28</td><td><code>player.trick.pzyy</code></td><td>5,882</td><td>Stratagem</td></tr>
+<tr><td>29</td><td><code>player.trick.kcj</code></td><td>5,857</td><td>Stratagem</td></tr>
+<tr><td>30</td><td><code>player.trick.smmf</code></td><td>5,827</td><td>Stratagem</td></tr>
+<tr><td>31</td><td><code>player.trick.adcc</code></td><td>5,822</td><td>Stratagem</td></tr>
+<tr><td>32</td><td><code>player.trick.jbqy</code></td><td>5,792</td><td>Stratagem</td></tr>
+<tr><td>33</td><td><code>player.trick.xzxs</code></td><td>5,791</td><td>Stratagem</td></tr>
+<tr><td>34</td><td><code>player.resinc.3</code></td><td>5,786</td><td>Resource</td></tr>
+<tr><td>35</td><td><code>player.experience.1.a</code></td><td>5,758</td><td>Other</td></tr>
+<tr><td>36</td><td><code>player.resinc.4</code></td><td>5,754</td><td>Resource</td></tr>
+<tr><td>37</td><td><code>player.trick.cmjb</code></td><td>5,737</td><td>Stratagem</td></tr>
+<tr><td>38</td><td><code>player.resinc.1</code></td><td>5,608</td><td>Resource</td></tr>
+<tr><td>39</td><td><code>player.resinc.2</code></td><td>5,604</td><td>Resource</td></tr>
+<tr><td>40</td><td><code>player.trick.bxez</code></td><td>5,563</td><td>Stratagem</td></tr>
+<tr><td>41</td><td><code>player.trick.wwjz</code></td><td>5,374</td><td>Stratagem</td></tr>
+<tr><td>42</td><td><code>consume.transaction.1</code></td><td>5,113</td><td>Consumable</td></tr>
+<tr><td>43</td><td><code>consume.2.b</code></td><td>5,005</td><td>Consumable</td></tr>
+<tr><td>44</td><td><code>player.heart.1.a</code></td><td>4,775</td><td>Other</td></tr>
+<tr><td>45</td><td><code>player.trick.yqxg</code></td><td>4,774</td><td>Stratagem</td></tr>
+<tr><td>46</td><td><code>player.experience.1.b</code></td><td>4,701</td><td>Other</td></tr>
+<tr><td>47</td><td><code>player.destroy.1.a</code></td><td>4,610</td><td>Other</td></tr>
+<tr><td>48</td><td><code>player.experience.1.c</code></td><td>4,590</td><td>Other</td></tr>
+<tr><td>49</td><td><code>player.fort.1.c</code></td><td>4,511</td><td>Other</td></tr>
+<tr><td>50</td><td><code>player.gold.1.b</code></td><td>3,485</td><td>Other</td></tr>
+<tr><td>51</td><td><code>player.box.equipment.tech.4</code></td><td>3,030</td><td>Chest</td></tr>
+<tr><td>52</td><td><code>player.box.equipment.tech.2</code></td><td>2,975</td><td>Chest</td></tr>
+<tr><td>53</td><td><code>player.box.equipment.tech.1</code></td><td>2,810</td><td>Chest</td></tr>
+<tr><td>54</td><td><code>player.box.equipment.tech.5</code></td><td>2,714</td><td>Chest</td></tr>
+<tr><td>55</td><td><code>player.box.equipment.tech.3</code></td><td>2,665</td><td>Chest</td></tr>
+<tr><td>56</td><td><code>player.defendinc.1</code></td><td>2,651</td><td>Other</td></tr>
+<tr><td>57</td><td><code>consume.changeflag.1</code></td><td>2,588</td><td>Consumable</td></tr>
+<tr><td>58</td><td><code>player.attackinc.1</code></td><td>2,571</td><td>Other</td></tr>
+<tr><td>59</td><td><code>player.trick.gmdg</code></td><td>2,272</td><td>Stratagem</td></tr>
+<tr><td>60</td><td><code>player.resinc.1.b</code></td><td>2,230</td><td>Resource</td></tr>
+<tr><td>61</td><td><code>player.trick.bmjs</code></td><td>2,225</td><td>Stratagem</td></tr>
+<tr><td>62</td><td><code>player.resinc.3.b</code></td><td>2,201</td><td>Resource</td></tr>
+<tr><td>63</td><td><code>instant.handover</code></td><td>2,184</td><td>Other</td></tr>
+<tr><td>64</td><td><code>player.box.troop.b</code></td><td>2,177</td><td>Chest</td></tr>
+<tr><td>65</td><td><code>player.box.special.2</code></td><td>2,172</td><td>Chest</td></tr>
+<tr><td>66</td><td><code>player.resinc.2.b</code></td><td>2,168</td><td>Resource</td></tr>
+<tr><td>67</td><td><code>player.gold.1.a</code></td><td>2,148</td><td>Other</td></tr>
+<tr><td>68</td><td><code>player.resinc.4.b</code></td><td>2,131</td><td>Resource</td></tr>
+<tr><td>69</td><td><code>consume.2.c.1</code></td><td>2,041</td><td>Consumable</td></tr>
+<tr><td>70</td><td><code>player.relive.1</code></td><td>1,741</td><td>Other</td></tr>
+<tr><td>71</td><td><code>player.box.special.3</code></td><td>1,449</td><td>Chest</td></tr>
+<tr><td>72</td><td><code>player.peace.1</code></td><td>1,380</td><td>Other</td></tr>
+<tr><td>73</td><td><code>player.trick.jctq</code></td><td>1,310</td><td>Stratagem</td></tr>
+<tr><td>74</td><td><code>hero.item.Tea</code></td><td>1,308</td><td>Hero</td></tr>
+<tr><td>75</td><td><code>player.box.hero.b</code></td><td>1,282</td><td>Chest</td></tr>
+<tr><td>76</td><td><code>player.pop.1.a</code></td><td>1,282</td><td>Other</td></tr>
+<tr><td>77</td><td><code>player.trick.ydsr</code></td><td>1,276</td><td>Stratagem</td></tr>
+<tr><td>78</td><td><code>hero.item.Panax_ginseng</code></td><td>1,244</td><td>Hero</td></tr>
+<tr><td>79</td><td><code>player.trick.mrj</code></td><td>1,202</td><td>Stratagem</td></tr>
+<tr><td>80</td><td><code>player.trick.fslc</code></td><td>1,195</td><td>Stratagem</td></tr>
+<tr><td>81</td><td><code>player.trick.chdj</code></td><td>1,193</td><td>Stratagem</td></tr>
+<tr><td>82</td><td><code>player.trick.yyhz</code></td><td>1,141</td><td>Stratagem</td></tr>
+<tr><td>83</td><td><code>player.trick.zsmj</code></td><td>1,129</td><td>Stratagem</td></tr>
+<tr><td>84</td><td><code>hero.loyalty.2</code></td><td>1,124</td><td>Hero</td></tr>
+<tr><td>85</td><td><code>consume.hegemony.1</code></td><td>1,120</td><td>Consumable</td></tr>
+<tr><td>86</td><td><code>player.trick.tblj</code></td><td>1,114</td><td>Stratagem</td></tr>
+<tr><td>87</td><td><code>hero.item.Essential_Oil</code></td><td>1,104</td><td>Hero</td></tr>
+<tr><td>88</td><td><code>hero.loyalty.1</code></td><td>1,079</td><td>Hero</td></tr>
+<tr><td>89</td><td><code>hero.item.Lugui_Wine</code></td><td>1,042</td><td>Hero</td></tr>
+<tr><td>90</td><td><code>player.trick.lywh</code></td><td>943</td><td>Stratagem</td></tr>
+<tr><td>91</td><td><code>player.more.castle.1.a</code></td><td>852</td><td>Other</td></tr>
+<tr><td>92</td><td><code>player.box.troop.c</code></td><td>829</td><td>Chest</td></tr>
+<tr><td>93</td><td><code>player.box.gambling.3</code></td><td>821</td><td>Chest</td></tr>
+<tr><td>94</td><td><code>player.defendinc.1.b</code></td><td>684</td><td>Other</td></tr>
+<tr><td>95</td><td><code>player.name.1.a</code></td><td>588</td><td>Other</td></tr>
+<tr><td>96</td><td><code>player.box.present.money.31</code></td><td>541</td><td>Chest</td></tr>
+<tr><td>97</td><td><code>player.box.troop.d</code></td><td>540</td><td>Chest</td></tr>
+<tr><td>98</td><td><code>player.box.hero.c</code></td><td>535</td><td>Chest</td></tr>
+<tr><td>99</td><td><code>consume.2.c</code></td><td>414</td><td>Consumable</td></tr>
+<tr><td>100</td><td><code>player.box.special.1</code></td><td>385</td><td>Chest</td></tr>
+<tr><td>101</td><td><code>player.more.castle.1.c</code></td><td>329</td><td>Other</td></tr>
+<tr><td>102</td><td><code>consume.2.d</code></td><td>329</td><td>Consumable</td></tr>
+<tr><td>103</td><td><code>player.box.fbgift.gold.greater</code></td><td>328</td><td>Chest</td></tr>
+<tr><td>104</td><td><code>player.box.hero.d</code></td><td>290</td><td>Chest</td></tr>
+<tr><td>105</td><td><code>hero.power.1</code></td><td>269</td><td>Hero</td></tr>
+<tr><td>106</td><td><code>player.box.fbgift.stone.greater</code></td><td>185</td><td>Chest</td></tr>
+<tr><td>107</td><td><code>player.box.fbgift.iron.greater</code></td><td>160</td><td>Chest</td></tr>
+<tr><td>108</td><td><code>player.item.stoneoffinding</code></td><td>148</td><td>Other</td></tr>
+<tr><td>109</td><td><code>player.truce.dream</code></td><td>137</td><td>Other</td></tr>
+<tr><td>110</td><td><code>player.item.harvesttoken</code></td><td>105</td><td>Other</td></tr>
+<tr><td>111</td><td><code>player.item.candy.2013</code></td><td>101</td><td>Other</td></tr>
+<tr><td>112</td><td><code>player.trick.qlbx</code></td><td>92</td><td>Stratagem</td></tr>
+<tr><td>113</td><td><code>player.box.hero.f</code></td><td>80</td><td>Chest</td></tr>
+<tr><td>114</td><td><code>player.box.gambling.stone.10000000</code></td><td>57</td><td>Chest</td></tr>
+<tr><td>115</td><td><code>player.halloween.castle</code></td><td>55</td><td>Other</td></tr>
+<tr><td>116</td><td><code>player.box.present.money.77</code></td><td>48</td><td>Chest</td></tr>
+<tr><td>117</td><td><code>player.box.gambling.iron.10000000</code></td><td>47</td><td>Chest</td></tr>
+<tr><td>118</td><td><code>player.box.present.money.74</code></td><td>46</td><td>Chest</td></tr>
+<tr><td>119</td><td><code>player.chocolate.bunny</code></td><td>43</td><td>Other</td></tr>
+<tr><td>120</td><td><code>player.box.gambling.gold.10000000</code></td><td>40</td><td>Chest</td></tr>
+<tr><td>121</td><td><code>player.box.gambling.wood.10000000</code></td><td>36</td><td>Chest</td></tr>
+<tr><td>122</td><td><code>player.reduce.troops.upkeep.1</code></td><td>36</td><td>Other</td></tr>
+<tr><td>123</td><td><code>player.box.present.money.324</code></td><td>35</td><td>Chest</td></tr>
+<tr><td>124</td><td><code>player.box.hero.e</code></td><td>34</td><td>Chest</td></tr>
+<tr><td>125</td><td><code>player.box.present.money.71</code></td><td>28</td><td>Chest</td></tr>
+<tr><td>126</td><td><code>player.box.present.money.269</code></td><td>28</td><td>Chest</td></tr>
+<tr><td>127</td><td><code>player.box.present.money.212</code></td><td>27</td><td>Chest</td></tr>
+<tr><td>128</td><td><code>player.box.present.money.219</code></td><td>26</td><td>Chest</td></tr>
+<tr><td>129</td><td><code>hero.reset.1.a</code></td><td>25</td><td>Hero</td></tr>
+<tr><td>130</td><td><code>player.box.present.money.277</code></td><td>22</td><td>Chest</td></tr>
+<tr><td>131</td><td><code>player.box.present.money.58</code></td><td>20</td><td>Chest</td></tr>
+<tr><td>132</td><td><code>player.box.present.money.204</code></td><td>20</td><td>Chest</td></tr>
+<tr><td>133</td><td><code>player.speedup.1</code></td><td>20</td><td>Other</td></tr>
+<tr><td>134</td><td><code>player.box.present.money.33</code></td><td>19</td><td>Chest</td></tr>
+<tr><td>135</td><td><code>player.box.present.money.367</code></td><td>19</td><td>Chest</td></tr>
+<tr><td>136</td><td><code>player.box.fbgift.farming</code></td><td>18</td><td>Chest</td></tr>
+<tr><td>137</td><td><code>player.box.present.money.72</code></td><td>18</td><td>Chest</td></tr>
+<tr><td>138</td><td><code>player.box.present.money.75</code></td><td>16</td><td>Chest</td></tr>
+<tr><td>139</td><td><code>player.box.present.money.285</code></td><td>16</td><td>Chest</td></tr>
+<tr><td>140</td><td><code>player.box.present.money.233</code></td><td>15</td><td>Chest</td></tr>
+<tr><td>141</td><td><code>player.box.present.money.248</code></td><td>14</td><td>Chest</td></tr>
+<tr><td>142</td><td><code>player.box.present.money.76</code></td><td>13</td><td>Chest</td></tr>
+<tr><td>143</td><td><code>player.box.troop.a</code></td><td>13</td><td>Chest</td></tr>
+<tr><td>144</td><td><code>player.box.present.money.37</code></td><td>12</td><td>Chest</td></tr>
+<tr><td>145</td><td><code>player.item.imperialorder</code></td><td>11</td><td>Other</td></tr>
+<tr><td>146</td><td><code>player.box.present.money.262</code></td><td>9</td><td>Chest</td></tr>
+<tr><td>147</td><td><code>player.item.quest.wolfspaw</code></td><td>9</td><td>Other</td></tr>
+<tr><td>148</td><td><code>player.box.present.money.113</code></td><td>8</td><td>Chest</td></tr>
+<tr><td>149</td><td><code>player.item.sinterklaasscookies.2017</code></td><td>6</td><td>Other</td></tr>
+<tr><td>150</td><td><code>player.box.present.money.95</code></td><td>6</td><td>Chest</td></tr>
+<tr><td>151</td><td><code>player.box.present.money.315</code></td><td>6</td><td>Chest</td></tr>
+<tr><td>152</td><td><code>player.item.quest.freezingectoplasm</code></td><td>5</td><td>Other</td></tr>
+<tr><td>153</td><td><code>player.box.present.money.60</code></td><td>4</td><td>Chest</td></tr>
+<tr><td>154</td><td><code>player.item.lovesong</code></td><td>4</td><td>Other</td></tr>
+<tr><td>155</td><td><code>player.warcharmoftheindomitable</code></td><td>3</td><td>Other</td></tr>
+<tr><td>156</td><td><code>player.box.present.money.190</code></td><td>3</td><td>Chest</td></tr>
+<tr><td>157</td><td><code>player.box.present.rabbitsfoot</code></td><td>3</td><td>Chest</td></tr>
+<tr><td>158</td><td><code>player.box.present.money.79</code></td><td>3</td><td>Chest</td></tr>
+<tr><td>159</td><td><code>player.box.romanbuildingkit</code></td><td>3</td><td>Chest</td></tr>
+<tr><td>160</td><td><code>player.item.wolfpaw</code></td><td>3</td><td>Other</td></tr>
+<tr><td>161</td><td><code>player.box.fbgift.food.greater</code></td><td>3</td><td>Chest</td></tr>
+<tr><td>162</td><td><code>player.item.sinterklaasscookies</code></td><td>2</td><td>Other</td></tr>
+<tr><td>163</td><td><code>player.item.quest.harvesttoken.2017</code></td><td>2</td><td>Other</td></tr>
+<tr><td>164</td><td><code>player.halloween.castle.adv</code></td><td>2</td><td>Other</td></tr>
+<tr><td>165</td><td><code>player.bavarian.brew</code></td><td>1</td><td>Other</td></tr>
+<tr><td>166</td><td><code>player.box.present.money.143</code></td><td>1</td><td>Chest</td></tr>
+<tr><td>167</td><td><code>player.box.present.money.142</code></td><td>1</td><td>Chest</td></tr>
+<tr><td>168</td><td><code>hero.taskitem.38</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>169</td><td><code>hero.taskitem.36</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>170</td><td><code>hero.taskitem.627</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>171</td><td><code>player.box.present.money.351</code></td><td>1</td><td>Chest</td></tr>
+<tr><td>172</td><td><code>hero.taskitem.52</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>173</td><td><code>hero.taskitem.69</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>174</td><td><code>hero.taskitem.65</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>175</td><td><code>hero.taskitem.72</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>176</td><td><code>hero.taskitem.93</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>177</td><td><code>hero.taskitem.95</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>178</td><td><code>player.item.sinterklaasscookies2019</code></td><td>1</td><td>Other</td></tr>
+<tr><td>179</td><td><code>player.box.present.money.459</code></td><td>1</td><td>Chest</td></tr>
+<tr><td>180</td><td><code>hero.taskitem.606</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>181</td><td><code>hero.taskitem.570</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>182</td><td><code>hero.taskitem.261</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>183</td><td><code>hero.taskitem.262</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>184</td><td><code>hero.taskitem.674</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>185</td><td><code>player.box.present.money.383</code></td><td>1</td><td>Chest</td></tr>
+<tr><td>186</td><td><code>hero.taskitem.551</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>187</td><td><code>hero.taskitem.280</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>188</td><td><code>hero.taskitem.543</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>189</td><td><code>hero.taskitem.684</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>190</td><td><code>player.box.present.money.111</code></td><td>1</td><td>Chest</td></tr>
+<tr><td>191</td><td><code>hero.taskitem.243</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>192</td><td><code>hero.taskitem.102</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>193</td><td><code>hero.taskitem.453</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>194</td><td><code>player.item.relicofthekrampus</code></td><td>1</td><td>Other</td></tr>
+<tr><td>195</td><td><code>hero.taskitem.219</code></td><td>1</td><td>Hero</td></tr>
+<tr><td>196</td><td><code>hero.taskitem.216</code></td><td>1</td><td>Hero</td></tr>
+</table></div></div><div id="buildings" class="section"><div class="city-header">🏰 aattack</div>
+        <table><tr><th>Building</th><th>Level</th><th>Position</th></tr><tr><td>Farm</td><td>10</td><td>1040</td></tr>
+<tr><td>Farm</td><td>10</td><td>1039</td></tr>
+<tr><td>Farm</td><td>10</td><td>1038</td></tr>
+<tr><td>Farm</td><td>10</td><td>1037</td></tr>
+<tr><td>Farm</td><td>10</td><td>1036</td></tr>
+<tr><td>Farm</td><td>10</td><td>1035</td></tr>
+<tr><td>Farm</td><td>10</td><td>1034</td></tr>
+<tr><td>Farm</td><td>10</td><td>1033</td></tr>
+<tr><td>Farm</td><td>10</td><td>1032</td></tr>
+<tr><td>Farm</td><td>10</td><td>1031</td></tr>
+<tr><td>Farm</td><td>10</td><td>1030</td></tr>
+<tr><td>Farm</td><td>10</td><td>1029</td></tr>
+<tr><td>Ironmine</td><td>10</td><td>1028</td></tr>
+<tr><td>Farm</td><td>10</td><td>1027</td></tr>
+<tr><td>Farm</td><td>10</td><td>1026</td></tr>
+<tr><td>Farm</td><td>10</td><td>1025</td></tr>
+<tr><td>Farm</td><td>10</td><td>1024</td></tr>
+<tr><td>Farm</td><td>10</td><td>1023</td></tr>
+<tr><td>Farm</td><td>10</td><td>1022</td></tr>
+<tr><td>Farm</td><td>10</td><td>1021</td></tr>
+<tr><td>Farm</td><td>10</td><td>1020</td></tr>
+<tr><td>Farm</td><td>10</td><td>1019</td></tr>
+<tr><td>Farm</td><td>10</td><td>1018</td></tr>
+<tr><td>Farm</td><td>10</td><td>1017</td></tr>
+<tr><td>Farm</td><td>10</td><td>1016</td></tr>
+<tr><td>Farm</td><td>10</td><td>1015</td></tr>
+<tr><td>Farm</td><td>10</td><td>1014</td></tr>
+<tr><td>Farm</td><td>10</td><td>1013</td></tr>
+<tr><td>Farm</td><td>10</td><td>1012</td></tr>
+<tr><td>Farm</td><td>10</td><td>1011</td></tr>
+<tr><td>Sawmill</td><td>10</td><td>1010</td></tr>
+<tr><td>Ironmine</td><td>10</td><td>1009</td></tr>
+<tr><td>Farm</td><td>10</td><td>1008</td></tr>
+<tr><td>Farm</td><td>10</td><td>1007</td></tr>
+<tr><td>Farm</td><td>10</td><td>1006</td></tr>
+<tr><td>Ironmine</td><td>10</td><td>1005</td></tr>
+<tr><td>Farm</td><td>10</td><td>1004</td></tr>
+<tr><td>Farm</td><td>10</td><td>1003</td></tr>
+<tr><td>Farm</td><td>10</td><td>1002</td></tr>
+<tr><td>Farm</td><td>10</td><td>1001</td></tr>
+<tr><td>Cottage</td><td>10</td><td>23</td></tr>
+<tr><td>Relief Station</td><td>10</td><td>19</td></tr>
+<tr><td>Beacon Tower</td><td>10</td><td>17</td></tr>
+<tr><td>Rally Spot</td><td>10</td><td>14</td></tr>
+<tr><td>Cottage</td><td>10</td><td>13</td></tr>
+<tr><td>Cottage</td><td>10</td><td>12</td></tr>
+<tr><td>Cottage</td><td>10</td><td>11</td></tr>
+<tr><td>Cottage</td><td>10</td><td>9</td></tr>
+<tr><td>Cottage</td><td>10</td><td>8</td></tr>
+<tr><td>Barracks</td><td>10</td><td>7</td></tr>
+<tr><td>Feasting Hall</td><td>10</td><td>6</td></tr>
+<tr><td>Cottage</td><td>10</td><td>5</td></tr>
+<tr><td>Stable</td><td>10</td><td>4</td></tr>
+<tr><td>Inn</td><td>10</td><td>3</td></tr>
+<tr><td>Academy</td><td>10</td><td>2</td></tr>
+<tr><td>Workshop</td><td>10</td><td>1</td></tr>
+<tr><td>Marketplace</td><td>10</td><td>0</td></tr>
+<tr><td>Walls</td><td>10</td><td>-2</td></tr>
+<tr><td>Town Hall</td><td>10</td><td>-1</td></tr>
+<tr><td>Cottage</td><td>2</td><td>29</td></tr>
+<tr><td>Cottage</td><td>2</td><td>26</td></tr>
+</table><div class="city-header">🏰 battack</div>
+        <table><tr><th>Building</th><th>Level</th><th>Position</th></tr><tr><td>Ironmine</td><td>10</td><td>1040</td></tr>
+<tr><td>Quarry</td><td>10</td><td>1039</td></tr>
+<tr><td>Farm</td><td>10</td><td>1038</td></tr>
+<tr><td>Farm</td><td>10</td><td>1037</td></tr>
+<tr><td>Farm</td><td>10</td><td>1036</td></tr>
+<tr><td>Farm</td><td>10</td><td>1035</td></tr>
+<tr><td>Farm</td><td>10</td><td>1034</td></tr>
+<tr><td>Farm</td><td>10</td><td>1033</td></tr>
+<tr><td>Farm</td><td>10</td><td>1032</td></tr>
+<tr><td>Farm</td><td>10</td><td>1031</td></tr>
+<tr><td>Farm</td><td>10</td><td>1030</td></tr>
+<tr><td>Farm</td><td>10</td><td>1029</td></tr>
+<tr><td>Farm</td><td>10</td><td>1028</td></tr>
+<tr><td>Farm</td><td>10</td><td>1027</td></tr>
+<tr><td>Farm</td><td>10</td><td>1026</td></tr>
+<tr><td>Farm</td><td>10</td><td>1025</td></tr>
+<tr><td>Sawmill</td><td>10</td><td>1024</td></tr>
+<tr><td>Farm</td><td>10</td><td>1023</td></tr>
+<tr><td>Farm</td><td>10</td><td>1022</td></tr>
+<tr><td>Farm</td><td>10</td><td>1021</td></tr>
+<tr><td>Farm</td><td>10</td><td>1020</td></tr>
+<tr><td>Farm</td><td>10</td><td>1019</td></tr>
+<tr><td>Farm</td><td>10</td><td>1018</td></tr>
+<tr><td>Farm</td><td>10</td><td>1017</td></tr>
+<tr><td>Farm</td><td>10</td><td>1016</td></tr>
+<tr><td>Farm</td><td>10</td><td>1015</td></tr>
+<tr><td>Farm</td><td>10</td><td>1014</td></tr>
+<tr><td>Farm</td><td>10</td><td>1013</td></tr>
+<tr><td>Farm</td><td>10</td><td>1012</td></tr>
+<tr><td>Farm</td><td>10</td><td>1011</td></tr>
+<tr><td>Farm</td><td>10</td><td>1010</td></tr>
+<tr><td>Farm</td><td>10</td><td>1009</td></tr>
+<tr><td>Farm</td><td>10</td><td>1008</td></tr>
+<tr><td>Farm</td><td>10</td><td>1007</td></tr>
+<tr><td>Farm</td><td>10</td><td>1006</td></tr>
+<tr><td>Farm</td><td>10</td><td>1005</td></tr>
+<tr><td>Farm</td><td>10</td><td>1004</td></tr>
+<tr><td>Farm</td><td>10</td><td>1003</td></tr>
+<tr><td>Farm</td><td>10</td><td>1002</td></tr>
+<tr><td>Farm</td><td>10</td><td>1001</td></tr>
+<tr><td>Cottage</td><td>10</td><td>19</td></tr>
+<tr><td>Cottage</td><td>10</td><td>18</td></tr>
+<tr><td>Cottage</td><td>10</td><td>16</td></tr>
+<tr><td>Cottage</td><td>10</td><td>15</td></tr>
+<tr><td>Cottage</td><td>10</td><td>14</td></tr>
+<tr><td>Workshop</td><td>10</td><td>10</td></tr>
+<tr><td>Relief Station</td><td>10</td><td>9</td></tr>
+<tr><td>Rally Spot</td><td>10</td><td>8</td></tr>
+<tr><td>Inn</td><td>10</td><td>6</td></tr>
+<tr><td>Beacon Tower</td><td>10</td><td>5</td></tr>
+<tr><td>Marketplace</td><td>10</td><td>4</td></tr>
+<tr><td>Feasting Hall</td><td>10</td><td>3</td></tr>
+<tr><td>Barracks</td><td>10</td><td>2</td></tr>
+<tr><td>Stable</td><td>10</td><td>1</td></tr>
+<tr><td>Academy</td><td>10</td><td>0</td></tr>
+<tr><td>Walls</td><td>10</td><td>-2</td></tr>
+<tr><td>Town Hall</td><td>10</td><td>-1</td></tr>
+</table><div class="city-header">🏰 Borg</div>
+        <table><tr><th>Building</th><th>Level</th><th>Position</th></tr><tr><td>Sawmill</td><td>14</td><td>1030</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1024</td></tr>
+<tr><td>Farm</td><td>14</td><td>1012</td></tr>
+<tr><td>Farm</td><td>14</td><td>1011</td></tr>
+<tr><td>Farm</td><td>14</td><td>1010</td></tr>
+<tr><td>Farm</td><td>14</td><td>1009</td></tr>
+<tr><td>Farm</td><td>14</td><td>1008</td></tr>
+<tr><td>Farm</td><td>14</td><td>1007</td></tr>
+<tr><td>Farm</td><td>14</td><td>1006</td></tr>
+<tr><td>Farm</td><td>14</td><td>1005</td></tr>
+<tr><td>Farm</td><td>14</td><td>1004</td></tr>
+<tr><td>Farm</td><td>14</td><td>1003</td></tr>
+<tr><td>Farm</td><td>14</td><td>1002</td></tr>
+<tr><td>Farm</td><td>14</td><td>1001</td></tr>
+<tr><td>Rally Spot</td><td>14</td><td>31</td></tr>
+<tr><td>Farm</td><td>10</td><td>1040</td></tr>
+<tr><td>Farm</td><td>10</td><td>1039</td></tr>
+<tr><td>Farm</td><td>10</td><td>1038</td></tr>
+<tr><td>Farm</td><td>10</td><td>1037</td></tr>
+<tr><td>Farm</td><td>10</td><td>1036</td></tr>
+<tr><td>Farm</td><td>10</td><td>1035</td></tr>
+<tr><td>Farm</td><td>10</td><td>1034</td></tr>
+<tr><td>Farm</td><td>10</td><td>1033</td></tr>
+<tr><td>Farm</td><td>10</td><td>1032</td></tr>
+<tr><td>Farm</td><td>10</td><td>1031</td></tr>
+<tr><td>Farm</td><td>10</td><td>1029</td></tr>
+<tr><td>Farm</td><td>10</td><td>1028</td></tr>
+<tr><td>Farm</td><td>10</td><td>1027</td></tr>
+<tr><td>Farm</td><td>10</td><td>1026</td></tr>
+<tr><td>Farm</td><td>10</td><td>1025</td></tr>
+<tr><td>Farm</td><td>10</td><td>1023</td></tr>
+<tr><td>Farm</td><td>10</td><td>1022</td></tr>
+<tr><td>Farm</td><td>10</td><td>1021</td></tr>
+<tr><td>Farm</td><td>10</td><td>1020</td></tr>
+<tr><td>Farm</td><td>10</td><td>1019</td></tr>
+<tr><td>Farm</td><td>10</td><td>1018</td></tr>
+<tr><td>Farm</td><td>10</td><td>1017</td></tr>
+<tr><td>Farm</td><td>10</td><td>1016</td></tr>
+<tr><td>Farm</td><td>10</td><td>1015</td></tr>
+<tr><td>Farm</td><td>10</td><td>1014</td></tr>
+<tr><td>Farm</td><td>10</td><td>1013</td></tr>
+<tr><td>Beacon Tower</td><td>10</td><td>30</td></tr>
+<tr><td>Embassy</td><td>10</td><td>29</td></tr>
+<tr><td>Feasting Hall</td><td>10</td><td>28</td></tr>
+<tr><td>Workshop</td><td>10</td><td>27</td></tr>
+<tr><td>Academy</td><td>10</td><td>26</td></tr>
+<tr><td>Relief Station</td><td>10</td><td>25</td></tr>
+<tr><td>Marketplace</td><td>10</td><td>24</td></tr>
+<tr><td>Forge</td><td>10</td><td>23</td></tr>
+<tr><td>Inn</td><td>10</td><td>22</td></tr>
+<tr><td>Stable</td><td>10</td><td>21</td></tr>
+<tr><td>Cottage</td><td>10</td><td>20</td></tr>
+<tr><td>Barracks</td><td>10</td><td>19</td></tr>
+<tr><td>Cottage</td><td>10</td><td>18</td></tr>
+<tr><td>Cottage</td><td>10</td><td>17</td></tr>
+<tr><td>Cottage</td><td>10</td><td>16</td></tr>
+<tr><td>Cottage</td><td>10</td><td>15</td></tr>
+<tr><td>Cottage</td><td>10</td><td>13</td></tr>
+<tr><td>Cottage</td><td>10</td><td>11</td></tr>
+<tr><td>Cottage</td><td>10</td><td>10</td></tr>
+<tr><td>Barracks</td><td>10</td><td>9</td></tr>
+<tr><td>Barracks</td><td>10</td><td>8</td></tr>
+<tr><td>Cottage</td><td>10</td><td>7</td></tr>
+<tr><td>Cottage</td><td>10</td><td>3</td></tr>
+<tr><td>Walls</td><td>10</td><td>-2</td></tr>
+<tr><td>Town Hall</td><td>10</td><td>-1</td></tr>
+<tr><td>Cottage</td><td>2</td><td>14</td></tr>
+<tr><td>Cottage</td><td>2</td><td>6</td></tr>
+<tr><td>Cottage</td><td>2</td><td>5</td></tr>
+<tr><td>Cottage</td><td>2</td><td>4</td></tr>
+<tr><td>Cottage</td><td>2</td><td>1</td></tr>
+<tr><td>Cottage</td><td>2</td><td>0</td></tr>
+<tr><td>Cottage</td><td>1</td><td>2</td></tr>
+</table><div class="city-header">🏰 f</div>
+        <table><tr><th>Building</th><th>Level</th><th>Position</th></tr><tr><td>Farm</td><td>14</td><td>1040</td></tr>
+<tr><td>Farm</td><td>14</td><td>1039</td></tr>
+<tr><td>Farm</td><td>14</td><td>1038</td></tr>
+<tr><td>Farm</td><td>14</td><td>1037</td></tr>
+<tr><td>Farm</td><td>14</td><td>1036</td></tr>
+<tr><td>Farm</td><td>14</td><td>1035</td></tr>
+<tr><td>Farm</td><td>14</td><td>1034</td></tr>
+<tr><td>Farm</td><td>14</td><td>1033</td></tr>
+<tr><td>Farm</td><td>14</td><td>1032</td></tr>
+<tr><td>Farm</td><td>14</td><td>1023</td></tr>
+<tr><td>Farm</td><td>14</td><td>1022</td></tr>
+<tr><td>Farm</td><td>14</td><td>1021</td></tr>
+<tr><td>Farm</td><td>14</td><td>1020</td></tr>
+<tr><td>Farm</td><td>14</td><td>1019</td></tr>
+<tr><td>Farm</td><td>14</td><td>1018</td></tr>
+<tr><td>Farm</td><td>14</td><td>1017</td></tr>
+<tr><td>Farm</td><td>14</td><td>1016</td></tr>
+<tr><td>Farm</td><td>14</td><td>1015</td></tr>
+<tr><td>Farm</td><td>14</td><td>1014</td></tr>
+<tr><td>Farm</td><td>14</td><td>1013</td></tr>
+<tr><td>Farm</td><td>14</td><td>1012</td></tr>
+<tr><td>Farm</td><td>14</td><td>1011</td></tr>
+<tr><td>Farm</td><td>14</td><td>1005</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1004</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1002</td></tr>
+<tr><td>Farm</td><td>14</td><td>1001</td></tr>
+<tr><td>Farm</td><td>10</td><td>1031</td></tr>
+<tr><td>Farm</td><td>10</td><td>1030</td></tr>
+<tr><td>Farm</td><td>10</td><td>1029</td></tr>
+<tr><td>Farm</td><td>10</td><td>1028</td></tr>
+<tr><td>Farm</td><td>10</td><td>1027</td></tr>
+<tr><td>Farm</td><td>10</td><td>1026</td></tr>
+<tr><td>Farm</td><td>10</td><td>1025</td></tr>
+<tr><td>Farm</td><td>10</td><td>1024</td></tr>
+<tr><td>Farm</td><td>10</td><td>1010</td></tr>
+<tr><td>Farm</td><td>10</td><td>1009</td></tr>
+<tr><td>Farm</td><td>10</td><td>1008</td></tr>
+<tr><td>Farm</td><td>10</td><td>1007</td></tr>
+<tr><td>Farm</td><td>10</td><td>1006</td></tr>
+<tr><td>Farm</td><td>10</td><td>1003</td></tr>
+<tr><td>Marketplace</td><td>10</td><td>29</td></tr>
+<tr><td>Barracks</td><td>10</td><td>26</td></tr>
+<tr><td>Barracks</td><td>10</td><td>23</td></tr>
+<tr><td>Rally Spot</td><td>10</td><td>13</td></tr>
+<tr><td>Feasting Hall</td><td>10</td><td>12</td></tr>
+<tr><td>Inn</td><td>10</td><td>11</td></tr>
+<tr><td>Beacon Tower</td><td>10</td><td>10</td></tr>
+<tr><td>Embassy</td><td>10</td><td>9</td></tr>
+<tr><td>Academy</td><td>10</td><td>8</td></tr>
+<tr><td>Workshop</td><td>10</td><td>7</td></tr>
+<tr><td>Relief Station</td><td>10</td><td>6</td></tr>
+<tr><td>Cottage</td><td>10</td><td>5</td></tr>
+<tr><td>Cottage</td><td>10</td><td>4</td></tr>
+<tr><td>Cottage</td><td>10</td><td>3</td></tr>
+<tr><td>Cottage</td><td>10</td><td>2</td></tr>
+<tr><td>Cottage</td><td>10</td><td>1</td></tr>
+<tr><td>Cottage</td><td>10</td><td>0</td></tr>
+<tr><td>Walls</td><td>10</td><td>-2</td></tr>
+<tr><td>Town Hall</td><td>10</td><td>-1</td></tr>
+</table><div class="city-header">🏰 Falana</div>
+        <table><tr><th>Building</th><th>Level</th><th>Position</th></tr><tr><td>Sawmill</td><td>14</td><td>1040</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1039</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1038</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1037</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1036</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1035</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1034</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1033</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1032</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1031</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1030</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1029</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1028</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1027</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1026</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1025</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1024</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1023</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1022</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1021</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1020</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1019</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1018</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1017</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1016</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1015</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1014</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1013</td></tr>
+<tr><td>Farm</td><td>14</td><td>1012</td></tr>
+<tr><td>Farm</td><td>14</td><td>1011</td></tr>
+<tr><td>Farm</td><td>14</td><td>1010</td></tr>
+<tr><td>Farm</td><td>14</td><td>1009</td></tr>
+<tr><td>Farm</td><td>14</td><td>1008</td></tr>
+<tr><td>Farm</td><td>14</td><td>1007</td></tr>
+<tr><td>Farm</td><td>14</td><td>1006</td></tr>
+<tr><td>Farm</td><td>14</td><td>1005</td></tr>
+<tr><td>Farm</td><td>14</td><td>1004</td></tr>
+<tr><td>Farm</td><td>14</td><td>1003</td></tr>
+<tr><td>Farm</td><td>14</td><td>1002</td></tr>
+<tr><td>Farm</td><td>14</td><td>1001</td></tr>
+<tr><td>Rally Spot</td><td>14</td><td>31</td></tr>
+<tr><td>Beacon Tower</td><td>10</td><td>30</td></tr>
+<tr><td>Embassy</td><td>10</td><td>29</td></tr>
+<tr><td>Feasting Hall</td><td>10</td><td>28</td></tr>
+<tr><td>Workshop</td><td>10</td><td>27</td></tr>
+<tr><td>Academy</td><td>10</td><td>26</td></tr>
+<tr><td>Relief Station</td><td>10</td><td>25</td></tr>
+<tr><td>Marketplace</td><td>10</td><td>24</td></tr>
+<tr><td>Barracks</td><td>10</td><td>23</td></tr>
+<tr><td>Inn</td><td>10</td><td>22</td></tr>
+<tr><td>Barracks</td><td>10</td><td>21</td></tr>
+<tr><td>Barracks</td><td>10</td><td>20</td></tr>
+<tr><td>Barracks</td><td>10</td><td>19</td></tr>
+<tr><td>Cottage</td><td>10</td><td>18</td></tr>
+<tr><td>Cottage</td><td>10</td><td>17</td></tr>
+<tr><td>Cottage</td><td>10</td><td>16</td></tr>
+<tr><td>Cottage</td><td>10</td><td>15</td></tr>
+<tr><td>Cottage</td><td>10</td><td>14</td></tr>
+<tr><td>Barracks</td><td>10</td><td>13</td></tr>
+<tr><td>Barracks</td><td>10</td><td>12</td></tr>
+<tr><td>Barracks</td><td>10</td><td>11</td></tr>
+<tr><td>Cottage</td><td>10</td><td>10</td></tr>
+<tr><td>Barracks</td><td>10</td><td>9</td></tr>
+<tr><td>Barracks</td><td>10</td><td>8</td></tr>
+<tr><td>Barracks</td><td>10</td><td>7</td></tr>
+<tr><td>Barracks</td><td>10</td><td>6</td></tr>
+<tr><td>Barracks</td><td>10</td><td>5</td></tr>
+<tr><td>Barracks</td><td>10</td><td>4</td></tr>
+<tr><td>Barracks</td><td>10</td><td>3</td></tr>
+<tr><td>Barracks</td><td>10</td><td>2</td></tr>
+<tr><td>Barracks</td><td>10</td><td>1</td></tr>
+<tr><td>Barracks</td><td>10</td><td>0</td></tr>
+<tr><td>Walls</td><td>10</td><td>-2</td></tr>
+<tr><td>Town Hall</td><td>10</td><td>-1</td></tr>
+</table><div class="city-header">🏰 Hindu</div>
+        <table><tr><th>Building</th><th>Level</th><th>Position</th></tr><tr><td>Farm</td><td>10</td><td>1040</td></tr>
+<tr><td>Quarry</td><td>10</td><td>1039</td></tr>
+<tr><td>Farm</td><td>10</td><td>1038</td></tr>
+<tr><td>Farm</td><td>10</td><td>1037</td></tr>
+<tr><td>Farm</td><td>10</td><td>1036</td></tr>
+<tr><td>Farm</td><td>10</td><td>1035</td></tr>
+<tr><td>Farm</td><td>10</td><td>1034</td></tr>
+<tr><td>Farm</td><td>10</td><td>1033</td></tr>
+<tr><td>Farm</td><td>10</td><td>1032</td></tr>
+<tr><td>Farm</td><td>10</td><td>1031</td></tr>
+<tr><td>Farm</td><td>10</td><td>1030</td></tr>
+<tr><td>Farm</td><td>10</td><td>1029</td></tr>
+<tr><td>Farm</td><td>10</td><td>1028</td></tr>
+<tr><td>Farm</td><td>10</td><td>1027</td></tr>
+<tr><td>Farm</td><td>10</td><td>1026</td></tr>
+<tr><td>Farm</td><td>10</td><td>1025</td></tr>
+<tr><td>Farm</td><td>10</td><td>1024</td></tr>
+<tr><td>Farm</td><td>10</td><td>1023</td></tr>
+<tr><td>Farm</td><td>10</td><td>1022</td></tr>
+<tr><td>Farm</td><td>10</td><td>1021</td></tr>
+<tr><td>Farm</td><td>10</td><td>1020</td></tr>
+<tr><td>Farm</td><td>10</td><td>1019</td></tr>
+<tr><td>Farm</td><td>10</td><td>1018</td></tr>
+<tr><td>Farm</td><td>10</td><td>1017</td></tr>
+<tr><td>Farm</td><td>10</td><td>1016</td></tr>
+<tr><td>Farm</td><td>10</td><td>1015</td></tr>
+<tr><td>Farm</td><td>10</td><td>1014</td></tr>
+<tr><td>Farm</td><td>10</td><td>1013</td></tr>
+<tr><td>Farm</td><td>10</td><td>1012</td></tr>
+<tr><td>Farm</td><td>10</td><td>1011</td></tr>
+<tr><td>Farm</td><td>10</td><td>1010</td></tr>
+<tr><td>Farm</td><td>10</td><td>1009</td></tr>
+<tr><td>Farm</td><td>10</td><td>1008</td></tr>
+<tr><td>Farm</td><td>10</td><td>1007</td></tr>
+<tr><td>Farm</td><td>10</td><td>1006</td></tr>
+<tr><td>Farm</td><td>10</td><td>1005</td></tr>
+<tr><td>Farm</td><td>10</td><td>1004</td></tr>
+<tr><td>Farm</td><td>10</td><td>1003</td></tr>
+<tr><td>Farm</td><td>10</td><td>1002</td></tr>
+<tr><td>Farm</td><td>10</td><td>1001</td></tr>
+<tr><td>Cottage</td><td>10</td><td>18</td></tr>
+<tr><td>Cottage</td><td>10</td><td>16</td></tr>
+<tr><td>Cottage</td><td>10</td><td>15</td></tr>
+<tr><td>Cottage</td><td>10</td><td>14</td></tr>
+<tr><td>Workshop</td><td>10</td><td>10</td></tr>
+<tr><td>Relief Station</td><td>10</td><td>9</td></tr>
+<tr><td>Rally Spot</td><td>10</td><td>8</td></tr>
+<tr><td>Inn</td><td>10</td><td>6</td></tr>
+<tr><td>Beacon Tower</td><td>10</td><td>5</td></tr>
+<tr><td>Marketplace</td><td>10</td><td>4</td></tr>
+<tr><td>Feasting Hall</td><td>10</td><td>3</td></tr>
+<tr><td>Barracks</td><td>10</td><td>2</td></tr>
+<tr><td>Academy</td><td>10</td><td>0</td></tr>
+<tr><td>Walls</td><td>10</td><td>-2</td></tr>
+<tr><td>Town Hall</td><td>10</td><td>-1</td></tr>
+</table><div class="city-header">🏰 Jerusalem</div>
+        <table><tr><th>Building</th><th>Level</th><th>Position</th></tr><tr><td>Farm</td><td>16</td><td>1040</td></tr>
+<tr><td>Farm</td><td>16</td><td>1039</td></tr>
+<tr><td>Farm</td><td>16</td><td>1038</td></tr>
+<tr><td>Farm</td><td>16</td><td>1037</td></tr>
+<tr><td>Farm</td><td>16</td><td>1036</td></tr>
+<tr><td>Farm</td><td>16</td><td>1035</td></tr>
+<tr><td>Farm</td><td>16</td><td>1034</td></tr>
+<tr><td>Farm</td><td>16</td><td>1033</td></tr>
+<tr><td>Farm</td><td>16</td><td>1032</td></tr>
+<tr><td>Farm</td><td>16</td><td>1031</td></tr>
+<tr><td>Farm</td><td>16</td><td>1030</td></tr>
+<tr><td>Farm</td><td>16</td><td>1029</td></tr>
+<tr><td>Farm</td><td>16</td><td>1028</td></tr>
+<tr><td>Farm</td><td>16</td><td>1027</td></tr>
+<tr><td>Farm</td><td>16</td><td>1026</td></tr>
+<tr><td>Farm</td><td>16</td><td>1025</td></tr>
+<tr><td>Farm</td><td>16</td><td>1024</td></tr>
+<tr><td>Farm</td><td>16</td><td>1023</td></tr>
+<tr><td>Farm</td><td>16</td><td>1022</td></tr>
+<tr><td>Farm</td><td>16</td><td>1021</td></tr>
+<tr><td>Farm</td><td>16</td><td>1020</td></tr>
+<tr><td>Farm</td><td>16</td><td>1019</td></tr>
+<tr><td>Farm</td><td>16</td><td>1018</td></tr>
+<tr><td>Farm</td><td>16</td><td>1017</td></tr>
+<tr><td>Farm</td><td>16</td><td>1016</td></tr>
+<tr><td>Farm</td><td>16</td><td>1015</td></tr>
+<tr><td>Farm</td><td>16</td><td>1014</td></tr>
+<tr><td>Farm</td><td>16</td><td>1013</td></tr>
+<tr><td>Farm</td><td>16</td><td>1012</td></tr>
+<tr><td>Farm</td><td>16</td><td>1011</td></tr>
+<tr><td>Farm</td><td>16</td><td>1010</td></tr>
+<tr><td>Farm</td><td>16</td><td>1009</td></tr>
+<tr><td>Farm</td><td>16</td><td>1008</td></tr>
+<tr><td>Farm</td><td>16</td><td>1007</td></tr>
+<tr><td>Farm</td><td>16</td><td>1006</td></tr>
+<tr><td>Farm</td><td>16</td><td>1005</td></tr>
+<tr><td>Ironmine</td><td>16</td><td>1004</td></tr>
+<tr><td>Farm</td><td>16</td><td>1003</td></tr>
+<tr><td>Sawmill</td><td>16</td><td>1002</td></tr>
+<tr><td>Farm</td><td>16</td><td>1001</td></tr>
+<tr><td>Marketplace</td><td>10</td><td>31</td></tr>
+<tr><td>Cottage</td><td>10</td><td>30</td></tr>
+<tr><td>Cottage</td><td>10</td><td>29</td></tr>
+<tr><td>Cottage</td><td>10</td><td>28</td></tr>
+<tr><td>Cottage</td><td>10</td><td>27</td></tr>
+<tr><td>Cottage</td><td>10</td><td>26</td></tr>
+<tr><td>Barracks</td><td>10</td><td>25</td></tr>
+<tr><td>Cottage</td><td>10</td><td>24</td></tr>
+<tr><td>Embassy</td><td>10</td><td>23</td></tr>
+<tr><td>Cottage</td><td>10</td><td>22</td></tr>
+<tr><td>Cottage</td><td>10</td><td>21</td></tr>
+<tr><td>Cottage</td><td>10</td><td>20</td></tr>
+<tr><td>Cottage</td><td>10</td><td>19</td></tr>
+<tr><td>Cottage</td><td>10</td><td>18</td></tr>
+<tr><td>Cottage</td><td>10</td><td>17</td></tr>
+<tr><td>Cottage</td><td>10</td><td>16</td></tr>
+<tr><td>Cottage</td><td>10</td><td>15</td></tr>
+<tr><td>Cottage</td><td>10</td><td>14</td></tr>
+<tr><td>Academy</td><td>10</td><td>13</td></tr>
+<tr><td>Workshop</td><td>10</td><td>12</td></tr>
+<tr><td>Rally Spot</td><td>10</td><td>11</td></tr>
+<tr><td>Beacon Tower</td><td>10</td><td>9</td></tr>
+<tr><td>Feasting Hall</td><td>10</td><td>8</td></tr>
+<tr><td>Relief Station</td><td>10</td><td>7</td></tr>
+<tr><td>Stable</td><td>10</td><td>6</td></tr>
+<tr><td>Cottage</td><td>10</td><td>5</td></tr>
+<tr><td>Cottage</td><td>10</td><td>4</td></tr>
+<tr><td>Cottage</td><td>10</td><td>3</td></tr>
+<tr><td>Cottage</td><td>10</td><td>2</td></tr>
+<tr><td>Cottage</td><td>10</td><td>1</td></tr>
+<tr><td>Cottage</td><td>10</td><td>0</td></tr>
+<tr><td>Walls</td><td>10</td><td>-2</td></tr>
+<tr><td>Town Hall</td><td>10</td><td>-1</td></tr>
+<tr><td>Inn</td><td>5</td><td>10</td></tr>
+</table><div class="city-header">🏰 LOLA</div>
+        <table><tr><th>Building</th><th>Level</th><th>Position</th></tr><tr><td>Sawmill</td><td>14</td><td>1040</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1039</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1038</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1037</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1036</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1035</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1034</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1033</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1032</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1031</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1030</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1029</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1028</td></tr>
+<tr><td>Sawmill</td><td>14</td><td>1027</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1026</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1025</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1024</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1023</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1022</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1021</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1020</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1019</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1018</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1017</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1016</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1015</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1014</td></tr>
+<tr><td>Ironmine</td><td>14</td><td>1013</td></tr>
+<tr><td>Farm</td><td>14</td><td>1012</td></tr>
+<tr><td>Farm</td><td>14</td><td>1011</td></tr>
+<tr><td>Farm</td><td>14</td><td>1010</td></tr>
+<tr><td>Farm</td><td>14</td><td>1009</td></tr>
+<tr><td>Farm</td><td>14</td><td>1008</td></tr>
+<tr><td>Farm</td><td>14</td><td>1007</td></tr>
+<tr><td>Farm</td><td>14</td><td>1006</td></tr>
+<tr><td>Farm</td><td>14</td><td>1005</td></tr>
+<tr><td>Farm</td><td>14</td><td>1004</td></tr>
+<tr><td>Farm</td><td>14</td><td>1003</td></tr>
+<tr><td>Farm</td><td>14</td><td>1002</td></tr>
+<tr><td>Farm</td><td>14</td><td>1001</td></tr>
+<tr><td>Rally Spot</td><td>14</td><td>31</td></tr>
+<tr><td>Beacon Tower</td><td>10</td><td>30</td></tr>
+<tr><td>Cottage</td><td>10</td><td>29</td></tr>
+<tr><td>Feasting Hall</td><td>10</td><td>28</td></tr>
+<tr><td>Workshop</td><td>10</td><td>27</td></tr>
+<tr><td>Academy</td><td>10</td><td>26</td></tr>
+<tr><td>Relief Station</td><td>10</td><td>25</td></tr>
+<tr><td>Marketplace</td><td>10</td><td>24</td></tr>
+<tr><td>Inn</td><td>10</td><td>22</td></tr>
+<tr><td>Barracks</td><td>10</td><td>21</td></tr>
+<tr><td>Barracks</td><td>10</td><td>19</td></tr>
+<tr><td>Barracks</td><td>10</td><td>18</td></tr>
+<tr><td>Barracks</td><td>10</td><td>17</td></tr>
+<tr><td>Barracks</td><td>10</td><td>16</td></tr>
+<tr><td>Barracks</td><td>10</td><td>15</td></tr>
+<tr><td>Cottage</td><td>10</td><td>14</td></tr>
+<tr><td>Cottage</td><td>10</td><td>13</td></tr>
+<tr><td>Cottage</td><td>10</td><td>12</td></tr>
+<tr><td>Cottage</td><td>10</td><td>11</td></tr>
+<tr><td>Cottage</td><td>10</td><td>10</td></tr>
+<tr><td>Barracks</td><td>10</td><td>9</td></tr>
+<tr><td>Barracks</td><td>10</td><td>8</td></tr>
+<tr><td>Barracks</td><td>10</td><td>7</td></tr>
+<tr><td>Barracks</td><td>10</td><td>6</td></tr>
+<tr><td>Barracks</td><td>10</td><td>5</td></tr>
+<tr><td>Barracks</td><td>10</td><td>4</td></tr>
+<tr><td>Barracks</td><td>10</td><td>3</td></tr>
+<tr><td>Barracks</td><td>10</td><td>2</td></tr>
+<tr><td>Barracks</td><td>10</td><td>1</td></tr>
+<tr><td>Barracks</td><td>10</td><td>0</td></tr>
+<tr><td>Walls</td><td>10</td><td>-2</td></tr>
+<tr><td>Town Hall</td><td>10</td><td>-1</td></tr>
+<tr><td>Barracks</td><td>9</td><td>23</td></tr>
+<tr><td>Embassy</td><td>5</td><td>20</td></tr>
+</table><div class="city-header">🏰 Mojo</div>
+        <table><tr><th>Building</th><th>Level</th><th>Position</th></tr><tr><td>Farm</td><td>10</td><td>1040</td></tr>
+<tr><td>Quarry</td><td>10</td><td>1039</td></tr>
+<tr><td>Sawmill</td><td>10</td><td>1037</td></tr>
+<tr><td>Farm</td><td>10</td><td>1036</td></tr>
+<tr><td>Farm</td><td>10</td><td>1035</td></tr>
+<tr><td>Farm</td><td>10</td><td>1034</td></tr>
+<tr><td>Farm</td><td>10</td><td>1033</td></tr>
+<tr><td>Ironmine</td><td>10</td><td>1032</td></tr>
+<tr><td>Farm</td><td>10</td><td>1031</td></tr>
+<tr><td>Farm</td><td>10</td><td>1030</td></tr>
+<tr><td>Farm</td><td>10</td><td>1029</td></tr>
+<tr><td>Farm</td><td>10</td><td>1028</td></tr>
+<tr><td>Farm</td><td>10</td><td>1027</td></tr>
+<tr><td>Farm</td><td>10</td><td>1026</td></tr>
+<tr><td>Farm</td><td>10</td><td>1025</td></tr>
+<tr><td>Farm</td><td>10</td><td>1024</td></tr>
+<tr><td>Farm</td><td>10</td><td>1023</td></tr>
+<tr><td>Farm</td><td>10</td><td>1022</td></tr>
+<tr><td>Farm</td><td>10</td><td>1021</td></tr>
+<tr><td>Farm</td><td>10</td><td>1020</td></tr>
+<tr><td>Farm</td><td>10</td><td>1019</td></tr>
+<tr><td>Farm</td><td>10</td><td>1018</td></tr>
+<tr><td>Farm</td><td>10</td><td>1017</td></tr>
+<tr><td>Farm</td><td>10</td><td>1016</td></tr>
+<tr><td>Farm</td><td>10</td><td>1015</td></tr>
+<tr><td>Farm</td><td>10</td><td>1014</td></tr>
+<tr><td>Farm</td><td>10</td><td>1013</td></tr>
+<tr><td>Farm</td><td>10</td><td>1012</td></tr>
+<tr><td>Farm</td><td>10</td><td>1011</td></tr>
+<tr><td>Farm</td><td>10</td><td>1010</td></tr>
+<tr><td>Farm</td><td>10</td><td>1009</td></tr>
+<tr><td>Farm</td><td>10</td><td>1008</td></tr>
+<tr><td>Farm</td><td>10</td><td>1007</td></tr>
+<tr><td>Farm</td><td>10</td><td>1006</td></tr>
+<tr><td>Farm</td><td>10</td><td>1005</td></tr>
+<tr><td>Farm</td><td>10</td><td>1004</td></tr>
+<tr><td>Farm</td><td>10</td><td>1003</td></tr>
+<tr><td>Farm</td><td>10</td><td>1002</td></tr>
+<tr><td>Farm</td><td>10</td><td>1001</td></tr>
+<tr><td>Cottage</td><td>10</td><td>19</td></tr>
+<tr><td>Cottage</td><td>10</td><td>18</td></tr>
+<tr><td>Cottage</td><td>10</td><td>16</td></tr>
+<tr><td>Cottage</td><td>10</td><td>15</td></tr>
+<tr><td>Cottage</td><td>10</td><td>14</td></tr>
+<tr><td>Workshop</td><td>10</td><td>10</td></tr>
+<tr><td>Relief Station</td><td>10</td><td>9</td></tr>
+<tr><td>Rally Spot</td><td>10</td><td>8</td></tr>
+<tr><td>Barracks</td><td>10</td><td>7</td></tr>
+<tr><td>Inn</td><td>10</td><td>6</td></tr>
+<tr><td>Beacon Tower</td><td>10</td><td>5</td></tr>
+<tr><td>Marketplace</td><td>10</td><td>4</td></tr>
+<tr><td>Feasting Hall</td><td>10</td><td>3</td></tr>
+<tr><td>Academy</td><td>10</td><td>0</td></tr>
+<tr><td>Walls</td><td>10</td><td>-2</td></tr>
+<tr><td>Town Hall</td><td>10</td><td>-1</td></tr>
+<tr><td>Embassy</td><td>8</td><td>31</td></tr>
+<tr><td>Quarry</td><td>4</td><td>1038</td></tr>
+</table><div class="city-header">🏰 ﻿Atlantis</div>
+        <table><tr><th>Building</th><th>Level</th><th>Position</th></tr><tr><td>Farm</td><td>18</td><td>1040</td></tr>
+<tr><td>Farm</td><td>18</td><td>1039</td></tr>
+<tr><td>Farm</td><td>18</td><td>1038</td></tr>
+<tr><td>Farm</td><td>18</td><td>1037</td></tr>
+<tr><td>Farm</td><td>18</td><td>1036</td></tr>
+<tr><td>Farm</td><td>18</td><td>1035</td></tr>
+<tr><td>Farm</td><td>18</td><td>1034</td></tr>
+<tr><td>Farm</td><td>18</td><td>1033</td></tr>
+<tr><td>Farm</td><td>18</td><td>1032</td></tr>
+<tr><td>Farm</td><td>18</td><td>1031</td></tr>
+<tr><td>Farm</td><td>18</td><td>1030</td></tr>
+<tr><td>Farm</td><td>18</td><td>1029</td></tr>
+<tr><td>Farm</td><td>18</td><td>1028</td></tr>
+<tr><td>Farm</td><td>18</td><td>1027</td></tr>
+<tr><td>Farm</td><td>18</td><td>1026</td></tr>
+<tr><td>Farm</td><td>18</td><td>1025</td></tr>
+<tr><td>Farm</td><td>18</td><td>1024</td></tr>
+<tr><td>Farm</td><td>18</td><td>1023</td></tr>
+<tr><td>Farm</td><td>18</td><td>1022</td></tr>
+<tr><td>Farm</td><td>18</td><td>1021</td></tr>
+<tr><td>Farm</td><td>18</td><td>1020</td></tr>
+<tr><td>Farm</td><td>18</td><td>1019</td></tr>
+<tr><td>Farm</td><td>18</td><td>1018</td></tr>
+<tr><td>Farm</td><td>18</td><td>1017</td></tr>
+<tr><td>Farm</td><td>18</td><td>1016</td></tr>
+<tr><td>Farm</td><td>18</td><td>1015</td></tr>
+<tr><td>Farm</td><td>18</td><td>1014</td></tr>
+<tr><td>Farm</td><td>18</td><td>1013</td></tr>
+<tr><td>Farm</td><td>18</td><td>1012</td></tr>
+<tr><td>Farm</td><td>18</td><td>1011</td></tr>
+<tr><td>Farm</td><td>18</td><td>1010</td></tr>
+<tr><td>Farm</td><td>18</td><td>1009</td></tr>
+<tr><td>Farm</td><td>18</td><td>1008</td></tr>
+<tr><td>Farm</td><td>18</td><td>1007</td></tr>
+<tr><td>Farm</td><td>18</td><td>1006</td></tr>
+<tr><td>Farm</td><td>18</td><td>1005</td></tr>
+<tr><td>Farm</td><td>18</td><td>1004</td></tr>
+<tr><td>Farm</td><td>18</td><td>1003</td></tr>
+<tr><td>Farm</td><td>18</td><td>1002</td></tr>
+<tr><td>Farm</td><td>18</td><td>1001</td></tr>
+<tr><td>Embassy</td><td>10</td><td>31</td></tr>
+<tr><td>Cottage</td><td>10</td><td>30</td></tr>
+<tr><td>Cottage</td><td>10</td><td>29</td></tr>
+<tr><td>Cottage</td><td>10</td><td>28</td></tr>
+<tr><td>Cottage</td><td>10</td><td>27</td></tr>
+<tr><td>Barracks</td><td>10</td><td>26</td></tr>
+<tr><td>Barracks</td><td>10</td><td>25</td></tr>
+<tr><td>Barracks</td><td>10</td><td>24</td></tr>
+<tr><td>Barracks</td><td>10</td><td>23</td></tr>
+<tr><td>Barracks</td><td>10</td><td>22</td></tr>
+<tr><td>Barracks</td><td>10</td><td>21</td></tr>
+<tr><td>Barracks</td><td>10</td><td>20</td></tr>
+<tr><td>Barracks</td><td>10</td><td>19</td></tr>
+<tr><td>Barracks</td><td>10</td><td>18</td></tr>
+<tr><td>Barracks</td><td>10</td><td>17</td></tr>
+<tr><td>Barracks</td><td>10</td><td>16</td></tr>
+<tr><td>Barracks</td><td>10</td><td>15</td></tr>
+<tr><td>Barracks</td><td>10</td><td>14</td></tr>
+<tr><td>Barracks</td><td>10</td><td>13</td></tr>
+<tr><td>Beacon Tower</td><td>10</td><td>12</td></tr>
+<tr><td>Workshop</td><td>10</td><td>11</td></tr>
+<tr><td>Rally Spot</td><td>10</td><td>10</td></tr>
+<tr><td>Relief Station</td><td>10</td><td>9</td></tr>
+<tr><td>Academy</td><td>10</td><td>8</td></tr>
+<tr><td>Feasting Hall</td><td>10</td><td>7</td></tr>
+<tr><td>Cottage</td><td>10</td><td>6</td></tr>
+<tr><td>Marketplace</td><td>10</td><td>5</td></tr>
+<tr><td>Cottage</td><td>10</td><td>4</td></tr>
+<tr><td>Cottage</td><td>10</td><td>3</td></tr>
+<tr><td>Cottage</td><td>10</td><td>2</td></tr>
+<tr><td>Cottage</td><td>10</td><td>1</td></tr>
+<tr><td>Cottage</td><td>10</td><td>0</td></tr>
+<tr><td>Walls</td><td>10</td><td>-2</td></tr>
+<tr><td>Town Hall</td><td>10</td><td>-1</td></tr>
+</table></div><div id="resources" class="section">
+        <div class="card"><h3>Resources by City</h3>
+        <table><tr><th>City</th><th>Gold</th><th>Food</th><th>Wood</th><th>Stone</th><th>Iron</th><th>Population</th></tr><tr><td><b>aattack</b></td><td>100,079,410,745,199</td><td>0</td><td>10,165,914,902,217</td><td>1,544,705,754,233</td><td>2,350,995,490,292</td><td>39,150</td></tr>
+<tr><td><b>battack</b></td><td>49,566,160,025,154</td><td>0</td><td>8,131,456,736,816</td><td>2,891,950,883,161</td><td>2,376,768,167,018</td><td>27,550</td></tr>
+<tr><td><b>Borg</b></td><td>194,811,926,977,788</td><td>0</td><td>17,124,326,267,796</td><td>2,095,339,128,482</td><td>4,195,333,693,241</td><td>56,950</td></tr>
+<tr><td><b>f</b></td><td>75,142,608,790,558</td><td>0</td><td>11,635,512,847,764</td><td>2,619,705,606,113</td><td>3,665,726,142,496</td><td>33,050</td></tr>
+<tr><td><b>Falana</b></td><td>174,773,529,161,084</td><td>0</td><td>13,104,719,450,800</td><td>1,534,825,970,140</td><td>2,072,340,775,201</td><td>33,050</td></tr>
+<tr><td><b>Hindu</b></td><td>255,138,378,769,492</td><td>0</td><td>11,526,145,793,718</td><td>2,148,655,573,637</td><td>3,313,503,954,405</td><td>22,050</td></tr>
+<tr><td><b>Jerusalem</b></td><td>237,919,592,028,220</td><td>0</td><td>19,803,681,642,190</td><td>4,929,465,290,730</td><td>7,415,122,513,030</td><td>115,550</td></tr>
+<tr><td><b>LOLA</b></td><td>150,583,619,442,669</td><td>0</td><td>18,437,856,290,548</td><td>7,274,998,657,790</td><td>6,797,804,318,189</td><td>33,050</td></tr>
+<tr><td><b>Mojo</b></td><td>144,853,570,800,465</td><td>0</td><td>10,146,131,416,107</td><td>3,230,322,301,583</td><td>2,816,826,322,946</td><td>27,550</td></tr>
+<tr><td><b>﻿Atlantis</b></td><td>116,851,422,119,027</td><td>0</td><td>198,092,150,492,298</td><td>109,534,674,381,258</td><td>98,552,555,144,686</td><td>55,050</td></tr>
+</table></div></div><div id="colonies" class="section">
+        <div class="card"><h3>Colonies (58)</h3>
+        <table><tr><th>Owner City</th><th>Colony Name</th><th>Lord</th><th>Alliance</th><th>Can Levy</th></tr><tr><td><b>aattack</b></td><td>ByeBye</td><td>CrazyWW</td><td>1337</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>8Cyclops</td><td>Lord DMH</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>Vinita</td><td>SheCrazie</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>star</td><td>CrazyKid</td><td>1337</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>COLNIZ</td><td>CrazyWW</td><td>1337</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>EATSHTNDIE</td><td>CoolArrow</td><td>1337</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>2Zeus</td><td>Lord DMH</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>Tahlequah</td><td>ScalpTaker</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>ClearWater</td><td>ScalpTaker</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>CastleMak</td><td>CrazyWW</td><td>1337</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>SweatLodge</td><td>ScalpTaker</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>WarPath</td><td>ScalpTaker</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>1</td><td>KillHappy1</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>CA1</td><td>CoolArrow</td><td>1337</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>1CardShy</td><td>SheCrazie</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>Burrito</td><td>Lollian</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>KooKoo</td><td>SheCrazie</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>FORTDaneri</td><td>CrazyWW</td><td>1337</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>7Marine</td><td>Lord DMH</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>AVI</td><td>CoolArrow</td><td>1337</td><td>✓</td></tr>
+<tr><td><b>aattack</b></td><td>ANVIL</td><td>CrazyWW</td><td>1337</td><td>✓</td></tr>
+<tr><td><b>battack</b></td><td>TreeHouse</td><td>Nymia</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>battack</b></td><td>Tecumseh</td><td>Temik</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>battack</b></td><td>ClubHouse</td><td>Nymia</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>battack</b></td><td>6Hercules</td><td>Lord DMH</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>battack</b></td><td>HotHouse</td><td>Nymia</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>battack</b></td><td>Belgrade</td><td>Nymia</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>battack</b></td><td>Balls</td><td>Nymia</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>battack</b></td><td>DogHouse</td><td>Nymia</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>battack</b></td><td>PoolHouse</td><td>Nymia</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>battack</b></td><td>Pound</td><td>Nymia</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>battack</b></td><td>ManorHouse</td><td>Nymia</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>f</b></td><td>8</td><td>CrazyBalls</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>f</b></td><td>3</td><td>CrazyBalls</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>f</b></td><td>5</td><td>CrazyBalls</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>Hindu</b></td><td>IHAVEFOOD</td><td>Elloo</td><td>ThePride</td><td>✓</td></tr>
+<tr><td><b>Hindu</b></td><td>WarPath</td><td>Apache</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>Hindu</b></td><td>Rome</td><td>Apache</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>Hindu</b></td><td>Kylix</td><td>Coglaa</td><td></td><td>✓</td></tr>
+<tr><td><b>LOLA</b></td><td>AII</td><td>CoolArrow</td><td>1337</td><td>✓</td></tr>
+<tr><td><b>LOLA</b></td><td>Wombatland</td><td>CrazyWW</td><td>1337</td><td>✓</td></tr>
+<tr><td><b>LOLA</b></td><td>4RobinHood</td><td>Lord DMH</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>LOLA</b></td><td>AIV</td><td>CoolArrow</td><td>1337</td><td>✓</td></tr>
+<tr><td><b>LOLA</b></td><td>AI</td><td>CoolArrow</td><td>1337</td><td>✓</td></tr>
+<tr><td><b>LOLA</b></td><td>PultI</td><td>CoolArrow</td><td>1337</td><td>✓</td></tr>
+<tr><td><b>LOLA</b></td><td>Babylon</td><td>Lollian</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>LOLA</b></td><td>AVIII</td><td>CoolArrow</td><td>1337</td><td>✓</td></tr>
+<tr><td><b>LOLA</b></td><td>UHaul</td><td>CrazyWW</td><td>1337</td><td>✓</td></tr>
+<tr><td><b>LOLA</b></td><td>Nacho</td><td>Lollian</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>LOLA</b></td><td>Van</td><td>CrazyWW</td><td>1337</td><td>✓</td></tr>
+<tr><td><b>LOLA</b></td><td>ww</td><td>CrazyWW</td><td>1337</td><td>✓</td></tr>
+<tr><td><b>LOLA</b></td><td>PultII</td><td>CoolArrow</td><td>1337</td><td>✓</td></tr>
+<tr><td><b>Mojo</b></td><td>Dremur</td><td>Elloo</td><td>ThePride</td><td>✓</td></tr>
+<tr><td><b>Mojo</b></td><td>6</td><td>CrazyBalls</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>Mojo</b></td><td>Ten</td><td>Lord DMH</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>Mojo</b></td><td>Nutsso</td><td>SheCrazie</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>Mojo</b></td><td>4</td><td>CrazyBalls</td><td>ELITEXOD</td><td>✓</td></tr>
+<tr><td><b>Mojo</b></td><td>Phsyco1</td><td>SheCrazie</td><td>ELITEXOD</td><td>✓</td></tr>
+</table></div></div><div id="fields" class="section">
+        <div class="card"><h3>Fields (Valleys)</h3>
+        <table><tr><th>Owner City</th><th>Field Name</th><th>Type</th><th>Level</th><th>Coords</th><th>Field ID</th></tr><tr><td><b>aattack</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(5,1)</td><td><code>805</code></td></tr>
+<tr><td><b>aattack</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(10,790)</td><td><code>632010</code></td></tr>
+<tr><td><b>aattack</b></td><td>Forest</td><td>Forest</td><td>8</td><td>(11,792)</td><td><code>633611</code></td></tr>
+<tr><td><b>battack</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(18,11)</td><td><code>8818</code></td></tr>
+<tr><td><b>battack</b></td><td>Hill</td><td>Hill</td><td>1</td><td>(795,7)</td><td><code>6395</code></td></tr>
+<tr><td><b>battack</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(789,31)</td><td><code>25589</code></td></tr>
+<tr><td><b>battack</b></td><td>Lake</td><td>Lake</td><td>1</td><td>(18,793)</td><td><code>634418</code></td></tr>
+<tr><td><b>Borg</b></td><td>Flat</td><td>Flat</td><td>8</td><td>(790,797)</td><td><code>638390</code></td></tr>
+<tr><td><b>Borg</b></td><td>Flat</td><td>Flat</td><td>9</td><td>(791,796)</td><td><code>637591</code></td></tr>
+<tr><td><b>Borg</b></td><td>Flat</td><td>Flat</td><td>5</td><td>(789,796)</td><td><code>637589</code></td></tr>
+<tr><td><b>f</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(799,7)</td><td><code>6399</code></td></tr>
+<tr><td><b>f</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(18,23)</td><td><code>18418</code></td></tr>
+<tr><td><b>f</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(2,3)</td><td><code>2402</code></td></tr>
+<tr><td><b>f</b></td><td>Hill</td><td>Hill</td><td>4</td><td>(799,8)</td><td><code>7199</code></td></tr>
+<tr><td><b>Falana</b></td><td>Hill</td><td>Hill</td><td>10</td><td>(799,5)</td><td><code>4799</code></td></tr>
+<tr><td><b>Falana</b></td><td>Hill</td><td>Hill</td><td>10</td><td>(799,799)</td><td><code>639999</code></td></tr>
+<tr><td><b>Falana</b></td><td>Hill</td><td>Hill</td><td>1</td><td>(798,8)</td><td><code>7198</code></td></tr>
+<tr><td><b>Hindu</b></td><td>Grassland</td><td>Grassland</td><td>5</td><td>(8,6)</td><td><code>4808</code></td></tr>
+<tr><td><b>Hindu</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(10,9)</td><td><code>7210</code></td></tr>
+<tr><td><b>Hindu</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(20,22)</td><td><code>17620</code></td></tr>
+<tr><td><b>Hindu</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(17,3)</td><td><code>2417</code></td></tr>
+<tr><td><b>Hindu</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(28,25)</td><td><code>20028</code></td></tr>
+<tr><td><b>Hindu</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(12,0)</td><td><code>12</code></td></tr>
+<tr><td><b>Hindu</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(12,12)</td><td><code>9612</code></td></tr>
+<tr><td><b>Hindu</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(24,1)</td><td><code>824</code></td></tr>
+<tr><td><b>Hindu</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(7,6)</td><td><code>4807</code></td></tr>
+<tr><td><b>Jerusalem</b></td><td>Hill</td><td>Hill</td><td>10</td><td>(303,698)</td><td><code>558703</code></td></tr>
+<tr><td><b>Jerusalem</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(299,700)</td><td><code>560299</code></td></tr>
+<tr><td><b>Jerusalem</b></td><td>Flat</td><td>Flat</td><td>3</td><td>(326,125)</td><td><code>100326</code></td></tr>
+<tr><td><b>Jerusalem</b></td><td>Swamp</td><td>Swamp</td><td>6</td><td>(301,700)</td><td><code>560301</code></td></tr>
+<tr><td><b>LOLA</b></td><td>Lake</td><td>Lake</td><td>9</td><td>(1,1)</td><td><code>801</code></td></tr>
+<tr><td><b>Mojo</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(780,796)</td><td><code>637580</code></td></tr>
+<tr><td><b>Mojo</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(771,789)</td><td><code>631971</code></td></tr>
+<tr><td><b>Mojo</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(796,796)</td><td><code>637596</code></td></tr>
+<tr><td><b>Mojo</b></td><td>Swamp</td><td>Swamp</td><td>3</td><td>(792,796)</td><td><code>637592</code></td></tr>
+<tr><td><b>Mojo</b></td><td>Lake</td><td>Lake</td><td>10</td><td>(790,768)</td><td><code>615190</code></td></tr>
+<tr><td><b>﻿Atlantis</b></td><td>Grassland</td><td>Grassland</td><td>8</td><td>(799,0)</td><td><code>799</code></td></tr>
+</table></div></div><div id="friends" class="section">
+        <input type="text" class="search" placeholder="Search friends..." onkeyup="filterTable(this, 'friends-table')">
+        <div class="card"><h3>Friends (252)</h3>
+        <table id="friends-table"><tr><th>#</th><th>Name</th><th>Alliance</th><th>Level</th><th>Prestige</th></tr><tr><td>1</td><td><b>Logaholic</b></td><td></td><td>8</td><td>3,286,895</td></tr>
+<tr><td>2</td><td><b>TheCB</b></td><td></td><td>8</td><td>185,464,752</td></tr>
+<tr><td>3</td><td><b>BUNGARIAN</b></td><td></td><td>5</td><td>102,513,706</td></tr>
+<tr><td>4</td><td><b>Theone2</b></td><td></td><td>8</td><td>1,713,143,185</td></tr>
+<tr><td>5</td><td><b>EvilSister</b></td><td></td><td>4</td><td>0</td></tr>
+<tr><td>6</td><td><b>Zethon</b></td><td></td><td>8</td><td>1,767,527</td></tr>
+<tr><td>7</td><td><b>Screwball</b></td><td></td><td>0</td><td>16</td></tr>
+<tr><td>8</td><td><b>Slater</b></td><td></td><td>8</td><td>3,061,297</td></tr>
+<tr><td>9</td><td><b>twoveg</b></td><td></td><td>0</td><td>0</td></tr>
+<tr><td>10</td><td><b>birk1982</b></td><td></td><td>8</td><td>465,029</td></tr>
+<tr><td>11</td><td><b>Ironclad</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>12</td><td><b>Perkunas</b></td><td></td><td>8</td><td>445,131,364</td></tr>
+<tr><td>13</td><td><b>Alejandro</b></td><td></td><td>7</td><td>67,371,385</td></tr>
+<tr><td>14</td><td><b>Cyclopes</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>15</td><td><b>SnakeBite</b></td><td></td><td>0</td><td>0</td></tr>
+<tr><td>16</td><td><b>KBONE</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>17</td><td><b>Unb0rn</b></td><td></td><td>8</td><td>13,037,012</td></tr>
+<tr><td>18</td><td><b>Flikkity</b></td><td></td><td>0</td><td>12,871,417</td></tr>
+<tr><td>19</td><td><b>Lucinda4</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>20</td><td><b>GhostRaidr</b></td><td></td><td>8</td><td>2,693,131</td></tr>
+<tr><td>21</td><td><b>LordGoss</b></td><td></td><td>4</td><td>230,959</td></tr>
+<tr><td>22</td><td><b>TroubleSom</b></td><td></td><td>0</td><td>444</td></tr>
+<tr><td>23</td><td><b>Incindra</b></td><td></td><td>8</td><td>7</td></tr>
+<tr><td>24</td><td><b>Justified</b></td><td></td><td>0</td><td>7,213,455</td></tr>
+<tr><td>25</td><td><b>MrDirk</b></td><td></td><td>6</td><td>35,164,088</td></tr>
+<tr><td>26</td><td><b>PAB</b></td><td></td><td>8</td><td>16,717,593</td></tr>
+<tr><td>27</td><td><b>EvilPop</b></td><td></td><td>8</td><td>74,470</td></tr>
+<tr><td>28</td><td><b>barbaric</b></td><td></td><td>7</td><td>36,670,857</td></tr>
+<tr><td>29</td><td><b>DrgnLady</b></td><td></td><td>8</td><td>2,410,318</td></tr>
+<tr><td>30</td><td><b>Orintall</b></td><td></td><td>0</td><td>0</td></tr>
+<tr><td>31</td><td><b>Blown</b></td><td></td><td>8</td><td>828,436,858</td></tr>
+<tr><td>32</td><td><b>Embrey</b></td><td></td><td>8</td><td>3</td></tr>
+<tr><td>33</td><td><b>nailbomb</b></td><td></td><td>8</td><td>1,038,928,056</td></tr>
+<tr><td>34</td><td><b>Kratos_203</b></td><td></td><td>5</td><td>2,242,314</td></tr>
+<tr><td>35</td><td><b>KINGME</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>36</td><td><b>Delilia</b></td><td></td><td>4</td><td>6,628,456</td></tr>
+<tr><td>37</td><td><b>Simao</b></td><td></td><td>5</td><td>0</td></tr>
+<tr><td>38</td><td><b>Starb1</b></td><td></td><td>7</td><td>0</td></tr>
+<tr><td>39</td><td><b>Osiris</b></td><td></td><td>6</td><td>29,863,174</td></tr>
+<tr><td>40</td><td><b>Krid</b></td><td></td><td>8</td><td>78,900,007</td></tr>
+<tr><td>41</td><td><b>CrazyBalls</b></td><td></td><td>8</td><td>687,739</td></tr>
+<tr><td>42</td><td><b>LORDJAKE1</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>43</td><td><b>VicVeritas</b></td><td></td><td>0</td><td>1,306,186,780</td></tr>
+<tr><td>44</td><td><b>Dodie</b></td><td></td><td>0</td><td>11,106,600</td></tr>
+<tr><td>45</td><td><b>COUNTT</b></td><td></td><td>8</td><td>3,184,142</td></tr>
+<tr><td>46</td><td><b>Blackstone</b></td><td></td><td>8</td><td>43,143,677</td></tr>
+<tr><td>47</td><td><b>evilson</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>48</td><td><b>Lenni_203</b></td><td></td><td>4</td><td>3,259,761</td></tr>
+<tr><td>49</td><td><b>CarlYaz</b></td><td></td><td>8</td><td>167,236</td></tr>
+<tr><td>50</td><td><b>SirRich</b></td><td></td><td>4</td><td>214,520,404</td></tr>
+<tr><td>51</td><td><b>Marquis</b></td><td></td><td>8</td><td>53,417,419</td></tr>
+<tr><td>52</td><td><b>JoeFoy</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>53</td><td><b>RipnRoll</b></td><td></td><td>8</td><td>607,269</td></tr>
+<tr><td>54</td><td><b>MasterGoss</b></td><td></td><td>0</td><td>14,328,791</td></tr>
+<tr><td>55</td><td><b>EvilDad</b></td><td></td><td>6</td><td>5,109,243</td></tr>
+<tr><td>56</td><td><b>DeaconBlue</b></td><td></td><td>8</td><td>95,327,312</td></tr>
+<tr><td>57</td><td><b>WAR2</b></td><td></td><td>8</td><td>18,943,426</td></tr>
+<tr><td>58</td><td><b>Enforcer</b></td><td></td><td>8</td><td>509,301,237</td></tr>
+<tr><td>59</td><td><b>noob</b></td><td></td><td>0</td><td>0</td></tr>
+<tr><td>60</td><td><b>boltg1</b></td><td></td><td>8</td><td>8,784,416</td></tr>
+<tr><td>61</td><td><b>JackieNA1</b></td><td></td><td>0</td><td>1,223,589</td></tr>
+<tr><td>62</td><td><b>BLOODTOOTH</b></td><td></td><td>6</td><td>220,615,744</td></tr>
+<tr><td>63</td><td><b>Recon</b></td><td></td><td>8</td><td>68,611,543</td></tr>
+<tr><td>64</td><td><b>SweetPain</b></td><td></td><td>0</td><td>602,413,642</td></tr>
+<tr><td>65</td><td><b>Bluehorse</b></td><td></td><td>0</td><td>32,756,193</td></tr>
+<tr><td>66</td><td><b>viper</b></td><td></td><td>8</td><td>26,598,916</td></tr>
+<tr><td>67</td><td><b>Tenabutter</b></td><td></td><td>8</td><td>9,505,963</td></tr>
+<tr><td>68</td><td><b>LordRionus</b></td><td></td><td>0</td><td>123,291</td></tr>
+<tr><td>69</td><td><b>ROJ</b></td><td></td><td>8</td><td>35,075,320</td></tr>
+<tr><td>70</td><td><b>lifeless_204</b></td><td></td><td>8</td><td>8,467,058</td></tr>
+<tr><td>71</td><td><b>IvanCarlo</b></td><td></td><td>8</td><td>33,613,756</td></tr>
+<tr><td>72</td><td><b>oden</b></td><td></td><td>8</td><td>15,773,091</td></tr>
+<tr><td>73</td><td><b>boltg2</b></td><td></td><td>8</td><td>61,779</td></tr>
+<tr><td>74</td><td><b>CrazyStew</b></td><td></td><td>8</td><td>17,180,036</td></tr>
+<tr><td>75</td><td><b>Ailell</b></td><td></td><td>8</td><td>198,614</td></tr>
+<tr><td>76</td><td><b>Art</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>77</td><td><b>Niko</b></td><td></td><td>8</td><td>52,528,195</td></tr>
+<tr><td>78</td><td><b>Starb2</b></td><td></td><td>8</td><td>4,529</td></tr>
+<tr><td>79</td><td><b>WHEMP</b></td><td></td><td>8</td><td>138,260,082</td></tr>
+<tr><td>80</td><td><b>Jayded</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>81</td><td><b>Broderick</b></td><td></td><td>0</td><td>0</td></tr>
+<tr><td>82</td><td><b>Krunk</b></td><td></td><td>0</td><td>0</td></tr>
+<tr><td>83</td><td><b>killmegood</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>84</td><td><b>BelleAnne</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>85</td><td><b>Mars</b></td><td></td><td>0</td><td>746,260</td></tr>
+<tr><td>86</td><td><b>JesseJames</b></td><td></td><td>8</td><td>97,676,464</td></tr>
+<tr><td>87</td><td><b>Shakuraa</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>88</td><td><b>Sirens</b></td><td></td><td>6</td><td>0</td></tr>
+<tr><td>89</td><td><b>HoleMonty</b></td><td></td><td>7</td><td>343,807</td></tr>
+<tr><td>90</td><td><b>LikeABoss</b></td><td></td><td>8</td><td>23,371,030</td></tr>
+<tr><td>91</td><td><b>HHGoA</b></td><td></td><td>8</td><td>9,312,715</td></tr>
+<tr><td>92</td><td><b>Dowen</b></td><td></td><td>0</td><td>111,970,846</td></tr>
+<tr><td>93</td><td><b>kangWR</b></td><td></td><td>8</td><td>136,984</td></tr>
+<tr><td>94</td><td><b>RedSpy</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>95</td><td><b>Trish</b></td><td></td><td>0</td><td>1,172,668,427</td></tr>
+<tr><td>96</td><td><b>Louis</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>97</td><td><b>ttom</b></td><td></td><td>8</td><td>1,364,612,738</td></tr>
+<tr><td>98</td><td><b>ThunderLee</b></td><td></td><td>4</td><td>9,927,655</td></tr>
+<tr><td>99</td><td><b>Trond</b></td><td></td><td>4</td><td>1,445,189</td></tr>
+<tr><td>100</td><td><b>SheRaa</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>101</td><td><b>RaaRaa</b></td><td></td><td>0</td><td>0</td></tr>
+<tr><td>102</td><td><b>Phreaker</b></td><td></td><td>8</td><td>366,762</td></tr>
+<tr><td>103</td><td><b>CrazyGD</b></td><td></td><td>8</td><td>106,007,030</td></tr>
+<tr><td>104</td><td><b>Z0mbieCorp</b></td><td></td><td>8</td><td>12,983,298</td></tr>
+<tr><td>105</td><td><b>Summer</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>106</td><td><b>WhiteRhino</b></td><td></td><td>8</td><td>341,603,062</td></tr>
+<tr><td>107</td><td><b>Daneri</b></td><td></td><td>4</td><td>0</td></tr>
+<tr><td>108</td><td><b>MrMorpheus</b></td><td></td><td>8</td><td>3,812,686</td></tr>
+<tr><td>109</td><td><b>MANNYG</b></td><td></td><td>8</td><td>33,907,319</td></tr>
+<tr><td>110</td><td><b>DrXerxes</b></td><td></td><td>5</td><td>1,866,586</td></tr>
+<tr><td>111</td><td><b>Lord SaV</b></td><td></td><td>8</td><td>3,646,919</td></tr>
+<tr><td>112</td><td><b>FRANKJAMES</b></td><td></td><td>8</td><td>13,059,355</td></tr>
+<tr><td>113</td><td><b>belyea</b></td><td></td><td>8</td><td>12,265,847</td></tr>
+<tr><td>114</td><td><b>BOTKILLER</b></td><td></td><td>8</td><td>176,195,701</td></tr>
+<tr><td>115</td><td><b>KillHappy1</b></td><td></td><td>8</td><td>26,353,746</td></tr>
+<tr><td>116</td><td><b>Woerfu</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>117</td><td><b>ScaryGoof</b></td><td></td><td>8</td><td>61,721,027</td></tr>
+<tr><td>118</td><td><b>LordWesley</b></td><td></td><td>8</td><td>4,941,835</td></tr>
+<tr><td>119</td><td><b>Deathlock</b></td><td></td><td>8</td><td>4,523,448</td></tr>
+<tr><td>120</td><td><b>Forthwind</b></td><td></td><td>4</td><td>120,884,671</td></tr>
+<tr><td>121</td><td><b>Hiker</b></td><td></td><td>8</td><td>324,122</td></tr>
+<tr><td>122</td><td><b>FridayFlute</b></td><td></td><td>8</td><td>884,942,444</td></tr>
+<tr><td>123</td><td><b>BadDing</b></td><td></td><td>8</td><td>1,521,512</td></tr>
+<tr><td>124</td><td><b>ZurkonJr</b></td><td></td><td>8</td><td>39</td></tr>
+<tr><td>125</td><td><b>Lucinda3</b></td><td></td><td>8</td><td>1,492,230</td></tr>
+<tr><td>126</td><td><b>OliveOil</b></td><td></td><td>8</td><td>11,710,770</td></tr>
+<tr><td>127</td><td><b>CrazyKid</b></td><td></td><td>8</td><td>1,117,394</td></tr>
+<tr><td>128</td><td><b>bcjt</b></td><td></td><td>6</td><td>769,341,699</td></tr>
+<tr><td>129</td><td><b>RayBorn</b></td><td></td><td>8</td><td>17,778,278</td></tr>
+<tr><td>130</td><td><b>AtlasTitan</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>131</td><td><b>ScaryKitty</b></td><td></td><td>8</td><td>1,825,362</td></tr>
+<tr><td>132</td><td><b>CrazyVenom</b></td><td></td><td>8</td><td>102,730,582</td></tr>
+<tr><td>133</td><td><b>Diaperman</b></td><td></td><td>4</td><td>1,750,119,168</td></tr>
+<tr><td>134</td><td><b>Ivarr</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>135</td><td><b>AC_203</b></td><td></td><td>7</td><td>1</td></tr>
+<tr><td>136</td><td><b>Makarov</b></td><td></td><td>0</td><td>48,076</td></tr>
+<tr><td>137</td><td><b>Necrophile</b></td><td></td><td>8</td><td>4,152,384</td></tr>
+<tr><td>138</td><td><b>LastKing</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>139</td><td><b>setuid</b></td><td></td><td>6</td><td>118,920,181</td></tr>
+<tr><td>140</td><td><b>GreenMist</b></td><td></td><td>6</td><td>100,134,671</td></tr>
+<tr><td>141</td><td><b>BlackRyno</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>142</td><td><b>EvilTab</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>143</td><td><b>CrazyAnt</b></td><td></td><td>8</td><td>321,047</td></tr>
+<tr><td>144</td><td><b>Excellence</b></td><td></td><td>8</td><td>1,051,014,676</td></tr>
+<tr><td>145</td><td><b>ManaCat</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>146</td><td><b>Animal711</b></td><td></td><td>4</td><td>0</td></tr>
+<tr><td>147</td><td><b>DeepPain</b></td><td></td><td>6</td><td>32,766,507</td></tr>
+<tr><td>148</td><td><b>MzHyde</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>149</td><td><b>Lucinda2</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>150</td><td><b>andyc</b></td><td></td><td>0</td><td>4,558,929</td></tr>
+<tr><td>151</td><td><b>Zaknafein</b></td><td></td><td>8</td><td>369,622,251</td></tr>
+<tr><td>152</td><td><b>BigJon</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>153</td><td><b>Starb3</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>154</td><td><b>Warriorr</b></td><td></td><td>6</td><td>123,431,417</td></tr>
+<tr><td>155</td><td><b>JAMCAVEMAN</b></td><td></td><td>8</td><td>12,652,286</td></tr>
+<tr><td>156</td><td><b>LadyTara</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>157</td><td><b>tabbikat</b></td><td></td><td>8</td><td>6,629,253</td></tr>
+<tr><td>158</td><td><b>Klipsch</b></td><td></td><td>8</td><td>110,344</td></tr>
+<tr><td>159</td><td><b>CrazyRab</b></td><td></td><td>5</td><td>3,369,088</td></tr>
+<tr><td>160</td><td><b>Isis</b></td><td></td><td>6</td><td>3,595,369</td></tr>
+<tr><td>161</td><td><b>Renagade</b></td><td></td><td>8</td><td>183,752,102</td></tr>
+<tr><td>162</td><td><b>KingAvala</b></td><td></td><td>0</td><td>1,596,848,445</td></tr>
+<tr><td>163</td><td><b>Brian89</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>164</td><td><b>Breezy</b></td><td></td><td>5</td><td>944,922,950</td></tr>
+<tr><td>165</td><td><b>VapidVixen</b></td><td></td><td>5</td><td>5,209,691</td></tr>
+<tr><td>166</td><td><b>TheRiddler</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>167</td><td><b>ZeeZee</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>168</td><td><b>CrazyTurk</b></td><td></td><td>6</td><td>664,641,226</td></tr>
+<tr><td>169</td><td><b>DEVIOUS</b></td><td></td><td>7</td><td>690,516</td></tr>
+<tr><td>170</td><td><b>CrazyIvana</b></td><td></td><td>8</td><td>177,876,247</td></tr>
+<tr><td>171</td><td><b>Jobber</b></td><td></td><td>0</td><td>1,410,888,631</td></tr>
+<tr><td>172</td><td><b>Loria</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>173</td><td><b>Telemachus</b></td><td></td><td>8</td><td>25,967,110</td></tr>
+<tr><td>174</td><td><b>Temper</b></td><td></td><td>8</td><td>3,722,621</td></tr>
+<tr><td>175</td><td><b>Kistari</b></td><td></td><td>0</td><td>892,613,096</td></tr>
+<tr><td>176</td><td><b>so2much</b></td><td></td><td>8</td><td>645,153</td></tr>
+<tr><td>177</td><td><b>Morie</b></td><td></td><td>8</td><td>43,797</td></tr>
+<tr><td>178</td><td><b>Celvar</b></td><td></td><td>8</td><td>512,543,742</td></tr>
+<tr><td>179</td><td><b>ironin</b></td><td></td><td>0</td><td>26,432,182</td></tr>
+<tr><td>180</td><td><b>CrazyLara</b></td><td></td><td>8</td><td>7,714,435</td></tr>
+<tr><td>181</td><td><b>Aragos</b></td><td></td><td>0</td><td>475,864,512</td></tr>
+<tr><td>182</td><td><b>85TheEnemy</b></td><td></td><td>6</td><td>24,417,554</td></tr>
+<tr><td>183</td><td><b>Nymia</b></td><td></td><td>8</td><td>129,485,513</td></tr>
+<tr><td>184</td><td><b>Toothless</b></td><td></td><td>7</td><td>5,452,484</td></tr>
+<tr><td>185</td><td><b>Bloodyturd</b></td><td></td><td>0</td><td>8,182,909</td></tr>
+<tr><td>186</td><td><b>Dinger</b></td><td></td><td>0</td><td>5,377,414</td></tr>
+<tr><td>187</td><td><b>Zakalath</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>188</td><td><b>Pakc</b></td><td></td><td>4</td><td>4,927,485</td></tr>
+<tr><td>189</td><td><b>Dogie</b></td><td></td><td>0</td><td>3,241,574</td></tr>
+<tr><td>190</td><td><b>cashmoneycool</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>191</td><td><b>Wimpy1</b></td><td></td><td>8</td><td>2,114,740</td></tr>
+<tr><td>192</td><td><b>GorgoQueen</b></td><td></td><td>5</td><td>12,540,158</td></tr>
+<tr><td>193</td><td><b>beard</b></td><td></td><td>8</td><td>3,347,496</td></tr>
+<tr><td>194</td><td><b>Ogliss</b></td><td></td><td>6</td><td>0</td></tr>
+<tr><td>195</td><td><b>Lucinda1</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>196</td><td><b>CrazyR1G</b></td><td></td><td>8</td><td>255,969</td></tr>
+<tr><td>197</td><td><b>evonian</b></td><td></td><td>8</td><td>595,817</td></tr>
+<tr><td>198</td><td><b>SpasMonkey</b></td><td></td><td>8</td><td>67</td></tr>
+<tr><td>199</td><td><b>MysteryGrl</b></td><td></td><td>8</td><td>766,970</td></tr>
+<tr><td>200</td><td><b>Nocturna</b></td><td></td><td>8</td><td>9,780,385</td></tr>
+<tr><td>201</td><td><b>Chipmunk</b></td><td></td><td>8</td><td>215,240</td></tr>
+<tr><td>202</td><td><b>ChodeBitch</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>203</td><td><b>KrazyTurk</b></td><td></td><td>7</td><td>0</td></tr>
+<tr><td>204</td><td><b>Naut</b></td><td></td><td>8</td><td>5,434,305</td></tr>
+<tr><td>205</td><td><b>kenneth87</b></td><td></td><td>8</td><td>60,100,665</td></tr>
+<tr><td>206</td><td><b>BastardSOB</b></td><td></td><td>0</td><td>86,959,934</td></tr>
+<tr><td>207</td><td><b>trinitard</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>208</td><td><b>Archemedes</b></td><td></td><td>8</td><td>4,897,598</td></tr>
+<tr><td>209</td><td><b>damouse</b></td><td></td><td>8</td><td>1,465,051</td></tr>
+<tr><td>210</td><td><b>ProfChaos</b></td><td></td><td>0</td><td>6,429,335</td></tr>
+<tr><td>211</td><td><b>Tang</b></td><td></td><td>8</td><td>11,767,572</td></tr>
+<tr><td>212</td><td><b>LionOfWar</b></td><td></td><td>4</td><td>17,070,050</td></tr>
+<tr><td>213</td><td><b>SamsonKhan</b></td><td></td><td>8</td><td>18,085,100</td></tr>
+<tr><td>214</td><td><b>Lollian</b></td><td></td><td>8</td><td>30,731</td></tr>
+<tr><td>215</td><td><b>JD357</b></td><td></td><td>8</td><td>7,830,265</td></tr>
+<tr><td>216</td><td><b>Rochut</b></td><td></td><td>8</td><td>9,215,175</td></tr>
+<tr><td>217</td><td><b>Krypto</b></td><td></td><td>8</td><td>15,246,983</td></tr>
+<tr><td>218</td><td><b>Sluggershug</b></td><td></td><td>0</td><td>13,845,613</td></tr>
+<tr><td>219</td><td><b>BBBTX</b></td><td></td><td>4</td><td>165,226,530</td></tr>
+<tr><td>220</td><td><b>MadKillah</b></td><td></td><td>8</td><td>5,497,650</td></tr>
+<tr><td>221</td><td><b>Maverik22</b></td><td></td><td>8</td><td>235,913,373</td></tr>
+<tr><td>222</td><td><b>Cobra</b></td><td></td><td>8</td><td>41,286,300</td></tr>
+<tr><td>223</td><td><b>Saul</b></td><td></td><td>0</td><td>6,508,933</td></tr>
+<tr><td>224</td><td><b>Vorador</b></td><td></td><td>4</td><td>10,857,466</td></tr>
+<tr><td>225</td><td><b>Wolfman</b></td><td></td><td>8</td><td>2,657,574</td></tr>
+<tr><td>226</td><td><b>bumblebie</b></td><td></td><td>0</td><td>4,712,683</td></tr>
+<tr><td>227</td><td><b>Nympho</b></td><td></td><td>8</td><td>2,284,930</td></tr>
+<tr><td>228</td><td><b>Pontos</b></td><td></td><td>0</td><td>0</td></tr>
+<tr><td>229</td><td><b>CMurder</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>230</td><td><b>LordBelial_204</b></td><td></td><td>0</td><td>2,326,494</td></tr>
+<tr><td>231</td><td><b>Quillan</b></td><td></td><td>8</td><td>1,465,424</td></tr>
+<tr><td>232</td><td><b>Bow2Master</b></td><td></td><td>0</td><td>938,909,100</td></tr>
+<tr><td>233</td><td><b>LaneyKins</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>234</td><td><b>darat</b></td><td></td><td>8</td><td>314,308,772</td></tr>
+<tr><td>235</td><td><b>Menhit</b></td><td></td><td>8</td><td>1,174,334</td></tr>
+<tr><td>236</td><td><b>RedQueen</b></td><td></td><td>5</td><td>57,257,114</td></tr>
+<tr><td>237</td><td><b>Orias</b></td><td></td><td>6</td><td>527,777,274</td></tr>
+<tr><td>238</td><td><b>Sambuca</b></td><td></td><td>0</td><td>2,913,493</td></tr>
+<tr><td>239</td><td><b>MissViper</b></td><td></td><td>6</td><td>9,883,489</td></tr>
+<tr><td>240</td><td><b>McRandall</b></td><td></td><td>8</td><td>1,379,638,194</td></tr>
+<tr><td>241</td><td><b>Tuscan</b></td><td></td><td>8</td><td>872</td></tr>
+<tr><td>242</td><td><b>PowerPuFF</b></td><td></td><td>8</td><td>1,038,837</td></tr>
+<tr><td>243</td><td><b>Minotaur</b></td><td></td><td>4</td><td>4,781,937</td></tr>
+<tr><td>244</td><td><b>LaneyKin</b></td><td></td><td>0</td><td>0</td></tr>
+<tr><td>245</td><td><b>kittenbaby</b></td><td></td><td>0</td><td>9,128,660</td></tr>
+<tr><td>246</td><td><b>Thermite</b></td><td></td><td>0</td><td>6,975,907</td></tr>
+<tr><td>247</td><td><b>Marco70</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>248</td><td><b>CrazyChod</b></td><td></td><td>8</td><td>12,737,364</td></tr>
+<tr><td>249</td><td><b>TommyG</b></td><td></td><td>8</td><td>1,221,576</td></tr>
+<tr><td>250</td><td><b>Van</b></td><td></td><td>0</td><td>0</td></tr>
+<tr><td>251</td><td><b>CrazyWW</b></td><td></td><td>8</td><td>0</td></tr>
+<tr><td>252</td><td><b>Xploit</b></td><td></td><td>8</td><td>37,685,283</td></tr>
+</table></div></div>
+    </div>
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        function filterTable(input, tableId) {
+            const filter = input.value.toLowerCase();
+            const table = document.getElementById(tableId);
+            const rows = table.getElementsByTagName('tr');
+            for (let i = 1; i < rows.length; i++) {
+                const text = rows[i].textContent.toLowerCase();
+                rows[i].style.display = text.includes(filter) ? '' : 'none';
+            }
+        }
+    </script>
+</body>
+</html>

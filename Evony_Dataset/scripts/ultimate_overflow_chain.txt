@@ -1,0 +1,98 @@
+// BORG TOOLKIT - Ultimate Overflow Chain
+// Executes overflow for ALL troop types
+// Maximum resource extraction
+
+setsilence off
+echo ========================================
+echo ULTIMATE OVERFLOW CHAIN
+echo All troop types - MAXIMUM GAIN
+echo ========================================
+
+// Worker overflow (cost 50, threshold 42,949,673)
+echo [1/12] Worker...
+train wo:42949673
+sleep 300
+cleartroopqueues
+sleep 300
+
+// Warrior overflow (cost 75, threshold 28,633,116)
+echo [2/12] Warrior...
+train wa:28633116
+sleep 300
+cleartroopqueues
+sleep 300
+
+// Scout overflow (cost 100, threshold 21,474,837)
+echo [3/12] Scout...
+train sc:21474837
+sleep 300
+cleartroopqueues
+sleep 300
+
+// Pikeman overflow (cost 200, threshold 10,737,419)
+echo [4/12] Pikeman...
+train pi:10737419
+sleep 300
+cleartroopqueues
+sleep 300
+
+// Swordsman overflow (cost 250, threshold 8,589,935)
+echo [5/12] Swordsman...
+train sw:8589935
+sleep 300
+cleartroopqueues
+sleep 300
+
+// Archer overflow (cost 350, threshold 6,135,037)
+echo [6/12] Archer...
+train a:6135037
+sleep 300
+cleartroopqueues
+sleep 300
+
+// Cavalry overflow (cost 800, threshold 2,684,355)
+echo [7/12] Cavalry...
+train cav:2684355
+sleep 300
+cleartroopqueues
+sleep 300
+
+// Cataphract overflow (cost 1500, threshold 1,431,656)
+echo [8/12] Cataphract...
+train cata:1431656
+sleep 300
+cleartroopqueues
+sleep 300
+
+// Transporter overflow (cost 300, threshold 7,158,279)
+echo [9/12] Transporter...
+train tr:7158279
+sleep 300
+cleartroopqueues
+sleep 300
+
+// Ballista overflow (cost 2000, threshold 1,073,742)
+echo [10/12] Ballista...
+train ba:1073742
+sleep 300
+cleartroopqueues
+sleep 300
+
+// Ram overflow (cost 2500, threshold 858,994)
+echo [11/12] Ram...
+train r:858994
+sleep 300
+cleartroopqueues
+sleep 300
+
+// Catapult overflow (cost 3000, threshold 715,828)
+echo [12/12] Catapult...
+train c:715828
+sleep 300
+cleartroopqueues
+sleep 300
+
+echo ========================================
+echo OVERFLOW CHAIN COMPLETE
+echo Check resources - should see MASSIVE gain
+echo ========================================

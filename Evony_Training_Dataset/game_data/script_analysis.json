@@ -1,0 +1,764 @@
+{
+  "total_scripts": 212,
+  "commands_used": {
+    "echo": 886,
+    "label": 1254,
+    "sleep": 1054,
+    "goto": 446,
+    "set": 4280,
+    "if": 1536,
+    "include": 60,
+    "setarr": 126,
+    "attack": 50,
+    "loop": 144,
+    "train": 26,
+    "setarray": 58,
+    "scout": 30,
+    "reinforce": 8
+  },
+  "patterns": [],
+  "scripts": {
+    "03_gold_farm.txt": {
+      "size": 498,
+      "lines": 30,
+      "labels": 1,
+      "gotos": 1,
+      "loops": 0
+    },
+    "04_item_rapid_use.txt": {
+      "size": 699,
+      "lines": 29,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "05_auto_quest.txt": {
+      "size": 364,
+      "lines": 14,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "06_amulet_spin.txt": {
+      "size": 446,
+      "lines": 22,
+      "labels": 1,
+      "gotos": 1,
+      "loops": 0
+    },
+    "20m_Archer_33k_Cata.txt": {
+      "size": 1239,
+      "lines": 37,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "507a064538a979abeb2c38cdf771cce6.txt": {
+      "size": 3908,
+      "lines": 73,
+      "labels": 12,
+      "gotos": 12,
+      "loops": 1
+    },
+    "7of9_1Borg_scrip_workingt.txt": {
+      "size": 4228,
+      "lines": 143,
+      "labels": 7,
+      "gotos": 11,
+      "loops": 0
+    },
+    "7of9_4Borg_goals.txt": {
+      "size": 289,
+      "lines": 6,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "account_warmup_v1.0.txt": {
+      "size": 6503,
+      "lines": 310,
+      "labels": 9,
+      "gotos": 3,
+      "loops": 0
+    },
+    "Adevasion_goals.txt": {
+      "size": 13952,
+      "lines": 227,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "AdvEvasion.txt": {
+      "size": 14023,
+      "lines": 252,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "advEvasion_for_RE.txt": {
+      "size": 12812,
+      "lines": 194,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "all_accounts.txt": {
+      "size": 3607,
+      "lines": 90,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "all_config_sol_paths.txt": {
+      "size": 191450,
+      "lines": 1466,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "attack.txt": {
+      "size": 473,
+      "lines": 12,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "Banner of the Horde.TXT": {
+      "size": 828,
+      "lines": 29,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "basicgoals.txt": {
+      "size": 4776,
+      "lines": 158,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "BATCH_TROOP_EXTRACT.txt": {
+      "size": 4690,
+      "lines": 131,
+      "labels": 1,
+      "gotos": 0,
+      "loops": 0
+    },
+    "capAnd14Checker.txt": {
+      "size": 12615,
+      "lines": 105,
+      "labels": 11,
+      "gotos": 10,
+      "loops": 0
+    },
+    "Check_These_goals.txt": {
+      "size": 368,
+      "lines": 9,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "Citys_PORT.txt": {
+      "size": 1727,
+      "lines": 49,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "city_lifecycle_manager_v1.0.txt": {
+      "size": 4654,
+      "lines": 224,
+      "labels": 9,
+      "gotos": 2,
+      "loops": 0
+    },
+    "complete_extraction_v2.txt": {
+      "size": 5749,
+      "lines": 157,
+      "labels": 6,
+      "gotos": 7,
+      "loops": 0
+    },
+    "Components_Missing.txt": {
+      "size": 1174,
+      "lines": 53,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "createhcmap.txt": {
+      "size": 3170,
+      "lines": 32,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "Current.txt": {
+      "size": 167,
+      "lines": 19,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "deleteemails.txt": {
+      "size": 564,
+      "lines": 20,
+      "labels": 5,
+      "gotos": 6,
+      "loops": 0
+    },
+    "dp.txt": {
+      "size": 2615,
+      "lines": 49,
+      "labels": 5,
+      "gotos": 5,
+      "loops": 0
+    },
+    "emails_no_password_20260104_014928.txt": {
+      "size": 11116,
+      "lines": 303,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "emails_no_password_20260104_015324.txt": {
+      "size": 11199,
+      "lines": 306,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "epic_hh_hunter.txt": {
+      "size": 15794,
+      "lines": 460,
+      "labels": 44,
+      "gotos": 38,
+      "loops": 0
+    },
+    "Evony_UI.txt": {
+      "size": 1290,
+      "lines": 26,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "extract_heroes_detailed.txt": {
+      "size": 2515,
+      "lines": 98,
+      "labels": 0,
+      "gotos": 6,
+      "loops": 0
+    },
+    "extract_items_detailed.txt": {
+      "size": 4538,
+      "lines": 151,
+      "labels": 0,
+      "gotos": 2,
+      "loops": 0
+    },
+    "fastattack (1).txt": {
+      "size": 3773,
+      "lines": 117,
+      "labels": 5,
+      "gotos": 8,
+      "loops": 0
+    },
+    "fastattack (2).txt": {
+      "size": 4022,
+      "lines": 125,
+      "labels": 5,
+      "gotos": 8,
+      "loops": 0
+    },
+    "fastattack (3).txt": {
+      "size": 4310,
+      "lines": 142,
+      "labels": 7,
+      "gotos": 11,
+      "loops": 0
+    },
+    "fastattack (4).txt": {
+      "size": 4340,
+      "lines": 143,
+      "labels": 7,
+      "gotos": 11,
+      "loops": 0
+    },
+    "fastattack (v4).txt": {
+      "size": 4366,
+      "lines": 143,
+      "labels": 7,
+      "gotos": 11,
+      "loops": 0
+    },
+    "fastattack(v1).txt": {
+      "size": 3773,
+      "lines": 117,
+      "labels": 5,
+      "gotos": 8,
+      "loops": 0
+    },
+    "fastattack.txt": {
+      "size": 3773,
+      "lines": 117,
+      "labels": 5,
+      "gotos": 8,
+      "loops": 0
+    },
+    "fortificationspeedup.txt": {
+      "size": 2983,
+      "lines": 77,
+      "labels": 12,
+      "gotos": 17,
+      "loops": 0
+    },
+    "Gate Policy.TXT": {
+      "size": 1470,
+      "lines": 30,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "gear-script.txt": {
+      "size": 1677,
+      "lines": 56,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 1
+    },
+    "HarleQuinZ.TXT": {
+      "size": 1147,
+      "lines": 20,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "Hero_Juice.TXT": {
+      "size": 1783,
+      "lines": 43,
+      "labels": 5,
+      "gotos": 5,
+      "loops": 0
+    },
+    "Hero_Level_up.txt": {
+      "size": 620,
+      "lines": 22,
+      "labels": 3,
+      "gotos": 5,
+      "loops": 0
+    },
+    "hero_optimizer_v1.0.txt": {
+      "size": 4061,
+      "lines": 184,
+      "labels": 9,
+      "gotos": 2,
+      "loops": 0
+    },
+    "hh_database.txt": {
+      "size": 22429,
+      "lines": 651,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "HH_Heroes_To_Get.txt": {
+      "size": 4744,
+      "lines": 91,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "khan_Items.txt": {
+      "size": 794,
+      "lines": 28,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "Lions_Ultamate_Disarmer.txt": {
+      "size": 2067,
+      "lines": 40,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "localhost.txt": {
+      "size": 2182,
+      "lines": 46,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "LOST_HISTORIC_HEROES.txt": {
+      "size": 727,
+      "lines": 21,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "LOST_HISTORIC_HEROES_2022.txt": {
+      "size": 11130,
+      "lines": 218,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "LV150_HISTORIC_HEROES.txt": {
+      "size": 13748,
+      "lines": 255,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "Maintown Goal.txt": {
+      "size": 783,
+      "lines": 23,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "map-scans.txt": {
+      "size": 1055,
+      "lines": 25,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "master_extraction.txt": {
+      "size": 4791,
+      "lines": 151,
+      "labels": 0,
+      "gotos": 10,
+      "loops": 0
+    },
+    "message(3).txt": {
+      "size": 2866,
+      "lines": 37,
+      "labels": 2,
+      "gotos": 2,
+      "loops": 0
+    },
+    "missing.txt": {
+      "size": 1743,
+      "lines": 59,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "Multi_Attack.txt": {
+      "size": 5456,
+      "lines": 131,
+      "labels": 22,
+      "gotos": 23,
+      "loops": 0
+    },
+    "multi_city_coordinator_v1.0.txt": {
+      "size": 4472,
+      "lines": 196,
+      "labels": 12,
+      "gotos": 6,
+      "loops": 0
+    },
+    "New Text Document (2).TXT": {
+      "size": 417,
+      "lines": 23,
+      "labels": 1,
+      "gotos": 1,
+      "loops": 2
+    },
+    "newAccountStarter_Script_for_RE.txt": {
+      "size": 11158,
+      "lines": 426,
+      "labels": 15,
+      "gotos": 10,
+      "loops": 0
+    },
+    "npc_farmer_v1.0.txt": {
+      "size": 3415,
+      "lines": 149,
+      "labels": 8,
+      "gotos": 6,
+      "loops": 0
+    },
+    "questaddarmy.txt": {
+      "size": 1193,
+      "lines": 33,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "quick_spam_v2.0.txt": {
+      "size": 2134,
+      "lines": 93,
+      "labels": 7,
+      "gotos": 5,
+      "loops": 0
+    },
+    "race_condition_blitz.txt": {
+      "size": 1954,
+      "lines": 119,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "readme.txt": {
+      "size": 317,
+      "lines": 9,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "readme_1.txt": {
+      "size": 476,
+      "lines": 17,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "Readme_2.txt": {
+      "size": 216,
+      "lines": 8,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "Readme_3.txt": {
+      "size": 378,
+      "lines": 10,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "Readme_4.txt": {
+      "size": 238,
+      "lines": 7,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "readme_5.txt": {
+      "size": 242,
+      "lines": 8,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "readme_6.txt": {
+      "size": 134,
+      "lines": 5,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "REAL_LOST_HH.txt": {
+      "size": 155854,
+      "lines": 2891,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "Reinforce_Resources.txt": {
+      "size": 463,
+      "lines": 39,
+      "labels": 1,
+      "gotos": 1,
+      "loops": 3
+    },
+    "remainingachievements.txt": {
+      "size": 1025,
+      "lines": 20,
+      "labels": 3,
+      "gotos": 4,
+      "loops": 0
+    },
+    "Remove Sec Code.TXT": {
+      "size": 376,
+      "lines": 13,
+      "labels": 1,
+      "gotos": 1,
+      "loops": 0
+    },
+    "rev131-spinariesamuletswithscoreboard.txt": {
+      "size": 2397,
+      "lines": 43,
+      "labels": 5,
+      "gotos": 6,
+      "loops": 1
+    },
+    "RE_allCityTroopQ.txt": {
+      "size": 1607,
+      "lines": 29,
+      "labels": 4,
+      "gotos": 6,
+      "loops": 0
+    },
+    "Scanmap.txt": {
+      "size": 4806,
+      "lines": 81,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "scheduled_tasks_v1.0.txt": {
+      "size": 4425,
+      "lines": 204,
+      "labels": 13,
+      "gotos": 2,
+      "loops": 0
+    },
+    "Scout_valley.TXT": {
+      "size": 276,
+      "lines": 11,
+      "labels": 1,
+      "gotos": 0,
+      "loops": 0
+    },
+    "script.txt": {
+      "size": 664,
+      "lines": 18,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "scripts.txt": {
+      "size": 32539,
+      "lines": 1028,
+      "labels": 55,
+      "gotos": 67,
+      "loops": 26
+    },
+    "Scripts123.txt": {
+      "size": 31824,
+      "lines": 994,
+      "labels": 77,
+      "gotos": 89,
+      "loops": 34
+    },
+    "Sell_Buy_Food_Script.txt": {
+      "size": 1525,
+      "lines": 69,
+      "labels": 9,
+      "gotos": 6,
+      "loops": 3
+    },
+    "Sell_Food_Script.txt": {
+      "size": 457,
+      "lines": 18,
+      "labels": 3,
+      "gotos": 2,
+      "loops": 0
+    },
+    "smartproxy.txt": {
+      "size": 135,
+      "lines": 11,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "Sonya_Keep_Troop_Sending.txt": {
+      "size": 587,
+      "lines": 29,
+      "labels": 1,
+      "gotos": 1,
+      "loops": 0
+    },
+    "spam_script_v13.2.txt": {
+      "size": 5705,
+      "lines": 125,
+      "labels": 22,
+      "gotos": 21,
+      "loops": 0
+    },
+    "spam_script_v13.2_Borg.txt": {
+      "size": 5694,
+      "lines": 125,
+      "labels": 22,
+      "gotos": 21,
+      "loops": 0
+    },
+    "spam_script_v13.3.txt": {
+      "size": 4734,
+      "lines": 109,
+      "labels": 22,
+      "gotos": 21,
+      "loops": 0
+    },
+    "spam_script_v13.4.txt": {
+      "size": 4774,
+      "lines": 110,
+      "labels": 22,
+      "gotos": 21,
+      "loops": 0
+    },
+    "spam_script_v13.4_Sonya.txt": {
+      "size": 4782,
+      "lines": 111,
+      "labels": 22,
+      "gotos": 21,
+      "loops": 0
+    },
+    "startup-script.txt": {
+      "size": 11294,
+      "lines": 427,
+      "labels": 15,
+      "gotos": 9,
+      "loops": 0
+    },
+    "Stop Evasion.TXT": {
+      "size": 1565,
+      "lines": 39,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "Total Troop Counts Script.TXT": {
+      "size": 1682,
+      "lines": 42,
+      "labels": 4,
+      "gotos": 4,
+      "loops": 0
+    },
+    "Trading.txt": {
+      "size": 1339,
+      "lines": 35,
+      "labels": 4,
+      "gotos": 0,
+      "loops": 1
+    },
+    "troops1.txt": {
+      "size": 2536,
+      "lines": 69,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "Troops_5_3_18.txt": {
+      "size": 2404,
+      "lines": 40,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    },
+    "trooptrainingresourcecost.txt": {
+      "size": 2179,
+      "lines": 33,
+      "labels": 4,
+      "gotos": 4,
+      "loops": 0
+    },
+    "[script]-Viscount.txt": {
+      "size": 26969,
+      "lines": 816,
+      "labels": 69,
+      "gotos": 66,
+      "loops": 0
+    },
+    "[Start] - Tutorial - Free Edition.txt": {
+      "size": 5163,
+      "lines": 158,
+      "labels": 0,
+      "gotos": 0,
+      "loops": 0
+    }
+  }
+}

@@ -1,0 +1,118 @@
+
+//---------------------------------------------
+// Colonize n Abandon Loop Script v1.1.2 for RE
+//       by: Zaknafein/Phaethon   aka Zaky
+//---------------------
+// This is a working version of a Colony/Suppress/Abandon script that
+// supports declarewar.
+//------------
+// Features:
+//    - Declaring war on a target that is Nuetral. If the target is a 
+//      Hostile, it will not attempt to use declarewar.
+//    - Warning if a coord is a friendly.
+//    - Checks War Declared time, as to not to attempt to declarewar
+//      on a target that is still under previous War Declaration.
+//    - Checks for declarewar cooldown buff.
+//    - Checks if an army has already been sent to the target.
+//    - Prevents trying to send army when Rally slots are full.
+//    - Optional drafting of colonies before abandonment.
+//    - Recalls army stuck at your target due to suppression over 
+//      maintenance server bug.
+//---------------------------------------------
+setsilence true
+
+//setarr colonyCoord "411,7 439,33 494,32 493,31 496,30 694,308 494,497 546,426"
+
+set hero any,!Mayor
+
+set colonizingTroop c:0
+
+//Optional drafting army before abandonment.  yes/no
+set DoDraft no
+
+
+//--------------- Do not edit below this line -----------------
+iferror %lastlogin% gosub updateMapCache
+label start
+set _0 null
+iferror %ind% set ind -1
+set ind {%ind%+1}
+if {%ind%>=%colonyCoord.length%} goto restCycle
+set loc $c.getValue(Coordinate,%colonyCoord[{%ind%}]%)$
+if {{$c.player.playerInfo.lastLoginTime$/1000\1}!=%lastlogin%} gosub updateMapCache
+//Handle cities the bot has not refreshed cache on.
+if {{{$c.getRawTime()$-$c.getMapDetail(%loc%).declaredWarStartTime$}/1000\60}>=2910&&$c.getMapDetail(%loc%).declaredWarStartTime$!=0} gosub fieldUpdate %loc% %ind% update
+//Handle refreshed cached cities
+if {$c.getMapDetail(%loc%).declaredWarStartTime$==0} gosub fieldUpdate %loc% %ind%
+if {{{$c.getRawTime()$-$c.getMapDetail(%loc%).declaredWarStartTime$}/1000\60}>=30&&%_0%!=err||$c.getMapDetail(%loc%).relation$==3} gosub checkMovement
+if {%_0%==null||%_0%==err} goto start
+if {%_0%==ok&&$c.getMapDetail(%loc%).type$==11&&$c.getMapDetail(%loc%).powerLevel$==4&&$c.getMapDetail(%loc%).relation$>1} qdeploy colonize %colonyCoord[{%ind%}]% %hero% %colonizingTroop%
+if {%_0%==ab&&$c.getValue(String,%DoDraft%).toLowerCase()$==yes} colony army %colonyCoord[{%ind%}]%
+//if {%_0%==ab} colony abandon %colonyCoord[{%ind%}]%
+goto start
+
+label checkMovement
+iferror %_ind% set _ind -1
+set _ind {%_ind%+1}
+//Check army movements and compare with coords
+if {%_ind%>=$c.cm.localArmies.length$&&$c.cm.isColony(%loc%)$==true} goto checkColony
+if {%_ind%>=$c.cm.localArmies.length$&&$c.cm.getUsedRallySlots()$<$c.cm.getMaxRallySlots()$&&$c.cm.isColony(%loc%)$==false} gosubreturn ok
+if {%_ind%>=$c.cm.localArmies.length$&&$c.cm.getUsedRallySlots()$==$c.cm.getMaxRallySlots()$&&$c.cm.isColony(%loc%)$==false} gosubreturn null
+if {$c.cm.localArmies[%_ind%].targetFieldId$==%loc%&&$c.cm.localArmies[%_ind%].missionType$==7&&$c.cm.localArmies[%_ind%].direction$==1} gosubreturn null
+if {$c.cm.localArmies[%_ind%].targetFieldId$==%loc%&&$c.cm.localArmies[%_ind%].missionType$==9&&$c.cm.localArmies[%_ind%].direction$==2&&$c.cm.isColony(%loc%)$==true} goto checkColony
+if {$c.cm.localArmies[%_ind%].targetFieldId$==%loc%&&$c.cm.localArmies[%_ind%].missionType$==9&&$c.cm.isColony(%loc%)$==false} idrecall $c.cm.localArmies[%_ind%].armyId$
+goto checkMovement
+
+label checkColony
+iferror %_cInd% set _cInd -1
+set _cInd {%_cInd%+1}
+if {%_cInd%>=$c.cm.colonies.length$} gosubreturn null
+if {$c.getValue(Coordinate,{c.cm.colonies[%_cInd%].position})$==%loc%&&$c.cm.colonies[%_cInd%].endTime$!=0} gosubreturn null
+if {$c.getValue(Coordinate,{c.cm.colonies[%_cInd%].position})$==%loc%&&$c.cm.colonies[%_cInd%].endTime$==0} gosubreturn ab
+goto checkColony
+
+label fieldUpdate
+iferror %_3% set _3 null
+iferror %_loc% set _loc %_1%
+iferror %_ind% set _ind %_2%
+//Update cached field
+if {%_3%==update} rescanmap %colonyCoord[{%_ind%}]% 1  
+label waitMD
+sleep {$c.lag$+0.25}
+iferror $c.getMapDetail(%_loc%).toDebugString()$ goto waitMD
+if {$c.getMapDetail(%_loc%).type$!=11||$c.getMapDetail(%_loc%).powerLevel$!=4} goto invaliderr
+if {$c.getMapDetail(%_loc%).relation$<2} goto error
+if {$c.getMapDetail(%_loc%).declaredWarStatus$!=3} gosubreturn null
+label chkBuff
+iferror %_bind% set _bind -1
+set _bind {%_bind%+1}
+if {%_bind%>=$c.player.buffsArray.length$} goto declare
+if {$c.player.buffsArray[{%_bind%}].typeId$!=DeclearWarCooldownBuff} goto chkBuff
+if {$c.player.buffsArray[{%_bind%}].typeId$==DeclearWarCooldownBuff} gosubreturn null
+label declare
+declarewar %colonyCoord[{%_ind%}]%
+set _3 update
+goto fieldUpdate
+label error
+if {%_3%==null} echo "<< ERROR >> Cannot colonize %colonyCoord[{%_ind%}]%... It appears to be a friendly or in your alliance!"
+gosubreturn err
+label invaliderr
+if {%_3%==null} echo "<< ERROR >> Coord at %colonyCoord[{%_ind%}]% appears to be a NPC, Valley/Flat, or HC."
+gosubreturn err
+
+label updateMapCache
+//Handle updating to prevent map detail errors at login/relogin times
+iferror %_ind% set _ind -1
+iferror %lastlogin% set lastlogin {$c.player.playerInfo.lastLoginTime$/1000\1}
+if {%_ind%==-1&&{$c.player.playerInfo.lastLoginTime$/1000\1}!=%lastlogin%} set lastlogin {$c.player.playerInfo.lastLoginTime$/1000\1}
+set _ind {%_ind%+1}
+if {%_ind%>=%colonyCoord.length%} gosubreturn
+set _loc $c.getValue(Coordinate,%colonyCoord[{%_ind%}]%)$
+gosub fieldUpdate %_loc% %_ind% update
+goto updateMapCache
+
+label restCycle
+//rest random time between 2 and 4 mintues
+sleep rnd:{2*60}:{4*60}
+set ind -1
+goto start

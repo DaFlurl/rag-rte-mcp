@@ -1,0 +1,140 @@
+# Svony MCP Server - .gitignore
+# Include all project files, exclude models and sensitive data
+
+# ============================================================
+# SECURITY: Never commit credentials or API keys
+# ============================================================
+.env
+.env.local
+.env.*.local
+*.env
+*_API_KEY*
+*_SECRET*
+*_TOKEN*
+*password*
+*credential*
+
+# Account data - INCLUDE for private repo
+# Accounts/ - INCLUDED
+# SOL_Accounts/ - INCLUDED
+# sol_manager/ - INCLUDED
+*.sol
+
+# ============================================================
+# LARGE FILES: Models, checkpoints, archives
+# ============================================================
+# Model files
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+checkpoint-*/
+ckpt*.tar.gz
+
+# Large archives
+*.rar
+*.zip
+phase4-b200.zip
+index_Backup.rar
+Source.rar
+
+# Large JSON data files (rebuild locally)
+DATA_CURATION_REPORT.json
+chunks2.json
+
+# SWF files (large binaries)
+*.swf
+
+# Flash executables
+flashplayer*.exe
+
+# Large directories (exclude 1GB+)
+Electron_Browser/
+FlashBrowser/
+Flash_Projector/
+ffdec/
+Proxifier*/
+Macromedia/
+phase3-3090/
+TorData/
+Tools/
+evony_rag/index/
+
+# ============================================================
+# INDEX FILES: Rebuild locally
+# ============================================================
+evony_rag/index/
+evony_rag/logs/
+index_Backup/
+
+# ============================================================
+# PYTHON
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+ENV/
+env/
+.venv/
+
+# ============================================================
+# IDE & OS
+# ============================================================
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ============================================================
+# LOGS & TEMP
+# ============================================================
+*.log
+*.bak
+hs_err_*.log
+test_*.txt
+.benchmarks/
+.pytest_cache/
+.ruff_cache/
+
+# ============================================================
+# GENERATED / TEMP DIRECTORIES
+# ============================================================
+generated_sols/
+test_results/
+checkme/
+TorData/
+
+# ============================================================
+# SPECIFIC EXCLUSIONS
+# ============================================================
+# RunPod training state
+runpod/training_state.json
+runpod/output/
+
+# Claude chat exports (large)
+Claude.zip
+Evony_Decrypted.zip
+evony_phase2.zip
+evony_phase2_continue.zip
+evony_phase3.zip

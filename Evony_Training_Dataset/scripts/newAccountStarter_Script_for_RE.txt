@@ -1,0 +1,426 @@
+//-- Brand New Account Starter script for RE v1.2,   by SeriousThisIsMe
+//-- ATTENTION!! -> This script is for RE only (not for AE)
+//-- 
+//-- This script is meant to be a companion to the 'newAccount_Goals_for_RE'. For
+//-- best results be sure to use a set of goals/script with matching version numbers.
+//-- Have the goals ready to be put in place as a stage 2 account set up, and set
+//-- them only after running and completing this script. This script is intended
+//-- to run solo as a zero hour, stage one town builder. It will set up a town
+//-- from a single cottage and configure it's layout like an NPC, upgrade Town Hall
+//-- to level 4 in preparation for baronet title, start all gear research to level 1,
+//-- upgrade required buildings needed for level 2 gear research, complete as many
+//-- quests as possible while running, and begin tech researches for in,ms,mt,ir,ar.
+//-- ATTENTION!! -> Before running this script you must complete the following and
+//-- only the following steps:
+//--1) Start a new server.
+//--2) Build a single level 1 cottage at position 14. (not on the blinking tile, see
+//--   included town map for details)
+//--
+//--        ||||||||||||||||||||||||-2||||||||||||||||||||||||
+//--        ||  0   :  3   |                  |  8   :  11  ||
+//--        ||------:------|                  |------:------||
+//--        ||  1   :  4   |        -1        |  9   :  12  ||
+//--        ||------:------|------------------|------:------||
+//--        ||  2   :  5   :  6   |    |  7   :  10  :  13  ||
+//--        ||------:------:------:    :------:------:------||
+//--        ||                                              ||
+//--        ||------:------:------:    :------:------:------||
+//--        ||  14  :  17  :  20  |    |  23  :  26  :  29  ||
+//--        ||------:------:------:    :------:------:------||
+//--        ||  15  :  18  :  21  |    |  24  :  27  :  30  ||
+//--        ||------:------:------:    :------:------:------||
+//--        ||  16  :  19  :  22  |    |  25  :  28  :  31  ||
+//--        ||||||||||||||||||||||||||||||||||||||||||||||||||
+//--                | 1001 : 1002 |    | 1003 : 1004 |
+//--         :------:------:------:    :------:------:------:
+//--         | 1005 : 1006 : 1007 |    | 1008 : 1009 : 1010 |
+//--         :------:------:------:    :------:------:------:------:
+//--         | 1011 : 1012 : 1013 |    | 1014 : 1015 : 1016 : 1017 |
+//--  :------:------:------:------:    :------:------:------:------:
+//--  | 1018 |
+//--  :------:------:------:------:    :------:------:------:
+//--         | 1019 : 1020 : 1021 |    | 1022 : 1023 : 1024 |
+//--         :------:------:------:    :------:------:------:
+//--         | 1025 : 1026 : 1027 |    | 1028 : 1029 : 1030 |
+//--  :------:------:------:------:    :------:------:------:
+//--  | 1040 : 1031 : 1032 : 1033 |    | 1034 : 1035 : 1036 |
+//--  :------:------:------:------:    :------:------:------:
+//--         | 1037 : 1038 |
+//--         :------:------:
+//--         | 1039 |
+//--         :------:
+//--
+//--3) Complete the level 1 cottage upgrade quest and only that quest.
+//--4) Click the "skip tutorial" button and enter a name for the account and save.
+//--5) Open the mail and mark the messages as read or delete them.
+//--6) Open quests window and complete the "Be an Evonian" quest. (click twice)
+//--7) Close the real game and login via the RE bot using the new evony.com account
+//     (WARNING DO NOT check the "Auto use goals" or "Auto run scripts" check boxes.
+//--8) Copy this entire script and paste it under the "Script" tab.
+//--9) Enter the desired name for your first town (max 10 characters)
+//-10) Enter your desired flag logo (max 4 characters)
+//-11) Click run.
+
+
+set townName 1
+set flagName 1
+
+//===============DO=NOT=CHANGE=BELOW=THIS=LINE===============
+setsilence true
+goalcommandwarning false
+gosub doQuests
+gosub doQuests
+upgrade! c
+gosub doQuests
+create! f 1001
+gosub doQuests
+create! s 1002
+gosub doQuests
+create! q 1003
+gosub doQuests
+create! i 1004
+gosub doQuests
+create! inn 7
+gosub doQuests
+set nullVar $c.cm.updateInn()$
+completequests routine
+create! fh 3
+gosub 15minSpeedup
+waitnobuilding
+gosub doQuests
+completequests routine
+label getHeroNow
+getspamhero
+gosub doQuests
+iferror $c.cm.heroes[0].name$ goto getHeroNow
+setmayorbyname $c.cm.heroes[0].name$
+gosub doQuests
+useitem Aries_Amulet
+gosub doQuests
+useitem Newbies_Package
+gosub doQuests
+production 100 100 100 100
+gosub doQuests
+settaxrate 20
+gosub doQuests
+changecastlename %townName%
+gosub doQuests
+changeflag %flagName%
+gosub doQuests
+upgrade! s level1
+gosub doQuests
+create! wh 19
+gosub 15minSpeedup
+gosub doQuests
+create! m 4
+gosub 15minSpeedup
+gosub doQuests
+create! r 8
+gosub doQuests
+upgrade! t level1
+gosub 1hrSpeedup
+gosub doQuests
+completequests routine
+completequests routine
+create! a 0
+gosub 15minSpeedup
+gosub doQuests
+completequests routine
+gosub doTrade sell iron 10 -0.15
+gosub doQuests
+create! e 2
+gosub 15minSpeedup
+gosub doQuests
+upgrade! q level1
+sleep rnd:1:3
+upgrade! i level1
+sleep rnd:1:3
+upgrade! i level2
+gosub 15minSpeedup
+waitnobuilding
+sleep rnd:1:3
+create! fo 1
+gosub doQuests
+upgrade! fo level1
+gosub 15minSpeedup
+waitnobuilding
+gosub doQuests
+create! ws 10
+gosub 15minSpeedup
+gosub doQuests
+completequests routine
+completequests routine
+create! w -2
+gosub 1hrSpeedup
+gosub doQuests
+completequests routine
+levy wood
+gosub doQuests
+comfort pray
+gosub doQuests
+upgrade! t level2
+sleep rnd:1:3
+gosub 1hrSpeedup
+gosub doQuests
+completequests routine
+completequests routine
+sleep rnd:1:3
+useitem Package_for_Lords
+sleep rnd:1:3
+useitem Junior_Medal_Box
+gosub doQuests
+sleep rnd:1:3
+useitem Hero_Enhancement_Materials_Package
+sleep rnd:1:3
+gosub doQuests
+useitem Aries_Amulet
+sleep rnd:1:3
+useitem Aries_Amulet
+sleep rnd:1:3
+completequests routine
+gosub doQuests
+completequests routine
+completequests routine
+sleep rnd:10:15
+completequests routine
+completequests routine
+gosub doTrade buy stone 8000 0.15
+gosub doQuests
+gosub doCheckForReso stone 20000
+upgrade! w level1
+gosub 1hrSpeedup
+gosub doQuests
+completequests routine
+completequests routine
+gosub doTrade buy lumber 14000 0.15
+gosub doQuests
+gosub doCheckForReso wood 24000
+gosub doCheckForReso stone 20000
+upgrade! t level3
+gosub 1hrSpeedup
+gosub 1hrSpeedup
+gosub doQuests
+completequests routine
+completequests routine
+upgrade! a level1
+gosub 15minSpeedup
+waitnobuilding
+gosub doQuests
+upgrade! a level2
+gosub 1hrSpeedup
+waitnobuilding
+gosub doQuests
+upgrade! a level3
+gosub 1hrSpeedup
+create! b 11
+gosub doQuests
+completequests routine
+waitnobuilding
+gosub doQuests
+completequests routine
+completequests routine
+upgrade! b level1
+gosub 15minSpeedup
+waitnobuilding
+gosub doQuests
+upgrade! b level2
+gosub 15minSpeedup
+upgrade! f level1
+sleep 3
+upgrade! f level2
+sleep 3
+upgrade! f level3
+sleep 3
+upgrade! f level4
+waitnobuilding
+gosub doQuests
+completequests routine
+create! st 6
+gosub doQuests
+gosub doGear
+gosub doQuests
+sleep 15
+gosub doQuests
+completequests routine
+sleep 3
+levy wood
+gosub doQuests
+sleep 3
+comfort pray
+gosub doQuests
+walldefense tra 10
+sleep 3
+create! be 5
+gosub 15minSpeedup
+gosub doQuests
+upgrade! be level1
+gosub 15minSpeedup
+gosub doQuests
+gosub doQuests
+upgrade! fo level2
+gosub 15minSpeedup
+waitnobuilding
+sleep 2
+upgrade! fo level3
+gosub 15minSpeedup
+sleep 2
+techgoals in:1
+techgoals ms:1
+techgoals mt:1
+techgoals ms:2
+techgoals ir:1
+techgoals ms:4
+techgoals ar:1
+production 0 0 0 0
+sleep 2
+train w:10
+production 100 100 100 100
+sleep 00:06:10
+waitnobuilding
+upgrade! b level3
+gosub 1hrSpeedup
+gosub doQuests
+completequests routine
+completequests routine
+production 0 0 0 0
+sleep 2
+train s:10
+production 100 100 100 100
+sleep 2
+useitem Plowshares
+sleep 2
+useitem Arch_Saw
+sleep 1
+useitem Quarrying_Tools
+sleep 1
+useitem Blower
+create! c 15
+sleep 2
+create! c 16
+sleep 2
+create! c 17
+sleep 2
+create! c 18
+gosub doQuests
+completequests routine
+repeat 3
+sleep 00:04:10
+upgrade! m level1
+gosub 15minSpeedup
+upgrade! ws level1
+waitnobuilding
+sleep 2
+gosub doQuests
+completequests routine
+repeat 3
+upgrade! st level1
+gosub doQuests
+completequests routine
+completequests routine
+sleep 2
+create! b 12
+sleep 2
+create! b 13
+sleep 2
+create! b 29
+sleep 2
+upgrade! s level2
+sleep 2
+create! s 1007
+sleep 2
+upgrade! s level1
+sleep 2
+upgrade! s level2
+sleep 2
+upgrade! q level2
+sleep 2
+create! q 1008
+sleep 2
+upgrade! q level1
+sleep 2
+upgrade q level2
+sleep 2
+create! i 1009
+sleep 2
+upgrade! i level1
+useitem Newbies_Package
+sleep 1
+useitem Package_for_Lords
+sleep 1
+useitem Junior_Medal_Box
+sleep 1
+useitem Hero_Enhancement_Materials_Package
+gosub doQuests
+completequests routine
+completequests routine
+goto end
+label doQuests
+sleep 2
+completequests routine
+gosubreturn
+label 15minSpeedup
+sleep 1
+usebuilditem Beginner_Guidelines
+gosubreturn
+label 1hrSpeedup
+sleep 1
+usebuilditem Primary_Guidelines
+gosubreturn
+label doTrade
+if {%_1%==buy} set marketType "sellersArray"
+if {%_1%==sell} set marketType "buyersArray"
+setarr resoArr "food lumber stone iron"
+getindexof resoIndex resoArr "%_2%"
+set mTypeArrIndex 5
+label checkMarketTypeArrIndex
+set mTypeArrIndex {%mTypeArrIndex%-1}
+if {%mTypeArrIndex%==0} goto endcheckMarketTypeArrIndex
+iferror $c.cm.market[{%resoIndex%}].%marketType%[%mTypeArrIndex%].price$ goto checkMarketTypeArrIndex
+label endcheckMarketTypeArrIndex
+set tradePrice {$c.cm.market[{%resoIndex%}].%marketType%[%mTypeArrIndex%].price$+{$c.cm.market[{%resoIndex%}].%marketType%[4].price$*{%_4%}}}
+if {%_1%==buy} buy %_2% %_3% %tradePrice%
+if {%_1%==sell} sell %_2% %_3% %tradePrice%
+sleep rnd:20:30
+gosubreturn
+label doCheckForReso
+setarray resoPackArr ["Lesser_Resources_Reward", "Lesser_Bonus_Reward", "Minor_Resources_Reward", "Minor_Bonus_Reward", "Medium_Resources_Reward", "Medium_Bonus_Reward"]
+set waitIndex 0
+label waitForReso
+set nullVar $c.accountTab.itemInfo.fetchPage(Merchant_Fleet)$
+sleep 0.5
+if {$c.cm.transingTradesArray.length$>0&&$c.accountTab.itemInfo.itemsArray[0].count$>0} usetradeitem Merchant_Fleet
+sleep 1
+settaxrate 20
+sleep 1
+if {$c.cm.resource.%_1%.amount$>%_2%} goto gotReso
+if {%waitIndex%>9} set waitIndex 0
+label doNotChangeWaitIndex
+if {%waitIndex%==0} echo "Waiting on market transactions to complete for %_2% %_1% to continue..."
+if {%waitIndex%==0} echo "If you have linked this account to facebook, now would be a good time to do a couple visits. The resource reward packs will be used automatically if detected."
+completequests routine
+set waitIndex {%waitIndex%+1}
+set resoPackIndex 0
+label checkForPacks
+set nullVar $c.accountTab.itemInfo.fetchPage(%resoPackArr[{%resoPackIndex%}]%)$
+sleep 0.5
+if {$c.accountTab.itemInfo.itemsArray[0].count$<1} goto checkNextPack
+useitem %resoPackArr[{%resoPackIndex%}]%
+goto checkForPacks
+label checkNextPack
+set resoPackIndex {%resoPackIndex%+1}
+if {%resoPackIndex%<%resoPackArr.length%} goto checkForPacks
+sleep 9
+repeat 3
+goto waitForReso
+label gotReso
+gosubreturn
+label doGear
+setarr gearItems "we shi mo ne cha ri he sho che ba ga be le fo"
+set gearIndex 0
+label upNextGear
+gear %gearItems[{%gearIndex%}]%
+set gearIndex {%gearIndex%+1}
+sleep 1
+completequests routine
+if {%gearIndex%<%gearItems.length%} goto upNextGear
+gosubreturn

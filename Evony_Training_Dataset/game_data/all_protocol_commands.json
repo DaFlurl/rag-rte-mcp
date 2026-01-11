@@ -1,0 +1,6888 @@
+{
+  "total_commands": 411,
+  "categories": [
+    "commandstackitem",
+    "city",
+    "alliance",
+    "truce",
+    "quest",
+    "army",
+    "visit",
+    "report",
+    "colony",
+    "celeb",
+    "security",
+    "troop",
+    "interior",
+    "field",
+    "commission",
+    "stratagem",
+    "celebrank",
+    "fortifications",
+    "equipment",
+    "common",
+    "furlough",
+    "gamblingranking",
+    "hero",
+    "alliancemanagement",
+    "votetoplayer",
+    "castle",
+    "mail",
+    "vote",
+    "trade",
+    "capital",
+    "npchero",
+    "tech",
+    "equipmenttech",
+    "modify",
+    "rank",
+    "commandstack",
+    "commissionquest",
+    "shop",
+    "gamemaster",
+    "friend"
+  ],
+  "commands": {
+    "alliance.getMilitarySituationList": {
+      "name": "alliance.getMilitarySituationList",
+      "category": "alliance",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceCommands.as"
+    },
+    "alliance.getAllianceList": {
+      "name": "alliance.getAllianceList",
+      "category": "alliance",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceCommands.as"
+    },
+    "alliance.getAllianceMembers": {
+      "name": "alliance.getAllianceMembers",
+      "category": "alliance",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceCommands.as"
+    },
+    "alliance.getAllianceEventList": {
+      "name": "alliance.getAllianceEventList",
+      "category": "alliance",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceCommands.as"
+    },
+    "alliance.getAllianceArmyReport": {
+      "name": "alliance.getAllianceArmyReport",
+      "category": "alliance",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceCommands.as"
+    },
+    "alliance.getAllianceInfo": {
+      "name": "alliance.getAllianceInfo",
+      "category": "alliance",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceCommands.as"
+    },
+    "alliance.setSender": {
+      "name": "alliance.setSender",
+      "category": "alliance",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "AllianceCommands.as"
+    },
+    "alliancemanagement.resetTopPowerForAlliance": {
+      "name": "alliancemanagement.resetTopPowerForAlliance",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.agreeComeinAllianceList": {
+      "name": "alliancemanagement.agreeComeinAllianceList",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.resignForAlliance": {
+      "name": "alliancemanagement.resignForAlliance",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.cancelUserWantInAlliance": {
+      "name": "alliancemanagement.cancelUserWantInAlliance",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.rejectComeinAlliance": {
+      "name": "alliancemanagement.rejectComeinAlliance",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.cancelagreeComeinAlliance": {
+      "name": "alliancemanagement.cancelagreeComeinAlliance",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.addUsertoAllianceList": {
+      "name": "alliancemanagement.addUsertoAllianceList",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.canceladdUsertoAlliance": {
+      "name": "alliancemanagement.canceladdUsertoAlliance",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.agreeComeinAllianceByLeader": {
+      "name": "alliancemanagement.agreeComeinAllianceByLeader",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.sayByetoAlliance": {
+      "name": "alliancemanagement.sayByetoAlliance",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.getAllianceFriendshipList": {
+      "name": "alliancemanagement.getAllianceFriendshipList",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.agreeComeinAllianceByUser": {
+      "name": "alliancemanagement.agreeComeinAllianceByUser",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.setAllInfoForAlliance": {
+      "name": "alliancemanagement.setAllInfoForAlliance",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.getAllianceWanted": {
+      "name": "alliancemanagement.getAllianceWanted",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.setSender": {
+      "name": "alliancemanagement.setSender",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.createAlliance": {
+      "name": "alliancemanagement.createAlliance",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.userWantInAlliance": {
+      "name": "alliancemanagement.userWantInAlliance",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.dropAllianceFriendshipRelation": {
+      "name": "alliancemanagement.dropAllianceFriendshipRelation",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.addUsertoAlliance": {
+      "name": "alliancemanagement.addUsertoAlliance",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.setAllianceFriendship": {
+      "name": "alliancemanagement.setAllianceFriendship",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.isHasAlliance": {
+      "name": "alliancemanagement.isHasAlliance",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.getPowerFromAlliance": {
+      "name": "alliancemanagement.getPowerFromAlliance",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.kickOutMemberfromAlliance": {
+      "name": "alliancemanagement.kickOutMemberfromAlliance",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.messagesForAllianceMember": {
+      "name": "alliancemanagement.messagesForAllianceMember",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.leaderWantUserInAllianceList": {
+      "name": "alliancemanagement.leaderWantUserInAllianceList",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "alliancemanagement.setPowerForUserByAlliance": {
+      "name": "alliancemanagement.setPowerForUserByAlliance",
+      "category": "alliancemanagement",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "AllianceManagementCommands.as"
+    },
+    "army.getStayAllianceArmys": {
+      "name": "army.getStayAllianceArmys",
+      "category": "army",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ArmyCommands.as"
+    },
+    "army.disbandFleeTroop": {
+      "name": "army.disbandFleeTroop",
+      "category": "army",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ArmyCommands.as"
+    },
+    "army.recruitFleeTroop": {
+      "name": "army.recruitFleeTroop",
+      "category": "army",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ArmyCommands.as"
+    },
+    "army.getTroopParam": {
+      "name": "army.getTroopParam",
+      "category": "army",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ArmyCommands.as"
+    },
+    "army.exerciseArmy": {
+      "name": "army.exerciseArmy",
+      "category": "army",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "TroopBean",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "TroopBean",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ArmyCommands.as"
+    },
+    "army.getFleeTroop": {
+      "name": "army.getFleeTroop",
+      "category": "army",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ArmyCommands.as"
+    },
+    "army.disbandInjuredTroop": {
+      "name": "army.disbandInjuredTroop",
+      "category": "army",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ArmyCommands.as"
+    },
+    "army.newArmy": {
+      "name": "army.newArmy",
+      "category": "army",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "NewArmyParam",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ArmyCommands.as"
+    },
+    "army.setAllowAllianceArmy": {
+      "name": "army.setAllowAllianceArmy",
+      "category": "army",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Boolean",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ArmyCommands.as"
+    },
+    "army.getInjuredTroop": {
+      "name": "army.getInjuredTroop",
+      "category": "army",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ArmyCommands.as"
+    },
+    "army.callBackArmy": {
+      "name": "army.callBackArmy",
+      "category": "army",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ArmyCommands.as"
+    },
+    "army.setArmyGoOut": {
+      "name": "army.setArmyGoOut",
+      "category": "army",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Boolean",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ArmyCommands.as"
+    },
+    "army.cureInjuredTroop": {
+      "name": "army.cureInjuredTroop",
+      "category": "army",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ArmyCommands.as"
+    },
+    "army.setSender": {
+      "name": "army.setSender",
+      "category": "army",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "ArmyCommands.as"
+    },
+    "capital.levyArmy": {
+      "name": "capital.levyArmy",
+      "category": "capital",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CapitalCommands.as"
+    },
+    "capital.getUsedPoliciesTimes": {
+      "name": "capital.getUsedPoliciesTimes",
+      "category": "capital",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CapitalCommands.as"
+    },
+    "capital.levyPopulation": {
+      "name": "capital.levyPopulation",
+      "category": "capital",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CapitalCommands.as"
+    },
+    "capital.reduceArmaments": {
+      "name": "capital.reduceArmaments",
+      "category": "capital",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CapitalCommands.as"
+    },
+    "capital.setSender": {
+      "name": "capital.setSender",
+      "category": "capital",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "CapitalCommands.as"
+    },
+    "capital.getLeftPoliciesTimes": {
+      "name": "capital.getLeftPoliciesTimes",
+      "category": "capital",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CapitalCommands.as"
+    },
+    "capital.levyFood": {
+      "name": "capital.levyFood",
+      "category": "capital",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CapitalCommands.as"
+    },
+    "capital.levyTaxes": {
+      "name": "capital.levyTaxes",
+      "category": "capital",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CapitalCommands.as"
+    },
+    "castle.getAvailableBuildingListInside": {
+      "name": "castle.getAvailableBuildingListInside",
+      "category": "castle",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CastleCommands.as"
+    },
+    "castle.getCoinsNeed": {
+      "name": "castle.getCoinsNeed",
+      "category": "castle",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CastleCommands.as"
+    },
+    "castle.getDestructBuildBean": {
+      "name": "castle.getDestructBuildBean",
+      "category": "castle",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CastleCommands.as"
+    },
+    "castle.checkOutUpgrade": {
+      "name": "castle.checkOutUpgrade",
+      "category": "castle",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CastleCommands.as"
+    },
+    "castle.setSender": {
+      "name": "castle.setSender",
+      "category": "castle",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "CastleCommands.as"
+    },
+    "castle.speedupBuildingQueue": {
+      "name": "castle.speedupBuildingQueue",
+      "category": "castle",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CastleCommands.as"
+    },
+    "castle.getAvailableBuildingListOutside": {
+      "name": "castle.getAvailableBuildingListOutside",
+      "category": "castle",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CastleCommands.as"
+    },
+    "castle.demolishBuildingQueue": {
+      "name": "castle.demolishBuildingQueue",
+      "category": "castle",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CastleCommands.as"
+    },
+    "castle.getAvailableBuildingBean": {
+      "name": "castle.getAvailableBuildingBean",
+      "category": "castle",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CastleCommands.as"
+    },
+    "castle.cancelBuildingQueue": {
+      "name": "castle.cancelBuildingQueue",
+      "category": "castle",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CastleCommands.as"
+    },
+    "castle.speedUpBuildCommand": {
+      "name": "castle.speedUpBuildCommand",
+      "category": "castle",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CastleCommands.as"
+    },
+    "castle.cancleBuildCommand": {
+      "name": "castle.cancleBuildCommand",
+      "category": "castle",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CastleCommands.as"
+    },
+    "castle.UpdateCastleResources": {
+      "name": "castle.UpdateCastleResources",
+      "category": "castle",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CastleCommands.as"
+    },
+    "castle.upgradeBuilding": {
+      "name": "castle.upgradeBuilding",
+      "category": "castle",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CastleCommands.as"
+    },
+    "castle.newBuilding": {
+      "name": "castle.newBuilding",
+      "category": "castle",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CastleCommands.as"
+    },
+    "castle.getBuildingQueueCoinsNeed": {
+      "name": "castle.getBuildingQueueCoinsNeed",
+      "category": "castle",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CastleCommands.as"
+    },
+    "castle.destructBuilding": {
+      "name": "castle.destructBuilding",
+      "category": "castle",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CastleCommands.as"
+    },
+    "castle.newBuildingQueue": {
+      "name": "castle.newBuildingQueue",
+      "category": "castle",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CastleCommands.as"
+    },
+    "celebrank.findPlayerByStar": {
+      "name": "celebrank.findPlayerByStar",
+      "category": "celebrank",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CelebRankCommands.as"
+    },
+    "celebrank.findPlayerByTitle": {
+      "name": "celebrank.findPlayerByTitle",
+      "category": "celebrank",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CelebRankCommands.as"
+    },
+    "celebrank.findPlayerByPrestige": {
+      "name": "celebrank.findPlayerByPrestige",
+      "category": "celebrank",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CelebRankCommands.as"
+    },
+    "celebrank.setSender": {
+      "name": "celebrank.setSender",
+      "category": "celebrank",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "CelebRankCommands.as"
+    },
+    "celebrank.findAllianceByPrestige": {
+      "name": "celebrank.findAllianceByPrestige",
+      "category": "celebrank",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CelebRankCommands.as"
+    },
+    "city.giveupCastle": {
+      "name": "city.giveupCastle",
+      "category": "city",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CityCommands.as"
+    },
+    "city.modifyStorePercent": {
+      "name": "city.modifyStorePercent",
+      "category": "city",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_6",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CityCommands.as"
+    },
+    "city.modifyFlag": {
+      "name": "city.modifyFlag",
+      "category": "city",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CityCommands.as"
+    },
+    "city.WarMoveCastle": {
+      "name": "city.WarMoveCastle",
+      "category": "city",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CityCommands.as"
+    },
+    "city.modifyUserName": {
+      "name": "city.modifyUserName",
+      "category": "city",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CityCommands.as"
+    },
+    "city.uniteAdvMoveCastle": {
+      "name": "city.uniteAdvMoveCastle",
+      "category": "city",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CityCommands.as"
+    },
+    "city.getStoreList": {
+      "name": "city.getStoreList",
+      "category": "city",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CityCommands.as"
+    },
+    "city.modifyCastleIcon": {
+      "name": "city.modifyCastleIcon",
+      "category": "city",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CityCommands.as"
+    },
+    "city.setStopWarState": {
+      "name": "city.setStopWarState",
+      "category": "city",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CityCommands.as"
+    },
+    "city.constructCastle": {
+      "name": "city.constructCastle",
+      "category": "city",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Boolean",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CityCommands.as"
+    },
+    "city.moveCastle": {
+      "name": "city.moveCastle",
+      "category": "city",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CityCommands.as"
+    },
+    "city.setSender": {
+      "name": "city.setSender",
+      "category": "city",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "CityCommands.as"
+    },
+    "city.advMoveCastle": {
+      "name": "city.advMoveCastle",
+      "category": "city",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CityCommands.as"
+    },
+    "city.modifyCastleName": {
+      "name": "city.modifyCastleName",
+      "category": "city",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CityCommands.as"
+    },
+    "colony.levyArmy": {
+      "name": "colony.levyArmy",
+      "category": "colony",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ColonyCommands.as"
+    },
+    "colony.getColonialCastlesInfo": {
+      "name": "colony.getColonialCastlesInfo",
+      "category": "colony",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ColonyCommands.as"
+    },
+    "colony.setSender": {
+      "name": "colony.setSender",
+      "category": "colony",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "ColonyCommands.as"
+    },
+    "colony.overviewColonialCastle": {
+      "name": "colony.overviewColonialCastle",
+      "category": "colony",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ColonyCommands.as"
+    },
+    "colony.abandonColony": {
+      "name": "colony.abandonColony",
+      "category": "colony",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ColonyCommands.as"
+    },
+    "colony.sowDiscord": {
+      "name": "colony.sowDiscord",
+      "category": "colony",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ColonyCommands.as"
+    },
+    "colony.getSuzerainColonialCastlesInfo": {
+      "name": "colony.getSuzerainColonialCastlesInfo",
+      "category": "colony",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ColonyCommands.as"
+    },
+    "colony.setDeployTroops": {
+      "name": "colony.setDeployTroops",
+      "category": "colony",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "TroopBean",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ColonyCommands.as"
+    },
+    "colony.uprise": {
+      "name": "colony.uprise",
+      "category": "colony",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ColonyCommands.as"
+    },
+    "colony.getColonialArmyInfo": {
+      "name": "colony.getColonialArmyInfo",
+      "category": "colony",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ColonyCommands.as"
+    },
+    "colony.levyPopulation": {
+      "name": "colony.levyPopulation",
+      "category": "colony",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ColonyCommands.as"
+    },
+    "colony.getDeployTroopsInfo": {
+      "name": "colony.getDeployTroopsInfo",
+      "category": "colony",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ColonyCommands.as"
+    },
+    "colony.reduceArmaments": {
+      "name": "colony.reduceArmaments",
+      "category": "colony",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ColonyCommands.as"
+    },
+    "colony.levyFood": {
+      "name": "colony.levyFood",
+      "category": "colony",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ColonyCommands.as"
+    },
+    "colony.speedUpAbandonColony": {
+      "name": "colony.speedUpAbandonColony",
+      "category": "colony",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ColonyCommands.as"
+    },
+    "colony.levyTaxes": {
+      "name": "colony.levyTaxes",
+      "category": "colony",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ColonyCommands.as"
+    },
+    "common.Commands": {
+      "name": "common.Commands",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": true
+        }
+      ],
+      "source_file": "Commands.as"
+    },
+    "common.doCmd": {
+      "name": "common.doCmd",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Boolean",
+          "required": false
+        }
+      ],
+      "source_file": "Commands.as"
+    },
+    "commandstack.CommandStack": {
+      "name": "commandstack.CommandStack",
+      "category": "commandstack",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Geometry",
+          "required": false
+        }
+      ],
+      "source_file": "CommandStack.as"
+    },
+    "commandstack.pathAngleAt": {
+      "name": "commandstack.pathAngleAt",
+      "category": "commandstack",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "Number",
+          "required": true
+        }
+      ],
+      "source_file": "CommandStack.as"
+    },
+    "commandstack.addCubicBezierTo": {
+      "name": "commandstack.addCubicBezierTo",
+      "category": "commandstack",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Number",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Number",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Number",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Number",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "Number",
+          "required": true
+        },
+        {
+          "name": "_arg_6",
+          "type": "Number",
+          "required": true
+        },
+        {
+          "name": "_arg_7",
+          "type": "Number",
+          "required": true
+        },
+        {
+          "name": "_arg_8",
+          "type": "Number",
+          "required": true
+        },
+        {
+          "name": "_arg_9",
+          "type": "int",
+          "required": false
+        }
+      ],
+      "source_file": "CommandStack.as"
+    },
+    "commandstack.pathPointAt": {
+      "name": "commandstack.pathPointAt",
+      "category": "commandstack",
+      "parameters": [
+        {
+          "name": "t",
+          "type": "Number",
+          "required": true
+        }
+      ],
+      "source_file": "CommandStack.as"
+    },
+    "commandstack.getItem": {
+      "name": "commandstack.getItem",
+      "category": "commandstack",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        }
+      ],
+      "source_file": "CommandStack.as"
+    },
+    "commandstack.addLineTo": {
+      "name": "commandstack.addLineTo",
+      "category": "commandstack",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Number",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Number",
+          "required": true
+        }
+      ],
+      "source_file": "CommandStack.as"
+    },
+    "commandstack.addMoveTo": {
+      "name": "commandstack.addMoveTo",
+      "category": "commandstack",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Number",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Number",
+          "required": true
+        }
+      ],
+      "source_file": "CommandStack.as"
+    },
+    "commandstack.addCommandStack": {
+      "name": "commandstack.addCommandStack",
+      "category": "commandstack",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "CommandStack",
+          "required": true
+        }
+      ],
+      "source_file": "CommandStack.as"
+    },
+    "commandstack.addItemAt": {
+      "name": "commandstack.addItemAt",
+      "category": "commandstack",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "CommandStackItem",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": false
+        }
+      ],
+      "source_file": "CommandStack.as"
+    },
+    "commandstack.draw": {
+      "name": "commandstack.draw",
+      "category": "commandstack",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Graphics",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Rectangle",
+          "required": true
+        }
+      ],
+      "source_file": "CommandStack.as"
+    },
+    "commandstack.addDelegate": {
+      "name": "commandstack.addDelegate",
+      "category": "commandstack",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": true
+        }
+      ],
+      "source_file": "CommandStack.as"
+    },
+    "commandstack.adjustPointToLayoutAndTransform": {
+      "name": "commandstack.adjustPointToLayoutAndTransform",
+      "category": "commandstack",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Point",
+          "required": true
+        }
+      ],
+      "source_file": "CommandStack.as"
+    },
+    "commandstack.resetBounds": {
+      "name": "commandstack.resetBounds",
+      "category": "commandstack",
+      "parameters": [],
+      "source_file": "CommandStack.as"
+    },
+    "commandstack.simpleRender": {
+      "name": "commandstack.simpleRender",
+      "category": "commandstack",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Graphics",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Rectangle",
+          "required": true
+        }
+      ],
+      "source_file": "CommandStack.as"
+    },
+    "commandstack.addCurveTo": {
+      "name": "commandstack.addCurveTo",
+      "category": "commandstack",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Number",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Number",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Number",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Number",
+          "required": true
+        }
+      ],
+      "source_file": "CommandStack.as"
+    },
+    "commandstack.addItem": {
+      "name": "commandstack.addItem",
+      "category": "commandstack",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "CommandStackItem",
+          "required": true
+        }
+      ],
+      "source_file": "CommandStack.as"
+    },
+    "commandstackitem.CommandStackItem": {
+      "name": "commandstackitem.CommandStackItem",
+      "category": "commandstackitem",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": false
+        },
+        {
+          "name": "_arg_2",
+          "type": "Number",
+          "required": false
+        },
+        {
+          "name": "_arg_3",
+          "type": "Number",
+          "required": false
+        },
+        {
+          "name": "_arg_4",
+          "type": "Number",
+          "required": false
+        },
+        {
+          "name": "_arg_5",
+          "type": "Number",
+          "required": false
+        },
+        {
+          "name": "_arg_6",
+          "type": "Number",
+          "required": false
+        },
+        {
+          "name": "_arg_7",
+          "type": "Number",
+          "required": false
+        },
+        {
+          "name": "_arg_8",
+          "type": "CommandStack",
+          "required": false
+        }
+      ],
+      "source_file": "CommandStackItem.as"
+    },
+    "commandstackitem.derive": {
+      "name": "commandstackitem.derive",
+      "category": "commandstackitem",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "CommandStackItem",
+          "required": true
+        }
+      ],
+      "source_file": "CommandStackItem.as"
+    },
+    "commandstackitem.segmentAngleAt": {
+      "name": "commandstackitem.segmentAngleAt",
+      "category": "commandstackitem",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Number",
+          "required": true
+        }
+      ],
+      "source_file": "CommandStackItem.as"
+    },
+    "commandstackitem.segmentPointAt": {
+      "name": "commandstackitem.segmentPointAt",
+      "category": "commandstackitem",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Number",
+          "required": true
+        }
+      ],
+      "source_file": "CommandStackItem.as"
+    },
+    "commandstackitem.calcBounds": {
+      "name": "commandstackitem.calcBounds",
+      "category": "commandstackitem",
+      "parameters": [],
+      "source_file": "CommandStackItem.as"
+    },
+    "commissionquest.getAllCommissionQuest": {
+      "name": "commissionquest.getAllCommissionQuest",
+      "category": "commissionquest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommissionQuestCommands.as"
+    },
+    "commissionquest.getMyAcceptedCommissionQuest": {
+      "name": "commissionquest.getMyAcceptedCommissionQuest",
+      "category": "commissionquest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommissionQuestCommands.as"
+    },
+    "commissionquest.acceptCommissionQuest": {
+      "name": "commissionquest.acceptCommissionQuest",
+      "category": "commissionquest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "NewArmyParam",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommissionQuestCommands.as"
+    },
+    "commissionquest.addCommissionQuestArmy": {
+      "name": "commissionquest.addCommissionQuestArmy",
+      "category": "commissionquest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "NewArmyParam",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommissionQuestCommands.as"
+    },
+    "commissionquest.getCommissionQuestArmyRanking": {
+      "name": "commissionquest.getCommissionQuestArmyRanking",
+      "category": "commissionquest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommissionQuestCommands.as"
+    },
+    "commissionquest.getCommissionQuestArmyInfo": {
+      "name": "commissionquest.getCommissionQuestArmyInfo",
+      "category": "commissionquest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommissionQuestCommands.as"
+    },
+    "commissionquest.issueCommissionQuest": {
+      "name": "commissionquest.issueCommissionQuest",
+      "category": "commissionquest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_6",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommissionQuestCommands.as"
+    },
+    "commissionquest.declineCommissionQuest": {
+      "name": "commissionquest.declineCommissionQuest",
+      "category": "commissionquest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommissionQuestCommands.as"
+    },
+    "commissionquest.getMyCommissionQuest": {
+      "name": "commissionquest.getMyCommissionQuest",
+      "category": "commissionquest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommissionQuestCommands.as"
+    },
+    "commissionquest.setSender": {
+      "name": "commissionquest.setSender",
+      "category": "commissionquest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "CommissionQuestCommands.as"
+    },
+    "common.setEventDone": {
+      "name": "common.setEventDone",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.createNewPlayer": {
+      "name": "common.createNewPlayer",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_6",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_7",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_8",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.setReturnReport": {
+      "name": "common.setReturnReport",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Boolean",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.getPlayerInfoByName": {
+      "name": "common.getPlayerInfoByName",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.getCanDeclaredWarAgainstPlayer": {
+      "name": "common.getCanDeclaredWarAgainstPlayer",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.worldChat": {
+      "name": "common.worldChat",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.getPackage": {
+      "name": "common.getPackage",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.allianceChat": {
+      "name": "common.allianceChat",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.mapInfo": {
+      "name": "common.mapInfo",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_6",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.setSender": {
+      "name": "common.setSender",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.facebookConnect": {
+      "name": "common.facebookConnect",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.delUniteServerPeaceStatus": {
+      "name": "common.delUniteServerPeaceStatus",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.declaredWarAgainstPlayer": {
+      "name": "common.declaredWarAgainstPlayer",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.changeName": {
+      "name": "common.changeName",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.setTroopConfig": {
+      "name": "common.setTroopConfig",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "TroopBean",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.mapCastle": {
+      "name": "common.mapCastle",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_6",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.getPackageNumber": {
+      "name": "common.getPackageNumber",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.zoneInfo": {
+      "name": "common.zoneInfo",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.privateChat": {
+      "name": "common.privateChat",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.mapInfoSimple": {
+      "name": "common.mapInfoSimple",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_6",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.setEovnyMember": {
+      "name": "common.setEovnyMember",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.setReceiveIncomingAttack": {
+      "name": "common.setReceiveIncomingAttack",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Boolean",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.changeUserFace": {
+      "name": "common.changeUserFace",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.changeHeadline": {
+      "name": "common.changeHeadline",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.getRelationship": {
+      "name": "common.getRelationship",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.setAutoHeal": {
+      "name": "common.setAutoHeal",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Boolean",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.addToFavorites": {
+      "name": "common.addToFavorites",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.getItemDefXml": {
+      "name": "common.getItemDefXml",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.denyPlayerSpeak": {
+      "name": "common.denyPlayerSpeak",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.getPlayerDeclaredWarStatus": {
+      "name": "common.getPlayerDeclaredWarStatus",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.getPackageList": {
+      "name": "common.getPackageList",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.step": {
+      "name": "common.step",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.setEvonyMemberEMail": {
+      "name": "common.setEvonyMemberEMail",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.deleteUserAndRestart": {
+      "name": "common.deleteUserAndRestart",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.saveUnregisteredPlayer": {
+      "name": "common.saveUnregisteredPlayer",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "common.channelChat": {
+      "name": "common.channelChat",
+      "category": "common",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "CommonCommands.as"
+    },
+    "equipment.WearEquipmenttech": {
+      "name": "equipment.WearEquipmenttech",
+      "category": "equipment",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "EquipmentCommands.as"
+    },
+    "equipment.TakeOffAllEquipmenttech": {
+      "name": "equipment.TakeOffAllEquipmenttech",
+      "category": "equipment",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "EquipmentCommands.as"
+    },
+    "equipment.EnhancedStarByGemStone": {
+      "name": "equipment.EnhancedStarByGemStone",
+      "category": "equipment",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "EquipmentCommands.as"
+    },
+    "equipment.setSender": {
+      "name": "equipment.setSender",
+      "category": "equipment",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "EquipmentCommands.as"
+    },
+    "equipment.WearAllEquipmenttech": {
+      "name": "equipment.WearAllEquipmenttech",
+      "category": "equipment",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "EquipmentCommands.as"
+    },
+    "equipment.TakeOffEquipmenttech": {
+      "name": "equipment.TakeOffEquipmenttech",
+      "category": "equipment",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "EquipmentCommands.as"
+    },
+    "equipment.EnhancedByGemStone": {
+      "name": "equipment.EnhancedByGemStone",
+      "category": "equipment",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "EquipmentCommands.as"
+    },
+    "equipmenttech.research": {
+      "name": "equipmenttech.research",
+      "category": "equipmenttech",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "EquipmenttechCommands.as"
+    },
+    "equipmenttech.getCoinsNeed": {
+      "name": "equipmenttech.getCoinsNeed",
+      "category": "equipmenttech",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "EquipmenttechCommands.as"
+    },
+    "equipmenttech.getResearchList": {
+      "name": "equipmenttech.getResearchList",
+      "category": "equipmenttech",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "EquipmenttechCommands.as"
+    },
+    "equipmenttech.setSender": {
+      "name": "equipmenttech.setSender",
+      "category": "equipmenttech",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "EquipmenttechCommands.as"
+    },
+    "equipmenttech.cancelResearch": {
+      "name": "equipmenttech.cancelResearch",
+      "category": "equipmenttech",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "EquipmenttechCommands.as"
+    },
+    "equipmenttech.speedUpResearch": {
+      "name": "equipmenttech.speedUpResearch",
+      "category": "equipmenttech",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "EquipmenttechCommands.as"
+    },
+    "fortifications.getFortificationsProduceList": {
+      "name": "fortifications.getFortificationsProduceList",
+      "category": "fortifications",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "FortificationsCommands.as"
+    },
+    "fortifications.produceWallProtect": {
+      "name": "fortifications.produceWallProtect",
+      "category": "fortifications",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "FortificationsCommands.as"
+    },
+    "fortifications.cancelFortificationProduce": {
+      "name": "fortifications.cancelFortificationProduce",
+      "category": "fortifications",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "FortificationsCommands.as"
+    },
+    "fortifications.destructWallProtect": {
+      "name": "fortifications.destructWallProtect",
+      "category": "fortifications",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "FortificationsCommands.as"
+    },
+    "fortifications.accTroopProduce": {
+      "name": "fortifications.accTroopProduce",
+      "category": "fortifications",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "FortificationsCommands.as"
+    },
+    "fortifications.setSender": {
+      "name": "fortifications.setSender",
+      "category": "fortifications",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "FortificationsCommands.as"
+    },
+    "fortifications.getProduceQueue": {
+      "name": "fortifications.getProduceQueue",
+      "category": "fortifications",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "FortificationsCommands.as"
+    },
+    "friend.deleteBlock": {
+      "name": "friend.deleteBlock",
+      "category": "friend",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "FriendCommands.as"
+    },
+    "friend.deleteFriend": {
+      "name": "friend.deleteFriend",
+      "category": "friend",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "FriendCommands.as"
+    },
+    "friend.addBlock": {
+      "name": "friend.addBlock",
+      "category": "friend",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "FriendCommands.as"
+    },
+    "friend.setSender": {
+      "name": "friend.setSender",
+      "category": "friend",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "FriendCommands.as"
+    },
+    "friend.isBlockMailPlayer": {
+      "name": "friend.isBlockMailPlayer",
+      "category": "friend",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "FriendCommands.as"
+    },
+    "friend.addFriend": {
+      "name": "friend.addFriend",
+      "category": "friend",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "FriendCommands.as"
+    },
+    "furlough.setSender": {
+      "name": "furlough.setSender",
+      "category": "furlough",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "FurloughCommands.as"
+    },
+    "furlough.isFurlought": {
+      "name": "furlough.isFurlought",
+      "category": "furlough",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Boolean",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "FurloughCommands.as"
+    },
+    "furlough.cancelFurlought": {
+      "name": "furlough.cancelFurlought",
+      "category": "furlough",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "FurloughCommands.as"
+    },
+    "gamblingranking.getGamblingRankingToday": {
+      "name": "gamblingranking.getGamblingRankingToday",
+      "category": "gamblingranking",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "GamblingRankingCommands.as"
+    },
+    "gamblingranking.getGamblingRankingYesterday": {
+      "name": "gamblingranking.getGamblingRankingYesterday",
+      "category": "gamblingranking",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "GamblingRankingCommands.as"
+    },
+    "gamblingranking.getGamblingRankingReward": {
+      "name": "gamblingranking.getGamblingRankingReward",
+      "category": "gamblingranking",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "GamblingRankingCommands.as"
+    },
+    "gamblingranking.setSender": {
+      "name": "gamblingranking.setSender",
+      "category": "gamblingranking",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "GamblingRankingCommands.as"
+    },
+    "interior.modifyTaxRate": {
+      "name": "interior.modifyTaxRate",
+      "category": "interior",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "InteriorCommands.as"
+    },
+    "interior.taxation": {
+      "name": "interior.taxation",
+      "category": "interior",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "InteriorCommands.as"
+    },
+    "interior.getResourceProduceData": {
+      "name": "interior.getResourceProduceData",
+      "category": "interior",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "InteriorCommands.as"
+    },
+    "interior.modifyCommenceRate": {
+      "name": "interior.modifyCommenceRate",
+      "category": "interior",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_6",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "InteriorCommands.as"
+    },
+    "interior.setSender": {
+      "name": "interior.setSender",
+      "category": "interior",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "InteriorCommands.as"
+    },
+    "interior.pacifyPeople": {
+      "name": "interior.pacifyPeople",
+      "category": "interior",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "InteriorCommands.as"
+    },
+    "mail.deleteMail": {
+      "name": "mail.deleteMail",
+      "category": "mail",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "MailCommands.as"
+    },
+    "mail.getAllTVMsg": {
+      "name": "mail.getAllTVMsg",
+      "category": "mail",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "MailCommands.as"
+    },
+    "mail.sendMail": {
+      "name": "mail.sendMail",
+      "category": "mail",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "MailCommands.as"
+    },
+    "mail.reportBug": {
+      "name": "mail.reportBug",
+      "category": "mail",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "MailCommands.as"
+    },
+    "mail.readMail": {
+      "name": "mail.readMail",
+      "category": "mail",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "MailCommands.as"
+    },
+    "mail.readOverMailList": {
+      "name": "mail.readOverMailList",
+      "category": "mail",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "MailCommands.as"
+    },
+    "mail.reportPlayer": {
+      "name": "mail.reportPlayer",
+      "category": "mail",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "MailCommands.as"
+    },
+    "mail.setSender": {
+      "name": "mail.setSender",
+      "category": "mail",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "MailCommands.as"
+    },
+    "mail.receiveMailList": {
+      "name": "mail.receiveMailList",
+      "category": "mail",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "MailCommands.as"
+    },
+    "modify.setTechnology": {
+      "name": "modify.setTechnology",
+      "category": "modify",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ModifyCommands.as"
+    },
+    "modify.removeBuilding": {
+      "name": "modify.removeBuilding",
+      "category": "modify",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ModifyCommands.as"
+    },
+    "modify.removeHero": {
+      "name": "modify.removeHero",
+      "category": "modify",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ModifyCommands.as"
+    },
+    "modify.addItems": {
+      "name": "modify.addItems",
+      "category": "modify",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ModifyCommands.as"
+    },
+    "modify.setResources": {
+      "name": "modify.setResources",
+      "category": "modify",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_6",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_7",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_8",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ModifyCommands.as"
+    },
+    "modify.addBuilding": {
+      "name": "modify.addBuilding",
+      "category": "modify",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ModifyCommands.as"
+    },
+    "modify.removeItem": {
+      "name": "modify.removeItem",
+      "category": "modify",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ModifyCommands.as"
+    },
+    "modify.addHero": {
+      "name": "modify.addHero",
+      "category": "modify",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_6",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_7",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_8",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_9",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_10",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_11",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ModifyCommands.as"
+    },
+    "modify.setSender": {
+      "name": "modify.setSender",
+      "category": "modify",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "ModifyCommands.as"
+    },
+    "quest.abandon": {
+      "name": "quest.abandon",
+      "category": "quest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "QuestCommands.as"
+    },
+    "quest.awardPacket": {
+      "name": "quest.awardPacket",
+      "category": "quest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "QuestCommands.as"
+    },
+    "quest.AllowRegister": {
+      "name": "quest.AllowRegister",
+      "category": "quest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "QuestCommands.as"
+    },
+    "quest.accept": {
+      "name": "quest.accept",
+      "category": "quest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "QuestCommands.as"
+    },
+    "quest.getQuestType": {
+      "name": "quest.getQuestType",
+      "category": "quest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "QuestCommands.as"
+    },
+    "quest.getAwardItems": {
+      "name": "quest.getAwardItems",
+      "category": "quest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "QuestCommands.as"
+    },
+    "quest.getEffortList": {
+      "name": "quest.getEffortList",
+      "category": "quest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "QuestCommands.as"
+    },
+    "quest.getEffortListByTargeTypeid": {
+      "name": "quest.getEffortListByTargeTypeid",
+      "category": "quest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "QuestCommands.as"
+    },
+    "quest.donate": {
+      "name": "quest.donate",
+      "category": "quest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "QuestCommands.as"
+    },
+    "quest.getQuestList": {
+      "name": "quest.getQuestList",
+      "category": "quest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "QuestCommands.as"
+    },
+    "quest.setSender": {
+      "name": "quest.setSender",
+      "category": "quest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "QuestCommands.as"
+    },
+    "quest.award": {
+      "name": "quest.award",
+      "category": "quest",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "QuestCommands.as"
+    },
+    "rank.getPlayerRank": {
+      "name": "rank.getPlayerRank",
+      "category": "rank",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "RankCommands.as"
+    },
+    "rank.getTopVotesPlayer": {
+      "name": "rank.getTopVotesPlayer",
+      "category": "rank",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "RankCommands.as"
+    },
+    "rank.getVoteRank": {
+      "name": "rank.getVoteRank",
+      "category": "rank",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "RankCommands.as"
+    },
+    "rank.getAllianceRank": {
+      "name": "rank.getAllianceRank",
+      "category": "rank",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "RankCommands.as"
+    },
+    "rank.getCastleRank": {
+      "name": "rank.getCastleRank",
+      "category": "rank",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "RankCommands.as"
+    },
+    "rank.getHeroRank": {
+      "name": "rank.getHeroRank",
+      "category": "rank",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "RankCommands.as"
+    },
+    "rank.setSender": {
+      "name": "rank.setSender",
+      "category": "rank",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "RankCommands.as"
+    },
+    "report.receiveReportList": {
+      "name": "report.receiveReportList",
+      "category": "report",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ReportCommands.as"
+    },
+    "report.readOverReport": {
+      "name": "report.readOverReport",
+      "category": "report",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ReportCommands.as"
+    },
+    "report.deleteAllReports": {
+      "name": "report.deleteAllReports",
+      "category": "report",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ReportCommands.as"
+    },
+    "report.markAsRead": {
+      "name": "report.markAsRead",
+      "category": "report",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ReportCommands.as"
+    },
+    "report.shareReport": {
+      "name": "report.shareReport",
+      "category": "report",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ReportCommands.as"
+    },
+    "report.setSender": {
+      "name": "report.setSender",
+      "category": "report",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "ReportCommands.as"
+    },
+    "report.deleteReport": {
+      "name": "report.deleteReport",
+      "category": "report",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ReportCommands.as"
+    },
+    "security.cancelRemovingSecurityCodeProcess": {
+      "name": "security.cancelRemovingSecurityCodeProcess",
+      "category": "security",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "SecurityCommands.as"
+    },
+    "security.setSecurityCode": {
+      "name": "security.setSecurityCode",
+      "category": "security",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "SecurityCommands.as"
+    },
+    "security.authSecurityCode": {
+      "name": "security.authSecurityCode",
+      "category": "security",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "SecurityCommands.as"
+    },
+    "security.changeSecurityCode": {
+      "name": "security.changeSecurityCode",
+      "category": "security",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "SecurityCommands.as"
+    },
+    "security.getIsSecurityCodeSetted": {
+      "name": "security.getIsSecurityCodeSetted",
+      "category": "security",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "SecurityCommands.as"
+    },
+    "security.setUnlockOption": {
+      "name": "security.setUnlockOption",
+      "category": "security",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "SecurityCommands.as"
+    },
+    "security.setProtectOption": {
+      "name": "security.setProtectOption",
+      "category": "security",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "SecurityCommands.as"
+    },
+    "security.removeSecurityCode": {
+      "name": "security.removeSecurityCode",
+      "category": "security",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "SecurityCommands.as"
+    },
+    "security.getProtectOption": {
+      "name": "security.getProtectOption",
+      "category": "security",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "SecurityCommands.as"
+    },
+    "security.setSender": {
+      "name": "security.setSender",
+      "category": "security",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "SecurityCommands.as"
+    },
+    "shop.buy": {
+      "name": "shop.buy",
+      "category": "shop",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ShopCommands.as"
+    },
+    "shop.getBuyResourceInfo": {
+      "name": "shop.getBuyResourceInfo",
+      "category": "shop",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ShopCommands.as"
+    },
+    "shop.Gem_Smelting": {
+      "name": "shop.Gem_Smelting",
+      "category": "shop",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ShopCommands.as"
+    },
+    "shop.useDevilItem": {
+      "name": "shop.useDevilItem",
+      "category": "shop",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ShopCommands.as"
+    },
+    "shop.useGoods": {
+      "name": "shop.useGoods",
+      "category": "shop",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ShopCommands.as"
+    },
+    "shop.useAngelItem": {
+      "name": "shop.useAngelItem",
+      "category": "shop",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ShopCommands.as"
+    },
+    "shop.buyResource": {
+      "name": "shop.buyResource",
+      "category": "shop",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_6",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ShopCommands.as"
+    },
+    "shop.setSender": {
+      "name": "shop.setSender",
+      "category": "shop",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "ShopCommands.as"
+    },
+    "shop.useCastleGoods": {
+      "name": "shop.useCastleGoods",
+      "category": "shop",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ShopCommands.as"
+    },
+    "shop.useTrickItem": {
+      "name": "shop.useTrickItem",
+      "category": "shop",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "ShopCommands.as"
+    },
+    "stratagem.setSender": {
+      "name": "stratagem.setSender",
+      "category": "stratagem",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "StratagemCommands.as"
+    },
+    "stratagem.useStratagem": {
+      "name": "stratagem.useStratagem",
+      "category": "stratagem",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "StratagemCommands.as"
+    },
+    "trade.getMyTradeList": {
+      "name": "trade.getMyTradeList",
+      "category": "trade",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "TradeCommands.as"
+    },
+    "trade.newTrade": {
+      "name": "trade.newTrade",
+      "category": "trade",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_6",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "TradeCommands.as"
+    },
+    "trade.cancelTrade": {
+      "name": "trade.cancelTrade",
+      "category": "trade",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "TradeCommands.as"
+    },
+    "trade.speedUpTrans": {
+      "name": "trade.speedUpTrans",
+      "category": "trade",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "TradeCommands.as"
+    },
+    "trade.searchTrades": {
+      "name": "trade.searchTrades",
+      "category": "trade",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "TradeCommands.as"
+    },
+    "trade.getTransingTradeList": {
+      "name": "trade.getTransingTradeList",
+      "category": "trade",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "TradeCommands.as"
+    },
+    "trade.setSender": {
+      "name": "trade.setSender",
+      "category": "trade",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "TradeCommands.as"
+    },
+    "troop.getProduceQueue": {
+      "name": "troop.getProduceQueue",
+      "category": "troop",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "TroopCommands.as"
+    },
+    "troop.getTroopProduceList": {
+      "name": "troop.getTroopProduceList",
+      "category": "troop",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "TroopCommands.as"
+    },
+    "troop.cancelTroopProduce": {
+      "name": "troop.cancelTroopProduce",
+      "category": "troop",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "TroopCommands.as"
+    },
+    "troop.checkIdleBarrack": {
+      "name": "troop.checkIdleBarrack",
+      "category": "troop",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "TroopCommands.as"
+    },
+    "troop.disbandTroop": {
+      "name": "troop.disbandTroop",
+      "category": "troop",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "TroopCommands.as"
+    },
+    "troop.produceTroop": {
+      "name": "troop.produceTroop",
+      "category": "troop",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "Boolean",
+          "required": true
+        },
+        {
+          "name": "_arg_6",
+          "type": "Boolean",
+          "required": true
+        },
+        {
+          "name": "_arg_7",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "TroopCommands.as"
+    },
+    "troop.setSender": {
+      "name": "troop.setSender",
+      "category": "troop",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "TroopCommands.as"
+    },
+    "troop.accTroopProduce": {
+      "name": "troop.accTroopProduce",
+      "category": "troop",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "TroopCommands.as"
+    },
+    "truce.cancelDreamTruce": {
+      "name": "truce.cancelDreamTruce",
+      "category": "truce",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "TruceCommands.as"
+    },
+    "truce.setSender": {
+      "name": "truce.setSender",
+      "category": "truce",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "TruceCommands.as"
+    },
+    "truce.setDreamTruce": {
+      "name": "truce.setDreamTruce",
+      "category": "truce",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "TruceCommands.as"
+    },
+    "truce.changeDreamTruceTime": {
+      "name": "truce.changeDreamTruceTime",
+      "category": "truce",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_5",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "TruceCommands.as"
+    },
+    "visit.visitorComment": {
+      "name": "visit.visitorComment",
+      "category": "visit",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "VisitCommands.as"
+    },
+    "visit.getHelpedPlayers": {
+      "name": "visit.getHelpedPlayers",
+      "category": "visit",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "VisitCommands.as"
+    },
+    "visit.deleteComment": {
+      "name": "visit.deleteComment",
+      "category": "visit",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "VisitCommands.as"
+    },
+    "visit.getVisitorComments": {
+      "name": "visit.getVisitorComments",
+      "category": "visit",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_4",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "VisitCommands.as"
+    },
+    "visit.getAllVisitorComments": {
+      "name": "visit.getAllVisitorComments",
+      "category": "visit",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "VisitCommands.as"
+    },
+    "visit.setSender": {
+      "name": "visit.setSender",
+      "category": "visit",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "VisitCommands.as"
+    },
+    "visit.markCommentAsRead": {
+      "name": "visit.markCommentAsRead",
+      "category": "visit",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "VisitCommands.as"
+    },
+    "visit.helpIncreaseProduction": {
+      "name": "visit.helpIncreaseProduction",
+      "category": "visit",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_3",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "VisitCommands.as"
+    },
+    "votetoplayer.setSender": {
+      "name": "votetoplayer.setSender",
+      "category": "votetoplayer",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "Sender",
+          "required": true
+        }
+      ],
+      "source_file": "VoteToPlayerCommands.as"
+    },
+    "votetoplayer.voteToPlayerById": {
+      "name": "votetoplayer.voteToPlayerById",
+      "category": "votetoplayer",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "VoteToPlayerCommands.as"
+    },
+    "votetoplayer.voteToPlayerByName": {
+      "name": "votetoplayer.voteToPlayerByName",
+      "category": "votetoplayer",
+      "parameters": [
+        {
+          "name": "_arg_1",
+          "type": "String",
+          "required": true
+        },
+        {
+          "name": "_arg_2",
+          "type": "Function",
+          "required": false
+        }
+      ],
+      "source_file": "VoteToPlayerCommands.as"
+    },
+    "alliance.addUsertoAlliance": {
+      "name": "alliance.addUsertoAlliance",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.addUsertoAllianceList": {
+      "name": "alliance.addUsertoAllianceList",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.agreeComeinAllianceByLeader": {
+      "name": "alliance.agreeComeinAllianceByLeader",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.agreeComeinAllianceByUser": {
+      "name": "alliance.agreeComeinAllianceByUser",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.agreeComeinAllianceList": {
+      "name": "alliance.agreeComeinAllianceList",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.canceladdUsertoAlliance": {
+      "name": "alliance.canceladdUsertoAlliance",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.cancelagreeComeinAlliance": {
+      "name": "alliance.cancelagreeComeinAlliance",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.cancelUserWantInAlliance": {
+      "name": "alliance.cancelUserWantInAlliance",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.createAlliance": {
+      "name": "alliance.createAlliance",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.dropAllianceFriendshipRelation": {
+      "name": "alliance.dropAllianceFriendshipRelation",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.getAllianceFriendshipList": {
+      "name": "alliance.getAllianceFriendshipList",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.getAllianceWanted": {
+      "name": "alliance.getAllianceWanted",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.getPowerFromAlliance": {
+      "name": "alliance.getPowerFromAlliance",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.isHasAlliance": {
+      "name": "alliance.isHasAlliance",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.kickOutMemberfromAlliance": {
+      "name": "alliance.kickOutMemberfromAlliance",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.leaderWantUserInAllianceList": {
+      "name": "alliance.leaderWantUserInAllianceList",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.messagesForAllianceMember": {
+      "name": "alliance.messagesForAllianceMember",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.rejectComeinAlliance": {
+      "name": "alliance.rejectComeinAlliance",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.resetTopPowerForAlliance": {
+      "name": "alliance.resetTopPowerForAlliance",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.resignForAlliance": {
+      "name": "alliance.resignForAlliance",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.sayByetoAlliance": {
+      "name": "alliance.sayByetoAlliance",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.setAllianceFriendship": {
+      "name": "alliance.setAllianceFriendship",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.setAllInfoForAlliance": {
+      "name": "alliance.setAllInfoForAlliance",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.setPowerForUserByAlliance": {
+      "name": "alliance.setPowerForUserByAlliance",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "alliance.userWantInAlliance": {
+      "name": "alliance.userWantInAlliance",
+      "category": "alliance",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "army.IsDropItemInCastle": {
+      "name": "army.IsDropItemInCastle",
+      "category": "army",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "castle.deleteCastleSign": {
+      "name": "castle.deleteCastleSign",
+      "category": "castle",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "castle.saveCastleSignList": {
+      "name": "castle.saveCastleSignList",
+      "category": "castle",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "celeb.findAllianceByPrestige": {
+      "name": "celeb.findAllianceByPrestige",
+      "category": "celeb",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "celeb.findPlayerByPrestige": {
+      "name": "celeb.findPlayerByPrestige",
+      "category": "celeb",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "celeb.findPlayerByStar": {
+      "name": "celeb.findPlayerByStar",
+      "category": "celeb",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "celeb.findPlayerByTitle": {
+      "name": "celeb.findPlayerByTitle",
+      "category": "celeb",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "commission.acceptCommissionQuest": {
+      "name": "commission.acceptCommissionQuest",
+      "category": "commission",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "commission.addCommissionQuestArmy": {
+      "name": "commission.addCommissionQuestArmy",
+      "category": "commission",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "commission.declineCommissionQuest": {
+      "name": "commission.declineCommissionQuest",
+      "category": "commission",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "commission.getAllCommissionQuest": {
+      "name": "commission.getAllCommissionQuest",
+      "category": "commission",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "commission.getCommissionQuestArmyInfo": {
+      "name": "commission.getCommissionQuestArmyInfo",
+      "category": "commission",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "commission.getCommissionQuestArmyRanking": {
+      "name": "commission.getCommissionQuestArmyRanking",
+      "category": "commission",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "commission.getMyAcceptedCommissionQuest": {
+      "name": "commission.getMyAcceptedCommissionQuest",
+      "category": "commission",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "commission.getMyCommissionQuest": {
+      "name": "commission.getMyCommissionQuest",
+      "category": "commission",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "commission.issueCommissionQuest": {
+      "name": "commission.issueCommissionQuest",
+      "category": "commission",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "common.authSecurityCode": {
+      "name": "common.authSecurityCode",
+      "category": "common",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "common.cancelRemovingSecurityCodeProcess": {
+      "name": "common.cancelRemovingSecurityCodeProcess",
+      "category": "common",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "common.changeSecurityCode": {
+      "name": "common.changeSecurityCode",
+      "category": "common",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "common.getIsSecurityCodeSetted": {
+      "name": "common.getIsSecurityCodeSetted",
+      "category": "common",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "common.getProtectOption": {
+      "name": "common.getProtectOption",
+      "category": "common",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "common.removeSecurityCode": {
+      "name": "common.removeSecurityCode",
+      "category": "common",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "common.setProtectOption": {
+      "name": "common.setProtectOption",
+      "category": "common",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "common.setSecurityCode": {
+      "name": "common.setSecurityCode",
+      "category": "common",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "common.setUnlockOption": {
+      "name": "common.setUnlockOption",
+      "category": "common",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "field.getCastleFieldInfo": {
+      "name": "field.getCastleFieldInfo",
+      "category": "field",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "field.getOtherFieldInfo": {
+      "name": "field.getOtherFieldInfo",
+      "category": "field",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "field.giveUpField": {
+      "name": "field.giveUpField",
+      "category": "field",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "gamemaster.addBuilding": {
+      "name": "gamemaster.addBuilding",
+      "category": "gamemaster",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "gamemaster.addHero": {
+      "name": "gamemaster.addHero",
+      "category": "gamemaster",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "gamemaster.addItems": {
+      "name": "gamemaster.addItems",
+      "category": "gamemaster",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "gamemaster.removeBuilding": {
+      "name": "gamemaster.removeBuilding",
+      "category": "gamemaster",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "gamemaster.removeHero": {
+      "name": "gamemaster.removeHero",
+      "category": "gamemaster",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "gamemaster.removeItem": {
+      "name": "gamemaster.removeItem",
+      "category": "gamemaster",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "gamemaster.setResources": {
+      "name": "gamemaster.setResources",
+      "category": "gamemaster",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "gamemaster.setTechnology": {
+      "name": "gamemaster.setTechnology",
+      "category": "gamemaster",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.addPoint": {
+      "name": "hero.addPoint",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.addPoint2": {
+      "name": "hero.addPoint2",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.awardGold": {
+      "name": "hero.awardGold",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.callBackHero": {
+      "name": "hero.callBackHero",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.changeName": {
+      "name": "hero.changeName",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.dischargeChief": {
+      "name": "hero.dischargeChief",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.fireHero": {
+      "name": "hero.fireHero",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.GenSaveRandomHero": {
+      "name": "hero.GenSaveRandomHero",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.GetDisappearHeros": {
+      "name": "hero.GetDisappearHeros",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.getFleeHeroList": {
+      "name": "hero.getFleeHeroList",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.getHerosListFromTavern": {
+      "name": "hero.getHerosListFromTavern",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.GetRandomHero": {
+      "name": "hero.GetRandomHero",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.hireFacebookFriendHero": {
+      "name": "hero.hireFacebookFriendHero",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.hireHero": {
+      "name": "hero.hireHero",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.levelUp": {
+      "name": "hero.levelUp",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.promoteToChief": {
+      "name": "hero.promoteToChief",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.RecoverDisappearHero": {
+      "name": "hero.RecoverDisappearHero",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.recruitFleeHero": {
+      "name": "hero.recruitFleeHero",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.refreshHerosListFromTavern": {
+      "name": "hero.refreshHerosListFromTavern",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.releaseHero": {
+      "name": "hero.releaseHero",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.resetPoint": {
+      "name": "hero.resetPoint",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.RetSetHeroAttri": {
+      "name": "hero.RetSetHeroAttri",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.setHeroFacebookId": {
+      "name": "hero.setHeroFacebookId",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.SetShowHeroId": {
+      "name": "hero.SetShowHeroId",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.ShowPlayerHerosByUserName": {
+      "name": "hero.ShowPlayerHerosByUserName",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.tryGetSeizedHero": {
+      "name": "hero.tryGetSeizedHero",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "hero.useItem": {
+      "name": "hero.useItem",
+      "category": "hero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "npchero.getNpcHeroInfroByID": {
+      "name": "npchero.getNpcHeroInfroByID",
+      "category": "npchero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "npchero.getNpcHerosList": {
+      "name": "npchero.getNpcHerosList",
+      "category": "npchero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "npchero.getNpcHerosListByFilter": {
+      "name": "npchero.getNpcHerosListByFilter",
+      "category": "npchero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "npchero.getNpcHerosListByMoney": {
+      "name": "npchero.getNpcHerosListByMoney",
+      "category": "npchero",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "tech.cancelResearch": {
+      "name": "tech.cancelResearch",
+      "category": "tech",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "tech.getCoinsNeed": {
+      "name": "tech.getCoinsNeed",
+      "category": "tech",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "tech.getResearchList": {
+      "name": "tech.getResearchList",
+      "category": "tech",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "tech.research": {
+      "name": "tech.research",
+      "category": "tech",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "tech.speedUpResearch": {
+      "name": "tech.speedUpResearch",
+      "category": "tech",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "vote.voteToPlayerById": {
+      "name": "vote.voteToPlayerById",
+      "category": "vote",
+      "parameters": [],
+      "source_file": "protocol.py"
+    },
+    "vote.voteToPlayerByName": {
+      "name": "vote.voteToPlayerByName",
+      "category": "vote",
+      "parameters": [],
+      "source_file": "protocol.py"
+    }
+  }
+}

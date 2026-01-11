@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <defs>
+    <!-- Evony Age II Color Palette -->
+    <linearGradient id="evonyGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="50%" style="stop-color:#DAA520"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+    <linearGradient id="evonyBronze" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#CD7F32"/>
+      <stop offset="100%" style="stop-color:#8B4513"/>
+    </linearGradient>
+    <linearGradient id="evonyDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C1810"/>
+      <stop offset="100%" style="stop-color:#1A0F0A"/>
+    </linearGradient>
+    <linearGradient id="evonyRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B0000"/>
+      <stop offset="100%" style="stop-color:#4A0000"/>
+    </linearGradient>
+    <linearGradient id="evonyBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A5F"/>
+      <stop offset="100%" style="stop-color:#0D1B2A"/>
+    </linearGradient>
+    <linearGradient id="autoevonyGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#228B22"/>
+      <stop offset="100%" style="stop-color:#006400"/>
+    </linearGradient>
+
+    <!-- Decorative border pattern -->
+    <pattern id="borderPattern" patternUnits="userSpaceOnUse" width="20" height="20">
+      <rect width="20" height="20" fill="#1A0F0A"/>
+      <circle cx="10" cy="10" r="2" fill="#DAA520" opacity="0.5"/>
+    </pattern>
+
+    <!-- Drop shadow -->
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="3" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background with medieval texture -->
+  <rect width="1200" height="900" fill="url(#evonyDark)"/>
+  <rect x="10" y="10" width="1180" height="880" fill="none" stroke="url(#evonyGold)" stroke-width="3" rx="5"/>
+  <rect x="15" y="15" width="1170" height="870" fill="none" stroke="url(#evonyBronze)" stroke-width="1" rx="3"/>
+
+  <!-- Title Banner -->
+  <rect x="300" y="20" width="600" height="60" fill="url(#evonyRed)" stroke="url(#evonyGold)" stroke-width="2" rx="5" filter="url(#dropShadow)"/>
+  <text x="600" y="58" font-family="Georgia, serif" font-size="28" fill="url(#evonyGold)" text-anchor="middle" font-weight="bold" filter="url(#glow)">⚔️ EVONY MCP SYSTEM ARCHITECTURE ⚔️</text>
+
+  <!-- IDE Layer (Claude/Windsurf) -->
+  <g transform="translate(50, 100)">
+    <rect width="500" height="150" fill="url(#evonyBlue)" stroke="url(#evonyGold)" stroke-width="2" rx="8" filter="url(#dropShadow)"/>
+    <text x="250" y="30" font-family="Georgia, serif" font-size="18" fill="#FFD700" text-anchor="middle" font-weight="bold">🏰 IDE LAYER</text>
+
+    <!-- Claude Desktop -->
+    <rect x="20" y="50" width="140" height="80" fill="#2C1810" stroke="#CD7F32" stroke-width="1" rx="5"/>
+    <text x="90" y="80" font-family="Arial" font-size="12" fill="#FFD700" text-anchor="middle" font-weight="bold">CLAUDE</text>
+    <text x="90" y="95" font-family="Arial" font-size="10" fill="#DAA520" text-anchor="middle">Desktop</text>
+    <text x="90" y="115" font-family="Arial" font-size="9" fill="#8B8B83" text-anchor="middle">MCP Client</text>
+
+    <!-- Windsurf -->
+    <rect x="180" y="50" width="140" height="80" fill="#2C1810" stroke="#CD7F32" stroke-width="1" rx="5"/>
+    <text x="250" y="80" font-family="Arial" font-size="12" fill="#FFD700" text-anchor="middle" font-weight="bold">WINDSURF</text>
+    <text x="250" y="95" font-family="Arial" font-size="10" fill="#DAA520" text-anchor="middle">Cascade AI</text>
+    <text x="250" y="115" font-family="Arial" font-size="9" fill="#8B8B83" text-anchor="middle">68 Tools</text>
+
+    <!-- VS Code -->
+    <rect x="340" y="50" width="140" height="80" fill="#2C1810" stroke="#CD7F32" stroke-width="1" rx="5"/>
+    <text x="410" y="80" font-family="Arial" font-size="12" fill="#FFD700" text-anchor="middle" font-weight="bold">VS CODE</text>
+    <text x="410" y="95" font-family="Arial" font-size="10" fill="#DAA520" text-anchor="middle">Continue.dev</text>
+    <text x="410" y="115" font-family="Arial" font-size="9" fill="#8B8B83" text-anchor="middle">Extensions</text>
+  </g>
+
+  <!-- MCP Server Core -->
+  <g transform="translate(600, 100)">
+    <rect width="550" height="150" fill="url(#evonyRed)" stroke="url(#evonyGold)" stroke-width="2" rx="8" filter="url(#dropShadow)"/>
+    <text x="275" y="30" font-family="Georgia, serif" font-size="18" fill="#FFD700" text-anchor="middle" font-weight="bold">⚙️ MCP SERVER CORE</text>
+
+    <rect x="20" y="50" width="160" height="80" fill="#1A0F0A" stroke="#DAA520" stroke-width="1" rx="5"/>
+    <text x="100" y="75" font-family="Arial" font-size="11" fill="#FFD700" text-anchor="middle" font-weight="bold">mcp_server.py</text>
+    <text x="100" y="92" font-family="Arial" font-size="9" fill="#CD7F32" text-anchor="middle">2,657 lines</text>
+    <text x="100" y="107" font-family="Arial" font-size="9" fill="#8B8B83" text-anchor="middle">55 handlers</text>
+    <text x="100" y="120" font-family="Arial" font-size="9" fill="#8B8B83" text-anchor="middle">JSON-RPC 2.0</text>
+
+    <rect x="195" y="50" width="160" height="80" fill="#1A0F0A" stroke="#DAA520" stroke-width="1" rx="5"/>
+    <text x="275" y="75" font-family="Arial" font-size="11" fill="#FFD700" text-anchor="middle" font-weight="bold">tools_extended.py</text>
+    <text x="275" y="92" font-family="Arial" font-size="9" fill="#CD7F32" text-anchor="middle">15,518 lines</text>
+    <text x="275" y="107" font-family="Arial" font-size="9" fill="#8B8B83" text-anchor="middle">13 extensions</text>
+    <text x="275" y="120" font-family="Arial" font-size="9" fill="#8B8B83" text-anchor="middle">Advanced RE</text>
+
+    <rect x="370" y="50" width="160" height="80" fill="#1A0F0A" stroke="#DAA520" stroke-width="1" rx="5"/>
+    <text x="450" y="75" font-family="Arial" font-size="11" fill="#FFD700" text-anchor="middle" font-weight="bold">amf3_tools.py</text>
+    <text x="450" y="92" font-family="Arial" font-size="9" fill="#CD7F32" text-anchor="middle">28,278 lines</text>
+    <text x="450" y="107" font-family="Arial" font-size="9" fill="#8B8B83" text-anchor="middle">Pure Python</text>
+    <text x="450" y="120" font-family="Arial" font-size="9" fill="#8B8B83" text-anchor="middle">Encode/Decode</text>
+  </g>
+
+  <!-- Connection arrows from IDE to MCP -->
+  <path d="M 300 250 L 300 280 L 875 280 L 875 250" stroke="url(#evonyGold)" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="587" y="275" font-family="Arial" font-size="10" fill="#DAA520" text-anchor="middle">stdio / JSON-RPC</text>
+
+  <!-- Tool Categories -->
+  <g transform="translate(50, 300)">
+    <rect width="1100" height="200" fill="url(#autoevonyGreen)" stroke="url(#evonyGold)" stroke-width="2" rx="8" filter="url(#dropShadow)"/>
+    <text x="550" y="25" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">🛠️ TOOL CATEGORIES (68 Total)</text>
+
+    <!-- Packet Tools -->
+    <rect x="20" y="45" width="150" height="140" fill="#1A0F0A" stroke="#228B22" stroke-width="1" rx="5"/>
+    <text x="95" y="65" font-family="Arial" font-size="11" fill="#90EE90" text-anchor="middle" font-weight="bold">📦 PACKET</text>
+    <text x="95" y="82" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">packet_capture</text>
+    <text x="95" y="95" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">packet_decode</text>
+    <text x="95" y="108" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">packet_encode</text>
+    <text x="95" y="121" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">packet_inject</text>
+    <text x="95" y="134" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">packet_replay</text>
+    <text x="95" y="165" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle">12 tools</text>
+
+    <!-- Game Tools -->
+    <rect x="185" y="45" width="150" height="140" fill="#1A0F0A" stroke="#228B22" stroke-width="1" rx="5"/>
+    <text x="260" y="65" font-family="Arial" font-size="11" fill="#90EE90" text-anchor="middle" font-weight="bold">🎮 GAME</text>
+    <text x="260" y="82" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">game_send</text>
+    <text x="260" y="95" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">game_status</text>
+    <text x="260" y="108" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">game_connect</text>
+    <text x="260" y="121" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">game_resources</text>
+    <text x="260" y="134" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">game_troops</text>
+    <text x="260" y="165" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle">15 tools</text>
+
+    <!-- Exploit Tools -->
+    <rect x="350" y="45" width="150" height="140" fill="#1A0F0A" stroke="#8B0000" stroke-width="1" rx="5"/>
+    <text x="425" y="65" font-family="Arial" font-size="11" fill="#FF6B6B" text-anchor="middle" font-weight="bold">💀 EXPLOIT</text>
+    <text x="425" y="82" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">exploit_list</text>
+    <text x="425" y="95" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">exploit_test</text>
+    <text x="425" y="108" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">exploit_scan</text>
+    <text x="425" y="121" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">exploit_create</text>
+    <text x="425" y="134" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">exploit_verify</text>
+    <text x="425" y="165" font-family="Arial" font-size="10" fill="#FF6B6B" text-anchor="middle">10 tools</text>
+
+    <!-- RE Tools -->
+    <rect x="515" y="45" width="150" height="140" fill="#1A0F0A" stroke="#4169E1" stroke-width="1" rx="5"/>
+    <text x="590" y="65" font-family="Arial" font-size="11" fill="#87CEEB" text-anchor="middle" font-weight="bold">🔬 RE TOOLS</text>
+    <text x="590" y="82" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">ffdec_decompile</text>
+    <text x="590" y="95" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">ghidra_analyze</text>
+    <text x="590" y="108" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">rabcdasm_disasm</text>
+    <text x="590" y="121" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">radare2_analyze</text>
+    <text x="590" y="134" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">swf_extract</text>
+    <text x="590" y="165" font-family="Arial" font-size="10" fill="#87CEEB" text-anchor="middle">8 tools</text>
+
+    <!-- Proxy Tools -->
+    <rect x="680" y="45" width="150" height="140" fill="#1A0F0A" stroke="#9932CC" stroke-width="1" rx="5"/>
+    <text x="755" y="65" font-family="Arial" font-size="11" fill="#DDA0DD" text-anchor="middle" font-weight="bold">🔀 PROXY</text>
+    <text x="755" y="82" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">proxy_start</text>
+    <text x="755" y="95" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">proxy_stop</text>
+    <text x="755" y="108" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">proxy_inject</text>
+    <text x="755" y="121" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">proxy_intercept</text>
+    <text x="755" y="134" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">proxy_modify</text>
+    <text x="755" y="165" font-family="Arial" font-size="10" fill="#DDA0DD" text-anchor="middle">6 tools</text>
+
+    <!-- RAG Tools -->
+    <rect x="845" y="45" width="150" height="140" fill="#1A0F0A" stroke="#FFD700" stroke-width="1" rx="5"/>
+    <text x="920" y="65" font-family="Arial" font-size="11" fill="#FFD700" text-anchor="middle" font-weight="bold">🧠 RAG</text>
+    <text x="920" y="82" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">rag_query</text>
+    <text x="920" y="95" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">rag_search</text>
+    <text x="920" y="108" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">rag_index</text>
+    <text x="920" y="121" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">cross_reference</text>
+    <text x="920" y="134" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">code_search</text>
+    <text x="920" y="165" font-family="Arial" font-size="10" fill="#FFD700" text-anchor="middle">5 tools</text>
+  </g>
+
+  <!-- Bot Server Layer -->
+  <g transform="translate(50, 530)">
+    <rect width="500" height="150" fill="url(#evonyBronze)" stroke="url(#evonyGold)" stroke-width="2" rx="8" filter="url(#dropShadow)"/>
+    <text x="250" y="25" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">🤖 BOT SERVER (Port 9999)</text>
+
+    <rect x="20" y="45" width="140" height="90" fill="#1A0F0A" stroke="#CD7F32" stroke-width="1" rx="5"/>
+    <text x="90" y="65" font-family="Arial" font-size="10" fill="#FFD700" text-anchor="middle" font-weight="bold">server.py</text>
+    <text x="90" y="82" font-family="Arial" font-size="9" fill="#DAA520" text-anchor="middle">102,510 lines</text>
+    <text x="90" y="97" font-family="Arial" font-size="8" fill="#8B8B83" text-anchor="middle">HTTP Server</text>
+    <text x="90" y="110" font-family="Arial" font-size="8" fill="#8B8B83" text-anchor="middle">Web UI</text>
+    <text x="90" y="123" font-family="Arial" font-size="8" fill="#8B8B83" text-anchor="middle">100+ Templates</text>
+
+    <rect x="175" y="45" width="140" height="90" fill="#1A0F0A" stroke="#CD7F32" stroke-width="1" rx="5"/>
+    <text x="245" y="65" font-family="Arial" font-size="10" fill="#FFD700" text-anchor="middle" font-weight="bold">EvonyClient</text>
+    <text x="245" y="82" font-family="Arial" font-size="9" fill="#DAA520" text-anchor="middle">TCP Socket</text>
+    <text x="245" y="97" font-family="Arial" font-size="8" fill="#8B8B83" text-anchor="middle">AMF3 Codec</text>
+    <text x="245" y="110" font-family="Arial" font-size="8" fill="#8B8B83" text-anchor="middle">Auto-Discovery</text>
+    <text x="245" y="123" font-family="Arial" font-size="8" fill="#8B8B83" text-anchor="middle">Anti-Bot Bypass</text>
+
+    <rect x="330" y="45" width="150" height="90" fill="#1A0F0A" stroke="#CD7F32" stroke-width="1" rx="5"/>
+    <text x="405" y="65" font-family="Arial" font-size="10" fill="#FFD700" text-anchor="middle" font-weight="bold">EXPLOITS</text>
+    <text x="405" y="82" font-family="Arial" font-size="8" fill="#FF6B6B" text-anchor="middle">Integer Overflow</text>
+    <text x="405" y="95" font-family="Arial" font-size="8" fill="#FF6B6B" text-anchor="middle">Race Conditions</text>
+    <text x="405" y="108" font-family="Arial" font-size="8" fill="#FF6B6B" text-anchor="middle">Packet Replay</text>
+    <text x="405" y="121" font-family="Arial" font-size="8" fill="#FF6B6B" text-anchor="middle">Parameter Tampering</text>
+  </g>
+
+  <!-- RAG & Knowledge Base -->
+  <g transform="translate(600, 530)">
+    <rect width="550" height="150" fill="url(#evonyBlue)" stroke="url(#evonyGold)" stroke-width="2" rx="8" filter="url(#dropShadow)"/>
+    <text x="275" y="25" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">📚 KNOWLEDGE BASE</text>
+
+    <rect x="20" y="45" width="160" height="90" fill="#1A0F0A" stroke="#1E3A5F" stroke-width="1" rx="5"/>
+    <text x="100" y="65" font-family="Arial" font-size="10" fill="#87CEEB" text-anchor="middle" font-weight="bold">AS3 Source</text>
+    <text x="100" y="82" font-family="Arial" font-size="9" fill="#DAA520" text-anchor="middle">19,032 files</text>
+    <text x="100" y="97" font-family="Arial" font-size="8" fill="#8B8B83" text-anchor="middle">EvonyClient1921</text>
+    <text x="100" y="110" font-family="Arial" font-size="8" fill="#8B8B83" text-anchor="middle">AutoEvony2_NEW</text>
+    <text x="100" y="123" font-family="Arial" font-size="8" fill="#8B8B83" text-anchor="middle">Decompiled</text>
+
+    <rect x="195" y="45" width="160" height="90" fill="#1A0F0A" stroke="#1E3A5F" stroke-width="1" rx="5"/>
+    <text x="275" y="65" font-family="Arial" font-size="10" fill="#87CEEB" text-anchor="middle" font-weight="bold">Protocol Data</text>
+    <text x="275" y="82" font-family="Arial" font-size="9" fill="#DAA520" text-anchor="middle">301+ Commands</text>
+    <text x="275" y="97" font-family="Arial" font-size="8" fill="#8B8B83" text-anchor="middle">AMF3 Packets</text>
+    <text x="275" y="110" font-family="Arial" font-size="8" fill="#8B8B83" text-anchor="middle">Encryption Keys</text>
+    <text x="275" y="123" font-family="Arial" font-size="8" fill="#8B8B83" text-anchor="middle">Game Schemas</text>
+
+    <rect x="370" y="45" width="160" height="90" fill="#1A0F0A" stroke="#1E3A5F" stroke-width="1" rx="5"/>
+    <text x="450" y="65" font-family="Arial" font-size="10" fill="#87CEEB" text-anchor="middle" font-weight="bold">LLM Model</text>
+    <text x="450" y="82" font-family="Arial" font-size="9" fill="#DAA520" text-anchor="middle">Svony-3800-F16</text>
+    <text x="450" y="97" font-family="Arial" font-size="8" fill="#8B8B83" text-anchor="middle">7B Parameters</text>
+    <text x="450" y="110" font-family="Arial" font-size="8" fill="#8B8B83" text-anchor="middle">8,957 samples</text>
+    <text x="450" y="123" font-family="Arial" font-size="8" fill="#8B8B83" text-anchor="middle">Domain Expert</text>
+  </g>
+
+  <!-- External Systems -->
+  <g transform="translate(50, 710)">
+    <rect width="1100" height="80" fill="url(#evonyDark)" stroke="url(#evonyGold)" stroke-width="2" rx="8" filter="url(#dropShadow)"/>
+    <text x="550" y="25" font-family="Georgia, serif" font-size="14" fill="#FFD700" text-anchor="middle" font-weight="bold">🌐 EXTERNAL SYSTEMS</text>
+
+    <rect x="50" y="40" width="180" height="30" fill="#8B0000" stroke="#FFD700" stroke-width="1" rx="3"/>
+    <text x="140" y="60" font-family="Arial" font-size="11" fill="#FFFFFF" text-anchor="middle">Evony Game Server</text>
+
+    <rect x="280" y="40" width="180" height="30" fill="#006400" stroke="#FFD700" stroke-width="1" rx="3"/>
+    <text x="370" y="60" font-family="Arial" font-size="11" fill="#FFFFFF" text-anchor="middle">AutoEvony Bot</text>
+
+    <rect x="510" y="40" width="180" height="30" fill="#1E3A5F" stroke="#FFD700" stroke-width="1" rx="3"/>
+    <text x="600" y="60" font-family="Arial" font-size="11" fill="#FFFFFF" text-anchor="middle">Verda Cloud GPU</text>
+
+    <rect x="740" y="40" width="180" height="30" fill="#4A0082" stroke="#FFD700" stroke-width="1" rx="3"/>
+    <text x="830" y="60" font-family="Arial" font-size="11" fill="#FFFFFF" text-anchor="middle">Ghidra / FFDec</text>
+  </g>
+
+  <!-- Connection lines -->
+  <line x1="300" y1="500" x2="300" y2="530" stroke="#DAA520" stroke-width="2" stroke-dasharray="5,3"/>
+  <line x1="875" y1="500" x2="875" y2="530" stroke="#DAA520" stroke-width="2" stroke-dasharray="5,3"/>
+  <line x1="300" y1="680" x2="300" y2="710" stroke="#DAA520" stroke-width="2" stroke-dasharray="5,3"/>
+  <line x1="875" y1="680" x2="875" y2="710" stroke="#DAA520" stroke-width="2" stroke-dasharray="5,3"/>
+
+  <!-- Version info -->
+  <text x="1180" y="880" font-family="Arial" font-size="10" fill="#8B8B83" text-anchor="end">Evony RTE v2.0 | MCP Server | January 2026</text>
+</svg>

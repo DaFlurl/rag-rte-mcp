@@ -1,0 +1,10 @@
+{
+  "model": "evony-7b-3800",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is SendTroops?"
+    }
+  ],
+  "max_tokens": 50
+}

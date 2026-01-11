@@ -1,0 +1,2043 @@
+[
+  {
+    "hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "count": 602,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\data\\validation\\working_20260104_172354.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Baptista (Host PREDATRS).TXT",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\ghidra_11.3\\Ghidra\\Features\\Jython\\data\\jython-2.7.4\\Lib\\pydoc_data\\__init__.py",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\ghidra_11.3\\Ghidra\\Features\\Jython\\data\\jython-2.7.4\\Lib\\xml\\parsers\\__init__.py",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\ghidra_11.3\\Ghidra\\Features\\Jython\\data\\jython-2.7.4\\Lib\\lib2to3\\tests\\data\\fixers\\myfixes\\__init__.py",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\ghidra_11.3\\Ghidra\\Features\\Jython\\data\\jython-2.7.4\\Lib\\email\\mime\\__init__.py"
+    ]
+  },
+  {
+    "hash": "28f2b3e865cc7bc49b498074161d0d19",
+    "count": 23,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Troop_&_RSS_Counter - Copy (2).txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\Troop_&_RSS_Counter.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Troop_&_RSS_Counter - Copy.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Troop_&_RSS_Counter.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Troop_Counter.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Troop__RSS_Counter.txt"
+    ]
+  },
+  {
+    "hash": "e57194249f00547edf1515e9f2ff8393",
+    "count": 19,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\flex-sdk\\frameworks\\projects\\tool_air\\src\\mx\\core\\Version.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\flex-sdk\\frameworks\\projects\\tool\\src\\mx\\core\\Version.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\flex-sdk\\frameworks\\projects\\spark_dmv\\src\\spark\\core\\Version.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\flex-sdk\\frameworks\\projects\\spark\\src\\spark\\core\\Version.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\flex-sdk\\frameworks\\projects\\rpc\\src\\mx\\core\\Version.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\flex-sdk\\frameworks\\projects\\mx\\src\\mx\\core\\Version.as"
+    ]
+  },
+  {
+    "hash": "c97cfc1248fa9af8d31b8a7e254e4e6e",
+    "count": 15,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\DefineSprite_84\\frame_1\\DoAction.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\DefineSprite_84\\frame_2\\DoAction.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\DefineSprite_70\\frame_1\\DoAction.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\DefineSprite_58\\frame_1\\DoAction.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\DefineSprite_58\\frame_2\\DoAction.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\DefineSprite_54\\frame_2\\DoAction.as"
+    ]
+  },
+  {
+    "hash": "1e420ea301b1c047c5beb669734fa303",
+    "count": 14,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Food Glitch Counter script v1.2.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\FoodGlitchCounterV1.2.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\FoodGlitchCounterV1.2 - Copy.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\FoodGlitchCounterV1.2.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\FoodGlitchCounterV1.2.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\FoodGlitchCounterV1.2.txt"
+    ]
+  },
+  {
+    "hash": "a59e06fab4c5d0b7474684baf2ba1835",
+    "count": 14,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\PyAMF\\doc\\tutorials\\examples\\general\\helloworld\\python\\crossdomain.xml",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\PyAMF\\doc\\tutorials\\examples\\gateways\\cherrypy\\crossdomain.xml",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\PyAMF\\doc\\tutorials\\examples\\gateways\\pylons\\crossdomain.xml",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\PyAMF\\doc\\tutorials\\examples\\actionscript\\shared-object\\python\\crossdomain.xml",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\PyAMF\\doc\\tutorials\\examples\\actionscript\\guestbook\\python\\crossdomain.xml",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\PyAMF\\doc\\tutorials\\examples\\actionscript\\bytearray\\python\\crossdomain.xml"
+    ]
+  },
+  {
+    "hash": "50175e3379f4860948e2350395ba4c5b",
+    "count": 12,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\PyAMF\\pyamf\\tests\\modules\\__init__.py",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\PyAMF\\pyamf\\adapters\\tests\\django_app\\__init__.py",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\PyAMF\\pyamf\\adapters\\tests\\django_app\\adapters\\__init__.py",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\PyAMF\\doc\\tutorials\\examples\\gateways\\appengine\\demo\\shell\\__init__.py",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\PyAMF\\doc\\tutorials\\examples\\actionscript\\shell\\python\\__init__.py",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\PyAMF\\doc\\tutorials\\examples\\actionscript\\bytearray\\python\\__init__.py"
+    ]
+  },
+  {
+    "hash": "1827142815f704266e135bc7cffbe911",
+    "count": 8,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\CommissionQuestAcceptor.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\CommissionQuestAcceptor.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\CommissionQuestAcceptor.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\CommissionQuestAcceptor.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\CommissionQuestAcceptor.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\CommissionQuestAcceptor.txt"
+    ]
+  },
+  {
+    "hash": "ca8bc5d95d4393782f983a436e245f53",
+    "count": 8,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\issuequest.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\issuequest.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\issuequest.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\issuequest.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\issuequest.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\issuequest.txt"
+    ]
+  },
+  {
+    "hash": "716e0869211100b7da046b3dc98891d2",
+    "count": 7,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\CommisionQuest_Troop_Glitch.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\CommisionQuest_Troop_Glitch.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\CommisionQuest_Troop_Glitch.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\CommisionQuest_Troop_Glitch.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\CommisionQuest_Troop_Glitch.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\CommisionQuest_Troop_Glitch.txt"
+    ]
+  },
+  {
+    "hash": "de722b34048743524427a55fb5baeff7",
+    "count": 7,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\CommissionQuestAcceptor3.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\CommissionQuestAcceptor3.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\CommissionQuestAcceptor3.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\CommissionQuestAcceptor3.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\CommissionQuestAcceptor3.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\CommissionQuestAcceptor3.txt"
+    ]
+  },
+  {
+    "hash": "c24896cc99de7c0563e1ea2400383321",
+    "count": 7,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\Comm_Quest_.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\Comm_Quest_.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Comm_Quest_.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Comm_Quest_.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\Comm_Quest_.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Comm_Quest_.txt"
+    ]
+  },
+  {
+    "hash": "adf4219132fcc7756d263f510d3ff696",
+    "count": 7,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\[=]_Comm_Quest_[=].txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\[=]_Comm_Quest_[=].txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\[=]_Comm_Quest_[=].txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\[=]_Comm_Quest_[=].txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\[=]_Comm_Quest_[=].txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\[=]_Comm_Quest_[=].txt"
+    ]
+  },
+  {
+    "hash": "0c20a4bbdfe42c586012cdc23e96016f",
+    "count": 7,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\frame_4\\PlaceObject2_2_30\\CLIPACTIONRECORD onClipEvent(load).as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\frame_4\\PlaceObject2_2_32\\CLIPACTIONRECORD onClipEvent(load).as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\frame_4\\PlaceObject2_2_34\\CLIPACTIONRECORD onClipEvent(load).as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\frame_4\\PlaceObject2_2_36\\CLIPACTIONRECORD onClipEvent(load).as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\frame_4\\PlaceObject2_2_38\\CLIPACTIONRECORD onClipEvent(load).as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\frame_4\\PlaceObject2_2_40\\CLIPACTIONRECORD onClipEvent(load).as"
+    ]
+  },
+  {
+    "hash": "1db1a402b8fa9e926cfbad97b7487b3a",
+    "count": 6,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Evony Accounts - Copy.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Accounts\\Evony Accounts - Copy.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Accounts\\Evony Accounts.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Evony Accounts.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Evony Accounts - Copy.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Evony Accounts.txt"
+    ]
+  },
+  {
+    "hash": "849908c0bb67834d9552a8fcbef7cb8f",
+    "count": 6,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\acceptquest.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\acceptquest.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\acceptquest.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\acceptquest.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\acceptquest.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Useful_Action_Script\\acceptquest.txt"
+    ]
+  },
+  {
+    "hash": "32b89c8736628c07e9a82eb705c52857",
+    "count": 6,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Khans_Heroes.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\Khans_Heroes.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Khans_Heroes.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\Khans_Heroes.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Khans_Heroes.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\Khans_Heroes.txt"
+    ]
+  },
+  {
+    "hash": "7bcadf57587d2f6dc9333145037ec652",
+    "count": 6,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\ScanMap2.TXT",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\ScanMap2.TXT",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\ScanMap1.TXT",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\ScanMap2.TXT",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\ScanMap2.TXT",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\ScanMap2.TXT"
+    ]
+  },
+  {
+    "hash": "f223c37690e04f9fdc7924985b39915e",
+    "count": 6,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\evony_scripts\\Scripts_LOL.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\Scripts_LOL.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Scripts_LOL.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Scripts_LOL.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Scripts_LOL.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\Scripts_LOL.txt"
+    ]
+  },
+  {
+    "hash": "6340ffbf783fc41bb7617addfa2aec3c",
+    "count": 6,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\spam_script_v13.2_Borg.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\spam_script_v13.2_Borg.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\spam_script_v13.2_Borg.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\spam_script_v13.2_Borg.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\spam_script_v13.2_Borg.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\spam_script_v13.2_Borg.txt"
+    ]
+  },
+  {
+    "hash": "839b50952b82383e799e3d1a5cc32f3e",
+    "count": 6,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\spam_script_v13.4_Sonya.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\spam_script_v13.4_Sonya.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\spam_script_v13.4_Sonya.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\spam_script_v13.4_Sonya.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Useful_Action_Script\\spam_script_v13.4_Sonya.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\spam_script_v13.4_Sonya.txt"
+    ]
+  },
+  {
+    "hash": "1533979938dda1522969069f24f3701e",
+    "count": 6,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\flex-sdk\\lib\\external\\commons-logging-LICENSE.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\ffdec_lib_22.0.2\\decimal.license.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\flex-sdk\\lib\\external\\xerces-LICENSE\\LICENSE.resolver.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\flex-sdk\\lib\\external\\xerces-LICENSE\\LICENSE.serializer.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\ffdec_22.0.2\\lib\\decimal.license.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\dnSpy64\\bin\\LicenseInfo\\ApacheV2.txt"
+    ]
+  },
+  {
+    "hash": "19cafaca6cf53a3fa1b263585f57a11e",
+    "count": 6,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\PyAMF\\doc\\tutorials\\examples\\gateways\\appengine\\demo\\manage.py",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\PyAMF\\doc\\tutorials\\examples\\actionscript\\shell\\python\\manage.py",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\PyAMF\\doc\\tutorials\\examples\\actionscript\\bytearray\\python\\manage.py",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Py3AMF\\doc\\tutorials\\examples\\gateways\\appengine\\demo\\manage.py",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Py3AMF\\doc\\tutorials\\examples\\actionscript\\shell\\python\\manage.py",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Py3AMF\\doc\\tutorials\\examples\\actionscript\\bytearray\\python\\manage.py"
+    ]
+  },
+  {
+    "hash": "069cf389f7660d2cd549b070aaf01756",
+    "count": 5,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Evony Accounts_quit_Alliance_info.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Accounts\\Evony Accounts2.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Evony Accounts2.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Evony Accounts2.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Evony Accounts_quit_Alliance_info.txt"
+    ]
+  },
+  {
+    "hash": "2b1055e33f3d428456621d196ca2baf2",
+    "count": 5,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\Amulet_Glitch.TXT",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\Amulet_Glitch.TXT",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Amulet_Glitch.TXT",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Amulet_Glitch.TXT",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Amulet_Glitch.TXT"
+    ]
+  },
+  {
+    "hash": "a410627ba999b8714106aae2128d81c6",
+    "count": 5,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\citieskhans.csv",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\citieskhans.csv",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\citieskhans.csv",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\citieskhans.csv",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\citieskhans.csv"
+    ]
+  },
+  {
+    "hash": "453d50515ccab76e27e0ffbc57c7aec4",
+    "count": 5,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\fastattack(v1).txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\fastattack(v1).txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\fastattack(v1).txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\fastattack(v1).txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Useful_Action_Script\\fastattack(v1).txt"
+    ]
+  },
+  {
+    "hash": "e0d10a807864c663bc59d3e0caf6968a",
+    "count": 5,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\feeder.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\feeder.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\feeder.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\feeder.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\feeder.txt"
+    ]
+  },
+  {
+    "hash": "2005eb2b618e76df657de12c51f186a0",
+    "count": 5,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Moving_Troops_Borg_Borg_script.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\Moving_Troops_Borg_Borg_script.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Moving_Troops_Borg_Borg_script.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Moving_Troops_Borg_Borg_script.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Useful_Action_Script\\Moving_Troops_Borg_Borg_script.txt"
+    ]
+  },
+  {
+    "hash": "990b4fa0ca538f0b0559b6510f8b04cc",
+    "count": 5,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\questaddarmy.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\questaddarmy.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\questaddarmy.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\questaddarmy.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Useful_Action_Script\\questaddarmy.txt"
+    ]
+  },
+  {
+    "hash": "02963dda1b9d685bccf99b8c4c96ea92",
+    "count": 5,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\scripts.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\scripts.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\scripts.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\scripts.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\scripts.txt"
+    ]
+  },
+  {
+    "hash": "2974edfeae6e53f47638c63612015d64",
+    "count": 5,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\khan_Items.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\khan_Items.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\khan_Items.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\khan_Items.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\khan_Items.txt"
+    ]
+  },
+  {
+    "hash": "ee001a770f7e80399475b8a8335528ef",
+    "count": 5,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\Scanmap.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Scanmap.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\Scanmap.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Scanmap.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\Scanmap.txt"
+    ]
+  },
+  {
+    "hash": "2e61230da0167153af3b61e5ba6bf6e9",
+    "count": 5,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\DefineButton2_42\\BUTTONCONDACTION on(press).as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\DefineButton2_46\\BUTTONCONDACTION on(press).as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\DefineButton2_48\\BUTTONCONDACTION on(press).as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\DefineButton2_50\\BUTTONCONDACTION on(press).as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\DefineButton2_53\\BUTTONCONDACTION on(press).as"
+    ]
+  },
+  {
+    "hash": "03d455fe4e81e3d8da27036917b017c8",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\en_US$collections_properties.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\en_US$collections_properties.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\en_US$collections_properties.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\en_US$collections_properties.as"
+    ]
+  },
+  {
+    "hash": "ac358df37b6541bc4fec9e138bff9eb2",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\en_US$containers_properties.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\en_US$containers_properties.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\en_US$containers_properties.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\en_US$containers_properties.as"
+    ]
+  },
+  {
+    "hash": "1977bd6669fc04af9ea36df78a0a879e",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\en_US$core_properties.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\en_US$core_properties.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\en_US$core_properties.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\en_US$core_properties.as"
+    ]
+  },
+  {
+    "hash": "5393743e4f239217cdc2450887ce79a5",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\en_US$effects_properties.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\en_US$effects_properties.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\en_US$effects_properties.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\en_US$effects_properties.as"
+    ]
+  },
+  {
+    "hash": "4cd9326c08890834b35f6c87b562d7ab",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\en_US$formatters_properties.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\en_US$formatters_properties.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\en_US$formatters_properties.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\en_US$formatters_properties.as"
+    ]
+  },
+  {
+    "hash": "b1f2f01f23cbdd337bb914a00d7e3ce6",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\en_US$SharedResources_properties.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\en_US$SharedResources_properties.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\en_US$SharedResources_properties.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\en_US$SharedResources_properties.as"
+    ]
+  },
+  {
+    "hash": "c439441719548d5a27af737850c8169e",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\en_US$skins_properties.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\en_US$skins_properties.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\en_US$skins_properties.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\en_US$skins_properties.as"
+    ]
+  },
+  {
+    "hash": "fa0e8f0804c7e6f67ad9349bff7a9dd2",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\en_US$styles_properties.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\en_US$styles_properties.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\en_US$styles_properties.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\en_US$styles_properties.as"
+    ]
+  },
+  {
+    "hash": "e5ef476bb8293f96869dca6ec659c6bf",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_activeButtonStyleStyle.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\_activeButtonStyleStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_activeButtonStyleStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\_activeButtonStyleStyle.as"
+    ]
+  },
+  {
+    "hash": "22960353e8127370a44e1839aca13b6a",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_activeTabStyleStyle.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\_activeTabStyleStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_activeTabStyleStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\_activeTabStyleStyle.as"
+    ]
+  },
+  {
+    "hash": "55fd181fb82795741da8846616af51ef",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_alertButtonStyleStyle.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\_alertButtonStyleStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_alertButtonStyleStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\_alertButtonStyleStyle.as"
+    ]
+  },
+  {
+    "hash": "ba38db92ce109953ec331589f8c9d31c",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_ButtonBarStyle.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\_ButtonBarStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_ButtonBarStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\_ButtonBarStyle.as"
+    ]
+  },
+  {
+    "hash": "9b43feb4ad8087079b48255f1a70f2ee",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_ContainerStyle.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\_ContainerStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_ContainerStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\_ContainerStyle.as"
+    ]
+  },
+  {
+    "hash": "7acfbf1ed2e4a510f4c29552d6c325a4",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_DataGridItemRendererStyle.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\_DataGridItemRendererStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_DataGridItemRendererStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\_DataGridItemRendererStyle.as"
+    ]
+  },
+  {
+    "hash": "eed408831c56bbf73cddfa0b7d5055d9",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_dataGridStylesStyle.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\_dataGridStylesStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_dataGridStylesStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\_dataGridStylesStyle.as"
+    ]
+  },
+  {
+    "hash": "204f53b56a8f0ce7021628871522a166",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_FormItemLabelStyle.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\_FormItemLabelStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_FormItemLabelStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\_FormItemLabelStyle.as"
+    ]
+  },
+  {
+    "hash": "531949b87e6e5ef78f839ab861d99779",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_headerDragProxyStyleStyle.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\_headerDragProxyStyleStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_headerDragProxyStyleStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\_headerDragProxyStyleStyle.as"
+    ]
+  },
+  {
+    "hash": "bb79d7c7f177f639af004ebbf022af0c",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_richTextEditorTextAreaStyleStyle.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\_richTextEditorTextAreaStyleStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_richTextEditorTextAreaStyleStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\_richTextEditorTextAreaStyleStyle.as"
+    ]
+  },
+  {
+    "hash": "43dd3212a720b14bca21e636177b66f3",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_textAreaHScrollBarStyleStyle.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\_textAreaHScrollBarStyleStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_textAreaHScrollBarStyleStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\_textAreaHScrollBarStyleStyle.as"
+    ]
+  },
+  {
+    "hash": "825221834a43922f534887de24b6d1a0",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_textAreaVScrollBarStyleStyle.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\_textAreaVScrollBarStyleStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_textAreaVScrollBarStyleStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\_textAreaVScrollBarStyleStyle.as"
+    ]
+  },
+  {
+    "hash": "cb9053c1048773b854cf3f5a223d01e3",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_windowStatusStyle.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\_windowStatusStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_windowStatusStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\_windowStatusStyle.as"
+    ]
+  },
+  {
+    "hash": "070bb99379a0f388ada03bd43e2372b8",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_windowStylesStyle.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\_windowStylesStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\_windowStylesStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\_windowStylesStyle.as"
+    ]
+  },
+  {
+    "hash": "dbb1e32405cd16b6e1c3143a60d0696e",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\accept.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\accept.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\accept.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\accept.txt"
+    ]
+  },
+  {
+    "hash": "f9add901a85440665f6518aaf4a5d812",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Glitch_Numbers_Borg.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\Glitch_Numbers_Borg.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Glitch_Numbers_Borg.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Glitch_Numbers_Borg.txt"
+    ]
+  },
+  {
+    "hash": "018487ed693c87a89beb3d6bf7ad44e4",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Glitch_Other.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\Glitch_Other.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Glitch_Other.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Useful_Action_Script\\Glitch_Other.txt"
+    ]
+  },
+  {
+    "hash": "38d50e8ec476ba357aabe1dd70d8cc5e",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Keep_Borg_battack_script.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\Keep_Borg_battack_script.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Keep_Borg_battack_script.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Keep_Borg_battack_script.txt"
+    ]
+  },
+  {
+    "hash": "f5ff82beed1aec72be21c6d6fb9b157d",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\New_City_Snippets_CrazyCungy_snippets.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\New_City_Snippets_CrazyCungy_snippets.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\New_City_Snippets_CrazyCungy_snippets.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\New_City_Snippets_CrazyCungy_snippets.txt"
+    ]
+  },
+  {
+    "hash": "58e213ee07687c3d8fa0022a4acbddcc",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Sonya_Keep_Troop_Sending2.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\Sonya_Keep_Troop_Sending2.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Sonya_Keep_Troop_Sending2.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Sonya_Keep_Troop_Sending2.txt"
+    ]
+  },
+  {
+    "hash": "31abc4c9f5ed58b9ffacaded4c5855d3",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Valley rolling at maint to lvl up.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\507a064538a979abeb2c38cdf771cce6.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\upLvLValleys.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\upLvLValleys.txt"
+    ]
+  },
+  {
+    "hash": "bbb8e7323dccccb2e3a0e42d800c4b69",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\7of9_4Borg_goals.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\7of9_6Borg_goals.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\7of9_4Borg_goals.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\7of9_6Borg_goals.txt"
+    ]
+  },
+  {
+    "hash": "7024984156f1bd056ddea0861aa442f2",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\AccountBuilderSnippetElite.1(1).txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\AccountBuilderSnippetElite.1(1).txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\AccountBuilderSnippetElite.1.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\AccountBuilderSnippetElite.1.txt"
+    ]
+  },
+  {
+    "hash": "7fff543ad59b35ee1ba80842d4aab229",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\simpleBasicSpammingScript_for_RE.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\BasicSpammingScript_for_RE.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\BasicSpammingScript_for_RE.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\simpleBasicSpammingScript_for_RE.txt"
+    ]
+  },
+  {
+    "hash": "04a795261770d594b0e1a11ebcdf3ea8",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\evony_scripts\\city_savage.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\city_savage.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\city_savage.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\city_savage.txt"
+    ]
+  },
+  {
+    "hash": "223e5b1a9bfb3105679a94195f24b234",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\fastattack (v6_LagFree).txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\fastattack (5).txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\fastattack (v6_LagFree).txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\fastattack_v6_LagFree.txt"
+    ]
+  },
+  {
+    "hash": "e423d0ecd990e4cffb52c21c71394609",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\[=]_Food_Glitch_All_Citys_[=].txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\[=]_Food_Glitch_All_Citys_[=].txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\[=]_Food_Glitch_All_Citys_[=].txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\Khan_Accounts_PuppetMaster_Borg_&_Lion\\[=]_Food_Glitch_All_Citys_[=].txt"
+    ]
+  },
+  {
+    "hash": "a78213285f75e014418c6fcd4a057ccb",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\flex-sdk\\frameworks\\projects\\mx\\src\\mx\\styles\\metadata\\LeadingStyle.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\flex-sdk\\frameworks\\projects\\framework\\src\\mx\\styles\\metadata\\LeadingStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\flex-sdk\\frameworks\\projects\\charts\\src\\mx\\styles\\metadata\\LeadingStyle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\flex-sdk\\frameworks\\projects\\advancedgrids\\src\\mx\\styles\\metadata\\LeadingStyle.as"
+    ]
+  },
+  {
+    "hash": "6dcc093e4e4257c54005633ba908042e",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\frame_7\\PlaceObject2_106_77\\CLIPACTIONRECORD on(rollOut,dragOut).as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\frame_4\\PlaceObject2_61_85\\CLIPACTIONRECORD on(rollOut,dragOut).as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\frame_10\\PlaceObject2_61_56\\CLIPACTIONRECORD on(rollOut,dragOut).as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\frame_1\\PlaceObject2_61_77\\CLIPACTIONRECORD on(rollOut,dragOut).as"
+    ]
+  },
+  {
+    "hash": "c1a80af738d8fde55c40729f2cef2360",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\frame_7\\PlaceObject2_106_77\\CLIPACTIONRECORD on(rollOver).as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\frame_4\\PlaceObject2_61_85\\CLIPACTIONRECORD on(rollOver).as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\frame_10\\PlaceObject2_61_56\\CLIPACTIONRECORD on(rollOver).as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\frame_1\\PlaceObject2_61_77\\CLIPACTIONRECORD on(rollOver).as"
+    ]
+  },
+  {
+    "hash": "d3c3874adf43f1dff77065929496279e",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\frame_5\\PlaceObject2_61_77\\CLIPACTIONRECORD on(initialize).as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\frame_4\\PlaceObject2_61_85\\CLIPACTIONRECORD on(initialize).as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\frame_10\\PlaceObject2_61_56\\CLIPACTIONRECORD on(initialize).as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\extracted\\swf4_contents\\scripts\\frame_1\\PlaceObject2_61_77\\CLIPACTIONRECORD on(initialize).as"
+    ]
+  },
+  {
+    "hash": "0fd3f3a211a9d6362bedf93703aa3516",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\EvonyAmuletSpinner-master\\PROXYGUI.py",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\EvonyMarketBreaker-master\\PROXYGUI.py",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\EvonyUltimatumApp-master\\PROXYGUI.py",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Proxy-Manager-master\\PROXYGUI.py"
+    ]
+  },
+  {
+    "hash": "3f9c9a181817fbf1eb33beedadd7c3d1",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\pyEvony-master\\actionfactory\\Map.py",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\EvonyUltimatumApp-master\\actionfactory\\Map.py",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\EvonyMarketBreaker-master\\actionfactory\\Map.py",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\EvonyAmuletSpinner-master\\actionfactory\\Map.py"
+    ]
+  },
+  {
+    "hash": "ed3d71fd975e16127376f6413c29dd50",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\automation\\IAutomationObject.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\automation\\IAutomationObject.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\automation\\IAutomationObject.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\automation\\IAutomationObject.as"
+    ]
+  },
+  {
+    "hash": "c131d073268968079075989eb6791f38",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\binding\\IBindingClient.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\binding\\IBindingClient.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\binding\\IBindingClient.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\binding\\IBindingClient.as"
+    ]
+  },
+  {
+    "hash": "c924c8986ba83e3bfac604dfef3df643",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\binding\\IWatcherSetupUtil.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\binding\\IWatcherSetupUtil.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\binding\\IWatcherSetupUtil.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\binding\\IWatcherSetupUtil.as"
+    ]
+  },
+  {
+    "hash": "c59653c20a2a6969a8f74f9b71068a2d",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\collections\\ICollectionView.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\collections\\ICollectionView.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\collections\\ICollectionView.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\collections\\ICollectionView.as"
+    ]
+  },
+  {
+    "hash": "cce4c08fe5f8f763238c7c4fe317925e",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\collections\\IList.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\collections\\IList.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\collections\\IList.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\collections\\IList.as"
+    ]
+  },
+  {
+    "hash": "2308c8e7becea5bd48c8c5f07e6b354c",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\collections\\IViewCursor.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\collections\\IViewCursor.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\collections\\IViewCursor.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\collections\\IViewCursor.as"
+    ]
+  },
+  {
+    "hash": "30404ca742b54a308499cac064d8420e",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\controls\\IFlexContextMenu.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\controls\\IFlexContextMenu.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\controls\\IFlexContextMenu.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\controls\\IFlexContextMenu.as"
+    ]
+  },
+  {
+    "hash": "539d4c5a06151766547f79953ef162d4",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\ApplicationGlobals.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\ApplicationGlobals.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\ApplicationGlobals.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\ApplicationGlobals.as"
+    ]
+  },
+  {
+    "hash": "bf9e324685cd664246f6cb52e8883d1f",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\ContainerGlobals.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\ContainerGlobals.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\ContainerGlobals.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\ContainerGlobals.as"
+    ]
+  },
+  {
+    "hash": "75a37cc141a1fd2dd095540659d73bf9",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IBorder.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IBorder.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IBorder.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IBorder.as"
+    ]
+  },
+  {
+    "hash": "5f99a9ba150fefadbdf96c24999fa8f5",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IButton.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IButton.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IButton.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IButton.as"
+    ]
+  },
+  {
+    "hash": "f5ff686bc19340bd2fdced574341d806",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IChildList.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IChildList.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IChildList.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IChildList.as"
+    ]
+  },
+  {
+    "hash": "e0e8e45d5c266fdcfbfc4f6da84ae385",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IConstraintClient.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IConstraintClient.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IConstraintClient.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IConstraintClient.as"
+    ]
+  },
+  {
+    "hash": "30c8e2969ad6e2d6a863a1f2fab77e07",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IContainer.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IContainer.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IContainer.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IContainer.as"
+    ]
+  },
+  {
+    "hash": "019b6ffeb68aca9e8e39bb52552c39e1",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IDataRenderer.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IDataRenderer.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IDataRenderer.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IDataRenderer.as"
+    ]
+  },
+  {
+    "hash": "e71493b0f6f74c382c0e6086cd02e7a8",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IDeferredInstantiationUIComponent.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IDeferredInstantiationUIComponent.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IDeferredInstantiationUIComponent.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IDeferredInstantiationUIComponent.as"
+    ]
+  },
+  {
+    "hash": "3878a5717af3d18befe62a4177d8a161",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IEmbeddedFontRegistry.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IEmbeddedFontRegistry.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IEmbeddedFontRegistry.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IEmbeddedFontRegistry.as"
+    ]
+  },
+  {
+    "hash": "dd5bed796e563e4ae32480606ea42b99",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IFactory.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IFactory.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IFactory.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IFactory.as"
+    ]
+  },
+  {
+    "hash": "31ccf3c857aca730d433691def66dfd5",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IFlexAsset.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IFlexAsset.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IFlexAsset.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IFlexAsset.as"
+    ]
+  },
+  {
+    "hash": "b138dfec5ac50b24e710cff4b1731aa0",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IFlexDisplayObject.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IFlexDisplayObject.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IFlexDisplayObject.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IFlexDisplayObject.as"
+    ]
+  },
+  {
+    "hash": "fa4caa39076ecbeb15b9334f978f9011",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IFlexModule.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IFlexModule.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IFlexModule.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IFlexModule.as"
+    ]
+  },
+  {
+    "hash": "129a0667f86c58e8c228a9899965b4a4",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IFlexModuleFactory.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IFlexModuleFactory.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IFlexModuleFactory.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IFlexModuleFactory.as"
+    ]
+  },
+  {
+    "hash": "0e84afbb95dc980e8ad394a65e2db318",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IFontContextComponent.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IFontContextComponent.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IFontContextComponent.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IFontContextComponent.as"
+    ]
+  },
+  {
+    "hash": "aecec61740b8f086bde25e3ba0626b4c",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IIMESupport.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IIMESupport.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IIMESupport.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IIMESupport.as"
+    ]
+  },
+  {
+    "hash": "26e500fd72d17f39f0457e92997922c3",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IInvalidating.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IInvalidating.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IInvalidating.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IInvalidating.as"
+    ]
+  },
+  {
+    "hash": "2d71de5675fe10ff61769c1238f54905",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IMXMLObject.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IMXMLObject.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IMXMLObject.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IMXMLObject.as"
+    ]
+  },
+  {
+    "hash": "7beb633987e98bce794e47b918968f99",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IProgrammaticSkin.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IProgrammaticSkin.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IProgrammaticSkin.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IProgrammaticSkin.as"
+    ]
+  },
+  {
+    "hash": "af53f4659d97892116fa70fecb9678ba",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IPropertyChangeNotifier.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IPropertyChangeNotifier.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IPropertyChangeNotifier.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IPropertyChangeNotifier.as"
+    ]
+  },
+  {
+    "hash": "355fff41750df8666b081233b59d1e71",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IRawChildrenContainer.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IRawChildrenContainer.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IRawChildrenContainer.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IRawChildrenContainer.as"
+    ]
+  },
+  {
+    "hash": "d79309499bbc6bdc1988a2cec2e5f05d",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IRectangularBorder.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IRectangularBorder.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IRectangularBorder.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IRectangularBorder.as"
+    ]
+  },
+  {
+    "hash": "a153680f621226fa1091332be002e414",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IRepeater.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IRepeater.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IRepeater.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IRepeater.as"
+    ]
+  },
+  {
+    "hash": "9cdd945d21be30306d366c0a2badaa9e",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IRepeaterClient.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IRepeaterClient.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IRepeaterClient.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IRepeaterClient.as"
+    ]
+  },
+  {
+    "hash": "097d8a5b36437882d6d17136410150a8",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IStateClient.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IStateClient.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IStateClient.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IStateClient.as"
+    ]
+  },
+  {
+    "hash": "50babc8555df5adb52ea3dc44c37d736",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\ISWFBridgeGroup.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\ISWFBridgeGroup.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\ISWFBridgeGroup.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\ISWFBridgeGroup.as"
+    ]
+  },
+  {
+    "hash": "d6e6507790186e36b847b2d46853030a",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\ISWFBridgeProvider.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\ISWFBridgeProvider.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\ISWFBridgeProvider.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\ISWFBridgeProvider.as"
+    ]
+  },
+  {
+    "hash": "2498ea76401f3e03b656aab29ba780c2",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\ISWFLoader.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\ISWFLoader.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\ISWFLoader.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\ISWFLoader.as"
+    ]
+  },
+  {
+    "hash": "54070e9112a05b2c8bd479e3ad3cf410",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\ITextFieldFactory.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\ITextFieldFactory.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\ITextFieldFactory.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\ITextFieldFactory.as"
+    ]
+  },
+  {
+    "hash": "69f0e05f49c051340344d64bc9eaf42c",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IToggleButton.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IToggleButton.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IToggleButton.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IToggleButton.as"
+    ]
+  },
+  {
+    "hash": "ae3f541c8b0058df387346fda2da3283",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IToolTip.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IToolTip.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IToolTip.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IToolTip.as"
+    ]
+  },
+  {
+    "hash": "48df515e6615c8efffc4363e2a1d17ab",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IUIComponent.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IUIComponent.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IUIComponent.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IUIComponent.as"
+    ]
+  },
+  {
+    "hash": "1f733314d1a9169e74fd29a1acbeb014",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IUID.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IUID.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IUID.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IUID.as"
+    ]
+  },
+  {
+    "hash": "7201714568c112c252b7364f3575d6ba",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IUITextField.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IUITextField.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\IUITextField.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\IUITextField.as"
+    ]
+  },
+  {
+    "hash": "d2fc38f5b1a1e4826b31e109f3851fa3",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\mx_internal.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\mx_internal.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\mx_internal.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\mx_internal.as"
+    ]
+  },
+  {
+    "hash": "967438e48516a72e6f6cf70f73dcb9d2",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\UIComponentGlobals.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\UIComponentGlobals.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\core\\UIComponentGlobals.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\core\\UIComponentGlobals.as"
+    ]
+  },
+  {
+    "hash": "60a42f7471d1a05490169b4fe238917d",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\effects\\IAbstractEffect.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\effects\\IAbstractEffect.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\effects\\IAbstractEffect.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\effects\\IAbstractEffect.as"
+    ]
+  },
+  {
+    "hash": "4ed7eef2b59adeadf5be93fc8c3cd692",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\effects\\IEffect.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\effects\\IEffect.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\effects\\IEffect.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\effects\\IEffect.as"
+    ]
+  },
+  {
+    "hash": "194f52b5bb1138b63f23b1a554a0eba6",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\effects\\IEffectInstance.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\effects\\IEffectInstance.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\effects\\IEffectInstance.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\effects\\IEffectInstance.as"
+    ]
+  },
+  {
+    "hash": "0683ef6ff1633a51c8b82c18eac29eb6",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\effects\\IEffectTargetHost.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\effects\\IEffectTargetHost.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\effects\\IEffectTargetHost.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\effects\\IEffectTargetHost.as"
+    ]
+  },
+  {
+    "hash": "bacfbd04f8c747d6ae632fc7c9047280",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\HistoryManagerGlobals.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\HistoryManagerGlobals.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\HistoryManagerGlobals.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\HistoryManagerGlobals.as"
+    ]
+  },
+  {
+    "hash": "0742124461f152275f4ce7474f749a9e",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IBrowserManager.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IBrowserManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IBrowserManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IBrowserManager.as"
+    ]
+  },
+  {
+    "hash": "f206ee3d42a2eb72094aa152d6a43ce4",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\ICursorManager.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\ICursorManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\ICursorManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\ICursorManager.as"
+    ]
+  },
+  {
+    "hash": "70d8a95bc694386ae6e43bfc284237ce",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IDragManager.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IDragManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IDragManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IDragManager.as"
+    ]
+  },
+  {
+    "hash": "5a17b5696fca4b13a495568db914324f",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IFocusManager.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IFocusManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IFocusManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IFocusManager.as"
+    ]
+  },
+  {
+    "hash": "f07ec14ef148ef952d2bd35d66cfcf27",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IFocusManagerComplexComponent.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IFocusManagerComplexComponent.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IFocusManagerComplexComponent.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IFocusManagerComplexComponent.as"
+    ]
+  },
+  {
+    "hash": "7fdc899a455611e49010dd123a07ae0c",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IFocusManagerComponent.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IFocusManagerComponent.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IFocusManagerComponent.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IFocusManagerComponent.as"
+    ]
+  },
+  {
+    "hash": "090ca8bd5ed829ed2d2982063800a8e2",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IFocusManagerContainer.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IFocusManagerContainer.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IFocusManagerContainer.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IFocusManagerContainer.as"
+    ]
+  },
+  {
+    "hash": "0d799cb0d93ddb38efa29fb87fe1a405",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IFocusManagerGroup.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IFocusManagerGroup.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IFocusManagerGroup.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IFocusManagerGroup.as"
+    ]
+  },
+  {
+    "hash": "21be71fb6daeea9a2576f30d81ba659d",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IHistoryManager.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IHistoryManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IHistoryManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IHistoryManager.as"
+    ]
+  },
+  {
+    "hash": "9f0f8ca7f38674698cb026645cb25e68",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IHistoryManagerClient.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IHistoryManagerClient.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IHistoryManagerClient.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IHistoryManagerClient.as"
+    ]
+  },
+  {
+    "hash": "5b2e28667a9484fbebfd9ea8811a5ef2",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\ILayoutManager.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\ILayoutManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\ILayoutManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\ILayoutManager.as"
+    ]
+  },
+  {
+    "hash": "d35f9e20e703c673c01146f463c786c5",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\ILayoutManagerClient.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\ILayoutManagerClient.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\ILayoutManagerClient.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\ILayoutManagerClient.as"
+    ]
+  },
+  {
+    "hash": "9a21909755092ed43cccb0f865d7da59",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IPopUpManager.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IPopUpManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IPopUpManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IPopUpManager.as"
+    ]
+  },
+  {
+    "hash": "cc7a772340f4ea703d484ba047c4cbf4",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\ISystemManager.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\ISystemManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\ISystemManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\ISystemManager.as"
+    ]
+  },
+  {
+    "hash": "d18fc3811814a82665f4842f4d151e2a",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IToolTipManager2.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IToolTipManager2.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IToolTipManager2.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IToolTipManager2.as"
+    ]
+  },
+  {
+    "hash": "4b5f803ff83bb03143eae0e85b157d7c",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IToolTipManagerClient.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IToolTipManagerClient.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\IToolTipManagerClient.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\IToolTipManagerClient.as"
+    ]
+  },
+  {
+    "hash": "a546c3409e65910c906179ee06fe83d7",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\SystemManagerGlobals.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\SystemManagerGlobals.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\SystemManagerGlobals.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\SystemManagerGlobals.as"
+    ]
+  },
+  {
+    "hash": "370783f48acc794d24f27bf83811b242",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\modules\\IModuleInfo.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\modules\\IModuleInfo.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\modules\\IModuleInfo.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\modules\\IModuleInfo.as"
+    ]
+  },
+  {
+    "hash": "09e187419c31e7f37e3bf5d3120498b1",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\modules\\ModuleManagerGlobals.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\modules\\ModuleManagerGlobals.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\modules\\ModuleManagerGlobals.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\modules\\ModuleManagerGlobals.as"
+    ]
+  },
+  {
+    "hash": "427e943c68c76bb815527b9232af1ed1",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\preloaders\\IPreloaderDisplay.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\preloaders\\IPreloaderDisplay.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\preloaders\\IPreloaderDisplay.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\preloaders\\IPreloaderDisplay.as"
+    ]
+  },
+  {
+    "hash": "09177bd706982120d535a404022a4aa3",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\resources\\IResourceBundle.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\resources\\IResourceBundle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\resources\\IResourceBundle.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\resources\\IResourceBundle.as"
+    ]
+  },
+  {
+    "hash": "c7a7eebd1413c0ec8bb6e5770fe740a6",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\resources\\IResourceManager.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\resources\\IResourceManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\resources\\IResourceManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\resources\\IResourceManager.as"
+    ]
+  },
+  {
+    "hash": "7fb12d44d90b3b4a296224b44423afd1",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\resources\\IResourceModule.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\resources\\IResourceModule.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\resources\\IResourceModule.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\resources\\IResourceModule.as"
+    ]
+  },
+  {
+    "hash": "7b315c0a21249fe8388fa8156a5fe94c",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\rpc\\IResponder.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\rpc\\IResponder.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\rpc\\IResponder.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\rpc\\IResponder.as"
+    ]
+  },
+  {
+    "hash": "be31ef66e67cd4d442e790d2c36e4f48",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\states\\IOverride.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\states\\IOverride.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\states\\IOverride.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\states\\IOverride.as"
+    ]
+  },
+  {
+    "hash": "38d74ea5f512b4385734cefcb5296d48",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\styles\\ISimpleStyleClient.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\styles\\ISimpleStyleClient.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\styles\\ISimpleStyleClient.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\styles\\ISimpleStyleClient.as"
+    ]
+  },
+  {
+    "hash": "df62e30c3e5a8bd397968585a3e9863e",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\styles\\IStyleClient.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\styles\\IStyleClient.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\styles\\IStyleClient.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\styles\\IStyleClient.as"
+    ]
+  },
+  {
+    "hash": "5bd7ee242e3457638105427ad61cdd21",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\styles\\IStyleManager.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\styles\\IStyleManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\styles\\IStyleManager.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\styles\\IStyleManager.as"
+    ]
+  },
+  {
+    "hash": "fa74d71b6a71a4ba098527454bd51e4b",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\styles\\IStyleManager2.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\styles\\IStyleManager2.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\styles\\IStyleManager2.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\styles\\IStyleManager2.as"
+    ]
+  },
+  {
+    "hash": "b3b9e9abb42e10cdf4a1dd948ca663a0",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\styles\\IStyleModule.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\styles\\IStyleModule.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\styles\\IStyleModule.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\styles\\IStyleModule.as"
+    ]
+  },
+  {
+    "hash": "228acf97b49c45ba895411353910ff05",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\utils\\Base64Encoder.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\utils\\Base64Encoder.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\utils\\Base64Encoder.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\utils\\Base64Encoder.as"
+    ]
+  },
+  {
+    "hash": "72a3669c8882d86641c3d16033b73440",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\utils\\DescribeTypeCacheRecord.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\utils\\DescribeTypeCacheRecord.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\utils\\DescribeTypeCacheRecord.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\utils\\DescribeTypeCacheRecord.as"
+    ]
+  },
+  {
+    "hash": "d19c4e1697f9146ea70b0ba9914f29b5",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\utils\\IXMLNotifiable.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\utils\\IXMLNotifiable.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\utils\\IXMLNotifiable.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\utils\\IXMLNotifiable.as"
+    ]
+  },
+  {
+    "hash": "23eca0ff343be657413a79eb7884a2da",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\utils\\ObjectProxy.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\utils\\ObjectProxy.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\utils\\ObjectProxy.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\utils\\ObjectProxy.as"
+    ]
+  },
+  {
+    "hash": "c5918c02173a2bd253d172e49fca396a",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\utils\\object_proxy.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\utils\\object_proxy.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\utils\\object_proxy.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\utils\\object_proxy.as"
+    ]
+  },
+  {
+    "hash": "46c042a6dd0628d129f2171e6e32af31",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\validators\\IValidatorListener.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\validators\\IValidatorListener.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\validators\\IValidatorListener.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\validators\\IValidatorListener.as"
+    ]
+  },
+  {
+    "hash": "6d818d76c16d37aae41aa32066609691",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\rpc\\xml\\ComplexString.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\rpc\\xml\\ComplexString.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\rpc\\xml\\ComplexString.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\rpc\\xml\\ComplexString.as"
+    ]
+  },
+  {
+    "hash": "e3da593c3d12c88bfd7a6c63a03dd983",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\rpc\\xml\\SimpleXMLDecoder.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\rpc\\xml\\SimpleXMLDecoder.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\rpc\\xml\\SimpleXMLDecoder.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\rpc\\xml\\SimpleXMLDecoder.as"
+    ]
+  },
+  {
+    "hash": "da81e2d6387db97b696b8b51da497fb7",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\systemClasses\\EventProxy.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\systemClasses\\EventProxy.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\systemClasses\\EventProxy.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\systemClasses\\EventProxy.as"
+    ]
+  },
+  {
+    "hash": "c11a1103bb3d2b95d4846639adc18d0c",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\systemClasses\\PlaceholderData.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\systemClasses\\PlaceholderData.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\systemClasses\\PlaceholderData.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\systemClasses\\PlaceholderData.as"
+    ]
+  },
+  {
+    "hash": "12addb227544b6bd6f731402e7b08117",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\systemClasses\\RemotePopUp.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\systemClasses\\RemotePopUp.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\managers\\systemClasses\\RemotePopUp.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\managers\\systemClasses\\RemotePopUp.as"
+    ]
+  },
+  {
+    "hash": "9b1b6afd7d53bc75bf1fa3edde09207f",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\controls\\dataGridClasses\\DataGridHeader.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\controls\\dataGridClasses\\DataGridHeader.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\controls\\dataGridClasses\\DataGridHeader.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\controls\\dataGridClasses\\DataGridHeader.as"
+    ]
+  },
+  {
+    "hash": "1fd87e84eb259d43d7fc15efa34860e8",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\controls\\dataGridClasses\\DataGridHeaderBase.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\controls\\dataGridClasses\\DataGridHeaderBase.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\controls\\dataGridClasses\\DataGridHeaderBase.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\controls\\dataGridClasses\\DataGridHeaderBase.as"
+    ]
+  },
+  {
+    "hash": "1848148331273fa5ba049a332126ca6d",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\controls\\dataGridClasses\\DataGridLockedRowContentHolder.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\controls\\dataGridClasses\\DataGridLockedRowContentHolder.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\controls\\dataGridClasses\\DataGridLockedRowContentHolder.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\controls\\dataGridClasses\\DataGridLockedRowContentHolder.as"
+    ]
+  },
+  {
+    "hash": "fb61c69bcd802198226ca0573bc03f9c",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\controls\\listClasses\\IDropInListItemRenderer.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\controls\\listClasses\\IDropInListItemRenderer.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\controls\\listClasses\\IDropInListItemRenderer.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\controls\\listClasses\\IDropInListItemRenderer.as"
+    ]
+  },
+  {
+    "hash": "7e20050de345c0d99efdae377603c6b5",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\controls\\listClasses\\IListItemRenderer.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\controls\\listClasses\\IListItemRenderer.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\controls\\listClasses\\IListItemRenderer.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\controls\\listClasses\\IListItemRenderer.as"
+    ]
+  },
+  {
+    "hash": "033b06f70a650919b7d67df90e94ae31",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\containers\\utilityClasses\\IConstraintLayout.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\containers\\utilityClasses\\IConstraintLayout.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\mx\\containers\\utilityClasses\\IConstraintLayout.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\mx\\containers\\utilityClasses\\IConstraintLayout.as"
+    ]
+  },
+  {
+    "hash": "2013d10f37e66dbedd5104e68b9f0ec2",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\common\\BaseBean.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\common\\BaseBean.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\common\\BaseBean.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\common\\BaseBean.as"
+    ]
+  },
+  {
+    "hash": "55848220e2776e6bc3b7e79787ec9417",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\eum\\GetDataXML_XMLBuilding.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\eum\\GetDataXML_XMLBuilding.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\eum\\GetDataXML_XMLBuilding.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\eum\\GetDataXML_XMLBuilding.as"
+    ]
+  },
+  {
+    "hash": "0c8a20add6227241ff8ebe0a69089921",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\eum\\GetDataXML_XMLCastleLogo.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\eum\\GetDataXML_XMLCastleLogo.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\eum\\GetDataXML_XMLCastleLogo.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\eum\\GetDataXML_XMLCastleLogo.as"
+    ]
+  },
+  {
+    "hash": "9b9738036f00c672d70aa146beb07147",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\eum\\GetDataXML_XMLEquipTech.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\eum\\GetDataXML_XMLEquipTech.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\eum\\GetDataXML_XMLEquipTech.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\eum\\GetDataXML_XMLEquipTech.as"
+    ]
+  },
+  {
+    "hash": "a7aafaa3687f490e95e32e31b52af80a",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\eum\\GetDataXML_XMLFort.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\eum\\GetDataXML_XMLFort.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\eum\\GetDataXML_XMLFort.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\eum\\GetDataXML_XMLFort.as"
+    ]
+  },
+  {
+    "hash": "5b0201b62effa6adfee91c43eea5e851",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\eum\\GetDataXML_XMLItem.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\eum\\GetDataXML_XMLItem.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\eum\\GetDataXML_XMLItem.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\eum\\GetDataXML_XMLItem.as"
+    ]
+  },
+  {
+    "hash": "a688448c1d1147e625ed017a43d12100",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\eum\\GetDataXML_XMLPlayerLogo.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\eum\\GetDataXML_XMLPlayerLogo.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\eum\\GetDataXML_XMLPlayerLogo.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\eum\\GetDataXML_XMLPlayerLogo.as"
+    ]
+  },
+  {
+    "hash": "ee2709b1448aa5a0fbfab67465cfec4e",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\eum\\GetDataXML_XMLTech.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\eum\\GetDataXML_XMLTech.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\eum\\GetDataXML_XMLTech.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\eum\\GetDataXML_XMLTech.as"
+    ]
+  },
+  {
+    "hash": "3378ec995960494956364b5887192128",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\eum\\GetDataXML_XMLTroop.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\eum\\GetDataXML_XMLTroop.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\eum\\GetDataXML_XMLTroop.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\eum\\GetDataXML_XMLTroop.as"
+    ]
+  },
+  {
+    "hash": "c87329345ebdeec7b00ff1b81c578998",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\util\\ImageSmooth.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\util\\ImageSmooth.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\util\\ImageSmooth.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\util\\ImageSmooth.as"
+    ]
+  },
+  {
+    "hash": "530866dbc0f5586da7ec7841ac57f858",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\common\\constants\\ArmyConstants.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\common\\constants\\ArmyConstants.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\common\\constants\\ArmyConstants.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\common\\constants\\ArmyConstants.as"
+    ]
+  },
+  {
+    "hash": "817dce511023e505bc2c728d3dbdc0b1",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\common\\constants\\TFConstants.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\common\\constants\\TFConstants.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\com\\evony\\common\\constants\\TFConstants.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\evony\\common\\constants\\TFConstants.as"
+    ]
+  },
+  {
+    "hash": "946e5de92a3891f22f6a24eea861b25d",
+    "count": 4,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(EvonyClient1921.swf)\\com\\adobe\\utils\\IntUtil.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Source\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\adobe\\utils\\IntUtil.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(EvonyClient1921.swf)\\com\\adobe\\utils\\IntUtil.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\AS3_Scripts_(AutoEvony2_NEW.swf)\\com\\adobe\\utils\\IntUtil.as"
+    ]
+  },
+  {
+    "hash": "62b93e50b13380ffa21ac99b91b45225",
+    "count": 3,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Lion_ALTS.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Accounts\\Lion_ALTS.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Lion_ALTS.txt"
+    ]
+  },
+  {
+    "hash": "83115066a3efe0488f804bf3df65b9f8",
+    "count": 3,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\AI-Evony_Chat.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\AI-Evony_Chat.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\AI-Evony_Chat.txt"
+    ]
+  },
+  {
+    "hash": "8764261b243816220ed63df81364f2cd",
+    "count": 3,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Evony_the_begining.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\Evony_the_begining.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\Evony_the_begining.txt"
+    ]
+  },
+  {
+    "hash": "1540a7ec268cbe1de4a17a0ddf37f4bc",
+    "count": 3,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\newAccountStarter_Script_for_RE.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\checkme\\newAccountStarter_Script_for_RE.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Vony\\newAccountStarter_Script_for_RE.txt"
+    ]
+  },
+  {
+    "hash": "ceec993618f9c4c5aee648f818dad3dc",
+    "count": 3,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\AdvEvasion.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\AdvEvasion.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Useful_Action_Script\\AdvEvasion.txt"
+    ]
+  },
+  {
+    "hash": "1933c7db827b389afce540bd232b0dad",
+    "count": 3,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\Auto Build City Script.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Auto Build City Script.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Auto Build City Script.txt"
+    ]
+  },
+  {
+    "hash": "b78b5c5ffc2789ee6edee15967d9c00a",
+    "count": 3,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\Current_Attacking_Script_Borg.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Current_Attacking_Script_Borg.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Current_Attacking_Script_Borg.txt"
+    ]
+  },
+  {
+    "hash": "2d65a27de7fbdf4544e3eaf64faed844",
+    "count": 3,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\draftFinder_for_RE.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\draftFinder_for_RE.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\draftFinder_for_RE.txt"
+    ]
+  },
+  {
+    "hash": "f972803676e492d15f4686302f28eda6",
+    "count": 3,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\fastattack (v5_HH_FIX).txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\fastattack (v4).txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\fastattack (v5_HH_FIX).txt"
+    ]
+  },
+  {
+    "hash": "b7c4bceefd4757a7b896fd1dbc22af52",
+    "count": 3,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\fastattackold.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\fastattack.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\fastattackold.txt"
+    ]
+  },
+  {
+    "hash": "32e28c9fa62d4cd90c03e9309d5126fe",
+    "count": 3,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\Glitchscript.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Glitchscript.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Glitchscript.txt"
+    ]
+  },
+  {
+    "hash": "02a359c676fe26d5c52110c0166a0112",
+    "count": 3,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Glitch_Troops.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Glitch_Troops.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Useful_Action_Script\\Glitch_Troops.txt"
+    ]
+  },
+  {
+    "hash": "57c8e27d81d821361ea8f3d49a948ee8",
+    "count": 3,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\OLD_RE_snip_troopTraining_By_Ioshik.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\RE_snip_troopTrainingByIoshik.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\RE_snip_troopTrainingByIoshik.txt"
+    ]
+  },
+  {
+    "hash": "15109d4c12b66c848920f925d35df7c0",
+    "count": 3,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\BorgToolkit\\scripts\\evony_scripts_useful\\Sell_Buy_Food_Script.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Sell_Buy_Food_Script.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Scripts\\Roboevony_scripts\\Sell_Buy_Food_Script.txt"
+    ]
+  },
+  {
+    "hash": "26bb6a51c7196e3383f99cae022a11a3",
+    "count": 3,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\flex-sdk\\licenseParts\\saxon9-NOTICES\\APACHE-RESOLVER.txt",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\flex-sdk\\lib\\external\\saxon9-NOTICES\\APACHE-RESOLVER.txt",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\flex-sdk\\lib\\external\\xerces-NOTICES\\NOTICE.resolver.txt"
+    ]
+  },
+  {
+    "hash": "053b6ab0307a261768fe283d57935cde",
+    "count": 3,
+    "kept": "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\flex-sdk\\frameworks\\projects\\mx\\src\\mx\\styles\\metadata\\PaddingStyles.as",
+    "removed": [
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\flex-sdk\\frameworks\\projects\\mobilecomponents\\src\\spark\\styles\\metadata\\PaddingStyles.as",
+      "c:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Tools\\flex-sdk\\frameworks\\projects\\framework\\src\\mx\\styles\\metadata\\PaddingStyles.as"
+    ]
+  }
+]

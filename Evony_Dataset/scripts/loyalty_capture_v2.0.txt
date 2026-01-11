@@ -1,0 +1,174 @@
+// ============================================
+// LOYALTY CAPTURE v2.0
+// City capture via loyalty attacks
+// Uses REAL loyaltyattack, capture commands
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+// REAL COMMANDS FROM CityState.as:
+// loyaltyattack coords numCav
+// capture coords numCav
+// endloyaltyattack
+// ============================================
+
+// ==========================================
+// CONFIGURATION - EDIT THESE
+// ==========================================
+
+// === TARGET ===
+set targetX 0
+set targetY 0
+set targetType "city"
+
+// === CAVALRY CONFIGURATION ===
+set cavalryPerWave 500
+set minCavalryRequired 10000
+set maxWaves 100
+
+// === CAPTURE SETTINGS ===
+set captureMode "loyalty"
+set autoCapture 1
+set loyaltyTarget 0
+
+// === TIMING ===
+set waveDelay 5000
+set checkDelay 10000
+
+// === FEATURES ===
+set enableScoutFirst 1
+set enableLoyaltyCheck 1
+set enableAutoCapture 1
+set enableLogging 1
+
+// === RUN MODE ===
+set runMode "continuous"
+
+// ==========================================
+// DO NOT EDIT BELOW
+// ==========================================
+
+set wavesSent 0
+set currentLoyalty 100
+
+echo ============================================
+echo LOYALTY CAPTURE v2.0
+echo Target: %targetX%,%targetY%
+echo Cavalry/Wave: %cavalryPerWave%
+echo ============================================
+
+// Validate
+if targetX = 0 then if targetY = 0 then goto noTarget
+
+// Check cavalry
+gosub checkCavalry
+if cavalryReady = 0 then goto insufficientCavalry
+
+// Scout first
+if enableScoutFirst = 1 then gosub scoutTarget
+
+// Execute loyalty attack
+if captureMode = "loyalty" then gosub executeLoyaltyAttack
+if captureMode = "capture" then gosub executeCapture
+
+goto complete
+
+// ==========================================
+// EXECUTE LOYALTY ATTACK (Real Command)
+// ==========================================
+label executeLoyaltyAttack
+echo [LOYALTY] Starting loyalty attack...
+
+set coordString "%targetX%,%targetY%"
+
+// loyaltyattack coords numCav
+// This continuously sends cavalry to reduce loyalty
+loyaltyattack %coordString% %cavalryPerWave%
+
+echo [LOYALTY] Loyalty attack initiated
+echo [LOYALTY] Bot will auto-send cavalry waves
+
+// Wait for loyalty to drop
+label loyaltyWaitLoop
+
+echo [WAIT] Waiting for loyalty to drop...
+sleep %checkDelay%
+
+// Check if we should capture
+if enableAutoCapture = 1 then gosub checkForCapture
+
+set wavesSent wavesSent + 1
+if wavesSent < maxWaves then goto loyaltyWaitLoop
+
+// End loyalty attack
+endloyaltyattack
+
+return
+
+// ==========================================
+// EXECUTE CAPTURE (Real Command)
+// ==========================================
+label executeCapture
+echo [CAPTURE] Executing capture...
+
+set coordString "%targetX%,%targetY%"
+
+// capture coords numCav
+// Captures when loyalty is 0
+capture %coordString% %cavalryPerWave%
+
+echo [CAPTURE] Capture command sent
+return
+
+// ==========================================
+// CHECK FOR CAPTURE
+// ==========================================
+label checkForCapture
+// When loyalty reaches 0, execute capture
+// This is handled by the bot's loyalty attack system
+return
+
+// ==========================================
+// SCOUT TARGET
+// ==========================================
+label scoutTarget
+echo [SCOUT] Scouting target...
+getspamhero power
+scout %targetX% %targetY% spamhero 1
+sleep 10000
+return
+
+// ==========================================
+// CHECK CAVALRY
+// ==========================================
+label checkCavalry
+set cavalryReady 1
+gettroops
+
+if cavalry < minCavalryRequired then set cavalryReady 0
+
+if cavalryReady = 1 then echo [CHECK] Cavalry ready: %cavalry%
+if cavalryReady = 0 then echo [CHECK] Need %minCavalryRequired% cavalry
+
+return
+
+// ==========================================
+// ERROR HANDLERS
+// ==========================================
+label noTarget
+echo [ERROR] Set target coordinates!
+stop
+
+label insufficientCavalry
+echo [ERROR] Not enough cavalry!
+echo Need: %minCavalryRequired%
+stop
+
+// ==========================================
+// COMPLETION
+// ==========================================
+label complete
+echo ============================================
+echo LOYALTY CAPTURE COMPLETE
+echo Waves: %wavesSent%
+echo ============================================
+stop

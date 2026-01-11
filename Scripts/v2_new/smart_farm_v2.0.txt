@@ -1,0 +1,265 @@
+// ============================================
+// SMART FARM v2.0
+// Intelligent NPC/Valley farming with optimization
+// For AE2/RoboEvony - Resource Farming
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+
+// ==========================================
+// CONFIGURATION - EDIT THESE
+// ==========================================
+
+// === FARM MODE ===
+set farmMode "npc"
+set npcLevel 5
+set valleyLevel 10
+
+// === SMART SETTINGS ===
+set enableSmartTargeting 1
+set enableMarchTimeOptimize 1
+set maxMarchMinutes 5
+set enableLootOptimize 1
+set minLootValue 50000
+
+// === TROOPS ===
+set troopsPerFarm 50000
+set reserveTroops 100000
+set heroRotation 1
+set maxHeroesUsed 5
+
+// === TIMING ===
+set farmDelay 3000
+set scanInterval 300
+set maxFarmsPerCycle 20
+
+// === FEATURES ===
+set enableAutoScan 1
+set enableTroopCheck 1
+set enableCooldown 1
+set cooldownMinutes 5
+set enableStats 1
+set enableLogging 1
+
+// === RUN MODE ===
+set runMode "loop"
+
+// ==========================================
+// DO NOT EDIT BELOW
+// ==========================================
+
+set farmCount 0
+set totalLoot 0
+set cycleCount 0
+set heroIndex 0
+
+echo ============================================
+echo SMART FARM v2.0
+echo Mode: %farmMode% | Level: %npcLevel%/%valleyLevel%
+echo Troops/Farm: %troopsPerFarm%
+echo ============================================
+
+// Main loop
+if runMode = "once" then goto farmOnce
+if runMode = "loop" then goto farmLoop
+goto farmLoop
+
+label farmOnce
+gosub executeFarmCycle
+goto complete
+
+label farmLoop
+label loopStart
+gosub executeFarmCycle
+if enableCooldown = 1 then gosub doCooldown
+set cycleCount cycleCount + 1
+goto loopStart
+
+// ==========================================
+// FARM CYCLE
+// ==========================================
+label executeFarmCycle
+echo ----------------------------------------
+echo [CYCLE %cycleCount%] Starting farm cycle...
+
+// Check troops
+if enableTroopCheck = 1 then gosub checkTroops
+if troopsReady = 0 then goto waitForTroops
+
+// Scan for targets
+if enableAutoScan = 1 then gosub scanTargets
+
+// Farm based on mode
+if farmMode = "npc" then gosub farmNPCs
+if farmMode = "valley" then gosub farmValleys
+if farmMode = "mixed" then gosub farmMixed
+
+// Show stats
+if enableStats = 1 then gosub showStats
+
+echo [CYCLE] Complete
+return
+
+// ==========================================
+// FARM NPCs
+// ==========================================
+label farmNPCs
+echo [NPC] Farming level %npcLevel% NPCs...
+
+set farmed 0
+label npcFarmLoop
+
+// Find NPC
+findnpc %npcLevel%
+if npcX = 0 then goto npcFarmDone
+
+// Check march time if enabled
+if enableMarchTimeOptimize = 1 then gosub checkMarchTime
+if marchTooLong = 1 then goto npcFarmNext
+
+// Send farm wave
+gosub getNextHero
+attack %npcX% %npcY% %currentHero% a%troopsPerFarm%
+echo [NPC] Farming (%npcX%,%npcY%)
+
+set farmed farmed + 1
+set farmCount farmCount + 1
+sleep %farmDelay%
+
+label npcFarmNext
+if farmed < maxFarmsPerCycle then goto npcFarmLoop
+
+label npcFarmDone
+echo [NPC] Farmed %farmed% NPCs
+return
+
+// ==========================================
+// FARM VALLEYS
+// ==========================================
+label farmValleys
+echo [VALLEY] Farming level %valleyLevel% valleys...
+
+set farmed 0
+label valleyFarmLoop
+
+// Find valley
+findvalley %valleyLevel%
+if valleyX = 0 then goto valleyFarmDone
+
+// Send capture
+gosub getNextHero
+attack %valleyX% %valleyY% %currentHero% a%troopsPerFarm%
+echo [VALLEY] Capturing (%valleyX%,%valleyY%)
+
+set farmed farmed + 1
+set farmCount farmCount + 1
+sleep %farmDelay%
+
+if farmed < maxFarmsPerCycle then goto valleyFarmLoop
+
+label valleyFarmDone
+echo [VALLEY] Captured %farmed% valleys
+return
+
+// ==========================================
+// FARM MIXED (NPCs + Valleys)
+// ==========================================
+label farmMixed
+echo [MIXED] Mixed farming mode...
+
+gosub farmNPCs
+gosub farmValleys
+
+return
+
+// ==========================================
+// GET NEXT HERO (Rotation)
+// ==========================================
+label getNextHero
+if heroRotation = 0 then getspamhero
+if heroRotation = 0 then set currentHero spamhero
+if heroRotation = 0 then return
+
+set heroIndex heroIndex + 1
+if heroIndex > maxHeroesUsed then set heroIndex 1
+
+getspamhero
+set currentHero spamhero
+
+return
+
+// ==========================================
+// CHECK MARCH TIME
+// ==========================================
+label checkMarchTime
+set marchTooLong 0
+
+// Calculate approximate march time
+// This is simplified - real calc would use distance formula
+// For now, just check if target is too far
+
+return
+
+// ==========================================
+// SCAN TARGETS
+// ==========================================
+label scanTargets
+echo [SCAN] Scanning for targets...
+
+scanmap 50
+sleep 2000
+
+return
+
+// ==========================================
+// CHECK TROOPS
+// ==========================================
+label checkTroops
+set troopsReady 1
+gettroops
+
+set availableTroops archers - reserveTroops
+if availableTroops < troopsPerFarm then set troopsReady 0
+
+if troopsReady = 1 then echo [CHECK] Available: %availableTroops% archers
+if troopsReady = 0 then echo [CHECK] Insufficient troops
+
+return
+
+// ==========================================
+// WAIT FOR TROOPS
+// ==========================================
+label waitForTroops
+echo [WAIT] Waiting for troops to return...
+sleep 300000
+return
+
+// ==========================================
+// COOLDOWN
+// ==========================================
+label doCooldown
+set cooldownMs cooldownMinutes * 60000
+echo [COOLDOWN] Waiting %cooldownMinutes% minutes...
+sleep %cooldownMs%
+return
+
+// ==========================================
+// SHOW STATS
+// ==========================================
+label showStats
+echo ========================================
+echo [STATS] Cycle: %cycleCount%
+echo [STATS] Total Farms: %farmCount%
+echo ========================================
+return
+
+// ==========================================
+// COMPLETE
+// ==========================================
+label complete
+echo ============================================
+echo SMART FARM COMPLETE
+echo Total Farms: %farmCount%
+echo Cycles: %cycleCount%
+echo ============================================
+stop

@@ -1,0 +1,112 @@
+{
+  "research": {
+    "military_science": {
+      "id": 1,
+      "name": "Military Science",
+      "category": "military",
+      "max_level": 10
+    },
+    "military_tradition": {
+      "id": 2,
+      "name": "Military Tradition",
+      "category": "military",
+      "max_level": 10
+    },
+    "iron_working": {
+      "id": 3,
+      "name": "Iron Working",
+      "category": "military",
+      "max_level": 10
+    },
+    "archery": {
+      "id": 4,
+      "name": "Archery",
+      "category": "military",
+      "max_level": 10
+    },
+    "horseback_riding": {
+      "id": 5,
+      "name": "Horseback Riding",
+      "category": "military",
+      "max_level": 10
+    },
+    "compass": {
+      "id": 6,
+      "name": "Compass",
+      "category": "military",
+      "max_level": 10
+    },
+    "medicine": {
+      "id": 7,
+      "name": "Medicine",
+      "category": "military",
+      "max_level": 10
+    },
+    "construction": {
+      "id": 8,
+      "name": "Construction",
+      "category": "military",
+      "max_level": 10
+    },
+    "engineering": {
+      "id": 9,
+      "name": "Engineering",
+      "category": "military",
+      "max_level": 10
+    },
+    "logistics": {
+      "id": 10,
+      "name": "Logistics",
+      "category": "military",
+      "max_level": 10
+    },
+    "agriculture": {
+      "id": 11,
+      "name": "Agriculture",
+      "category": "economic",
+      "max_level": 10
+    },
+    "lumbering": {
+      "id": 12,
+      "name": "Lumbering",
+      "category": "economic",
+      "max_level": 10
+    },
+    "masonry": {
+      "id": 13,
+      "name": "Masonry",
+      "category": "economic",
+      "max_level": 10
+    },
+    "mining": {
+      "id": 14,
+      "name": "Mining",
+      "category": "economic",
+      "max_level": 10
+    },
+    "metal_casting": {
+      "id": 15,
+      "name": "Metal Casting",
+      "category": "economic",
+      "max_level": 10
+    },
+    "informatics": {
+      "id": 16,
+      "name": "Informatics",
+      "category": "economic",
+      "max_level": 10
+    },
+    "stockpile": {
+      "id": 17,
+      "name": "Stockpile",
+      "category": "economic",
+      "max_level": 10
+    },
+    "privateering": {
+      "id": 18,
+      "name": "Privateering",
+      "category": "economic",
+      "max_level": 10
+    }
+  }
+}

@@ -1,0 +1,93 @@
+// ============================================
+// QUICK SPAM v2.0
+// Fast & simple spam script for rapid deployment
+// For AE2/RoboEvony - Copy/Paste Ready
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+
+// ==========================================
+// QUICK CONFIG - CHANGE THESE ONLY
+// ==========================================
+set x 0
+set y 0
+set waves 10
+set archers 50000
+set delay 2000
+
+// ==========================================
+// OPTIONAL CONFIG
+// ==========================================
+set scoutFirst 0
+set useLoop 0
+set cooldown 60000
+
+// ==========================================
+// SCRIPT START
+// ==========================================
+echo ========================================
+echo QUICK SPAM v2.0
+echo Target: %x%,%y% | Waves: %waves%
+echo ========================================
+
+// Validate
+if x = 0 then if y = 0 then goto noTarget
+
+// Scout if enabled
+if scoutFirst = 1 then gosub doScout
+
+// Main spam
+label mainSpam
+gosub sendWaves
+
+// Loop if enabled
+if useLoop = 1 then goto loopMode
+goto done
+
+label loopMode
+echo [LOOP] Cooling down %cooldown%ms...
+sleep %cooldown%
+goto mainSpam
+
+// ==========================================
+// SEND WAVES
+// ==========================================
+label sendWaves
+set sent 0
+
+label waveLoop
+getspamhero
+attack %x% %y% spamhero a%archers%
+echo [%sent%/%waves%] Wave sent
+set sent sent + 1
+sleep %delay%
+if sent < waves then goto waveLoop
+
+echo [DONE] %sent% waves sent
+return
+
+// ==========================================
+// SCOUT
+// ==========================================
+label doScout
+echo [SCOUT] Scouting target...
+getspamhero
+scout %x% %y% spamhero 1
+sleep 5000
+return
+
+// ==========================================
+// ERRORS
+// ==========================================
+label noTarget
+echo [ERROR] Set target coordinates!
+stop
+
+// ==========================================
+// DONE
+// ==========================================
+label done
+echo ========================================
+echo QUICK SPAM COMPLETE
+echo ========================================
+stop

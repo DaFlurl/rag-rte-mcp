@@ -1,0 +1,28 @@
+# Evony Command Center Requirements
+
+# GUI
+tkinter                  # Built-in
+customtkinter>=5.2.0     # Modern tkinter
+ttkthemes>=3.2.2         # GUI themes
+
+# Protocol
+pyamf>=0.8.0             # AMF protocol
+pysocks>=1.7.1           # SOCKS proxy
+
+# Network
+requests>=2.31.0         # HTTP client
+websocket-client>=1.6.0  # WebSocket
+
+# Data
+pandas>=2.1.0            # Data analysis
+openpyxl>=3.1.2          # Excel support
+
+# CLI
+colorama>=0.4.6          # Colored output
+rich>=13.7.0             # Rich text
+
+# Crypto
+pycryptodome>=3.19.0     # Encryption
+
+# Optional AI
+# openai>=1.0.0          # AI script generation

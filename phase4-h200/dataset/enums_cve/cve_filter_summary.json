@@ -1,0 +1,42 @@
+{
+  "total_input": 18644,
+  "verified_kept": 3472,
+  "removed_wrong_version": 15172,
+  "verification_reasons": {
+    "version_match": 898,
+    "keywords": 860,
+    "patterns": 1516,
+    "flash_related": 198
+  },
+  "source_patterns_found": {
+    "socket": 25,
+    "auth": 131,
+    "crypto": 163,
+    "type": 809,
+    "amf": 74,
+    "loader": 95,
+    "injection": 150,
+    "memory": 95
+  },
+  "supported_flash_versions": [
+    "9",
+    "9.0",
+    "10",
+    "10.0",
+    "10.1",
+    "10.2",
+    "10.3",
+    "11",
+    "11.0",
+    "11.1",
+    "11.2",
+    "11.3",
+    "11.4",
+    "11.5",
+    "11.6",
+    "11.7",
+    "11.8",
+    "12",
+    "13"
+  ]
+}

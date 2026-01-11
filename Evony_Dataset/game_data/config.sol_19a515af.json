@@ -1,0 +1,26 @@
+{
+  "now": {
+    "proxyPort": "8080",
+    "skypePw": "",
+    "proxyPw": "",
+    "skypeUn": "",
+    "secCode": "",
+    "proxyUn": "",
+    "autoLoginMaxTime": "600",
+    "username": "franky_franky1551@yahoo.com",
+    "serverIP": "216.66.17.168",
+    "proxyType": "",
+    "proxyHost": "",
+    "loginType": "ev",
+    "password": "frichy1551",
+    "autoScript": false,
+    "autoRun": false,
+    "theme": "Default Grey RE",
+    "server": "cc2",
+    "autoLogin": false,
+    "sid": "375",
+    "tokenExpires": NaN,
+    "autoLoginMinTime": "1",
+    "strserverAlias": "Parapet"
+  }
+}

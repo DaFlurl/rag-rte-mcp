@@ -1,0 +1,23 @@
+{
+  "total_examples": 15000,
+  "target_ratios": {
+    "core_evony": 0.6,
+    "application": 0.15,
+    "security": 0.15,
+    "meta": 0.1
+  },
+  "actual_distribution": {
+    "security": {
+      "count": 14995,
+      "percentage": 99.96666666666667
+    },
+    "core_evony": {
+      "count": 5,
+      "percentage": 0.03333333333333333
+    }
+  },
+  "source_files": {
+    "core_evony": 21385,
+    "security": 2862
+  }
+}

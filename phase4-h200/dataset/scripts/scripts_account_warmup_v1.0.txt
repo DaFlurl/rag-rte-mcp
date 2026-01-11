@@ -1,0 +1,310 @@
+// ============================================
+// ACCOUNT WARMUP SYSTEM v1.0
+// New account progression automation
+// Author: Borg Automation Suite
+// ============================================
+
+// This script automates new account setup
+// following optimal progression path
+
+echo ========================================
+echo ACCOUNT WARMUP SYSTEM v1.0
+echo New Account -> Combat Ready
+echo ========================================
+
+// Phase tracking
+set currentPhase 1
+set totalPhases 6
+
+// Execute phases in order
+label phaseLoop
+
+if currentPhase = 1 then gosub phase1_tutorial
+if currentPhase = 2 then gosub phase2_basicBuildings
+if currentPhase = 3 then gosub phase3_resources
+if currentPhase = 4 then gosub phase4_military
+if currentPhase = 5 then gosub phase5_heroes
+if currentPhase = 6 then gosub phase6_expansion
+
+set currentPhase currentPhase + 1
+if currentPhase <= totalPhases then goto phaseLoop
+
+goto complete
+
+// ==========================================
+// PHASE 1: TUTORIAL QUESTS
+// ==========================================
+label phase1_tutorial
+echo ========================================
+echo [PHASE 1/6] TUTORIAL QUESTS
+echo ========================================
+
+// Complete all tutorial quests for rewards
+completequests
+sleep 2000
+
+// These give resources and speedups
+useitem speedup.build
+sleep 500
+
+echo [PHASE 1] Tutorial quests complete
+return
+
+// ==========================================
+// PHASE 2: BASIC BUILDINGS
+// ==========================================
+label phase2_basicBuildings
+echo ========================================
+echo [PHASE 2/6] BASIC BUILDINGS
+echo ========================================
+
+// Build essential structures first
+
+// Town Hall upgrade path
+echo [BUILD] Upgrading Town Hall...
+upgrade townhall
+sleep 1000
+waitnobuilding
+
+// Cottages for population
+echo [BUILD] Building cottages...
+create cottage
+sleep 500
+waitnobuilding
+create cottage
+sleep 500
+waitnobuilding
+
+// Warehouse for storage
+echo [BUILD] Building warehouse...
+create warehouse
+sleep 500
+waitnobuilding
+
+// Feasting Hall for heroes
+echo [BUILD] Building feasting hall...
+create feastinghall
+sleep 500
+waitnobuilding
+
+// Inn for hero recruitment
+echo [BUILD] Building inn...
+create inn
+sleep 500
+waitnobuilding
+
+// Complete quests for rewards
+completequests
+sleep 1000
+
+echo [PHASE 2] Basic buildings complete
+return
+
+// ==========================================
+// PHASE 3: RESOURCE BUILDINGS
+// ==========================================
+label phase3_resources
+echo ========================================
+echo [PHASE 3/6] RESOURCE BUILDINGS
+echo ========================================
+
+// Build all resource production
+
+echo [BUILD] Building farms...
+create farm
+sleep 500
+waitnobuilding
+create farm
+sleep 500
+waitnobuilding
+
+echo [BUILD] Building sawmills...
+create sawmill
+sleep 500
+waitnobuilding
+create sawmill
+sleep 500
+waitnobuilding
+
+echo [BUILD] Building quarries...
+create quarry
+sleep 500
+waitnobuilding
+
+echo [BUILD] Building iron mines...
+create ironmine
+sleep 500
+waitnobuilding
+
+// Set production rates
+production 100 100 100 100
+sleep 500
+
+// Set tax rate
+settaxrate 20
+sleep 500
+
+// Complete quests
+completequests
+sleep 1000
+
+echo [PHASE 3] Resource buildings complete
+return
+
+// ==========================================
+// PHASE 4: MILITARY BUILDINGS
+// ==========================================
+label phase4_military
+echo ========================================
+echo [PHASE 4/6] MILITARY BUILDINGS
+echo ========================================
+
+// Barracks for troops
+echo [BUILD] Building barracks...
+create barracks
+sleep 500
+waitnobuilding
+
+// Forge for equipment
+echo [BUILD] Building forge...
+create forge
+sleep 500
+waitnobuilding
+
+// Workshop for siege
+echo [BUILD] Building workshop...
+create workshop
+sleep 500
+waitnobuilding
+
+// Stable for cavalry
+echo [BUILD] Building stable...
+create stable
+sleep 500
+waitnobuilding
+
+// Academy for research
+echo [BUILD] Building academy...
+create academy
+sleep 500
+waitnobuilding
+
+// Start basic research
+echo [RESEARCH] Starting military science...
+research military_science
+sleep 500
+
+// Train initial troops
+echo [TRAIN] Training scouts...
+train scouts 100
+sleep 500
+
+echo [TRAIN] Training warriors...
+train warriors 100
+sleep 500
+
+// Complete quests
+completequests
+sleep 1000
+
+echo [PHASE 4] Military buildings complete
+return
+
+// ==========================================
+// PHASE 5: HERO ACQUISITION
+// ==========================================
+label phase5_heroes
+echo ========================================
+echo [PHASE 5/6] HERO ACQUISITION
+echo ========================================
+
+// Hire initial heroes
+echo [HERO] Hiring attack hero...
+hirehero attack 60
+sleep 2000
+
+echo [HERO] Hiring politics hero...
+hirehero politics 60
+sleep 2000
+
+// Set mayor
+echo [HERO] Setting mayor...
+setmayor politics
+sleep 500
+
+// Use any hero items
+useitem hero.scroll
+sleep 500
+
+// Complete quests
+completequests
+sleep 1000
+
+echo [PHASE 5] Hero acquisition complete
+return
+
+// ==========================================
+// PHASE 6: EXPANSION PREP
+// ==========================================
+label phase6_expansion
+echo ========================================
+echo [PHASE 6/6] EXPANSION PREPARATION
+echo ========================================
+
+// Research for second city
+echo [RESEARCH] Researching for expansion...
+research compass
+sleep 500
+
+// Build beacon tower
+echo [BUILD] Building beacon tower...
+create beacontower
+sleep 500
+waitnobuilding
+
+// Build rally spot
+echo [BUILD] Building rally spot...
+create rallyspot
+sleep 500
+waitnobuilding
+
+// Train more troops for valley capture
+echo [TRAIN] Training archers for expansion...
+train archers 500
+sleep 500
+
+// Capture a valley
+echo [EXPAND] Scanning for valleys...
+scanmap 20
+sleep 2000
+
+// Complete final quests
+completequests
+sleep 1000
+
+echo [PHASE 6] Expansion prep complete
+return
+
+// ==========================================
+// COMPLETION
+// ==========================================
+label complete
+echo ========================================
+echo ACCOUNT WARMUP COMPLETE!
+echo ========================================
+echo Your account is now ready for:
+echo - NPC farming
+echo - Valley capture
+echo - Alliance joining
+echo - Second city
+echo ========================================
+stop
+
+// ==========================================
+// ERROR HANDLER
+// ==========================================
+label error
+echo [ERROR] Warmup error in phase %currentPhase%
+echo Retrying phase...
+sleep 5000
+goto phaseLoop

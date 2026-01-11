@@ -1,0 +1,224 @@
+// ============================================
+// CITY LIFECYCLE MANAGER v1.0
+// Complete city management from scratch to max
+// Author: Borg Automation Suite
+// ============================================
+
+// Configuration
+set buildPriority "cottage,barracks,forge,workshop,academy,warehouse,sawmill,quarry,ironmine,farm"
+set researchPriority "agriculture,lumbering,masonry,mining,metalcasting,informatics,military_science,military_tradition,iron_working,logistics"
+set troopPriority "scouts,warriors,pikemen,swordsmen,archers"
+set targetLevel 9
+set sleepTime 5000
+
+echo ========================================
+echo CITY LIFECYCLE MANAGER v1.0
+echo Target Build Level: %targetLevel%
+echo ========================================
+
+// Main control loop
+label mainLoop
+
+// Phase 1: Check and complete quests
+gosub doQuests
+
+// Phase 2: Building management
+gosub doBuilding
+
+// Phase 3: Research management
+gosub doResearch
+
+// Phase 4: Training management
+gosub doTraining
+
+// Phase 5: Resource management
+gosub doResources
+
+// Phase 6: Hero management
+gosub doHeroes
+
+echo Cycle complete, sleeping...
+sleep 60000
+goto mainLoop
+
+// ==========================================
+// QUEST MANAGEMENT
+// ==========================================
+label doQuests
+echo [QUESTS] Checking available quests...
+completequests
+sleep 2000
+return
+
+// ==========================================
+// BUILDING MANAGEMENT
+// ==========================================
+label doBuilding
+echo [BUILD] Checking building queue...
+
+// Wait if something is building
+waitnobuilding
+
+// Try to create/upgrade in priority order
+// Cottages first for population
+create cottage lowestalikelevel
+sleep 1000
+
+// Barracks for troops
+create barracks lowestalikelevel
+sleep 1000
+
+// Resource buildings
+create sawmill lowestalikelevel
+sleep 1000
+create quarry lowestalikelevel
+sleep 1000
+create ironmine lowestalikelevel
+sleep 1000
+create farm lowestalikelevel
+sleep 1000
+
+// Military buildings
+create forge lowestalikelevel
+sleep 1000
+create workshop lowestalikelevel
+sleep 1000
+create academy lowestalikelevel
+sleep 1000
+
+// Storage
+create warehouse lowestalikelevel
+sleep 1000
+
+// Upgrade existing buildings
+upgrade cottage lowestalikelevel
+sleep 1000
+upgrade barracks lowestalikelevel
+sleep 1000
+
+echo [BUILD] Building cycle complete
+return
+
+// ==========================================
+// RESEARCH MANAGEMENT
+// ==========================================
+label doResearch
+echo [RESEARCH] Checking research queue...
+
+// Wait for current research
+waitnoresearch
+
+// Research in priority order
+research agriculture
+sleep 1000
+research lumbering
+sleep 1000
+research masonry
+sleep 1000
+research mining
+sleep 1000
+research metalcasting
+sleep 1000
+research informatics
+sleep 1000
+research military_science
+sleep 1000
+research military_tradition
+sleep 1000
+research iron_working
+sleep 1000
+research logistics
+sleep 1000
+research compass
+sleep 1000
+research horsebackriding
+sleep 1000
+research archery
+sleep 1000
+
+echo [RESEARCH] Research cycle complete
+return
+
+// ==========================================
+// TRAINING MANAGEMENT
+// ==========================================
+label doTraining
+echo [TRAIN] Checking training queue...
+
+// Wait for current training
+waitnotraining
+
+// Train scouts first (always need scouts)
+train scouts 100
+sleep 1000
+
+// Train warriors for early defense
+train warriors 100
+sleep 1000
+
+// Train archers (main combat unit)
+train archers 500
+sleep 1000
+
+// Train transporters for resource movement
+train transporters 50
+sleep 1000
+
+echo [TRAIN] Training cycle complete
+return
+
+// ==========================================
+// RESOURCE MANAGEMENT
+// ==========================================
+label doResources
+echo [RESOURCES] Managing resources...
+
+// Set optimal tax rate
+settaxrate 20
+sleep 1000
+
+// Do levy if available
+levy population
+sleep 1000
+
+// Comfort for loyalty
+comfort praying
+sleep 1000
+
+// Production adjustments
+production 100 100 100 100
+sleep 1000
+
+echo [RESOURCES] Resource management complete
+return
+
+// ==========================================
+// HERO MANAGEMENT
+// ==========================================
+label doHeroes
+echo [HEROES] Managing heroes...
+
+// Try to hire a hero if needed
+hirehero
+sleep 2000
+
+// Set best hero as mayor
+setmayor politics
+sleep 1000
+
+echo [HEROES] Hero management complete
+return
+
+// ==========================================
+// ERROR HANDLERS
+// ==========================================
+label error
+echo [ERROR] An error occurred
+sleep 30000
+goto mainLoop
+
+label done
+echo ========================================
+echo CITY LIFECYCLE MANAGER COMPLETE
+echo ========================================
+stop

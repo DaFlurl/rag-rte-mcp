@@ -1,0 +1,1831 @@
+{
+  "buildings": {
+    "townhall": {
+      "id": 1,
+      "name": "Town Hall",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "barracks": {
+      "id": 2,
+      "name": "Barracks",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "cottage": {
+      "id": 3,
+      "name": "Cottage",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "sawmill": {
+      "id": 4,
+      "name": "Sawmill",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "quarry": {
+      "id": 5,
+      "name": "Quarry",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "ironmine": {
+      "id": 6,
+      "name": "Ironmine",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "farm": {
+      "id": 7,
+      "name": "Farm",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "warehouse": {
+      "id": 8,
+      "name": "Warehouse",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "granary": {
+      "id": 9,
+      "name": "Granary",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "stable": {
+      "id": 20,
+      "name": "Stable",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "inn": {
+      "id": 21,
+      "name": "Inn",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "forge": {
+      "id": 22,
+      "name": "Forge",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "marketplace": {
+      "id": 23,
+      "name": "Marketplace",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "relief_station": {
+      "id": 24,
+      "name": "Relief Station",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "academy": {
+      "id": 25,
+      "name": "Academy",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "workshop": {
+      "id": 26,
+      "name": "Workshop",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "feasting_hall": {
+      "id": 27,
+      "name": "Feasting Hall",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "embassy": {
+      "id": 28,
+      "name": "Embassy",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "rally_spot": {
+      "id": 29,
+      "name": "Rally Spot",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "beacon_tower": {
+      "id": 30,
+      "name": "Beacon Tower",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    },
+    "walls": {
+      "id": 31,
+      "name": "Walls",
+      "max_level": 10,
+      "levels": {
+        "1": {
+          "food": 100,
+          "wood": 150,
+          "stone": 50,
+          "iron": 25,
+          "time": 60.0,
+          "population": 10
+        },
+        "2": {
+          "food": 400,
+          "wood": 600,
+          "stone": 200,
+          "iron": 100,
+          "time": 169.7056274847714,
+          "population": 20
+        },
+        "3": {
+          "food": 900,
+          "wood": 1350,
+          "stone": 450,
+          "iron": 225,
+          "time": 311.7691453623979,
+          "population": 30
+        },
+        "4": {
+          "food": 1600,
+          "wood": 2400,
+          "stone": 800,
+          "iron": 400,
+          "time": 480.0,
+          "population": 40
+        },
+        "5": {
+          "food": 2500,
+          "wood": 3750,
+          "stone": 1250,
+          "iron": 625,
+          "time": 670.820393249937,
+          "population": 50
+        },
+        "6": {
+          "food": 3600,
+          "wood": 5400,
+          "stone": 1800,
+          "iron": 900,
+          "time": 881.8163074019442,
+          "population": 60
+        },
+        "7": {
+          "food": 4900,
+          "wood": 7350,
+          "stone": 2450,
+          "iron": 1225,
+          "time": 1111.215550647128,
+          "population": 70
+        },
+        "8": {
+          "food": 6400,
+          "wood": 9600,
+          "stone": 3200,
+          "iron": 1600,
+          "time": 1357.6450198781713,
+          "population": 80
+        },
+        "9": {
+          "food": 8100,
+          "wood": 12150,
+          "stone": 4050,
+          "iron": 2025,
+          "time": 1620.0,
+          "population": 90
+        },
+        "10": {
+          "food": 10000,
+          "wood": 15000,
+          "stone": 5000,
+          "iron": 2500,
+          "time": 1897.3665961010277,
+          "population": 100
+        }
+      }
+    }
+  }
+}

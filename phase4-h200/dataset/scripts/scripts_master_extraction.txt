@@ -1,0 +1,151 @@
+#===============================================================
+# MASTER DATA EXTRACTION SCRIPT v1.0
+# Extracts all account data: cities, troops, heroes, items, resources
+# Output format: JSON-like structured data
+#===============================================================
+
+setsilence true //
+
+# Header
+output "===ETK_EXTRACTION_START==="
+output "TIMESTAMP:%date% %time%"
+output "VERSION:1.0"
+
+#---------------------------------------------------------------
+# ACCOUNT INFO
+#---------------------------------------------------------------
+output "---ACCOUNT_INFO---"
+output "EMAIL:%config.username%"
+output "SERVER:%server.name%"
+output "SERVER_ID:%server.id%"
+iferror %player.name% goto NotLoggedIn
+output "PLAYER_NAME:%player.name%"
+output "ALLIANCE:%player.alliance%"
+output "PRESTIGE:%player.prestige%"
+output "HONOR:%player.honor%"
+output "GOLD:%player.gold%"
+output "TITLE:%player.title%"
+
+#---------------------------------------------------------------
+# CITIES
+#---------------------------------------------------------------
+output "---CITIES---"
+output "CITY_COUNT:%cities.count%"
+
+# Loop through all cities
+set cityIndex 0
+:CityLoop
+iferror %cities[%cityIndex%].name% goto EndCities
+
+output "CITY_START:%cityIndex%"
+output "CITY_NAME:%cities[%cityIndex%].name%"
+output "CITY_ID:%cities[%cityIndex%].id%"
+output "CITY_X:%cities[%cityIndex%].x%"
+output "CITY_Y:%cities[%cityIndex%].y%"
+output "CITY_STATE:%cities[%cityIndex%].state%"
+
+# Resources
+output "GOLD:%cities[%cityIndex%].gold%"
+output "FOOD:%cities[%cityIndex%].food%"
+output "LUMBER:%cities[%cityIndex%].lumber%"
+output "STONE:%cities[%cityIndex%].stone%"
+output "IRON:%cities[%cityIndex%].iron%"
+output "POPULATION:%cities[%cityIndex%].population%"
+
+# Troops in this city
+output "TROOPS_WORKERS:%cities[%cityIndex%].troops.worker%"
+output "TROOPS_WARRIORS:%cities[%cityIndex%].troops.warrior%"
+output "TROOPS_SCOUTS:%cities[%cityIndex%].troops.scout%"
+output "TROOPS_PIKEMEN:%cities[%cityIndex%].troops.pike%"
+output "TROOPS_SWORDSMEN:%cities[%cityIndex%].troops.sword%"
+output "TROOPS_ARCHERS:%cities[%cityIndex%].troops.archer%"
+output "TROOPS_CAVALRY:%cities[%cityIndex%].troops.cavalry%"
+output "TROOPS_CATAPHRACTS:%cities[%cityIndex%].troops.cataphract%"
+output "TROOPS_TRANSPORTERS:%cities[%cityIndex%].troops.transporter%"
+output "TROOPS_RAMS:%cities[%cityIndex%].troops.ram%"
+output "TROOPS_BALLISTAS:%cities[%cityIndex%].troops.ballista%"
+output "TROOPS_CATAPULTS:%cities[%cityIndex%].troops.catapult%"
+
+output "CITY_END:%cityIndex%"
+
+set cityIndex %cityIndex%+1
+goto CityLoop
+
+:EndCities
+output "---END_CITIES---"
+
+#---------------------------------------------------------------
+# HEROES
+#---------------------------------------------------------------
+output "---HEROES---"
+output "HERO_COUNT:%heroes.count%"
+
+set heroIndex 0
+:HeroLoop
+iferror %heroes[%heroIndex%].name% goto EndHeroes
+
+output "HERO_START:%heroIndex%"
+output "HERO_NAME:%heroes[%heroIndex%].name%"
+output "HERO_ID:%heroes[%heroIndex%].id%"
+output "HERO_LEVEL:%heroes[%heroIndex%].level%"
+output "HERO_EXP:%heroes[%heroIndex%].experience%"
+output "HERO_ATTACK:%heroes[%heroIndex%].attack%"
+output "HERO_POLITICS:%heroes[%heroIndex%].politics%"
+output "HERO_INTELLIGENCE:%heroes[%heroIndex%].intelligence%"
+output "HERO_LOYALTY:%heroes[%heroIndex%].loyalty%"
+output "HERO_ENERGY:%heroes[%heroIndex%].energy%"
+output "HERO_SPEED:%heroes[%heroIndex%].speed%"
+output "HERO_LEADERSHIP:%heroes[%heroIndex%].leadership%"
+output "HERO_CITY:%heroes[%heroIndex%].city%"
+output "HERO_STATUS:%heroes[%heroIndex%].status%"
+output "HERO_END:%heroIndex%"
+
+set heroIndex %heroIndex%+1
+goto HeroLoop
+
+:EndHeroes
+output "---END_HEROES---"
+
+#---------------------------------------------------------------
+# ITEMS
+#---------------------------------------------------------------
+output "---ITEMS---"
+output "ITEM_COUNT:%items.count%"
+
+set itemIndex 0
+:ItemLoop
+iferror %items[%itemIndex%].name% goto EndItems
+
+output "ITEM:%items[%itemIndex%].name%|%items[%itemIndex%].count%|%items[%itemIndex%].id%"
+
+set itemIndex %itemIndex%+1
+iferror %items[%itemIndex%].name% goto EndItems
+goto ItemLoop
+
+:EndItems
+output "---END_ITEMS---"
+
+#---------------------------------------------------------------
+# SUMMARY TOTALS
+#---------------------------------------------------------------
+output "---TOTALS---"
+output "TOTAL_GOLD:%player.totalGold%"
+output "TOTAL_FOOD:%player.totalFood%"
+output "TOTAL_LUMBER:%player.totalLumber%"
+output "TOTAL_STONE:%player.totalStone%"
+output "TOTAL_IRON:%player.totalIron%"
+output "TOTAL_TROOPS:%player.totalTroops%"
+output "---END_TOTALS---"
+
+goto ExtractionComplete
+
+:NotLoggedIn
+output "ERROR:Not logged in"
+output "STATUS:FAILED"
+goto End
+
+:ExtractionComplete
+output "STATUS:SUCCESS"
+
+:End
+output "===ETK_EXTRACTION_END==="

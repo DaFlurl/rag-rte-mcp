@@ -1,0 +1,13 @@
+# Proxy: SOCKS4 127.0.0.1:9017
+# Accounts: 10
+
+garyjoint1@yahoo.com:soup411
+gdmarkus@hotmail.com:guydav
+geese0525@yahoo.com:Bankai!
+george.escobedojr@yahoo.com:STL420
+godivaevony@yahoo.com:SirensSoli2D
+goose22evony@gmail.com:Austin01
+gotoxygen@gmail.com:Cateran123
+gozdev@hotmail.com:20467480
+gregpoole459@ymail.com:Chris12
+grosy@musc.edu:Catapult1

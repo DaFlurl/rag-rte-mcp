@@ -1,0 +1,100 @@
+#======================================================================================================================
+# Glitch Optimizer - All Cities Analysis v2.0 (Enhanced Detail)
+#======================================================================================================================
+# Shows FULL glitch details for ALL cities - 300% more data than Ogliss
+# Includes: troop counts, glitch progress, thresholds, untrain amounts, food values
+#======================================================================================================================
+setsilence true //
+set glitchnumber 2147483647
+set foodperglitch 2147483647
+#======================================================================================================================
+# Troop arrays
+setarray tNames ["wo", "w", "s", "p", "sw", "a", "c", "cata", "t", "b", "r", "cp"]
+setarray tDisplay ["Workers", "Warriors", "Scouts", "Pikemen", "Swordsmen", "Archers", "Cavalry", "Cataphracts", "Transporters", "Ballista", "BattRams", "Catapults"]
+setarr gltctt2 "peasants militia scouter pikemen swordsmen archer lightCavalry heavyCavalry carriage ballista batteringRam catapult"
+setarr fpt "1 1 2 3 3 4 9 17 5 25 50 125"
+#======================================================================================================================
+# City glitch thresholds (troops needed for 1 city glitch)
+setarr cfrn "{{{%glitchnumber%/%fpt[0]%}\1}+1} {{{%glitchnumber%/%fpt[1]%}\1}+1} {{{%glitchnumber%/%fpt[2]%}\1}+1} {{{%glitchnumber%/%fpt[3]%}\1}+1} {{{%glitchnumber%/%fpt[4]%}\1}+1} {{{%glitchnumber%/%fpt[5]%}\1}+1} {{{%glitchnumber%/%fpt[6]%}\1}+1} {{{%glitchnumber%/%fpt[7]%}\1}+1} {{{%glitchnumber%/%fpt[8]%}\1}+1} {{{%glitchnumber%/%fpt[9]%}\1}+1} {{{%glitchnumber%/%fpt[10]%}\1}+1} {{{%glitchnumber%/%fpt[11]%}\1}+1}"
+#======================================================================================================================
+set cMaT .cityManager.allTroop.
+set mcaC m_city.allCities
+set CityCount $%mcaC%.length$
+set cityIdx 0
+set totalFixCost 0
+set totalFoodGain 0
+set fixCount 0
+set totalODD 0
+set totalEVEN 0
+#======================================================================================================================
+# Output header
+set HeaderMsg "<br><font color='#CC2EFA'><b>======== GLITCH OPTIMIZER v2 - ALL CITIES ========</b></font>"
+set out "$m_city.cityManager.logMsg(%HeaderMsg%)$"
+#======================================================================================================================
+label nextCity
+set cityName $%mcaC%[{%cityIdx%}].castle.name$
+set CityHeader "<br><font color='#0066CC'><b>==== CITY: %cityName% ({%cityIdx%+1} of %CityCount%) ====</b></font>"
+set out "$m_city.cityManager.logMsg(%CityHeader%)$"
+set cityNetFood 0
+set cityGenCount 0
+set cityEvenCount 0
+set logi 0
+#======================================================================================================================
+label checkTroop
+set troopCount $%mcaC%[{%cityIdx%}]%cMaT%%gltctt2[{%logi%}]%$
+set CompletedCGlitch 0
+#----------------------------------------------------------------------------------------------------------------------
+label countGlitch
+if {%troopCount%>{%cfrn[{%logi%}]%+{%cfrn[{%logi%}]%*%CompletedCGlitch%}}} set CompletedCGlitch {%CompletedCGlitch%+1}
+if {%troopCount%>{%cfrn[{%logi%}]%+{%cfrn[{%logi%}]%*%CompletedCGlitch%}}} goto countGlitch
+#----------------------------------------------------------------------------------------------------------------------
+if {%CompletedCGlitch%==0} goto skipTroop
+set isOdd {{%CompletedCGlitch%|2}==1}
+# Calculate progress and amounts
+set comppletedCglitchnum {%cfrn[{%logi%}]%*%CompletedCGlitch%}
+set currentProgress {%troopCount%-%comppletedCglitchnum%}
+set progressPercent {{{{%currentProgress%*100}/%cfrn[{%logi%}]%}}\1}
+set neededForNext {%cfrn[{%logi%}]%-%currentProgress%}
+set untrainAmt {%currentProgress%+1}
+set foodCost {%fpt[{%logi%}]%}
+#----------------------------------------------------------------------------------------------------------------------
+# ODD GLITCH - Compact format with city name, all details on fewer lines
+if {%isOdd%==true} set cityGenCount {%cityGenCount%+1}
+if {%isOdd%==true} set cityNetFood {%cityNetFood%+%foodperglitch%}
+if {%isOdd%==true} set totalODD {%totalODD%+1}
+if {%isOdd%==true} set TroopMsg "<br><font color='#0066CC'><b>[%cityName%] %tDisplay[{%logi%}]%</b></font> | %troopCount% troops | <font color='#008000'><b>ODD %CompletedCGlitch%x GLITCHED</b></font>"
+if {%isOdd%==true} set out "$m_city.cityManager.logMsg(%TroopMsg%)$"
+if {%isOdd%==true} set TroopMsg "Progress: %progressPercent% pct | Need: %neededForNext% | Food: +2.1B/hr"
+if {%isOdd%==true} set out "$m_city.cityManager.logMsg(%TroopMsg%)$"
+if {%isOdd%==true} set TroopMsg "<font color='#FF6600'><b>WARNING: untrain %tNames[{%logi%}]%:%untrainAmt% REMOVES GLITCH!</b></font>"
+if {%isOdd%==true} set out "$m_city.cityManager.logMsg(%TroopMsg%)$"
+#----------------------------------------------------------------------------------------------------------------------
+# EVEN GLITCH - Compact format with city name, all details on fewer lines
+if {%isOdd%==false} set cityEvenCount {%cityEvenCount%+1}
+if {%isOdd%==false} set totalEVEN {%totalEVEN%+1}
+if {%isOdd%==false} set TroopMsg "<br><font color='#0066CC'><b>[%cityName%] %tDisplay[{%logi%}]%</b></font> | %troopCount% troops | <font color='#FF0000'><b>EVEN %CompletedCGlitch%x NOT GLITCHED</b></font>"
+if {%isOdd%==false} set out "$m_city.cityManager.logMsg(%TroopMsg%)$"
+if {%isOdd%==false} set TroopMsg "Progress: %progressPercent% pct | Need: %neededForNext% | Food: 0/hr"
+if {%isOdd%==false} set out "$m_city.cityManager.logMsg(%TroopMsg%)$"
+if {%isOdd%==false} set TroopMsg "<font color='#008000'><b>FIX: untrain %tNames[{%logi%}]%:%untrainAmt% MAKES ODD +2.1B!</b></font>"
+if {%isOdd%==false} set out "$m_city.cityManager.logMsg(%TroopMsg%)$"
+if {%isOdd%==false} set totalFixCost {%totalFixCost%+%untrainAmt%}
+if {%isOdd%==false} set totalFoodGain {%totalFoodGain%+%foodperglitch%}
+if {%isOdd%==false} set fixCount {%fixCount%+1}
+#----------------------------------------------------------------------------------------------------------------------
+label skipTroop
+set logi {%logi%+1}
+if {%logi%<12} goto checkTroop
+#======================================================================================================================
+# City summary
+set SumMsg "<br><b>%cityName% Summary:</b> <font color='#008000'><b>%cityGenCount% ODD</b></font> | <font color='#FF0000'><b>%cityEvenCount% EVEN</b></font> | Food: <font color='#008000'><b>+%cityNetFood%/hr</b></font>"
+set out "$m_city.cityManager.logMsg(%SumMsg%)$"
+set cityIdx {%cityIdx%+1}
+if {%cityIdx%<%CityCount%} goto nextCity
+#======================================================================================================================
+# Final totals
+set TotalMsg "<br><font color='#0066CC'><b>======== GRAND TOTALS - ALL %CityCount% CITIES ========</b></font>"
+set out "$m_city.cityManager.logMsg(%TotalMsg%)$"
+set TotalMsg "ODD: <font color='#008000'><b>%totalODD%</b></font> | EVEN: <font color='#FF0000'><b>%totalEVEN%</b></font> | Untrain: <font color='#FF0000'><b>%totalFixCost%</b></font> | Gain: <font color='#008000'><b>+%totalFoodGain%/hr</b></font>"
+set out "$m_city.cityManager.logMsg(%TotalMsg%)$"
+

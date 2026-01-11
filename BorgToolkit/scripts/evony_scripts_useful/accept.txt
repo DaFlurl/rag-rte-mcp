@@ -1,0 +1,11 @@
+TheOldLion09/06/2018
+just type \quitalliance in the command bar. then do \apply Alliance
+if you need to transfer, just have Savage do \apply 1227 & then do \accept Savage from Borg
+we're a numbered alliance, so people cant ghost, any invites we see are usually approved
+
+
+
+
+setarr sendTroopType "s t b r"
+setarr howManyToKeep "100000000 835000000 0 0"
+setarr sendToLocations "315,694"

@@ -1,0 +1,8 @@
+C:\Users\Admin\Downloads\phase4-h200-B200-FINAL.zip
+
+cd /workspace
+unzip phase4-h200-B200-FINAL.zip -d phase4-h200
+cd phase4-h200
+pip install torch --index-url https://download.pytorch.org/whl/cu126
+pip install transformers datasets accelerate peft trl bitsandbytes unsloth
+python train_b200_fp16_epic.py

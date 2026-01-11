@@ -1,0 +1,35 @@
+{
+  "handlers": {},
+  "exploits": {
+    "dry_runs": 0,
+    "live_tests": 0,
+    "verifications": 0,
+    "rollbacks": 0,
+    "by_type": {}
+  },
+  "packets": {
+    "encoded": 0,
+    "decoded": 0,
+    "captured": 0,
+    "injected": 0,
+    "bytes_processed": 0
+  },
+  "rag": {
+    "queries": 0,
+    "cache_hits": 0,
+    "avg_results": 0,
+    "by_category": {}
+  },
+  "bot_server": {
+    "connections": 0,
+    "commands_sent": 0,
+    "responses_received": 0,
+    "errors": 0,
+    "uptime_start": null
+  },
+  "system": {
+    "start_time": "2026-01-10T11:13:38.159336",
+    "total_requests": 0,
+    "errors": 0
+  }
+}

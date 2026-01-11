@@ -1,0 +1,255 @@
+Lv150 HISTORIC HEROES ANALYSIS
+================================================================================
+
+Total Lv150+ HH found: 161
+HH on WORKING accounts: 56
+HH on DELETED accounts: 105
+
+================================================================================
+HISTORIC HEROES FROM DELETED ACCOUNTS
+These heroes are BACK IN GAME and can be captured!
+================================================================================
+
+Ioriasj03gmail.com.json
+  Player: Hynoptis | Email: Hynoptis
+    Lv150 Zara Yaqob                               Atk:570 @ Krazy Town (699,101)
+
+Tarasdbeyahoo.com.json
+  Player: Borg | Email: Borg
+    Lv150 Philaenis of Samos                       Atk:570 @ Falana (0,799)
+    Lv150 Nancy Ward                               Atk:0 @ Falana (0,799)
+    Lv150 Cuhtuhlatah                              Atk:570 @ Falana (0,799)
+    Lv150 Leif Ericson                             Atk:570 @ Falana (0,799)
+    Lv150 Al-Shahrazuri                            Atk:570 @ Falana (0,799)
+    Lv150 Hippocrates                              Atk:570 @ Falana (0,799)
+    Lv150 St. Ignatius Loyola                      Atk:570 @ Falana (0,799)
+    Lv150 St. Bruno of Cologne                     Atk:570 @ Falana (0,799)
+    Lv150 Thucidides                               Atk:570 @ Falana (0,799)
+    Lv150 John of England                          Atk:570 @ Falana (0,799)
+    Lv150 Rudolph of France                        Atk:0 @ Jerusalem (300,700)
+
+apmjunioraol.com.json
+  Player: RoboJack | Email: RoboJack
+    Lv150 Livy                                     Atk:0 @ Reykjavik (693,99)
+    Lv150 Ben Jonson                               Atk:0 @ Reykjavik (693,99)
+    Lv150 Raja Raja Cholal                         Atk:0 @ Reykjavik (693,99)
+    Lv150 Brian Boru                               Atk:0 @ Reykjavik (693,99)
+    Lv150 Ludovico Sforza                          Atk:0 @ Reykjavik (693,99)
+    Lv150 Lothair III, Holy Roman Emperor          Atk:0 @ Reykjavik (693,99)
+    Lv150 Eric IV of Denmark                       Atk:0 @ Reykjavik (693,99)
+
+asermolaevhotmail.com.json
+  Player: KingStevee | Email: KingStevee
+    Lv150 MacBeth                                  Atk:0 @ Yaounde (693,297)
+    Lv150 Sybil Ludington                          Atk:0 @ Yaounde (693,297)
+    Lv150 Thaddeus Kosciuszko                      Atk:0 @ YaoundeS (692,298)
+    Lv150 Edgar the Etheling                       Atk:0 @ YaoundeS (692,298)
+
+bigger.2009.json
+  Player: Cedric90 | Email: Cedric90
+    Lv150 Wartislaw III, Duke of Pomerania         Atk:114 @ Welcome (687,499)
+
+bigger.2009outlook.com.json
+  Player: Cedric90 | Email: Cedric90
+    Lv150 Wartislaw III, Duke of Pomerania         Atk:114 @ Welcome (687,499)
+
+chupu.69.json
+  Player: CrazyMax02 | Email: CrazyMax02
+    Lv150 Henry Hudson                             Atk:152 @ MillWright (689,490)
+
+chupu.69hotmail.ca.json
+  Player: CrazyMax02 | Email: CrazyMax02
+    Lv150 Henry Hudson                             Atk:152 @ MillWright (689,490)
+
+confused_gemini_goddessyahoo.com.json
+  Player: Maxime02 | Email: Maxime02
+    Lv150 Montezuma I                              Atk:190 @ DeadZone (695,488)
+
+domexdanyahoo.com.json
+  Player: Cuchulainn | Email: Cuchulainn
+    Lv150 Giovanni Sforza                          Atk:0 @ Punishment (118,508)
+    Lv150 Diogenes Laertios                        Atk:0 @ Punishment (118,508)
+    Lv150 Bertrand Du Guesclin                     Atk:0 @ Punishment (118,508)
+    Lv150 Guiliano della Rovere, Pope Julius II    Atk:0 @ Punishment (118,508)
+    Lv150 Baldwin I of Edessa                      Atk:0 @ Punishment (118,508)
+
+katastrophe.2012.json
+  Player: CrazySiA | Email: CrazySiA
+    Lv150 Charlemagne                              Atk:228 @ CrazySIA (690,502)
+
+katastrophe.2012hotmail.com.json
+  Player: CrazySiA | Email: CrazySiA
+    Lv150 Charlemagne                              Atk:228 @ CrazySIA (690,502)
+
+marknewsome1sky.com.json
+  Player: Ironclad | Email: Ironclad
+    Lv150 Manuela Beltran                          Atk:0 @ Charlie (315,730)
+    Lv150 Rani Rudrama Devi                        Atk:0 @ Charlie (315,730)
+    Lv150 Georges de La Tour                       Atk:0 @ Charlie (315,730)
+    Lv150 Albrecht Durer                           Atk:0 @ Charlie (315,730)
+    Lv150 James Hepburn, Earl of Bothwell          Atk:0 @ Charlie (315,730)
+    Lv150 Peter the Great                          Atk:570 @ Foxtrot (314,727)
+    Lv150 Amin al-Din Rashid                       Atk:0 @ Foxtrot (314,727)
+    Lv150 Li Shangyin                              Atk:0 @ Foxtrot (314,727)
+    Lv150 Ogier the Dane                           Atk:570 @ rally 14 (313,728)
+    Lv150 Oliver Cromwell                          Atk:0 @ rally 14 (313,728)
+    Lv150 Lucrezia Borgia 2                        Atk:0 @ rally 14 (313,728)
+    Lv150 Ralpacan                                 Atk:0 @ rally 14 (313,728)
+    Lv150 Myles Coverdale                          Atk:570 @ rally 14 (313,728)
+    Lv150 Hamilcar Barca                           Atk:570 @ rally 14 (313,728)
+    Lv150 Sandro Botticelli 2                      Atk:570 @ support (312,727)
+    Lv150 Cardinal Richelieu                       Atk:0 @ support (312,727)
+    Lv150 George of Antioch                        Atk:570 @ support (312,727)
+    Lv150 Frederick II, Duke of Swabia             Atk:570 @ support (312,727)
+    Lv150 Ivan III the Great of Russia             Atk:0 @ support (312,727)
+    Lv150 Changamire                               Atk:570 @ support (312,727)
+    Lv150 Sir Agravain                             Atk:570 @ support (312,727)
+    Lv150 Cicero                                   Atk:0 @ support (312,727)
+
+moore.tn2.json
+  Player: Driver | Email: Driver
+    Lv150 Vladimir I                               Atk:0 @ BronzeageI (693,494)
+    Lv150 Girart de Roussillon                     Atk:0 @ Hameln (693,495)
+    Lv150 Joseph Caro                              Atk:0 @ Hameln (693,495)
+    Lv150 Hernando de Soto                         Atk:0 @ Hameln (693,495)
+    Lv150 Marcus Porcius Cato                      Atk:0 @ Hameln (693,495)
+    Lv150 Anne of Cleves                           Atk:0 @ Maastricht (621,567)
+    Lv150 Rorik of Dorestad                        Atk:555 @ Maastricht (621,567)
+    Lv150 Marcus Vipsanius Agrippa                 Atk:570 @ Tournore (628,565)
+    Lv150 Henry the Lion                           Atk:0 @ Tournore (628,565)
+    Lv150 Anne Boleyn                              Atk:0 @ Tournore (628,565)
+    Lv150 Joan of Kent                             Atk:570 @ Tournore (628,565)
+    Lv150 William III                              Atk:0 @ Victoria (627,561)
+    Lv150 Elizabeth I                              Atk:0 @ Victoria (627,561)
+    Lv150 John Calvin                              Atk:0 @ Victoria (627,561)
+    Lv150 Richard III of England                   Atk:0 @ Victoria (627,561)
+    Lv150 Sir Thomas Gresham                       Atk:0 @ Victoria (627,561)
+    Lv150 Manius Curius Dentatus                   Atk:0 @ Victoria (627,561)
+    Lv150 Utu-hengal                               Atk:0 @ Victoria (627,561)
+    Lv150 Robert Browne                            Atk:0 @ Victoria (627,561)
+    Lv150 Claude de Lorraine. Duke of Guise        Atk:0 @ Victoria (627,561)
+
+moore.tn2gmail.com.json
+  Player: Driver | Email: Driver
+    Lv150 Vladimir I                               Atk:0 @ BronzeageI (693,494)
+    Lv150 Girart de Roussillon                     Atk:0 @ Hameln (693,495)
+    Lv150 Joseph Caro                              Atk:0 @ Hameln (693,495)
+    Lv150 Hernando de Soto                         Atk:0 @ Hameln (693,495)
+    Lv150 Marcus Porcius Cato                      Atk:0 @ Hameln (693,495)
+    Lv150 Anne of Cleves                           Atk:0 @ Maastricht (621,567)
+    Lv150 Rorik of Dorestad                        Atk:555 @ Maastricht (621,567)
+    Lv150 Marcus Vipsanius Agrippa                 Atk:570 @ Tournore (628,565)
+    Lv150 Henry the Lion                           Atk:0 @ Tournore (628,565)
+    Lv150 Anne Boleyn                              Atk:0 @ Tournore (628,565)
+    Lv150 Joan of Kent                             Atk:570 @ Tournore (628,565)
+    Lv150 William III                              Atk:0 @ Victoria (627,561)
+    Lv150 Elizabeth I                              Atk:0 @ Victoria (627,561)
+    Lv150 John Calvin                              Atk:0 @ Victoria (627,561)
+    Lv150 Richard III of England                   Atk:0 @ Victoria (627,561)
+    Lv150 Sir Thomas Gresham                       Atk:0 @ Victoria (627,561)
+    Lv150 Manius Curius Dentatus                   Atk:0 @ Victoria (627,561)
+    Lv150 Utu-hengal                               Atk:0 @ Victoria (627,561)
+    Lv150 Robert Browne                            Atk:0 @ Victoria (627,561)
+    Lv150 Claude de Lorraine. Duke of Guise        Atk:0 @ Victoria (627,561)
+
+peterbrannanhotmail.com.json
+  Player: EmperorSteve | Email: EmperorSteve
+    Lv150 Aethelstan                               Atk:0 @ LondonS1 (701,300)
+    Lv150 Amerigo Vespucci                         Atk:0 @ LondonS1 (701,300)
+    Lv150 Lothair I                                Atk:0 @ LondonS1 (701,300)
+
+satchman69.json
+  Player: SATCH | Email: SATCH
+    Lv150 Marco Polo                               Atk:0 @ Kutahya (693,369)
+
+satchman69hotmail.com.json
+  Player: SATCH | Email: SATCH
+    Lv150 Marco Polo                               Atk:0 @ Kutahya (693,369)
+
+simonsmall-voices.net.json
+  Player: Tornado | Email: Tornado
+    Lv150 Erastosthenes                            Atk:570 @ Santa Cruz de la Sierra (498,484)
+    Lv150 Louis the Stammerer                      Atk:0 @ WeeWar (514,499)
+
+yucon2466yahoo.com.json
+  Player: Arizona | Email: Arizona
+    Lv150 William the Conqueror                    Atk:556 @ Kiev (297,693)
+
+
+================================================================================
+HISTORIC HEROES ON WORKING ACCOUNTS (still owned)
+================================================================================
+
+Ioriasj03.json:
+    Lv150 Zara Yaqob                               @ Krazy Town
+
+Tarasdbe.json:
+    Lv150 Philaenis of Samos                       @ Falana
+    Lv150 Nancy Ward                               @ Falana
+    Lv150 Cuhtuhlatah                              @ Falana
+    Lv150 Leif Ericson                             @ Falana
+    Lv150 Al-Shahrazuri                            @ Falana
+    Lv150 Hippocrates                              @ Falana
+    Lv150 St. Ignatius Loyola                      @ Falana
+    Lv150 St. Bruno of Cologne                     @ Falana
+    Lv150 Thucidides                               @ Falana
+    Lv150 John of England                          @ Falana
+    Lv150 Rudolph of France                        @ Jerusalem
+
+apmjunior.json:
+    Lv150 Livy                                     @ Reykjavik
+    Lv150 Ben Jonson                               @ Reykjavik
+    Lv150 Raja Raja Cholal                         @ Reykjavik
+    Lv150 Brian Boru                               @ Reykjavik
+    Lv150 Ludovico Sforza                          @ Reykjavik
+    Lv150 Lothair III, Holy Roman Emperor          @ Reykjavik
+    Lv150 Eric IV of Denmark                       @ Reykjavik
+
+asermolaev.json:
+    Lv150 MacBeth                                  @ Yaounde
+    Lv150 Sybil Ludington                          @ Yaounde
+    Lv150 Thaddeus Kosciuszko                      @ YaoundeS
+    Lv150 Edgar the Etheling                       @ YaoundeS
+
+confused_gemini_goddess.json:
+    Lv150 Montezuma I                              @ DeadZone
+
+domexdan.json:
+    Lv150 Giovanni Sforza                          @ Punishment
+    Lv150 Diogenes Laertios                        @ Punishment
+    Lv150 Bertrand Du Guesclin                     @ Punishment
+    Lv150 Guiliano della Rovere, Pope Julius II    @ Punishment
+    Lv150 Baldwin I of Edessa                      @ Punishment
+
+marknewsome1.json:
+    Lv150 Manuela Beltran                          @ Charlie
+    Lv150 Rani Rudrama Devi                        @ Charlie
+    Lv150 Georges de La Tour                       @ Charlie
+    Lv150 Albrecht Durer                           @ Charlie
+    Lv150 James Hepburn, Earl of Bothwell          @ Charlie
+    Lv150 Peter the Great                          @ Foxtrot
+    Lv150 Amin al-Din Rashid                       @ Foxtrot
+    Lv150 Li Shangyin                              @ Foxtrot
+    Lv150 Ogier the Dane                           @ rally 14
+    Lv150 Oliver Cromwell                          @ rally 14
+    Lv150 Lucrezia Borgia 2                        @ rally 14
+    Lv150 Ralpacan                                 @ rally 14
+    Lv150 Myles Coverdale                          @ rally 14
+    Lv150 Hamilcar Barca                           @ rally 14
+    Lv150 Sandro Botticelli 2                      @ support
+    Lv150 Cardinal Richelieu                       @ support
+    Lv150 George of Antioch                        @ support
+    Lv150 Frederick II, Duke of Swabia             @ support
+    Lv150 Ivan III the Great of Russia             @ support
+    Lv150 Changamire                               @ support
+    Lv150 Sir Agravain                             @ support
+    Lv150 Cicero                                   @ support
+
+peterbrannan.json:
+    Lv150 Aethelstan                               @ LondonS1
+    Lv150 Amerigo Vespucci                         @ LondonS1
+    Lv150 Lothair I                                @ LondonS1
+
+simon.json:
+    Lv150 Erastosthenes                            @ Santa Cruz de la Sierra
+    Lv150 Louis the Stammerer                      @ WeeWar

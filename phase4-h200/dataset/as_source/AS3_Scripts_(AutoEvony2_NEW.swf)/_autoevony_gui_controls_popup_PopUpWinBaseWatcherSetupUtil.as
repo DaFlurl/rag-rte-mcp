@@ -1,0 +1,33 @@
+﻿// Decompiled by AS3 Sorcerer 6.78
+// www.buraks.com/as3sorcerer
+
+//_autoevony_gui_controls_popup_PopUpWinBaseWatcherSetupUtil
+
+package 
+{
+    import flash.display.Sprite;
+    import mx.binding.IWatcherSetupUtil;
+    import autoevony.gui.controls.popup.PopUpWinBase;
+    import mx.core.IFlexModuleFactory;
+    import mx.binding.PropertyWatcher;
+
+    public class _autoevony_gui_controls_popup_PopUpWinBaseWatcherSetupUtil extends Sprite implements IWatcherSetupUtil 
+    {
+
+
+        public static function init(_arg_1:IFlexModuleFactory):void
+        {
+            PopUpWinBase.watcherSetupUtil = new (_autoevony_gui_controls_popup_PopUpWinBaseWatcherSetupUtil)();
+        }
+
+
+        public function setup(_arg_1:Object, _arg_2:Function, _arg_3:Array, _arg_4:Array):void
+        {
+            _arg_4[0] = new PropertyWatcher("windowTitle", {"propertyChange":true}, [_arg_3[0]], _arg_2);
+            _arg_4[0].updateParent(_arg_1);
+        }
+
+
+    }
+}//package 
+

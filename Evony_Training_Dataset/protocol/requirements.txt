@@ -1,0 +1,25 @@
+# BORG TOOLKIT Requirements
+# Python 3.7+ recommended (pyEvony compatibility)
+
+# Required
+pyamf>=0.8.0          # AMF protocol encoding (pip install pyamf>=0.8.0
+pycryptodome>=3.19.0
+requests>=2.31.0
+websocket-client>=1.6.0
+colorama>=0.4.6
+rich>=13.0.0
+
+# Epic 2026 - Master Server
+fastapi>=0.109.0
+uvicorn>=0.27.0
+python-multipart>=0.0.6
+aiosqlite>=0.19.0
+websockets>=12.0       # Colored terminal output
+
+# Account Importer - Multi-format support
+openpyxl>=3.1.0       # Excel XLSX support
+striprtf>=0.0.26      # RTF file support
+PyPDF2>=3.0.0         # PDF file support
+
+# For packet capture (optional, requires admin)
+# scapy>=2.4.0

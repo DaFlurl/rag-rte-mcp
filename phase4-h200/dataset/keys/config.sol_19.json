@@ -1,0 +1,26 @@
+{
+  "now": {
+    "proxyPort": "8080",
+    "skypePw": "",
+    "proxyPw": "",
+    "skypeUn": "",
+    "secCode": "",
+    "proxyUn": "",
+    "autoLoginMaxTime": "600",
+    "username": "bigger.2007@outlook.com",
+    "serverIP": "216.66.17.168",
+    "proxyType": "",
+    "proxyHost": "",
+    "loginType": "ev",
+    "password": "cedric26051990",
+    "autoScript": false,
+    "autoRun": false,
+    "theme": "Default Grey RE",
+    "server": "cc2",
+    "autoLogin": false,
+    "sid": "375",
+    "tokenExpires": NaN,
+    "autoLoginMinTime": "1",
+    "strserverAlias": "Parapet"
+  }
+}

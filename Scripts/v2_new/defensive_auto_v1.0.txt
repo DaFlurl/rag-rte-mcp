@@ -1,0 +1,174 @@
+// ============================================
+// DEFENSIVE AUTOMATION v1.0
+// Automatic defense and threat response
+// Author: Borg Automation Suite
+// ============================================
+
+// Configuration
+set checkInterval 10000
+set hideTroopsThreshold 10000
+set hideResourceThreshold 1000000
+set safeValleyX 0
+set safeValleyY 0
+set gatePolicy 1
+
+echo ========================================
+echo DEFENSIVE AUTOMATION v1.0
+echo Check Interval: %checkInterval%ms
+echo ========================================
+
+// Set initial gate policy (1=closed to enemies)
+echo [INIT] Setting gate policy...
+setgatepolicy %gatePolicy%
+sleep 1000
+
+// Main defense loop
+label mainLoop
+
+// Check for incoming attacks
+gosub checkIncoming
+
+// Check resource levels
+gosub checkResources
+
+// Check troop safety
+gosub checkTroops
+
+// Rotate comfort for loyalty
+gosub maintainLoyalty
+
+sleep %checkInterval%
+goto mainLoop
+
+// ==========================================
+// CHECK INCOMING ATTACKS
+// ==========================================
+label checkIncoming
+echo [SCAN] Checking for incoming attacks...
+
+// Get enemy army info
+// This checks if enemies are marching to us
+// If incoming detected, execute evasion
+
+// Check reports for scout reports
+// cleanreports scout 1
+
+// If under attack, hide troops
+if incomingAttack = 1 then gosub hideTroops
+if incomingAttack = 1 then gosub hideResources
+
+return
+
+// ==========================================
+// HIDE TROOPS
+// ==========================================
+label hideTroops
+echo [DEFENSE] INCOMING ATTACK - Hiding troops!
+
+// Option 1: Reinforce alliance member
+// reinforce allyX allyY heroName troops
+
+// Option 2: Send to safe valley
+if safeValleyX > 0 then deploy %safeValleyX% %safeValleyY% defenseHero all
+sleep 1000
+
+// Option 3: Recall after attack passes
+// Set timer to recall troops
+
+echo [DEFENSE] Troops hidden
+return
+
+// ==========================================
+// HIDE RESOURCES
+// ==========================================
+label hideResources
+echo [DEFENSE] Hiding resources...
+
+// Transport resources to safe city or market
+// trade gold 1000000 food 0.001
+
+// Or send to alliance member
+// sendresources allyX allyY gold food lumber stone iron
+
+echo [DEFENSE] Resources protected
+return
+
+// ==========================================
+// CHECK RESOURCE LEVELS
+// ==========================================
+label checkResources
+getresources
+
+// If resources too high, they're at risk
+if gold > %hideResourceThreshold% then echo [WARN] High gold - consider hiding
+if food > %hideResourceThreshold% then echo [WARN] High food - consider hiding
+
+return
+
+// ==========================================
+// CHECK TROOP SAFETY
+// ==========================================
+label checkTroops
+gettroops
+
+set totalTroops 0
+// Add up all troops
+// If total exceeds threshold, consider hiding
+
+if totalTroops > %hideTroopsThreshold% then echo [INFO] High troop count - monitor for attacks
+
+return
+
+// ==========================================
+// MAINTAIN LOYALTY
+// ==========================================
+label maintainLoyalty
+echo [MAINT] Maintaining city loyalty...
+
+// Comfort actions to keep loyalty high
+comfort praying
+sleep 2000
+comfort festival
+sleep 2000
+
+// Levy if needed
+levy gold
+sleep 1000
+
+return
+
+// ==========================================
+// EMERGENCY PROTOCOLS
+// ==========================================
+label emergency
+echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+echo [EMERGENCY] UNDER ATTACK - ACTIVATING FULL DEFENSE
+echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// Close gates
+setgatepolicy 1
+sleep 500
+
+// Hide all troops
+gosub hideTroops
+
+// Hide resources
+gosub hideResources
+
+// Alert (echo to log)
+echo [ALERT] Attack detected - defenses activated
+
+// Wait for attack to pass
+sleep 300000
+
+// Resume normal operations
+goto mainLoop
+
+// ==========================================
+// SHUTDOWN
+// ==========================================
+label done
+echo ========================================
+echo DEFENSIVE AUTOMATION STOPPED
+echo ========================================
+stop

@@ -1,0 +1,184 @@
+// ============================================
+// HERO OPTIMIZER v1.0
+// Automatic hero management and optimization
+// Author: Borg Automation Suite
+// ============================================
+
+// Configuration
+set maxHeroes 10
+set minAttack 70
+set minPolitics 70
+set minIntel 70
+set levelUpThreshold 5
+
+echo ========================================
+echo HERO OPTIMIZER v1.0
+echo Target Stats: ATK>%minAttack% POL>%minPolitics%
+echo ========================================
+
+// Main optimizer loop
+label mainLoop
+
+// Phase 1: Acquire heroes
+gosub acquireHeroes
+
+// Phase 2: Level up heroes
+gosub levelUpHeroes
+
+// Phase 3: Optimize attributes
+gosub optimizeAttributes
+
+// Phase 4: Assign roles
+gosub assignRoles
+
+// Phase 5: Fire weak heroes
+gosub fireWeakHeroes
+
+echo [HERO] Optimization cycle complete
+sleep 300000
+goto mainLoop
+
+// ==========================================
+// ACQUIRE HEROES
+// ==========================================
+label acquireHeroes
+echo [ACQUIRE] Checking for new heroes...
+
+// Check inn for available heroes
+// hirehero will try to hire best available
+
+// Look for high base stats
+hirehero attack %minAttack%
+sleep 2000
+
+hirehero politics %minPolitics%
+sleep 2000
+
+hirehero intelligence %minIntel%
+sleep 2000
+
+echo [ACQUIRE] Hero acquisition complete
+return
+
+// ==========================================
+// LEVEL UP HEROES
+// ==========================================
+label levelUpHeroes
+echo [LEVEL] Leveling up heroes...
+
+// Use experience items if available
+useitem hero.exp
+sleep 1000
+
+// Exercise heroes at feasting hall
+// exercise heroName
+sleep 1000
+
+echo [LEVEL] Hero leveling complete
+return
+
+// ==========================================
+// OPTIMIZE ATTRIBUTES
+// ==========================================
+label optimizeAttributes
+echo [OPTIMIZE] Optimizing hero attributes...
+
+// For attack heroes: max attack
+// For mayors: max politics
+// For scouts: max intelligence
+
+// Assign attribute points
+// addpoints heroName attack 1
+sleep 500
+
+// addpoints heroName politics 1
+sleep 500
+
+echo [OPTIMIZE] Attribute optimization complete
+return
+
+// ==========================================
+// ASSIGN ROLES
+// ==========================================
+label assignRoles
+echo [ROLES] Assigning hero roles...
+
+// Set best politics hero as mayor
+setmayor politics
+sleep 1000
+
+// Best attack hero for combat
+getspamhero
+sleep 500
+
+// Keep intel hero for scouting
+echo [ROLES] Role assignment complete
+return
+
+// ==========================================
+// FIRE WEAK HEROES
+// ==========================================
+label fireWeakHeroes
+echo [FIRE] Checking for weak heroes to release...
+
+// Fire heroes with low base stats
+// This makes room for better heroes
+
+// firehero heroName
+sleep 1000
+
+echo [FIRE] Weak hero cleanup complete
+return
+
+// ==========================================
+// HERO ROTATION FOR MAYOR
+// ==========================================
+label rotateMayor
+echo [ROTATE] Rotating mayor for levy bonus...
+
+// Mayor with high politics for levy
+setmayor politics
+sleep 1000
+
+// Levy with bonus
+levy population
+sleep 500
+levy gold
+sleep 500
+
+// Restore attack mayor if needed for defense
+// setmayor attack
+
+echo [ROTATE] Mayor rotation complete
+return
+
+// ==========================================
+// HERO STATS REFERENCE
+// ==========================================
+// Attack: Combat damage bonus
+// Politics: Resource production, levy bonus
+// Intelligence: Scout success, research speed
+//
+// Legendary Heroes: 80+ base stats
+// Historic Heroes: 70-79 base stats
+// Normal Heroes: 50-69 base stats
+//
+// Max Level: 100 (500 attribute points)
+// Points per level: 5
+
+// ==========================================
+// ERROR HANDLER
+// ==========================================
+label error
+echo [ERROR] Hero management error
+sleep 30000
+goto mainLoop
+
+// ==========================================
+// SHUTDOWN
+// ==========================================
+label done
+echo ========================================
+echo HERO OPTIMIZER STOPPED
+echo ========================================
+stop

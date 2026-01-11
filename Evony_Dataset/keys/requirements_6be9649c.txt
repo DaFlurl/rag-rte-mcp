@@ -1,0 +1,20 @@
+# Evony Master Suite Requirements
+
+# Core
+schedule>=1.2.0          # Task scheduling
+
+# Network
+requests>=2.31.0         # HTTP client
+pysocks>=1.7.1           # SOCKS proxy
+
+# Protocol
+pyamf>=0.8.0             # AMF protocol
+
+# Data
+pandas>=2.1.0            # Data analysis
+
+# CLI
+colorama>=0.4.6          # Colored output
+
+# Crypto
+pycryptodome>=3.19.0     # Encryption

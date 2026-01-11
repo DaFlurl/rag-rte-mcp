@@ -1,0 +1,26 @@
+{
+  "generated": "2026-01-03T16:05:55.947048",
+  "encryption_keys": {
+    "ACTION_KEY": "TAO_{313-894*&*($*#-FDIU(430}-{facebook_dioe(&*%$l}",
+    "API_KEY": "9f758e2deccbe6244f734371b9642eda",
+    "USER_INFO_KEY": "IUGI_md5_key_{djfiji3*4930}-{fjdi3284$9dlld}",
+    "XOR_KEY": "0xAA (170)",
+    "LOGIN_SALT": "evony",
+    "GAME_KEY": "EvonyGameKey2009",
+    "NETWORK_KEY": "EvonyNetKey2009"
+  },
+  "overflow_thresholds": {
+    "Worker": 42949673,
+    "Warrior": 28633116,
+    "Scout": 21474837,
+    "Pikeman": 10737419,
+    "Swordsman": 8589935,
+    "Archer": 6135668,
+    "Cavalry": 2684355,
+    "Cataphract": 1431656,
+    "Transporter": 7158279,
+    "Ballista": 1073742,
+    "Ram": 858994,
+    "Catapult": 715828
+  }
+}

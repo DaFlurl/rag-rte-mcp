@@ -1,0 +1,353 @@
+// ============================================
+// RAINBOW ATTACK v2.0
+// Mixed troop type waves (cav, cata, archer, mech)
+// For AE2/RoboEvony - Advanced Combat
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+// PURPOSE: Send waves of different troop types
+// to overwhelm defenses with varied unit counters
+// ============================================
+
+// ==========================================
+// CONFIGURATION - EDIT THESE
+// ==========================================
+
+// === TARGET ===
+set targetX 0
+set targetY 0
+set targetType "player"
+
+// === RAINBOW TROOP CONFIGURATION ===
+// Enable/disable each troop type
+set useArchers 1
+set archerWaves 10
+set archersPerWave 100000
+
+set useCavalry 1
+set cavalryWaves 5
+set cavalryPerWave 50000
+
+set useCataphracts 1
+set cataphractWaves 5
+set cataphractsPerWave 25000
+
+set useCatapults 1
+set catapultWaves 3
+set catapultsPerWave 10000
+
+set useBallista 1
+set ballistaWaves 3
+set ballistaPerWave 10000
+
+set useRams 1
+set ramWaves 2
+set ramsPerWave 5000
+
+set useSwordsmen 1
+set swordsmenWaves 2
+set swordsmenPerWave 20000
+
+set usePikemen 1
+set pikemenWaves 2
+set pikemenPerWave 20000
+
+// === WAVE ORDER ===
+// Order of troop types in rainbow attack
+// Options: sequential, random, custom
+set waveOrder "sequential"
+
+// === TIMING ===
+set waveDelay 2000
+set typeDelay 5000
+set cooldownMinutes 10
+
+// === FEATURES ===
+set enableScoutFirst 1
+set scoutCount 1
+set enableTroopCheck 1
+set enableHeroRotation 1
+set maxHeroesUsed 10
+set enableLogging 1
+
+// === RUN MODE ===
+set runMode "once"
+
+// ==========================================
+// TROOP CODES REFERENCE
+// ==========================================
+// s = scout       w = warrior     p = pikeman
+// S = swordsman   a = archer      c = cavalry
+// C = cataphract  t = transporter b = ballista
+// r = ram         P = catapult
+// ==========================================
+
+// ==========================================
+// DO NOT EDIT BELOW
+// ==========================================
+
+set totalWaves 0
+set heroIndex 0
+
+echo ============================================
+echo RAINBOW ATTACK v2.0
+echo Target: %targetX%,%targetY%
+echo Wave Order: %waveOrder%
+echo ============================================
+
+// Validate
+if targetX = 0 then if targetY = 0 then goto noTarget
+
+// Scout first
+if enableScoutFirst = 1 then gosub scoutTarget
+
+// Execute rainbow attack
+gosub executeRainbow
+
+goto complete
+
+// ==========================================
+// EXECUTE RAINBOW ATTACK
+// ==========================================
+label executeRainbow
+echo ----------------------------------------
+echo [RAINBOW] Starting mixed troop assault...
+
+// Send each troop type in sequence
+if useArchers = 1 then gosub sendArcherWaves
+if useCavalry = 1 then gosub sendCavalryWaves
+if useCataphracts = 1 then gosub sendCataphractWaves
+if useCatapults = 1 then gosub sendCatapultWaves
+if useBallista = 1 then gosub sendBallistaWaves
+if useRams = 1 then gosub sendRamWaves
+if useSwordsmen = 1 then gosub sendSwordsmenWaves
+if usePikemen = 1 then gosub sendPikemenWaves
+
+echo [RAINBOW] All waves sent!
+return
+
+// ==========================================
+// ARCHER WAVES
+// ==========================================
+label sendArcherWaves
+echo [ARCHER] Sending %archerWaves% archer waves...
+
+set i 0
+label archerLoop
+
+gosub getNextHero
+attack %targetX% %targetY% %currentHero% a%archersPerWave%
+echo [ARCHER %i%] %archersPerWave% archers sent
+
+set i i + 1
+set totalWaves totalWaves + 1
+sleep %waveDelay%
+
+if i < archerWaves then goto archerLoop
+
+echo [ARCHER] Complete
+sleep %typeDelay%
+return
+
+// ==========================================
+// CAVALRY WAVES
+// ==========================================
+label sendCavalryWaves
+echo [CAVALRY] Sending %cavalryWaves% cavalry waves...
+
+set i 0
+label cavalryLoop
+
+gosub getNextHero
+attack %targetX% %targetY% %currentHero% c%cavalryPerWave%
+echo [CAVALRY %i%] %cavalryPerWave% cavalry sent
+
+set i i + 1
+set totalWaves totalWaves + 1
+sleep %waveDelay%
+
+if i < cavalryWaves then goto cavalryLoop
+
+echo [CAVALRY] Complete
+sleep %typeDelay%
+return
+
+// ==========================================
+// CATAPHRACT WAVES
+// ==========================================
+label sendCataphractWaves
+echo [CATA] Sending %cataphractWaves% cataphract waves...
+
+set i 0
+label cataLoop
+
+gosub getNextHero
+attack %targetX% %targetY% %currentHero% C%cataphractsPerWave%
+echo [CATA %i%] %cataphractsPerWave% cataphracts sent
+
+set i i + 1
+set totalWaves totalWaves + 1
+sleep %waveDelay%
+
+if i < cataphractWaves then goto cataLoop
+
+echo [CATA] Complete
+sleep %typeDelay%
+return
+
+// ==========================================
+// CATAPULT WAVES (Siege)
+// ==========================================
+label sendCatapultWaves
+echo [SIEGE] Sending %catapultWaves% catapult waves...
+
+set i 0
+label siegeLoop
+
+gosub getNextHero
+attack %targetX% %targetY% %currentHero% P%catapultsPerWave%
+echo [SIEGE %i%] %catapultsPerWave% catapults sent
+
+set i i + 1
+set totalWaves totalWaves + 1
+sleep %waveDelay%
+
+if i < catapultWaves then goto siegeLoop
+
+echo [SIEGE] Complete
+sleep %typeDelay%
+return
+
+// ==========================================
+// BALLISTA WAVES
+// ==========================================
+label sendBallistaWaves
+echo [BALLI] Sending %ballistaWaves% ballista waves...
+
+set i 0
+label balliLoop
+
+gosub getNextHero
+attack %targetX% %targetY% %currentHero% b%ballistaPerWave%
+echo [BALLI %i%] %ballistaPerWave% ballista sent
+
+set i i + 1
+set totalWaves totalWaves + 1
+sleep %waveDelay%
+
+if i < ballistaWaves then goto balliLoop
+
+echo [BALLI] Complete
+sleep %typeDelay%
+return
+
+// ==========================================
+// RAM WAVES
+// ==========================================
+label sendRamWaves
+echo [RAM] Sending %ramWaves% ram waves...
+
+set i 0
+label ramLoop
+
+gosub getNextHero
+attack %targetX% %targetY% %currentHero% r%ramsPerWave%
+echo [RAM %i%] %ramsPerWave% rams sent
+
+set i i + 1
+set totalWaves totalWaves + 1
+sleep %waveDelay%
+
+if i < ramWaves then goto ramLoop
+
+echo [RAM] Complete
+sleep %typeDelay%
+return
+
+// ==========================================
+// SWORDSMEN WAVES
+// ==========================================
+label sendSwordsmenWaves
+echo [SWORD] Sending %swordsmenWaves% swordsmen waves...
+
+set i 0
+label swordLoop
+
+gosub getNextHero
+attack %targetX% %targetY% %currentHero% S%swordsmenPerWave%
+echo [SWORD %i%] %swordsmenPerWave% swordsmen sent
+
+set i i + 1
+set totalWaves totalWaves + 1
+sleep %waveDelay%
+
+if i < swordsmenWaves then goto swordLoop
+
+echo [SWORD] Complete
+sleep %typeDelay%
+return
+
+// ==========================================
+// PIKEMEN WAVES
+// ==========================================
+label sendPikemenWaves
+echo [PIKE] Sending %pikemenWaves% pikemen waves...
+
+set i 0
+label pikeLoop
+
+gosub getNextHero
+attack %targetX% %targetY% %currentHero% p%pikemenPerWave%
+echo [PIKE %i%] %pikemenPerWave% pikemen sent
+
+set i i + 1
+set totalWaves totalWaves + 1
+sleep %waveDelay%
+
+if i < pikemenWaves then goto pikeLoop
+
+echo [PIKE] Complete
+return
+
+// ==========================================
+// HERO ROTATION
+// ==========================================
+label getNextHero
+if enableHeroRotation = 0 then getspamhero power
+if enableHeroRotation = 0 then set currentHero spamhero
+if enableHeroRotation = 0 then return
+
+set heroIndex heroIndex + 1
+if heroIndex > maxHeroesUsed then set heroIndex 1
+
+getspamhero power
+set currentHero spamhero
+return
+
+// ==========================================
+// SCOUT TARGET
+// ==========================================
+label scoutTarget
+echo [SCOUT] Scouting target...
+getspamhero power
+scout %targetX% %targetY% spamhero %scoutCount%
+sleep 10000
+return
+
+// ==========================================
+// ERROR HANDLERS
+// ==========================================
+label noTarget
+echo [ERROR] Set target coordinates!
+stop
+
+// ==========================================
+// COMPLETION
+// ==========================================
+label complete
+echo ============================================
+echo RAINBOW ATTACK COMPLETE
+echo Total Waves: %totalWaves%
+echo Target: %targetX%,%targetY%
+echo ============================================
+stop

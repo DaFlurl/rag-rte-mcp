@@ -1,0 +1,106 @@
+
+setsilence true
+setarray coordsArrays ["0,0 100,100 300,100 500,100 700,100 100,300 300,300 500,300 700,300 100,500 300,500 500,500 700,500 100,700 300,700 500,700 700,700", "33,33 99,33 165,33 33,99 165,99 33,165 99,165 165,165", "231,33 297,33 363,33 231,99 363,99 231,165 297,165 363,165", "429,33 495,33 561,33 429,99 561,99 429,165 495,165 561,165", "627,33 693,33 759,33 627,99 759,99 627,165 693,165 759,165", "33,231 99,231 165,231 33,297 165,297 33,363 99,363 165,363", "231,231 297,231 363,231 231,297 363,297 231,363 297,363 363,363", "429,231 495,231 561,231 429,297 561,297 429,363 495,363 561,363", "627,231 693,231 759,231 627,297 759,297 627,363 693,363 759,363", "33,429 99,429 165,429 33,495 165,495 33,561 99,561 165,561", "429,429 495,429 561,429 429,495 561,495 429,561 495,561 561,561", "231,429 297,429 363,429 231,495 363,495 231,561 297,561 363,561", "627,429 693,429 759,429 627,495 759,495 627,561 693,561 759,561", "33,627 99,627 165,627 33,693 165,693 33,759 99,759 165,759", "231,627 297,627 363,627 231,693 363,693 231,759 297,759 363,759", "429,627 495,627 561,627 429,693 561,693 429,759 495,759 561,759", "627,627 693,627 759,627 627,693 759,693 627,759"]
+setarr scanCoords "0,0 100,100 100,300 100,500 100,700 300,100 300,300 300,500 300,700 500,100 500,300 500,500 500,700 700,100 700,300 700,500 700,700 33,33 99,33 165,33 33,99 165,99 33,165 99,165 165,165 231,33 297,33 363,33 231,99 363,99 231,165 297,165 363,165 429,33 495,33 561,33 429,99 561,99 429,165 495,165 561,165 627,33 693,33 759,33 627,99 759,99 627,165 693,165 759,165 33,231 99,231 165,231 33,297 165,297 33,363 99,363 165,363 231,231 297,231 363,231 231,297 363,297 231,363 297,363 363,363 429,231 495,231 561,231 429,297 561,297 429,363 495,363 561,363 627,231 693,231 759,231 627,297 759,297 627,363 693,363 759,363 33,429 99,429 165,429 33,495 165,495 33,561 99,561 165,561 429,429 495,429 561,429 429,495 561,495 429,561 495,561 561,561 231,429 297,429 363,429 231,495 363,495 231,561 297,561 363,561 627,429 693,429 759,429 627,495 759,495 627,561 693,561 759,561 33,627 99,627 165,627 33,693 165,693 33,759 99,759 165,759 231,627 297,627 363,627 231,693 363,693 231,759 297,759 363,759 429,627 495,627 561,627 429,693 561,693 429,759 495,759 561,759 627,627 693,627 759,627 627,693 759,693 627,759"
+setarray stateNames ["-", "Friesland", "Saxony", "North March", "Bohemia", "Lower Lorraine", "Franconia", "Thuringia", "Moravia", "Upper Lorraine", "Bavaria", "Swabia", "Carinthia", "Burgandy", "Lombardy", "Tuscany", "Romagna"]
+setarr stateReference "stateCaps friesland saxony northMarch bohemia lowerLorraine franconia thuringia moravia upperLorraine bavaria swabia carinthia burgundy lombardy tuscany romagna"
+setarray cityNameArrays ["Atlantis&#40;0&#44;0&#41; Washington&#44;&#32;D&#46;C&#46;&#40;100&#44;100&#41; Beijing&#40;300&#44;100&#41; Loyang&#40;500&#44;100&#41; Moscow&#40;700&#44;100&#41; Prague&#40;100&#44;300&#41; Berlin&#40;300&#44;300&#41; Vienna&#40;500&#44;300&#41; London&#40;700&#44;300&#41; Paris&#40;100&#44;500&#41; Rome&#40;300&#44;500&#41; Athens&#40;500&#44;500&#41; Cairo&#40;700&#44;500&#41; Ottowa&#40;100&#44;700&#41; Jerusalem&#40;300&#44;700&#41; Canberra&#40;500&#44;700&#41; Islamabad&#40;700&#44;700&#41;", "Tirana&#40;33&#44;33&#41; Algiers&#40;99&#44;33&#41; Kabul&#40;165&#44;33&#41; Saint&#32;John&#40;33&#44;99&#41; Port&#32;Moresby&#40;165&#44;99&#41; Sarajevo&#40;33&#44;165&#41; Gaborone&#40;99&#44;165&#41; Thimphu&#40;165&#44;165&#41;", "Buenos&#32;Aires&#40;231&#44;33&#41; Abu&#32;Dhabi&#40;297&#44;33&#41; Muscat&#40;363&#44;33&#41; Nassau&#40;231&#44;99&#41; Brasilia&#40;363&#44;99&#41; Bujumbura&#40;231&#44;165&#41; Pyongyang&#40;297&#44;165&#41; Malabo&#40;363&#44;165&#41;", "Baku&#40;429&#44;33&#41; Addis&#32;Ababa&#40;495&#44;33&#41; Dublin&#40;561&#44;33&#41; Minsk&#40;429&#44;99&#41; Brussels&#40;561&#44;99&#41; Copenhagen&#40;429&#44;165&#41; Dili&#40;495&#44;165&#41; Lome&#40;561&#44;165&#41;", "tallinn&#40;627&#44;33&#41; Andorra&#32;la&#32;Vella&#40;693&#44;33&#41; Luanda&#40;759&#44;33&#41; Lima&#40;627&#44;99&#41; Warsaw&#40;759&#44;99&#41; Roseau&#40;627&#44;165&#41; Quito&#40;693&#44;165&#41; Asmara&#40;759&#44;165&#41;", "Maynila&#40;33&#44;231&#41; Suva&#40;99&#44;231&#41; Helsinki&#40;165&#44;231&#41; Astana&#40;33&#44;297&#41; Djibouti&#40;165&#44;297&#41; Moroni&#40;33&#44;363&#41; Pristina&#40;99&#44;363&#41; Kuwait&#32;City&#40;165&#44;363&#41;", "Praia&#40;231&#44;231&#41; Brazzaville&#40;297&#44;231&#41; Kinshasa&#40;363&#44;231&#41; Bishkek&#40;231&#44;297&#41; Bissau&#40;363&#44;297&#41; Zagreb&#40;231&#44;363&#41; Nairobi&#40;297&#44;363&#41; Rīga&#40;363&#44;363&#41;", "Santa&#32;Fe&#32;de&#32;Bogotá&#40;429&#44;231&#41; St&#46;&#32;George's&#40;495&#44;231&#41; Tbilisi&#40;561&#44;231&#41; Accra&#40;429&#44;297&#41; Phnom&#32;Penh&#40;561&#44;297&#41; Maseru&#40;429&#44;363&#41; Vientiane&#40;495&#44;363&#41; Vilnius&#40;561&#44;363&#41;", "St&#46;&#32;Peter&#32;Port&#40;627&#44;231&#41; Havana&#40;693&#44;231&#41; Georgetown&#40;759&#44;231&#41; Harare&#40;627&#44;297&#41; Doha&#40;759&#44;297&#41; Monrovia&#40;627&#44;363&#41; Tripoli&#40;693&#44;363&#41; Vaduz&#40;759&#44;363&#41;", "Luxembourg&#40;33&#44;429&#41; Kigali&#40;99&#44;429&#41; Bucharest&#40;165&#44;429&#41; Palikir&#40;33&#44;495&#41; Chisinau&#40;165&#44;495&#41; Oslo&#40;33&#44;561&#41; Lisbon&#40;99&#44;561&#41; Stockholm&#40;165&#44;561&#41;", "Buenos&#32;Aires&#40;231&#44;33&#41; Abu&#32;Dhabi&#40;297&#44;33&#41; Muscat&#40;363&#44;33&#41; Nassau&#40;231&#44;99&#41; Brasilia&#40;363&#44;99&#41; Bujumbura&#40;231&#44;165&#41; Pyongyang&#40;297&#44;165&#41; Malabo&#40;363&#44;165&#41;", "Antananarivo&#40;231&#44;429&#41; Male&#40;297&#44;429&#41; Valletta&#40;363&#44;429&#41; Rabat&#40;231&#44;495&#41; Maputo&#40;363&#44;495&#41; Berne&#40;231&#44;561&#41; Apia&#40;297&#44;561&#41; Belgrade&#40;363&#44;561&#41;", "Nouakchott&#40;627&#44;429&#41; Ulan&#32;Bator&#40;693&#44;429&#41; Dhaka&#32;&#40;759&#44;429&#41; Niamey&#40;627&#44;495&#41; Alofi&#40;759&#44;495&#41; Victoria&#40;627&#44;561&#41; Riyadh&#40;693&#44;561&#41; San&#32;Marino&#40;759&#44;561&#41;", "Bratislava&#40;33&#44;627&#41; Ljubljana&#40;99&#44;627&#41; Khartoum&#40;165&#44;627&#41; Port&#32;Vila&#40;33&#44;693&#41; Bandar&#32;Seri&#32;Begawan&#40;165&#44;693&#41; Damascus&#40;33&#44;759&#41; Yerevan&#40;99&#44;759&#41; Sana'a&#40;165&#44;759&#41;", "Paramaribo&#40;231&#44;627&#41; Mogadishu&#40;297&#44;627&#41; Dushanbe&#40;363&#44;627&#41; Kampala&#40;231&#44;693&#41; Montevideo&#40;363&#44;693&#41; Baghdad&#40;231&#44;759&#41; Tehran&#40;297&#44;759&#41; Anman&#40;363&#44;759&#41;", "Bangkok&#40;429&#44;627&#41; Nuku'alofa&#40;495&#44;627&#41; Port&#32;of&#32;Spain&#40;561&#44;627&#41; Tashkent&#40;429&#44;693&#41; El&#32;Aaiun&#40;561&#44;693&#41; Hanoi&#40;429&#44;759&#41; Lusaka&#40;495&#44;759&#41; N'Djamena&#40;561&#44;759&#41;", "Tunis&#40;627&#44;627&#41; Ankara&#40;693&#44;627&#41; Ashgabat&#40;759&#44;627&#41; Singapore&#40;627&#44;693&#41; Budapest&#40;759&#44;693&#41; Bangui&#40;627&#44;759&#41;"]
+setarr friendlyList ""
+set friendlyListInd 0
+label friendlyListLoop
+iferror {$c.accountTab.allianceInfo.friendlyListArray[%friendlyListInd%].allianceName$} goto friendlyListDone
+addtoarray friendlyList %friendlyList.length% $c.accountTab.allianceInfo.friendlyListArray[%friendlyListInd%].allianceName$
+set friendlyListInd {%friendlyListInd%+1}
+goto friendlyListLoop
+label friendlyListDone
+set scanMapIndex 0
+label scanMapLoop
+set mapObj c.getMapDetail($c.getValue(Coordinate,%scanCoords[{%scanMapIndex%}]%)$)
+label waitMapDetail
+sleep 0.1
+iferror $%mapObj%.name$ goto waitMapDetail
+set scanMapIndex {%scanMapIndex%+1}
+if {%scanMapIndex%<%scanCoords.length%} goto scanMapLoop
+setarr nameListCap %cityNameArrays[0]%
+setarr coordListCap %coordsArrays[0]%
+set mapObj c.getMapDetail($c.getValue(Coordinate,%coordListCap[0]%)$)
+setarray allianceList ["$%mapObj%.allianceName$"]
+setarray alliance16Num ["0"]
+setarray alliance14Num ["0"]
+getindexof colorIndex friendlyList $%mapObj%.allianceName$
+if {%colorIndex%==-1} set color FF0000
+if {%colorIndex%!=-1} set color 00FFFF
+if {$%mapObj%.allianceName$==$c.player.playerInfo.alliance$} set color 00FF00
+if {$%mapObj%.allianceName$==null} set color 000000
+set msg0 "<br>        Server - <b>Atlantis&#40;0&#44;0&#41;</b> is owned by <b>$%mapObj%.userName$</b> of <b><font color='#%color%'>$%mapObj%.allianceName$</font></b>"
+set stateCapsIndex 1
+label stateCapsLoop
+set mapObj c.getMapDetail($c.getValue(Coordinate,%coordListCap[{%stateCapsIndex%}]%)$)
+getindexof colorIndex friendlyList $%mapObj%.allianceName$
+if {%colorIndex%==-1} set color FF0000
+if {%colorIndex%!=-1} set color 00FFFF
+if {$%mapObj%.allianceName$==$c.player.playerInfo.alliance$} set color 00FF00
+if {$%mapObj%.allianceName$==null} set color 000000
+set msg0 "%msg0%<br>        %stateNames[{%stateCapsIndex%}]%</b> - <b> %nameListCap[{%stateCapsIndex%}]%</b> is owned by <b>$%mapObj%.userName$</b> of <b><font color='#%color%'>$%mapObj%.allianceName$</font></b>"
+getindexof allianceNameIndex allianceList $%mapObj%.allianceName$
+if {%allianceNameIndex%==-1} addtoarray alliance16Num %alliance16Num.length% 1
+if {%allianceNameIndex%==-1} addtoarray alliance14Num %alliance14Num.length% 0
+if {%allianceNameIndex%!=-1} gosub subRoute16
+if {%allianceNameIndex%==-1} addtoarray allianceList %allianceList.length% $%mapObj%.allianceName$
+set stateCapsIndex {%stateCapsIndex%+1}
+if {%stateCapsIndex%<%coordListCap.length%} goto stateCapsLoop
+set bigIndex 1
+label bigLoop
+setarr nameList %cityNameArrays[{%bigIndex%}]%
+setarr coordList %coordsArrays[{%bigIndex%}]%
+set littleIndex 0
+set mapObj c.getMapDetail($c.getValue(Coordinate,%coordListCap[{%bigIndex%}]%)$)
+getindexof colorIndex friendlyList $%mapObj%.allianceName$
+if {%colorIndex%==-1} set color FF0000
+if {%colorIndex%!=-1} set color 00FFFF
+if {$%mapObj%.allianceName$==$c.player.playerInfo.alliance$} set color 00FF00
+if {$%mapObj%.allianceName$==null} set color 000000
+set msg%bigIndex% "<b>%stateNames[{%bigIndex%}]% %nameListCap[{%bigIndex%}]%</b> is owned by <b>$%mapObj%.userName$</b> of <b><font color='#%color%'>$%mapObj%.allianceName$</font></b>"
+label littleLoop
+set mapObj c.getMapDetail($c.getValue(Coordinate,%coordList[{%littleIndex%}]%)$)
+getindexof colorIndex friendlyList $%mapObj%.allianceName$
+if {%colorIndex%==-1} set color FF0000
+if {%colorIndex%!=-1} set color 00FFFF
+if {$%mapObj%.allianceName$==$c.player.playerInfo.alliance$} set color 00FF00
+if {$%mapObj%.allianceName$==null} set color 000000
+set msg%bigIndex% "%msg{%bigIndex%}%<br>        %nameList[{%littleIndex%}]% is owned by $%mapObj%.userName$ of <font color='#%color%'>$%mapObj%.allianceName$</font>"
+getindexof allianceNameIndex allianceList $%mapObj%.allianceName$
+if {%allianceNameIndex%==-1} addtoarray alliance16Num %alliance16Num.length% 0
+if {%allianceNameIndex%==-1} addtoarray alliance14Num %alliance14Num.length% 1
+if {%allianceNameIndex%!=-1} gosub subRoute14
+if {%allianceNameIndex%==-1} addtoarray allianceList %allianceList.length% $%mapObj%.allianceName$
+set littleIndex {%littleIndex%+1}
+if {%littleIndex%<%coordList.length%} goto littleLoop
+set bigIndex {%bigIndex%+1}
+if {%bigIndex%<%coordsArrays.length%} goto bigLoop
+set msg17 ""
+set finalIndex 0
+set mapObj c.getMapDetail($c.getValue(Coordinate,0,0)$)
+label finalLoop
+set atlantisMsg ""
+if {$%mapObj%.allianceName$==%allianceList[{%finalIndex%}]%} set atlantisMsg "and <b>Atlantis</b>"
+getindexof colorIndex friendlyList %allianceList[{%finalIndex%}]%
+if {%colorIndex%==-1} set color FF0000
+if {%colorIndex%!=-1} set color 00FFFF
+if {%allianceList[{%finalIndex%}]%==$c.player.playerInfo.alliance$} set color 00FF00
+if {%allianceList[{%finalIndex%}]%==null} set color 000000
+set msg17 "%msg17%<br>        <b><font color='#%color%'>%allianceList[{%finalIndex%}]%</font></b> have <b>%alliance14Num[{%finalIndex%}]% 14's</b> ($c.math.round({{%alliance14Num[{%finalIndex%}]%}/1.26})$&#37;)&#44; <b>%alliance16Num[{%finalIndex%}]% 16's</b> ($c.math.round({{%alliance16Num[{%finalIndex%}]%}/0.16})$&#37;) %atlantisMsg%"
+set finalIndex {%finalIndex%+1}
+if {%finalIndex%<%allianceList.length%} goto finalLoop
+set printIndex 0
+label printLoop
+set print $c.cm.logMsg(%msg{%printIndex%}%)$
+set printIndex {%printIndex%+1}
+if {%printIndex%<18} goto printLoop
+goto exitScript
+label subRoute16
+set alliance16Num[{%allianceNameIndex%}] {%alliance16Num[{%allianceNameIndex%}]%+1}
+gosubreturn
+label subRoute14
+set alliance14Num[{%allianceNameIndex%}] {%alliance14Num[{%allianceNameIndex%}]%+1}
+gosubreturn

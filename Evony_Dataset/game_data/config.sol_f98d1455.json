@@ -1,0 +1,26 @@
+{
+  "now": {
+    "proxyPw": "28f1e042-1e44-474d-a772-0545dbdb54df",
+    "skypeUn": "",
+    "secCode": "",
+    "proxyUn": "geonode_VsJUYjd1Sb",
+    "autoLoginMaxTime": "600",
+    "username": "dal163@bigpond.com.au",
+    "serverIP": "216.66.17.168",
+    "proxyHost": "51.159.185.244",
+    "proxyType": "ss5",
+    "loginType": "ev",
+    "password": "soup411",
+    "autoScript": true,
+    "autoRun": true,
+    "theme": "Default Grey RE",
+    "server": "cc2",
+    "autoLogin": true,
+    "sid": "375",
+    "tokenExpires": NaN,
+    "autoLoginMinTime": "1",
+    "strserverAlias": "Parapet",
+    "proxyPort": "12007",
+    "skypePw": ""
+  }
+}

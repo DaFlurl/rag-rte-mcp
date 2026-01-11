@@ -1,0 +1,26 @@
+{
+  "now": {
+    "proxyPort": "8080",
+    "skypePw": "",
+    "proxyPw": "",
+    "skypeUn": "",
+    "secCode": "",
+    "proxyUn": "",
+    "autoLoginMaxTime": "300",
+    "username": "sirsammy318@yahoo.com",
+    "serverIP": "216.66.17.168",
+    "proxyType": "",
+    "proxyHost": "",
+    "loginType": "ev",
+    "password": "grainne12",
+    "autoScript": true,
+    "autoRun": true,
+    "theme": "Default Grey RE",
+    "server": "cc2",
+    "autoLogin": true,
+    "sid": "375",
+    "tokenExpires": NaN,
+    "autoLoginMinTime": "1",
+    "strserverAlias": "Parapet"
+  }
+}

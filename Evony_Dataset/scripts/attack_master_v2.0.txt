@@ -1,0 +1,372 @@
+// ============================================
+// ATTACK MASTER v2.0 - THE KING OF ATTACK SCRIPTS
+// Ultimate configurable combat automation
+// For AE2/RoboEvony - Per City/Account
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+
+// ==========================================
+// CONFIGURATION SECTION - EDIT THESE VALUES
+// ==========================================
+
+// === TARGET SETTINGS ===
+set targetX 0
+set targetY 0
+set targetType "player"
+
+// === TROOP CONFIGURATION ===
+set useArchers 1
+set archerCount 50000
+set useWarriors 0
+set warriorCount 0
+set useCavalry 0
+set cavalryCount 0
+set useCatapults 0
+set catapultCount 0
+set useBallista 0
+set ballistaCount 0
+set useTransports 0
+set transportCount 0
+set useScouts 1
+set scoutCount 1
+
+// === HERO SETTINGS ===
+set heroMode "spam"
+set specificHero ""
+set minHeroAttack 100
+
+// === ATTACK MODE ===
+set attackMode "spam"
+set waveCount 10
+set waveDelay 3000
+set useRallied 0
+set rallySize 100000
+
+// === FEATURES ENABLE/DISABLE ===
+set enableScoutFirst 1
+set enableResourceLoot 1
+set enableAutoRecall 0
+set recallAfterSeconds 300
+set enableTroopCheck 1
+set minTroopsRequired 10000
+set enableCooldown 1
+set cooldownSeconds 60
+set enableLogging 1
+set enableSafetyStop 1
+set maxWavesPerHour 100
+
+// === RUN MODE ===
+set runMode "loop"
+set maxRuns 0
+set timerMinutes 0
+
+// ==========================================
+// DO NOT EDIT BELOW THIS LINE
+// ==========================================
+
+// Counters
+set wavesSent 0
+set totalWaves 0
+set runsCompleted 0
+set errors 0
+
+// Header
+echo ============================================
+echo ATTACK MASTER v2.0
+echo Target: %targetX%,%targetY% (%targetType%)
+echo Mode: %attackMode% | Waves: %waveCount%
+echo ============================================
+
+// Validate configuration
+gosub validateConfig
+if configValid = 0 then goto configError
+
+// Main execution based on run mode
+if runMode = "once" then goto runOnce
+if runMode = "loop" then goto runLoop
+if runMode = "timer" then goto runTimer
+if runMode = "count" then goto runCount
+goto runLoop
+
+// ==========================================
+// RUN MODE: ONCE
+// ==========================================
+label runOnce
+echo [MODE] Single execution
+gosub executeAttack
+goto complete
+
+// ==========================================
+// RUN MODE: CONTINUOUS LOOP
+// ==========================================
+label runLoop
+echo [MODE] Continuous loop
+label loopStart
+gosub executeAttack
+if enableCooldown = 1 then gosub doCooldown
+goto loopStart
+
+// ==========================================
+// RUN MODE: TIMER BASED
+// ==========================================
+label runTimer
+echo [MODE] Timer - every %timerMinutes% minutes
+label timerLoop
+gosub executeAttack
+set timerMs timerMinutes * 60000
+echo [TIMER] Sleeping %timerMinutes% minutes...
+sleep %timerMs%
+goto timerLoop
+
+// ==========================================
+// RUN MODE: FIXED COUNT
+// ==========================================
+label runCount
+echo [MODE] Fixed runs: %maxRuns%
+label countLoop
+gosub executeAttack
+set runsCompleted runsCompleted + 1
+echo [COUNT] Run %runsCompleted%/%maxRuns% complete
+if runsCompleted >= maxRuns then goto complete
+if enableCooldown = 1 then gosub doCooldown
+goto countLoop
+
+// ==========================================
+// MAIN ATTACK EXECUTION
+// ==========================================
+label executeAttack
+echo ----------------------------------------
+echo [ATTACK] Starting attack sequence...
+
+// Pre-attack checks
+if enableTroopCheck = 1 then gosub checkTroops
+if troopsReady = 0 then goto insufficientTroops
+
+// Scout first if enabled
+if enableScoutFirst = 1 then gosub scoutTarget
+
+// Execute based on attack mode
+if attackMode = "spam" then gosub attackSpam
+if attackMode = "single" then gosub attackSingle
+if attackMode = "wave" then gosub attackWave
+if attackMode = "rally" then gosub attackRally
+
+// Post-attack
+if enableAutoRecall = 1 then gosub scheduleRecall
+
+echo [ATTACK] Sequence complete
+return
+
+// ==========================================
+// ATTACK MODE: SPAM (Rapid Fire)
+// ==========================================
+label attackSpam
+echo [SPAM] Sending %waveCount% rapid waves...
+
+set wavesSent 0
+label spamLoop
+
+// Get hero
+if heroMode = "spam" then getspamhero
+if heroMode = "specific" then set currentHero specificHero
+
+// Build troop string
+gosub buildTroopString
+
+// Send attack
+echo [WAVE %wavesSent%] Attacking %targetX%,%targetY%...
+attack %targetX% %targetY% %currentHero% %troopString%
+sleep %waveDelay%
+
+set wavesSent wavesSent + 1
+set totalWaves totalWaves + 1
+
+// Safety check
+if enableSafetyStop = 1 then gosub checkSafetyLimits
+
+if wavesSent < waveCount then goto spamLoop
+
+echo [SPAM] Sent %wavesSent% waves
+return
+
+// ==========================================
+// ATTACK MODE: SINGLE (One Attack)
+// ==========================================
+label attackSingle
+echo [SINGLE] Sending single attack...
+
+if heroMode = "spam" then getspamhero
+if heroMode = "specific" then set currentHero specificHero
+
+gosub buildTroopString
+
+attack %targetX% %targetY% %currentHero% %troopString%
+set totalWaves totalWaves + 1
+
+echo [SINGLE] Attack sent
+return
+
+// ==========================================
+// ATTACK MODE: WAVE (Timed Waves)
+// ==========================================
+label attackWave
+echo [WAVE] Sending %waveCount% timed waves...
+
+set wavesSent 0
+label waveLoop
+
+getspamhero
+gosub buildTroopString
+
+echo [WAVE %wavesSent%] Sending wave...
+attack %targetX% %targetY% spamhero %troopString%
+sleep %waveDelay%
+
+set wavesSent wavesSent + 1
+set totalWaves totalWaves + 1
+
+if wavesSent < waveCount then goto waveLoop
+
+echo [WAVE] All waves sent
+return
+
+// ==========================================
+// ATTACK MODE: RALLY (Coordinated)
+// ==========================================
+label attackRally
+echo [RALLY] Preparing rally attack...
+
+// Rally requires special handling
+// Join existing rally or create new one
+
+echo [RALLY] Creating rally point at %targetX%,%targetY%
+// rally create %targetX% %targetY% %rallySize%
+sleep 5000
+
+echo [RALLY] Rally attack initiated
+return
+
+// ==========================================
+// SCOUT TARGET
+// ==========================================
+label scoutTarget
+echo [SCOUT] Scouting target first...
+
+getspamhero
+scout %targetX% %targetY% spamhero %scoutCount%
+sleep 5000
+
+echo [SCOUT] Scout sent, waiting for report...
+sleep 10000
+return
+
+// ==========================================
+// BUILD TROOP STRING
+// ==========================================
+label buildTroopString
+set troopString ""
+
+if useArchers = 1 then set troopString "a%archerCount%"
+if useWarriors = 1 then set troopString "%troopString%w%warriorCount%"
+if useCavalry = 1 then set troopString "%troopString%c%cavalryCount%"
+if useCatapults = 1 then set troopString "%troopString%p%catapultCount%"
+if useBallista = 1 then set troopString "%troopString%b%ballistaCount%"
+if useTransports = 1 then set troopString "%troopString%t%transportCount%"
+
+// Default to archers if nothing set
+if troopString = "" then set troopString "a50000"
+
+return
+
+// ==========================================
+// CHECK TROOPS
+// ==========================================
+label checkTroops
+echo [CHECK] Verifying troop availability...
+
+set troopsReady 1
+gettroops
+
+if useArchers = 1 then if archers < archerCount then set troopsReady 0
+if useWarriors = 1 then if warriors < warriorCount then set troopsReady 0
+if useCavalry = 1 then if cavalry < cavalryCount then set troopsReady 0
+
+if troopsReady = 1 then echo [CHECK] Troops: READY
+if troopsReady = 0 then echo [CHECK] Troops: INSUFFICIENT
+
+return
+
+// ==========================================
+// VALIDATE CONFIG
+// ==========================================
+label validateConfig
+set configValid 1
+
+if targetX = 0 then if targetY = 0 then set configValid 0
+if waveCount < 1 then set configValid 0
+if waveDelay < 100 then set waveDelay 100
+
+if configValid = 1 then echo [CONFIG] Valid
+if configValid = 0 then echo [CONFIG] INVALID - Check settings
+
+return
+
+// ==========================================
+// COOLDOWN
+// ==========================================
+label doCooldown
+set cooldownMs cooldownSeconds * 1000
+echo [COOLDOWN] Waiting %cooldownSeconds% seconds...
+sleep %cooldownMs%
+return
+
+// ==========================================
+// SCHEDULE RECALL
+// ==========================================
+label scheduleRecall
+echo [RECALL] Auto-recall scheduled in %recallAfterSeconds%s
+set recallMs recallAfterSeconds * 1000
+sleep %recallMs%
+recall all
+echo [RECALL] Troops recalled
+return
+
+// ==========================================
+// SAFETY LIMITS
+// ==========================================
+label checkSafetyLimits
+if totalWaves > maxWavesPerHour then goto safetyStop
+return
+
+label safetyStop
+echo [SAFETY] Max waves per hour reached!
+echo [SAFETY] Pausing for 1 hour...
+sleep 3600000
+set totalWaves 0
+return
+
+// ==========================================
+// ERROR HANDLERS
+// ==========================================
+label insufficientTroops
+echo [ERROR] Not enough troops for attack
+echo [ERROR] Waiting 5 minutes for training...
+sleep 300000
+return
+
+label configError
+echo [ERROR] Invalid configuration!
+echo [ERROR] Please check target coordinates
+stop
+
+// ==========================================
+// COMPLETION
+// ==========================================
+label complete
+echo ============================================
+echo ATTACK MASTER COMPLETE
+echo Total Waves Sent: %totalWaves%
+echo Runs Completed: %runsCompleted%
+echo ============================================
+stop

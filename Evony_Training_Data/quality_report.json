@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-01-05T09:06:20.380691",
+  "total_examples": 10035,
+  "valid_examples": 10035,
+  "invalid_examples": 0,
+  "average_score": 75.8,
+  "quality_distribution": {
+    "high_70plus": 7640,
+    "medium_40to69": 2395,
+    "low_below40": 0
+  },
+  "category_stats": {
+    "other": {
+      "count": 3930,
+      "avg_score": 73.38
+    },
+    "protocol": {
+      "count": 2876,
+      "avg_score": 81.07
+    },
+    "troops": {
+      "count": 288,
+      "avg_score": 71.44
+    },
+    "security": {
+      "count": 114,
+      "avg_score": 76.91
+    },
+    "research": {
+      "count": 194,
+      "avg_score": 75.13
+    },
+    "combat": {
+      "count": 213,
+      "avg_score": 66.0
+    },
+    "data_model": {
+      "count": 1246,
+      "avg_score": 76.46
+    },
+    "errors": {
+      "count": 620,
+      "avg_score": 74.58
+    },
+    "scripting": {
+      "count": 200,
+      "avg_score": 66.67
+    },
+    "buildings": {
+      "count": 354,
+      "avg_score": 74.2
+    }
+  }
+}

@@ -1,0 +1,23 @@
+// useheroitem Wayne On_War
+
+setsilence true
+
+set heroName Chasel
+set level_To 54
+
+// ========================---- Nothing To Do Down Here ---======================== //
+set i 0
+label findHero
+if {$c.cm.heroes[{%i%}].name$==%heroName%} goto start
+set i {%i%+1}
+if {%i%<$c.cm.heroes.length$} goto findHero
+goto end
+label start
+if {$c.cm.heroes[%i%].level$>=%level_To%} goto finish
+useheroitem %heroName% On_War
+uplevelhero %heroName%
+addpointhero %heroName% 0 1 0
+sleep 1
+if {$c.cm.heroes[%i%].level$<%level_To%} goto start
+label finish
+echo " ===============------- Leveling Of Hero Is completed -------=============== "

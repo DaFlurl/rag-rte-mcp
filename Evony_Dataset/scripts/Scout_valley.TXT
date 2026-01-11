@@ -1,0 +1,11 @@
+setarr Target "xxx,yyy xxx,yyy”  //can be as many or few coords as you want
+set index 0
+set rally 100000
+label start_waves
+set target %Target[{%index%}]%
+set index {%index%+1}
+
+set troop s:%rally%
+scout %target% none %troop%
+
+ifgosub ( %index% < %Target.length% ) start_waves

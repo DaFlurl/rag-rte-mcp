@@ -1,0 +1,73 @@
+ ----------Food Glitch Information for This City ----------
+  Type: Workers
+      City Glitch Progess: 80 percent
+      City Glitch Details: 1726576852 / 2147483648 need 420906796
+  Type: Warriors
+      City Glitch Progess: 22 percent
+      City Glitch Details: 486065312 / 2147483648 need 1661418336
+  Type: Scouts
+    City Glitches: 1
+      City Glitch Progess: 77 percent
+      City Glitch Details: 828708608 / 1073741824 need 245033216
+  Food Generation: true! 
+This Troop type Should be generating food!
+  Type: Pikemen
+    City Glitches: 2
+      City Glitch Progess: 97 percent
+      City Glitch Details: 695134250 / 715827883 need 20693633
+  Food Generation: false! 
+you need an odd number of glitches to generate food!
+  Type: Swordsmen
+    City Glitches: 2
+      City Glitch Progess: 72 percent
+      City Glitch Details: 518445610 / 715827883 need 197382273
+  Food Generation: false! 
+you need an odd number of glitches to generate food!
+  Type: Archers
+    City Glitches: 3
+      City Glitch Progess: 97 percent
+      City Glitch Details: 522983552 / 536870912 need 13887360
+  Food Generation: true! 
+This Troop type Should be generating food!
+  Type: Cavalry
+    City Glitches: 8
+      City Glitch Progess: 82 percent
+      City Glitch Details: 197074360 / 238609295 need 41534935
+  Food Generation: false! 
+you need an odd number of glitches to generate food!
+  Type: Cataphracts
+    City Glitches: 15
+      City Glitch Progess: 100 percent
+      City Glitch Details: 126322568 / 126322568 need 0
+  Food Generation: true! 
+This Troop type Should be generating food!
+  Type: Transporters
+    City Glitches: 3
+      City Glitch Progess: 29 percent
+      City Glitch Details: 128844413 / 429496730 need 300652317
+  Food Generation: true! 
+This Troop type Should be generating food!
+  Type: Ballista
+    City Glitches: 22
+      City Glitch Progess: 29 percent
+      City Glitch Details: 25746500 / 85899346 need 60152846
+  Food Generation: false! 
+you need an odd number of glitches to generate food!
+  Type: Battering Rams
+    City Glitches: 47
+      City Glitch Progess: 39 percent
+      City Glitch Details: 16862809 / 42949673 need 26086864
+  Food Generation: true! 
+This Troop type Should be generating food!
+  Type: Catapults
+    City Glitches: 109
+      City Glitch Progess: 11 percent
+      City Glitch Details: 2000000 / 17179870 need 15179870
+  Food Generation: true! 
+This Troop type Should be generating food!
+  ----------Total Food Glitch results for This City ----------
+ total troop glitches: 212
+ total generating troop types: 6/4/10/2
+ Total Generated: 12884901882
+ Being Used: 15904922515
+ Net Food: -3020020633

@@ -1,0 +1,14 @@
+// BORG TOOLKIT - Auto Quest Completion
+// Completes all available quests automatically
+
+setsilence off
+
+echo ========================================
+echo AUTO QUEST COMPLETION
+echo ========================================
+
+completequests all
+
+echo ========================================
+echo All quests completed!
+echo ========================================

@@ -1,0 +1,40 @@
+{
+  "scan_start": "2026-01-04T19:22:01.402636",
+  "scan_end": "2026-01-04T19:22:26.872451",
+  "sources_scanned": [
+    "c:\\Users\\Admin\\Downloads\\Evony_Decrypted"
+  ],
+  "total_files_found": 108718,
+  "files_after_extension_filter": 49287,
+  "files_after_skip_filter": 19198,
+  "evony_related_files": 15055,
+  "unique_content_files": 10375,
+  "duplicates_removed": 4680,
+  "final_dataset_size_bytes": 267718147,
+  "by_category": {
+    "source_code": 7362,
+    "keys": 332,
+    "documentation": 454,
+    "scripts": 243,
+    "tools": 902,
+    "game_data": 1078,
+    "exploits": 3
+  },
+  "by_extension": {
+    ".py": 1202,
+    ".txt": 547,
+    ".md": 454,
+    ".bat": 84,
+    ".as": 6938,
+    ".csv": 23,
+    ".json": 789,
+    ".yml": 2,
+    ".sh": 27,
+    ".cfg": 4,
+    ".ps1": 13,
+    ".yaml": 2,
+    ".ini": 2,
+    ".xml": 266,
+    ".js": 21
+  }
+}

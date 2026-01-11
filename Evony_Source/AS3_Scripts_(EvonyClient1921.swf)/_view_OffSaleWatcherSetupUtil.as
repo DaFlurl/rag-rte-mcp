@@ -1,0 +1,30 @@
+﻿// Decompiled by AS3 Sorcerer 6.78
+// www.buraks.com/as3sorcerer
+
+//_view_OffSaleWatcherSetupUtil
+
+package 
+{
+    import flash.display.Sprite;
+    import mx.binding.IWatcherSetupUtil;
+    import view.OffSale;
+    import mx.core.IFlexModuleFactory;
+
+    public class _view_OffSaleWatcherSetupUtil extends Sprite implements IWatcherSetupUtil 
+    {
+
+
+        public static function init(_arg_1:IFlexModuleFactory):void
+        {
+            OffSale.watcherSetupUtil = new (_view_OffSaleWatcherSetupUtil)();
+        }
+
+
+        public function setup(_arg_1:Object, _arg_2:Function, _arg_3:Array, _arg_4:Array):void
+        {
+        }
+
+
+    }
+}//package 
+

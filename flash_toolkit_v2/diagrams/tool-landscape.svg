@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#333"/>
+    </marker>
+    <style>
+      .box { fill: #f7f7f7; stroke: #333; stroke-width: 2; rx: 14; ry: 14; }
+      .title { font: 700 22px 'Segoe UI', Arial, sans-serif; fill:#111; }
+      .text { font: 16px 'Segoe UI', Arial, sans-serif; fill:#111; }
+      .small { font: 13px 'Segoe UI', Arial, sans-serif; fill:#333; }
+      .line { stroke:#333; stroke-width:2; marker-end:url(#arrow); }
+    </style>
+  </defs>
+<text class="title" x="30" y="40">Tool Landscape Map (Categories → Candidate Repos)</text>
+<rect class="box" x="40" y="90" width="430" height="230"/>
+<text class="title" x="58" y="124">SWF Decompile / Inspect</text>
+<text class="text" x="58" y="154">JPEXS FFDec</text>
+<text class="text" x="58" y="176">RABCDAsm (ABC/AVM2)</text>
+<text class="text" x="58" y="198">as3commons-bytecode</text>
+<text class="text" x="58" y="220">SWFTools (dump/extract)</text>
+<rect class="box" x="510" y="90" width="430" height="230"/>
+<text class="title" x="528" y="124">.SOL / LSO + AMF</text>
+<text class="text" x="528" y="154">rust-flash-lso</text>
+<text class="text" x="528" y="176">Py3AMF (sol.py)</text>
+<text class="text" x="528" y="198">AMF0/AMF3 codecs</text>
+<text class="text" x="528" y="220">Schema inference tools</text>
+<rect class="box" x="980" y="90" width="380" height="230"/>
+<text class="title" x="998" y="124">Player/Emulation</text>
+<text class="text" x="998" y="154">Ruffle (Rust emulator)</text>
+<text class="text" x="998" y="176">Lightspark</text>
+<text class="text" x="998" y="198">Gnash (GNU)</text>
+<rect class="box" x="40" y="370" width="430" height="250"/>
+<text class="title" x="58" y="404">Automation & QA</text>
+<text class="text" x="58" y="434">Deterministic round-trip tests</text>
+<text class="text" x="58" y="456">Corpus-based fuzzing</text>
+<text class="text" x="58" y="478">Golden-file diffs (JSON)</text>
+<text class="text" x="58" y="500">Evidence bundle zip</text>
+<rect class="box" x="510" y="370" width="430" height="250"/>
+<text class="title" x="528" y="404">Integration into Your Stack</text>
+<text class="text" x="528" y="434">Svony / RoboTool pipelines</text>
+<text class="text" x="528" y="456">Config.sol editor module</text>
+<text class="text" x="528" y="478">Plugins: decode/edit/encode</text>
+<text class="text" x="528" y="500">CLI + GUI front-ends</text>
+<rect class="box" x="980" y="370" width="380" height="250"/>
+<text class="title" x="998" y="404">Search for 'Hidden Gems'</text>
+<text class="text" x="998" y="434">keywords: lso, sharedobject, amf3</text>
+<text class="text" x="998" y="456">avm2, abc, p-code, deobfuscate</text>
+<text class="text" x="998" y="478">rtmp, netconnection, netstream</text>
+</svg>

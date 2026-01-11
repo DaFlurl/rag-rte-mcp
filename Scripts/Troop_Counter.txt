@@ -1,0 +1,121 @@
+#set mode lite // lite for just troop numbers, full for troops and food useage
+set mode lite //
+setsilence "true"
+label TROOP_TALLY
+set CityIndex 0
+set WorkerCount 0
+set WarriorCount 0
+set ScoutCount 0
+set PikeCount 0
+set SwordCount 0
+set ArcherCount 0
+set CavalryCount 0
+set CataphractCount 0
+set BallistaCount 0
+set CatapultCount 0
+set BatteringramCount 0
+set TransportCount 0
+set FootCount 0
+set HorseCount 0
+set MechCount 0
+set SupportCount 0
+set TotalCount 0
+set WorkerFood 0
+set WarriorFood 0
+set ScoutFood 0
+set PikeFood 0
+set SwordFood 0
+set ArcherFood 0
+set CavalryFood 0
+set CataphractFood 0
+set BallistaFood 0
+set CatapultFood 0
+set BatteringramFood 0
+set TransportFood 0
+set FootFood 0
+set HorseFood 0
+set MechFood 0
+set SupportFood 0
+set TotalFood 0
+set cMaT .cityManager.allTroop.
+set mcaC m_city.allCities
+label CITY_LOOP
+set WarriorCount {%WarriorCount%+$%mcaC%[{%CityIndex%}]%cMaT%militia$}
+set ScoutCount {%ScoutCount%+$%mcaC%[{%CityIndex%}]%cMaT%scouter$}
+set PikeCount {%PikeCount%+$%mcaC%[{%CityIndex%}]%cMaT%pikemen$}
+set SwordCount {%SwordCount%+$%mcaC%[{%CityIndex%}]%cMaT%swordsmen$}
+set ArcherCount {%ArcherCount%+$%mcaC%[{%CityIndex%}]%cMaT%archer$}
+set CavalryCount {%CavalryCount%+$%mcaC%[{%CityIndex%}]%cMaT%lightCavalry$}
+set CataphractCount {%CataphractCount%+$%mcaC%[{%CityIndex%}]%cMaT%heavyCavalry$}
+set BallistaCount {%BallistaCount%+$%mcaC%[{%CityIndex%}]%cMaT%ballista$}
+set CatapultCount {%CatapultCount%+$%mcaC%[{%CityIndex%}]%cMaT%catapult$}
+set BatteringramCount {%BatteringramCount%+$%mcaC%[{%CityIndex%}]%cMaT%batteringRam$}
+set TransportCount {%TransportCount%+$%mcaC%[{%CityIndex%}]%cMaT%carriage$}
+set WorkerCount {%WorkerCount%+$%mcaC%[{%CityIndex%}]%cMaT%peasants$}
+set FootCount {%WarriorCount%+%ScoutCount%+%PikeCount%+%SwordCount%+%ArcherCount%}
+set HorseCount {%CavalryCount%+%CataphractCount%}
+set MechCount {%BallistaCount%+%CatapultCount%+%BatteringramCount%}
+set SupportCount {%WorkerCount%+%TransportCount%}
+set CityIndex {%CityIndex%+1}
+ifgoto ( %CityIndex% < %mcaC%.length ) CITY_LOOP
+set TotalCount {%FootCount%+%HorseCount%+%MechCount%+%SupportCount%}
+set WarriorFood {%WarriorCount%}
+set ScoutFood {%ScoutCount%2}
+set PikeFood {%PikeCount%3}
+set SwordFood {%SwordCount%3}
+set ArcherFood {%ArcherCount%4}
+set CavalryFood {%CavalryCount%9}
+set CataphractFood {%CataphractCount%17}
+set BallistaFood {%BallistaCount%25}
+set CatapultFood {%CatapultCount%125}
+set BatteringramFood {%BatteringramCount%50}
+set TransportFood {%TransportCount%5}
+set WorkerFood {%WorkerCount%}
+set FootFood {%WarriorFood%+%ScoutFood%+%PikeFood%+%SwordFood%+%ArcherFood%}
+set HorseFood {%CavalryFood%+%CataphractFood%}
+set MechFood {%BallistaFood%+%CatapultFood%+%BatteringramFood%}
+set SupportFood {%WorkerFood%+%TransportFood%}
+set TotalFood {%FootFood%+%HorseFood%+%MechFood%+%SupportFood%}
+echo "Current troop counts in all cities combined."
+echo "Total Troops:         $m_city.formatNum(%TotalCount%)$"
+echo "Total Food Per Hour:     -$m_city.formatNum(%TotalFood%)$"
+echo "-----------------------------------------------------------------------------------------"
+if {%mode%==full} echo "Foot Troops:          $m_city.formatNum(%FootCount%)$"
+if {%mode%==full} echo "Food Per Hour:           -$m_city.formatNum(%FootFood%)$"
+echo "  Warriors:           $m_city.formatNum(%WarriorCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%WarriorFood%)$"
+echo "  Scouts:             $m_city.formatNum(%ScoutCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%ScoutFood%)$"
+echo "  Pikes:              $m_city.formatNum(%PikeCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%PikeFood%)$"
+echo "  Swords:             $m_city.formatNum(%SwordCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%SwordFood%)$"
+echo "  Archers:            $m_city.formatNum(%ArcherCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%ArcherFood%)$"
+if {%mode%==full} echo "-----------------------------------------------------------------------------------------"
+if {%mode%==full} echo "Mounted Troops:       $m_city.formatNum(%HorseCount%)$"
+if {%mode%==full} echo "Food Per Hour:           -$m_city.formatNum(%HorseFood%)$"
+echo "  Cavalry:            $m_city.formatNum(%CavalryCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%CavalryFood%)$"
+echo "  Cataphracts:        $m_city.formatNum(%CataphractCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%CataphractFood%)$"
+if {%mode%==full} echo "-----------------------------------------------------------------------------------------"
+if {%mode%==full} echo "Mechenised Troops:    $m_city.formatNum(%MechCount%)$"
+if {%mode%==full} echo "Food Per Hour:           -$m_city.formatNum(%MechFood%)$"
+echo "  Ballista:           $m_city.formatNum(%BallistaCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%BallistaFood%)$"
+echo "  Catapults:          $m_city.formatNum(%CatapultCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%CatapultFood%)$"
+echo "  Battering Rams:     $m_city.formatNum(%BatteringramCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%BatteringramFood%)$"
+if {%mode%==full} echo "-----------------------------------------------------------------------------------------"
+if {%mode%==full} echo "Support Troops:       $m_city.formatNum(%SupportCount%)$"
+if {%mode%==full} echo "Food Per Hour:           -$m_city.formatNum(%SupportFood%)$"
+echo "  Workers:            $m_city.formatNum(%WorkerCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%WorkerFood%)$"
+echo "  Transports:         $m_city.formatNum(%TransportCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%TransportFood%)$"
+goto end
+
+label end
+setsilence "false"

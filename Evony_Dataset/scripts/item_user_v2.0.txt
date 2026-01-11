@@ -1,0 +1,231 @@
+// ============================================
+// ITEM USER v2.0
+// Bulk item usage automation
+// Uses REAL useitem, listitems commands
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+// REAL COMMANDS FROM CityState.as:
+// useitem itemName
+// listitems
+// listmedals
+// ============================================
+
+// ==========================================
+// CONFIGURATION - EDIT THESE
+// ==========================================
+
+// === ITEM SETTINGS ===
+set itemToUse "hero amulet"
+set useCount 10
+set useDelay 2000
+
+// === COMMON ITEMS ===
+// Speedups
+set useSpeedup1h 0
+set speedup1hCount 0
+set useSpeedup8h 0
+set speedup8hCount 0
+set useSpeedup24h 0
+set speedup24hCount 0
+
+// Resources
+set useFoodBox 0
+set foodBoxCount 0
+set useGoldBox 0
+set goldBoxCount 0
+
+// Hero Items
+set useHeroAmulet 0
+set heroAmuletCount 0
+set useExpScroll 0
+set expScrollCount 0
+
+// Strategic Items
+set useRecallAmulet 0
+set recallCount 0
+set useScoutItem 0
+set scoutItemCount 0
+set useTruceItem 0
+set truceCount 0
+
+// === ITEM CODES (from Items.as) ===
+// player.box.gold - Gold box
+// player.box.food - Food box
+// player.speedup.1h - 1 hour speedup
+// player.speedup.8h - 8 hour speedup
+// player.hero.amulet - Hero amulet
+// player.trick.qlbx - Recall amulet
+// player.trick.zc - Truce agreement
+
+// === FEATURES ===
+set enableBulkUse 1
+set enableLogging 1
+set listItemsFirst 0
+
+// === RUN MODE ===
+set runMode "single"
+
+// ==========================================
+// DO NOT EDIT BELOW
+// ==========================================
+
+set itemsUsed 0
+
+echo ============================================
+echo ITEM USER v2.0
+echo Item: %itemToUse%
+echo Count: %useCount%
+echo ============================================
+
+// List items first if enabled
+if listItemsFirst = 1 then gosub listAllItems
+
+// Execute item usage
+if runMode = "single" then goto useSingleItem
+if runMode = "bulk" then goto useBulkItems
+goto useSingleItem
+
+// ==========================================
+// LIST ALL ITEMS (Real Command)
+// ==========================================
+label listAllItems
+echo [LIST] Listing all items...
+
+listitems
+sleep 3000
+
+echo [LIST] Listing medals...
+listmedals
+sleep 2000
+
+return
+
+// ==========================================
+// USE SINGLE ITEM (Real Command)
+// ==========================================
+label useSingleItem
+echo [USE] Using item: %itemToUse%
+
+set i 0
+label singleLoop
+
+// useitem itemName
+useitem %itemToUse%
+
+set i i + 1
+set itemsUsed itemsUsed + 1
+
+echo [USE] Used %itemToUse% (%i%/%useCount%)
+
+sleep %useDelay%
+
+if i < useCount then goto singleLoop
+
+goto complete
+
+// ==========================================
+// USE BULK ITEMS (Multiple Types)
+// ==========================================
+label useBulkItems
+echo [BULK] Using multiple item types...
+
+// Speedups
+if useSpeedup1h = 1 then gosub useSpeedups1h
+if useSpeedup8h = 1 then gosub useSpeedups8h
+
+// Resources
+if useFoodBox = 1 then gosub useFoodBoxes
+if useGoldBox = 1 then gosub useGoldBoxes
+
+// Hero items
+if useHeroAmulet = 1 then gosub useHeroAmulets
+if useExpScroll = 1 then gosub useExpScrolls
+
+// Strategic
+if useRecallAmulet = 1 then gosub useRecalls
+
+goto complete
+
+// ==========================================
+// ITEM TYPE HANDLERS
+// ==========================================
+label useSpeedups1h
+set i 0
+label speed1hLoop
+useitem player.speedup.1h
+set i i + 1
+set itemsUsed itemsUsed + 1
+sleep %useDelay%
+if i < speedup1hCount then goto speed1hLoop
+return
+
+label useSpeedups8h
+set i 0
+label speed8hLoop
+useitem player.speedup.8h
+set i i + 1
+set itemsUsed itemsUsed + 1
+sleep %useDelay%
+if i < speedup8hCount then goto speed8hLoop
+return
+
+label useFoodBoxes
+set i 0
+label foodLoop
+useitem player.box.food
+set i i + 1
+set itemsUsed itemsUsed + 1
+sleep %useDelay%
+if i < foodBoxCount then goto foodLoop
+return
+
+label useGoldBoxes
+set i 0
+label goldLoop
+useitem player.box.gold
+set i i + 1
+set itemsUsed itemsUsed + 1
+sleep %useDelay%
+if i < goldBoxCount then goto goldLoop
+return
+
+label useHeroAmulets
+set i 0
+label heroLoop
+useitem player.hero.amulet
+set i i + 1
+set itemsUsed itemsUsed + 1
+sleep %useDelay%
+if i < heroAmuletCount then goto heroLoop
+return
+
+label useExpScrolls
+set i 0
+label expLoop
+useitem player.hero.exp
+set i i + 1
+set itemsUsed itemsUsed + 1
+sleep %useDelay%
+if i < expScrollCount then goto expLoop
+return
+
+label useRecalls
+set i 0
+label recallLoop
+useitem player.trick.qlbx
+set i i + 1
+set itemsUsed itemsUsed + 1
+sleep %useDelay%
+if i < recallCount then goto recallLoop
+return
+
+// ==========================================
+// COMPLETION
+// ==========================================
+label complete
+echo ============================================
+echo ITEM USER COMPLETE
+echo Items Used: %itemsUsed%
+echo ============================================
+stop

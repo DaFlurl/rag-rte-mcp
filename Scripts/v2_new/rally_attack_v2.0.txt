@@ -1,0 +1,122 @@
+// ============================================
+// RALLY ATTACK v2.0
+// Rally point coordination for massive strikes
+// For AE2/RoboEvony - Alliance Coordination
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+
+// ==========================================
+// CONFIGURATION - EDIT THESE
+// ==========================================
+
+// === TARGET ===
+set targetX 0
+set targetY 0
+set targetName "RallyTarget"
+
+// === RALLY SETTINGS ===
+set rallySize 1000000
+set rallyTimeMinutes 5
+set joinExistingRally 0
+set createNewRally 1
+
+// === TROOP CONTRIBUTION ===
+set contributeArchers 100000
+set contributeCavalry 0
+set contributeCataphracts 0
+set contributeMechs 0
+
+// === TIMING ===
+set rallyDelay 5000
+set joinDelay 2000
+
+// === FEATURES ===
+set enableAutoJoin 1
+set enableMaxContribution 0
+set enableLogging 1
+
+// === RUN MODE ===
+set runMode "create"
+
+// ==========================================
+// DO NOT EDIT BELOW
+// ==========================================
+
+set rallyCreated 0
+set troopsContributed 0
+
+echo ============================================
+echo RALLY ATTACK v2.0
+echo Target: %targetX%,%targetY%
+echo Rally Size: %rallySize%
+echo ============================================
+
+// Validate
+if targetX = 0 then if targetY = 0 then goto noTarget
+
+if runMode = "create" then goto createRally
+if runMode = "join" then goto joinRally
+goto createRally
+
+// ==========================================
+// CREATE RALLY
+// ==========================================
+label createRally
+echo [RALLY] Creating rally point...
+
+// Get best attack hero
+getspamhero power
+
+// Create rally at target
+// Note: Rally creation may require alliance permissions
+echo [RALLY] Setting up rally at %targetX%,%targetY%
+echo [RALLY] Size: %rallySize%, Time: %rallyTimeMinutes% min
+
+// Build contribution string
+set contribution "a%contributeArchers%"
+if contributeCavalry > 0 then set contribution "%contribution%c%contributeCavalry%"
+if contributeCataphracts > 0 then set contribution "%contribution%C%contributeCataphracts%"
+
+// Send initial rally troops
+attack %targetX% %targetY% spamhero %contribution%
+
+set rallyCreated 1
+set troopsContributed contributeArchers
+
+echo [RALLY] Rally created, waiting for members...
+goto complete
+
+// ==========================================
+// JOIN RALLY
+// ==========================================
+label joinRally
+echo [JOIN] Joining existing rally...
+
+getspamhero power
+
+set contribution "a%contributeArchers%"
+reinforce %targetX% %targetY% spamhero %contribution%
+
+set troopsContributed contributeArchers
+
+echo [JOIN] Contributed %troopsContributed% troops
+goto complete
+
+// ==========================================
+// ERROR HANDLERS
+// ==========================================
+label noTarget
+echo [ERROR] Set rally target coordinates!
+stop
+
+// ==========================================
+// COMPLETION
+// ==========================================
+label complete
+echo ============================================
+echo RALLY ATTACK COMPLETE
+echo Rally Created: %rallyCreated%
+echo Troops Contributed: %troopsContributed%
+echo ============================================
+stop

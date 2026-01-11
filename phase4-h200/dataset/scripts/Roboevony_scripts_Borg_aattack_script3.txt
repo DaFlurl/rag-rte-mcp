@@ -1,0 +1,48 @@
+//--Fast Food Moving Script for Flipped Upkeep v1.0,   by SeriousThisIsMe
+//--
+
+set minCavalry 100000
+set maxCavalry 100000
+
+set sendFoodToCity 300,701
+set checkValleyTroops false
+
+//---------------------------DO=NOT=CHANGE=BELOW=THIS=LINE---------------
+setsilence true
+settaxrate 0
+echo " -- Minimum food in a single wave set to {%minCavalry%*{100*{1+{$c.cm.getTechLevel(11)$/10}}}}"
+echo " -- Maximum food in a single wave set to {%maxCavalry%*{100*{1+{$c.cm.getTechLevel(11)$/10}}}}"
+sleep 2
+set lastSentTime $c.getRawTime()$
+if {$c.cm.resource.food.amount$>8000000} set lastSentTime {%lastSentTime%-{{$c.cm.resource.food.amount$-8000000}/{{$c.cm.resource.food.increaseRate$-$c.cm.resource.troopCostFood$}/60/60}}}
+label mainLoop
+//echo " -- Calculating accumulated food and adjusting amount to transport..."
+set foodToMove {{{$c.getRawTime()$-%lastSentTime%}/1000}*{{$c.cm.resource.food.increaseRate$-$c.cm.resource.troopCostFood$}/60/60}\1}
+set maxFoodAmount {%maxCavalry%*{100*{1+{$c.cm.getTechLevel(11)$/10}}}}
+set foodToMove $c.math.min(%foodToMove%,%maxFoodAmount%)$
+set troopLoad {100*{1+{$c.cm.getTechLevel(11)$/10}}}
+set cavalryToUse $c.math.ceil({%foodToMove%/%troopLoad%})$
+if {%cavalryToUse%<%minCavalry%} goto notEnoughFoodYet
+deploy transport %sendFoodToCity% none c:%cavalryToUse% f:%foodToMove%
+set lastSentTime $c.getRawTime()$
+label notEnoughFoodYet
+//if {%cavalryToUse%<%minCavalry%} echo " -- Minimum not yet met -- c:%cavalryToUse%  f:%foodToMove%"
+if {!%checkValleyTroops%||$c.cm.enemyValleyArmies.length$<=0} goto noEnemies
+set i 0
+label nextEnemyArmy
+set eTargetField $c.cm.enemyValleyArmies[{%i%}].targetFieldId$
+set ind 0
+label nextValley
+if {%eTargetField%!=$c.cm.fields[{%ind%}].id$||$c.cm.fields[{%ind%}].armysArray.length$<=0} goto nextValley
+recall {%eTargetField%|800},{%eTargetField%\800}
+goto doneWithEnemyArmy
+label nextValley
+set ind {%ind%+1}
+if {%ind%<$c.cm.fields.length$} goto nextValley
+label doneWithEnemyArmy
+set i {%i%+1}
+if {%i%<$c.cm.enemyValleyArmies.length$} goto nextEnemyArmy
+label noEnemies
+sleep 5
+goto mainLoop
+

@@ -1,0 +1,13 @@
+setsilence true
+label start
+iferror $c.cm.localArmies[0]$ goto start
+set time $c.cm.localArmies[0].reachTime$
+set x {{{%time%-$c.getRawTime()$}/1000}-0.5}
+echo "Waiting for %x% seconds to use strat"
+sleep $c.math.max(0,%x%)$
+set z player.trick.qlbx
+set a $c.af.getShopCommands().useTrickItem(c.castle.fiel dId,c.cm.localArmies[0].armyId,c.getVar(z))$
+repeat 3
+label wait
+iferror $%a%.ok$ goto wait
+echo Success!

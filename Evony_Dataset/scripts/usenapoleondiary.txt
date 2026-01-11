@@ -1,0 +1,113 @@
+###########################################################################
+########                                                         ##########
+########  I strongly recommend you put the script in snippets!   ##########
+########  With those three first lines to decide where and when  ##########
+########  to apply the diarys and the 'include' line,            ##########
+########  this script can be run from any city and still         ##########
+########  the script will check barracks in the city that's been ##########
+########  named and apply a Napleon's Diary to any single batch  ##########
+########  with a production time longer than the value entered   ##########
+########  as 'useDiaryWhenOver', but only if you have any Diarys ##########
+########                                                         ##########
+###########################################################################
+
+## The user set variables operate as follows
+## ------------------------------------------
+##	useDiaryWhenOver
+##		When a single batch is longer than this many hours the script will apply Napoleon's Diary
+##	lookInCity
+##		Name of city where this process should be applied.
+##		(As the script is designed to be run in whatever city and still be able to work on barracks
+##		in any other city, you need to specify in which city the Diarys should be used)
+##	justCheck
+##		When this variable is set to 'true', the script will just check the production time
+##		for each batch and present a summary that shows you the batches that exceeds your settings
+##		and tell you how many Napoleon's Diarys would be needed with your current settings.
+##		By entering the value 'false' to this variable, the script WILL USE Napoleon's Diarys on all
+##		troop batches that exceeds your time limit set in 'useDiaryWhenOver' for as long as you have
+##		any Napoleon's Diarys in your inventory
+##
+##	This script will NOT try to use a Diary if you have none 
+##	It will NOT force the use of Diary and make your account to purchase the items in the shop
+##
+##	DISCLAMER:	There is allways the risk of runing in to trouble due to laged out server connection
+##				and item count may not be properly updated. I recommend to allways run the script with
+##				'justChek' set to 'true' first and make sure you have the number of Diarys needed.
+##				You can then just change this setting to 'false' and run the script again.
+##
+##		Screenshot from Testrun (set justCheck true): http://prntscr.com/c3068p
+##		Screenshot from Liverun (set justCheck false): http://prntscr.com/c3076w
+
+### To use Napoleon's_Diary on excessively long troopqueues, put these lines in any of your cities' script window
+set useDiaryWhenOver 500
+set lookInCity Malbork
+set justCheck true
+include useDiary
+
+### Script should be placed in snippets with no changes .....
+[useDiary]
+setsilence true
+iferror %useDiaryWhenOver% goto error
+iferror %lookInCity% goto error
+iferror %justCheck% set justCheck true
+set Message "<br>Troop production time for batches over <b>%useDiaryWhenOver%h</b> in <b>%lookInCity%</b> will be reduced by using Napoleon's Diary<br>Current count: <b>$c.getItem(Napoleon's_Diary).count$</b> <i>Napoleon's Diary(s)</i><br>Pres <b><i><u>Stop</u></i> within 10 seconds to abbort</b> the process"
+set log $c.cm.logMsg(%Message%</b>,#0000BB)$
+if {%justCheck%} echo "This is just a testrun to se how many Diarys you would need. No Diarys will be used"
+sleep 10
+set wouldBe 0
+set used 0
+set q 0
+label qloop
+set b 0
+label bloop
+iferror $c.getCityFromName(%lookInCity%).cm.troopProduceQueue[{%q%}].allProduceQueueArray[0].costTime$ goto empty
+if {%b%==0} set qTime {{$c.getCityFromName(%lookInCity%).cm.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].endTime$-$m_city.getRawTime()$}\1000}
+if {!{%b%==0}} set qTime {$c.getCityFromName(%lookInCity%).cm.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].costTime$}
+#echo "Production time for barrack %q%, batch %b%: {%qTime%\3600}h"
+if {{%qTime%\3600}>%useDiaryWhenOver%&&$c.getItem(Napoleon's_Diary).count$>0} gosub useDiary
+set b {%b%+1}
+if {%b%<$c.getCityFromName(%lookInCity%).cm.troopProduceQueue[{%q%}].allProduceQueueArray.length$} goto bloop
+label nextBarrack
+set q {%q%+1}
+if {%q%<$c.getCityFromName(%lookInCity%).cm.troopProduceQueue.length$} goto qloop
+goto finalReport
+label empty
+set Message "troopProduceQueue[{%q%}] in %lookInCity% is empty"
+set log $c.cm.logMsg(<b>%Message%</b>,#FF0000)$
+goto nextBarrack
+label useDiary
+if {%b%==0} set originalProductionTime {{$c.getCityFromName(%lookInCity%).cm.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].endTime$-$m_city.getRawTime()$}\1000}
+if {!{%b%==0}} set originalProductionTime {$c.getCityFromName(%lookInCity%).cm.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].costTime$}
+set Message "Production time in barrack troopProduceQueue[%q%] batch allProduceQueueArray[{%b%}] in %lookInCity% is <b>{%originalProductionTime%\3600}h</b>"
+set log $c.cm.logMsg(%Message%,#FF0000)$
+if {%justCheck%} set wouldBe {%wouldBe%+1}
+if {%justCheck%} gosubreturn
+set uD $c.af.getTroopCommands().accTroopProduce(c.getCityFromName(%lookInCity%).castle.id,c.getCityFromName(%lookInCity%).cm.troopProduceQueue[{%q%}].positionId,c.getCityFromName(%lookInCity%).cm.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].queueId,c.getItemId(Napoleon's_Diary))$
+gosub waitResp %uD% 10
+label updateTroopQueue
+set update $c.getCityFromName(%lookInCity%).cm.updateTroopQueue()$
+if {%b%==0} set productionTime {{$c.getCityFromName(%lookInCity%).cm.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].endTime$-$m_city.getRawTime()$}\1000}
+if {%b%!=0} set productionTime {$c.getCityFromName(%lookInCity%).cm.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].costTime$}
+if {$%uD%.ok$==1&&%productionTime%==%originalProductionTime%} goto updateTroopQueue
+if {$%uD%.ok$==1} set Message "Production time in barrack troopProduceQueue[%q%] batch allProduceQueueArray[{%b%}] in %lookInCity% is <b>{%productionTime%\3600}h</b>"
+if {$%uD%.ok$!=1} set Message $%uD%.errorMsg$
+set log $c.cm.logMsg(%Message%,#00DD00)$
+if {$%uD%.ok$==1} set used {%used%+1}
+gosubreturn
+label waitResp
+set _starttime $c.getRawTime()$
+label waitRespStart
+iferror {$%_1%.ok$} goto respWait
+gosubreturn %_1%
+label respWait
+if {$c.getRawTime()$>{%_starttime%+%_2%*1000}} echo "A timeout occured while waiting for server response, process abborted"
+if {$c.getRawTime()$>{%_starttime%+%_2%*1000}} goto finalReport
+goto waitRespStart
+label error
+echo "You must specify the max time for not to use a Diary with f.ex. 'set useDiaryWhenOver 500' to use Diarys on batches over 500h and what city to work in with f.ex. 'set lookInCity Atlantis'"
+goto end
+label finalReport
+if {!{%justCheck%}} set summary "%used% Napoleon's Diarys were used in %lookInCity%; remaining count: $c.getItem(Napoleon's_Diary).count$"
+if {%justCheck%} set summary "%wouldBe% Napoleon's Diarys would be needed in %lookInCity%; remaining count would be: {$c.getItem(Napoleon's_Diary).count$-%wouldBe%}"
+set summary "%summary% <br>&#169; <i>2016-08-08</i> &#60;&#126;<i>Yozhik v Tumane</i>&#126;&#62;&#8482; </font><br>"
+set log $c.cm.logMsg(<b>%summary%</b>,#0000AA)$

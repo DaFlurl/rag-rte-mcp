@@ -1,0 +1,78 @@
+#set queueId 0
+include fortificationSpeedup
+
+[fortificationSpeedup]
+setsilence true
+set list "<br><u>Current wall fortification produce queue:</u>"
+setarr types "NaN NaN wo w s p sw a t c cata b r cp Trap Abatis AT Log Treb"
+iferror %queueId% goto noSelection
+echo "QueueId %queueId% has been selected"
+label fetchQ
+set r $c.af.getFortificationsCommands().getProduceQueue(c.castle.id)$
+gosub waitResp %r% 10
+if {%_0%==timeout} goto fetchQ
+#echo $%r%.toDebugString()$
+#goto end
+set i 0
+set q %r%.allProduceQueueArray[0].allProduceQueueArray
+if {$%q%.length$==0} goto noFortifications
+set productionTime[{%i%}] {{$%q%[{%i%}].endTime$-$c.getRawTime()$}\1000}
+set qId[{%i%}] $%q%[{%i%}].queueId$
+set num[{%i%}] $%q%[{%i%}].num$
+set type[{%i%}] %types[$%q%[{%i%}].type$]%
+label qLoop
+set i {%i%+1}
+if {%i%>=$%q%.length$} goto noMoreQ
+addtoarray productionTime %productionTime.length% $%q%[{%i%}].costTime$
+addtoarray qId %qId.length% $%q%[{%i%}].queueId$
+addtoarray num %num.length% $%q%[{%i%}].num$
+addtoarray type %type.length% %types[$%q%[{%i%}].type$]%
+goto qLoop
+label noMoreQ
+join prodTimes productionTime ","
+getindexof selected productionTime $c.math.max(%prodTimes%)$
+set e 0
+iferror %queueId% goto echoloop
+goto use
+label echoloop
+set list "%list%<br>queueId %qId[{%e%}]%: %num[{%e%}]% %type[{%e%}]%, remain time:  {%productionTime[{%e%}]%\3600}h:{%productionTime[{%e%}]%/60|60\1}m:{%productionTime[{%e%}]%|60\1}s"
+set e {%e%+1}
+if {%e%<%productionTime.length%} goto echoloop
+set log $c.cm.logMsg(c.getVar(list),#0000dd)$
+goto exit
+label use
+getindexof selected qId %queueId%
+echo "Attempting use of Archimedes'_Note on fortification queueId %queueId% with {%productionTime[{%selected%}]%\3600}h:{%productionTime[{%selected%}]%/60|60\1}m:{%productionTime[{%selected%}]%|60\1}s remaining."
+set use $c.af.getFortificationsCommands().accTroopProduce(c.castle.id,%queueId%,c.getItemId(Archimedes'_Note))$
+gosub waitResp %use% 10
+if {%_0%==timeout} goto checkResult
+if {$%use%.ok$!=1} goto failed 
+echo "Archimedes'_Note successfully applied to fortification queueId %queueId%"
+delete queueId
+delete productionTime
+delete qId
+delete num
+delete type
+goto fetchQ
+label waitResp
+set _starttime $c.getRawTime()$
+label waitRespStart
+iferror {$%_1%.ok$} goto respWait
+gosubreturn 
+label respWait
+if {$c.getRawTime()$>{%_starttime%+%_2%*1000}} echo "A timeout has occured while waiting for server respons"
+if {$c.getRawTime()$>{%_starttime%+%_2%*1000}} gosubreturn timeout
+sleep 0.1
+goto waitRespStart
+label failed
+set errorMsg "<b>Application failed:</b> $%use%.errorMsg$"
+set log $c.cm.logMsg(c.getVar(errorMsg),#ff0000)$
+goto exit
+label noSelection
+set msg "No queueId has been selected, the script will now present a list of current queues . . ."
+set log $c.cm.logMsg(c.getVar(msg),#0000dd)$
+goto fetchQ
+label noFortifications
+set errorMsg "<b>Error Message from script:</b> This city has no wall fortification produce queue"
+set log $c.cm.logMsg(c.getVar(errorMsg),#ff0000)$
+label exit

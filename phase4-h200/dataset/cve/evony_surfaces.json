@@ -1,0 +1,200 @@
+{
+  "ByteArray": {
+    "surface": "ByteArray",
+    "found": true,
+    "files": [
+      "EvonyClient.as",
+      "EvonyClient_Miniloading.as",
+      "EvonyClient_Miniloading_dataClass.as",
+      "view\\questWizard\\GuideData.as",
+      "view\\questWizard\\GuideData_xmlClass.as",
+      "view\\ui\\EffortFinishWin.as",
+      "view\\ui\\EffortFinishWin_BuffxmlClass.as",
+      "view\\module\\rank\\cj.as",
+      "view\\module\\rank\\cj_inlineComponent1.as",
+      "view\\module\\rank\\cj_inlineComponent1_BuffxmlClass.as"
+    ],
+    "count": 392,
+    "category": "memory"
+  },
+  "Socket": {
+    "surface": "Socket",
+    "found": true,
+    "files": [
+      "en_US$controls_properties.as",
+      "EvonyClient.as",
+      "view\\castle\\MainFrame.as",
+      "view\\module\\guide\\AwardWin.as",
+      "view\\module\\guide\\SaveGameStep1Win.as",
+      "mx\\utils\\Base64Encoder.as",
+      "com\\evony\\util\\FbUtil.as",
+      "com\\evony\\net\\client\\GameClient.as",
+      "com\\evony\\common\\beans\\PlayerBean.as",
+      "com\\adobe\\crypto\\MD5.as"
+    ],
+    "count": 531,
+    "category": "network"
+  },
+  "SharedObject": {
+    "surface": "SharedObject",
+    "found": true,
+    "files": [
+      "EvonyClient.as",
+      "_dataGridStylesStyle.as",
+      "_view_module_quest_QuestWinWatcherSetupUtil.as",
+      "view\\AllWindows.as",
+      "view\\CastleInfoFrame.as",
+      "view\\ChatFrame.as",
+      "view\\doubleBuilding.as",
+      "view\\IncreaseProduct.as",
+      "view\\LoginPanel.as",
+      "view\\MainWin.as"
+    ],
+    "count": 2049,
+    "category": "storage"
+  },
+  "ExternalInterface": {
+    "surface": "ExternalInterface",
+    "found": true,
+    "files": [
+      "EvonyClient.as",
+      "view\\ChatFrame.as",
+      "view\\IncreaseProduct.as",
+      "view\\LoginPanel.as",
+      "view\\MainWin.as",
+      "view\\PlayerHeadFrame.as",
+      "view\\Progressbars.as",
+      "view\\RandomEventWin.as",
+      "view\\ServerList.as",
+      "view\\WriteMessage.as"
+    ],
+    "count": 322,
+    "category": "xss"
+  },
+  "Loader": {
+    "surface": "Loader",
+    "found": true,
+    "files": [
+      "EvonyClient.as",
+      "EvonyClient_Miniloading.as",
+      "_EvonyClient_mx_managers_SystemManager.as",
+      "_SWFLoaderStyle.as",
+      "_SWFLoaderStyle__embed_css_Assets_swf___brokenImage_929300259.as",
+      "view\\CreatPlayerPanel.as",
+      "view\\EventNotice.as",
+      "view\\MainWin.as",
+      "view\\castle\\CityView.as",
+      "view\\castle\\TownView.as"
+    ],
+    "count": 1031,
+    "category": "injection"
+  },
+  "Vector": {
+    "surface": "Vector",
+    "found": false,
+    "files": [],
+    "count": 0,
+    "category": "memory"
+  },
+  "BitmapData": {
+    "surface": "BitmapData",
+    "found": true,
+    "files": [
+      "EvonyClient.as",
+      "view\\MainWin.as",
+      "view\\castleList\\CastlePercent.as",
+      "view\\ui\\FacebookNoticeWin.as",
+      "view\\castle\\world\\WorldMap.as",
+      "mx\\containers\\Panel.as",
+      "mx\\controls\\ButtonBar.as",
+      "mx\\controls\\DataGrid.as",
+      "mx\\controls\\HRule.as",
+      "mx\\controls\\List.as"
+    ],
+    "count": 1079,
+    "category": "graphics"
+  },
+  "XML": {
+    "surface": "XML",
+    "found": true,
+    "files": [
+      "en_US$collections_properties.as",
+      "en_US$controls_properties.as",
+      "view\\questWizard\\GuideData.as",
+      "view\\ui\\EffortFinishWin.as",
+      "view\\module\\immediateNotice\\DayMessageRss.as",
+      "view\\module\\info\\PublicReportDetail.as",
+      "view\\module\\rank\\cj.as",
+      "view\\module\\rank\\cj_inlineComponent1.as",
+      "mx\\binding\\BindabilityInfo.as",
+      "mx\\binding\\Binding.as"
+    ],
+    "count": 1006,
+    "category": "parsing"
+  },
+  "NetConnection": {
+    "surface": "NetConnection",
+    "found": true,
+    "files": [
+      "mx\\messaging\\ChannelSet.as",
+      "mx\\netmon\\NetworkMonitor.as",
+      "mx\\messaging\\channels\\NetConnectionChannel.as"
+    ],
+    "count": 24,
+    "category": "network"
+  },
+  "AMF": {
+    "surface": "AMF",
+    "found": true,
+    "files": [
+      "_EvonyClient_FlexInit.as",
+      "mx\\collections\\ArrayCollection.as",
+      "mx\\collections\\ArrayList.as",
+      "mx\\utils\\ObjectProxy.as",
+      "mx\\utils\\ObjectUtil.as",
+      "com\\evony\\net\\client\\GameClient.as",
+      "com\\degrafa\\geometry\\command\\CommandStack.as",
+      "com\\degrafa\\geometry\\command\\CommandStackItem.as",
+      "en_US$messaging_properties.as",
+      "_AutoEvony2_FlexInit.as"
+    ],
+    "count": 73,
+    "category": "deserialization"
+  },
+  "Security": {
+    "surface": "Security",
+    "found": true,
+    "files": [
+      "EvonyClient.as",
+      "_EvonyClient_mx_managers_SystemManager.as",
+      "view\\module\\playerInfo\\ApplySecurityCode.as",
+      "view\\module\\playerInfo\\PlayerInfoWin.as",
+      "view\\module\\playerInfo\\SetSecurityCode.as",
+      "mx\\core\\IFlexModuleFactory.as",
+      "mx\\managers\\SystemManager.as",
+      "mx\\modules\\ModuleManager.as",
+      "com\\degrafa\\utilities\\external\\LoadingLocation.as",
+      "AutoEvony2.as"
+    ],
+    "count": 27,
+    "category": "sandbox"
+  },
+  "LocalConnection": {
+    "surface": "LocalConnection",
+    "found": true,
+    "files": [
+      "EvonyClient.as",
+      "_EvonyClient_mx_managers_SystemManager.as",
+      "_view_module_mail_MailWinWatcherSetupUtil.as",
+      "_view_module_mail_MailWin_inlineComponent3WatcherSetupUtil.as",
+      "view\\ChatFrame.as",
+      "view\\MainWin.as",
+      "view\\WriteMessage.as",
+      "view\\castle\\BaseNewBuildingWin.as",
+      "view\\castle\\BuildingInfoWin.as",
+      "view\\castle\\NewInnerBuilding.as"
+    ],
+    "count": 2332,
+    "category": "ipc"
+  }
+}

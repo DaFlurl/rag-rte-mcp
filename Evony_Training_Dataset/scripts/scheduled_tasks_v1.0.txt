@@ -1,0 +1,204 @@
+// ============================================
+// SCHEDULED TASK RUNNER v1.0
+// Time-based automation for recurring tasks
+// Author: Borg Automation Suite
+// ============================================
+
+// Configuration - Intervals in milliseconds
+set levyInterval 900000
+set comfortInterval 3600000
+set questInterval 300000
+set resourceCheckInterval 600000
+set heroRotateInterval 1800000
+
+// Counters
+set levyCounter 0
+set comfortCounter 0
+set questCounter 0
+
+echo ========================================
+echo SCHEDULED TASK RUNNER v1.0
+echo Levy: every 15min | Comfort: every 60min
+echo ========================================
+
+// Initialize timestamps
+set lastLevy 0
+set lastComfort 0
+set lastQuest 0
+set cycleCount 0
+
+// Main scheduler loop
+label mainLoop
+
+set cycleCount cycleCount + 1
+echo [CYCLE %cycleCount%] Running scheduled checks...
+
+// Check and execute scheduled tasks
+gosub checkLevy
+gosub checkComfort
+gosub checkQuests
+gosub checkResources
+
+// Short sleep between checks
+sleep 60000
+goto mainLoop
+
+// ==========================================
+// LEVY SCHEDULER (Every 15 minutes)
+// ==========================================
+label checkLevy
+set levyCounter levyCounter + 1
+
+// Every 15 cycles (15 minutes at 60s/cycle)
+if levyCounter >= 15 then gosub doLevy
+return
+
+label doLevy
+echo [LEVY] Executing scheduled levy...
+
+levy population
+sleep 1000
+levy gold
+sleep 1000
+
+set levyCounter 0
+echo [LEVY] Levy complete, next in 15 min
+return
+
+// ==========================================
+// COMFORT SCHEDULER (Every 60 minutes)
+// ==========================================
+label checkComfort
+set comfortCounter comfortCounter + 1
+
+// Every 60 cycles (60 minutes at 60s/cycle)
+if comfortCounter >= 60 then gosub doComfort
+return
+
+label doComfort
+echo [COMFORT] Executing scheduled comfort...
+
+comfort praying
+sleep 1000
+comfort festival
+sleep 1000
+comfort blessing
+sleep 1000
+
+set comfortCounter 0
+echo [COMFORT] Comfort complete, next in 60 min
+return
+
+// ==========================================
+// QUEST SCHEDULER (Every 5 minutes)
+// ==========================================
+label checkQuests
+set questCounter questCounter + 1
+
+// Every 5 cycles (5 minutes at 60s/cycle)
+if questCounter >= 5 then gosub doQuests
+return
+
+label doQuests
+echo [QUEST] Checking for completable quests...
+
+completequests
+sleep 1000
+
+set questCounter 0
+echo [QUEST] Quest check complete
+return
+
+// ==========================================
+// RESOURCE CHECK (Every 10 minutes)
+// ==========================================
+label checkResources
+echo [RESOURCE] Checking resource levels...
+
+getresources
+
+// Alert if resources too low
+if gold < 10000 then echo [WARN] Low gold!
+if food < 100000 then echo [WARN] Low food!
+
+// Alert if resources too high (vulnerable)
+if gold > 10000000 then echo [WARN] High gold - consider spending
+
+return
+
+// ==========================================
+// DAILY TASKS
+// ==========================================
+label dailyTasks
+echo [DAILY] Executing daily maintenance...
+
+// Claim daily rewards
+completequests
+sleep 1000
+
+// Check mail
+// cleanreports all
+
+// Alliance donation
+// alliance.donate 10000
+
+echo [DAILY] Daily tasks complete
+return
+
+// ==========================================
+// HOURLY TASKS
+// ==========================================
+label hourlyTasks
+echo [HOURLY] Executing hourly maintenance...
+
+// Hero rotation for optimal levy
+gosub rotateHeroForLevy
+
+// Building queue check
+waitnobuilding
+upgrade cottage lowestalikelevel
+sleep 500
+
+// Research queue check
+waitnoresearch
+research next
+sleep 500
+
+echo [HOURLY] Hourly tasks complete
+return
+
+// ==========================================
+// HERO ROTATION FOR LEVY
+// ==========================================
+label rotateHeroForLevy
+echo [HERO] Rotating to politics hero for levy...
+
+setmayor politics
+sleep 500
+
+levy population
+sleep 500
+levy gold
+sleep 500
+
+// Restore previous mayor if needed
+echo [HERO] Levy with bonus complete
+return
+
+// ==========================================
+// ERROR HANDLER
+// ==========================================
+label error
+echo [ERROR] Scheduler error occurred
+sleep 30000
+goto mainLoop
+
+// ==========================================
+// SHUTDOWN
+// ==========================================
+label done
+echo ========================================
+echo SCHEDULED TASK RUNNER STOPPED
+echo Total cycles: %cycleCount%
+echo ========================================
+stop

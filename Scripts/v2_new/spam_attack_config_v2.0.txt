@@ -1,0 +1,172 @@
+// ============================================
+// SPAM ATTACK CONFIG v2.0
+// Built-in spamattack with full configuration
+// Uses REAL spamattack, spamheroes commands
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+// REAL COMMANDS FROM CityState.as:
+// spamattack coords troop count
+// endspamattack
+// spamheroes str
+// getspamhero attrib
+// findhero attrib minLevel method
+// ============================================
+
+// ==========================================
+// CONFIGURATION - EDIT THESE
+// ==========================================
+
+// === TARGET ===
+set targetX 0
+set targetY 0
+
+// === SPAM CONFIGURATION ===
+set spamTroopString "a:100000"
+set spamCount 100
+set spamArchers 100000
+
+// === HERO CONFIGURATION ===
+// Configure which heroes to use for spamming
+set spamHeroConfig "any,any,any,any,any"
+set heroAttribute "power"
+set heroMinLevel 100
+set heroFindMethod 1
+
+// === TIMING ===
+set waveDelay 1000
+
+// === FEATURES ===
+set enableAutoHeroFind 1
+set enableHeroRotation 1
+set enableContinuousSpam 1
+set enableLogging 1
+
+// === RUN MODE ===
+set runMode "spam"
+
+// ==========================================
+// DO NOT EDIT BELOW
+// ==========================================
+
+set totalWaves 0
+
+echo ============================================
+echo SPAM ATTACK CONFIG v2.0
+echo Target: %targetX%,%targetY%
+echo Waves: %spamCount%
+echo Troops: %spamTroopString%
+echo ============================================
+
+// Validate
+if targetX = 0 then if targetY = 0 then goto noTarget
+
+// Setup spam heroes
+gosub setupSpamHeroes
+
+// Execute spam
+gosub executeSpam
+
+goto complete
+
+// ==========================================
+// SETUP SPAM HEROES (Real Command)
+// ==========================================
+label setupSpamHeroes
+echo [HERO] Configuring spam heroes...
+
+// spamheroes str
+// Configures which heroes to use for spam attacks
+spamheroes %spamHeroConfig%
+
+// Find hero if needed
+if enableAutoHeroFind = 1 then gosub findSpamHero
+
+echo [HERO] Spam heroes configured
+return
+
+// ==========================================
+// FIND SPAM HERO (Real Command)
+// ==========================================
+label findSpamHero
+echo [HERO] Finding spam hero...
+
+// findhero attrib minLevel method
+// attrib: atk, int, pol
+// method: 0=demo int, 1=hire/fire
+findhero %heroAttribute% %heroMinLevel% %heroFindMethod%
+
+echo [HERO] Hero search initiated
+return
+
+// ==========================================
+// EXECUTE SPAM (Real Command)
+// ==========================================
+label executeSpam
+echo [SPAM] Starting spam attack...
+
+set coordString "%targetX%,%targetY%"
+
+// spamattack coords troop count
+// This is the real built-in spam command
+// It automatically rotates heroes and sends waves
+spamattack %coordString% %spamTroopString% %spamCount%
+
+set totalWaves %spamCount%
+
+echo [SPAM] Spam attack initiated - %spamCount% waves queued
+return
+
+// ==========================================
+// MANUAL SPAM (Backup)
+// ==========================================
+label manualSpam
+echo [MANUAL] Manual spam mode...
+
+set waveIndex 0
+label manualSpamLoop
+
+// Get spam hero
+getspamhero %heroAttribute%
+
+// Send attack
+attack %targetX% %targetY% spamhero %spamTroopString%
+
+set waveIndex waveIndex + 1
+set totalWaves totalWaves + 1
+
+echo [WAVE %waveIndex%] Sent
+
+sleep %waveDelay%
+
+if waveIndex < spamCount then goto manualSpamLoop
+
+return
+
+// ==========================================
+// END SPAM (Real Command)
+// ==========================================
+label endSpam
+echo [END] Ending spam attack...
+
+endspamattack
+
+echo [END] Spam attack ended
+return
+
+// ==========================================
+// ERROR HANDLERS
+// ==========================================
+label noTarget
+echo [ERROR] Set target coordinates!
+stop
+
+// ==========================================
+// COMPLETION
+// ==========================================
+label complete
+echo ============================================
+echo SPAM ATTACK CONFIG COMPLETE
+echo Total Waves: %totalWaves%
+echo ============================================
+stop

@@ -1,0 +1,1621 @@
+{
+  "version": "1.0",
+  "generated": "2026-01-03T13:53:43.958790",
+  "encryption_keys": {
+    "ACTION_KEY": "TAO_{313-894*&*($*#-FDIU(430}-{facebook_dioe(&*%$l}",
+    "API_KEY": "9f758e2deccbe6244f734371b9642eda",
+    "USER_INFO_KEY": "IUGI_md5_key_{djfiji3*4930}-{fjdi3284$9dlld}",
+    "XOR_KEY": 170,
+    "LOGIN_SALT": "evony",
+    "FB_SECRET": "facebook_secret_key"
+  },
+  "protocol_commands": {
+    "troop": {
+      "produceTroop": {
+        "params": [
+          "castleId",
+          "positionId",
+          "troopType",
+          "num",
+          "isShare",
+          "toIdle"
+        ],
+        "exploit": "INTEGER OVERFLOW in num parameter - TROOP GLITCH",
+        "risk": "CRITICAL",
+        "overflow_values": [
+          2147483647,
+          2147483648,
+          -1,
+          6135036
+        ]
+      },
+      "cancelTroopProduce": {
+        "params": [
+          "castleId",
+          "positionId",
+          "queueId"
+        ],
+        "exploit": "Cancel after overflow = negative refund = RESOURCE GAIN",
+        "risk": "CRITICAL"
+      },
+      "disbandTroop": {
+        "params": [
+          "castleId",
+          "troopType",
+          "num"
+        ],
+        "exploit": "Negative num may give resources instead of disband",
+        "risk": "HIGH"
+      },
+      "getProduceQueue": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "checkIdleBarrack": {
+        "params": [
+          "castleId",
+          "troopType"
+        ],
+        "risk": "LOW"
+      },
+      "accTroopProduce": {
+        "params": [
+          "castleId",
+          "positionId",
+          "queueId",
+          "itemId"
+        ],
+        "risk": "LOW"
+      },
+      "getTroopProduceList": {
+        "params": [
+          "castleId",
+          "positionId"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "army": {
+      "newArmy": {
+        "params": [
+          "castleId",
+          "newArmyBean"
+        ],
+        "exploit": "Resource/troop fields in bean can overflow",
+        "risk": "HIGH",
+        "bean_fields": [
+          "heroId",
+          "targetPoint",
+          "troops",
+          "resources",
+          "missionType"
+        ]
+      },
+      "callBackArmy": {
+        "params": [
+          "castleId",
+          "armyId"
+        ],
+        "exploit": "Timing exploit - recall before cost deducted",
+        "risk": "MEDIUM"
+      },
+      "exerciseArmy": {
+        "params": [
+          "castleId",
+          "troopParamAttack",
+          "troopParamDefend"
+        ],
+        "exploit": "Practice battle manipulation",
+        "risk": "LOW"
+      },
+      "getStayAllianceArmys": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "disbandFleeTroop": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "recruitFleeTroop": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "getTroopParam": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "getFleeTroop": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "disbandInjuredTroop": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "getInjuredTroop": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "setAllowAllianceArmy": {
+        "params": [
+          "castleId",
+          "isAllow"
+        ],
+        "risk": "LOW"
+      },
+      "setArmyGoOut": {
+        "params": [
+          "castleId",
+          "isArmyGoOut"
+        ],
+        "risk": "LOW"
+      },
+      "cureInjuredTroop": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "IsDropItemInCastle": {
+        "params": [
+          "x",
+          "y"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "common": {
+      "createNewPlayer": {
+        "params": [
+          "userName",
+          "sex",
+          "faceUrl",
+          "flag",
+          "castleName",
+          "zone",
+          "accountName"
+        ],
+        "exploit": "Account creation manipulation",
+        "risk": "MEDIUM"
+      },
+      "worldChat": {
+        "params": [
+          "msg",
+          "languageType"
+        ],
+        "exploit": "Chat injection, XSS in Flash",
+        "risk": "MEDIUM"
+      },
+      "privateChat": {
+        "params": [
+          "targetName",
+          "msg"
+        ],
+        "risk": "LOW"
+      },
+      "allianceChat": {
+        "params": [
+          "msg",
+          "languageType"
+        ],
+        "risk": "LOW"
+      },
+      "channelChat": {
+        "params": [
+          "channel",
+          "sendMsg",
+          "languageType"
+        ],
+        "risk": "LOW"
+      },
+      "mapInfo": {
+        "params": [
+          "castleId",
+          "x1",
+          "y1",
+          "x2",
+          "y2"
+        ],
+        "risk": "LOW"
+      },
+      "mapCastle": {
+        "params": [
+          "castleId",
+          "x1",
+          "y1",
+          "x2",
+          "y2"
+        ],
+        "risk": "LOW"
+      },
+      "mapInfoSimple": {
+        "params": [
+          "castleId",
+          "x1",
+          "y1",
+          "x2",
+          "y2"
+        ],
+        "risk": "LOW"
+      },
+      "getPlayerInfoByName": {
+        "params": [
+          "userName"
+        ],
+        "exploit": "Info disclosure",
+        "risk": "LOW"
+      },
+      "getPackage": {
+        "params": [
+          "ruleId",
+          "serial"
+        ],
+        "exploit": "Package reward manipulation",
+        "risk": "MEDIUM"
+      },
+      "getPackageList": {
+        "params": [],
+        "risk": "LOW"
+      },
+      "getPackageNumber": {
+        "params": [],
+        "risk": "LOW"
+      },
+      "zoneInfo": {
+        "params": [],
+        "risk": "LOW"
+      },
+      "changeName": {
+        "params": [
+          "type",
+          "nowName",
+          "newName"
+        ],
+        "risk": "LOW"
+      },
+      "changeUserFace": {
+        "params": [
+          "faceUrl",
+          "sex"
+        ],
+        "risk": "LOW"
+      },
+      "changeHeadline": {
+        "params": [
+          "headline"
+        ],
+        "risk": "LOW"
+      },
+      "setTroopConfig": {
+        "params": [
+          "name",
+          "config"
+        ],
+        "risk": "LOW"
+      },
+      "facebookConnect": {
+        "params": [
+          "facebookId",
+          "password",
+          "fbsig"
+        ],
+        "risk": "LOW"
+      },
+      "declaredWarAgainstPlayer": {
+        "params": [
+          "playerId"
+        ],
+        "risk": "LOW"
+      },
+      "getCanDeclaredWarAgainstPlayer": {
+        "params": [
+          "playerId"
+        ],
+        "risk": "LOW"
+      },
+      "getPlayerDeclaredWarStatus": {
+        "params": [
+          "playerId"
+        ],
+        "risk": "LOW"
+      },
+      "getRelationship": {
+        "params": [
+          "playerId"
+        ],
+        "risk": "LOW"
+      },
+      "setReturnReport": {
+        "params": [
+          "returnReport"
+        ],
+        "risk": "LOW"
+      },
+      "setReceiveIncomingAttack": {
+        "params": [
+          "isAccept"
+        ],
+        "risk": "LOW"
+      },
+      "setAutoHeal": {
+        "params": [
+          "autoHeal"
+        ],
+        "risk": "LOW"
+      },
+      "addToFavorites": {
+        "params": [],
+        "risk": "LOW"
+      },
+      "getItemDefXml": {
+        "params": [],
+        "risk": "LOW"
+      },
+      "denyPlayerSpeak": {
+        "params": [
+          "playername",
+          "time"
+        ],
+        "risk": "LOW"
+      },
+      "step": {
+        "params": [
+          "tutorialStepId"
+        ],
+        "risk": "LOW"
+      },
+      "setEvonyMemberEMail": {
+        "params": [
+          "email"
+        ],
+        "risk": "LOW"
+      },
+      "setEovnyMember": {
+        "params": [],
+        "risk": "LOW"
+      },
+      "deleteUserAndRestart": {
+        "params": [
+          "pwd"
+        ],
+        "risk": "LOW"
+      },
+      "saveUnregisteredPlayer": {
+        "params": [
+          "account",
+          "password"
+        ],
+        "risk": "LOW"
+      },
+      "setEventDone": {
+        "params": [
+          "id"
+        ],
+        "risk": "LOW"
+      },
+      "delUniteServerPeaceStatus": {
+        "params": [],
+        "risk": "LOW"
+      }
+    },
+    "quest": {
+      "award": {
+        "params": [
+          "castleId",
+          "questId"
+        ],
+        "exploit": "RACE CONDITION - complete quest multiple times",
+        "risk": "HIGH"
+      },
+      "getQuestList": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "getQuestType": {
+        "params": [],
+        "risk": "LOW"
+      }
+    },
+    "shop": {
+      "buy": {
+        "params": [
+          "castleId",
+          "itemId",
+          "num",
+          "useGold"
+        ],
+        "exploit": "Negative num = free items or refund",
+        "risk": "HIGH"
+      },
+      "getBuyResourceInfo": {
+        "params": [],
+        "risk": "LOW"
+      },
+      "buyResource": {
+        "params": [
+          "castleId",
+          "type",
+          "num"
+        ],
+        "risk": "MEDIUM"
+      },
+      "useItem": {
+        "params": [
+          "castleId",
+          "itemId",
+          "num"
+        ],
+        "exploit": "RACE CONDITION - use item multiple times",
+        "risk": "HIGH"
+      },
+      "sellItem": {
+        "params": [
+          "castleId",
+          "itemId",
+          "num"
+        ],
+        "exploit": "Negative num = buy items",
+        "risk": "MEDIUM"
+      },
+      "getSaleTypeList": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "getSaleItemList": {
+        "params": [
+          "castleId",
+          "typeId"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "hero": {
+      "fireHero": {
+        "params": [
+          "castleId",
+          "heroId"
+        ],
+        "risk": "LOW"
+      },
+      "hireHero": {
+        "params": [
+          "castleId",
+          "heroId"
+        ],
+        "risk": "LOW"
+      },
+      "promoteHero": {
+        "params": [
+          "castleId",
+          "heroId"
+        ],
+        "risk": "LOW"
+      },
+      "dischargeHero": {
+        "params": [
+          "castleId",
+          "heroId"
+        ],
+        "risk": "LOW"
+      },
+      "changeName": {
+        "params": [
+          "castleId",
+          "heroId",
+          "newName"
+        ],
+        "risk": "LOW"
+      },
+      "awardHero": {
+        "params": [
+          "castleId",
+          "heroId",
+          "itemId"
+        ],
+        "exploit": "RACE CONDITION - award multiple times",
+        "risk": "MEDIUM"
+      },
+      "levelUp": {
+        "params": [
+          "castleId",
+          "heroId"
+        ],
+        "risk": "LOW"
+      },
+      "addPoint": {
+        "params": [
+          "castleId",
+          "heroId",
+          "type",
+          "num"
+        ],
+        "risk": "LOW"
+      },
+      "getHeroList": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "tryGetRandomHero": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "refreshHeroList": {
+        "params": [
+          "castleId",
+          "useGold"
+        ],
+        "risk": "LOW"
+      },
+      "setMayor": {
+        "params": [
+          "castleId",
+          "heroId"
+        ],
+        "risk": "LOW"
+      },
+      "releaseHero": {
+        "params": [
+          "castleId",
+          "heroId"
+        ],
+        "risk": "LOW"
+      },
+      "callBackHero": {
+        "params": [
+          "castleId",
+          "heroId"
+        ],
+        "risk": "LOW"
+      },
+      "resetPoint": {
+        "params": [
+          "castleId",
+          "heroId"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "castle": {
+      "moveCastle": {
+        "params": [
+          "castleId",
+          "targetX",
+          "targetY"
+        ],
+        "risk": "LOW"
+      },
+      "giveUpCastle": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "changeCastleName": {
+        "params": [
+          "castleId",
+          "newName"
+        ],
+        "risk": "LOW"
+      },
+      "getCastleFieldInfo": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "getCastleLoyalty": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "getResourceProduceData": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "getAvailableBuildingList": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "getAvailableResearchList": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "getGamblingItemInfo": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "city": {
+      "construct": {
+        "params": [
+          "castleId",
+          "positionId",
+          "buildingId"
+        ],
+        "exploit": "Instant build if validation weak",
+        "risk": "MEDIUM"
+      },
+      "upgradeBuilding": {
+        "params": [
+          "castleId",
+          "positionId"
+        ],
+        "risk": "LOW"
+      },
+      "destructBuilding": {
+        "params": [
+          "castleId",
+          "positionId"
+        ],
+        "risk": "LOW"
+      },
+      "cancelConstruct": {
+        "params": [
+          "castleId",
+          "positionId"
+        ],
+        "risk": "LOW"
+      },
+      "speedUpBuild": {
+        "params": [
+          "castleId",
+          "positionId",
+          "itemId"
+        ],
+        "risk": "LOW"
+      },
+      "GetBuildingQueueCostInfo": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "useBuildingQueue": {
+        "params": [
+          "castleId",
+          "num"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "colony": {
+      "abandonColony": {
+        "params": [
+          "castleId",
+          "colonyId"
+        ],
+        "risk": "LOW"
+      },
+      "levyFood": {
+        "params": [
+          "castleId",
+          "colonyId"
+        ],
+        "exploit": "Rapid levy bypass cooldown",
+        "risk": "MEDIUM"
+      },
+      "levyTaxes": {
+        "params": [
+          "castleId",
+          "colonyId"
+        ],
+        "risk": "LOW"
+      },
+      "levyArmy": {
+        "params": [
+          "castleId",
+          "colonyId"
+        ],
+        "exploit": "Army levy overflow",
+        "risk": "MEDIUM"
+      },
+      "levyPopulation": {
+        "params": [
+          "castleId",
+          "colonyId"
+        ],
+        "risk": "LOW"
+      },
+      "reduceArmaments": {
+        "params": [
+          "castleId",
+          "colonyId"
+        ],
+        "risk": "LOW"
+      },
+      "overviewColonialCastle": {
+        "params": [
+          "castleId",
+          "colonyId"
+        ],
+        "risk": "LOW"
+      },
+      "sowDiscord": {
+        "params": [
+          "castleId",
+          "colonyId"
+        ],
+        "risk": "LOW"
+      },
+      "getColonialArmyInfo": {
+        "params": [
+          "castleId",
+          "colonyId"
+        ],
+        "risk": "LOW"
+      },
+      "setDeployTroops": {
+        "params": [
+          "castleId",
+          "colonyId",
+          "troopBean"
+        ],
+        "risk": "LOW"
+      },
+      "getDeployTroopsInfo": {
+        "params": [
+          "castleId",
+          "colonyId"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "alliance": {
+      "createAlliance": {
+        "params": [
+          "allianceName",
+          "isOpenJoin"
+        ],
+        "risk": "LOW"
+      },
+      "leaveAlliance": {
+        "params": [],
+        "risk": "LOW"
+      },
+      "kickOutMember": {
+        "params": [
+          "playerId"
+        ],
+        "risk": "LOW"
+      },
+      "inviteToJoin": {
+        "params": [
+          "userName"
+        ],
+        "risk": "LOW"
+      },
+      "setOpenJoin": {
+        "params": [
+          "isOpen"
+        ],
+        "risk": "LOW"
+      },
+      "setAllianceInfo": {
+        "params": [
+          "info"
+        ],
+        "risk": "LOW"
+      },
+      "getAllianceInfo": {
+        "params": [
+          "allianceId"
+        ],
+        "risk": "LOW"
+      },
+      "getAllianceMembers": {
+        "params": [
+          "allianceId"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "trade": {
+      "createTrade": {
+        "params": [
+          "castleId",
+          "resourceType",
+          "tradeType",
+          "amount",
+          "price"
+        ],
+        "exploit": "Price manipulation, negative amounts",
+        "risk": "MEDIUM"
+      },
+      "cancelTrade": {
+        "params": [
+          "castleId",
+          "tradeId"
+        ],
+        "risk": "LOW"
+      },
+      "speedUpTrans": {
+        "params": [
+          "castleId",
+          "tradeId",
+          "itemId"
+        ],
+        "risk": "LOW"
+      },
+      "getTransingTradeList": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "getMyTradeList": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "searchTrades": {
+        "params": [
+          "castleId",
+          "resourceType",
+          "tradeType"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "tech": {
+      "research": {
+        "params": [
+          "castleId",
+          "techId"
+        ],
+        "risk": "LOW"
+      },
+      "cancelResearch": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "speedUpResearch": {
+        "params": [
+          "castleId",
+          "itemId"
+        ],
+        "risk": "LOW"
+      },
+      "getResearchList": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "fortifications": {
+      "produceFortification": {
+        "params": [
+          "castleId",
+          "fortType",
+          "num"
+        ],
+        "exploit": "Integer overflow in num",
+        "risk": "MEDIUM"
+      },
+      "cancelFortificationProduce": {
+        "params": [
+          "castleId",
+          "fortType"
+        ],
+        "risk": "LOW"
+      },
+      "speedUpFortificationProduce": {
+        "params": [
+          "castleId",
+          "fortType",
+          "itemId"
+        ],
+        "risk": "LOW"
+      },
+      "destructFortification": {
+        "params": [
+          "castleId",
+          "fortType",
+          "num"
+        ],
+        "risk": "LOW"
+      },
+      "getFortificationProduceList": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "interior": {
+      "pacifyPeople": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "taxation": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "modifyTaxRate": {
+        "params": [
+          "castleId",
+          "rate"
+        ],
+        "risk": "LOW"
+      },
+      "modifyCommenceRate": {
+        "params": [
+          "castleId",
+          "rate"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "mail": {
+      "sendMail": {
+        "params": [
+          "targetName",
+          "title",
+          "content"
+        ],
+        "risk": "LOW"
+      },
+      "readMail": {
+        "params": [
+          "mailId"
+        ],
+        "risk": "LOW"
+      },
+      "deleteMail": {
+        "params": [
+          "mailIds"
+        ],
+        "risk": "LOW"
+      },
+      "getAllMail": {
+        "params": [
+          "type",
+          "pageNo",
+          "pageSize"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "report": {
+      "getReportList": {
+        "params": [
+          "type",
+          "pageNo",
+          "pageSize"
+        ],
+        "risk": "LOW"
+      },
+      "readReport": {
+        "params": [
+          "reportId"
+        ],
+        "risk": "LOW"
+      },
+      "deleteReport": {
+        "params": [
+          "reportIds"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "commissionQuest": {
+      "acceptCommissionQuest": {
+        "params": [
+          "castleId",
+          "questId"
+        ],
+        "risk": "LOW"
+      },
+      "completeCommissionQuest": {
+        "params": [
+          "castleId",
+          "questId"
+        ],
+        "exploit": "RACE CONDITION - complete multiple times",
+        "risk": "HIGH"
+      },
+      "giveUpCommissionQuest": {
+        "params": [
+          "castleId",
+          "questId"
+        ],
+        "risk": "LOW"
+      },
+      "getCommissionQuestList": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "gamblingRanking": {
+      "gamble": {
+        "params": [
+          "castleId",
+          "itemId"
+        ],
+        "exploit": "Amulet spinning exploit",
+        "risk": "MEDIUM"
+      },
+      "getRankingList": {
+        "params": [],
+        "risk": "LOW"
+      },
+      "getReward": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "security": {
+      "setSecurityCode": {
+        "params": [
+          "code"
+        ],
+        "risk": "LOW"
+      },
+      "verifySecurityCode": {
+        "params": [
+          "code"
+        ],
+        "risk": "LOW"
+      },
+      "removeSecurityCode": {
+        "params": [
+          "code"
+        ],
+        "risk": "LOW"
+      },
+      "setProtectFlag": {
+        "params": [
+          "flag"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "field": {
+      "getFieldInfo": {
+        "params": [
+          "fieldId"
+        ],
+        "risk": "LOW"
+      },
+      "giveUpField": {
+        "params": [
+          "castleId",
+          "fieldId"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "equipment": {
+      "wearEquipment": {
+        "params": [
+          "castleId",
+          "heroId",
+          "equipmentId",
+          "pos"
+        ],
+        "risk": "LOW"
+      },
+      "takeOffEquipment": {
+        "params": [
+          "castleId",
+          "heroId",
+          "pos"
+        ],
+        "risk": "LOW"
+      },
+      "sellEquipment": {
+        "params": [
+          "castleId",
+          "equipmentId"
+        ],
+        "risk": "LOW"
+      },
+      "repairEquipment": {
+        "params": [
+          "castleId",
+          "equipmentId"
+        ],
+        "risk": "LOW"
+      },
+      "replenishEquipment": {
+        "params": [
+          "castleId",
+          "equipmentId"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "npcHero": {
+      "getNpcHeroList": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "captureNpcHero": {
+        "params": [
+          "castleId",
+          "heroId"
+        ],
+        "risk": "LOW"
+      },
+      "releaseNpcHero": {
+        "params": [
+          "castleId",
+          "heroId"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "truce": {
+      "applyTruce": {
+        "params": [
+          "castleId",
+          "itemId"
+        ],
+        "risk": "LOW"
+      },
+      "cancelTruce": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      },
+      "getTruceInfo": {
+        "params": [
+          "castleId"
+        ],
+        "risk": "LOW"
+      }
+    },
+    "furlough": {
+      "applyFurlough": {
+        "params": [
+          "days"
+        ],
+        "risk": "LOW"
+      },
+      "cancelFurlough": {
+        "params": [],
+        "risk": "LOW"
+      }
+    }
+  },
+  "data_beans": {
+    "PlayerBean": {
+      "size": 68300,
+      "key_fields": [
+        "id",
+        "userName",
+        "sex",
+        "prestige",
+        "honor",
+        "medal",
+        "allianceId"
+      ],
+      "exploit_fields": [
+        "medal",
+        "prestige",
+        "honor"
+      ]
+    },
+    "CastleBean": {
+      "size": 36701,
+      "key_fields": [
+        "id",
+        "name",
+        "resource",
+        "troop",
+        "heroArray",
+        "buildingArray"
+      ],
+      "exploit_fields": [
+        "resource",
+        "troop"
+      ]
+    },
+    "HeroBean": {
+      "size": 40584,
+      "key_fields": [
+        "id",
+        "name",
+        "level",
+        "experience",
+        "power",
+        "stratagem",
+        "politics"
+      ],
+      "exploit_fields": [
+        "experience",
+        "level"
+      ]
+    },
+    "TroopBean": {
+      "size": 13034,
+      "key_fields": [
+        "worker",
+        "warrior",
+        "scout",
+        "pikeman",
+        "swordsman",
+        "archer",
+        "cavalry",
+        "cataphract",
+        "transporter",
+        "ballista",
+        "ram",
+        "catapult"
+      ],
+      "exploit_fields": [
+        "ALL - Integer overflow on all fields"
+      ]
+    },
+    "ResourceBean": {
+      "size": 6325,
+      "key_fields": [
+        "gold",
+        "food",
+        "wood",
+        "stone",
+        "iron"
+      ],
+      "exploit_fields": [
+        "ALL - Integer overflow"
+      ]
+    },
+    "ArmyBean": {
+      "size": 19354,
+      "key_fields": [
+        "id",
+        "startFieldId",
+        "targetFieldId",
+        "hero",
+        "troop",
+        "resource",
+        "missionType"
+      ]
+    },
+    "MapCastleBean": {
+      "size": 31578,
+      "key_fields": [
+        "id",
+        "fieldId",
+        "name",
+        "type",
+        "playerId",
+        "allianceId"
+      ]
+    },
+    "ItemBean": {
+      "size": 6382,
+      "key_fields": [
+        "id",
+        "itemId",
+        "count"
+      ]
+    },
+    "QuestBean": {
+      "size": 12887,
+      "key_fields": [
+        "id",
+        "typeId",
+        "status",
+        "targetNum"
+      ]
+    },
+    "ColonyBean": {
+      "size": 14846,
+      "key_fields": [
+        "castleId",
+        "fieldId",
+        "cityName",
+        "loyalty"
+      ]
+    },
+    "TradeBean": {
+      "size": 10304,
+      "key_fields": [
+        "id",
+        "resourceType",
+        "tradeType",
+        "amount",
+        "price"
+      ]
+    },
+    "MailBean": {
+      "size": 11046,
+      "key_fields": [
+        "id",
+        "uid",
+        "sender",
+        "title",
+        "content"
+      ]
+    },
+    "ReportBean": {
+      "size": 12635,
+      "key_fields": [
+        "id",
+        "title",
+        "attack",
+        "targetPos"
+      ]
+    },
+    "AllianceQueryBean": {
+      "size": 10129,
+      "key_fields": [
+        "id",
+        "name",
+        "leaderName",
+        "memberCount"
+      ]
+    },
+    "BuffBean": {
+      "size": 4791,
+      "key_fields": [
+        "id",
+        "typeId",
+        "value",
+        "endTime"
+      ]
+    },
+    "EquipmentBean": {
+      "size": 7830,
+      "key_fields": [
+        "id",
+        "itemId",
+        "heroId",
+        "pos"
+      ]
+    }
+  },
+  "flash_cves": {
+    "CVE-2009-1869": {
+      "name": "AVM2 Integer Overflow",
+      "description": "Integer overflow in ActionScript Virtual Machine 2 abcFile parser",
+      "affected": "Flash Player < 9.0.246.0, 10.x < 10.0.32.18",
+      "impact": "Remote code execution",
+      "exploit_type": "Malformed AVM2 bytecode",
+      "relevance": "HIGH - Evony client uses AVM2"
+    },
+    "CVE-2010-1297": {
+      "name": "ActionScript newfunction Overflow",
+      "description": "Integer overflow in newfunction instruction",
+      "affected": "Flash Player < 10.1.53.64",
+      "impact": "Remote code execution",
+      "exploit_type": "Malformed ActionScript",
+      "relevance": "HIGH"
+    },
+    "CVE-2011-0611": {
+      "name": "Flash Player Memory Corruption",
+      "description": "Memory corruption via crafted Flash content",
+      "affected": "Flash Player < 10.2.153.1",
+      "impact": "Remote code execution",
+      "exploit_type": "Crafted SWF",
+      "relevance": "MEDIUM"
+    },
+    "CVE-2012-0779": {
+      "name": "Object Type Confusion",
+      "description": "Type confusion in object handling",
+      "affected": "Flash Player < 11.2.202.235",
+      "impact": "Remote code execution",
+      "exploit_type": "Type confusion",
+      "relevance": "MEDIUM"
+    },
+    "CVE-2015-0311": {
+      "name": "Use-After-Free",
+      "description": "Use-after-free vulnerability",
+      "affected": "Flash Player < 16.0.0.287",
+      "impact": "Remote code execution",
+      "exploit_type": "Memory corruption",
+      "relevance": "LOW - Later version"
+    }
+  },
+  "glitch_thresholds": {
+    "INT32_MAX": 2147483647,
+    "INT32_MIN": -2147483648,
+    "UINT32_MAX": 4294967295,
+    "archer": 6135036,
+    "cavalry": 2684354,
+    "cataphract": 1431655,
+    "catapult": 357913,
+    "worker": 42949672,
+    "warrior": 21474836,
+    "scout": 10737418,
+    "pikeman": 4294967,
+    "swordsman": 2147483,
+    "transporter": 4294967,
+    "ballista": 858993,
+    "ram": 536870
+  },
+  "troop_costs": {
+    "worker": {
+      "food": 50,
+      "gold": 0,
+      "pop": 1
+    },
+    "warrior": {
+      "food": 100,
+      "gold": 0,
+      "pop": 1
+    },
+    "scout": {
+      "food": 200,
+      "gold": 0,
+      "pop": 1
+    },
+    "pikeman": {
+      "food": 500,
+      "gold": 0,
+      "pop": 1
+    },
+    "swordsman": {
+      "food": 1000,
+      "gold": 0,
+      "pop": 1
+    },
+    "archer": {
+      "food": 350,
+      "gold": 0,
+      "pop": 1
+    },
+    "cavalry": {
+      "food": 800,
+      "gold": 0,
+      "pop": 3
+    },
+    "cataphract": {
+      "food": 1500,
+      "gold": 0,
+      "pop": 5
+    },
+    "transporter": {
+      "food": 500,
+      "gold": 0,
+      "pop": 5
+    },
+    "ballista": {
+      "food": 2500,
+      "gold": 0,
+      "pop": 6
+    },
+    "ram": {
+      "food": 4000,
+      "gold": 0,
+      "pop": 8
+    },
+    "catapult": {
+      "food": 6000,
+      "gold": 0,
+      "pop": 10
+    }
+  },
+  "critical_exploits": [
+    {
+      "command": "troop.produceTroop",
+      "params": [
+        "castleId",
+        "positionId",
+        "troopType",
+        "num",
+        "isShare",
+        "toIdle"
+      ],
+      "exploit": "INTEGER OVERFLOW in num parameter - TROOP GLITCH",
+      "risk": "CRITICAL"
+    },
+    {
+      "command": "troop.cancelTroopProduce",
+      "params": [
+        "castleId",
+        "positionId",
+        "queueId"
+      ],
+      "exploit": "Cancel after overflow = negative refund = RESOURCE GAIN",
+      "risk": "CRITICAL"
+    },
+    {
+      "command": "troop.disbandTroop",
+      "params": [
+        "castleId",
+        "troopType",
+        "num"
+      ],
+      "exploit": "Negative num may give resources instead of disband",
+      "risk": "HIGH"
+    },
+    {
+      "command": "army.newArmy",
+      "params": [
+        "castleId",
+        "newArmyBean"
+      ],
+      "exploit": "Resource/troop fields in bean can overflow",
+      "risk": "HIGH"
+    },
+    {
+      "command": "quest.award",
+      "params": [
+        "castleId",
+        "questId"
+      ],
+      "exploit": "RACE CONDITION - complete quest multiple times",
+      "risk": "HIGH"
+    },
+    {
+      "command": "shop.buy",
+      "params": [
+        "castleId",
+        "itemId",
+        "num",
+        "useGold"
+      ],
+      "exploit": "Negative num = free items or refund",
+      "risk": "HIGH"
+    },
+    {
+      "command": "shop.useItem",
+      "params": [
+        "castleId",
+        "itemId",
+        "num"
+      ],
+      "exploit": "RACE CONDITION - use item multiple times",
+      "risk": "HIGH"
+    },
+    {
+      "command": "commissionQuest.completeCommissionQuest",
+      "params": [
+        "castleId",
+        "questId"
+      ],
+      "exploit": "RACE CONDITION - complete multiple times",
+      "risk": "HIGH"
+    }
+  ],
+  "total_commands": 168
+}

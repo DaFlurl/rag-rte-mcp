@@ -1,0 +1,29 @@
+# This script needs your enemyallianceignorelist set as a variable named 'friends' in goals of the city:
+# set freinds name,name,name
+# enemyallianceignorelist %friends%
+
+
+set HCcoord x,y
+setsilence true
+split allies , $c.cm.getVar(friends)$
+split xy , %HCcoord%
+set xMin {%xy[0]%-9}
+set yMin {%xy[1]%-9}
+set xMax {%xy[0]%+8}
+set yMax {%xy[1]%+8}
+rescanrec %xMin%,%yMin% %xMax%,%yMax%
+set string "<br>*<b><u>Cities draftable by HC12(%HCcoord%) - $c.getMapDetail(c.getValue(Coordinate,%HCcoord%)).userName$($c.getMapDetail(c.getValue(Coordinate,%HCcoord%)).allianceName$)</u></b>*<br>"
+set y %yMin%
+label yLoop
+set x %xMin%
+label xLoop
+if {$c.getMapType(c.getValue(Coordinate,%x%,%y%))$!=11} goto nextX
+getindexof us allies $c.getMapDetail(c.getValue(Coordinate,%x%,%y%)).allianceName$
+if {%us%>=0&&{%x%,%y%!=%HCcoord%}} set string "%string% $c.getMapDetail(c.getValue(Coordinate,%x%,%y%)).userName$($c.getMapDetail(c.getValue(Coordinate,%x%,%y%)).allianceName$)<br>"
+label nextX
+set x {%x%+1}
+if {%x%<=%xMax%} goto xLoop
+set y {%y%+1}
+if {%y%<=%yMax%} goto yLoop
+set string "%string%<br><font color='#0000FF'>    &#169; 2016-09-10 &#60;&#126;Yozhik v Tumane&#126;&#62;&#8482;</font><br>"
+set log $c.cm.logMsg(c.getVar(string),#b30086)$

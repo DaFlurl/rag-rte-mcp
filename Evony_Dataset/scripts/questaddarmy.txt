@@ -1,0 +1,33 @@
+setsilence true
+set cqi 0 // Server Slot , another account cqi 1 , or cqi 2
+set send1 w:10,s:10,p:675000000,sw:675000000,c:10,cata:10,a:645000000,cp:422000000
+
+set r $c.af.getCommissionQuestCommands().getAllCommissionQuest()$
+sleep 1
+iferror $%r%.ok$ repeat 0
+set cqid $%r%.commissionQuestBeanArray[%cqi%].id$
+set tgt $%r%.commissionQuestBeanArray[%cqi%].position$
+
+set adacpa $c.af.getCommissionQuestCommands().addCommissionQuestArmy(c.castle.id,%cqid%,c.getArmy(10,m_city.getValue(Coordinate,%tgt%),none,c.getValue(Troop,%send1%)))$
+sleep 1
+if {$%adacpa%.msg$==null} echo $%adacpa%.errorMsg$
+
+
+/////////////////////////////////////
+
+// s:1b,p:1b,sw:1b,a:1b,c:908m,cata:894m,t:400m,b:1b,r:975m,cp:992m
+
+
+setsilence true
+set cqi 0 // Server Slot , another account cqi 1 , or cqi 2
+set send1 wo:346000
+
+set r $c.af.getCommissionQuestCommands().getAllCommissionQuest()$
+sleep 1
+iferror $%r%.ok$ repeat 0
+set cqid $%r%.commissionQuestBeanArray[%cqi%].id$
+set tgt $%r%.commissionQuestBeanArray[%cqi%].position$
+
+set adacpa $c.af.getCommissionQuestCommands().addCommissionQuestArmy(c.castle.id,%cqid%,c.getArmy(10,m_city.getValue(Coordinate,%tgt%),none,c.getValue(Troop,%send1%)))$
+sleep 1
+if {$%adacpa%.msg$==null} echo $%adacpa%.errorMsg$

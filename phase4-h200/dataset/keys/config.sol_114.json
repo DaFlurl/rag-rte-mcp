@@ -1,0 +1,15 @@
+{
+  "now": {
+    "autoLogin": true,
+    "autoLoginMaxTime": "600",
+    "password": "cookie",
+    "autoLoginMinTime": "1",
+    "server": "cc2",
+    "secCode": "",
+    "serverIP": "216.66.17.168",
+    "autoScript": true,
+    "username": "watsonj50@hotmail.com",
+    "strserverAlias": "Parapet",
+    "autoRun": true
+  }
+}

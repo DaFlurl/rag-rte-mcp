@@ -1,0 +1,21 @@
+10-26-23
+
+02:26:48 (Galiloza) - Running line 1: set mode lite...
+02:26:48 (Galiloza) - Set variable 'mode' to:  "lite"
+02:26:53 (Galiloza) - Current troop counts in all cities combined. 
+02:26:53 (Galiloza) - Total Troops:         8,628,872,846 
+02:26:53 (Galiloza) - Total Food Per Hour:     -425,048,243,108 
+02:26:53 (Galiloza) - ----------------------------------------------------------------------------------------- 
+02:26:53 (Galiloza) -   Warriors:           771,657,772 
+02:26:53 (Galiloza) -   Scouts:             1,168,780,414 
+02:26:53 (Galiloza) -   Pikes:              691,397,934 
+02:26:53 (Galiloza) -   Swords:             1,656,413,831 
+02:26:53 (Galiloza) -   Archers:            3,083,710,555 
+02:26:53 (Galiloza) -   Cavalry:            35,829,108 
+02:26:53 (Galiloza) -   Cataphracts:        178,639,987 
+02:26:53 (Galiloza) -   Ballista:           245,363,882 
+02:26:53 (Galiloza) -   Catapults:          265,185,068 
+02:26:53 (Galiloza) -   Battering Rams:     500,277,744 
+02:26:53 (Galiloza) -   Workers:            1,569,793 
+02:26:54 (Galiloza) -   Transports:         30,046,758 
+02:26:54 (Galiloza) - Finished script

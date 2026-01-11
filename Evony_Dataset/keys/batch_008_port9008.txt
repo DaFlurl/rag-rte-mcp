@@ -1,0 +1,13 @@
+# Proxy: SOCKS4 127.0.0.1:9008
+# Accounts: 10
+
+cgilbrich@hotmail.com:matthew2011
+chemistrywizard2@yahoo.ca:69wombat69
+chrischen421@gmail.com:macoss
+chrishe@telus.net:services
+chriskittleson@hotmail.com:shawne
+chrislogue4396@yahoo.com:chocolate30
+chrisofhouston@yahoo.com:Pvfd1021
+chrissye-1@netzero.net:Cmstrec1181
+christopher.turner18@yahoo.com:megatron99
+chuckc417@yahoo.com:Shr140414

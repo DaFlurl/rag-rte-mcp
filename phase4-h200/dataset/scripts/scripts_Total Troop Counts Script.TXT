@@ -1,0 +1,43 @@
+
+
+setsilence true
+setarr type "peasants militia scouter pikemen swordsmen archer lightCavalry heavyCavalry carriage ballista batteringRam catapult"
+setarr troop "wo__ w___ s___ p___ sw__ a___ c___ cata t___ b___ r___ cp__"
+set i 0
+set d "<br><br><u><b>---Current Troop Totals In $c.player.playerInfo.userName$ Account---</b></u><br>"
+label nextTroop
+set ii 0
+set count 0
+label nextCity
+set count {%count%+$c.ac[{%ii%}].cm.allTroop.%type[{%i%}]%$}
+set ii {%ii%+1}
+if {%ii%<$c.ac.length$} goto nextCity
+set d "%d% <font color='#00AA00'>  %troop[{%i%}]%:     <b>$c.formatNum(%count%)$</b></font><br>"
+set i {%i%+1}
+if {%i%<%type.length%} goto nextTroop
+set d "%d% <u><b>---Finished Listing Troop Totals---</b></u><br><br>"
+set log $c.cm.logMsg(c.getVar(d),#0000FF)$
+
+
+========================================================
+
+
+
+
+setsilence true
+setarr type "peasants militia scouter pikemen swordsmen archer lightCavalry heavyCavalry carriage ballista batteringRam catapult"
+setarr troop "Worker________ Warriors________ Pikemen______ Swordsmen___ Archer_______ Cavalry______ Cataphract___ Transports___ Ballista______ Rams________ Catapults___"
+set i 0
+set d "<br><br><u><b>---Current Troop Totals In $c.player.playerInfo.userName$ Account---</b></u><br>"
+label nextTroop
+set ii 0
+set count 0
+label nextCity
+set count {%count%+$c.ac[{%ii%}].cm.allTroop.%type[{%i%}]%$}
+set ii {%ii%+1}
+if {%ii%<$c.ac.length$} goto nextCity
+set d "%d% <font color='#00AA00'>  %troop[{%i%}]%:     <b>$c.formatNum(%count%)$</b></font><br>"
+set i {%i%+1}
+if {%i%<%type.length%} goto nextTroop
+set d "%d% <u><b>---Finished Listing Troop Totals---</b></u><br><br>"
+set log $c.cm.logMsg(c.getVar(d),#0000FF)$

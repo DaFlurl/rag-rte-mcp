@@ -1,0 +1,94 @@
+#======================================================================================================================
+# Glitch Optimizer - All Cities Analysis v3.0 (Enhanced Colors)
+#======================================================================================================================
+# Analyzes ALL cities, shows EVEN glitches, calculates fix cost vs food benefit
+# Goal: 2B+ net food per city with minimum troop loss
+# Outputs summary of recommended fixes sorted by efficiency
+#======================================================================================================================
+setsilence true //
+set Output WarLog //
+set glitchnumber 2147483647
+set foodperglitch 2147483647
+#======================================================================================================================
+# Troop arrays
+setarray tNames ["wo", "w", "s", "p", "sw", "a", "c", "cata", "t", "b", "r", "cp"]
+setarray tDisplay ["Workers", "Warriors", "Scouts", "Pikemen", "Swordsmen", "Archers", "Cavalry", "Cataphracts", "Transporters", "Ballista", "BattRams", "Catapults"]
+setarr gltctt2 "peasants militia scouter pikemen swordsmen archer lightCavalry heavyCavalry carriage ballista batteringRam catapult"
+setarr fpt "1 1 2 3 3 4 9 17 5 25 50 125"
+#======================================================================================================================
+# City glitch thresholds (troops needed for 1 city glitch)
+setarr cfrn "{{{%glitchnumber%/%fpt[0]%}\1}+1} {{{%glitchnumber%/%fpt[1]%}\1}+1} {{{%glitchnumber%/%fpt[2]%}\1}+1} {{{%glitchnumber%/%fpt[3]%}\1}+1} {{{%glitchnumber%/%fpt[4]%}\1}+1} {{{%glitchnumber%/%fpt[5]%}\1}+1} {{{%glitchnumber%/%fpt[6]%}\1}+1} {{{%glitchnumber%/%fpt[7]%}\1}+1} {{{%glitchnumber%/%fpt[8]%}\1}+1} {{{%glitchnumber%/%fpt[9]%}\1}+1} {{{%glitchnumber%/%fpt[10]%}\1}+1} {{{%glitchnumber%/%fpt[11]%}\1}+1}"
+#======================================================================================================================
+set cMaT .cityManager.allTroop.
+set mcaC m_city.allCities
+set CityCount $%mcaC%.length$
+set cityIdx 0
+set totalFixCost 0
+set totalFoodGain 0
+set fixCount 0
+#======================================================================================================================
+# Output header to war log immediately
+set HeaderMsg "<br><font color='#CC2EFA'><b>========== GLITCH OPTIMIZER - ALL CITIES ==========</b></font><br><font color='#000000'>Goal: 2B+ net food per city | Minimize troop loss</font>"
+set out "$m_city.cityManager.warLogMsg(%HeaderMsg%)$"
+echo "Starting Glitch Optimizer - Scanning all cities..."
+echo "========================================"
+#======================================================================================================================
+label nextCity
+set cityName $%mcaC%[{%cityIdx%}].castle.name$
+echo ""
+echo "=== [{%cityIdx%+1}] %cityName% ==="
+set cityNetFood 0
+set cityGenCount 0
+set cityEvenCount 0
+set logi 0
+#======================================================================================================================
+label checkTroop
+set troopCount $%mcaC%[{%cityIdx%}]%cMaT%%gltctt2[{%logi%}]%$
+set CompletedCGlitch 0
+#----------------------------------------------------------------------------------------------------------------------
+label countGlitch
+if {%troopCount%>{%cfrn[{%logi%}]%+{%cfrn[{%logi%}]%*%CompletedCGlitch%}}} set CompletedCGlitch {%CompletedCGlitch%+1}
+if {%troopCount%>{%cfrn[{%logi%}]%+{%cfrn[{%logi%}]%*%CompletedCGlitch%}}} goto countGlitch
+#----------------------------------------------------------------------------------------------------------------------
+if {%CompletedCGlitch%==0} goto skipTroop
+set isOdd {{%CompletedCGlitch%|2}==1}
+# Calculate fix cost for ALL glitches (ODD needs it for warning)
+set comppletedCglitchnum {%cfrn[{%logi%}]%*%CompletedCGlitch%}
+set remainder {%troopCount%-%comppletedCglitchnum%}
+set fixCost {%remainder%+1}
+if {%isOdd%==true} set cityGenCount {%cityGenCount%+1}
+if {%isOdd%==true} set cityNetFood {%cityNetFood%+%foodperglitch%}
+if {%isOdd%==true} echo "  ODD %tDisplay[{%logi%}]%: %CompletedCGlitch%x GLITCHED -> GENERATING +2.1B food"
+if {%isOdd%==true} echo "      WARNING: untrain %tNames[{%logi%}]%:%fixCost% REMOVES GLITCH!"
+if {%isOdd%==false} set cityEvenCount {%cityEvenCount%+1}
+#----------------------------------------------------------------------------------------------------------------------
+# EVEN glitch processing
+if {%isOdd%==false} echo "  EVEN %tDisplay[{%logi%}]%: %CompletedCGlitch%x NOT GLITCHED"
+if {%isOdd%==false} echo "      FIX: untrain %tNames[{%logi%}]%:%fixCost% -> MAKES ODD +2.1B!"
+if {%isOdd%==false} set totalFixCost {%totalFixCost%+%fixCost%}
+if {%isOdd%==false} set totalFoodGain {%totalFoodGain%+%foodperglitch%}
+if {%isOdd%==false} set fixCount {%fixCount%+1}
+#----------------------------------------------------------------------------------------------------------------------
+label skipTroop
+set logi {%logi%+1}
+if {%logi%<12} goto checkTroop
+#======================================================================================================================
+# City summary - output to war log with enhanced colors
+set CityMsg "<br><font color='#0066CC'><b>%cityName%</b></font>: "
+if {%cityNetFood%>=2000000000} set CityMsg "%CityMsg%<font color='#008000'><b>%cityGenCount% ODD - GOOD!</b></font>"
+if {%cityNetFood%<2000000000&&%cityNetFood%>0} set CityMsg "%CityMsg%<font color='#FF6600'><b>%cityGenCount% ODD - NEEDS FIX</b></font>"
+if {%cityNetFood%==0} set CityMsg "%CityMsg%<font color='#FF0000'><b>NO GLITCHES</b></font>"
+if {%cityEvenCount%>0} set CityMsg "%CityMsg% | <font color='#FF0000'><b>%cityEvenCount% EVEN</b></font>"
+set out "$m_city.cityManager.warLogMsg(%CityMsg%)$"
+#======================================================================================================================
+echo "  Summary: %cityGenCount% ODD | %cityEvenCount% EVEN"
+set cityIdx {%cityIdx%+1}
+if {%cityIdx%<%CityCount%} goto nextCity
+echo "======================================="
+echo "Scan complete!"
+#======================================================================================================================
+# Final summary - output to war log with enhanced colors
+set TotalMsg "<br><font color='#CC2EFA'><b>========== TOTALS ==========</b></font><br>EVEN fixes: <font color='#CC2EFA'><b>%fixCount%</b></font> | Troops to untrain: <font color='#FF0000'><b>%totalFixCost%</b></font> | Food gain: <font color='#008000'><b>%totalFoodGain%</b></font>"
+set out "$m_city.cityManager.warLogMsg(%TotalMsg%)$"
+echo "Done! Check war log for results."
+

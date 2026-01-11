@@ -1,0 +1,209 @@
+// ============================================
+// LOCKOUT MASTER v2.0
+// Mass 1-troop attacks from multiple accounts
+// For AE2/RoboEvony - Account Coordination
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+// PURPOSE: Lock out target by filling march slots
+// with 1-troop attacks from many accounts/cities
+// ============================================
+
+// ==========================================
+// CONFIGURATION - EDIT THESE
+// ==========================================
+
+// === TARGET ===
+set targetX 0
+set targetY 0
+set targetName "LockoutTarget"
+
+// === LOCKOUT SETTINGS ===
+set troopType "scout"
+set troopCount 1
+set attacksPerCity 10
+set delayBetweenAttacks 500
+set useAllCities 1
+
+// === ACCOUNT SELECTION ===
+set totalAccountsToUse 100
+set accountStartIndex 1
+set accountEndIndex 100
+set citiesPerAccount 10
+
+// === TROOP TYPE OPTIONS ===
+// scout, warrior, pikeman, swordsman, archer
+// cavalry, cataphract, transporter, ballista, ram, catapult
+set lockoutTroopCode "s"
+
+// === TIMING ===
+set waveDelay 100
+set accountDelay 1000
+set cycleDelay 60000
+
+// === FEATURES ENABLE/DISABLE ===
+set enableMultiCity 1
+set enableMultiAccount 1
+set enableContinuousLock 1
+set enableTroopTypeRotate 0
+set enableLogging 1
+set enableSafetyCheck 1
+set maxTotalAttacks 10000
+
+// === RUN MODE ===
+set runMode "continuous"
+set lockDurationMinutes 60
+
+// ==========================================
+// REAL COMMANDS USED (from CityState.as)
+// ==========================================
+// spamattack coords troop count
+// attack coords hero troops
+// getspamhero attrib
+// ==========================================
+
+// ==========================================
+// DO NOT EDIT BELOW
+// ==========================================
+
+set totalAttacksSent 0
+set currentAccount 0
+set currentCity 0
+
+echo ============================================
+echo LOCKOUT MASTER v2.0
+echo Target: %targetX%,%targetY% (%targetName%)
+echo Accounts: %totalAccountsToUse%
+echo Attacks/City: %attacksPerCity%
+echo ============================================
+
+// Validate
+if targetX = 0 then if targetY = 0 then goto noTarget
+
+// Main execution
+if runMode = "once" then goto lockOnce
+if runMode = "continuous" then goto lockContinuous
+goto lockOnce
+
+// ==========================================
+// SINGLE LOCKOUT WAVE
+// ==========================================
+label lockOnce
+echo [LOCK] Executing single lockout wave...
+gosub executeLockoutWave
+goto complete
+
+// ==========================================
+// CONTINUOUS LOCKOUT
+// ==========================================
+label lockContinuous
+echo [LOCK] Continuous lockout mode...
+
+label continuousLoop
+gosub executeLockoutWave
+
+// Check limits
+if totalAttacksSent >= maxTotalAttacks then goto complete
+
+echo [LOCK] Cycle complete, continuing...
+sleep %cycleDelay%
+goto continuousLoop
+
+// ==========================================
+// EXECUTE LOCKOUT WAVE (Per City)
+// ==========================================
+label executeLockoutWave
+echo ----------------------------------------
+echo [WAVE] Starting lockout wave...
+
+// For this city, send multiple 1-troop attacks
+set waveIndex 0
+
+label cityWaveLoop
+
+// Get any available hero
+getspamhero power
+
+// Build minimal troop string
+if lockoutTroopCode = "s" then set troops "s%troopCount%"
+if lockoutTroopCode = "w" then set troops "w%troopCount%"
+if lockoutTroopCode = "a" then set troops "a%troopCount%"
+if lockoutTroopCode = "c" then set troops "c%troopCount%"
+if lockoutTroopCode = "t" then set troops "t%troopCount%"
+
+// Send 1-troop attack
+echo [ATTACK %waveIndex%] Sending %troopCount% %troopType%...
+attack %targetX% %targetY% spamhero %troops%
+
+set totalAttacksSent totalAttacksSent + 1
+set waveIndex waveIndex + 1
+
+sleep %delayBetweenAttacks%
+
+// Continue until attacks per city reached
+if waveIndex < attacksPerCity then goto cityWaveLoop
+
+echo [WAVE] City wave complete - %waveIndex% attacks
+return
+
+// ==========================================
+// USE SPAMATTACK (Built-in command)
+// ==========================================
+label useSpamAttack
+echo [SPAM] Using built-in spamattack command...
+
+// spamattack is more efficient for mass attacks
+// spamattack coords troop count
+set coordString "%targetX%,%targetY%"
+spamattack %coordString% %troops% %attacksPerCity%
+
+return
+
+// ==========================================
+// MULTI-CITY LOCKOUT
+// ==========================================
+label multiCityLockout
+echo [MULTI] Multi-city lockout...
+
+set cityIndex 0
+label cityLoop
+
+// Each city sends its wave
+gosub executeLockoutWave
+
+set cityIndex cityIndex + 1
+sleep %accountDelay%
+
+if cityIndex < citiesPerAccount then goto cityLoop
+
+echo [MULTI] All cities complete
+return
+
+// ==========================================
+// TROOP TYPE ROTATION
+// ==========================================
+label rotateTroopType
+// Rotate through troop types to avoid detection
+if lockoutTroopCode = "s" then set lockoutTroopCode "w"
+if lockoutTroopCode = "w" then set lockoutTroopCode "a"
+if lockoutTroopCode = "a" then set lockoutTroopCode "s"
+return
+
+// ==========================================
+// ERROR HANDLERS
+// ==========================================
+label noTarget
+echo [ERROR] Set target coordinates!
+echo Usage: set targetX 100 / set targetY 200
+stop
+
+// ==========================================
+// COMPLETION
+// ==========================================
+label complete
+echo ============================================
+echo LOCKOUT MASTER COMPLETE
+echo Total Attacks Sent: %totalAttacksSent%
+echo Target: %targetX%,%targetY%
+echo ============================================
+stop

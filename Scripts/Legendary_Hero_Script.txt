@@ -1,0 +1,44 @@
+//Legendry hero script
+setsilence true
+set minPol 100
+set minAtk 130
+set minIntel 110
+
+gosub improvehero %minPol% %minAtk% %minIntel%
+if {%_0%==0} goto end
+sleep 4:00:00
+loop
+goto end
+
+# syntax: gosub improvehero minPol minAtk minIntel
+# return 0 if success, -1 if still need improvement, -2 iferror expression goto label
+label improvehero
+set resp $m_city.actionFactory.getHeroCommand().GetRandomHero()$
+label improvehero_start
+gosub waitresponse %resp% 10
+if {%_0%==1} gosubreturn -2
+# echo $%resp%.toDebugString()$
+set _h %resp%.randomherobean
+echo "Current hero attributes: $%_h%.management$ $%_h%.power$ $%_h%.stratagem$, reset: $%_h%.resetcount$"
+set _pol {$%_h%.management$>=%_1%}
+set _atk {$%_h%.power$>=%_2%}
+set _intel {$%_h%.stratagem$>=%_3%}
+if {%_pol%&&%_atk%&&%_intel%} gosubreturn 0 // all good attributes
+if {$%_h%.resetcount$==0} gosubreturn -1 // no more spins
+set resp $m_city.actionFactory.getHeroCommand().RetSetHeroAttri(%_pol%,%_atk%,%_intel%,false)$
+goto improvehero_start
+
+# syntax: gosub waitresponse responseHandle maxTimeInSecond
+# return: 0 if response is available, 1 if time out
+label waitresponse
+set _starttime $m_city.getRawTime()$
+label waitresponse_start
+iferror {$%_1%.ok$} waitresponse_wait
+gosubreturn 0
+
+label waitresponse_wait
+if {$m_city.getRawTime()$>{%_starttime%+%_2%*1000}} gosubreturn 1
+sleep 0.05
+goto waitresponse_start
+sleep 86500
+loop

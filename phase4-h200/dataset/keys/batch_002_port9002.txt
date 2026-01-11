@@ -1,0 +1,13 @@
+# Proxy: SOCKS4 127.0.0.1:9002
+# Accounts: 10
+
+andrew@flirtomatic.com:valhalla9
+andrewrundgren@googlemail.com:megan31
+andycadd@comcast.net:724722801a
+annadepe1@gmail.com:Havana01
+anton.evony@gmail.com:J3d!ma5ter
+antonspreckley@yahoo.co.uk:buckden810446
+apmjunior@aol.com:AJcrazytons765
+aragog1279@gmail.com:0ne2$even9
+armyofgodz@yahoo.com:7szn}4W]
+aroman83@aol.com:Balimoon1

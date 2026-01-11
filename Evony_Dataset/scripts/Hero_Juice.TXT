@@ -1,0 +1,44 @@
+# item types Tea Wine Gin Oil
+set HeroItem Tea //
+# ignore heros with energy higher than this
+set lowenergy 4 //
+#----------------------------------------------------------
+setsilence true //
+set hi 0
+iferror %test% set test false
+label HeroJuicerMain
+set he $c.cm.heroes[%hi%].stamina$
+set hn $c.cm.heroes[%hi%].name$
+if {%he%<%lowenergy%} gosub Juicer
+set hi {%hi%+1}
+if {%hi%<$c.cm.heroes.length$} goto HeroJuicerMain
+goto HeroJuicerEnd
+
+label GetTea
+set RealHeroItem Tea
+set nullVar $m_city.accountTab.itemInfo.fetchPage(Tea)$
+if {$c.accountTab.itemInfo.itemsArray[0].name$==Tea} set TeaCount $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {$c.accountTab.itemInfo.itemsArray[0].name$!=Tea} echo "Cant find the TEA!"
+iferror %TeaCount% goto HeroJuicererrorend
+gosubreturn
+
+label GetWine
+set RealHeroItem Lugui_Wine
+set nullVar $m_city.accountTab.itemInfo.fetchPage(Lugui_Wine)$
+if {$c.accountTab.itemInfo.itemsArray[0].name$==Lugui_Wine} set WineCount $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {$c.accountTab.itemInfo.itemsArray[0].name$!=Lugui_Wine} echo "Cant find the Lugui Wine!"
+iferror %WineCount% goto HeroJuicererrorend
+gosubreturn
+
+label GetGin
+set RealHeroItem Panax_ginseng
+set nullVar $m_city.accountTab.itemInfo.fetchPage(Panax_ginseng)$
+if {$c.accountTab.itemInfo.itemsArray[0].name$==Panax_ginseng} set GinCount $m_city.accountTab.itemInfo.itemsArray[0].count$
+if {$c.accountTab.itemInfo.itemsArray[0].name$!=Panax_ginseng} echo "Cant find the Panax ginseng!"
+iferror %GinCount% goto HeroJuicererrorend
+gosubreturn
+
+label GetOil
+set RealHeroItem Essential_Oil
+set nullVar $m_city.accountTab.itemInfo.fetchPage(Essential_Oil)$
+if {$c.accountTab.itemInfo.itemsArray[0].name$==Essential_Oil} set OilCount $m_city.accountTab.itemInfo.itemsArray[0].count$

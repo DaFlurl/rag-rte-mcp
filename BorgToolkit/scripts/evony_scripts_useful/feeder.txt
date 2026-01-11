@@ -1,0 +1,94 @@
+// alt feeder
+setarr TgtList "507,702 287,648 427,692 465,637 302,776 485,694 212,784 230,733 495,619"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 f:1000000000
+repeat 4
+transport %CurrTgt% t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+
+========================================================
+
+// alt feeder
+setarr TgtList "302,696"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:200000 i:2000000000
+repeat 5
+transport %CurrTgt% t:200000 i:2000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 5
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:200000 s:2000000000
+repeat 5
+transport %CurrTgt% t:200000 s:2000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+loop
+
+==================================================================
+
+// alt feeder
+setarr TgtList "302,697"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy reinforce %CurrTgt%"
+reinforce %CurrTgt% t:100000 w:1000000000
+repeat 5
+reinforce %CurrTgt% t:100000 w:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 5
+// alt feeder
+setarr TgtList "302,697"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy reinforce %CurrTgt%"
+reinforce %CurrTgt% t:100000 s:1000000000
+repeat 5
+reinforce %CurrTgt% t:100000 s:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 5
+// alt feeder
+setarr TgtList "302,697"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy reinforce %CurrTgt%"
+reinforce %CurrTgt% t:100000 i:1000000000
+repeat 5
+reinforce %CurrTgt% t:100000 i:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 5
+// alt feeder
+setarr TgtList "302,697"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy reinforce %CurrTgt%"
+reinforce %CurrTgt% t:100000 g:1000000000
+repeat 5
+reinforce %CurrTgt% t:100000 g:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+loop
+
+

@@ -1,0 +1,13 @@
+# Proxy: SOCKS4 127.0.0.1:9000
+# Accounts: 10
+
+0732051539@mtnloaded.co.za:shawne
+12antonius1972@gmail.com:$BGrB7u76
+64stewart@gmail.com:Crusaderz991773!
+a-j-watson@hotmail.co.uk:Bankai!
+aaron-evony@jcuz.com:kugssen
+adelena.cox@gmail.com:shawne
+alanweller625@btinternet.com:mrjoshua
+alex@alanta.com:stop123
+alex_ermolaev@yahoo.com:stop123
+alf481@hotmail.com:WarHammer1996

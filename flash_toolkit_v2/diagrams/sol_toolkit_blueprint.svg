@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="780" viewBox="0 0 1500 780">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#333"/>
+    </marker>
+    <style>
+      .box { fill: #f8f8f8; stroke: #333; stroke-width: 2; rx: 14; ry: 14; }
+      .title { font: 700 22px sans-serif; fill: #111; }
+      .text { font: 15px sans-serif; fill: #111; }
+      .small { font: 12px sans-serif; fill: #555; }
+      .line { stroke: #333; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+<text class="title" x="20" y="40">Building an Advanced .SOL Toolkit</text>
+<rect class="box" x="60" y="90" width="430" height="200"/>
+<text class="title" x="75" y="120">1) Core Codecs</text>
+<text class="text" x="75" y="145">Start with a robust parser/encoder:</text>
+<text class="text" x="75" y="167">- rust-flash-lso for reliability</text>
+<text class="text" x="75" y="189">- Py3AMF as a reference</text>
+<text class="text" x="75" y="211">- AMF.net for .NET integration</text>
+<rect class="box" x="520" y="90" width="430" height="200"/>
+<text class="title" x="535" y="120">2) Multi‑Language Wrappers</text>
+<text class="text" x="535" y="145">Expose codec via Python/Go/C# wrappers</text>
+<text class="text" x="535" y="167">Use FFI or cbindgen to bind Rust</text>
+<text class="text" x="535" y="189">Provide CLI + library APIs</text>
+<text class="text" x="535" y="211">Allow other languages (JS) via WebAssembly</text>
+<rect class="box" x="980" y="90" width="430" height="200"/>
+<text class="title" x="995" y="120">3) GUI & CLI Frontends</text>
+<text class="text" x="995" y="145">GUI: Electron/Qt/Java (e.g., SolVE)</text>
+<text class="text" x="995" y="167">CLI: soltool, custom scripts</text>
+<text class="text" x="995" y="189">Batch mode: scan, export, diff</text>
+<text class="text" x="995" y="211">Profiles & templates for common edits</text>
+<rect class="box" x="60" y="340" width="430" height="240"/>
+<text class="title" x="75" y="370">4) Validation & Evidence</text>
+<text class="text" x="75" y="395">Implement round‑trip encode/decode tests</text>
+<text class="text" x="75" y="417">Corpus of real LSOs for regression</text>
+<text class="text" x="75" y="439">Hashing, backup & versioning</text>
+<text class="text" x="75" y="461">Generate JSON dumps and diff patches</text>
+<rect class="box" x="520" y="340" width="430" height="240"/>
+<text class="title" x="535" y="370">5) Integration Hooks</text>
+<text class="text" x="535" y="395">Import/export to Svony/RoboTool</text>
+<text class="text" x="535" y="417">Watch Macromedia folders for changes</text>
+<text class="text" x="535" y="439">Drive-letter & folder mapping via PathManager</text>
+<text class="text" x="535" y="461">Support multiple user profiles</text>
+<rect class="box" x="980" y="340" width="430" height="240"/>
+<text class="title" x="995" y="370">6) Advanced Features</text>
+<text class="text" x="995" y="395">Schema inference & static analysis</text>
+<text class="text" x="995" y="417">Search & replace operations</text>
+<text class="text" x="995" y="439">Scripting for custom rules</text>
+<text class="text" x="995" y="461">Plugin architecture for new file types</text>
+<line class="line" x1="280" y1="290" x2="280" y2="340"/>
+<line class="line" x1="740" y1="290" x2="740" y2="340"/>
+<line class="line" x1="1200" y1="290" x2="1200" y2="340"/>
+<text class="small" x="60" y="750">By layering these modules, you create a maintainable, extensible framework for .sol manipulation.</text>
+</svg>

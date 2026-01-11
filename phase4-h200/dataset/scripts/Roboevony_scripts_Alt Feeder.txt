@@ -1,0 +1,31 @@
+// alt feeder
+setarr TgtList "436,777 475,773 478,720 492,670 478,728 211,795 531,391 307,641 490,240 477,764 332,644 534,713 349,669 543,640 526,266 503,664 432,691 480,605 760,364 463,224 426,150 429,798 514,333 246,799 582,244 427,12 500,323 796,467 426,187 787,771 554,784 478,241 563,729 419,695 403,649 476,155 454,164 476,156 281,645 595,56 466,631 460,623 301,738 460,605 465,597 458,584 466,577 564,362 468,558 430,695 471,711 484,710 529,710 529,704 279,697 525,695 523,687 462,795 521,680 527,673 471,284 760,365 270,615 562,261 473,717 435,258 761,362 757,363 387,629 422,628 380,771 418,637 0,798 445,789 526,672 439,647 412,793 430,699 560,669 409,799498,698 514,688 516,678 512,656 513,645 562,618 386,735 513,637 513,654395,692 303,733 258,675 292,703 299,686 354,792 215,659 292,601 203,744"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 f:1000000000
+repeat 4
+transport %CurrTgt% t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+
+--------------------------------------------------
+
+there are also 2 ways to make the bot automaticly move resources ..
+
+keepresource 101,101 g:10m
+this goal will automaticly send all gold in excess over 10 mil to city at 101,101
+You can set diff keepresource goals for each resource, or combine them like:
+  keepresource 101,101 g:10m,f:10m,w:10m
+
+requesthelp 101,101 s:1 s:1 g:5m g:25m
+this gold will make the bot transport in the other directions ... 
+if this city has less than 5 mil gold, and 101,101 has more than 25m gold
+the bot will transport gold from 101,101 to this city
+the s:1 s:1 are settings for troops
+the requesthelp goal must have settings for both troop and resources
+just using 1 scout to keep in tune with syntax of the goal
+
+-------------------------------------------------------------------------------

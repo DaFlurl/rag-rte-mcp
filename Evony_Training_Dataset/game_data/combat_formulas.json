@@ -1,0 +1,89 @@
+{
+  "damage_formula": {
+    "base": "attacker_attack * attacker_count * (1 - defender_defense / (defender_defense + 500))",
+    "variables": {
+      "attacker_attack": "unit base attack + hero bonus + tech bonus",
+      "defender_defense": "unit base defense + hero bonus + tech bonus + wall bonus"
+    }
+  },
+  "hero_bonus": {
+    "attack": "hero_attack_stat * 0.01 per point",
+    "defense": "hero_defense_stat * 0.01 per point",
+    "tech_per_level": "2% attack, 2% defense, 2% life"
+  },
+  "wall_defense_bonus": {
+    "per_level": 0.1,
+    "max_bonus": 1.0,
+    "formula": "1 + (wall_level * 0.1)"
+  },
+  "terrain_modifiers": {
+    "plains": {
+      "attack": 1.0,
+      "defense": 1.0
+    },
+    "forest": {
+      "attack": 0.9,
+      "defense": 1.1,
+      "archer_bonus": 0.1
+    },
+    "desert": {
+      "attack": 1.1,
+      "defense": 0.9,
+      "cavalry_bonus": 0.15
+    },
+    "hill": {
+      "attack": 0.85,
+      "defense": 1.15
+    },
+    "lake": {
+      "attack": 0.8,
+      "defense": 1.2
+    },
+    "swamp": {
+      "attack": 0.7,
+      "defense": 1.0,
+      "speed_penalty": 0.5
+    }
+  },
+  "range_advantage": {
+    "description": "Units with higher range attack first",
+    "ranged_rounds": 3,
+    "melee_after": "After ranged rounds, melee combat begins"
+  },
+  "combat_rounds": {
+    "max_rounds": 100,
+    "round_duration": "1 attack cycle per round",
+    "retreat_threshold": 0.1
+  },
+  "fortification_effectiveness": {
+    "trap": {
+      "vs_infantry": 3,
+      "vs_cavalry": 1,
+      "vs_siege": 0
+    },
+    "abatis": {
+      "vs_infantry": 1,
+      "vs_cavalry": 3,
+      "vs_siege": 0
+    },
+    "archer_tower": {
+      "vs_infantry": 2,
+      "vs_cavalry": 2,
+      "vs_siege": 1
+    },
+    "rolling_logs": {
+      "vs_infantry": 2,
+      "vs_cavalry": 1,
+      "vs_siege": 0
+    },
+    "trebuchet": {
+      "vs_infantry": 3,
+      "vs_cavalry": 3,
+      "vs_siege": 1
+    }
+  },
+  "npc_scaling": {
+    "formula": "base_troops * level * 1.5",
+    "loot_formula": "base_resources * level * 2"
+  }
+}

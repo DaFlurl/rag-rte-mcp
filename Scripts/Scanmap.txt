@@ -1,0 +1,81 @@
+from IDGAF on the Skype room:
+scanrec 799,0 0,799             // Entire Map
+scanrec 0,0 199,199             //Friesland
+scanrec 0,200 199,399         //Lower Lorraine
+scanrec 0,400 199,599         //Upper Lorraine
+scanrec 0,600 199,799         //Burgundy
+scanrec 200,0 399,199         //Saxony
+scanrec 200,200 399,399     //Franconia
+scanrec 200,400 399,599     //Swabia
+scanrec 200,600 399,799     //Lombardy
+scanrec 400,0 599,199         //North March
+scanrec 400,200 599,399     //Thuringia
+scanrec 400,400 599,599     //Bavaria
+scanrec 400,600 599,799     //Tuscany
+scanrec 600,0 799,199         //Bohemia
+scanrec 600,200 799,399     //Moravia
+scanrec 600,400 799,599     //Carinthia
+scanrec 600,600 799,799     //Romagna
+
+==============================================================================================================================================
+==============================================================================================================================================
+==============================================================================================================================================
+
+10:11:02  Command: searchcastle AGUS1
+10:11:02  === search castle for AGUS1 ===
+DISTANCE	STATE	COORDS	TYPE	LEVEL	NAME	BY	OF	STATUS	PRESTIGE	HONOR	SUZERAIN
+4.24	Lombardy	297,693	Castle	12	Kiev	AGUS1	7777777	peace	50530039	1881196028	null
+9.21	Lombardy	292,698	Castle	10	New city	AGUS1	7777777	peace	50530039	1893138359	null
+380.9	Lower Lorraine	97,233	Castle	10	Berlin	AGUS1	7777777	peace	50528018	1448656841	null
+382.62	Franconia	387,317	Castle	10	AgStore	AGUS1	7777777	peace	50528018	1460665281	null
+384.16	Lower Lorraine	94,235	Castle	10	Corona	AGUS1	7777777	peace	50528018	1448656841	null
+387.52	Franconia	387,312	Castle	10	New city	AGUS1	7777777	peace	50528018	1460665281	null
+387.56	Franconia	315,294	Castle	10	AgWar	AGUS1	7777777	peace	50528018	1460665281	null
+390.21	Franconia	307,297	Castle	10	Agtown	AGUS1	7777777	peace	50528018	1460665281	null
+391.01	Franconia	303,299	Castle	10	AgVille	AGUS1	7777777	peace	50528018	1460665281	null
+469.99	Lower Lorraine	23,291	Castle	10	Whakaakk	AGUS1	7777777	peace	50528018	1448656841	null
+===== end search =====
+----------------------------------------------------------------------------------------------------------------------------------------------
+22:51:34  Command: searchcastle AGUS1
+22:51:34  === search castle for AGUS1 ===
+DISTANCE	STATE	COORDS	TYPE	LEVEL	NAME	BY	OF	STATUS	PRESTIGE	HONOR	SUZERAIN
+4.24	Lombardy	297,693	Castle	12	Kiev	AGUS1	7777777	peace	50541476	1423117936	null
+9.21	Lombardy	292,698	Castle	10	New city	AGUS1	7777777	peace	50541476	1334727990	null
+380.9	Lower Lorraine	97,233	Castle	10	Berlin	AGUS1	7777777	peace	50541184	1084267146	null
+382.62	Franconia	387,317	Castle	10	AgStore	AGUS1	7777777	peace	50541184	1195214577	null
+384.16	Lower Lorraine	94,235	Castle	10	Corona	AGUS1	7777777	peace	50541184	1084267146	null
+387.56	Franconia	315,294	Castle	10	AgWar	AGUS1	7777777	peace	50541184	1166408972	null
+390.21	Franconia	307,297	Castle	10	Agtown	AGUS1	7777777	peace	50541184	1166408972	null
+391.01	Franconia	303,299	Castle	10	AgVille	AGUS1	7777777	peace	50541184	1166408972	null
+469.99	Lower Lorraine	23,291	Castle	10	Whakaakk	AGUS1	7777777	peace	50541184	1074842869	null
+===== end search =====
+
+==============================================================================================================================================
+==============================================================================================================================================
+===============================================================================================================================================
+
+\searchcastle Rowdster
+
+166,590
+168,560
+60,480
+201,373
+53,450
+65,436
+194,349	
+186,351
+
+02:24:55  Command: searchcastle Rowdster
+02:24:55  === search castle for Rowdster ===
+DISTANCE	STATE	COORDS	TYPE	LEVEL	NAME	BY	OF	STATUS	PRESTIGE	HONOR	SUZERAIN
+172.42	Upper Lorraine	166,590	Castle	10	ANZAC	Rowdster	69	peace	49370183	1466055	null
+190.92	Upper Lorraine	168,560	Castle	10	Tactical	Rowdster	69	peace	49370183	1466055	null
+324.37	Upper Lorraine	60,480	Castle	10	SLAYERTOWN	Rowdster	69	peace	49370147	1466055	null
+338.42	Franconia	201,373	Castle	10	Mauser	Rowdster	69	peace	49370183	1466055	null
+350.02	Upper Lorraine	53,450	Castle	10	Restrepo3	Rowdster	69	peace	49370147	1466055	null
+351.8	Upper Lorraine	65,436	Castle	10	KAC2	Rowdster	69	peace	49370147	1466055	null
+362.16	Lower Lorraine	195,350	Castle	10	CAT	Rowdster	69	peace	49370183	1466055	null
+363.41	Lower Lorraine	194,349	Castle	10	BLADE	Rowdster	69	peace	49370183	1466055	null
+363.97	Lower Lorraine	186,351	Castle	10	ALOHA	Rowdster	69	peace	49370183	1466055	null
+===== end search =====
+

@@ -1,0 +1,994 @@
+// alt feeder
+
+setarr TgtList "788,5 10,798 0,798"
+set i 0
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:200000 g:2000000000
+repeat 2
+transport %CurrTgt% t:200000 g:2000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 5
+loop
+
+
+
+
+
+
+setsilence true
+set coords 0,0//set coords
+set troops cata:100k
+set bannertroops cp:990k,a:10k
+set usebanners 0 // set to 1 if want to use banners
+set queentofight 1 // set to zero if not
+set kingfight 1 // set to zero if not
+set UseEnergyItems 0 // set to zero if not
+set speed 2
+
+
+# ---- don't change below this line ---- #
+
+function awardheroes() {
+for (var i=0;i<c.cm.heroes.length;i+=1) {
+if (c.cm.heroes[i].status==0) c.af.getHeroCommand().awardGold(c.castle.id,c.cm.heroes[i].id);
+else continue;
+if (UseEnergyItems==1||c.cm.heroes[i].isHero!=0) {
+if (c.cm.heroes[i].stamina < 50 && c.getItem("hero.item.Tea").count >0) c.af.getHeroCommand().useItem(c.castle.id,c.cm.heroes[i].id,"hero.item.Tea");
+else if (c.cm.heroes[i].stamina < 30 && c.getItem("hero.item.Lugui_Wine").count > 0) c.af.getHeroCommand().useItem(c.castle.id,c.cm.heroes[i].id,"hero.item.Lugui_Wine");
+else if (c.cm.heroes[i].stamina < 10 && c.getItem("hero.item.Panax_ginseng").count > 0) c.af.getHeroCommand().useItem(c.castle.id,c.cm.heroes[i].id,"hero.item.Panax_ginseng");
+}
+}
+}
+
+function fireheros() {
+for (var i=0;i<c.cm.heroes.length;i+=1) {
+if (c.cm.heroes[i].isHero == 0 && c.cm.heroes[i].stamina < 4 && c.cm.heroes[i].status == 0 &&  c.cm.heroes[i].level < 101) c.af.getHeroCommand().fireHero(c.castle.id,c.cm.heroes[i].id);
+}
+}
+
+function herolevelup() {
+for (var i=0;i<c.cm.heroes.length;i+=1) {
+if (c.cm.heroes[i].status!=0) continue;
+c.af.getEquipmentCommands().WearAllEquipmenttech(c.cm.heroes[i].id,2);
+var l=c.cm.heroes[i].level;
+var exp=c.cm.heroes[i].experience;
+while (exp>c.cm.heroes[i].upgradeExp&&l<100) {
+c.af.getHeroCommand().levelUp(c.castle.id,c.cm.heroes[i].id);
+c.af.getHeroCommand().addPoint2(c.castle.id,c.cm.heroes[i].id,0,1,0);
+exp-=c.cm.heroes[i].upgradeExp;
+l+=1;
+} 
+}
+}
+
+function sendattacks(i) {
+i=int(i);
+var jj=0;
+for (;i<c.cm.heroes.length;i+=1) {
+if (c.cm.heroes[i].status!=0) continue;
+if (c.cm.heroes[i].name=="Queen"&&queentofight!=1) continue;
+if (c.cm.heroes[i].name=="King"&&kingfight!=1) continue;
+var m;
+if (usebanners==1&&c.getItem("player.item.stygandrsbannerofthehorde").count>0) {
+m=c.getArmy("attack",c.getValue("Coordinate",coords),c.cm.heroes[i].name,c.getValue("Troop",bannertroops));
+m.useItem=true;
+}
+else {
+m=c.getArmy("attack",c.getValue("Coordinate",coords),c.cm.heroes[i].name,c.getValue("Troop",troops));
+}
+m.heroId=c.cm.heroes[i].id;
+c.af.getArmyCommands().newArmy(c.castle.id,m);
+c.cm.logMsg("Sending with "+c.cm.heroes[i].name);
+jj+=1;
+if (jj>=speed) break;
+}
+return i+1;
+}
+
+function fixstuckheroes() {
+var m=c.getRawTime();
+var s=false;
+for (var i=0;i<c.cm.localArmies.length;i+=1) {
+if (c.cm.localArmies[i].reachTime+2000<m) {
+c.af.getHeroCommand().callBackHero(c.castle.id,c.cm.localArmies[i].heroid);
+s=true;
+}
+}
+return s;
+}
+
+function hirebesthero() {
+var atk=0;
+var heroname=null;
+for (var i=0;i<c.cm.innHeroes.length;i+=1) {
+if (c.cm.innHeroes[i].power>atk) {
+atk=c.cm.innHeroes[i].power;
+heroname=c.cm.innHeroes[i].name;
+}
+}
+c.af.getHeroCommand().hireHero(c.castle.id,heroname);
+return heroname;
+}
+
+function isherospotsfull() {
+var max=c.cm.getBuildingLevel(c.buildingTypes.fh);
+for (var i=0;i<c.cm.heroes.length;i+=1) {
+if ((c.cm.heroes[i].name=="Queen"||c.cm.heroes[i].name=="King")&&c.cm.heroes[i].isHero!=0) {
+max+=1;
+break;
+}
+}
+if (c.cm.heroes.length >= max) return true;
+return false;
+}
+
+autoheal true
+label start
+if (c.cm.resource.gold < 1000000) goto no_gold_error
+if (c.cm.resource.food.amount < 100000000) goto no_food_err
+if (fixstuckheroes()) sleep 2
+set nv $m_dyn.herolevelup()$
+set nv $m_dyn.fireheros()$
+set nv $m_dyn.awardheroes()$
+set j 0
+label attack
+set j $m_dyn.sendattacks(j)$
+if (j>=c.cm.heroes.length) goto endattack
+sleep 1
+goto attack
+label endattack
+sleep 1
+if (c.cm.localArmies.length == 0) goto no_wave_err
+if (isherospotsfull()) goto start
+label refreshInn
+set nv $c.cm.updateInn()$
+sleep 1
+set nv $m_dyn.hirebesthero()$
+sleep 1
+if (isherospotsfull()) goto start
+goto refreshInn
+label no_gold_error
+echo "no gold error"
+sleep 1
+goto start
+label no_food_err
+echo "no food error, either RE is slow to respond or you ran out of rams"
+sleep 1
+goto start
+label no_wave_err
+echo "No waves sent error, check troop count, target can be attacked"
+sleep 5
+goto startc. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+setsilence true
+set coords 0,0//set coords
+set troops a:2k,cp:98k
+set bannertroops cp:990k,a:10k
+set usebanners 0 // set to 1 if want to use banners
+set queentofight 1 // set to zero if not
+set kingfight 1 // set to zero if not
+set UseEnergyItems 0 // set to zero if not
+set speed 2
+
+
+# ---- don't change below this line ---- #
+
+function awardheroes() {
+for (var i=0;i<c.cm.heroes.length;i+=1) {
+if (c.cm.heroes[i].status==0) c.af.getHeroCommand().awardGold(c.castle.id,c.cm.heroes[i].id);
+else continue;
+if (UseEnergyItems==1||c.cm.heroes[i].isHero!=0) {
+if (c.cm.heroes[i].stamina < 50 && c.getItem("hero.item.Tea").count >0) c.af.getHeroCommand().useItem(c.castle.id,c.cm.heroes[i].id,"hero.item.Tea");
+else if (c.cm.heroes[i].stamina < 30 && c.getItem("hero.item.Lugui_Wine").count > 0) c.af.getHeroCommand().useItem(c.castle.id,c.cm.heroes[i].id,"hero.item.Lugui_Wine");
+else if (c.cm.heroes[i].stamina < 10 && c.getItem("hero.item.Panax_ginseng").count > 0) c.af.getHeroCommand().useItem(c.castle.id,c.cm.heroes[i].id,"hero.item.Panax_ginseng");
+}
+}
+}
+
+function fireheros() {
+for (var i=0;i<c.cm.heroes.length;i+=1) {
+if (c.cm.heroes[i].isHero == 0 && c.cm.heroes[i].stamina < 4 && c.cm.heroes[i].status == 0 &&  c.cm.heroes[i].level < 101) c.af.getHeroCommand().fireHero(c.castle.id,c.cm.heroes[i].id);
+}
+}
+
+function herolevelup() {
+for (var i=0;i<c.cm.heroes.length;i+=1) {
+if (c.cm.heroes[i].status!=0) continue;
+c.af.getEquipmentCommands().WearAllEquipmenttech(c.cm.heroes[i].id,2);
+var l=c.cm.heroes[i].level;
+var exp=c.cm.heroes[i].experience;
+while (exp>c.cm.heroes[i].upgradeExp&&l<100) {
+c.af.getHeroCommand().levelUp(c.castle.id,c.cm.heroes[i].id);
+c.af.getHeroCommand().addPoint2(c.castle.id,c.cm.heroes[i].id,0,1,0);
+exp-=c.cm.heroes[i].upgradeExp;
+l+=1;
+} 
+}
+}
+
+function sendattacks(i) {
+i=int(i);
+var jj=0;
+for (;i<c.cm.heroes.length;i+=1) {
+if (c.cm.heroes[i].status!=0) continue;
+if (c.cm.heroes[i].name=="Queen"&&queentofight!=1) continue;
+if (c.cm.heroes[i].name=="King"&&kingfight!=1) continue;
+var m;
+if (usebanners==1&&c.getItem("player.item.stygandrsbannerofthehorde").count>0) {
+m=c.getArmy("attack",c.getValue("Coordinate",coords),c.cm.heroes[i].name,c.getValue("Troop",bannertroops));
+m.useItem=true;
+}
+else {
+m=c.getArmy("attack",c.getValue("Coordinate",coords),c.cm.heroes[i].name,c.getValue("Troop",troops));
+}
+m.heroId=c.cm.heroes[i].id;
+c.af.getArmyCommands().newArmy(c.castle.id,m);
+c.cm.logMsg("Sending with "+c.cm.heroes[i].name);
+jj+=1;
+if (jj>=speed) break;
+}
+return i+1;
+}
+
+function fixstuckheroes() {
+var m=c.getRawTime();
+var s=false;
+for (var i=0;i<c.cm.localArmies.length;i+=1) {
+if (c.cm.localArmies[i].reachTime+2000<m) {
+c.af.getHeroCommand().callBackHero(c.castle.id,c.cm.localArmies[i].heroid);
+s=true;
+}
+}
+return s;
+}
+
+function hirebesthero() {
+var atk=0;
+var heroname=null;
+for (var i=0;i<c.cm.innHeroes.length;i+=1) {
+if (c.cm.innHeroes[i].power>atk) {
+atk=c.cm.innHeroes[i].power;
+heroname=c.cm.innHeroes[i].name;
+}
+}
+c.af.getHeroCommand().hireHero(c.castle.id,heroname);
+return heroname;
+}
+
+function isherospotsfull() {
+var max=c.cm.getBuildingLevel(c.buildingTypes.fh);
+for (var i=0;i<c.cm.heroes.length;i+=1) {
+if ((c.cm.heroes[i].name=="Queen"||c.cm.heroes[i].name=="King")&&c.cm.heroes[i].isHero!=0) {
+max+=1;
+break;
+}
+}
+if (c.cm.heroes.length >= max) return true;
+return false;
+}
+
+autoheal true
+label start
+if (c.cm.resource.gold < 1000000) goto no_gold_error
+if (c.cm.resource.food.amount < 100000000) goto no_food_err
+if (fixstuckheroes()) sleep 2
+set nv $m_dyn.herolevelup()$
+set nv $m_dyn.fireheros()$
+set nv $m_dyn.awardheroes()$
+set j 0
+label attack
+set j $m_dyn.sendattacks(j)$
+if (j>=c.cm.heroes.length) goto endattack
+sleep 1
+goto attack
+label endattack
+sleep 1
+if (c.cm.localArmies.length == 0) goto no_wave_err
+if (isherospotsfull()) goto start
+label refreshInn
+set nv $c.cm.updateInn()$
+sleep 1
+set nv $m_dyn.hirebesthero()$
+sleep 1
+if (isherospotsfull()) goto start
+goto refreshInn
+label no_gold_error
+echo "no gold error"
+sleep 1
+goto start
+label no_food_err
+echo "no food error, either RE is slow to respond or you ran out of rams"
+sleep 1
+goto start
+label no_wave_err
+echo "No waves sent error, check troop count, target can be attacked"
+sleep 5
+goto start
+
+
+
+
+
+
+#set mode lite // lite for just troop numbers, full for troops and food useage
+set mode lite //
+setsilence "true"
+label TROOP_TALLY
+set CityIndex 0
+set WorkerCount 0
+set WarriorCount 0
+set ScoutCount 0
+set PikeCount 0
+set SwordCount 0
+set ArcherCount 0
+set CavalryCount 0
+set CataphractCount 0
+set BallistaCount 0
+set CatapultCount 0
+set BatteringramCount 0
+set TransportCount 0
+set FootCount 0
+set HorseCount 0
+set MechCount 0
+set SupportCount 0
+set TotalCount 0
+set WorkerFood 0
+set WarriorFood 0
+set ScoutFood 0
+set PikeFood 0
+set SwordFood 0
+set ArcherFood 0
+set CavalryFood 0
+set CataphractFood 0
+set BallistaFood 0
+set CatapultFood 0
+set BatteringramFood 0
+set TransportFood 0
+set FootFood 0
+set HorseFood 0
+set MechFood 0
+set SupportFood 0
+set TotalFood 0
+set cMaT .cityManager.allTroop.
+set mcaC m_city.allCities
+label CITY_LOOP
+set WarriorCount {%WarriorCount%+$%mcaC%[{%CityIndex%}]%cMaT%militia$}
+set ScoutCount {%ScoutCount%+$%mcaC%[{%CityIndex%}]%cMaT%scouter$}
+set PikeCount {%PikeCount%+$%mcaC%[{%CityIndex%}]%cMaT%pikemen$}
+set SwordCount {%SwordCount%+$%mcaC%[{%CityIndex%}]%cMaT%swordsmen$}
+set ArcherCount {%ArcherCount%+$%mcaC%[{%CityIndex%}]%cMaT%archer$}
+set CavalryCount {%CavalryCount%+$%mcaC%[{%CityIndex%}]%cMaT%lightCavalry$}
+set CataphractCount {%CataphractCount%+$%mcaC%[{%CityIndex%}]%cMaT%heavyCavalry$}
+set BallistaCount {%BallistaCount%+$%mcaC%[{%CityIndex%}]%cMaT%ballista$}
+set CatapultCount {%CatapultCount%+$%mcaC%[{%CityIndex%}]%cMaT%catapult$}
+set BatteringramCount {%BatteringramCount%+$%mcaC%[{%CityIndex%}]%cMaT%batteringRam$}
+set TransportCount {%TransportCount%+$%mcaC%[{%CityIndex%}]%cMaT%carriage$}
+set WorkerCount {%WorkerCount%+$%mcaC%[{%CityIndex%}]%cMaT%peasants$}
+set FootCount {%WarriorCount%+%ScoutCount%+%PikeCount%+%SwordCount%+%ArcherCount%}
+set HorseCount {%CavalryCount%+%CataphractCount%}
+set MechCount {%BallistaCount%+%CatapultCount%+%BatteringramCount%}
+set SupportCount {%WorkerCount%+%TransportCount%}
+set CityIndex {%CityIndex%+1}
+ifgoto ( %CityIndex% < %mcaC%.length ) CITY_LOOP
+set TotalCount {%FootCount%+%HorseCount%+%MechCount%+%SupportCount%}
+set WarriorFood {%WarriorCount%}
+set ScoutFood {%ScoutCount%2}
+set PikeFood {%PikeCount%3}
+set SwordFood {%SwordCount%3}
+set ArcherFood {%ArcherCount%4}
+set CavalryFood {%CavalryCount%9}
+set CataphractFood {%CataphractCount%17}
+set BallistaFood {%BallistaCount%25}
+set CatapultFood {%CatapultCount%125}
+set BatteringramFood {%BatteringramCount%50}
+set TransportFood {%TransportCount%5}
+set WorkerFood {%WorkerCount%}
+set FootFood {%WarriorFood%+%ScoutFood%+%PikeFood%+%SwordFood%+%ArcherFood%}
+set HorseFood {%CavalryFood%+%CataphractFood%}
+set MechFood {%BallistaFood%+%CatapultFood%+%BatteringramFood%}
+set SupportFood {%WorkerFood%+%TransportFood%}
+set TotalFood {%FootFood%+%HorseFood%+%MechFood%+%SupportFood%}
+echo "Current troop counts in all cities combined."
+echo "Total Troops:         $m_city.formatNum(%TotalCount%)$"
+echo "Total Food Per Hour:     -$m_city.formatNum(%TotalFood%)$"
+echo "-----------------------------------------------------------------------------------------"
+if {%mode%==full} echo "Foot Troops:          $m_city.formatNum(%FootCount%)$"
+if {%mode%==full} echo "Food Per Hour:           -$m_city.formatNum(%FootFood%)$"
+echo "  Warriors:           $m_city.formatNum(%WarriorCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%WarriorFood%)$"
+echo "  Scouts:             $m_city.formatNum(%ScoutCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%ScoutFood%)$"
+echo "  Pikes:              $m_city.formatNum(%PikeCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%PikeFood%)$"
+echo "  Swords:             $m_city.formatNum(%SwordCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%SwordFood%)$"
+echo "  Archers:            $m_city.formatNum(%ArcherCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%ArcherFood%)$"
+if {%mode%==full} echo "-----------------------------------------------------------------------------------------"
+if {%mode%==full} echo "Mounted Troops:       $m_city.formatNum(%HorseCount%)$"
+if {%mode%==full} echo "Food Per Hour:           -$m_city.formatNum(%HorseFood%)$"
+echo "  Cavalry:            $m_city.formatNum(%CavalryCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%CavalryFood%)$"
+echo "  Cataphracts:        $m_city.formatNum(%CataphractCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%CataphractFood%)$"
+if {%mode%==full} echo "-----------------------------------------------------------------------------------------"
+if {%mode%==full} echo "Mechenised Troops:    $m_city.formatNum(%MechCount%)$"
+if {%mode%==full} echo "Food Per Hour:           -$m_city.formatNum(%MechFood%)$"
+echo "  Ballista:           $m_city.formatNum(%BallistaCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%BallistaFood%)$"
+echo "  Catapults:          $m_city.formatNum(%CatapultCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%CatapultFood%)$"
+echo "  Battering Rams:     $m_city.formatNum(%BatteringramCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%BatteringramFood%)$"
+if {%mode%==full} echo "-----------------------------------------------------------------------------------------"
+if {%mode%==full} echo "Support Troops:       $m_city.formatNum(%SupportCount%)$"
+if {%mode%==full} echo "Food Per Hour:           -$m_city.formatNum(%SupportFood%)$"
+echo "  Workers:            $m_city.formatNum(%WorkerCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%WorkerFood%)$"
+echo "  Transports:         $m_city.formatNum(%TransportCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%TransportFood%)$"
+goto end
+
+label end
+setsilence "false"
+
+
+
+
+
+setarr sendTroopType "p a c"
+setarr howManyToKeep "0 0 0"
+setarr sendToLocations "320,707"
+
+//===============DO=NOT=CHANGE=BELOW=THIS=LINE===============
+setsilence true
+setarray troopIntNames ["peasants", "militia", "scouter", "pikemen", "swordsmen", "archer", "lightCavalry", "heavyCavalry", "carriage", "ballista", "batteringRam", "catapult"]
+setarray troopExtNames ["Worker", "Warrior", "Scout", "Pikemen", "Swordsmen", "Archer", "Cavalry", "Cataphract", "Transporter", "Ballista", "BatteringRam", "Catapult"]
+setarray troopAbbr ["wo", "w", "s", "p", "sw", "a", "c", "cata", "t", "b", "r", "cp"]
+set t "allTroop"
+set i 0
+label checkDest
+if {$c.getCityFromCoord(%sendToLocations[{%i%}]%)$==null} set t "troop"
+set i {%i%+1}
+if {%i%<%sendToLocations.length%} goto checkDest
+set r getRallyDispatchPerArmyLimit
+if {%sendTroopType.length%==%howManyToKeep.length%} goto isValidArrLength
+echo "Error!  Number of values entered do not match in variables 'sendTroopType' and 'howManyToKeep'!"
+echo "For every troop type entered you need to enter an amount to keep, even if it's 0."
+goto exitScript
+label isValidArrLength
+if {%sendToLocations.length%==%sendTroopType.length%||%sendToLocations.length%==1} goto isValidDestinationArrLength
+echo "Error!  Number of destination coordinates entered does not match the number of troop types entered!"
+echo "You must either enter a single destination or a destination for each troop type."
+goto exitScript
+label isValidDestinationArrLength
+echo "Begin moving troops..."
+set totalTroopsMoved null
+set troopStr empty
+set currentTroopAmount 0
+set sendTroopTypeIndex -1
+label nextSendTroopType
+set sendTroopTypeIndex {%sendTroopTypeIndex%+1}
+if {!{%sendTroopType.length%>%sendTroopTypeIndex%}} goto doneSendingAllTroops
+set indexTN -1
+label findTroopName
+set indexTN {%indexTN%+1}
+if {%sendTroopType[{%sendTroopTypeIndex%}]%==%troopAbbr[{%indexTN%}]%} goto foundTroopName
+if {{%indexTN%+1}==%troopAbbr.length%} goto couldNotFindTroopName
+goto findTroopName
+label couldNotFindTroopName
+echo "WARNING!  Invalid value of ' %sendTroopType[{%sendTroopTypeIndex%}]% ' has been entered for variable 'sendTroopType'!"
+echo "--'sendTroopType' is not among [ wo w s p sw a c cata t b r cp ]. Skipping to next troop type entered."
+goto nextSendTroopType
+label foundTroopName
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}>-1} goto howManyToKeepIsValid
+echo "ATTENTION!  Invalid value of ' %howManyToKeep[{%sendTroopTypeIndex%}]% ' has been entered for troop type ' %sendTroopType[{%sendTroopTypeIndex%}]% '"
+echo "--'howManyToKeep' is set to more than your current troop count. Skipping to next troop type entered."
+goto nextSendTroopType
+label howManyToKeepIsValid
+if {%sendToLocations.length%==1} set destInd 0
+if {%sendToLocations.length%>1} set destInd %sendTroopTypeIndex%
+set destination %sendToLocations[{%destInd%}]%
+if {%totalTroopsMoved%!=null} set totalTroopsMoved "%totalTroopsMoved%, {$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%} %troopExtNames[{%indexTN%}]%(s) to (%destination%)"
+if {%totalTroopsMoved%==null} set totalTroopsMoved "{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%} %troopExtNames[{%indexTN%}]%(s) to (%destination%)"
+label startSendingTroops
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%+%currentTroopAmount%}>$c.cm.%r%(true)$} goto sendFull
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}<1&&%troopStr%==empty} goto doneSendingTroops
+if {%troopStr%==empty} goto makeNewTroopStr
+set troopStr "%troopStr%,%troopAbbr[{%indexTN%}]%:{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}"
+goto skipMakeNewTroopStr
+label makeNewTroopStr
+set troopStr "%troopAbbr[{%indexTN%}]%:{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}"
+label skipMakeNewTroopStr
+set currentTroopAmount {%currentTroopAmount%+{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}}
+iferror %sendTroopType[{%sendTroopTypeIndex%+1}]% goto skipAddAnotherTroopType
+set isNextsendToLocations false
+iferror %sendToLocations[{%sendTroopTypeIndex%+1}]% goto noNextsendToLocations
+if {!{%destination%==%sendToLocations[{%sendTroopTypeIndex%+1}]%}} goto noNextsendToLocations
+set isNextsendToLocations true
+label noNextsendToLocations
+if {{%sendToLocations.length%==1||%isNextsendToLocations%}&&{%currentTroopAmount%<$c.cm.%r%(true)$}} goto doneSendingTroops
+label skipAddAnotherTroopType
+goto sendTroopsNow
+label sendFull
+if {%troopStr%==empty} goto makeNewFullTroopStr
+set troopStr "%troopStr%,%troopAbbr[{%indexTN%}]%:{$c.cm.%r%(true)$-%currentTroopAmount%}"
+goto skipMakeNewFullTroopStr
+label makeNewFullTroopStr
+set troopStr "%troopAbbr[{%indexTN%}]%:$c.cm.%r%(true)$"
+label skipMakeNewFullTroopStr
+label sendTroopsNow
+reinforce %destination% none %troopStr%
+set currentTroopAmount 0
+set troopStr empty
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}>0} goto startSendingTroops
+label doneSendingTroops
+goto nextSendTroopType
+label doneSendingAllTroops
+if {%currentTroopAmount%>0} goto sendTroopsNow
+if {%totalTroopsMoved%==null} goto noTroopsMoved
+echo "Finished moving troops!"
+echo "A total of: %totalTroopsMoved% have been moved."
+goto exitScript
+label noTroopsMoved
+echo "ATTENTION:  No troops have been moved!"
+label exitScript
+setsilence false
+loop
+
+
+setsilence True
+Autoheal true
+set coords  311,691
+set trooptype1 cataphract
+set troopamount1 33000
+// set trooptype2 
+// set troopamount2 
+// set trooptype3 
+// set troopamount3 
+set queentofight true
+set AttackFlag false
+set food_lim 20000000
+set HiddenPathFlag false
+set EnergyFlag false
+set displayInfo true
+
+# ---- don't change below this line ---- #
+
+
+set hero_up_lim 5
+set coordsHidden $c.coord$
+set troops %trooptype1%:%troopamount1%
+Autoheal true
+set rams2untrain {%food_lim%/1000}
+label start
+if {%HiddenPathFlag%==true} set nv $c.af.getShopCommands().useTrickItem(c.getValue(Coordinate,%coordsHidden%),1,c.getItemId(advance_by_a_hidden_path))$
+if {%AttackFlag%==true} goto prep_atk
+label prep_atk_done
+set nv $c.af.getHeroCommand().dischargeChief(c.castle.id)$
+if (c.cm.resource.food.amount < food_lim) set j $c.af.getTroopCommands().disbandTroop(c.castleId,12,%rams2untrain%)$
+if (c.cm.resource.gold < 1000000) set nv $c.af.getTradeCommands().newTrade(c.castle.id,0,1,10000000,0.001)$
+sleep $c.lag$
+if (c.cm.resource.food.amount < food_lim) goto no_food_err
+if (trooptype1 == cata && c.cm.troop.heavyCavalry < 100000) set troops %trooptype2%:%troopamount2%
+if (trooptype2 == c && c.cm.troop.lightCavalry < 100000) set troops %trooptype3%:%troopamount3%
+set f 0
+label send_wave
+if {{$c.cm.heroes[{%f%}].name$==Queen||$c.cm.heroes[{%f%}].name$==King}&&%queentofight%==true} set nV $c.af.getArmyCommands().newArmy(c.castle.id,c.getArmy(attack,c.getValue(Coordinate,c.getVar(coords)),c.cm.heroes[%f%].name,c.getValue(Troop,%troops%)))$
+set hero_base {$c.math.max(c.cm.heroes[%f%].power,c.cm.heroes[%f%].management,c.cm.heroes[%f%].stratagem)$-$c.cm.heroes[%f%].level$}
+if (c.cm.heroes[f].status == 0 && c.cm.heroes[f].level < 101 && hero_base < 101) set nV $c.af.getArmyCommands().newArmy(c.castle.id,c.getArmy(attack,c.getValue(Coordinate,c.getVar(coords)),c.cm.heroes[%f%].name,c.getValue(Troop,%troops%)))$
+set f {%f%+1}
+sleep $c.lag$
+if (f < c.cm.heroes.length) goto send_wave
+if (c.cm.localArmies.length == 0) goto no_wave_err
+set g 0
+set tim_com1 0
+set tim_com2 0
+label det_wait_time
+set tim_com1 {{$c.cm.localArmies[%g%].reachTime$-$c.getRawTime()$}/1000}
+set tim_com2 $c.math.max(%tim_com1%,%tim_com2%)$
+set g {%g%+1}
+if (g < c.cm.localArmies.length) goto det_wait_time
+if {%displayInfo%==true} echo %tim_com2%
+sleep {%tim_com2%+2}
+label recallcheck
+set x 0
+set y $c.cm.localArmies.length$
+if (y == 0) goto end_recall
+label recall1
+if ((c.cm.localArmies[x].reachTime + 5000) < c.getRawTime()) set nv $c.af.getHeroCommand().callBackHero(c.castle.id,c.cm.localArmies[%x%].heroid)$
+set x {%x%+1}
+if ( x < y ) goto recall1
+label end_recall
+label hero1
+set f 0
+label heroLoop
+if {%EnergyFlag%==true} goto apply_energy_item
+if (c.cm.heroes[f].isHero == 0 && c.cm.heroes[f].stamina < 4 && c.cm.heroes[f].status == 0 &&  c.cm.heroes[f].level < 101) set nv $c.af.getHeroCommand().fireHero(c.castle.id,c.cm.heroes[%f%].id)$
+label heroloop1
+set f {%f%+1}
+if (f < c.cm.heroes.length) goto heroLoop
+label refreshInn
+set k $c.cm.heroes.length$
+set l 0
+set nullVar $c.cm.updateInn()$
+sleep 1
+label hire_hero
+if (c.cm.heroes.length == c.cm.getBuildingLevel(c.buildingTypes.fh)) goto start
+set heroInInn $c.cm.innHeroes[%l%].name$
+set nv $c.af.getHeroCommand().hireHero(c.castle.id,c.cm.innHeroes[%l%].name)$
+sleep 1
+set hId $c.findHeroByName(%heroInInn%).id$
+set chn $c.changeheroname(%heroInInn%,%hId%)$
+set l {%l%+1}
+set k {%k%+1}
+if (k < c.cm.getBuildingLevel(c.buildingTypes.fh)) goto hire_hero
+goto start
+label prep_atk
+set h 0
+label loop_hero_prep
+if ((c.findHeroById(h).attack) > 0) goto loop_level_up
+if {%displayInfo%==true} echo "wear gear for: {$c.cm.heroes[%h%].name$}"
+set nv $c.af.getEquipmentCommands().WearAllEquipmenttech(c.cm.heroes[%h%].id,2)$
+label loop_level_up
+if (c.cm.heroes[h].experience > c.cm.heroes[h].upgradeExp && c.cm.heroes[h].level < 100) goto hero_level_up
+goto hero_level_up_end
+label hero_level_up
+set i 0
+label hero_level_up1
+if {%displayInfo%==true} echo "level up for: {$c.cm.heroes[%h%].name$}"
+set nv $c.af.getHeroCommand().levelUp(c.castle.id,c.cm.heroes[%h%].id)$
+set nv $c.af.getHeroCommand().addPoint2(c.castle.id,c.cm.heroes[%h%].id,0,1,0)$
+set i {%i%+1}
+if (c.cm.heroes[h].experience > c.cm.heroes[h].upgradeExp && c.cm.heroes[h].level < 101 && i < hero_up_lim) goto hero_level_up1
+label hero_level_up_end
+set h {%h%+1}
+if (h < c.cm.heroes.length) goto loop_hero_prep
+goto prep_atk_done
+label apply_energy_item
+set varTea hero.item.Tea
+set varWine hero.item.Lugui_Wine
+set varPanax hero.item.Panax_ginseng
+if (c.cm.heroes[f].stamina < 4 && c.cm.heroes[f].status == 0 && c.getItem(c.getVar(varTea)).count >0) set nv $c.af.getHeroCommand().useItem(c.castle.id,c.cm.heroes[%f%].id,c.getVar(varTea))$
+if (c.cm.heroes[f].stamina < 4 && c.cm.heroes[f].status == 0 && c.getItem(c.getVar(varWine)).count > 0) set nv $c.af.getHeroCommand().useItem(c.castle.id,c.cm.heroes[%f%].id,c.getVar(varWine))$
+if (c.cm.heroes[f].stamina < 4 && c.cm.heroes[f].status == 0 && c.getItem(c.getVar(varPanax)).count > 0) set nv $c.af.getHeroCommand().useItem(c.castle.id,c.cm.heroes[%f%].id,c.getVar(varPanax))$
+goto heroloop1
+label no_food_err
+echo "no food error, either RE is slow to respond or you ran out of rams"
+sleep 1
+Autoheal true
+goto start
+label no_wave_err
+echo "No waves sent error, check troop count, target can be attacked"
+sleep 10
+goto recallcheck
+goto recallcheck
+goto recallcheck
+label end
+
+
+attack 311,690 any cata:33000
+attack 312,689 any cata:33000
+attack 312,691 any cata:33000
+attack 311,689 any cata:33000
+attack 310,690 any cata:33000
+attack 310,689 any cata:33000
+sleep 5
+loop 
+
+
+deploy reinforce 282,694 none wo:125000 f:1
+deploy reinforce 282,694 none w:125000 f:1
+loop
+
+
+
+
+setarr TgtList "299,714"
+set i 0
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy reinforce none%CurrTgt%"
+deploy reinforce %CurrTgt% none s:100000 s:1000000
+repeat 5
+deploy reinforce %CurrTgt% none s:100000 s:1000000
+repeat 5
+deploy reinforce %CurrTgt% none s:100000 s:1000000
+deploy reinforce %CurrTgt% none s:100000 s:1000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+loop
+
+
+attack 291,708 any cata:33k
+loop 9
+sleep 40
+recall 291,708
+loop
+
+
+
+// alt feeder
+
+setarr TgtList "0,799 
+// alt feeder
+
+setarr TgtList "297,693"
+set i 0
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 g:1000000000
+repeat 5
+transport %CurrTgt% t:100000 g:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 5
+loop
+
+set i 0
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 g:1000000000
+repeat 5
+transport %CurrTgt% t:100000 g:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 5
+loop
+
+// useitem Aries_Amulet
+loop
+
+
+canceltrade
+buy food 99999999 10
+sleep 1
+setarr TgtList "292,708 301,703 301,709 296,705"
+set i 0
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 f:1000000000
+transport %CurrTgt% t:100000 f:1000000000
+repeat 2
+transport %CurrTgt% t:100000 f:1000000000
+transport %CurrTgt% t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 5
+loop
+
+
+
+Autoheal true
+attack 301,712 any cata:33k
+loop 9
+sleep 12
+recall 301,712
+loop
+
+Autoheal true
+recall 299,712
+set heroesUsed any,
+set troopsUsed cata:35k
+set coord "299,712"
+//-----------------------------\\
+recall 299,712
+setsilence true
+label Hero
+set fireHeroes.length 0
+set f 0
+label heroLoop
+if {$c.cm.heroes[{%f%}].isHero$==0&&$c.cm.heroes[{%f%}].stamina$<4&&$c.cm.heroes[{%f%}].status$==0} addtoarray fireHeroes 0 $c.cm.heroes[{%f%}].name$
+set f {%f%+1}
+if {%f%<$c.cm.heroes.length$} goto heroLoop
+set count %fireHeroes.length%
+if {%count%==0} goto NoHeroesToFire
+label fireHeroes
+firehero %fireHeroes[0]%
+loop %count% fireHeroes
+label NoHeroesToFire
+if {$c.cm.heroes.length$<$c.cm.getBuildingLevel(27)$} gosub refreshInn
+if {$c.cm.heroes.length$<$c.cm.getBuildingLevel(27)$} getspamhero
+set r $c.qdeploy(attack,c.getValue(Coordinate,%coord%),c.getVar(heroesUsed),c.getValue(Troop,%troopsUsed%))$
+goto Hero
+recall 299,712
+label refreshInn
+set nVar $c.cm.updateInn()$
+gosubreturn
+loop
+
+
+Autoheal true
+attack 299,712 any cata:33k
+loop 3
+sleep 3
+attack 299,712 any cata:33k
+loop 3
+sleep 3
+attack 299,712 any cata:33k
+loop 3
+sleep 3
+attack 299,712 any cata:33k
+loop 3
+sleep 4
+attack 299,712 any cata:33k
+loop 3
+sleep 15
+recall 299,712
+loop
+
+
+
+
+deploy reinforce 299,714 none cata:125000 f:20000000
+loop
+
+
+// 299,712 7of9 valley
+
+Autoheal true
+attack 299,712 any cata:33k
+loop 9
+sleep 15
+recall 299,712
+loop
+
+
+
+setarr TgtList "303,706 301,703 311,696"
+set i 0
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 f:1000000000
+repeat 5
+transport %CurrTgt% t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 5
+loop
+
+
+// alt feeder
+
+setarr TgtList "303,706 301,703 311,696"
+set i 0
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 f:1000000000
+repeat 5
+transport %CurrTgt% t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 5
+loop
+
+
+
+
+
+deploy reinforce 301,703 none a:100000 f:10
+deploy reinforce 301,703 none a:100000 f:10
+deploy reinforce 301,703 none a:100000 f:10
+deploy reinforce 301,703 none a:100000 f:10
+deploy reinforce 301,703 none a:100000 f:10
+deploy reinforce 301,703 none a:100000 f:10
+loop 
+
+deploy reinforce 292,708 none a:100000 f:10
+deploy reinforce 292,708 none a:100000 f:10
+loop
+
+Autoheal true
+attack 297,711 any w:2000,s:2000,p:2000,sw:2000,a:2000,b:2000,r:2000,cp:86000
+loop 9
+sleep 240
+recall 297,711
+loop
+
+
+
+deploy reinforce 301,709 none t:100000 f:1000000
+deploy reinforce 301,709 none t:100000 f:1000000
+loop
+
+
+
+
+// alt feeder
+setarr tgtList "301.703"
+set resType f
+set amountToEach 400000000000
+
+import autoevony.common.Utils;
+set i 0
+label tgtloop
+set currTgt %tgtList[{%i%}]%
+echo "deploy reinforce none %currTgt%"
+set remaining %amountToEach%
+label sendRes
+set maxCarry $m_dyn.c.cm.getMaxTroopLoad(Utils.getTroops("t:1"))$
+set maxTroop $c.cm.getRallyDispatchPerArmyLimit(true)$
+set amount %remaining%
+if (maxCarry*maxTroop < remaining) set amount {%maxCarry%*%maxTroop%}
+set remaining {%remaining%-%amount%}
+set troopCount $c.math.ceil({%amount%/%maxCarry%})$
+reinforce  %currTgt% none t:%troopCount% %resType%:%amount% 
+if (remaining > 0) goto sendRes
+if (++i < tgtList.length) goto tgtloop
+
+
+
+
+deploy reinforce 299,714 none t:100000 f:1000000000
+deploy reinforce 299,714 none t:100000 f:1000000000
+loop
+
+
+
+
+// alt feeder
+setarr tgtList "289.701"
+set resType g
+set amountToEach 4000000000
+
+import autoevony.common.Utils;
+set i 0
+label tgtloop
+set currTgt %tgtList[{%i%}]%
+echo "deploy reinforce none %currTgt%"
+set remaining %amountToEach%
+label sendRes
+set maxCarry $m_dyn.c.cm.getMaxTroopLoad(Utils.getTroops("t:1"))$
+set maxTroop $c.cm.getRallyDispatchPerArmyLimit(true)$
+set amount %remaining%
+if (maxCarry*maxTroop < remaining) set amount {%maxCarry%*%maxTroop%}
+set remaining {%remaining%-%amount%}
+set troopCount $c.math.ceil({%amount%/%maxCarry%})$
+reinforce  %currTgt% none t:%troopCount% %resType%:%amount% 
+if (remaining > 0) goto sendRes
+if (++i < tgtList.length) goto tgtloop
+
+
+
+
+setarr TgtList "289,698"
+set i 0
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% c:100000 f:2000000
+repeat 5
+transport %CurrTgt% c:100000 f:2000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 5
+loop
+
+
+
+canceltrade
+buy food 99999999 10
+sleep 3
+loop

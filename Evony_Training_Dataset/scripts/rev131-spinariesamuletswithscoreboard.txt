@@ -1,0 +1,44 @@
+setsilence true
+set amuletCount 25 //Enter number of amulets to spinn, or enter 'all' to use all amulets
+set print false  // set this variable 'true' if you want the script to print each single object you gain from the wheel
+#dont change beyond this line_________________________
+if {$c.player.playerInfo.sex$==0} set lord Lord
+if {$c.player.playerInfo.sex$!=0} set lord Lady
+iferror $m_city.cityManager.getItemById(m_city.getItemId(Aries_Amulet)).count$ goto noMoreAmulets
+if {%amuletCount%==all} set amuletCount $m_city.cityManager.getItemById(m_city.getItemId(Aries_Amulet)).count$
+set cents $c.player.playerInfo.medal$
+set names.length 0
+set count.length 0
+set spins 0
+label amuletLoop
+iferror $m_city.cityManager.getItemById(m_city.getItemId(Aries_Amulet)).count$ goto makeList
+set spins {%spins%+1}
+set useAmulet $c.af.getShopCommands().useGoods(c.castle.id,c.getItemId(Aries_Amulet),1)$
+label waitItemRespons
+sleep $c.lag$
+iferror $%useAmulet%.ok$ goto waitItemRespons
+if {%print%} echo " - Got: $%useAmulet%.itemBeansArray[0].count$ $c.getItemName(%useAmulet%.itemBeansArray[0].id)$"
+getindexof x names $c.getItemName(%useAmulet%.itemBeansArray[0].id)$
+if {%x%<0} addtoarray names %names.length% $c.getItemName(%useAmulet%.itemBeansArray[0].id)$
+if {%x%<0} addtoarray count %count.length% $%useAmulet%.itemBeansArray[0].count$
+if {%x%>=0} gosub addItems
+sleep rnd:{$c.lag$*1.5}:{$c.lag$*2.5}
+loop %amuletCount% amuletLoop
+set wonIndex 0
+set list "<br>"
+label makeList
+set percent ""
+if {%count[{%wonIndex%}]%\%names.length%<=1} set percent &#40;{%count[{%wonIndex%}]%*100\%spins%}&#37;&#41;
+set list "%list%          <b>%count[{%wonIndex%}]%</b> %names[{%wonIndex%}]% %percent%<br>"
+set wonIndex {%wonIndex%+1}
+if {%wonIndex%<%names.length%} goto makeList
+set msg "<br><u>%lord% <b>$c.player.playerInfo.userName$</b> used <b>%spins% Aries Amulets</b> and won <b>{$c.player.playerInfo.medal$-%cents%} cent</b></u>%list%"
+set log $c.cm.warLogMsg(%msg%,#483D8B)$
+label noMoreAmulets
+iferror $m_city.cityManager.getItemById(m_city.getItemId(Aries_Amulet)).count$ echo "All amulets have been used"
+iferror $m_city.cityManager.getItemById(m_city.getItemId(Aries_Amulet)).count$ goto end
+echo "You still have $m_city.cityManager.getItemById(m_city.getItemId(Aries_Amulet)).count$ Amulets"
+goto end
+label addItems
+set count[{%x%}] {%count[{%x%}]%+$%useAmulet%.itemBeansArray[0].count$}
+gosubreturn

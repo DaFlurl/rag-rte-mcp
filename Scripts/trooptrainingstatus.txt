@@ -1,0 +1,99 @@
+##########################################################################
+########                                                        ##########
+########  I strongly recommend you put the script in snippets!  ##########
+########  With a single line 'include TroopTraningStatus'       ##########
+########  the script will check barracks in just that city      ##########
+########  but if you add a 'set doAllCities true' above the     ##########
+########  include line, the script will run through all cities  ##########
+########                                                        ##########
+##########################################################################
+
+### To do all cities, put this in one of your cities' script window
+set doAllCities true
+include TroopTrainingStatus
+
+### To do just the current city, put this in it' s script window
+include TroopTrainingStatus
+## ... or you can change the doAllCities to false ....
+
+### Script should be placced in snippets with no changes .....
+[TroopTrainingStatus]
+setsilence true
+setarr names "noname0 noname1 Workers Warriors Scouts Pikemen Swordsmen Archers Transporters Cavalry Cataphracts Ballistae Batteringrams Catapults"
+gosub resetNumber
+gosub resetTotal
+set c 0
+iferror %doAllCities% set doAllCities false
+if {!{%doAllCities%}} set c $c.ac.indexOf(m_city)$
+label cLoop
+set msg "<u>$m_city.allCities[%c%].castle.name$</u>"
+echo "--"
+echo "--"
+echo "$m_city.allCities[%c%].castle.name$ has $m_city.allCities[%c%].cityManager.troopProduceQueue.length$ barracks containing:"
+set q 0
+label qLoop
+set qTime 0
+set string "<br><u>$m_city.allCities[%c%].castle.name$ Barrack no {%q%+1} at positionId $m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].positionId$ has $m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].allProduceQueueArray.length$ batches</u>"
+set b 0
+label bLoop
+iferror $m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].num$ goto nextBarrack
+if {%b%==0} set qTime {{$m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].endTime$-$m_city.getRawTime()$}\1000}
+if {!{%b%==0}} set qTime {%qTime%+$m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].costTime$}
+set number{%names[{$m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].type$}]%}  {%{number{%names[{$m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].type$}]%}}%+$m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].num$}
+if {%b%==0} set string "%string%<br> Currently producing $m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].num$ %names[{$m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].type$}]% ready in {{{$m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].endTime$-$m_city.getRawTime()$}\1000}\3600}h:{{{{$m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].endTime$-$m_city.getRawTime()$}\1000}\60}|60}m:{{{$m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].endTime$-$m_city.getRawTime()$}\1000}|60}s"
+if {!{%b%==0}} set string "%string%<br> Q{%b%+1}: $m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].num$  %names[{$m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].type$}]% productiontime {$m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].costTime$\3600}h:{{$m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].costTime$\60}|60}m:{$m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].allProduceQueueArray[{%b%}].costTime$|60}s finished in {%qTime%\3600}h:{{%qTime%\60}|60}m:{%qTime%|60}s"
+label nextBatch
+set b {%b%+1}
+if {%b%<$m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].allProduceQueueArray.length$} goto bLoop
+label nextBarrack
+set qFhinished {{%qTime%*1000}+$m_city.getRawTime()$}
+set string "%string%<br> This Barrack will be busy until $m_city.getDateFromTime(%qFhinished%).toDateString()$<br>"
+gosub checkCharacters %string%
+set log $c.cm.logMsg(%_0%)$
+set msg "%msg%<br> Barrack no {%q%+1} has $m_city.allCities[%c%].cityManager.troopProduceQueue[{%q%}].allProduceQueueArray.length$ batches and will be busy until $m_city.getDateFromTime(%qFhinished%).toDateString()$ "
+//{%qTime%\3600}h:{{%qTime%\60}|60}m:{%qTime%|60}s"
+set q {%q%+1}
+if {%q%<$m_city.allCities[%c%].cityManager.troopProduceQueue.length$} goto qLoop
+set junk $m_city.cityManager.warLogMsg(%msg%,#008899)$
+label nextCity
+set citySummaryToWarLog "<br><u>Barracks queue in $m_city.allCities[%c%].castle.name$ on $c.getDateFromTime(c.getRawTime()).toDateString()$ :</u><br>"
+set pi 2
+label printLoop
+if {%{number{%names[{%pi%}]%}}%>0} set citySummaryToWarLog "%citySummaryToWarLog%  $c.formatNum(%{number{%names[{%pi%}]%}}%)$ %names[{%pi%}]%<br>"
+set total%names[{%pi%}]% {{%total{%names[{%pi%}]%}%}+{%number{%names[{%pi%}]%}%}}
+set pi {%pi%+1}
+if {%pi%<%names.length%} goto printLoop
+gosub checkCharacters %citySummaryToWarLog%
+set warLog $c.cm.warLogMsg(%_0%,#006666)$
+gosub resetNumber
+set c {%c%+1}
+sleep 5
+if {%c%<$m_city.allCities.length$&&%doAllCities%} goto cLoop
+label theGrandTotal
+if {!{%doAllCities%}} goto exit
+set summaryToWarLog "<br><u>The grand total for all barracks in all cities on $c.getDateFromTime(c.getRawTime()).toDateString()$:</u><br>"
+set pi2 2
+label printLoop2
+if {%{total%{names[{%pi2%}]}%}%>0} set summaryToWarLog "%summaryToWarLog%  $c.formatNum(%{total%{names[{%pi2%}]}%}%)$ %names[{%pi2%}]%<br>"
+set pi2 {%pi2%+1}
+if {%pi2%<%names.length%} goto printLoop2
+set summaryToWarLog "<b>%summaryToWarLog%</b>"
+set warLog $c.cm.warLogMsg(c.getVar(summaryToWarLog),#006666)$
+goto exit
+label resetNumber
+set ri 0
+label resetLoop
+set number%names[{%ri%}]% 0
+set ri {%ri%+1}
+if {%ri%<%names.length%} goto resetLoop
+gosubreturn
+label resetTotal
+set ri 0
+label resetLoopTotal
+set total%names[{%ri%}]% 0
+set ri {%ri%+1}
+if {%ri%<%names.length%} goto resetLoopTotal
+gosubreturn
+label exit
+set string "&#169; <i>2016-08-08</i> &#60;&#126;<i>Yozhik v Tumane</i>&#126;&#62;&#8482; </font><br>"
+set log $c.cm.warLogMsg(c.getVar(string),#0000DD)$

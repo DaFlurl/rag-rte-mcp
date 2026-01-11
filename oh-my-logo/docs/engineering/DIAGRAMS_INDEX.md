@@ -1,0 +1,166 @@
+# Oh-My-Logo Pro - Engineering Diagrams Index
+
+> Complete visual documentation of the system architecture
+
+---
+
+## 📊 Diagram Collection
+
+All diagrams are production-quality SVG files with:
+- Professional styling with gradients and glow effects
+- Dark theme (Borg Green aesthetic)
+- Comprehensive technical detail
+- Interactive-ready format
+
+---
+
+## 🗂️ Diagrams by Category
+
+### System Overview
+| # | Diagram | Description | Status |
+|---|---------|-------------|--------|
+| 00 | [master-architecture.svg](./diagrams/00-master-architecture.svg) | Complete system overview showing all three execution modes, core engine, and feature scope | ✅ |
+
+### Core Systems
+| # | Diagram | Description | Status |
+|---|---------|-------------|--------|
+| 06 | [ai-integration.svg](./diagrams/06-ai-integration.svg) | Multi-provider AI architecture with Claude, Ollama, OpenRouter | ✅ |
+| 07 | [timeline-system.svg](./diagrams/07-timeline-system.svg) | Fusion 360-style history management with branches | ✅ |
+| 08 | [animation-engine.svg](./diagrams/08-animation-engine.svg) | Frame-based animation with 12 transitions | ✅ |
+
+### Data Systems
+| # | Diagram | Description | Status |
+|---|---------|-------------|--------|
+| 09 | [export-system.svg](./diagrams/09-export-system.svg) | 8 export formats with options | ✅ |
+| 10 | [theme-system.svg](./diagrams/10-theme-system.svg) | 12 built-in themes with custom creation | ✅ |
+| 11 | [visual-diffing.svg](./diagrams/11-visual-diffing.svg) | Character/color/style comparison | ✅ |
+
+### Advanced Features
+| # | Diagram | Description | Status |
+|---|---------|-------------|--------|
+| 12 | [prompt-compiler.svg](./diagrams/12-prompt-compiler.svg) | Prompt → Theme/Template/Preset compiler | ✅ |
+| 13 | [headless-engine.svg](./diagrams/13-headless-engine.svg) | No-UI SDK for CI/CD and automation | ✅ |
+
+### Resource Systems
+| # | Diagram | Description | Status |
+|---|---------|-------------|--------|
+| 14 | [font-system.svg](./diagrams/14-font-system.svg) | 50+ fonts with categories | ✅ |
+| 15 | [palette-system.svg](./diagrams/15-palette-system.svg) | 50+ palettes with gradients | ✅ |
+
+### Application Architecture
+| # | Diagram | Description | Status |
+|---|---------|-------------|--------|
+| 16 | [data-flow.svg](./diagrams/16-data-flow.svg) | Complete request → response pipeline | ✅ |
+| 17 | [gui-layout.svg](./diagrams/17-gui-layout.svg) | Electron GUI wireframe | ✅ |
+
+---
+
+## 🎨 Visual Style Guide
+
+All diagrams follow a consistent visual language:
+
+### Colors
+```
+Primary Accent:   #00ff00 (Borg Green)
+Secondary:        #00ffff (Cyan)
+Tertiary:         #ff00ff (Magenta)
+Warning:          #ffcc00 (Yellow)
+Error:            #ff3366 (Red)
+Background:       #0a0a0a (Near Black)
+Surface:          #1a1a1a (Dark Gray)
+Border:           #333333 (Medium Gray)
+Text Primary:     #ffffff (White)
+Text Secondary:   #666666 (Light Gray)
+```
+
+### Typography
+- Font Family: Monospace
+- Title Size: 24px with glow filter
+- Heading Size: 14px bold
+- Body Size: 10-12px
+- Detail Size: 7-9px
+
+### Effects
+- Glow filter on titles and key elements
+- Gradient fills for emphasis
+- Rounded corners (rx=5-15px)
+- Subtle shadows for depth
+
+---
+
+## 📐 Technical Specifications
+
+### SVG Properties
+- ViewBox: Varies by diagram (typically 1200x900)
+- Namespace: http://www.w3.org/2000/svg
+- Encoding: UTF-8
+- Gradients: Linear and radial
+- Filters: Gaussian blur for glow
+
+### File Sizes
+- Average: 10-25 KB per diagram
+- Format: Minified SVG
+- Compatibility: All modern browsers
+
+---
+
+## 🔗 Related Documentation
+
+| Document | Purpose |
+|----------|---------|
+| [ARCHITECTURE.md](./ARCHITECTURE.md) | Complete technical documentation |
+| [../MASTER_ACTION_PLAN.md](../MASTER_ACTION_PLAN.md) | Development roadmap |
+| [../README.md](../README.md) | Project overview |
+| [../CHECKPOINT.json](../CHECKPOINT.json) | Development progress |
+
+---
+
+## 📈 Diagram Coverage
+
+| System | Covered | Notes |
+|--------|---------|-------|
+| Core Engine | ✅ | Master architecture + data flow |
+| AI Layer | ✅ | Dedicated diagram |
+| Timeline | ✅ | Dedicated diagram |
+| Animation | ✅ | Dedicated diagram |
+| Export | ✅ | Dedicated diagram |
+| Themes | ✅ | Dedicated diagram |
+| Diffing | ✅ | Dedicated diagram |
+| Compiler | ✅ | Dedicated diagram |
+| Headless | ✅ | Dedicated diagram |
+| Fonts | ✅ | Dedicated diagram |
+| Palettes | ✅ | Dedicated diagram |
+| GUI Layout | ✅ | Wireframe diagram |
+
+**Total: 12 production diagrams covering all major systems**
+
+---
+
+## 🚀 Usage
+
+### Viewing Diagrams
+```bash
+# Open in browser
+open docs/engineering/diagrams/00-master-architecture.svg
+
+# Or use VS Code with SVG Preview extension
+code docs/engineering/diagrams/
+```
+
+### Embedding in Documentation
+```markdown
+![Master Architecture](./diagrams/00-master-architecture.svg)
+```
+
+### Converting to PNG
+```bash
+# Using Inkscape
+inkscape -w 2400 -h 1800 input.svg -o output.png
+
+# Using librsvg
+rsvg-convert -w 2400 input.svg > output.png
+```
+
+---
+
+*Generated by Oh-My-Logo Pro Engineering Team | 2026*

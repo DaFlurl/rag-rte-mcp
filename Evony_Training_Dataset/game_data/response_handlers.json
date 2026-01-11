@@ -1,0 +1,1765 @@
+{
+  "total_handlers": 352,
+  "handlers": {
+    "alliance.addUsertoAlliance": {
+      "key": "alliance.addUsertoAlliance",
+      "handler": "_resp_alliance_addUsertoAlliance",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.addUsertoAllianceList": {
+      "key": "alliance.addUsertoAllianceList",
+      "handler": "_resp_alliance_addUsertoAllianceList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.agreeComeinAllianceByLeader": {
+      "key": "alliance.agreeComeinAllianceByLeader",
+      "handler": "_resp_alliance_agreeComeinAllianceByLeader",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.agreeComeinAllianceByUser": {
+      "key": "alliance.agreeComeinAllianceByUser",
+      "handler": "_resp_alliance_agreeComeinAllianceByUser",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.agreeComeinAllianceList": {
+      "key": "alliance.agreeComeinAllianceList",
+      "handler": "_resp_alliance_agreeComeinAllianceList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.cancelUserWantInAlliance": {
+      "key": "alliance.cancelUserWantInAlliance",
+      "handler": "_resp_alliance_cancelUserWantInAlliance",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.canceladdUsertoAlliance": {
+      "key": "alliance.canceladdUsertoAlliance",
+      "handler": "_resp_alliance_canceladdUsertoAlliance",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.cancelagreeComeinAlliance": {
+      "key": "alliance.cancelagreeComeinAlliance",
+      "handler": "_resp_alliance_cancelagreeComeinAlliance",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.createAlliance": {
+      "key": "alliance.createAlliance",
+      "handler": "_resp_alliance_createAlliance",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.dropAllianceFriendshipRelation": {
+      "key": "alliance.dropAllianceFriendshipRelation",
+      "handler": "_resp_alliance_dropAllianceFriendshipRelation",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.getAllianceArmyReport": {
+      "key": "alliance.getAllianceArmyReport",
+      "handler": "_resp_alliance_getAllianceArmyReport",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.getAllianceEventList": {
+      "key": "alliance.getAllianceEventList",
+      "handler": "_resp_alliance_getAllianceEventList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.getAllianceFriendshipList": {
+      "key": "alliance.getAllianceFriendshipList",
+      "handler": "_resp_alliance_getAllianceFriendshipList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.getAllianceInfo": {
+      "key": "alliance.getAllianceInfo",
+      "handler": "_resp_alliance_getAllianceInfo",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.getAllianceList": {
+      "key": "alliance.getAllianceList",
+      "handler": "_resp_alliance_getAllianceList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.getAllianceMembers": {
+      "key": "alliance.getAllianceMembers",
+      "handler": "_resp_alliance_getAllianceMembers",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.getAllianceWanted": {
+      "key": "alliance.getAllianceWanted",
+      "handler": "_resp_alliance_getAllianceWanted",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.getMilitarySituationList": {
+      "key": "alliance.getMilitarySituationList",
+      "handler": "_resp_alliance_getMilitarySituationList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.getPowerFromAlliance": {
+      "key": "alliance.getPowerFromAlliance",
+      "handler": "_resp_alliance_getPowerFromAlliance",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.isHasAlliance": {
+      "key": "alliance.isHasAlliance",
+      "handler": "_resp_alliance_isHasAlliance",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.kickOutMemberfromAlliance": {
+      "key": "alliance.kickOutMemberfromAlliance",
+      "handler": "_resp_alliance_kickOutMemberfromAlliance",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.leaderWantUserInAllianceList": {
+      "key": "alliance.leaderWantUserInAllianceList",
+      "handler": "_resp_alliance_leaderWantUserInAllianceList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.messagesForAllianceMember": {
+      "key": "alliance.messagesForAllianceMember",
+      "handler": "_resp_alliance_messagesForAllianceMember",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.rejectComeinAlliance": {
+      "key": "alliance.rejectComeinAlliance",
+      "handler": "_resp_alliance_rejectComeinAlliance",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.resetTopPowerForAlliance": {
+      "key": "alliance.resetTopPowerForAlliance",
+      "handler": "_resp_alliance_resetTopPowerForAlliance",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.resignForAlliance": {
+      "key": "alliance.resignForAlliance",
+      "handler": "_resp_alliance_resignForAlliance",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.sayByetoAlliance": {
+      "key": "alliance.sayByetoAlliance",
+      "handler": "_resp_alliance_sayByetoAlliance",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.setAllInfoForAlliance": {
+      "key": "alliance.setAllInfoForAlliance",
+      "handler": "_resp_alliance_setAllInfoForAlliance",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.setAllianceFriendship": {
+      "key": "alliance.setAllianceFriendship",
+      "handler": "_resp_alliance_setAllianceFriendship",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.setPowerForUserByAlliance": {
+      "key": "alliance.setPowerForUserByAlliance",
+      "handler": "_resp_alliance_setPowerForUserByAlliance",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "alliance.userWantInAlliance": {
+      "key": "alliance.userWantInAlliance",
+      "handler": "_resp_alliance_userWantInAlliance",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "army.callBackArmy": {
+      "key": "army.callBackArmy",
+      "handler": "_resp_army_callBackArmy",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "army.cureInjuredTroop": {
+      "key": "army.cureInjuredTroop",
+      "handler": "_resp_army_cureInjuredTroop",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "army.disbandFleeTroop": {
+      "key": "army.disbandFleeTroop",
+      "handler": "_resp_army_disbandFleeTroop",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "army.disbandInjuredTroop": {
+      "key": "army.disbandInjuredTroop",
+      "handler": "_resp_army_disbandInjuredTroop",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "army.exerciseArmy": {
+      "key": "army.exerciseArmy",
+      "handler": "_resp_army_exerciseArmy",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "army.getFleeTroop": {
+      "key": "army.getFleeTroop",
+      "handler": "_resp_army_getFleeTroop",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "army.getInjuredTroop": {
+      "key": "army.getInjuredTroop",
+      "handler": "_resp_army_getInjuredTroop",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "army.getStayAllianceArmys": {
+      "key": "army.getStayAllianceArmys",
+      "handler": "_resp_army_getStayAllianceArmys",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "army.getTroopParam": {
+      "key": "army.getTroopParam",
+      "handler": "_resp_army_getTroopParam",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "army.newArmy": {
+      "key": "army.newArmy",
+      "handler": "_resp_army_newArmy",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "army.recruitFleeTroop": {
+      "key": "army.recruitFleeTroop",
+      "handler": "_resp_army_recruitFleeTroop",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "army.setAllowAllianceArmy": {
+      "key": "army.setAllowAllianceArmy",
+      "handler": "_resp_army_setAllowAllianceArmy",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "army.setArmyGoOut": {
+      "key": "army.setArmyGoOut",
+      "handler": "_resp_army_setArmyGoOut",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "capital.getLeftPoliciesTimes": {
+      "key": "capital.getLeftPoliciesTimes",
+      "handler": "_resp_capital_getLeftPoliciesTimes",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "capital.getUsedPoliciesTimes": {
+      "key": "capital.getUsedPoliciesTimes",
+      "handler": "_resp_capital_getUsedPoliciesTimes",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "capital.levyArmy": {
+      "key": "capital.levyArmy",
+      "handler": "_resp_capital_levyArmy",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "capital.levyFood": {
+      "key": "capital.levyFood",
+      "handler": "_resp_capital_levyFood",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "capital.levyPopulation": {
+      "key": "capital.levyPopulation",
+      "handler": "_resp_capital_levyPopulation",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "capital.levyTaxes": {
+      "key": "capital.levyTaxes",
+      "handler": "_resp_capital_levyTaxes",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "capital.reduceArmaments": {
+      "key": "capital.reduceArmaments",
+      "handler": "_resp_capital_reduceArmaments",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "castle.UpdateCastleResources": {
+      "key": "castle.UpdateCastleResources",
+      "handler": "_resp_castle_UpdateCastleResources",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "castle.cancelBuildingQueue": {
+      "key": "castle.cancelBuildingQueue",
+      "handler": "_resp_castle_cancelBuildingQueue",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "castle.cancleBuildCommand": {
+      "key": "castle.cancleBuildCommand",
+      "handler": "_resp_castle_cancleBuildCommand",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "castle.checkOutUpgrade": {
+      "key": "castle.checkOutUpgrade",
+      "handler": "_resp_castle_checkOutUpgrade",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "castle.deleteCastleSign": {
+      "key": "castle.deleteCastleSign",
+      "handler": "_resp_castle_deleteCastleSign",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "castle.demolishBuildingQueue": {
+      "key": "castle.demolishBuildingQueue",
+      "handler": "_resp_castle_demolishBuildingQueue",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "castle.destructBuilding": {
+      "key": "castle.destructBuilding",
+      "handler": "_resp_castle_destructBuilding",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "castle.getAvailableBuildingBean": {
+      "key": "castle.getAvailableBuildingBean",
+      "handler": "_resp_castle_getAvailableBuildingBean",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "castle.getAvailableBuildingListInside": {
+      "key": "castle.getAvailableBuildingListInside",
+      "handler": "_resp_castle_getAvailableBuildingListInside",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "castle.getAvailableBuildingListOutside": {
+      "key": "castle.getAvailableBuildingListOutside",
+      "handler": "_resp_castle_getAvailableBuildingListOutside",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "castle.getBuildingQueueCoinsNeed": {
+      "key": "castle.getBuildingQueueCoinsNeed",
+      "handler": "_resp_castle_getBuildingQueueCoinsNeed",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "castle.getCoinsNeed": {
+      "key": "castle.getCoinsNeed",
+      "handler": "_resp_castle_getCoinsNeed",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "castle.getDestructBuildBean": {
+      "key": "castle.getDestructBuildBean",
+      "handler": "_resp_castle_getDestructBuildBean",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "castle.newBuilding": {
+      "key": "castle.newBuilding",
+      "handler": "_resp_castle_newBuilding",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "castle.newBuildingQueue": {
+      "key": "castle.newBuildingQueue",
+      "handler": "_resp_castle_newBuildingQueue",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "castle.saveCastleSignList": {
+      "key": "castle.saveCastleSignList",
+      "handler": "_resp_castle_saveCastleSignList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "castle.speedUpBuildCommand": {
+      "key": "castle.speedUpBuildCommand",
+      "handler": "_resp_castle_speedUpBuildCommand",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "castle.speedupBuildingQueue": {
+      "key": "castle.speedupBuildingQueue",
+      "handler": "_resp_castle_speedupBuildingQueue",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "castle.upgradeBuilding": {
+      "key": "castle.upgradeBuilding",
+      "handler": "_resp_castle_upgradeBuilding",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "celeb.findAllianceByPrestige": {
+      "key": "celeb.findAllianceByPrestige",
+      "handler": "_resp_celeb_findAllianceByPrestige",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "celeb.findPlayerByPrestige": {
+      "key": "celeb.findPlayerByPrestige",
+      "handler": "_resp_celeb_findPlayerByPrestige",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "celeb.findPlayerByStar": {
+      "key": "celeb.findPlayerByStar",
+      "handler": "_resp_celeb_findPlayerByStar",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "celeb.findPlayerByTitle": {
+      "key": "celeb.findPlayerByTitle",
+      "handler": "_resp_celeb_findPlayerByTitle",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "city.WarMoveCastle": {
+      "key": "city.WarMoveCastle",
+      "handler": "_resp_city_WarMoveCastle",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "city.advMoveCastle": {
+      "key": "city.advMoveCastle",
+      "handler": "_resp_city_advMoveCastle",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "city.constructCastle": {
+      "key": "city.constructCastle",
+      "handler": "_resp_city_constructCastle",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "city.getStoreList": {
+      "key": "city.getStoreList",
+      "handler": "_resp_city_getStoreList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "city.giveupCastle": {
+      "key": "city.giveupCastle",
+      "handler": "_resp_city_giveupCastle",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "city.modifyCastleIcon": {
+      "key": "city.modifyCastleIcon",
+      "handler": "_resp_city_modifyCastleIcon",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "city.modifyCastleName": {
+      "key": "city.modifyCastleName",
+      "handler": "_resp_city_modifyCastleName",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "city.modifyFlag": {
+      "key": "city.modifyFlag",
+      "handler": "_resp_city_modifyFlag",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "city.modifyStorePercent": {
+      "key": "city.modifyStorePercent",
+      "handler": "_resp_city_modifyStorePercent",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "city.modifyUserName": {
+      "key": "city.modifyUserName",
+      "handler": "_resp_city_modifyUserName",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "city.moveCastle": {
+      "key": "city.moveCastle",
+      "handler": "_resp_city_moveCastle",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "city.setStopWarState": {
+      "key": "city.setStopWarState",
+      "handler": "_resp_city_setStopWarState",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "city.uniteAdvMoveCastle": {
+      "key": "city.uniteAdvMoveCastle",
+      "handler": "_resp_city_uniteAdvMoveCastle",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "colony.abandonColony": {
+      "key": "colony.abandonColony",
+      "handler": "_resp_colony_abandonColony",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "colony.getColonialArmyInfo": {
+      "key": "colony.getColonialArmyInfo",
+      "handler": "_resp_colony_getColonialArmyInfo",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "colony.getColonialCastlesInfo": {
+      "key": "colony.getColonialCastlesInfo",
+      "handler": "_resp_colony_getColonialCastlesInfo",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "colony.getDeployTroopsInfo": {
+      "key": "colony.getDeployTroopsInfo",
+      "handler": "_resp_colony_getDeployTroopsInfo",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "colony.getSuzerainColonialCastlesInfo": {
+      "key": "colony.getSuzerainColonialCastlesInfo",
+      "handler": "_resp_colony_getSuzerainColonialCastlesInfo",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "colony.levyArmy": {
+      "key": "colony.levyArmy",
+      "handler": "_resp_colony_levyArmy",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "colony.levyFood": {
+      "key": "colony.levyFood",
+      "handler": "_resp_colony_levyFood",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "colony.levyPopulation": {
+      "key": "colony.levyPopulation",
+      "handler": "_resp_colony_levyPopulation",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "colony.levyTaxes": {
+      "key": "colony.levyTaxes",
+      "handler": "_resp_colony_levyTaxes",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "colony.overviewColonialCastle": {
+      "key": "colony.overviewColonialCastle",
+      "handler": "_resp_colony_overviewColonialCastle",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "colony.reduceArmaments": {
+      "key": "colony.reduceArmaments",
+      "handler": "_resp_colony_reduceArmaments",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "colony.setDeployTroops": {
+      "key": "colony.setDeployTroops",
+      "handler": "_resp_colony_setDeployTroops",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "colony.sowDiscord": {
+      "key": "colony.sowDiscord",
+      "handler": "_resp_colony_sowDiscord",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "colony.speedUpAbandonColony": {
+      "key": "colony.speedUpAbandonColony",
+      "handler": "_resp_colony_speedUpAbandonColony",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "colony.uprise": {
+      "key": "colony.uprise",
+      "handler": "_resp_colony_uprise",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "commission.acceptCommissionQuest": {
+      "key": "commission.acceptCommissionQuest",
+      "handler": "_resp_commission_acceptCommissionQuest",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "commission.addCommissionQuestArmy": {
+      "key": "commission.addCommissionQuestArmy",
+      "handler": "_resp_commission_addCommissionQuestArmy",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "commission.declineCommissionQuest": {
+      "key": "commission.declineCommissionQuest",
+      "handler": "_resp_commission_declineCommissionQuest",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "commission.getAllCommissionQuest": {
+      "key": "commission.getAllCommissionQuest",
+      "handler": "_resp_commission_getAllCommissionQuest",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "commission.getCommissionQuestArmyInfo": {
+      "key": "commission.getCommissionQuestArmyInfo",
+      "handler": "_resp_commission_getCommissionQuestArmyInfo",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "commission.getCommissionQuestArmyRanking": {
+      "key": "commission.getCommissionQuestArmyRanking",
+      "handler": "_resp_commission_getCommissionQuestArmyRanking",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "commission.getMyAcceptedCommissionQuest": {
+      "key": "commission.getMyAcceptedCommissionQuest",
+      "handler": "_resp_commission_getMyAcceptedCommissionQuest",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "commission.getMyCommissionQuest": {
+      "key": "commission.getMyCommissionQuest",
+      "handler": "_resp_commission_getMyCommissionQuest",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "commission.issueCommissionQuest": {
+      "key": "commission.issueCommissionQuest",
+      "handler": "_resp_commission_issueCommissionQuest",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.addToFavorites": {
+      "key": "common.addToFavorites",
+      "handler": "_resp_common_addToFavorites",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.allianceChat": {
+      "key": "common.allianceChat",
+      "handler": "_resp_common_allianceChat",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.authSecurityCode": {
+      "key": "common.authSecurityCode",
+      "handler": "_resp_common_authSecurityCode",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.cancelRemovingSecurityCodeProcess": {
+      "key": "common.cancelRemovingSecurityCodeProcess",
+      "handler": "_resp_common_cancelRemovingSecurityCodeProcess",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.changeHeadline": {
+      "key": "common.changeHeadline",
+      "handler": "_resp_common_changeHeadline",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.changeName": {
+      "key": "common.changeName",
+      "handler": "_resp_common_changeName",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.changeSecurityCode": {
+      "key": "common.changeSecurityCode",
+      "handler": "_resp_common_changeSecurityCode",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.changeUserFace": {
+      "key": "common.changeUserFace",
+      "handler": "_resp_common_changeUserFace",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.channelChat": {
+      "key": "common.channelChat",
+      "handler": "_resp_common_channelChat",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.createNewPlayer": {
+      "key": "common.createNewPlayer",
+      "handler": "_resp_common_createNewPlayer",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.declaredWarAgainstPlayer": {
+      "key": "common.declaredWarAgainstPlayer",
+      "handler": "_resp_common_declaredWarAgainstPlayer",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.delUniteServerPeaceStatus": {
+      "key": "common.delUniteServerPeaceStatus",
+      "handler": "_resp_common_delUniteServerPeaceStatus",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.deleteUserAndRestart": {
+      "key": "common.deleteUserAndRestart",
+      "handler": "_resp_common_deleteUserAndRestart",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.denyPlayerSpeak": {
+      "key": "common.denyPlayerSpeak",
+      "handler": "_resp_common_denyPlayerSpeak",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.facebookConnect": {
+      "key": "common.facebookConnect",
+      "handler": "_resp_common_facebookConnect",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.getCanDeclaredWarAgainstPlayer": {
+      "key": "common.getCanDeclaredWarAgainstPlayer",
+      "handler": "_resp_common_getCanDeclaredWarAgainstPlayer",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.getIsSecurityCodeSetted": {
+      "key": "common.getIsSecurityCodeSetted",
+      "handler": "_resp_common_getIsSecurityCodeSetted",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.getItemDefXml": {
+      "key": "common.getItemDefXml",
+      "handler": "_resp_common_getItemDefXml",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.getPackage": {
+      "key": "common.getPackage",
+      "handler": "_resp_common_getPackage",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.getPackageList": {
+      "key": "common.getPackageList",
+      "handler": "_resp_common_getPackageList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.getPackageNumber": {
+      "key": "common.getPackageNumber",
+      "handler": "_resp_common_getPackageNumber",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.getPlayerDeclaredWarStatus": {
+      "key": "common.getPlayerDeclaredWarStatus",
+      "handler": "_resp_common_getPlayerDeclaredWarStatus",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.getPlayerInfoByName": {
+      "key": "common.getPlayerInfoByName",
+      "handler": "_resp_common_getPlayerInfoByName",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.getProtectOption": {
+      "key": "common.getProtectOption",
+      "handler": "_resp_common_getProtectOption",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.getRelationship": {
+      "key": "common.getRelationship",
+      "handler": "_resp_common_getRelationship",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.mapCastle": {
+      "key": "common.mapCastle",
+      "handler": "_resp_common_mapCastle",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.mapInfo": {
+      "key": "common.mapInfo",
+      "handler": "_resp_common_mapInfo",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.mapInfoSimple": {
+      "key": "common.mapInfoSimple",
+      "handler": "_resp_common_mapInfoSimple",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.privateChat": {
+      "key": "common.privateChat",
+      "handler": "_resp_common_privateChat",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.removeSecurityCode": {
+      "key": "common.removeSecurityCode",
+      "handler": "_resp_common_removeSecurityCode",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.saveUnregisteredPlayer": {
+      "key": "common.saveUnregisteredPlayer",
+      "handler": "_resp_common_saveUnregisteredPlayer",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.setAutoHeal": {
+      "key": "common.setAutoHeal",
+      "handler": "_resp_common_setAutoHeal",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.setEovnyMember": {
+      "key": "common.setEovnyMember",
+      "handler": "_resp_common_setEovnyMember",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.setEventDone": {
+      "key": "common.setEventDone",
+      "handler": "_resp_common_setEventDone",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.setEvonyMemberEMail": {
+      "key": "common.setEvonyMemberEMail",
+      "handler": "_resp_common_setEvonyMemberEMail",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.setProtectOption": {
+      "key": "common.setProtectOption",
+      "handler": "_resp_common_setProtectOption",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.setReceiveIncomingAttack": {
+      "key": "common.setReceiveIncomingAttack",
+      "handler": "_resp_common_setReceiveIncomingAttack",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.setReturnReport": {
+      "key": "common.setReturnReport",
+      "handler": "_resp_common_setReturnReport",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.setSecurityCode": {
+      "key": "common.setSecurityCode",
+      "handler": "_resp_common_setSecurityCode",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.setTroopConfig": {
+      "key": "common.setTroopConfig",
+      "handler": "_resp_common_setTroopConfig",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.setUnlockOption": {
+      "key": "common.setUnlockOption",
+      "handler": "_resp_common_setUnlockOption",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.step": {
+      "key": "common.step",
+      "handler": "_resp_common_step",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.worldChat": {
+      "key": "common.worldChat",
+      "handler": "_resp_common_worldChat",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "common.zoneInfo": {
+      "key": "common.zoneInfo",
+      "handler": "_resp_common_zoneInfo",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "equipment.EnhancedByGemStone": {
+      "key": "equipment.EnhancedByGemStone",
+      "handler": "_resp_equipment_EnhancedByGemStone",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "equipment.EnhancedStarByGemStone": {
+      "key": "equipment.EnhancedStarByGemStone",
+      "handler": "_resp_equipment_EnhancedStarByGemStone",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "equipment.TakeOffAllEquipmenttech": {
+      "key": "equipment.TakeOffAllEquipmenttech",
+      "handler": "_resp_equipment_TakeOffAllEquipmenttech",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "equipment.TakeOffEquipmenttech": {
+      "key": "equipment.TakeOffEquipmenttech",
+      "handler": "_resp_equipment_TakeOffEquipmenttech",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "equipment.WearAllEquipmenttech": {
+      "key": "equipment.WearAllEquipmenttech",
+      "handler": "_resp_equipment_WearAllEquipmenttech",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "equipment.WearEquipmenttech": {
+      "key": "equipment.WearEquipmenttech",
+      "handler": "_resp_equipment_WearEquipmenttech",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "equipmenttech.cancelResearch": {
+      "key": "equipmenttech.cancelResearch",
+      "handler": "_resp_equipmenttech_cancelResearch",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "equipmenttech.getCoinsNeed": {
+      "key": "equipmenttech.getCoinsNeed",
+      "handler": "_resp_equipmenttech_getCoinsNeed",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "equipmenttech.getResearchList": {
+      "key": "equipmenttech.getResearchList",
+      "handler": "_resp_equipmenttech_getResearchList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "equipmenttech.research": {
+      "key": "equipmenttech.research",
+      "handler": "_resp_equipmenttech_research",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "equipmenttech.speedUpResearch": {
+      "key": "equipmenttech.speedUpResearch",
+      "handler": "_resp_equipmenttech_speedUpResearch",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "field.getCastleFieldInfo": {
+      "key": "field.getCastleFieldInfo",
+      "handler": "_resp_field_getCastleFieldInfo",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "field.getOtherFieldInfo": {
+      "key": "field.getOtherFieldInfo",
+      "handler": "_resp_field_getOtherFieldInfo",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "field.giveUpField": {
+      "key": "field.giveUpField",
+      "handler": "_resp_field_giveUpField",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "fortifications.accTroopProduce": {
+      "key": "fortifications.accTroopProduce",
+      "handler": "_resp_fortifications_accTroopProduce",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "fortifications.cancelFortificationProduce": {
+      "key": "fortifications.cancelFortificationProduce",
+      "handler": "_resp_fortifications_cancelFortificationProduce",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "fortifications.destructWallProtect": {
+      "key": "fortifications.destructWallProtect",
+      "handler": "_resp_fortifications_destructWallProtect",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "fortifications.getFortificationsProduceList": {
+      "key": "fortifications.getFortificationsProduceList",
+      "handler": "_resp_fortifications_getFortificationsProduceList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "fortifications.getProduceQueue": {
+      "key": "fortifications.getProduceQueue",
+      "handler": "_resp_fortifications_getProduceQueue",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "fortifications.produceWallProtect": {
+      "key": "fortifications.produceWallProtect",
+      "handler": "_resp_fortifications_produceWallProtect",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "friend.addBlock": {
+      "key": "friend.addBlock",
+      "handler": "_resp_friend_addBlock",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "friend.addFriend": {
+      "key": "friend.addFriend",
+      "handler": "_resp_friend_addFriend",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "friend.deleteBlock": {
+      "key": "friend.deleteBlock",
+      "handler": "_resp_friend_deleteBlock",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "friend.deleteFriend": {
+      "key": "friend.deleteFriend",
+      "handler": "_resp_friend_deleteFriend",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "friend.isBlockMailPlayer": {
+      "key": "friend.isBlockMailPlayer",
+      "handler": "_resp_friend_isBlockMailPlayer",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "furlough.cancelFurlought": {
+      "key": "furlough.cancelFurlought",
+      "handler": "_resp_furlough_cancelFurlought",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "furlough.isFurlought": {
+      "key": "furlough.isFurlought",
+      "handler": "_resp_furlough_isFurlought",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "gamblingranking.getGamblingRankingReward": {
+      "key": "gamblingranking.getGamblingRankingReward",
+      "handler": "_resp_gamblingranking_getGamblingRankingReward",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "gamblingranking.getGamblingRankingToday": {
+      "key": "gamblingranking.getGamblingRankingToday",
+      "handler": "_resp_gamblingranking_getGamblingRankingToday",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "gamblingranking.getGamblingRankingYesterday": {
+      "key": "gamblingranking.getGamblingRankingYesterday",
+      "handler": "_resp_gamblingranking_getGamblingRankingYesterday",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "gamemaster.addBuilding": {
+      "key": "gamemaster.addBuilding",
+      "handler": "_resp_gamemaster_addBuilding",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "gamemaster.addHero": {
+      "key": "gamemaster.addHero",
+      "handler": "_resp_gamemaster_addHero",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "gamemaster.addItems": {
+      "key": "gamemaster.addItems",
+      "handler": "_resp_gamemaster_addItems",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "gamemaster.removeBuilding": {
+      "key": "gamemaster.removeBuilding",
+      "handler": "_resp_gamemaster_removeBuilding",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "gamemaster.removeHero": {
+      "key": "gamemaster.removeHero",
+      "handler": "_resp_gamemaster_removeHero",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "gamemaster.removeItem": {
+      "key": "gamemaster.removeItem",
+      "handler": "_resp_gamemaster_removeItem",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "gamemaster.setResources": {
+      "key": "gamemaster.setResources",
+      "handler": "_resp_gamemaster_setResources",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "gamemaster.setTechnology": {
+      "key": "gamemaster.setTechnology",
+      "handler": "_resp_gamemaster_setTechnology",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.GenSaveRandomHero": {
+      "key": "hero.GenSaveRandomHero",
+      "handler": "_resp_hero_GenSaveRandomHero",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.GetDisappearHeros": {
+      "key": "hero.GetDisappearHeros",
+      "handler": "_resp_hero_GetDisappearHeros",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.GetRandomHero": {
+      "key": "hero.GetRandomHero",
+      "handler": "_resp_hero_GetRandomHero",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.RecoverDisappearHero": {
+      "key": "hero.RecoverDisappearHero",
+      "handler": "_resp_hero_RecoverDisappearHero",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.RetSetHeroAttri": {
+      "key": "hero.RetSetHeroAttri",
+      "handler": "_resp_hero_RetSetHeroAttri",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.SetShowHeroId": {
+      "key": "hero.SetShowHeroId",
+      "handler": "_resp_hero_SetShowHeroId",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.ShowPlayerHerosByUserName": {
+      "key": "hero.ShowPlayerHerosByUserName",
+      "handler": "_resp_hero_ShowPlayerHerosByUserName",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.addPoint": {
+      "key": "hero.addPoint",
+      "handler": "_resp_hero_addPoint",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.addPoint2": {
+      "key": "hero.addPoint2",
+      "handler": "_resp_hero_addPoint2",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.awardGold": {
+      "key": "hero.awardGold",
+      "handler": "_resp_hero_awardGold",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.callBackHero": {
+      "key": "hero.callBackHero",
+      "handler": "_resp_hero_callBackHero",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.changeName": {
+      "key": "hero.changeName",
+      "handler": "_resp_hero_changeName",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.dischargeChief": {
+      "key": "hero.dischargeChief",
+      "handler": "_resp_hero_dischargeChief",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.fireHero": {
+      "key": "hero.fireHero",
+      "handler": "_resp_hero_fireHero",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.getFleeHeroList": {
+      "key": "hero.getFleeHeroList",
+      "handler": "_resp_hero_getFleeHeroList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.getHerosListFromTavern": {
+      "key": "hero.getHerosListFromTavern",
+      "handler": "_resp_hero_getHerosListFromTavern",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.hireFacebookFriendHero": {
+      "key": "hero.hireFacebookFriendHero",
+      "handler": "_resp_hero_hireFacebookFriendHero",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.hireHero": {
+      "key": "hero.hireHero",
+      "handler": "_resp_hero_hireHero",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.levelUp": {
+      "key": "hero.levelUp",
+      "handler": "_resp_hero_levelUp",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.promoteToChief": {
+      "key": "hero.promoteToChief",
+      "handler": "_resp_hero_promoteToChief",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.recruitFleeHero": {
+      "key": "hero.recruitFleeHero",
+      "handler": "_resp_hero_recruitFleeHero",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.refreshHerosListFromTavern": {
+      "key": "hero.refreshHerosListFromTavern",
+      "handler": "_resp_hero_refreshHerosListFromTavern",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.releaseHero": {
+      "key": "hero.releaseHero",
+      "handler": "_resp_hero_releaseHero",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.resetPoint": {
+      "key": "hero.resetPoint",
+      "handler": "_resp_hero_resetPoint",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.setHeroFacebookId": {
+      "key": "hero.setHeroFacebookId",
+      "handler": "_resp_hero_setHeroFacebookId",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.tryGetSeizedHero": {
+      "key": "hero.tryGetSeizedHero",
+      "handler": "_resp_hero_tryGetSeizedHero",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "hero.useItem": {
+      "key": "hero.useItem",
+      "handler": "_resp_hero_useItem",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "interior.getResourceProduceData": {
+      "key": "interior.getResourceProduceData",
+      "handler": "_resp_interior_getResourceProduceData",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "interior.modifyCommenceRate": {
+      "key": "interior.modifyCommenceRate",
+      "handler": "_resp_interior_modifyCommenceRate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "interior.modifyTaxRate": {
+      "key": "interior.modifyTaxRate",
+      "handler": "_resp_interior_modifyTaxRate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "interior.pacifyPeople": {
+      "key": "interior.pacifyPeople",
+      "handler": "_resp_interior_pacifyPeople",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "interior.taxation": {
+      "key": "interior.taxation",
+      "handler": "_resp_interior_taxation",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "mail.deleteMail": {
+      "key": "mail.deleteMail",
+      "handler": "_resp_mail_deleteMail",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "mail.getAllTVMsg": {
+      "key": "mail.getAllTVMsg",
+      "handler": "_resp_mail_getAllTVMsg",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "mail.readMail": {
+      "key": "mail.readMail",
+      "handler": "_resp_mail_readMail",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "mail.readOverMailList": {
+      "key": "mail.readOverMailList",
+      "handler": "_resp_mail_readOverMailList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "mail.receiveMailList": {
+      "key": "mail.receiveMailList",
+      "handler": "_resp_mail_receiveMailList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "mail.reportBug": {
+      "key": "mail.reportBug",
+      "handler": "_resp_mail_reportBug",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "mail.reportPlayer": {
+      "key": "mail.reportPlayer",
+      "handler": "_resp_mail_reportPlayer",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "mail.sendMail": {
+      "key": "mail.sendMail",
+      "handler": "_resp_mail_sendMail",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "npchero.getNpcHeroInfroByID": {
+      "key": "npchero.getNpcHeroInfroByID",
+      "handler": "_resp_npchero_getNpcHeroInfroByID",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "npchero.getNpcHerosList": {
+      "key": "npchero.getNpcHerosList",
+      "handler": "_resp_npchero_getNpcHerosList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "npchero.getNpcHerosListByFilter": {
+      "key": "npchero.getNpcHerosListByFilter",
+      "handler": "_resp_npchero_getNpcHerosListByFilter",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "npchero.getNpcHerosListByMoney": {
+      "key": "npchero.getNpcHerosListByMoney",
+      "handler": "_resp_npchero_getNpcHerosListByMoney",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "quest.abandon": {
+      "key": "quest.abandon",
+      "handler": "_resp_quest_abandon",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "quest.accept": {
+      "key": "quest.accept",
+      "handler": "_resp_quest_accept",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "quest.award": {
+      "key": "quest.award",
+      "handler": "_resp_quest_award",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "quest.awardPacket": {
+      "key": "quest.awardPacket",
+      "handler": "_resp_quest_awardPacket",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "quest.donate": {
+      "key": "quest.donate",
+      "handler": "_resp_quest_donate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "quest.getAwardItems": {
+      "key": "quest.getAwardItems",
+      "handler": "_resp_quest_getAwardItems",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "quest.getEffortList": {
+      "key": "quest.getEffortList",
+      "handler": "_resp_quest_getEffortList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "quest.getEffortListByTargeTypeid": {
+      "key": "quest.getEffortListByTargeTypeid",
+      "handler": "_resp_quest_getEffortListByTargeTypeid",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "quest.getQuestList": {
+      "key": "quest.getQuestList",
+      "handler": "_resp_quest_getQuestList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "quest.getQuestType": {
+      "key": "quest.getQuestType",
+      "handler": "_resp_quest_getQuestType",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "rank.getAllianceRank": {
+      "key": "rank.getAllianceRank",
+      "handler": "_resp_rank_getAllianceRank",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "rank.getCastleRank": {
+      "key": "rank.getCastleRank",
+      "handler": "_resp_rank_getCastleRank",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "rank.getHeroRank": {
+      "key": "rank.getHeroRank",
+      "handler": "_resp_rank_getHeroRank",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "rank.getPlayerRank": {
+      "key": "rank.getPlayerRank",
+      "handler": "_resp_rank_getPlayerRank",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "rank.getTopVotesPlayer": {
+      "key": "rank.getTopVotesPlayer",
+      "handler": "_resp_rank_getTopVotesPlayer",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "rank.getVoteRank": {
+      "key": "rank.getVoteRank",
+      "handler": "_resp_rank_getVoteRank",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "report.deleteAllReports": {
+      "key": "report.deleteAllReports",
+      "handler": "_resp_report_deleteAllReports",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "report.deleteReport": {
+      "key": "report.deleteReport",
+      "handler": "_resp_report_deleteReport",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "report.markAsRead": {
+      "key": "report.markAsRead",
+      "handler": "_resp_report_markAsRead",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "report.readOverReport": {
+      "key": "report.readOverReport",
+      "handler": "_resp_report_readOverReport",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "report.receiveReportList": {
+      "key": "report.receiveReportList",
+      "handler": "_resp_report_receiveReportList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "report.shareReport": {
+      "key": "report.shareReport",
+      "handler": "_resp_report_shareReport",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.AcademyResearchUpdate": {
+      "key": "server.AcademyResearchUpdate",
+      "handler": "_resp_AcademyResearchUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.AllianceChatMsg": {
+      "key": "server.AllianceChatMsg",
+      "handler": "_resp_AllianceChatMsg",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.BuildComplate": {
+      "key": "server.BuildComplate",
+      "handler": "_resp_BuildComplate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.BuildingQueueUpdate": {
+      "key": "server.BuildingQueueUpdate",
+      "handler": "_resp_BuildingQueueUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.CastleBuffUpdate": {
+      "key": "server.CastleBuffUpdate",
+      "handler": "_resp_CastleBuffUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.CastleFieldUpdate": {
+      "key": "server.CastleFieldUpdate",
+      "handler": "_resp_CastleFieldUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.CastleUpdate": {
+      "key": "server.CastleUpdate",
+      "handler": "_resp_CastleUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.CbUpdate": {
+      "key": "server.CbUpdate",
+      "handler": "_resp_CbUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.CelebRankCompleteTipResponse": {
+      "key": "server.CelebRankCompleteTipResponse",
+      "handler": "_resp_CelebRankCompleteTipResponse",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.ChangeName": {
+      "key": "server.ChangeName",
+      "handler": "_resp_ChangeName",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.ChannelChatMsg": {
+      "key": "server.ChannelChatMsg",
+      "handler": "_resp_ChannelChatMsg",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.ColonyUpdate": {
+      "key": "server.ColonyUpdate",
+      "handler": "_resp_ColonyUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.ConnectionLost": {
+      "key": "server.ConnectionLost",
+      "handler": "_resp_ConnectionLost",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.DeclaredWarStatusChange": {
+      "key": "server.DeclaredWarStatusChange",
+      "handler": "_resp_DeclaredWarStatusChange",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.DeclaredWarUpdate": {
+      "key": "server.DeclaredWarUpdate",
+      "handler": "_resp_DeclaredWarUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.EnemyArmysUpdate": {
+      "key": "server.EnemyArmysUpdate",
+      "handler": "_resp_EnemyArmysUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.EquipmentResearchCompleteUpdate": {
+      "key": "server.EquipmentResearchCompleteUpdate",
+      "handler": "_resp_EquipmentResearchCompleteUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.FleeTroopUpdate": {
+      "key": "server.FleeTroopUpdate",
+      "handler": "_resp_FleeTroopUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.FortificationsUpdate": {
+      "key": "server.FortificationsUpdate",
+      "handler": "_resp_FortificationsUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.FriendArmysUpdate": {
+      "key": "server.FriendArmysUpdate",
+      "handler": "_resp_FriendArmysUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.GetPlayerVoteInfro": {
+      "key": "server.GetPlayerVoteInfro",
+      "handler": "_resp_GetPlayerVoteInfro",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.GetTopVotesPlayer": {
+      "key": "server.GetTopVotesPlayer",
+      "handler": "_resp_GetTopVotesPlayer",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.HeroUpdate": {
+      "key": "server.HeroUpdate",
+      "handler": "_resp_HeroUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.InjuredTroopUpdate": {
+      "key": "server.InjuredTroopUpdate",
+      "handler": "_resp_InjuredTroopUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.ItemBuff": {
+      "key": "server.ItemBuff",
+      "handler": "_resp_ItemBuff",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.ItemUpdate": {
+      "key": "server.ItemUpdate",
+      "handler": "_resp_ItemUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.KickedOut": {
+      "key": "server.KickedOut",
+      "handler": "_resp_KickedOut",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.LoginResponse": {
+      "key": "server.LoginResponse",
+      "handler": "_resp_LoginResponse",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.MercenaryUpdate": {
+      "key": "server.MercenaryUpdate",
+      "handler": "_resp_MercenaryUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.NewFinishedQuest": {
+      "key": "server.NewFinishedQuest",
+      "handler": "_resp_NewFinishedQuest",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.NewMail": {
+      "key": "server.NewMail",
+      "handler": "_resp_NewMail",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.NewReport": {
+      "key": "server.NewReport",
+      "handler": "_resp_NewReport",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.PackageList": {
+      "key": "server.PackageList",
+      "handler": "_resp_PackageList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.PlayerBuffUpdate": {
+      "key": "server.PlayerBuffUpdate",
+      "handler": "_resp_PlayerBuffUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.PlayerInfoUpdate": {
+      "key": "server.PlayerInfoUpdate",
+      "handler": "_resp_PlayerInfoUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.PrivateChatMessage": {
+      "key": "server.PrivateChatMessage",
+      "handler": "_resp_PrivateChatMessage",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.QuestCompleteTipResponse": {
+      "key": "server.QuestCompleteTipResponse",
+      "handler": "_resp_QuestCompleteTipResponse",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.QuestFinished": {
+      "key": "server.QuestFinished",
+      "handler": "_resp_QuestFinished",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.RegisterResponse": {
+      "key": "server.RegisterResponse",
+      "handler": "_resp_RegisterResponse",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.ResearchCompleteUpdate": {
+      "key": "server.ResearchCompleteUpdate",
+      "handler": "_resp_ResearchCompleteUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.ResourceUpdate": {
+      "key": "server.ResourceUpdate",
+      "handler": "_resp_ResourceUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.SecurityCodeRemovedEvent": {
+      "key": "server.SecurityCodeRemovedEvent",
+      "handler": "_resp_SecurityCodeRemovedEvent",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.SelfArmysUpdate": {
+      "key": "server.SelfArmysUpdate",
+      "handler": "_resp_SelfArmysUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.StrategyBuff": {
+      "key": "server.StrategyBuff",
+      "handler": "_resp_StrategyBuff",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.SystemInfoMsg": {
+      "key": "server.SystemInfoMsg",
+      "handler": "_resp_SystemInfoMsg",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.TradesUpdate": {
+      "key": "server.TradesUpdate",
+      "handler": "_resp_TradesUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.TransingTradeUpdate": {
+      "key": "server.TransingTradeUpdate",
+      "handler": "_resp_TransingTradeUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.TroopUpdate": {
+      "key": "server.TroopUpdate",
+      "handler": "_resp_TroopUpdate",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.UnregisteredCreatePlayerResponse": {
+      "key": "server.UnregisteredCreatePlayerResponse",
+      "handler": "_resp_UnregisteredCreatePlayerResponse",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.VisitorHelpEvent": {
+      "key": "server.VisitorHelpEvent",
+      "handler": "_resp_VisitorHelpEvent",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "server.WorldChatMsg": {
+      "key": "server.WorldChatMsg",
+      "handler": "_resp_WorldChatMsg",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "shop.Gem_Smelting": {
+      "key": "shop.Gem_Smelting",
+      "handler": "_resp_shop_Gem_Smelting",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "shop.buy": {
+      "key": "shop.buy",
+      "handler": "_resp_shop_buy",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "shop.buyResource": {
+      "key": "shop.buyResource",
+      "handler": "_resp_shop_buyResource",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "shop.getBuyResourceInfo": {
+      "key": "shop.getBuyResourceInfo",
+      "handler": "_resp_shop_getBuyResourceInfo",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "shop.useAngelItem": {
+      "key": "shop.useAngelItem",
+      "handler": "_resp_shop_useAngelItem",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "shop.useCastleGoods": {
+      "key": "shop.useCastleGoods",
+      "handler": "_resp_shop_useCastleGoods",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "shop.useDevilItem": {
+      "key": "shop.useDevilItem",
+      "handler": "_resp_shop_useDevilItem",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "shop.useGoods": {
+      "key": "shop.useGoods",
+      "handler": "_resp_shop_useGoods",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "shop.useTrickItem": {
+      "key": "shop.useTrickItem",
+      "handler": "_resp_shop_useTrickItem",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "stratagem.useStratagem": {
+      "key": "stratagem.useStratagem",
+      "handler": "_resp_stratagem_useStratagem",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "tech.cancelResearch": {
+      "key": "tech.cancelResearch",
+      "handler": "_resp_tech_cancelResearch",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "tech.getCoinsNeed": {
+      "key": "tech.getCoinsNeed",
+      "handler": "_resp_tech_getCoinsNeed",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "tech.getResearchList": {
+      "key": "tech.getResearchList",
+      "handler": "_resp_tech_getResearchList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "tech.research": {
+      "key": "tech.research",
+      "handler": "_resp_tech_research",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "tech.speedUpResearch": {
+      "key": "tech.speedUpResearch",
+      "handler": "_resp_tech_speedUpResearch",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "trade.cancelTrade": {
+      "key": "trade.cancelTrade",
+      "handler": "_resp_trade_cancelTrade",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "trade.getMyTradeList": {
+      "key": "trade.getMyTradeList",
+      "handler": "_resp_trade_getMyTradeList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "trade.getTransingTradeList": {
+      "key": "trade.getTransingTradeList",
+      "handler": "_resp_trade_getTransingTradeList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "trade.newTrade": {
+      "key": "trade.newTrade",
+      "handler": "_resp_trade_newTrade",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "trade.searchTrades": {
+      "key": "trade.searchTrades",
+      "handler": "_resp_trade_searchTrades",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "trade.speedUpTrans": {
+      "key": "trade.speedUpTrans",
+      "handler": "_resp_trade_speedUpTrans",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "troop.accTroopProduce": {
+      "key": "troop.accTroopProduce",
+      "handler": "_resp_troop_accTroopProduce",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "troop.cancelTroopProduce": {
+      "key": "troop.cancelTroopProduce",
+      "handler": "_resp_troop_cancelTroopProduce",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "troop.checkIdleBarrack": {
+      "key": "troop.checkIdleBarrack",
+      "handler": "_resp_troop_checkIdleBarrack",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "troop.disbandTroop": {
+      "key": "troop.disbandTroop",
+      "handler": "_resp_troop_disbandTroop",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "troop.getProduceQueue": {
+      "key": "troop.getProduceQueue",
+      "handler": "_resp_troop_getProduceQueue",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "troop.getTroopProduceList": {
+      "key": "troop.getTroopProduceList",
+      "handler": "_resp_troop_getTroopProduceList",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "troop.produceTroop": {
+      "key": "troop.produceTroop",
+      "handler": "_resp_troop_produceTroop",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "truce.cancelDreamTruce": {
+      "key": "truce.cancelDreamTruce",
+      "handler": "_resp_truce_cancelDreamTruce",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "truce.changeDreamTruceTime": {
+      "key": "truce.changeDreamTruceTime",
+      "handler": "_resp_truce_changeDreamTruceTime",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "truce.setDreamTruce": {
+      "key": "truce.setDreamTruce",
+      "handler": "_resp_truce_setDreamTruce",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "visit.deleteComment": {
+      "key": "visit.deleteComment",
+      "handler": "_resp_visit_deleteComment",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "visit.getAllVisitorComments": {
+      "key": "visit.getAllVisitorComments",
+      "handler": "_resp_visit_getAllVisitorComments",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "visit.getHelpedPlayers": {
+      "key": "visit.getHelpedPlayers",
+      "handler": "_resp_visit_getHelpedPlayers",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "visit.getVisitorComments": {
+      "key": "visit.getVisitorComments",
+      "handler": "_resp_visit_getVisitorComments",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "visit.helpIncreaseProduction": {
+      "key": "visit.helpIncreaseProduction",
+      "handler": "_resp_visit_helpIncreaseProduction",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "visit.markCommentAsRead": {
+      "key": "visit.markCommentAsRead",
+      "handler": "_resp_visit_markCommentAsRead",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "visit.visitorComment": {
+      "key": "visit.visitorComment",
+      "handler": "_resp_visit_visitorComment",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "vote.voteToPlayerById": {
+      "key": "vote.voteToPlayerById",
+      "handler": "_resp_vote_voteToPlayerById",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "vote.voteToPlayerByName": {
+      "key": "vote.voteToPlayerByName",
+      "handler": "_resp_vote_voteToPlayerByName",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "army.IsDropItemInCastle": {
+      "key": "army.IsDropItemInCastle",
+      "handler": "_resp_army_IsDropItemInCastle",
+      "source": "ResponseDispatcher_1.as"
+    },
+    "quest.AllowRegister": {
+      "key": "quest.AllowRegister",
+      "handler": "_resp_quest_AllowRegister",
+      "source": "ResponseDispatcher_1.as"
+    }
+  }
+}

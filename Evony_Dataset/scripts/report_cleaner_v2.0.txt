@@ -1,0 +1,116 @@
+// ============================================
+// REPORT CLEANER v2.0
+// Automated report cleanup
+// Uses REAL cleanreports, cleannpcreports
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+// REAL COMMANDS FROM CityState.as:
+// cleanreports SearchString page
+// cleannpcreports page
+// ============================================
+
+// ==========================================
+// CONFIGURATION - EDIT THESE
+// ==========================================
+
+// === CLEAN MODE ===
+set cleanMode "npc"
+set searchString "Barbarian"
+set startPage 1
+
+// === REPORT TYPES TO CLEAN ===
+set cleanNPCReports 1
+set cleanTransportReports 0
+set cleanScoutReports 0
+set cleanAttackReports 0
+set cleanDefenseReports 0
+
+// === CUSTOM SEARCH STRINGS ===
+set npcSearchString "Barbarian"
+set transportSearchString "Transport"
+set scoutSearchString "Scout"
+
+// === TIMING ===
+set cleanDelay 2000
+set pageDelay 1000
+
+// === FEATURES ===
+set enableAllPages 1
+set maxPages 100
+set enableLogging 1
+
+// === RUN MODE ===
+set runMode "once"
+
+// ==========================================
+// DO NOT EDIT BELOW
+// ==========================================
+
+set reportsDeleted 0
+set pagesProcessed 0
+
+echo ============================================
+echo REPORT CLEANER v2.0
+echo Mode: %cleanMode%
+echo Search: %searchString%
+echo ============================================
+
+// Execute cleaning based on mode
+if cleanMode = "npc" then goto cleanNPC
+if cleanMode = "custom" then goto cleanCustom
+if cleanMode = "all" then goto cleanAll
+goto cleanNPC
+
+// ==========================================
+// CLEAN NPC REPORTS (Real Command)
+// ==========================================
+label cleanNPC
+echo [CLEAN] Cleaning NPC reports...
+
+// cleannpcreports page
+// Removes all NPC attack and return reports
+cleannpcreports %startPage%
+
+echo [CLEAN] NPC report cleanup initiated
+goto complete
+
+// ==========================================
+// CLEAN CUSTOM SEARCH (Real Command)
+// ==========================================
+label cleanCustom
+echo [CLEAN] Cleaning reports matching: %searchString%
+
+// cleanreports SearchString page
+cleanreports %searchString% %startPage%
+
+echo [CLEAN] Custom cleanup initiated
+goto complete
+
+// ==========================================
+// CLEAN ALL REPORT TYPES
+// ==========================================
+label cleanAll
+echo [CLEAN] Cleaning all report types...
+
+// Clean each type
+if cleanNPCReports = 1 then cleannpcreports 1
+sleep %cleanDelay%
+
+if cleanTransportReports = 1 then cleanreports %transportSearchString% 1
+sleep %cleanDelay%
+
+if cleanScoutReports = 1 then cleanreports %scoutSearchString% 1
+sleep %cleanDelay%
+
+echo [CLEAN] All cleanup initiated
+goto complete
+
+// ==========================================
+// COMPLETION
+// ==========================================
+label complete
+echo ============================================
+echo REPORT CLEANER COMPLETE
+echo ============================================
+stop

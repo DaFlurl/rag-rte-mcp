@@ -1,0 +1,24 @@
+{
+  "flash_version": {
+    "player": "10.x - 11.x",
+    "air": "1.1 - 3.x",
+    "flex": "3.x - 4.x",
+    "actionscript": "3.0"
+  },
+  "total_cves_checked": 1858,
+  "matched_cves": 1360,
+  "unmatched_cves": 498,
+  "source_patterns": {
+    "use_after_free": 550,
+    "auth_bypass": 147,
+    "encryption": 222,
+    "socket": 27,
+    "type_confusion": 929,
+    "memory_corruption": 126,
+    "amf_deserialize": 14,
+    "integer_overflow": 20,
+    "xss": 74,
+    "csrf": 55
+  },
+  "training_examples": 1771
+}

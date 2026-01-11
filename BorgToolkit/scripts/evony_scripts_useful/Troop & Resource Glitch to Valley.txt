@@ -1,0 +1,33 @@
+// alt feeder
+setarr TgtList "300,701"
+set i 0
+
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy transport %CurrTgt%"
+transport %CurrTgt% t:100000 f:1000000000
+repeat 4
+transport %CurrTgt% t:100000 f:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+loop
+
+
+
+// Troop & Resource Glitch to Valley
+
+setarr TgtList "299,714"
+set i 0
+label tgtloop
+set CurrTgt %TgtList[{%i%}]%
+echo "deploy reinforce none%CurrTgt%"
+deploy reinforce %CurrTgt% none t:100000 f:1000000000
+repeat 5
+deploy reinforce %CurrTgt% none t:100000 g:1000000000
+repeat 5
+deploy reinforce %CurrTgt% none t:100000 f:1000000000
+deploy reinforce %CurrTgt% none t:100000 g:1000000000
+set i {%i%+1}
+if {%i%<%TgtList.length%} goto tgtloop
+sleep 15
+loop

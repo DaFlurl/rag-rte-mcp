@@ -1,0 +1,1135 @@
+{
+  "research": {
+    "military_science": {
+      "id": 1,
+      "name": "Military Science",
+      "category": "military",
+      "max_level": 10,
+      "requirements": {
+        "academy": 1
+      },
+      "effect": {
+        "troop_attack": "+2%"
+      },
+      "levels": {
+        "1": {
+          "food": 500,
+          "wood": 400,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 300
+        },
+        "2": {
+          "food": 2828,
+          "wood": 2262,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 1200
+        },
+        "3": {
+          "food": 7794,
+          "wood": 6235,
+          "stone": 3117,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 2700
+        },
+        "4": {
+          "food": 16000,
+          "wood": 12800,
+          "stone": 6400,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 4800
+        },
+        "5": {
+          "food": 27950,
+          "wood": 22360,
+          "stone": 11180,
+          "iron": 5590,
+          "gold": 0,
+          "time_seconds": 7500
+        },
+        "6": {
+          "food": 44090,
+          "wood": 35272,
+          "stone": 17636,
+          "iron": 8818,
+          "gold": 0,
+          "time_seconds": 10800
+        },
+        "7": {
+          "food": 64820,
+          "wood": 51856,
+          "stone": 25928,
+          "iron": 12964,
+          "gold": 6482,
+          "time_seconds": 14700
+        },
+        "8": {
+          "food": 90509,
+          "wood": 72407,
+          "stone": 36203,
+          "iron": 18101,
+          "gold": 9050,
+          "time_seconds": 19200
+        },
+        "9": {
+          "food": 121500,
+          "wood": 97200,
+          "stone": 48600,
+          "iron": 24300,
+          "gold": 12150,
+          "time_seconds": 24300
+        },
+        "10": {
+          "food": 158113,
+          "wood": 126491,
+          "stone": 63245,
+          "iron": 31622,
+          "gold": 15811,
+          "time_seconds": 30000
+        }
+      }
+    },
+    "military_tradition": {
+      "id": 2,
+      "name": "Military Tradition",
+      "category": "military",
+      "max_level": 10,
+      "requirements": {
+        "academy": 1,
+        "military_science": 1
+      },
+      "effect": {
+        "troop_defense": "+2%"
+      },
+      "levels": {
+        "1": {
+          "food": 500,
+          "wood": 400,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 300
+        },
+        "2": {
+          "food": 2828,
+          "wood": 2262,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 1200
+        },
+        "3": {
+          "food": 7794,
+          "wood": 6235,
+          "stone": 3117,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 2700
+        },
+        "4": {
+          "food": 16000,
+          "wood": 12800,
+          "stone": 6400,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 4800
+        },
+        "5": {
+          "food": 27950,
+          "wood": 22360,
+          "stone": 11180,
+          "iron": 5590,
+          "gold": 0,
+          "time_seconds": 7500
+        },
+        "6": {
+          "food": 44090,
+          "wood": 35272,
+          "stone": 17636,
+          "iron": 8818,
+          "gold": 0,
+          "time_seconds": 10800
+        },
+        "7": {
+          "food": 64820,
+          "wood": 51856,
+          "stone": 25928,
+          "iron": 12964,
+          "gold": 6482,
+          "time_seconds": 14700
+        },
+        "8": {
+          "food": 90509,
+          "wood": 72407,
+          "stone": 36203,
+          "iron": 18101,
+          "gold": 9050,
+          "time_seconds": 19200
+        },
+        "9": {
+          "food": 121500,
+          "wood": 97200,
+          "stone": 48600,
+          "iron": 24300,
+          "gold": 12150,
+          "time_seconds": 24300
+        },
+        "10": {
+          "food": 158113,
+          "wood": 126491,
+          "stone": 63245,
+          "iron": 31622,
+          "gold": 15811,
+          "time_seconds": 30000
+        }
+      }
+    },
+    "iron_working": {
+      "id": 3,
+      "name": "Iron Working",
+      "category": "military",
+      "max_level": 10,
+      "requirements": {
+        "academy": 2
+      },
+      "effect": {
+        "troop_life": "+2%"
+      },
+      "levels": {
+        "1": {
+          "food": 500,
+          "wood": 400,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 300
+        },
+        "2": {
+          "food": 2828,
+          "wood": 2262,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 1200
+        },
+        "3": {
+          "food": 7794,
+          "wood": 6235,
+          "stone": 3117,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 2700
+        },
+        "4": {
+          "food": 16000,
+          "wood": 12800,
+          "stone": 6400,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 4800
+        },
+        "5": {
+          "food": 27950,
+          "wood": 22360,
+          "stone": 11180,
+          "iron": 5590,
+          "gold": 0,
+          "time_seconds": 7500
+        },
+        "6": {
+          "food": 44090,
+          "wood": 35272,
+          "stone": 17636,
+          "iron": 8818,
+          "gold": 0,
+          "time_seconds": 10800
+        },
+        "7": {
+          "food": 64820,
+          "wood": 51856,
+          "stone": 25928,
+          "iron": 12964,
+          "gold": 6482,
+          "time_seconds": 14700
+        },
+        "8": {
+          "food": 90509,
+          "wood": 72407,
+          "stone": 36203,
+          "iron": 18101,
+          "gold": 9050,
+          "time_seconds": 19200
+        },
+        "9": {
+          "food": 121500,
+          "wood": 97200,
+          "stone": 48600,
+          "iron": 24300,
+          "gold": 12150,
+          "time_seconds": 24300
+        },
+        "10": {
+          "food": 158113,
+          "wood": 126491,
+          "stone": 63245,
+          "iron": 31622,
+          "gold": 15811,
+          "time_seconds": 30000
+        }
+      }
+    },
+    "archery": {
+      "id": 4,
+      "name": "Archery",
+      "category": "military",
+      "max_level": 10,
+      "requirements": {
+        "academy": 3,
+        "military_science": 2
+      },
+      "effect": {
+        "archer_attack": "+5%"
+      },
+      "levels": {
+        "1": {
+          "food": 500,
+          "wood": 400,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 300
+        },
+        "2": {
+          "food": 2828,
+          "wood": 2262,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 1200
+        },
+        "3": {
+          "food": 7794,
+          "wood": 6235,
+          "stone": 3117,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 2700
+        },
+        "4": {
+          "food": 16000,
+          "wood": 12800,
+          "stone": 6400,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 4800
+        },
+        "5": {
+          "food": 27950,
+          "wood": 22360,
+          "stone": 11180,
+          "iron": 5590,
+          "gold": 0,
+          "time_seconds": 7500
+        },
+        "6": {
+          "food": 44090,
+          "wood": 35272,
+          "stone": 17636,
+          "iron": 8818,
+          "gold": 0,
+          "time_seconds": 10800
+        },
+        "7": {
+          "food": 64820,
+          "wood": 51856,
+          "stone": 25928,
+          "iron": 12964,
+          "gold": 6482,
+          "time_seconds": 14700
+        },
+        "8": {
+          "food": 90509,
+          "wood": 72407,
+          "stone": 36203,
+          "iron": 18101,
+          "gold": 9050,
+          "time_seconds": 19200
+        },
+        "9": {
+          "food": 121500,
+          "wood": 97200,
+          "stone": 48600,
+          "iron": 24300,
+          "gold": 12150,
+          "time_seconds": 24300
+        },
+        "10": {
+          "food": 158113,
+          "wood": 126491,
+          "stone": 63245,
+          "iron": 31622,
+          "gold": 15811,
+          "time_seconds": 30000
+        }
+      }
+    },
+    "horseback_riding": {
+      "id": 5,
+      "name": "Horseback Riding",
+      "category": "military",
+      "max_level": 10,
+      "requirements": {
+        "academy": 4,
+        "military_science": 3
+      },
+      "effect": {
+        "cavalry_speed": "+5%"
+      },
+      "levels": {
+        "1": {
+          "food": 500,
+          "wood": 400,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 300
+        },
+        "2": {
+          "food": 2828,
+          "wood": 2262,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 1200
+        },
+        "3": {
+          "food": 7794,
+          "wood": 6235,
+          "stone": 3117,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 2700
+        },
+        "4": {
+          "food": 16000,
+          "wood": 12800,
+          "stone": 6400,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 4800
+        },
+        "5": {
+          "food": 27950,
+          "wood": 22360,
+          "stone": 11180,
+          "iron": 5590,
+          "gold": 0,
+          "time_seconds": 7500
+        },
+        "6": {
+          "food": 44090,
+          "wood": 35272,
+          "stone": 17636,
+          "iron": 8818,
+          "gold": 0,
+          "time_seconds": 10800
+        },
+        "7": {
+          "food": 64820,
+          "wood": 51856,
+          "stone": 25928,
+          "iron": 12964,
+          "gold": 6482,
+          "time_seconds": 14700
+        },
+        "8": {
+          "food": 90509,
+          "wood": 72407,
+          "stone": 36203,
+          "iron": 18101,
+          "gold": 9050,
+          "time_seconds": 19200
+        },
+        "9": {
+          "food": 121500,
+          "wood": 97200,
+          "stone": 48600,
+          "iron": 24300,
+          "gold": 12150,
+          "time_seconds": 24300
+        },
+        "10": {
+          "food": 158113,
+          "wood": 126491,
+          "stone": 63245,
+          "iron": 31622,
+          "gold": 15811,
+          "time_seconds": 30000
+        }
+      }
+    },
+    "compass": {
+      "id": 6,
+      "name": "Compass",
+      "category": "military",
+      "max_level": 10,
+      "requirements": {
+        "academy": 2
+      },
+      "effect": {
+        "march_speed": "+3%"
+      },
+      "levels": {
+        "1": {
+          "food": 500,
+          "wood": 400,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 300
+        },
+        "2": {
+          "food": 2828,
+          "wood": 2262,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 1200
+        },
+        "3": {
+          "food": 7794,
+          "wood": 6235,
+          "stone": 3117,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 2700
+        },
+        "4": {
+          "food": 16000,
+          "wood": 12800,
+          "stone": 6400,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 4800
+        },
+        "5": {
+          "food": 27950,
+          "wood": 22360,
+          "stone": 11180,
+          "iron": 5590,
+          "gold": 0,
+          "time_seconds": 7500
+        },
+        "6": {
+          "food": 44090,
+          "wood": 35272,
+          "stone": 17636,
+          "iron": 8818,
+          "gold": 0,
+          "time_seconds": 10800
+        },
+        "7": {
+          "food": 64820,
+          "wood": 51856,
+          "stone": 25928,
+          "iron": 12964,
+          "gold": 6482,
+          "time_seconds": 14700
+        },
+        "8": {
+          "food": 90509,
+          "wood": 72407,
+          "stone": 36203,
+          "iron": 18101,
+          "gold": 9050,
+          "time_seconds": 19200
+        },
+        "9": {
+          "food": 121500,
+          "wood": 97200,
+          "stone": 48600,
+          "iron": 24300,
+          "gold": 12150,
+          "time_seconds": 24300
+        },
+        "10": {
+          "food": 158113,
+          "wood": 126491,
+          "stone": 63245,
+          "iron": 31622,
+          "gold": 15811,
+          "time_seconds": 30000
+        }
+      }
+    },
+    "medicine": {
+      "id": 7,
+      "name": "Medicine",
+      "category": "military",
+      "max_level": 10,
+      "requirements": {
+        "academy": 4
+      },
+      "effect": {
+        "wounded_recovery": "+5%"
+      },
+      "levels": {
+        "1": {
+          "food": 500,
+          "wood": 400,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 300
+        },
+        "2": {
+          "food": 2828,
+          "wood": 2262,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 1200
+        },
+        "3": {
+          "food": 7794,
+          "wood": 6235,
+          "stone": 3117,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 2700
+        },
+        "4": {
+          "food": 16000,
+          "wood": 12800,
+          "stone": 6400,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 4800
+        },
+        "5": {
+          "food": 27950,
+          "wood": 22360,
+          "stone": 11180,
+          "iron": 5590,
+          "gold": 0,
+          "time_seconds": 7500
+        },
+        "6": {
+          "food": 44090,
+          "wood": 35272,
+          "stone": 17636,
+          "iron": 8818,
+          "gold": 0,
+          "time_seconds": 10800
+        },
+        "7": {
+          "food": 64820,
+          "wood": 51856,
+          "stone": 25928,
+          "iron": 12964,
+          "gold": 6482,
+          "time_seconds": 14700
+        },
+        "8": {
+          "food": 90509,
+          "wood": 72407,
+          "stone": 36203,
+          "iron": 18101,
+          "gold": 9050,
+          "time_seconds": 19200
+        },
+        "9": {
+          "food": 121500,
+          "wood": 97200,
+          "stone": 48600,
+          "iron": 24300,
+          "gold": 12150,
+          "time_seconds": 24300
+        },
+        "10": {
+          "food": 158113,
+          "wood": 126491,
+          "stone": 63245,
+          "iron": 31622,
+          "gold": 15811,
+          "time_seconds": 30000
+        }
+      }
+    },
+    "agriculture": {
+      "id": 11,
+      "name": "Agriculture",
+      "category": "economic",
+      "max_level": 10,
+      "requirements": {
+        "academy": 1
+      },
+      "effect": {
+        "food_production": "+5%"
+      },
+      "levels": {
+        "1": {
+          "food": 500,
+          "wood": 400,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 300
+        },
+        "2": {
+          "food": 2828,
+          "wood": 2262,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 1200
+        },
+        "3": {
+          "food": 7794,
+          "wood": 6235,
+          "stone": 3117,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 2700
+        },
+        "4": {
+          "food": 16000,
+          "wood": 12800,
+          "stone": 6400,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 4800
+        },
+        "5": {
+          "food": 27950,
+          "wood": 22360,
+          "stone": 11180,
+          "iron": 5590,
+          "gold": 0,
+          "time_seconds": 7500
+        },
+        "6": {
+          "food": 44090,
+          "wood": 35272,
+          "stone": 17636,
+          "iron": 8818,
+          "gold": 0,
+          "time_seconds": 10800
+        },
+        "7": {
+          "food": 64820,
+          "wood": 51856,
+          "stone": 25928,
+          "iron": 12964,
+          "gold": 6482,
+          "time_seconds": 14700
+        },
+        "8": {
+          "food": 90509,
+          "wood": 72407,
+          "stone": 36203,
+          "iron": 18101,
+          "gold": 9050,
+          "time_seconds": 19200
+        },
+        "9": {
+          "food": 121500,
+          "wood": 97200,
+          "stone": 48600,
+          "iron": 24300,
+          "gold": 12150,
+          "time_seconds": 24300
+        },
+        "10": {
+          "food": 158113,
+          "wood": 126491,
+          "stone": 63245,
+          "iron": 31622,
+          "gold": 15811,
+          "time_seconds": 30000
+        }
+      }
+    },
+    "lumbering": {
+      "id": 12,
+      "name": "Lumbering",
+      "category": "economic",
+      "max_level": 10,
+      "requirements": {
+        "academy": 1
+      },
+      "effect": {
+        "wood_production": "+5%"
+      },
+      "levels": {
+        "1": {
+          "food": 500,
+          "wood": 400,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 300
+        },
+        "2": {
+          "food": 2828,
+          "wood": 2262,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 1200
+        },
+        "3": {
+          "food": 7794,
+          "wood": 6235,
+          "stone": 3117,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 2700
+        },
+        "4": {
+          "food": 16000,
+          "wood": 12800,
+          "stone": 6400,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 4800
+        },
+        "5": {
+          "food": 27950,
+          "wood": 22360,
+          "stone": 11180,
+          "iron": 5590,
+          "gold": 0,
+          "time_seconds": 7500
+        },
+        "6": {
+          "food": 44090,
+          "wood": 35272,
+          "stone": 17636,
+          "iron": 8818,
+          "gold": 0,
+          "time_seconds": 10800
+        },
+        "7": {
+          "food": 64820,
+          "wood": 51856,
+          "stone": 25928,
+          "iron": 12964,
+          "gold": 6482,
+          "time_seconds": 14700
+        },
+        "8": {
+          "food": 90509,
+          "wood": 72407,
+          "stone": 36203,
+          "iron": 18101,
+          "gold": 9050,
+          "time_seconds": 19200
+        },
+        "9": {
+          "food": 121500,
+          "wood": 97200,
+          "stone": 48600,
+          "iron": 24300,
+          "gold": 12150,
+          "time_seconds": 24300
+        },
+        "10": {
+          "food": 158113,
+          "wood": 126491,
+          "stone": 63245,
+          "iron": 31622,
+          "gold": 15811,
+          "time_seconds": 30000
+        }
+      }
+    },
+    "masonry": {
+      "id": 13,
+      "name": "Masonry",
+      "category": "economic",
+      "max_level": 10,
+      "requirements": {
+        "academy": 2
+      },
+      "effect": {
+        "stone_production": "+5%"
+      },
+      "levels": {
+        "1": {
+          "food": 500,
+          "wood": 400,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 300
+        },
+        "2": {
+          "food": 2828,
+          "wood": 2262,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 1200
+        },
+        "3": {
+          "food": 7794,
+          "wood": 6235,
+          "stone": 3117,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 2700
+        },
+        "4": {
+          "food": 16000,
+          "wood": 12800,
+          "stone": 6400,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 4800
+        },
+        "5": {
+          "food": 27950,
+          "wood": 22360,
+          "stone": 11180,
+          "iron": 5590,
+          "gold": 0,
+          "time_seconds": 7500
+        },
+        "6": {
+          "food": 44090,
+          "wood": 35272,
+          "stone": 17636,
+          "iron": 8818,
+          "gold": 0,
+          "time_seconds": 10800
+        },
+        "7": {
+          "food": 64820,
+          "wood": 51856,
+          "stone": 25928,
+          "iron": 12964,
+          "gold": 6482,
+          "time_seconds": 14700
+        },
+        "8": {
+          "food": 90509,
+          "wood": 72407,
+          "stone": 36203,
+          "iron": 18101,
+          "gold": 9050,
+          "time_seconds": 19200
+        },
+        "9": {
+          "food": 121500,
+          "wood": 97200,
+          "stone": 48600,
+          "iron": 24300,
+          "gold": 12150,
+          "time_seconds": 24300
+        },
+        "10": {
+          "food": 158113,
+          "wood": 126491,
+          "stone": 63245,
+          "iron": 31622,
+          "gold": 15811,
+          "time_seconds": 30000
+        }
+      }
+    },
+    "mining": {
+      "id": 14,
+      "name": "Mining",
+      "category": "economic",
+      "max_level": 10,
+      "requirements": {
+        "academy": 3
+      },
+      "effect": {
+        "iron_production": "+5%"
+      },
+      "levels": {
+        "1": {
+          "food": 500,
+          "wood": 400,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 300
+        },
+        "2": {
+          "food": 2828,
+          "wood": 2262,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 1200
+        },
+        "3": {
+          "food": 7794,
+          "wood": 6235,
+          "stone": 3117,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 2700
+        },
+        "4": {
+          "food": 16000,
+          "wood": 12800,
+          "stone": 6400,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 4800
+        },
+        "5": {
+          "food": 27950,
+          "wood": 22360,
+          "stone": 11180,
+          "iron": 5590,
+          "gold": 0,
+          "time_seconds": 7500
+        },
+        "6": {
+          "food": 44090,
+          "wood": 35272,
+          "stone": 17636,
+          "iron": 8818,
+          "gold": 0,
+          "time_seconds": 10800
+        },
+        "7": {
+          "food": 64820,
+          "wood": 51856,
+          "stone": 25928,
+          "iron": 12964,
+          "gold": 6482,
+          "time_seconds": 14700
+        },
+        "8": {
+          "food": 90509,
+          "wood": 72407,
+          "stone": 36203,
+          "iron": 18101,
+          "gold": 9050,
+          "time_seconds": 19200
+        },
+        "9": {
+          "food": 121500,
+          "wood": 97200,
+          "stone": 48600,
+          "iron": 24300,
+          "gold": 12150,
+          "time_seconds": 24300
+        },
+        "10": {
+          "food": 158113,
+          "wood": 126491,
+          "stone": 63245,
+          "iron": 31622,
+          "gold": 15811,
+          "time_seconds": 30000
+        }
+      }
+    },
+    "construction": {
+      "id": 15,
+      "name": "Construction",
+      "category": "economic",
+      "max_level": 10,
+      "requirements": {
+        "academy": 2
+      },
+      "effect": {
+        "construction_speed": "+5%"
+      },
+      "levels": {
+        "1": {
+          "food": 500,
+          "wood": 400,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 300
+        },
+        "2": {
+          "food": 2828,
+          "wood": 2262,
+          "stone": 0,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 1200
+        },
+        "3": {
+          "food": 7794,
+          "wood": 6235,
+          "stone": 3117,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 2700
+        },
+        "4": {
+          "food": 16000,
+          "wood": 12800,
+          "stone": 6400,
+          "iron": 0,
+          "gold": 0,
+          "time_seconds": 4800
+        },
+        "5": {
+          "food": 27950,
+          "wood": 22360,
+          "stone": 11180,
+          "iron": 5590,
+          "gold": 0,
+          "time_seconds": 7500
+        },
+        "6": {
+          "food": 44090,
+          "wood": 35272,
+          "stone": 17636,
+          "iron": 8818,
+          "gold": 0,
+          "time_seconds": 10800
+        },
+        "7": {
+          "food": 64820,
+          "wood": 51856,
+          "stone": 25928,
+          "iron": 12964,
+          "gold": 6482,
+          "time_seconds": 14700
+        },
+        "8": {
+          "food": 90509,
+          "wood": 72407,
+          "stone": 36203,
+          "iron": 18101,
+          "gold": 9050,
+          "time_seconds": 19200
+        },
+        "9": {
+          "food": 121500,
+          "wood": 97200,
+          "stone": 48600,
+          "iron": 24300,
+          "gold": 12150,
+          "time_seconds": 24300
+        },
+        "10": {
+          "food": 158113,
+          "wood": 126491,
+          "stone": 63245,
+          "iron": 31622,
+          "gold": 15811,
+          "time_seconds": 30000
+        }
+      }
+    }
+  }
+}

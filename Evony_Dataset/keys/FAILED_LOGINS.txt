@@ -1,0 +1,8 @@
+# FAILED LOGIN ATTEMPTS LOG
+# Generated: 2026-01-04 15:00
+# Format: email:password_tried | error_message
+#============================================================
+
+# Add failed attempts here:
+# example@email.com:wrongpassword | Invalid credentials
+

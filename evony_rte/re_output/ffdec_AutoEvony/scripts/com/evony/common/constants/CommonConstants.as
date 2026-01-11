@@ -1,0 +1,370 @@
+package com.evony.common.constants
+{
+   public class CommonConstants
+   {
+      
+      public static const INCWOODPRODUCEEFFORTBUFF:String = "IncWoodProduceEffortBuff";
+      
+      public static const INCGETITEMRATEAFTERWAREFFORTBUFF:String = "IncGetItemRateAfterWarEffortBuff";
+      
+      public static const DECPRODUCEMILITIAEFFORTBUFF:String = "DecProduceMilitiaEffortBuff";
+      
+      public static const INCFOODPRODUCEEFFORTBUFF:String = "IncFoodProduceEffortBuff";
+      
+      public static const INCGOLDPRODUCEEFFORTBUFF:String = "IncGoldProduceEffortBuff";
+      
+      public static const DECPROCDUCECAVALRYEFFORTBUF:String = "DecProcduceCavalryEffortBuf";
+      
+      public static const INCCASTLESUPPORTEFFORTBUFF:String = "IncCastleSupportEffortBuff";
+      
+      public static const INCHURTEDSOLIDEREFFORTBUFF:String = "IncHurtedSoliderEffortBuff";
+      
+      public static const INCIRONPRODUCEEFFORTBUFF:String = "IncIronProduceEffortBuff";
+      
+      public static const INCSTONEPRODUCEEFFORTBUFF:String = "IncStoneProduceEffortBuff";
+      
+      public static const DECPRODUCEBUILDEFFORTBUFF:String = "DecProduceBuildEffortBuff";
+      
+      public static const DECPRODUCEMACHINEEFFORTBUFF:String = "DecProduceMachineEffortBuff";
+      
+      public static const SZ_SPEAK_GPAP:String = "player.speak.gold_publicity_ambassador.permanent";
+      
+      public static const SZ_SPEAK_BPAP:String = "player.speak.bronze_publicity_ambassador.permanent";
+      
+      public static const SZ_SPEAK_SPAP:String = "player.speak.silver_publicity_ambassador.permanent";
+      
+      public static const SZ_SPEAK_SPAP_15:String = "player.speak.silver_publicity_ambassador.15";
+      
+      public static const SZ_SPEAK_BPAP_15:String = "player.speak.bronze_publicity_ambassador.permanent.15";
+      
+      public static const SZ_SPEAK_GPAP_15:String = "player.speak.gold_publicity_ambassador.15";
+      
+      public static const ITEM_TYPE_TREASURE:String = "宝物";
+      
+      public static const ITEM_TYPE_SPEEDUP:String = "加速";
+      
+      public static const ITEM_TYPE_RESOURCE:String = "生产";
+      
+      public static const ITEM_TYPE_PACKET:String = "宝箱";
+      
+      public static const ITEM_TYPE_MEDAL:String = "奖章";
+      
+      public static const ITEM_TYPE_TASK:String = "任务";
+      
+      public static const ITEM_TYPE_MATERIALS:String = "材料";
+      
+      public static const ITEM_TYPE_TRICK:String = "计谋";
+      
+      public static const ITEM_GOLD_ID:String = "gold";
+      
+      public static const ITEM_WOOD_ID:String = "wood";
+      
+      public static const ITEM_STONE_ID:String = "stone";
+      
+      public static const ITEM_IRON_ID:String = "iron";
+      
+      public static const ITEM_MEDAL_ID:String = "money";
+      
+      public static const ITEM_FOOD_ID:String = "food";
+      
+      public static const SPECIAL_NEWYEAR_PACKAGE:String = "player.box.present.money.25";
+      
+      public static const SPECIAL_HAPPY_EVONY_CHEST:String = "player.box.present.money.31";
+      
+      public static const COINS_SPEED_ITEM_ID:String = "coins.speed";
+      
+      public static const SPECIAL_CHRISTMAS_PACKAGE:String = "player.box.present.money.23";
+      
+      public static const SPECIAL_CHRISTMAS_PACKAGE_KEY:String = "player.key.santa";
+      
+      public static const ITEM_FOR_GAMBLING_BOX:String = "player.box.gambling.";
+      
+      public static const ITEM_BOX_RESOURCE_100W:String = "player.box.resource.1";
+      
+      public static const ITEM_FOR_RESET_HERO_POINT:String = "hero.reset.1";
+      
+      public static const SPECIAL_NEWYEAR_PACKAGE_KEY:String = "player.key.newyear";
+      
+      public static const SPECIAL_EASTER_PACKAGE_KEY:String = "player.key.easter_package";
+      
+      public static const SZ_RITUAL_OF_PACK_ADVANCED:String = "alliance.ritual_of_pact.advanced";
+      
+      public static const SZ_RITUAL_OF_PACK_ULTIMATE:String = "alliance.ritual_of_pact.ultimate";
+      
+      public static const FREE_SPEED_ITEM_ID:String = "free.speed";
+      
+      public static const SANTA_MILK_COOKIES:String = "player.santa.stoptoopsupkeep";
+      
+      public static const SZ_RITUAL_OF_PACK_PREMIUM:String = "alliance.ritual_of_pact.premium";
+      
+      public static const ITEM_BOX_TROOP_100W:String = "player.box.troop.1";
+      
+      public static const WORLD_CHAT_NEET_ITEM:String = "consume.1.a";
+      
+      public static const NEWYEAR_NO_TROOPUPKEEP:String = "player.newyear.stoptoopsupkeep";
+      
+      public static const SPECIAL_EASTER_CHEST:String = "player.box.present.money.29";
+      
+      public static const DESTROY_BUILDING_ITEM_IMMEDIATELY:String = "player.destroy.1.a";
+      
+      public static const SPECIAL_CHEST_KEY:String = "player.key.special.chest";
+      
+      public static const FREE_SPEED_TIME_LIMIT:int = 300;
+      
+      public static const MAX_TITLE_LEVEL:int = 9;
+      
+      public static const EFFORT_OWM_CITY:int = 104;
+      
+      public static const EFFORT_KILL_COUNT:int = 121;
+      
+      public static const EFFORT_TECH:int = 108;
+      
+      public static const SECURITY_PROTECT_COLONY:int = 1;
+      
+      public static const SECURITY_PROTECT_CITY:int = 2;
+      
+      public static const SECURITY_PROTECT_ARMY:int = 4;
+      
+      public static const SECURITY_PROTECT_HERO:int = 8;
+      
+      public static const SECURITY_PROTECT_TAX_RATE:int = 16;
+      
+      public static const CHAT_CHANNEL_ALLIANCE:String = "alliance";
+      
+      public static const CHAT_CHANNEL_BEGINNER:String = "beginner";
+      
+      public static const CHAT_CHANNEL_TRADE:String = "trade";
+      
+      public static const CHAT_CHANNEL_WORLD:String = "world";
+      
+      public static const CHAT_CHANNEL_ZONE:String = "zone";
+      
+      public static const MAX_CHAT_MSG_LENGTH:int = 500;
+      
+      public static const EVONY_TV_MSG_MIN_VALUE:int = 150;
+      
+      public static const EVONY_TV_MSG_MAX_LIVE_HOUR:int = 24;
+      
+      public static const EVONY_NO_SENDER_MSG_MIN_VALUE:int = 150;
+      
+      public static const HERO_GENERAL:int = 0;
+      
+      public static const HERO_NPC:int = 1;
+      
+      public static const HERO_KING_QUEEN:int = 2;
+      
+      public static const HERO_ROYAL:int = 3;
+      
+      public static const UPDATE_TYPE_ADD:int = 0;
+      
+      public static const UPDATE_TYPE_DELETE:int = 1;
+      
+      public static const UPDATE_TYPE_UPDATE:int = 2;
+      
+      public static const LOGIN_SSO_PARAM_USER:String = "username";
+      
+      public static const LOGIN_SSO_PARAM:String = "login.sso.param";
+      
+      public static const LOGIN_SSO_PARAM_KING:String = "king";
+      
+      public static const LOGIN_SSO_PARAM_SEX:String = "sex";
+      
+      public static const LOGIN_SSO_TIMEOUT:Number = 60000;
+      
+      public static const LOGIN_SSO_PARAM_PASSWORD:String = "pwd";
+      
+      public static const LOGIN_SSO_PARAM_TIMESTAMP:String = "subtime";
+      
+      public static const LOGIN_SSO_CMD:String = "login.sso";
+      
+      public static const LOGIN_SSO_PARAM_EMAIL:String = "email";
+      
+      public static const LOGIN_PARAM_SIG:String = "sig";
+      
+      public static const LOGIN_PARAM_HOST_ID:String = "host.id";
+      
+      public static const LOGIN_PARAM_HOST_SIG:String = "host.sig";
+      
+      public static const LOGIN_PARAM_VISITOR_SIG:String = "visitor.sig";
+      
+      public static const LOGIN_PARAM_USER:String = "user";
+      
+      public static const LOGIN_PARAM_EMAIL:String = "email";
+      
+      public static const LOGIN_PARAM_HOST_PWD:String = "host.pwd";
+      
+      public static const LOGIN_PARAM_VISITOR_PWD:String = "visitor.pwd";
+      
+      public static const LOGIN_PARAM_FBUID:String = "fbuid";
+      
+      public static const LOGIN_PARAM_PASSWORD:String = "pwd";
+      
+      public static const LOGIN_PARAM_VISITOR_ID:String = "visitor.id";
+      
+      public static const LOGIN_PLAY_WITHOUT_RIGISTRATION_CMD:String = "login.play.without.registration";
+      
+      public static const LOGIN_CMD:String = "login";
+      
+      public static const LOGIN_FB_CMD:String = "login.fb";
+      
+      public static const LOGIN_NEW_CMD:String = "login.new";
+      
+      public static const LOGIN_VISITOR:String = "login.visitor";
+      
+      public static const MEDAL_CHANGED_REASON_INTIT:int = 1;
+      
+      public static const MEDAL_CHANGED_REASON_BUY_RES:int = 2;
+      
+      public static const MEDAL_CHANGED_REASON_BUY_ITEM:int = 3;
+      
+      public static const MEDAL_CHANGED_REASON_BECOMEPOOR:int = 4;
+      
+      public static const MEDAL_CHANGED_REASON_BECOMERICH:int = 5;
+      
+      public static const MEDAL_CHANGED_REASON_USE_ITEM:int = 6;
+      
+      public static const MEDAL_CHANGED_REASON_SEND_MEDAL:int = 7;
+      
+      public static const MEDAL_CHANGED_REASON_AWARD_MEDAL:int = 8;
+      
+      public static const MEDAL_CHANGED_REASON_OTHER:int = 9;
+      
+      public static const MEDAL_CHANGED_REASON_JMX:int = 10;
+      
+      public static const MEDAL_CHANGED_REASON_TOPUP:int = 11;
+      
+      public static const MEDAL_CHANGED_REASON_GM:int = 12;
+      
+      public static const MEDAL_CHANGED_REASON_GM_GIFT:int = 13;
+      
+      public static const MEDAL_CHANGED_REASON_FURLOUGH:int = 14;
+      
+      public static const MEDAL_CHANGED_REASON_COMMISSION_QUEST_GET_REWARD:int = 15;
+      
+      public static const MEDAL_CHANGED_REASON_COMMISSION_QUEST_GIVE_REWARD:int = 16;
+      
+      public static const MEDAL_CHANGED_REASON_COMMISSION_QUEST_FAILED_REWARD:int = 17;
+      
+      public static const MEDAL_CHANGED_REASON_GM_EXCHANGE_ADD:int = 18;
+      
+      public static const MEDAL_CHANGED_REASON_GM_EXCHANGE_DECREASE:int = 19;
+      
+      public static const MEDAL_CHANGED_REASON_CENTS_PACKAGE:int = 20;
+      
+      public static const MEDAL_CHANGED_REASON_LINKED:int = 21;
+      
+      public static const SPEAK_BPAP_15:int = 1;
+      
+      public static const SPEAK_BPAP:int = 2;
+      
+      public static const SPEAK_SPAP_15:int = 3;
+      
+      public static const SPEAK_SPAP:int = 4;
+      
+      public static const SPEAK_GPAP_15:int = 5;
+      
+      public static const SPEAK_GPAP:int = 6;
+      
+      public static const EFFORT_ARMY_FOOT:int = 106;
+      
+      public static const EFFORT_LV100_HERO:int = 127;
+      
+      public static const EFFORT_BOOTY:int = 112;
+      
+      public static const EFFORT_MEDAL_COUNT:int = 124;
+      
+      public static const EFFORT_KILL:int = 100;
+      
+      public static const EFFORT_RES_COUNT:int = 122;
+      
+      public static const EFFORT_CITY:int = 101;
+      
+      public static const EFFORT_RES:int = 109;
+      
+      public static const EFFORT_MAIN_ID:int = 5;
+      
+      public static const EFFORT_PRODUTER:int = 103;
+      
+      public static const EFFORT_HERO:int = 110;
+      
+      public static const EFFORT_GENERAL_HERO:int = 129;
+      
+      public static const EFFORT_PRODUCT_ARMY_COUNT:int = 123;
+      
+      public static const EFFORT_SCOUTER:int = 102;
+      
+      public static const EFFORT_CAPTURED_HERO:int = 107;
+      
+      public static const EFFORT_CITY_LV10:int = 125;
+      
+      public static const EFFORT_LV100_HISTORIC_HERO:int = 128;
+      
+      public static const EFFORT_STAR:int = 116;
+      
+      public static const EFFORT_MEDAL:int = 111;
+      
+      public static const EFFORT_FIELD:int = 105;
+      
+      public static const EFFORT_HISTORIC_HERO:int = 126;
+      
+      public static const CONTRIBUTE_RESOURCE_NUM:int = 5;
+      
+      public static const CONTRIBUTE_MEDAL_NUM:int = 9;
+      
+      public static const CONTRIBUTE_TROOP_NUM:int = 9;
+      
+      public static const CONTRIBUTE_MAIN_ID:int = 4;
+      
+      public static const RESOURCE_TYPE_GOLD:int = 1005;
+      
+      public static const RESOURCE_TYPE_FOOD:int = 1003;
+      
+      public static const RESOURCE_TYPE_WOOD:int = 1001;
+      
+      public static const RESOURCE_TYPE_STONE:int = 1004;
+      
+      public static const RESOURCE_TYPE_IRON:int = 1002;
+      
+      public static const EQUIPMENT_COLOR_GRAY:int = 1;
+      
+      public static const EQUIPMENT_COLOR_GREEN:int = 2;
+      
+      public static const EQUIPMENT_COLOR_BLUE:int = 3;
+      
+      public static const FOUND_TROOP:int = 113;
+      
+      public static const UTITLE_USE:String = " Used";
+      
+      public static const UNIT_DISTANCE:int = 60000;
+      
+      public static const TTITLE:String = "Trick Infro";
+      
+      public static const PAGE:String = "other";
+      
+      public static const REGISTER:String = "register";
+      
+      public static const REGIST_KING_NAME:String = "king";
+      
+      public static const UTITLE_VIC:String = "Victim of  ";
+      
+      public static const UNFURL_ACHIEVMENT:int = 115;
+      
+      public static const COMMISSION_QUEST_TYPE_COLONY:int = 1;
+      
+      public static const PARAM_COMMAND:String = "cmd";
+      
+      public static const NO_CONTRIBUTE_TASK:int = 1000000;
+      
+      public static const CONTRIBUTE_RESOURCE:int = 114;
+      
+      public static const BDENYOTHERPLAYER:int = 7;
+      
+      public static const FRESH_PLAYER_DAY_MAX:int = 7;
+      
+      public function CommonConstants()
+      {
+         super();
+      }
+   }
+}
+

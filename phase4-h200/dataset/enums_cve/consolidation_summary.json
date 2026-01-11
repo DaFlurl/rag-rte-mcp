@@ -1,0 +1,17 @@
+{
+  "total_cves": 20430,
+  "total_protocols": 281,
+  "total_enums": 4441,
+  "sources": {
+    "train_cve_all": 2862,
+    "train_cve_expanded": 907,
+    "train_cve_security": 0,
+    "evony_cve_dataset": 1,
+    "cve_validated": 0,
+    "cve_expanded": 0,
+    "flash_cves": 1,
+    "cve_training_expanded": 4152
+  },
+  "target_cves": 2500,
+  "target_met": true
+}

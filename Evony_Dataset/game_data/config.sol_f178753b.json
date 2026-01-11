@@ -1,0 +1,15 @@
+{
+  "now": {
+    "serverIP": "216.66.17.168",
+    "strserverAlias": "Parapet",
+    "autoRun": true,
+    "secCode": "",
+    "autoLoginMaxTime": "600",
+    "password": "cookie",
+    "autoLoginMinTime": "1",
+    "server": "cc2",
+    "autoLogin": true,
+    "autoScript": true,
+    "username": "scream.your.heartout@windowslive.com"
+  }
+}

@@ -1,0 +1,34 @@
+set trainThis all //enter wo,w,s,p,sw,a,t,c,ata,b,r,cp or all
+setsilence true
+setarray troopName ["nn1", "nn2", "wo", "w", "s", "p", "sw", "a", "t", "c", "cata", "b", "r", "cp"]
+setarray qds ["0", "0", "1", "1", "1", "1", "1", "2", "4", "3", "6", "5", "10", "8"]
+setarray troopAlias ["nn1", "nn2", "Workers", "Warriors", "Scouts", "Pikemen", "Swordsmen", "Archers", "Transporters", "Cavalry", "Cataphracts", "Ballistae", "BatteringRam", "Catapults"]
+setarr baseFoodCost "0 0 50 80 120 150 200 300 600 1000 2000 2500 4000 5000"
+setarr baseWoodCost "0 0 150 100 200 500 150 350 1500 600 500 600 6000 5000"
+setarr baseStoneCost "0 0 0 0 0 0 0 0 0 0 0 0 0 1200"
+setarr baseIronCost "0 0 110 150 150 100 400 300 350 500 2500 1800 1500 8000"
+set string "<br> <u><b>Using the max population in $c.castle.name$ to train troops will each time require:</b></u><br>" 
+set troopType 1
+if {%trainThis%==all} goto nextT
+getindexof troopType troopName %trainThis%
+label resCost
+if {%troopType%<8} set buff DecProduceMilitiaEffortBuff
+if {%troopType%==9||%troopType%==10} set buff DecProcduceCavalryEffortBuf
+if {%troopType%==8||%troopType%>10} set buff DecProduceMachineEffortBuff
+set count {$c.cm.resource.maxPopulation$\%qds[{%troopType%}]%}
+set resReduction 0
+iferror $c.cm.getBuff(%buff%).descName$ goto skipReduction
+set resReduction {$c.cm.getBuff(%buff%).descName$*0.05}
+label skipReduction
+set foodCost {%count%*%baseFoodCost[{%troopType%}]%*{1-%resReduction%}\1}
+set woodCost {%count%*%baseWoodCost[{%troopType%}]%*{1-%resReduction%}\1}
+set stoneCost {%count%*%baseStoneCost[{%troopType%}]%*{1-%resReduction%}\1}
+set ironCost {%count%*%baseIronCost[{%troopType%}]%*{1-%resReduction%}\1}
+set string "%string% - <u>For %troopAlias[{%troopType%}]%:</u> f:$c.formatNum(%foodCost%,0)$ w:$c.formatNum(%woodCost%,0)$ s:$c.formatNum(%stoneCost%,0)$ i:$c.formatNum(%ironCost%,0)$<br>" 
+if {%trainThis%!=all} goto report
+label nextT
+set troopType {%troopType%+1}
+if {%troopType%<%troopName.length%} goto resCost
+label report
+set string "%string%<br><font color='#0000FF'>    &#169; 2016-08-12 &#60;&#126;Yozhik v Tumane&#126;&#62;&#8482;</font><br>"
+set e $c.cm.logMsg(c.getVar(string),#0000AA)$

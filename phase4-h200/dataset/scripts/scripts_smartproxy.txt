@@ -1,0 +1,12 @@
+SmartProxy
+
+fnice00006@gmail.com
+PXu7eUJG@fgAU8eP
+
+
+C:\Python27
+C:\Python27\Scripts
+
+
+AMDRMSDKPATH
+C:\Program Files\AMD\RyzenMasterSDK\

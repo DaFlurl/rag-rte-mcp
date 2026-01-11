@@ -1,0 +1,7 @@
+setsilence true
+set locationId 7 //this is the location of building to upgrade
+set castleId $m_city.castle.id$
+set junk $m_city.actionFactory.getCastleCommands().upgradeBuilding(%castleId%,%locationId%)$
+set junk $m_city.actionFactory.getCastleCommands().cancleBuildCommand(%castleId%,%locationId%)$
+set junk $m_city.actionFactory.getCastleCommands().upgradeBuilding(%castleId%,%locationId%)$
+loop

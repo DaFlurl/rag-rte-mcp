@@ -1,0 +1,19 @@
+setsilence true
+canceltrade
+set sellfood 100000000000
+label searchtrades
+set s $c.af.getTradeCommands().searchTrades(0)$
+label wait
+sleep .1
+iferror $%s%.ok$ goto wait
+set price $%s%.buyersArray[0].price$
+set amount $%s%.buyersArray[0].amount$
+setsilence false
+set totalamount $c.cm.resource.food.amount$
+set am {%totalamount%-%sellfood%}
+if {%am%<0} goto end
+set amount $c.math.min(%amount%,%am%,99999999)$
+sell food %amount% %price%
+sleep 1
+label end
+loop

@@ -1,0 +1,69 @@
+version: '3.8'
+
+services:
+  evony-rte:
+    build: .
+    container_name: evony-rte-server
+    ports:
+      - "9999:9999" # Bot server
+      - "8080:8080" # MCP server / Web UI
+    volumes:
+      - ./evony_rte/logs:/app/evony_rte/logs
+      - ./evony_rte/re_output:/app/evony_rte/re_output
+      - ./captures:/app/captures
+    environment:
+      - BOT_SERVER_PORT=9999
+      - MCP_SERVER_PORT=8080
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD", "python", "-c", "import requests; requests.get('http://localhost:9999/api/status')" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # Optional: Redis for caching RAG results
+  redis:
+    image: redis:alpine
+    container_name: evony-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+  # Optional: Prometheus for metrics
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: evony-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    restart: unless-stopped
+    profiles:
+      - monitoring
+
+  # Optional: Grafana for dashboards
+  grafana:
+    image: grafana/grafana:latest
+    container_name: evony-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=evony123
+    volumes:
+      - grafana_data:/var/lib/grafana
+    restart: unless-stopped
+    profiles:
+      - monitoring
+
+volumes:
+  redis_data:
+  grafana_data:
+
+
+networks:
+  default:
+    name: evony-network

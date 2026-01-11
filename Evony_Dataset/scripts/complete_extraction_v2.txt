@@ -1,0 +1,157 @@
+//===============================================================
+// COMPLETE 1:1 ACCOUNT EXTRACTION SCRIPT v2.0
+// Extracts ALL account data and saves to JSON file
+// Run in RoboEvony while logged in
+//===============================================================
+
+setsilence true
+
+// Output file path
+set email $config.username$
+set safeEmail "%email%".replace("@","_at_").replace(".","_")
+set outputFile "D:\EvonyToolKit\data\fresh_exports\%safeEmail%.json"
+
+// Start JSON
+set json "{"
+
+// Timestamp
+set json "%json%\"extraction_time\":\"%date% %time%\","
+set json "%json%\"extractor_version\":\"2.0\","
+
+// PLAYER INFO
+set json "%json%\"player\":{"
+set json "%json%\"email\":\"%email%\","
+set json "%json%\"userName\":\"%player.userName%\","
+set json "%json%\"id\":%player.id%,"
+set json "%json%\"prestige\":%player.prestige%,"
+set json "%json%\"honor\":%player.honor%,"
+set json "%json%\"title\":\"%player.title%\","
+set json "%json%\"allianceName\":\"%player.alliance%\","
+set json "%json%\"allianceId\":%player.allianceId%,"
+set json "%json%\"gold\":%player.gold%"
+set json "%json%},"
+
+// CITIES ARRAY
+set json "%json%\"cities\":["
+set cityIndex 0
+
+label CityLoop
+iferror $cities[%cityIndex%].name$ goto EndCities
+if {%cityIndex%>0} set json "%json%,"
+
+// City object
+set json "%json%{"
+set json "%json%\"name\":\"%cities[%cityIndex%].name%\","
+set json "%json%\"id\":%cities[%cityIndex%].id%,"
+set json "%json%\"x\":%cities[%cityIndex%].x%,"
+set json "%json%\"y\":%cities[%cityIndex%].y%,"
+set json "%json%\"fieldId\":%cities[%cityIndex%].fieldId%,"
+set json "%json%\"population\":%cities[%cityIndex%].population%,"
+set json "%json%\"loyalty\":%cities[%cityIndex%].loyalty%,"
+
+// Resources
+set json "%json%\"resources\":{"
+set json "%json%\"gold\":%cities[%cityIndex%].resource.gold%,"
+set json "%json%\"food\":%cities[%cityIndex%].resource.food%,"
+set json "%json%\"wood\":%cities[%cityIndex%].resource.wood%,"
+set json "%json%\"stone\":%cities[%cityIndex%].resource.stone%,"
+set json "%json%\"iron\":%cities[%cityIndex%].resource.iron%,"
+set json "%json%\"goldCapacity\":%cities[%cityIndex%].resource.goldCapacity%,"
+set json "%json%\"foodCapacity\":%cities[%cityIndex%].resource.foodCapacity%,"
+set json "%json%\"woodCapacity\":%cities[%cityIndex%].resource.woodCapacity%,"
+set json "%json%\"stoneCapacity\":%cities[%cityIndex%].resource.stoneCapacity%,"
+set json "%json%\"ironCapacity\":%cities[%cityIndex%].resource.ironCapacity%"
+set json "%json%},"
+
+// Troops
+set json "%json%\"troops\":{"
+set json "%json%\"peasants\":%cities[%cityIndex%].troop.peasants%,"
+set json "%json%\"militia\":%cities[%cityIndex%].troop.militia%,"
+set json "%json%\"scouter\":%cities[%cityIndex%].troop.scouter%,"
+set json "%json%\"pikemen\":%cities[%cityIndex%].troop.pikemen%,"
+set json "%json%\"swordsmen\":%cities[%cityIndex%].troop.swordsmen%,"
+set json "%json%\"archer\":%cities[%cityIndex%].troop.archer%,"
+set json "%json%\"lightCavalry\":%cities[%cityIndex%].troop.lightCavalry%,"
+set json "%json%\"heavyCavalry\":%cities[%cityIndex%].troop.heavyCavalry%,"
+set json "%json%\"carriage\":%cities[%cityIndex%].troop.carriage%,"
+set json "%json%\"ballista\":%cities[%cityIndex%].troop.ballista%,"
+set json "%json%\"batteringRam\":%cities[%cityIndex%].troop.batteringRam%,"
+set json "%json%\"catapult\":%cities[%cityIndex%].troop.catapult%"
+set json "%json%},"
+
+// Fortifications
+set json "%json%\"fortifications\":{"
+set json "%json%\"trap\":%cities[%cityIndex%].fortification.trap%,"
+set json "%json%\"abatis\":%cities[%cityIndex%].fortification.abatis%,"
+set json "%json%\"archerTower\":%cities[%cityIndex%].fortification.archerTower%,"
+set json "%json%\"rollingLogs\":%cities[%cityIndex%].fortification.rollingLogs%,"
+set json "%json%\"defensiveTrebuchet\":%cities[%cityIndex%].fortification.defensiveTrebuchet%"
+set json "%json%}"
+
+set json "%json%}"
+
+set cityIndex {%cityIndex%+1}
+goto CityLoop
+
+label EndCities
+set json "%json%],"
+
+// HEROES ARRAY
+set json "%json%\"heroes\":["
+set heroIndex 0
+
+label HeroLoop
+iferror $heroes[%heroIndex%].name$ goto EndHeroes
+if {%heroIndex%>0} set json "%json%,"
+
+set json "%json%{"
+set json "%json%\"name\":\"%heroes[%heroIndex%].name%\","
+set json "%json%\"id\":%heroes[%heroIndex%].id%,"
+set json "%json%\"level\":%heroes[%heroIndex%].level%,"
+set json "%json%\"experience\":%heroes[%heroIndex%].experience%,"
+set json "%json%\"loyalty\":%heroes[%heroIndex%].loyalty%,"
+set json "%json%\"power\":%heroes[%heroIndex%].power%,"
+set json "%json%\"stratagem\":%heroes[%heroIndex%].stratagem%,"
+set json "%json%\"management\":%heroes[%heroIndex%].management%,"
+set json "%json%\"basePower\":%heroes[%heroIndex%].basePower%,"
+set json "%json%\"baseStratagem\":%heroes[%heroIndex%].baseStratagem%,"
+set json "%json%\"baseManagement\":%heroes[%heroIndex%].baseManagement%,"
+set json "%json%\"grade\":\"%heroes[%heroIndex%].grade%\","
+set json "%json%\"status\":\"%heroes[%heroIndex%].status%\","
+set json "%json%\"isMayor\":%heroes[%heroIndex%].isMayor%,"
+set json "%json%\"city\":\"%heroes[%heroIndex%].city%\""
+set json "%json%}"
+
+set heroIndex {%heroIndex%+1}
+goto HeroLoop
+
+label EndHeroes
+set json "%json%],"
+
+// ITEMS ARRAY
+set json "%json%\"items\":["
+set itemIndex 0
+
+label ItemLoop
+iferror $items[%itemIndex%].id$ goto EndItems
+if {%itemIndex%>0} set json "%json%,"
+
+set json "%json%{\"id\":\"%items[%itemIndex%].id%\",\"name\":\"%items[%itemIndex%].name%\",\"count\":%items[%itemIndex%].count%}"
+
+set itemIndex {%itemIndex%+1}
+if {%itemIndex%>1000} goto EndItems
+goto ItemLoop
+
+label EndItems
+set json "%json%]"
+
+// Close main JSON
+set json "%json%}"
+
+// Save to file
+echo "Saving to: %outputFile%"
+savefile "%outputFile%" "%json%"
+echo "EXTRACTION COMPLETE!"
+echo "Saved: %outputFile%"
+
+setsilence false

@@ -1,0 +1,19 @@
+import csv
+x=list(csv.reader(open('khanaccounts.csv','rb')))
+x=[p[0].strip() for p in x]
+x=list(set(x))
+import os
+import json
+def getBuilding(buildinglist,typeid):
+    for p in buildinglist:
+        if p["typeId"]==typeid:
+            return {"position":p["positionId"],"level":p["level"],"status":p["status"]}
+
+
+for p in x:
+    if not os.path.exists("accounts\\"+p.replace("@","")+".json"): continue
+    m=json.loads(open("accounts\\"+p.replace("@","")+".json",'rb').read())
+    for pp in m["player"]["castles"]:
+        m=getBuilding(pp["buildings"],29)
+        if m!=None and m["level"]==14:
+            print p,str(pp["fieldId"]%800)+","+str(pp["fieldId"]/800)

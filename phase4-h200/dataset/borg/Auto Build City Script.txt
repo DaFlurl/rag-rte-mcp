@@ -1,0 +1,16 @@
+//--autoCityScript v0.99
+//--just set level of the flat you wish to build upon
+//--and radius is just the max distance from your city to build
+set level 1
+set radius 15
+//----Dont Change below
+setsilence true
+set center $c.coord$
+scanmap %center% %radius%
+setarr list $m_city.getMapFieldList(flat,%level%,%radius%,m_city.castle.fieldId)$
+set target %list[0]%
+buildcity %target%
+sleep 00:15:00
+completequests routine
+sleep 00:30:00
+loop

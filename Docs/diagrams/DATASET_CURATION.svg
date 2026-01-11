@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <defs>
+    <linearGradient id="dg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+    <linearGradient id="dg2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A0F0A"/>
+      <stop offset="100%" style="stop-color:#0D0705"/>
+    </linearGradient>
+    <linearGradient id="dg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#228B22"/>
+      <stop offset="100%" style="stop-color:#006400"/>
+    </linearGradient>
+    <linearGradient id="dg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E90FF"/>
+      <stop offset="100%" style="stop-color:#0D4F8B"/>
+    </linearGradient>
+    <linearGradient id="dg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B0000"/>
+      <stop offset="100%" style="stop-color:#4A0000"/>
+    </linearGradient>
+    <filter id="dglow">
+      <feGaussianBlur stdDeviation="2"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="dshad">
+      <feDropShadow dx="3" dy="3" stdDeviation="3" flood-opacity="0.5"/>
+    </filter>
+    <marker id="darr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#FFD700"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#dg2)"/>
+  <rect x="10" y="10" width="1180" height="680" fill="none" stroke="url(#dg1)" stroke-width="3" rx="5"/>
+
+  <!-- Title -->
+  <rect x="350" y="20" width="500" height="50" fill="url(#dg4)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#dshad)"/>
+  <text x="600" y="52" font-family="Georgia, serif" font-size="24" fill="#FFD700" text-anchor="middle" font-weight="bold" filter="url(#dglow)">📊 DATASET CURATION PIPELINE</text>
+
+  <!-- Stage 1: Scan -->
+  <g transform="translate(30, 90)">
+    <rect width="270" height="200" fill="url(#dg4)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#dshad)"/>
+    <text x="135" y="30" font-family="Georgia, serif" font-size="14" fill="#FFD700" text-anchor="middle" font-weight="bold">📥 STAGE 1: SCAN</text>
+
+    <rect x="15" y="50" width="240" height="130" fill="#0D1B2A" stroke="#1E90FF" rx="5"/>
+    <text x="135" y="72" font-family="Arial" font-size="11" fill="#87CEEB" text-anchor="middle" font-weight="bold">Total Files Scanned</text>
+    <text x="135" y="105" font-family="Georgia, serif" font-size="28" fill="#FFFFFF" text-anchor="middle" font-weight="bold">48,671</text>
+
+    <text x="25" y="135" font-family="Arial" font-size="9" fill="#FFFFFF">• AS3 source: 19,032</text>
+    <text x="25" y="150" font-family="Arial" font-size="9" fill="#FFFFFF">• AutoEvony: 521</text>
+    <text x="25" y="165" font-family="Arial" font-size="9" fill="#FFFFFF">• Protocol: 223</text>
+    <text x="140" y="135" font-family="Arial" font-size="9" fill="#FFFFFF">• Keys: 3,997</text>
+    <text x="140" y="150" font-family="Arial" font-size="9" fill="#FFFFFF">• Exploits: 219</text>
+    <text x="140" y="165" font-family="Arial" font-size="9" fill="#FFFFFF">• Other: 24,679</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M310 190 L340 190" stroke="#FFD700" stroke-width="3" marker-end="url(#darr)"/>
+
+  <!-- Stage 2: Evaluate -->
+  <g transform="translate(350, 90)">
+    <rect width="270" height="200" fill="#1A0F0A" stroke="url(#dg1)" stroke-width="2" rx="8" filter="url(#dshad)"/>
+    <text x="135" y="30" font-family="Georgia, serif" font-size="14" fill="#FFD700" text-anchor="middle" font-weight="bold">🔍 STAGE 2: EVALUATE</text>
+
+    <rect x="15" y="50" width="240" height="60" fill="#0D0705" stroke="#DAA520" rx="5"/>
+    <text x="135" y="72" font-family="Arial" font-size="10" fill="#DAA520" text-anchor="middle" font-weight="bold">Files Evaluated</text>
+    <text x="135" y="95" font-family="Georgia, serif" font-size="20" fill="#FFFFFF" text-anchor="middle" font-weight="bold">24,044</text>
+
+    <rect x="15" y="120" width="240" height="60" fill="#330000" stroke="#FF6B6B" rx="5"/>
+    <text x="135" y="142" font-family="Arial" font-size="10" fill="#FF6B6B" text-anchor="middle" font-weight="bold">Skipped (too small/binary/dupe)</text>
+    <text x="135" y="165" font-family="Georgia, serif" font-size="20" fill="#FFFFFF" text-anchor="middle" font-weight="bold">24,627</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M630 190 L660 190" stroke="#FFD700" stroke-width="3" marker-end="url(#darr)"/>
+
+  <!-- Stage 3: Quality Rating -->
+  <g transform="translate(670, 90)">
+    <rect width="500" height="200" fill="url(#dg3)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#dshad)"/>
+    <text x="250" y="30" font-family="Georgia, serif" font-size="14" fill="#FFD700" text-anchor="middle" font-weight="bold">⭐ STAGE 3: QUALITY RATING</text>
+
+    <!-- Excellent -->
+    <rect x="15" y="50" width="110" height="130" fill="#003300" stroke="#00FF00" rx="5"/>
+    <text x="70" y="72" font-family="Arial" font-size="10" fill="#00FF00" text-anchor="middle" font-weight="bold">EXCELLENT</text>
+    <text x="70" y="100" font-family="Georgia, serif" font-size="22" fill="#FFFFFF" text-anchor="middle" font-weight="bold">1,068</text>
+    <text x="70" y="120" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">11.9%</text>
+    <rect x="25" y="135" width="90" height="10" fill="#003300" stroke="#00FF00" rx="2"/>
+    <rect x="25" y="135" width="10" height="10" fill="#00FF00" rx="2"/>
+    <text x="70" y="160" font-family="Arial" font-size="8" fill="#90EE90" text-anchor="middle">Perfect for LLM</text>
+
+    <!-- Good -->
+    <rect x="135" y="50" width="110" height="130" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="190" y="72" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle" font-weight="bold">GOOD</text>
+    <text x="190" y="100" font-family="Georgia, serif" font-size="22" fill="#FFFFFF" text-anchor="middle" font-weight="bold">4,537</text>
+    <text x="190" y="120" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">50.6%</text>
+    <rect x="145" y="135" width="90" height="10" fill="#003300" stroke="#90EE90" rx="2"/>
+    <rect x="145" y="135" width="45" height="10" fill="#90EE90" rx="2"/>
+    <text x="190" y="160" font-family="Arial" font-size="8" fill="#90EE90" text-anchor="middle">High quality</text>
+
+    <!-- Acceptable -->
+    <rect x="255" y="50" width="110" height="130" fill="#333300" stroke="#FFFF00" rx="5"/>
+    <text x="310" y="72" font-family="Arial" font-size="10" fill="#FFFF00" text-anchor="middle" font-weight="bold">ACCEPTABLE</text>
+    <text x="310" y="100" font-family="Georgia, serif" font-size="22" fill="#FFFFFF" text-anchor="middle" font-weight="bold">3,352</text>
+    <text x="310" y="120" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">37.4%</text>
+    <rect x="265" y="135" width="90" height="10" fill="#333300" stroke="#FFFF00" rx="2"/>
+    <rect x="265" y="135" width="34" height="10" fill="#FFFF00" rx="2"/>
+    <text x="310" y="160" font-family="Arial" font-size="8" fill="#FFFF00" text-anchor="middle">Usable</text>
+
+    <!-- Rejected -->
+    <rect x="375" y="50" width="110" height="130" fill="#330000" stroke="#FF6B6B" rx="5"/>
+    <text x="430" y="72" font-family="Arial" font-size="10" fill="#FF6B6B" text-anchor="middle" font-weight="bold">REJECTED</text>
+    <text x="430" y="100" font-family="Georgia, serif" font-size="22" fill="#FFFFFF" text-anchor="middle" font-weight="bold">15,087</text>
+    <text x="430" y="120" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">62.8%</text>
+    <rect x="385" y="135" width="90" height="10" fill="#330000" stroke="#FF6B6B" rx="2"/>
+    <rect x="385" y="135" width="57" height="10" fill="#FF6B6B" rx="2"/>
+    <text x="430" y="160" font-family="Arial" font-size="8" fill="#FF6B6B" text-anchor="middle">Low quality</text>
+  </g>
+
+  <!-- Stage 4: Final Approval -->
+  <g transform="translate(350, 320)">
+    <rect width="500" height="180" fill="url(#dg3)" stroke="#FFD700" stroke-width="3" rx="10" filter="url(#dshad)"/>
+    <text x="250" y="35" font-family="Georgia, serif" font-size="18" fill="#FFD700" text-anchor="middle" font-weight="bold">✅ STAGE 4: FINAL APPROVAL</text>
+
+    <rect x="100" y="55" width="300" height="100" fill="#003300" stroke="#90EE90" stroke-width="2" rx="8"/>
+    <text x="250" y="85" font-family="Arial" font-size="14" fill="#90EE90" text-anchor="middle" font-weight="bold">APPROVED FOR TRAINING</text>
+    <text x="250" y="120" font-family="Georgia, serif" font-size="36" fill="#FFFFFF" text-anchor="middle" font-weight="bold">8,957</text>
+    <text x="250" y="145" font-family="Arial" font-size="11" fill="#FFD700" text-anchor="middle">Excellent + Good + Acceptable</text>
+  </g>
+
+  <!-- Arrow to Final -->
+  <path d="M600 295 L600 320" stroke="#FFD700" stroke-width="3" marker-end="url(#darr)"/>
+
+  <!-- Content Categories -->
+  <g transform="translate(30, 320)">
+    <rect width="300" height="180" fill="#1A0F0A" stroke="url(#dg1)" stroke-width="2" rx="8" filter="url(#dshad)"/>
+    <text x="150" y="30" font-family="Georgia, serif" font-size="14" fill="#FFD700" text-anchor="middle" font-weight="bold">📁 CONTENT CATEGORIES</text>
+
+    <text x="20" y="55" font-family="Arial" font-size="9" fill="#90EE90">source_code</text>
+    <text x="130" y="55" font-family="Arial" font-size="9" fill="#FFFFFF">19,032 files</text>
+    <rect x="200" y="47" width="80" height="12" fill="#003300" rx="2"/>
+    <rect x="200" y="47" width="80" height="12" fill="#90EE90" rx="2"/>
+
+    <text x="20" y="75" font-family="Arial" font-size="9" fill="#DAA520">keys</text>
+    <text x="130" y="75" font-family="Arial" font-size="9" fill="#FFFFFF">3,997 files</text>
+    <rect x="200" y="67" width="80" height="12" fill="#003300" rx="2"/>
+    <rect x="200" y="67" width="17" height="12" fill="#DAA520" rx="2"/>
+
+    <text x="20" y="95" font-family="Arial" font-size="9" fill="#87CEEB">script</text>
+    <text x="130" y="95" font-family="Arial" font-size="9" fill="#FFFFFF">521 files</text>
+    <rect x="200" y="87" width="80" height="12" fill="#003300" rx="2"/>
+    <rect x="200" y="87" width="2" height="12" fill="#87CEEB" rx="2"/>
+
+    <text x="20" y="115" font-family="Arial" font-size="9" fill="#DDA0DD">protocol</text>
+    <text x="130" y="115" font-family="Arial" font-size="9" fill="#FFFFFF">223 files</text>
+    <rect x="200" y="107" width="80" height="12" fill="#003300" rx="2"/>
+    <rect x="200" y="107" width="1" height="12" fill="#DDA0DD" rx="2"/>
+
+    <text x="20" y="135" font-family="Arial" font-size="9" fill="#FF6B6B">exploit</text>
+    <text x="130" y="135" font-family="Arial" font-size="9" fill="#FFFFFF">219 files</text>
+    <rect x="200" y="127" width="80" height="12" fill="#003300" rx="2"/>
+    <rect x="200" y="127" width="1" height="12" fill="#FF6B6B" rx="2"/>
+
+    <text x="20" y="155" font-family="Arial" font-size="9" fill="#8B8B83">documentation</text>
+    <text x="130" y="155" font-family="Arial" font-size="9" fill="#FFFFFF">100+ files</text>
+    <rect x="200" y="147" width="80" height="12" fill="#003300" rx="2"/>
+    <rect x="200" y="147" width="1" height="12" fill="#8B8B83" rx="2"/>
+  </g>
+
+  <!-- Training Output -->
+  <g transform="translate(870, 320)">
+    <rect width="300" height="180" fill="url(#dg5)" stroke="#FFD700" stroke-width="2" rx="8" filter="url(#dshad)"/>
+    <text x="150" y="30" font-family="Georgia, serif" font-size="14" fill="#FFD700" text-anchor="middle" font-weight="bold">📝 TRAINING OUTPUT</text>
+
+    <rect x="15" y="50" width="270" height="110" fill="#4A0000" stroke="#FF6B6B" rx="5"/>
+    <text x="150" y="75" font-family="Arial" font-size="11" fill="#FF6B6B" text-anchor="middle" font-weight="bold">train_final.jsonl</text>
+
+    <text x="25" y="100" font-family="monospace" font-size="9" fill="#DAA520">Format:</text>
+    <text x="100" y="100" font-family="monospace" font-size="9" fill="#FFFFFF">ChatML + Alpaca</text>
+    <text x="25" y="118" font-family="monospace" font-size="9" fill="#DAA520">Samples:</text>
+    <text x="100" y="118" font-family="monospace" font-size="9" fill="#FFFFFF">8,957</text>
+    <text x="25" y="136" font-family="monospace" font-size="9" fill="#DAA520">Tokens:</text>
+    <text x="100" y="136" font-family="monospace" font-size="9" fill="#FFFFFF">~1,050,000</text>
+    <text x="25" y="154" font-family="monospace" font-size="9" fill="#DAA520">Status:</text>
+    <text x="100" y="154" font-family="monospace" font-size="9" fill="#90EE90">✅ READY</text>
+  </g>
+
+  <!-- Pipeline Stats -->
+  <g transform="translate(30, 520)">
+    <rect width="1140" height="140" fill="#1A0F0A" stroke="url(#dg1)" stroke-width="2" rx="8" filter="url(#dshad)"/>
+    <text x="570" y="30" font-family="Georgia, serif" font-size="16" fill="#FFD700" text-anchor="middle" font-weight="bold">📈 CURATION STATISTICS</text>
+
+    <rect x="30" y="50" width="200" height="70" fill="#0D0705" stroke="#1E90FF" rx="5"/>
+    <text x="130" y="75" font-family="Arial" font-size="10" fill="#1E90FF" text-anchor="middle" font-weight="bold">Scan Rate</text>
+    <text x="130" y="100" font-family="Arial" font-size="16" fill="#FFFFFF" text-anchor="middle" font-weight="bold">48,671 files</text>
+
+    <rect x="260" y="50" width="200" height="70" fill="#0D0705" stroke="#DAA520" rx="5"/>
+    <text x="360" y="75" font-family="Arial" font-size="10" fill="#DAA520" text-anchor="middle" font-weight="bold">Evaluation Rate</text>
+    <text x="360" y="100" font-family="Arial" font-size="16" fill="#FFFFFF" text-anchor="middle" font-weight="bold">49.4%</text>
+
+    <rect x="490" y="50" width="200" height="70" fill="#0D0705" stroke="#90EE90" rx="5"/>
+    <text x="590" y="75" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle" font-weight="bold">Approval Rate</text>
+    <text x="590" y="100" font-family="Arial" font-size="16" fill="#FFFFFF" text-anchor="middle" font-weight="bold">37.3%</text>
+
+    <rect x="720" y="50" width="200" height="70" fill="#0D0705" stroke="#FFD700" rx="5"/>
+    <text x="820" y="75" font-family="Arial" font-size="10" fill="#FFD700" text-anchor="middle" font-weight="bold">Final Dataset</text>
+    <text x="820" y="100" font-family="Arial" font-size="16" fill="#90EE90" text-anchor="middle" font-weight="bold">8,957 files</text>
+
+    <rect x="950" y="50" width="160" height="70" fill="#003300" stroke="#90EE90" rx="5"/>
+    <text x="1030" y="75" font-family="Arial" font-size="10" fill="#90EE90" text-anchor="middle" font-weight="bold">Status</text>
+    <text x="1030" y="100" font-family="Arial" font-size="14" fill="#90EE90" text-anchor="middle" font-weight="bold">✅ COMPLETE</text>
+  </g>
+
+  <text x="600" y="680" font-family="Arial" font-size="10" fill="#8B8B83" text-anchor="middle">Evony Dataset Curation | 48,671 scanned → 8,957 approved | January 2026</text>
+</svg>

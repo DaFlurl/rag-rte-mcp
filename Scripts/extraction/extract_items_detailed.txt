@@ -1,0 +1,151 @@
+#===============================================================
+# DETAILED ITEMS EXTRACTION SCRIPT v1.0
+# Extracts all items with categories and counts
+#===============================================================
+
+setsilence true //
+
+output "===ITEMS_EXTRACTION_START==="
+output "TIMESTAMP:%date% %time%"
+output "EMAIL:%config.username%"
+
+iferror %player.name% goto NotLoggedIn
+
+#---------------------------------------------------------------
+# VALUABLE ITEMS - Check specific high-value items
+#---------------------------------------------------------------
+output "---VALUABLE_ITEMS---"
+
+# Thunder Raids
+iferror %items.Thunder_Raid% set tr 0
+ifnoterror %items.Thunder_Raid% set tr %items.Thunder_Raid%
+output "Thunder_Raid:%tr%"
+
+# Fleet Feet
+iferror %items.Fleet_Feet% set ff 0
+ifnoterror %items.Fleet_Feet% set ff %items.Fleet_Feet%
+output "Fleet_Feet:%ff%"
+
+# War Ensign
+iferror %items.War_Ensign% set we 0
+ifnoterror %items.War_Ensign% set we %items.War_Ensign%
+output "War_Ensign:%we%"
+
+# City Teleporter
+iferror %items.City_Teleporter% set ct 0
+ifnoterror %items.City_Teleporter% set ct %items.City_Teleporter%
+output "City_Teleporter:%ct%"
+
+# Speaker
+iferror %items.Speaker% set sp 0
+ifnoterror %items.Speaker% set sp %items.Speaker%
+output "Speaker:%sp%"
+
+# Delicate Gem
+iferror %items.Delicate_gem% set dg 0
+ifnoterror %items.Delicate_gem% set dg %items.Delicate_gem%
+output "Delicate_gem:%dg%"
+
+output "---END_VALUABLE_ITEMS---"
+
+#---------------------------------------------------------------
+# MEDALS
+#---------------------------------------------------------------
+output "---MEDALS---"
+
+iferror %items.Courage_Medal% set cm 0
+ifnoterror %items.Courage_Medal% set cm %items.Courage_Medal%
+output "Courage_Medal:%cm%"
+
+iferror %items.Wisdom_Medal% set wm 0
+ifnoterror %items.Wisdom_Medal% set wm %items.Wisdom_Medal%
+output "Wisdom_Medal:%wm%"
+
+iferror %items.Freedom_Medal% set fm 0
+ifnoterror %items.Freedom_Medal% set fm %items.Freedom_Medal%
+output "Freedom_Medal:%fm%"
+
+iferror %items.Honor_Medal% set hm 0
+ifnoterror %items.Honor_Medal% set hm %items.Honor_Medal%
+output "Honor_Medal:%hm%"
+
+iferror %items.Lion_Medal% set lm 0
+ifnoterror %items.Lion_Medal% set lm %items.Lion_Medal%
+output "Lion_Medal:%lm%"
+
+iferror %items.Nation_Medal% set nm 0
+ifnoterror %items.Nation_Medal% set nm %items.Nation_Medal%
+output "Nation_Medal:%nm%"
+
+iferror %items.Justice_Medal% set jm 0
+ifnoterror %items.Justice_Medal% set jm %items.Justice_Medal%
+output "Justice_Medal:%jm%"
+
+output "---END_MEDALS---"
+
+#---------------------------------------------------------------
+# SPEED UPS
+#---------------------------------------------------------------
+output "---SPEED_UPS---"
+
+iferror %items.Beginner_Guidelines% set bg 0
+ifnoterror %items.Beginner_Guidelines% set bg %items.Beginner_Guidelines%
+output "Beginner_Guidelines:%bg%"
+
+iferror %items.Intermediate_Guidelines% set ig 0
+ifnoterror %items.Intermediate_Guidelines% set ig %items.Intermediate_Guidelines%
+output "Intermediate_Guidelines:%ig%"
+
+iferror %items.Napoleon_Diary% set nd 0
+ifnoterror %items.Napoleon_Diary% set nd %items.Napoleon_Diary%
+output "Napoleon_Diary:%nd%"
+
+output "---END_SPEED_UPS---"
+
+#---------------------------------------------------------------
+# HERO ITEMS
+#---------------------------------------------------------------
+output "---HERO_ITEMS---"
+
+iferror %items.Hero_Hunting% set hh 0
+ifnoterror %items.Hero_Hunting% set hh %items.Hero_Hunting%
+output "Hero_Hunting:%hh%"
+
+iferror %items.Holy_Water% set hw 0
+ifnoterror %items.Holy_Water% set hw %items.Holy_Water%
+output "Holy_Water:%hw%"
+
+iferror %items.Flawless_gem% set fg 0
+ifnoterror %items.Flawless_gem% set fg %items.Flawless_gem%
+output "Flawless_gem:%fg%"
+
+output "---END_HERO_ITEMS---"
+
+#---------------------------------------------------------------
+# SCRIPTS/TOOLS
+#---------------------------------------------------------------
+output "---SCRIPTS---"
+
+iferror %items.Bernini_Hammer% set bh 0
+ifnoterror %items.Bernini_Hammer% set bh %items.Bernini_Hammer%
+output "Bernini_Hammer:%bh%"
+
+iferror %items.Michelangelo_Script% set ms 0
+ifnoterror %items.Michelangelo_Script% set ms %items.Michelangelo_Script%
+output "Michelangelo_Script:%ms%"
+
+iferror %items.The_Lost_Armor_Script% set las 0
+ifnoterror %items.The_Lost_Armor_Script% set las %items.The_Lost_Armor_Script%
+output "The_Lost_Armor_Script:%las%"
+
+output "---END_SCRIPTS---"
+
+output "STATUS:SUCCESS"
+goto End
+
+:NotLoggedIn
+output "ERROR:Not logged in"
+output "STATUS:FAILED"
+
+:End
+output "===ITEMS_EXTRACTION_END==="

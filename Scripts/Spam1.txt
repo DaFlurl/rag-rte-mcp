@@ -1,0 +1,57 @@
+set delayBetweenAttacks 1
+set useTroops p:100k
+set target 0,0
+setarray doNotUseHeroes ["mayor", "defender", "hhName"]
+
+
+//===============DO=NOT=CHANGE=BELOW=THIS=LINE===============
+setsilence true
+set fhLvl $c.cm.getBuildingLevel(c.buildingTypes.fh)$
+set heroStr any
+set i 0
+label makeHeroStr
+set heroStr "%heroStr%,!%doNotUseHeroes[{%i%}]%"
+set i {%i%+1}
+if {%i%<%doNotUseHeroes.length%} goto makeHeroStr
+label start
+echo "  ***Checking for available heroes or rally space..."
+if {!{$c.cm.getMaxRallySlots()$-%doNotUseHeroes.length%<$c.cm.getUsedRallySlots()$}} goto skipWaitForHeroReturn
+set nextHeroBackTime 2000000000000
+set i 0
+label getWaitTimeLoop
+if {$c.cm.localArmies[{%i%}].reachTime$<%nextHeroBackTime%} set nextHeroBackTime $c.cm.localArmies[{%i%}].reachTime$
+set i {%i%+1}
+if {%i%<$c.cm.localArmies.length$} goto getWaitTimeLoop
+echo "  ***Waiting for {{{%nextHeroBackTime%-$c.getRawTime()$}\1000}+1} seconds for hero to return..."
+sleep {{{%nextHeroBackTime%-$c.getRawTime()$}/1000}+1}
+goto start
+label skipWaitForHeroReturn
+echo "  ***Got available hero and rally space."
+echo "  ***Checking for and firing tired junk heroes..."
+set i 0 
+label startCheck
+getindexof isDoNotUseHero doNotUseHeroes $c.cm.heroes[{%i%}].name$
+if {$c.cm.heroes[{%i%}].stamina$>4||$c.cm.heroes[{%i%}].status$!=0||$c.cm.heroes[{%i%}].isHero$!=0||%isDoNotUseHero%!=-1} goto skipFireHero
+firehero $c.cm.heroes[{%i%}].name$
+if {%i%<$c.cm.heroes.length$} goto startCheck
+label skipFireHero
+set i {%i%+1}
+if {%i%<$c.cm.heroes.length$} goto startCheck
+echo "  ***Getting new junk heroes if needed..."
+set nullVar $c.cm.updateInn()$
+set heroesNeeded {%fhLvl%-$c.cm.heroes.length$}
+if {%heroesNeeded%<1} goto skipGetNewHeroes
+sleep 0.25
+label getNewHero
+getspamhero
+set nullVar $c.cm.updateInn()$
+loop %heroesNeeded% getNewHero
+if {!{$c.cm.getUsedRallySlots()$<$c.cm.getMaxRallySlots()$&&$c.cm.getUsedRallySlots()$<$c.cm.heroes.length$-%doNotUseHeroes.length%}} goto start
+label skipGetNewHeroes
+echo "  ***Now sending spam waves..."
+label doAttack
+aattack %target% %heroStr% %useTroops%
+if {%delayBetweenAttacks%>0&&{$c.cm.getUsedRallySlots()$<$c.cm.getMaxRallySlots()$&&$c.cm.getUsedRallySlots()$<$c.cm.heroes.length$-%doNotUseHeroes.length%}} sleep %delayBetweenAttacks%
+if {$c.cm.getUsedRallySlots()$<$c.cm.getMaxRallySlots()$&&$c.cm.getUsedRallySlots()$<$c.cm.heroes.length$-%doNotUseHeroes.length%} goto doAttack
+goto start
+

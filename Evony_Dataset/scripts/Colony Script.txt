@@ -1,0 +1,138 @@
+//--Auto Colonize Script v0.9 By:N/A
+//--The purpose of this script is to assist in completing the Colonize Achievement
+//--1  enter the target coords inside the quotes with a single space in between each one
+//---  and be sure not to enter more targets than you have heroes
+//--2  enter the troops you want to use in each of the colonize army waves
+//---  and be sure you have enough troops for all of the targets
+//--3  enter the longest march time in minutes for the farthest target to colonize
+//---  and round it up to the next minute
+//--4  choose whether you want the script to declare war for you (true or false)
+//--5  select the minimum hero level you wish to use and be sure you have enough
+
+
+setarr colonyTargets "xxx,yyy xxx,yyy xxx,yyy"
+set colonizeArmyTroops c:2500
+set longestMarchTimeInMin 15
+set autoDeclareOnTargets true
+set desiredMinHeroLevel 30
+set loopScript true
+
+
+//===============DO=NOT=CHANGE=BELOW=THIS=LINE===============
+setsilence true
+
+goto checkAutoDeclare
+label loopScript
+sleep rnd:300:600 true
+
+label checkAutoDeclare
+ifgoto ( %autoDeclareOnTargets% = true ) autoDeclare
+goto endAutoDeclare
+label autoDeclare
+set didDeclare false
+set decIndex 0
+label decLoop
+ifgoto ( %didDeclare% = false ) skipDecCoolDown
+sleep 310 true
+label skipDecCoolDown
+scanmap %colonyTargets[{%decIndex%}]% 1
+set coordId $m_city.getValue(Coordinate,%colonyTargets[{%decIndex%}]%)$
+ifgoto ( $m_city.getMapDetail(%coordId%).canDeclaredWar$ = false ) alreadyDec
+declarewar %colonyTargets[{%decIndex%}]%
+set didDeclare true
+label alreadyDec
+set decIndex {%decIndex%+1}
+ifgoto ( {%decIndex%} < {%colonyTargets.length%} ) decLoop
+ifgoto ( %didDeclare% = false ) endAutoDeclare
+label endAutoDeclare
+
+sleep 1860 true
+
+label getHeroNames
+set heroNamesList empty
+set heroIndexlist empty
+set heroIndex 0
+echo "Checking for heroes that are level %desiredMinHeroLevel% or higher."
+label heroesLoop
+ifgoto ( {$m_city.cityManager.heroes[%heroIndex%].level$} < {%desiredMinHeroLevel%} ) nextHero
+ifgoto ( %heroIndexList% = empty ) addFirstHeroName
+//set heroNamesList "%heroNamesList% $m_city.cityManager.heroes[%heroIndex%].name$"
+set heroIndexlist "%heroIndexlist% %heroIndex%"
+goto nextHero
+label addFirstHeroName
+//set heroNamesList "$m_city.cityManager.heroes[%heroIndex%].name$"
+set heroIndexlist "%heroIndex%"
+label nextHero
+set heroIndex {%heroIndex%+1}
+ifgoto ( {%heroIndex%} < {$m_city.cityManager.heroes.length$} ) heroesLoop
+//setarr useHeroNamesList "%heroNamesList%"
+setarr useHeroIndexList "%heroIndexlist%"
+ifgoto ( {%useHeroIndexList.length%} < {%colonyTargets.length%} ) notEnoughHeroes
+goto foundEnoughHeroes
+label notEnoughHeroes
+set endMessage "WARNING!! There are only {%useHeroIndexList.length%} heroes level %desiredMinHeroLevel% or higher"
+set endMessage "%endMessage% in this town and you have specified {%colonyTargets.length%} targets."
+set endMessage "%endMessage% Either lower the desiredMinHeroLevel, add more heroes, or remove some targets."
+goto endAutoColonizeScript
+label foundEnoughHeroes
+echo "The following {%useHeroIndexList.length%} heroes will be used: %heroNamesList%."
+label endGetHeroNames
+
+goto endFindNextIdleHero
+label findNextIdleHero
+label resetNoIdleHeroIndex
+set noIdleHeroIndex 0
+label findIdleHeroLoop
+set tempHeroindex {%useHeroIndexList[{%colHeroIndex%}]%}
+ifgoto ( {$m_city.cityManager.heroes[{%tempHeroindex%}].status$} = 0 ) foundHero
+set colHeroIndex {%colHeroIndex%+1}
+ifgoto ( {%colHeroIndex%} < {%useHeroIndexList.length%} ) findIdleHeroLoop
+set colHeroIndex 0
+ifgoto ( {%noIdleHeroIndex%} > 0 ) skipNoIdleHeroMessage
+echo "No idle hero found. Waiting for idle hero..."
+label skipNoIdleHeroMessage
+sleep 3
+repeat 5
+ifgoto ( {%noIdleHeroIndex%} = 0 ) resetNoIdleHeroIndex
+goto findIdleHeroLoop
+label foundHero
+gosubreturn
+label endFindNextIdleHero
+
+label colonizeTargets
+set colAttIndex 0
+set colHeroIndex 0
+label colAttLoop
+gosub findNextIdleHero
+colonize %colonyTargets[{%colAttIndex%}]% $m_city.cityManager.heroes[{%tempHeroindex%}].name$ %colonizeArmyTroops%
+set colHeroIndex {%colHeroIndex%+1}
+set colAttIndex {%colAttIndex%+1}
+ifgoto ( {%colAttIndex%} < {%colonyTargets.length%} ) colAttLoop
+label endColonizeTargets
+
+sleep {{{{%longestMarchTimeInMin%}*2}*60}+30000} true
+
+label startAbandonColonies
+set numberOfColonies {$m_city.cityManager.colonies.length$}
+set abandonColIndex 0
+label abandonLoop
+set currentColonyLoc $m_city.cityManager.colonies[{%abandonColIndex%}].position$
+set targetColIndex 0
+label findTargetColLoop
+ifgoto ( %currentColonyLoc% = %colonyTargets[{%targetColIndex%}]% ) abandonColony
+goto nextTargetColony
+label abandonColony
+colony abandon %currentColonyLoc%
+label nextTargetColony
+set targetColIndex {%targetColIndex%+1}
+ifgoto ( {%targetColIndex%} < {%colonyTargets.length%} ) findTargetColLoop
+set abandonColIndex {%abandonColIndex%+1}
+ifgoto ( {%abandonColIndex%} < {%numberOfColonies%} ) abandonLoop
+label endAbandonColonies
+
+ifgoto ( %loopScript% = true ) loopScript
+
+set endMessage "All jobs have finished and the script has ended because continuous looping is disabled."
+label endAutoColonizeScript
+echo %endMessage%
+setsilence false

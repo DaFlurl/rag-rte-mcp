@@ -1,0 +1,26 @@
+{
+  "now": {
+    "proxyPw": "",
+    "skypeUn": "",
+    "proxyUn": "",
+    "serverIP": "216.66.17.168",
+    "proxyHost": "127.0.0.1",
+    "proxyType": "ss5",
+    "autoRun": false,
+    "autoLogin": false,
+    "loginType": "ev",
+    "theme": "Autumn Leaves by Ioshik",
+    "autoScript": false,
+    "server": "cc2",
+    "autoLoginMaxTime": "600",
+    "sid": "375",
+    "autoLoginMinTime": "1",
+    "username": "danlavoie1@hotmail.com",
+    "secCode": "",
+    "tokenExpires": NaN,
+    "password": "blamecanada1066",
+    "strserverAlias": "Parapet",
+    "proxyPort": "9995",
+    "skypePw": ""
+  }
+}

@@ -1,0 +1,23 @@
+//AccountGoalsEliteVersion_V1.6 ~Zoro/FireFox
+//Facebook Compatible, facebook will substantially increase growth
+//Maintown only.
+Maintown
+set TimePlayed {{$m_city.getRawTime()$-$m_city.player.playerInfo.createrTime$}/60000\60}
+set MainTown {$m_city.allCities.indexOf(m_city)$==0}
+//CityTypes = Lumber ~ Iron ~ LumberIronMix ~ QuickRacks
+set CityType Lumber
+//**WARNING** - QuickRacks is recommended for facebook users only, or if you have another account to send res to city.
+//**WARNING** - QuickRacks will focus on barracks and inner town and neglect Resource Fields.
+
+include Configurations
+include CityPolicies
+include Buildings
+include Troops
+include WallDefence
+include Npc10
+include Research
+include PromoGoals
+include AdvancedEvasion
+include ResourcePacks
+include UseItems
+

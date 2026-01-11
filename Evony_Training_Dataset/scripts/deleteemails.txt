@@ -1,0 +1,21 @@
+[deleteMail]
+setsilence true
+label getMailboxContent
+set g $c.af.getMailCommands().receiveMailList(1,1,10000)$
+label wait
+sleep $c.lag$
+iferror $%g%.ok$ goto wait
+echo $%g%.toDebugString()$
+iferror $%g%.mailsArray[0].mailid$ goto mailboxEmpty
+set di 0
+label deleteMail
+set d $c.af.getMailCommands().deleteMail(%g%.mailsArray[{%di%}].mailid)$
+label wait
+sleep $c.lag$
+iferror $%d%.ok$ goto wait
+set di {%di%+1}
+if {%di%<$%g%.mailsArray.length$} goto deleteMail
+goto getMailboxContent
+label mailboxEmpty
+echo "All your private e-mails have now been deleted"
+goto end

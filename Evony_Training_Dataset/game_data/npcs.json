@@ -1,0 +1,204 @@
+{
+  "npcs": {
+    "level_1": {
+      "level": 1,
+      "troops": {
+        "warrior": 100,
+        "scout": 50,
+        "pikeman": 0,
+        "swordsman": 0,
+        "archer": 100,
+        "cavalry": 0,
+        "cataphract": 0
+      },
+      "rewards": {
+        "food": 10000,
+        "wood": 8000,
+        "stone": 6000,
+        "iron": 4000,
+        "gold": 1000,
+        "exp": 100
+      }
+    },
+    "level_2": {
+      "level": 2,
+      "troops": {
+        "warrior": 200,
+        "scout": 100,
+        "pikeman": 0,
+        "swordsman": 0,
+        "archer": 200,
+        "cavalry": 0,
+        "cataphract": 0
+      },
+      "rewards": {
+        "food": 20000,
+        "wood": 16000,
+        "stone": 12000,
+        "iron": 8000,
+        "gold": 2000,
+        "exp": 200
+      }
+    },
+    "level_3": {
+      "level": 3,
+      "troops": {
+        "warrior": 300,
+        "scout": 150,
+        "pikeman": 225,
+        "swordsman": 0,
+        "archer": 300,
+        "cavalry": 0,
+        "cataphract": 0
+      },
+      "rewards": {
+        "food": 30000,
+        "wood": 24000,
+        "stone": 18000,
+        "iron": 12000,
+        "gold": 3000,
+        "exp": 300
+      }
+    },
+    "level_4": {
+      "level": 4,
+      "troops": {
+        "warrior": 400,
+        "scout": 200,
+        "pikeman": 300,
+        "swordsman": 0,
+        "archer": 400,
+        "cavalry": 100,
+        "cataphract": 0
+      },
+      "rewards": {
+        "food": 40000,
+        "wood": 32000,
+        "stone": 24000,
+        "iron": 16000,
+        "gold": 4000,
+        "exp": 400
+      }
+    },
+    "level_5": {
+      "level": 5,
+      "troops": {
+        "warrior": 500,
+        "scout": 250,
+        "pikeman": 375,
+        "swordsman": 250,
+        "archer": 500,
+        "cavalry": 125,
+        "cataphract": 0
+      },
+      "rewards": {
+        "food": 50000,
+        "wood": 40000,
+        "stone": 30000,
+        "iron": 20000,
+        "gold": 5000,
+        "exp": 500
+      }
+    },
+    "level_6": {
+      "level": 6,
+      "troops": {
+        "warrior": 600,
+        "scout": 300,
+        "pikeman": 450,
+        "swordsman": 300,
+        "archer": 600,
+        "cavalry": 150,
+        "cataphract": 60
+      },
+      "rewards": {
+        "food": 60000,
+        "wood": 48000,
+        "stone": 36000,
+        "iron": 24000,
+        "gold": 6000,
+        "exp": 600
+      }
+    },
+    "level_7": {
+      "level": 7,
+      "troops": {
+        "warrior": 700,
+        "scout": 350,
+        "pikeman": 525,
+        "swordsman": 350,
+        "archer": 700,
+        "cavalry": 175,
+        "cataphract": 70
+      },
+      "rewards": {
+        "food": 70000,
+        "wood": 56000,
+        "stone": 42000,
+        "iron": 28000,
+        "gold": 7000,
+        "exp": 700
+      }
+    },
+    "level_8": {
+      "level": 8,
+      "troops": {
+        "warrior": 800,
+        "scout": 400,
+        "pikeman": 600,
+        "swordsman": 400,
+        "archer": 800,
+        "cavalry": 200,
+        "cataphract": 80
+      },
+      "rewards": {
+        "food": 80000,
+        "wood": 64000,
+        "stone": 48000,
+        "iron": 32000,
+        "gold": 8000,
+        "exp": 800
+      }
+    },
+    "level_9": {
+      "level": 9,
+      "troops": {
+        "warrior": 900,
+        "scout": 450,
+        "pikeman": 675,
+        "swordsman": 450,
+        "archer": 900,
+        "cavalry": 225,
+        "cataphract": 90
+      },
+      "rewards": {
+        "food": 90000,
+        "wood": 72000,
+        "stone": 54000,
+        "iron": 36000,
+        "gold": 9000,
+        "exp": 900
+      }
+    },
+    "level_10": {
+      "level": 10,
+      "troops": {
+        "warrior": 1000,
+        "scout": 500,
+        "pikeman": 750,
+        "swordsman": 500,
+        "archer": 1000,
+        "cavalry": 250,
+        "cataphract": 100
+      },
+      "rewards": {
+        "food": 100000,
+        "wood": 80000,
+        "stone": 60000,
+        "iron": 40000,
+        "gold": 10000,
+        "exp": 1000
+      }
+    }
+  }
+}

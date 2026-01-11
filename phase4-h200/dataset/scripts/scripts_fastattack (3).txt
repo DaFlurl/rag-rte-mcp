@@ -1,0 +1,143 @@
+setsilence true
+set coords 0,0//set coords
+set troops cata:100k
+set bannertroops cp:990k,a:10k
+set usebanners 0 // set to 1 if want to use banners
+set queentofight 1 // set to zero if not
+set kingfight 1 // set to zero if not
+set UseEnergyItems 0 // set to zero if not
+set speed 2
+
+
+# ---- don't change below this line ---- #
+
+function awardheroes() {
+	for (var i=0;i<c.cm.heroes.length;i+=1) {
+		if (c.cm.heroes[i].status==0) c.af.getHeroCommand().awardGold(c.castle.id,c.cm.heroes[i].id);
+		else continue;
+		if (UseEnergyItems==1) {
+			if (c.cm.heroes[i].stamina < 50 && c.getItem("hero.item.Tea").count >0) c.af.getHeroCommand().useItem(c.castle.id,c.cm.heroes[i].id,"hero.item.Tea");
+			else if (c.cm.heroes[i].stamina < 30 && c.getItem("hero.item.Lugui_Wine").count > 0) c.af.getHeroCommand().useItem(c.castle.id,c.cm.heroes[i].id,"hero.item.Lugui_Wine");
+			else if (c.cm.heroes[i].stamina < 10 && c.getItem("hero.item.Panax_ginseng").count > 0) c.af.getHeroCommand().useItem(c.castle.id,c.cm.heroes[i].id,"hero.item.Panax_ginseng");
+		}
+	}
+}
+
+function fireheros() {
+	for (var i=0;i<c.cm.heroes.length;i+=1) {
+		if (c.cm.heroes[i].isHero == 0 && c.cm.heroes[i].stamina < 4 && c.cm.heroes[i].status == 0 &&  c.cm.heroes[i].level < 101) c.af.getHeroCommand().fireHero(c.castle.id,c.cm.heroes[i].id);
+	}
+}
+
+function herolevelup() {
+	for (var i=0;i<c.cm.heroes.length;i+=1) {
+		if (c.cm.heroes[i].status!=0) continue;
+		c.af.getEquipmentCommands().WearAllEquipmenttech(c.cm.heroes[i].id,2);
+		var l=c.cm.heroes[i].level;
+		var exp=c.cm.heroes[i].experience;
+		while (exp>c.cm.heroes[i].upgradeExp&&l<100) {
+			c.af.getHeroCommand().levelUp(c.castle.id,c.cm.heroes[i].id);
+			c.af.getHeroCommand().addPoint2(c.castle.id,c.cm.heroes[i].id,0,1,0);
+			exp-=c.cm.heroes[i].upgradeExp;
+			l+=1;
+		} 
+	}
+}
+
+function sendattacks(i) {
+	i=int(i);
+	var jj=0;
+	for (;i<c.cm.heroes.length;i+=1) {
+		if (c.cm.heroes[i].status!=0) continue;
+		if (c.cm.heroes[i].name=="Queen"&&queentofight!=1) continue;
+		if (c.cm.heroes[i].name=="King"&&kingfight!=1) continue;
+		var m;
+		if (usebanners==1&&c.getItem("player.item.stygandrsbannerofthehorde").count>0) {
+			m=c.getArmy("attack",c.getValue("Coordinate",coords),c.cm.heroes[i].name,c.getValue("Troop",bannertroops));
+			m.useItem=true;
+		}
+		else {
+			m=c.getArmy("attack",c.getValue("Coordinate",coords),c.cm.heroes[i].name,c.getValue("Troop",troops));
+		}
+		c.af.getArmyCommands().newArmy(c.castle.id,m);
+		c.cm.logMsg("Sending with "+c.cm.heroes[i].name);
+		jj+=1;
+		if (jj>=speed) break;
+	}
+	return i+1;
+}
+
+function fixstuckheroes() {
+	var m=c.getRawTime();
+	var s=false;
+	for (var i=0;i<c.cm.localArmies.length;i+=1) {
+		if (c.cm.localArmies[i].reachTime+2000<m) {
+			c.af.getHeroCommand().callBackHero(c.castle.id,c.cm.localArmies[i].heroid);
+			s=true;
+		}
+	}
+	return s;
+}
+
+function hirebesthero() {
+	var atk=0;
+	var heroname=null;
+	for (var i=0;i<c.cm.innHeroes.length;i+=1) {
+		if (c.cm.innHeroes[i].power>atk) {
+			atk=c.cm.innHeroes[i].power;
+			heroname=c.cm.innHeroes[i].name;
+		}
+	}
+	c.af.getHeroCommand().hireHero(c.castle.id,heroname);
+	return heroname;
+}
+
+function isherospotsfull() {
+	var max=c.cm.getBuildingLevel(c.buildingTypes.fh);
+	for (var i=0;i<c.cm.heroes.length;i+=1) {
+		if ((c.cm.heroes[i].name=="Queen"||c.cm.heroes[i].name=="King")&&c.cm.heroes[i].isHero!=0) {
+			max+=1;
+			break;
+		}
+	}
+	if (c.cm.heroes.length >= max) return true;
+	return false;
+}
+
+autoheal true
+label start
+if (c.cm.resource.gold < 1000000) goto no_gold_error
+if (c.cm.resource.food.amount < 100000000) goto no_food_err
+if (fixstuckheroes()) sleep 2
+set nv $m_dyn.herolevelup()$
+set nv $m_dyn.fireheros()$
+set nv $m_dyn.awardheroes()$
+set j 0
+label attack
+set j $m_dyn.sendattacks(j)$
+if (j>=c.cm.heroes.length) goto endattack
+sleep 1
+goto attack
+label endattack
+sleep 1
+if (c.cm.localArmies.length == 0) goto no_wave_err
+if (isherospotsfull()) goto start
+label refreshInn
+set nv $c.cm.updateInn()$
+sleep 1
+set nv $m_dyn.hirebesthero()$
+sleep 1
+if (isherospotsfull()) goto start
+goto refreshInn
+label no_gold_error
+echo "no gold error"
+sleep 1
+goto start
+label no_food_err
+echo "no food error, either RE is slow to respond or you ran out of rams"
+sleep 1
+goto start
+label no_wave_err
+echo "No waves sent error, check troop count, target can be attacked"
+sleep 5
+goto start

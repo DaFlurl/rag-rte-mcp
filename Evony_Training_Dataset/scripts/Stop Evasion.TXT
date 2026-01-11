@@ -1,0 +1,39 @@
+Help,Stop Evasion. Purposed.
+35 views
+Subscribe
+PureHeart Evony's profile photo
+PureHeart Evony
+Nov 25, 2017, 4:58:45 PM
+config gate:.22,nocapture:1,junkwave:100000,dumping:.001,hero:1 gatepolicy 1 1 1 1 1 warrallymax npc:
+xThisIsMe's profile photo
+xThisIsMe
+Nov 25, 2017, 5:44:33 PM
+I'm not sure if you're actually talking about an evasion problem here since evading troops
+PureHeart Evony's profile photo
+PureHeart Evony
+Nov 27, 2017, 7:17:11 AM
+Yes, I opened a fresh no info bot. No goals and no scripts running or none even available because i
+PureHeart Evony's profile photo
+PureHeart Evony
+Nov 29, 2017, 7:27:42 AM
+I've been watching it closely and it say Evasion, sending 100k carafract to Loyang, then after
+xThisIsMe's profile photo
+xThisIsMe
+Nov 30, 2017, 6:56:57 PM
+to RE Portal & Forums
+Even when no goals are loaded the bot will try to protect the account. Your example of it sending gold via scouts is most likely an example of rescue town doing it's job and nothing directly to do with evasion. As far as what you posted about the phracts it sounds like it's doing exactly what it should be doing since the evading troops should never actually land in the other city.
+PureHeart Evony's profile photo
+PureHeart Evony
+Nov 30, 2017, 8:19:15 PM
+Thank you, and so know way to stop it then right? Even though its doing what it should.
+xThisIsMe's profile photo
+xThisIsMe
+Feb 12, 2018, 12:11:56 AM
+to RE Portal & Forums
+You can stop it by adding the following in the goals of the city you wish to not be rescued by the other cities.
+
+
+config norescue:1
+ 
+
+

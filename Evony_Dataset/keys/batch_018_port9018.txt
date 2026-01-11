@@ -1,0 +1,13 @@
+# Proxy: SOCKS4 127.0.0.1:9018
+# Accounts: 10
+
+gutter_maintenance@iinet.net.au:denagi71
+guy.mundy@tiscali.co.uk:Bankai!
+gyulez@gmail.com:pepsi!82
+hanny2@ziggo.nl:jansen2h
+hauble@yahoo.com:kevkim91
+haydenermel@yahoo.com:rollercoaster
+hgrowden@hotmail.com:hayden1979
+holystgeorges@hotmail.com:shawne
+hpu321@yahoo.com:5656michael
+hpu333@yahoo.com:Godisgood5656

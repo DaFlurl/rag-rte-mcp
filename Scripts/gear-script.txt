@@ -1,0 +1,57 @@
+gear we
+sleep 2
+set nullvar $m_city.actionFactory.getEquipmenttechCommands().cancelResearch(m_city.castle.id)$
+sleep 3
+gear shi
+sleep 2
+set nullvar $m_city.actionFactory.getEquipmenttechCommands().cancelResearch(m_city.castle.id)$
+sleep 3
+gear ne
+sleep 2
+set nullvar $m_city.actionFactory.getEquipmenttechCommands().cancelResearch(m_city.castle.id)$
+sleep 3
+gear cha
+sleep 2
+set nullvar $m_city.actionFactory.getEquipmenttechCommands().cancelResearch(m_city.castle.id)$
+sleep 3
+gear ri
+sleep 2
+set nullvar $m_city.actionFactory.getEquipmenttechCommands().cancelResearch(m_city.castle.id)$
+sleep 3
+gear he
+sleep 2
+set nullvar $m_city.actionFactory.getEquipmenttechCommands().cancelResearch(m_city.castle.id)$
+sleep 3
+gear sho
+sleep 2
+set nullvar $m_city.actionFactory.getEquipmenttechCommands().cancelResearch(m_city.castle.id)$
+sleep 3
+gear che
+sleep 2
+set nullvar $m_city.actionFactory.getEquipmenttechCommands().cancelResearch(m_city.castle.id)$
+sleep 3
+gear ba
+sleep 2
+set nullvar $m_city.actionFactory.getEquipmenttechCommands().cancelResearch(m_city.castle.id)$
+sleep 3
+gear ga
+sleep 2
+set nullvar $m_city.actionFactory.getEquipmenttechCommands().cancelResearch(m_city.castle.id)$
+sleep 3
+gear be
+sleep 2
+set nullvar $m_city.actionFactory.getEquipmenttechCommands().cancelResearch(m_city.castle.id)$
+sleep 3
+gear le
+sleep 2
+set nullvar $m_city.actionFactory.getEquipmenttechCommands().cancelResearch(m_city.castle.id)$
+sleep 3
+gear fo
+sleep 2
+set nullvar $m_city.actionFactory.getEquipmenttechCommands().cancelResearch(m_city.castle.id)$
+sleep 3
+gear mo
+sleep 2
+set nullvar $m_city.actionFactory.getEquipmenttechCommands().cancelResearch(m_city.castle.id)$
+sleep 3
+loop 10

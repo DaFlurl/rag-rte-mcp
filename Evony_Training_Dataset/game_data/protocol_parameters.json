@@ -1,0 +1,305 @@
+{
+  "commands": {
+    "field.getCastleFieldInfo": {
+      "name": "field.getCastleFieldInfo",
+      "category": "field",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "field.getOtherFieldInfo": {
+      "name": "field.getOtherFieldInfo",
+      "category": "field",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "field.giveUpField": {
+      "name": "field.giveUpField",
+      "category": "field",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.addPoint": {
+      "name": "hero.addPoint",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.addPoint2": {
+      "name": "hero.addPoint2",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.awardGold": {
+      "name": "hero.awardGold",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.callBackHero": {
+      "name": "hero.callBackHero",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.changeName": {
+      "name": "hero.changeName",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.dischargeChief": {
+      "name": "hero.dischargeChief",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.fireHero": {
+      "name": "hero.fireHero",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.GenSaveRandomHero": {
+      "name": "hero.GenSaveRandomHero",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.GetDisappearHeros": {
+      "name": "hero.GetDisappearHeros",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.getFleeHeroList": {
+      "name": "hero.getFleeHeroList",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.getHerosListFromTavern": {
+      "name": "hero.getHerosListFromTavern",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.GetRandomHero": {
+      "name": "hero.GetRandomHero",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.hireFacebookFriendHero": {
+      "name": "hero.hireFacebookFriendHero",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.hireHero": {
+      "name": "hero.hireHero",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.levelUp": {
+      "name": "hero.levelUp",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.promoteToChief": {
+      "name": "hero.promoteToChief",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.RecoverDisappearHero": {
+      "name": "hero.RecoverDisappearHero",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.recruitFleeHero": {
+      "name": "hero.recruitFleeHero",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.refreshHerosListFromTavern": {
+      "name": "hero.refreshHerosListFromTavern",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.releaseHero": {
+      "name": "hero.releaseHero",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.resetPoint": {
+      "name": "hero.resetPoint",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.RetSetHeroAttri": {
+      "name": "hero.RetSetHeroAttri",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.setHeroFacebookId": {
+      "name": "hero.setHeroFacebookId",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.SetShowHeroId": {
+      "name": "hero.SetShowHeroId",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.ShowPlayerHerosByUserName": {
+      "name": "hero.ShowPlayerHerosByUserName",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.tryGetSeizedHero": {
+      "name": "hero.tryGetSeizedHero",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "hero.useItem": {
+      "name": "hero.useItem",
+      "category": "hero",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "tech.cancelResearch": {
+      "name": "tech.cancelResearch",
+      "category": "tech",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "tech.getCoinsNeed": {
+      "name": "tech.getCoinsNeed",
+      "category": "tech",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "tech.getResearchList": {
+      "name": "tech.getResearchList",
+      "category": "tech",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "tech.research": {
+      "name": "tech.research",
+      "category": "tech",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    },
+    "tech.speedUpResearch": {
+      "name": "tech.speedUpResearch",
+      "category": "tech",
+      "parameters": [],
+      "response_type": "",
+      "error_codes": [],
+      "description": ""
+    }
+  },
+  "categories": [
+    "alliance",
+    "army",
+    "castle",
+    "city",
+    "colony",
+    "common",
+    "field",
+    "fortifications",
+    "gameclient",
+    "hero",
+    "interior",
+    "quest",
+    "report",
+    "resource",
+    "shop",
+    "tech",
+    "trade",
+    "troop"
+  ],
+  "total_commands": 35
+}

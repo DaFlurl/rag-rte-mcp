@@ -1,0 +1,131 @@
+# BATCH TROOP & RESOURCE EXTRACTION SCRIPT
+# Run this in RoboEvony to extract all data for current account
+# Output format: CSV-style for easy parsing
+set mode full
+setsilence "true"
+
+# Get player info
+set PlayerName $m_player.playerInfo.userName$
+set NumCities $m_city.allCities.length$
+
+# Initialize troop counters
+set CityIndex 0
+set WorkerCount 0
+set WarriorCount 0
+set ScoutCount 0
+set PikeCount 0
+set SwordCount 0
+set ArcherCount 0
+set CavalryCount 0
+set CataphractCount 0
+set BallistaCount 0
+set CatapultCount 0
+set BatteringramCount 0
+set TransportCount 0
+
+# Initialize resource counters
+set TotalGold 0
+set TotalFood 0
+set TotalWood 0
+set TotalStone 0
+set TotalIron 0
+
+set cMaT .cityManager.allTroop.
+set cMaR .cityManager.resource.
+set mcaC m_city.allCities
+
+label CITY_LOOP
+# Count troops
+set WarriorCount {%WarriorCount%+$%mcaC%[{%CityIndex%}]%cMaT%militia$}
+set ScoutCount {%ScoutCount%+$%mcaC%[{%CityIndex%}]%cMaT%scouter$}
+set PikeCount {%PikeCount%+$%mcaC%[{%CityIndex%}]%cMaT%pikemen$}
+set SwordCount {%SwordCount%+$%mcaC%[{%CityIndex%}]%cMaT%swordsmen$}
+set ArcherCount {%ArcherCount%+$%mcaC%[{%CityIndex%}]%cMaT%archer$}
+set CavalryCount {%CavalryCount%+$%mcaC%[{%CityIndex%}]%cMaT%lightCavalry$}
+set CataphractCount {%CataphractCount%+$%mcaC%[{%CityIndex%}]%cMaT%heavyCavalry$}
+set BallistaCount {%BallistaCount%+$%mcaC%[{%CityIndex%}]%cMaT%ballista$}
+set CatapultCount {%CatapultCount%+$%mcaC%[{%CityIndex%}]%cMaT%catapult$}
+set BatteringramCount {%BatteringramCount%+$%mcaC%[{%CityIndex%}]%cMaT%batteringRam$}
+set TransportCount {%TransportCount%+$%mcaC%[{%CityIndex%}]%cMaT%carriage$}
+set WorkerCount {%WorkerCount%+$%mcaC%[{%CityIndex%}]%cMaT%peasants$}
+
+# Count resources
+set TotalGold {%TotalGold%+$%mcaC%[{%CityIndex%}]%cMaR%gold.amount$}
+set TotalFood {%TotalFood%+$%mcaC%[{%CityIndex%}]%cMaR%food.amount$}
+set TotalWood {%TotalWood%+$%mcaC%[{%CityIndex%}]%cMaR%wood.amount$}
+set TotalStone {%TotalStone%+$%mcaC%[{%CityIndex%}]%cMaR%stone.amount$}
+set TotalIron {%TotalIron%+$%mcaC%[{%CityIndex%}]%cMaR%iron.amount$}
+
+set CityIndex {%CityIndex%+1}
+ifgoto ( %CityIndex% < %mcaC%.length ) CITY_LOOP
+
+# Calculate totals
+set FootCount {%WarriorCount%+%ScoutCount%+%PikeCount%+%SwordCount%+%ArcherCount%}
+set HorseCount {%CavalryCount%+%CataphractCount%}
+set MechCount {%BallistaCount%+%CatapultCount%+%BatteringramCount%}
+set SupportCount {%WorkerCount%+%TransportCount%}
+set TotalTroops {%FootCount%+%HorseCount%+%MechCount%+%SupportCount%}
+set TotalResources {%TotalGold%+%TotalFood%+%TotalWood%+%TotalStone%+%TotalIron%}
+
+# Output header
+echo "========== ACCOUNT DATA EXTRACTION =========="
+echo "PLAYER: %PlayerName%"
+echo "CITIES: %NumCities%"
+echo "TIMESTAMP: $new Date()$"
+echo "============================================="
+
+# Output in CSV format for parsing
+echo "DATA_START"
+echo "player_name,%PlayerName%"
+echo "cities,%NumCities%"
+echo "total_troops,%TotalTroops%"
+echo "warriors,%WarriorCount%"
+echo "scouts,%ScoutCount%"
+echo "pikes,%PikeCount%"
+echo "swords,%SwordCount%"
+echo "archers,%ArcherCount%"
+echo "cavalry,%CavalryCount%"
+echo "cataphracts,%CataphractCount%"
+echo "ballistas,%BallistaCount%"
+echo "catapults,%CatapultCount%"
+echo "rams,%BatteringramCount%"
+echo "transports,%TransportCount%"
+echo "workers,%WorkerCount%"
+echo "total_resources,%TotalResources%"
+echo "gold,%TotalGold%"
+echo "food,%TotalFood%"
+echo "wood,%TotalWood%"
+echo "stone,%TotalStone%"
+echo "iron,%TotalIron%"
+echo "DATA_END"
+
+# Human readable summary
+echo ""
+echo "===== TROOP SUMMARY ====="
+echo "Total Troops: $m_city.formatNum(%TotalTroops%)$"
+echo "  Warriors:     $m_city.formatNum(%WarriorCount%)$"
+echo "  Scouts:       $m_city.formatNum(%ScoutCount%)$"
+echo "  Pikes:        $m_city.formatNum(%PikeCount%)$"
+echo "  Swords:       $m_city.formatNum(%SwordCount%)$"
+echo "  Archers:      $m_city.formatNum(%ArcherCount%)$"
+echo "  Cavalry:      $m_city.formatNum(%CavalryCount%)$"
+echo "  Cataphracts:  $m_city.formatNum(%CataphractCount%)$"
+echo "  Ballistas:    $m_city.formatNum(%BallistaCount%)$"
+echo "  Catapults:    $m_city.formatNum(%CatapultCount%)$"
+echo "  Rams:         $m_city.formatNum(%BatteringramCount%)$"
+echo "  Transports:   $m_city.formatNum(%TransportCount%)$"
+echo "  Workers:      $m_city.formatNum(%WorkerCount%)$"
+
+echo ""
+echo "===== RESOURCE SUMMARY ====="
+echo "Total Resources: $m_city.formatNum(%TotalResources%)$"
+echo "  Gold:   $m_city.formatNum(%TotalGold%)$"
+echo "  Food:   $m_city.formatNum(%TotalFood%)$"
+echo "  Wood:   $m_city.formatNum(%TotalWood%)$"
+echo "  Stone:  $m_city.formatNum(%TotalStone%)$"
+echo "  Iron:   $m_city.formatNum(%TotalIron%)$"
+
+echo ""
+echo "===== EXTRACTION COMPLETE ====="
+
+setsilence "false"

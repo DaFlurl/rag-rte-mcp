@@ -1,0 +1,26 @@
+// BORG TOOLKIT - Troop Overflow Exploit
+// For AutoEvony bot - copy to scripts folder and run
+// 
+// This queues archers above INT32 overflow threshold
+// then cancels to trigger negative resource refund = GAIN
+
+// Set silence off to see output
+setsilence off
+
+echo ========================================
+echo TROOP OVERFLOW EXPLOIT - ARCHER
+echo Threshold: 6,135,037 archers
+echo ========================================
+
+// Queue overflow archers (may hit bot limits)
+train a:6135037
+
+// Wait for server to process
+sleep 1000
+
+// Cancel production - triggers negative refund
+cleartroopqueues
+
+echo ========================================
+echo EXPLOIT COMPLETE - Check your food!
+echo ========================================

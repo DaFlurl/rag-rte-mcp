@@ -1,0 +1,20 @@
+{
+  "now": {
+    "proxyHost": "",
+    "serverIP": "216.66.17.168",
+    "secCode": "",
+    "proxyPort": "8080",
+    "autoLoginMinTime": "1",
+    "autoLoginMaxTime": "600",
+    "proxyPw": "",
+    "autoLogin": true,
+    "strserverAlias": "Parapet",
+    "server": "cc2",
+    "proxyUn": "",
+    "autoRun": true,
+    "username": "jjjones@iinet.net.au",
+    "autoScript": true,
+    "proxyType": "",
+    "password": "SouthOfHeaven"
+  }
+}

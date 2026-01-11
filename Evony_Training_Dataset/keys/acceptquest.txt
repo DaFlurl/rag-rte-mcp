@@ -1,0 +1,21 @@
+// set send1 s:1b,p:1b,sw:1b,a:1b,c:1b,cata:1b,b:1b,r:1b,cp:1b
+// set send1 s:999m,p:1m,sw:1m,a:1m,c:1m,cata:1m,b:1m,r:1m,cp:1m
+// set send1 s:999m,p:999m,sw:999m,a:999m,c:999m,cata:999m,b:999m,r:999m,cp:999m
+
+
+setsilence true
+set cqi 0 // Server Slot , another account cqi 1 , or cqi 2
+set hero Kay // 
+set send1 p:1b,sw:1b,a:1b,c:1b,cata:1b,b:1b,r:1b,cp:1b
+
+set r $c.af.getCommissionQuestCommands().getAllCommissionQuest()$
+sleep 1
+iferror $%r%.ok$ repeat 0
+set cqid $%r%.commissionQuestBeanArray[%cqi%].id$
+set tgt $%r%.commissionQuestBeanArray[%cqi%].position$
+
+waithero %hero%
+changeherogear %hero% atk
+set afacq $c.af.getCommissionQuestCommands().acceptCommissionQuest(c.castle.id,%cqid%,c.getArmy(10,m_city.getValue(Coordinate,%tgt%),%hero%,c.getValue(Troop,%send1%)))$
+sleep 1
+if {$%afacq%.msg$==null} echo $%afacq%.errorMsg$

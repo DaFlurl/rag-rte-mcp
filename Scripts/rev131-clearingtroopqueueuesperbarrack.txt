@@ -1,0 +1,45 @@
+set numberOfBarracksToClear 5
+
+#barracks will be cleared by increasing troopProduceQueue[int] not by posId
+
+setsilence true // Do not edit beyond this line
+goalcommandwarnign false
+config troop:0
+set cqi 0
+label cancelQueues
+set qiv {$c.cm.troopProduceQueue[{%cqi%}].allProduceQueueArray.length$}
+label cancelQueue
+set qiv {%qiv%-1}
+if {$c.cm.troopProduceQueue[{%cqi%}].allProduceQueueArray.length$==0} goto nextRack
+label removeBatch
+echo "removing queueID $c.cm.troopProduceQueue[{%cqi%}].allProduceQueueArray[{%qiv%}].queueId$ in Barrack %cqi% at positionId $c.cm.troopProduceQueue[{%cqi%}].positionId$"
+set r $c.af.getTroopCommands().cancelTroopProduce(c.castle.id,c.cm.troopProduceQueue[{%cqi%}].positionId,c.cm.troopProduceQueue[{%cqi%}].allProduceQueueArray[{%qiv%}].queueId)$
+gosub waitRemoveResp %r% 10
+iferror $%r%.ok$ goto removeBatch
+if {$%r%.ok$==1} echo "Batch removal confirmed"
+if {$%r%.ok$!=1} echo $%r%.errorMsg$
+if {$%r%.ok$!=1} goto removeBatch
+label checkRemoved
+set null $c.cm.updateTroopQueue()$
+iferror $c.cm.troopProduceQueue[{%cqi%}].allProduceQueueArray[{%qiv%}].queueId$ goto batchCanceled
+sleep 1
+goto checkRemoved
+label batchCanceled
+echo "Batch removal verified"
+goto cancelQueue
+label nextRack
+set cqi {%cqi%+1}
+if {%cqi%<%numberOfBarracksToClear%} goto cancelQueues
+goto out
+label waitRemoveResp
+set _starttime $m_city.getRawTime()$
+label waitRespStart
+iferror {$%_1%.ok$} goto respWait
+gosubreturn %_1%
+label respWait
+if {$m_city.getRawTime()$>{%_starttime%+%_2%*1000}} gosubreturn 0
+sleep 0.1
+goto waitRespStart
+label out
+set msg "<font color='#0000FF'>This script was created by &#169;&#60;&#126;Yozhik v Tumane&#126;&#62;&#8482;</font>"
+set log $c.cm.logMsg(%msg%)$

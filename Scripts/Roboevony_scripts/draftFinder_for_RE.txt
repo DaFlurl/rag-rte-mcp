@@ -1,0 +1,275 @@
+//By Squirel Princess
+
+//NOTE: Method used to get "highest draftable" is not foolproof, just close. Checking scout reports yourself is recommended for the best drafts. Script is used for hands-off drafting, and does not guarantee best draft possible. Scouting may take hours if many cities under and they all are horrible according to terms of drafting. 
+//NOTE 2: Configure correctly. I am not responsible for drafting blues. I've done my fair share of it and made several safeguards against it. 
+
+set draftTime 00:00:00 //If scouting allow about an hour or 2 depending on distance, number of cities, and all the exclude list. Starts scouting/drafting every day at this time.
+
+setarr searchNotForAlliance "~" 
+setarr searchNotForPlayers "~" //Do not draft these players.
+set searchForPlayer "~" //Cities owned by this player- Will go through other checks like prest and alliance and scout if set. 
+set playerPrestige 1000000 //list cities owned by players who have more than this much prestige.
+set searchForSuz "~" //Cities who are suzed by this player- Will go through other checks like prest and alliance and scout if set. 
+set playerHonor -1 //Cities who are owned by players have more than this much honor.
+setarr currentExcludeList "None" //Script posts exclude list at the end of drating, plug back in here for it to continue through restarts. 
+set radius 100 //10 for a 12, 33 for a 14, 101 for a 16 (might take forever but your choice.) No harm in going over. 
+set scouting "true" //Scouts cities with 1 scout before drafting. If it cant get a scout it will blind draft. Scouting will make time until draft longer.  
+setarray draftType ["workers", "warriors", "scouts", "pikemen", "swordsmen", "archers", "transporters", "cavalry", "cataphracts", "ballista", "battering rams", "catapults"] //Do not modify this, only the min draft
+setarray minDraftToKeep ["30000", "20000", "20000", "10000", "10000", "10000", "4000", "5000", "3000", "2000", "1000", "500"] //If scouting only take cities which have at least this much to draft, if blind draft only keep those which have at least this much drafted. 
+
+
+//Do not change below here
+setsilence true
+set outOfRange "You cannot issue a Policy on the city in this region."
+set alreadyDrafted "The city has been cast one of the Policy Decrees today.It can not be cast again tody."
+set noTroops "Policy Decree used.But there were no troops in the city."
+set truce "You cannot issue a Policy on a player's city which is in the status of Truce or Vacation or under beginner's protection."
+setarr troopString "0 0 worker warrior scout pike sword arch trans cav phract balli ram pult"
+setarr undraftables "0 0 9544372 7040930 3089905 2386093 1590729 1590729 753503 245427 721843 214748 156181 74051"
+set searchStr "troopStrType typeId"
+addtoarray minDraftToKeep 0 0
+repeat 2
+addtoarray draftType 0 0
+repeat 2
+label start 
+delete drafted
+set drafted "You have drafted:"
+scanmap $c.coord$ %radius%
+set that $c.getMapFieldList(Castle,0,%radius%,c.castle.fieldId)$
+setarr this "%that%"
+set i 0
+label startCheckDraft
+set fieldId $c.getValue(Coordinate,%this[{%i%}]%)$
+set mapObj c.getMapDetail(%fieldId%)
+label waitForDetail
+sleep 0.1
+iferror $%mapObj%.userName$ goto waitForDetail
+set userName $%mapObj%.userName$
+set alliance $%mapObj%.allianceName$ 
+if {%alliance%!=null} goto foundAlliance
+set r $c.af.getCommonCommands().getPlayerInfoByName(%userName%)$
+label waitAlliance
+sleep 0.1
+iferror $%r%.toDebugString()$ goto waitAlliance
+set alliance $%r%.playerInfo.alliance$
+label foundAlliance
+getindexof notAlliance searchNotForAlliance %alliance%
+getindexof no currentExcludeList %this[{%i%}]%
+getindexof notPlayer searchNotForPlayers $%mapObj%.userName$ 
+if {{%no%>-1}||{%notAlliance%>-1}||{%notPlayer%>-1}||{$%mapObj%.suzerain$!=%searchForSuz%&&%searchForSuz%!=~}||{$%mapObj%.userName$!=%searchForPlayer%&&%searchForPlayer%!=~}||{$%mapObj%.prestige$<%playerPrestige%||$%mapObj%.honor$<%playerHonor%}||{$%mapObj%.relation$!=2&&$%mapObj%.relation$!=3}} goto next
+label addThis
+if {%scouting%==true} goto scoutNow
+set coord %this[{%i%}]%
+label returnScout
+gosub draftTime %coord%
+label next
+set i {%i%+1}
+if {%i%>=%this.length%} goto get10List
+goto startCheckDraft
+label draftTime
+set coord %_1%
+set fieldId $c.getValue(Coordinate,%coord%)$
+set policies $c.af.getCapitalCommands().getLeftPoliciesTimes(c.castle.id)$
+gosub waitResp %policies% 10
+iferror $%policies%.ok$ gosubreturn
+if {$%policies%.amount$<1} goto notNow
+set r $c.af.getCapitalCommands().levyArmy(c.castle.id,%fieldId%)$
+gosub waitResp %r% 10
+iferror $%r%.ok$ goto noResponse
+if {$%r%.errorMsg$!=null} gosub errorMessage
+if {$%r%.errorMsg$==%outOfRange%||$%r%.errorMsg$==%noTroops%} gosub addBadDraft
+if {$%r%.errorMsg$==%outOfRange%||$%r%.errorMsg$==%noTroops%} gosubreturn
+if {$%r%.errorMsg$==%alreadyDrafted%||$%r%.errorMsg$==%truce%} gosubreturn
+if {$%r%.errorMsg$!=null} goto skipMsg
+set msg "Capitalpolicy Response: Successful Draft&#46; Aquire <b>$%r%.amount$ $%r%.armyType$</b> from {%fieldId%|800}&#44;{%fieldId%\800}&#46; {$%policies%.amount$-1} policies left&#46;"
+set junk $c.cm.warLogMsg(%msg%)$
+set drafted "%drafted% $%r%.amount$ $%r%.armyType$"
+label skipMsg
+goto checkDraftResponse
+label waitResp
+set _starttime $c.getRawTime()$
+label waitRespStart
+iferror {$%_1%.ok$} goto respWait
+gosubreturn %_1%
+label respWait
+if {$c.getRawTime()$>{%_starttime%+%_2%*1000}} gosubreturn 0
+sleep 0.1
+goto waitRespStart
+label checkDraftResponse
+getindexof type draftType $%r%.armyType$
+if {%minDraftToKeep[{%type%}]%>$%r%.amount$} gosub addBadDraft
+gosubreturn 
+label noResponse
+echo "No response was recieved from server for %coord%."
+gosubreturn
+label errorMessage
+echo "$%r%.errorMsg$ on %coord%"
+gosubreturn
+label addBadDraft 
+if {%currentExcludeList[0]%==None} setarr currentExcludeList "%this[{%i%}]%"
+getindexof check currentExcludeList "%this[{%i%}]%"
+if {%check%>-1} goto alreadySet 
+addtoarray currentExcludeList %currentExcludeList.length% %this[{%i%}]%
+label alreadySet
+gosubreturn
+label notNow
+join exclude currentExcludeList " "
+echo "Exclude list: %exclude%"
+set drafted "%drafted% {$c.getDateFromTime(c.getRawTime()).month$+1}/$c.getDateFromTime(c.getRawTime()).date$/$c.getDateFromTime(c.getRawTime()).fullYear$"
+set junk $c.cm.warLogMsg(%drafted%)$
+sleep @:%draftTime% true
+goto start
+label get10List
+echo "Checking for 10s."
+set that $c.getMapFieldList(npc,10,%radius%,c.castle.fieldId)$
+if {%that%==null} goto no10s
+setarr this "%that%"
+label startScout
+scout %this[0]% none s:1
+set coord %this[0]%
+sleep {$c.cm.getBaseTravelTime(c.castle.fieldId,c.getValue(Coordinate,%this[0]%),c.getValue(Troop,s:1))$+5}
+gosub draftTime %coord%
+goto startScout
+label no10s
+echo "You have no cities under here, and no 10s."
+goto end
+label scoutNow
+iferror %scouting.length% set scouting.length 0
+scout %this[{%i%}]% none s:1
+sleep 3
+addtoarray scouting %scouting.length% %this[{%i%}]%
+if {%scouting.length%<5} goto next
+label waitForScouting
+sleep 10
+set r $c.af.getReportCommands().receiveReportList(0,10,3)$
+gosub waitResp %r% 10
+set iii -1
+label checkReport
+set iii {%iii%+1}
+if {%iii%>5} goto waitForScouting
+set ii -1
+label checkScout
+iferror $c.af.getReportCommands().markAsRead(%r%.reportsArray[{%iii%}].id)$ goto waitForScouting
+set x $c.af.getReportCommands().markAsRead(%r%.reportsArray[{%iii%}].id)$
+gosub waitResp %x% 10
+iferror $%x%.report.targetPos$ goto checkScout
+label getXY
+set strXY $%x%.report.targetPos$
+set len $m_city.getValue(String,%strXY%).length$
+delete parenCheck
+label parse
+iferror %parenCheck% set parenCheck 3
+set parenCheck {%parenCheck%+1}
+if {$m_city.getValue(String,%strXY%).charCodeAt({%len%-%parenCheck%})$!=40} goto parse
+set coord $m_city.getValue(String,%strXY%).substring({%len%-{%parenCheck%-1}},{%len%-1})$
+label checkCorrect
+set ii {%ii%+1}
+if {%ii%>=%scouting.length%} goto checkReport
+if {%coord%!=%scouting[{%ii%}]%} goto checkCorrect 
+iferror $%x%.report.content$ goto returnScout 
+if {$c.getValue(String,%x%.report.content).indexOf(isSuccess=")$<1} goto returnScout
+set startSuccess {$c.getValue(String,%x%.report.content).indexOf(isSuccess=")$+11}
+set endSuccess $c.getValue(String,%x%.report.content).indexOf(",%startSuccess%)$
+set isSuccess $c.getValue(String,%x%.report.content).substring(%startSuccess%,%endSuccess%)$
+if {%isSuccess%==false} goto returnScout
+set iiii 2 
+delete count
+setarr count "0 0"
+label troops
+set troopCount 0
+if {$c.getValue(String,%x%.report.content).indexOf(%searchStr%="%iiii%")$<1} goto setNextTroop
+if {%iiii%<10} set stringCount 31
+if {%iiii%>=10} set stringCount 32
+set start%troopString[{%iiii%}]% {$c.getValue(String,%x%.report.content).indexOf(%searchStr%="%iiii%")$+%stringCount%}
+set end%troopString[{%iiii%}]% $c.getValue(String,%x%.report.content).indexOf(",%{start%troopString[{%iiii%}]%}%)$
+set troopCount $c.getValue(String,%x%.report.content).substring(%start{%troopString[{%iiii%}]%}%,%end{%troopString[{%iiii%}]%}%)$
+label setNextTroop
+set iiii {%iiii%+1}
+addtoarray count %count.length% %troopCount%
+if {%iiii%<%troopString.length%} goto troops 
+set stringOfTroops "wo:%count[2]%,w:%count[3]%,s:%count[4]%,p:%count[6]%,sw:%count[6]%,a:%count[7]%,c:%count[9]%,cata:%count[10]%,t:%count[8]%,b:%count[11]%,r:%count[12]%,cp:%count[13]%"
+if {%count[2]%*0.05<%minDraftToKeep[2]%||%count[3]%*0.05<%minDraftToKeep[3]%||%count[4]%*0.05<%minDraftToKeep[4]%||%count[5]%*0.05<%minDraftToKeep[5]%||%count[6]%*0.05<%minDraftToKeep[6]%||%count[7]%*0.05<%minDraftToKeep[7]%||%count[8]%*0.05<%minDraftToKeep[8]%||%count[9]%*0.05<%minDraftToKeep[9]%||%count[10]%*0.05<%minDraftToKeep[10]%||%count[11]%*0.05<%minDraftToKeep[11]%||%count[12]%*0.05<%minDraftToKeep[12]%||%count[13]%*0.05<%minDraftToKeep[13]%} goto checkDraftable
+label checkOther 
+set goldCount 0
+if {$c.getValue(String,%x%.report.content).indexOf(gold=")$<1} goto setFood
+set startG {$c.getValue(String,%x%.report.content).indexOf(gold=")$+6}
+set endG {$c.getValue(String,%x%.report.content).indexOf(",%startG%)$}
+set goldCount $c.getValue(String,%x%.report.content).substring(%startG%,%endG%)$
+if {%goldCount%==2147483647} gosub draftGold %coord%
+if {%goldCount%==2147483647} goto next
+label setFood
+set foodCount 0
+if {$c.getValue(String,%x%.report.content).indexOf(<food>)$<1} goto doneFood
+set startFood {$c.getValue(String,%x%.report.content).indexOf(<food>)$+6}
+set endFood $c.getValue(String,%x%.report.content).indexOf(</food>)$
+set foodCount $c.getValue(String,%x%.report.content).substring(%startFood%,%endFood%)$
+if {%foodCount%==2147483647} gosub draftFood %coord%
+if {%foodCount%==2147483647} goto next
+label doneFood
+gosub addBadDraft
+goto next
+label checkDraftable
+set iiiii 1
+delete type 
+delete percent 
+iferror %type.length% set type.length 0 
+iferror %percent.length% set percent.length 0
+label checkDraftableLoop
+set iiiii {%iiiii%+1}
+if {%iiiii%>=%count.length%} goto checkMostDraftable
+if {%count[{%iiiii%}]%==0} goto checkDraftableLoop
+if {$c.math.floor({%count[{%iiiii%}]%/%undraftables[{%iiiii%}]%})$==1||$c.math.floor({%count[{%iiiii%}]%/%undraftables[{%iiiii%}]%})$==3||$c.math.floor({%count[{%iiiii%}]%/%undraftables[{%iiiii%}]%})$==5||$c.math.floor({%count[{%iiiii%}]%/%undraftables[{%iiiii%}]%})$==7||$c.math.floor({%count[{%iiiii%}]%/%undraftables[{%iiiii%}]%})$==9} goto checkDraftableLoop
+addtoarray type %type.length% %draftType[{%iiiii%}]%
+set a {%count[{%iiiii%}]%/%undraftables[{%iiiii%}]%}
+set b {{{%a%-%a%\1}*100\1}/100}
+addtoarray percent %percent.length% %b% 
+goto checkDraftableLoop
+label checkMostDraftable 
+if {%type.length%==0} goto checkOther
+join string percent ,
+set maxTroop $c.math.max(%string%)$
+getindexof c percent %maxTroop%
+getindexof d draftType %type[{%c%}]%
+if {%count[{%d%}]%*0.05<%minDraftToKeep[{%d%}]%} goto checkOther
+gosub draftTime %coord%
+goto next
+label draftGold
+set coord %_1%
+set fieldId $c.getValue(Coordinate,%coord%)$
+set policies $c.af.getCapitalCommands().getLeftPoliciesTimes(c.castle.id)$
+gosub waitResp %policies% 10
+iferror $%policies%.ok$ gosubreturn
+if {$%policies%.amount$<1} goto notNow
+set r $c.af.getCapitalCommands().levyTaxes(c.castle.id,%fieldId%)$
+gosub waitResp %r% 10
+iferror $%r%.ok$ goto noResponse
+if {$%r%.errorMsg$!=null} gosub errorMessage
+if {$%r%.errorMsg$==%outOfRange%} gosub addBadDraft
+if {$%r%.errorMsg$==%outOfRange%} gosubreturn
+if {$%r%.errorMsg$==%alreadyDrafted%||$%r%.errorMsg$==%truce%} gosubreturn
+if {$%r%.errorMsg$!=null} goto skipMsgGold
+set msg "Capitalpolicy Response: Successful Gold Levy&#46; Aquire <b>$%r%.amount$ Gold</b> from {%fieldId%|800}&#44;{%fieldId%\800}&#46; {$%policies%.amount$-1} policies left&#46;"
+set junk $c.cm.warLogMsg(%msg%)$
+set drafted "%drafted% $%r%.amount$ Gold"
+label skipMsgGold
+gosubreturn
+label draftFood
+set coord %_1%
+set fieldId $c.getValue(Coordinate,%coord%)$
+set policies $c.af.getCapitalCommands().getLeftPoliciesTimes(c.castle.id)$
+gosub waitResp %policies% 10
+iferror $%policies%.ok$ gosubreturn
+if {$%policies%.amount$<1} goto notNow
+set r $c.af.getCapitalCommands().levyFood(c.castle.id,%fieldId%)$
+gosub waitResp %r% 10
+iferror $%r%.ok$ goto noResponse
+if {$%r%.errorMsg$!=null} gosub errorMessage
+if {$%r%.errorMsg$==%outOfRange%} gosub addBadDraft
+if {$%r%.errorMsg$==%outOfRange%} gosubreturn
+if {$%r%.errorMsg$==%alreadyDrafted%||$%r%.errorMsg$==%truce%} gosubreturn
+if {$%r%.errorMsg$!=null} goto skipMsgFood
+set msg "Capitalpolicy Response: Successful Food Levy&#46; Aquire <b>$%r%.amount$ Food</b> from {%fieldId%|800}&#44;{%fieldId%\800}&#46; {$%policies%.amount$-1} policies left&#46;"
+set junk $c.cm.warLogMsg(%msg%)$
+set drafted "%drafted% $%r%.amount$ Food"
+label skipMsgFood
+gosubreturn

@@ -1,0 +1,496 @@
+//[DraftAll]
+setsilence true
+set msg "<font color='#CC2EFA'> <u>$c.player.playerInfo.userName$'s Colony draft result $c.getDateFromTime(c.getRawTime())$ ------</u></font>"
+set warLog $c.cm.warLogMsg(%msg%)$
+setarray armyTypes ["workers", "warriors", "scouts", "pikemen", "swordsmen", "archers", "cavalry", "cataphracts", "transporters", "ballista", "battering rams", "catapults"]
+setarray draftTotals ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]
+set totDraft "<br><b><u>No colony troop drafts were recieved for $c.player.playerInfo.userName$ at $c.getDateFromTime(c.getRawTime())$</u></b><br>"
+set i 0
+set c 0
+label coloLoop
+if {%i%>=$c.allCities[{%c%}].cm.colonies.length$} goto nextcity
+set cc "c.allCities[{%c%}].cm.colonies[{%i%}]"
+set r $c.af.getColonyCommands().overviewColonialCastle(c.allCities[{%c%}].castle.id,{%cc%}.castleId)$
+label waitforit
+sleep 0.1
+iferror $%r%.ok$ goto waitforit
+if {$%r%.ok$==1} gosub levy
+if {$%r%.ok$==-134} echo "$%cc%.position$: $%r%.errorMsg$ until $c.getDateFromTime(%cc%.endTime).toLocaleTimeString()$"
+label nextColo
+set i {%i%+1}
+goto coloLoop
+label levy
+set r $c.af.getColonyCommands().levyArmy(c.allCities[{%c%}].castle.id,{%cc%}.castleId)$
+label waitresponse
+sleep 0.1
+iferror $%r%.ok$ goto waitresponse
+if {$%r%.ok$==1} set msg "<font color='#CC2EFA'> ------ <b>$%r%.amount$ $%r%.armyType$</b> from $%cc%.cityName$ <i>by $%cc%.lordName$&#40;$%cc%.allianceName$&#41;</i> to your city <b>$c.allCities[{%c%}].castle.name$</b></font>"
+if {$%r%.ok$!=1} goto skip
+getindexof gotDrafted armyTypes $%r%.armyType$
+set draftTotals[%gotDrafted%] {%draftTotals[{%gotDrafted%}]%+$%r%.amount$}
+label skip
+if {$%r%.ok$==-134} set msg "<font color='#FF0000'>$%cc%.cityName$ <i>by $%cc%.lordName$&#40;$%cc%.allianceName$&#41;</i>: <b>$%r%.errorMsg$</b></font>"
+if {$%r%.ok$==-141} set msg "<font color='#FF0000'>$%cc%.cityName$ <i>by $%cc%.lordName$&#40;$%cc%.allianceName$&#41;</i>: <b>Policy Decree used but there were no troops in the city</b></font>"
+set log $c.cm.warLogMsg(%msg%)$
+set sup $c.af.getColonyCommands().setDeployTroops(c.allCities[{%c%}].castle.id,{%cc%}.castleId,c.getValue(Troop,wo:0,w:0,s:0,p:0,sw:0,a:0,c:0,cata:0,t:0,b:0,r:0,cp:0))$
+label waitSetSup
+sleep $c.lag$
+iferror $%sup%.ok$ goto waitSetSup
+if {$%sup%.ok$!=1} echo "$%cc%.position$: $%sup%.errorMsg$ on your colony $%cc%.cityName$ by $%cc%.lordName$"
+if {$%sup%.ok$==1} echo "$%cc%.position$: Suppression setting successfully changed for your colony $%cc%.cityName$ by $%cc%.lordName$"
+set supValue $c.af.getColonyCommands().getDeployTroopsInfo(c.allCities[{%c%}].castle.id,{%cc%}.castleId)$
+label waitValue
+sleep $c.lag$
+iferror $%supValue%.ok$ goto waitValue
+echo "Current sup settings for $%cc%.position$: wo:$%supValue%.troopBean.peasants$,w:$%supValue%.troopBean.militia$,s:$%supValue%.troopBean.scouter$,p:$%supValue%.troopBean.pikemen$,sw:$%supValue%.troopBean.swordsmen$,a:$%supValue%.troopBean.archer$,c:$%supValue%.troopBean.lightCavalry$,cata:$%supValue%.troopBean.heavyCavalry$,t:$%supValue%.troopBean.carriage$,b:$%supValue%.troopBean.ballista$,r::$%supValue%.troopBean.batteringRam$,cp:$%supValue%.troopBean.catapult$"
+gosubreturn
+label nextcity
+set i 0
+set c {%c%+1}
+if {%c%<$c.allCities.length$} goto coloLoop
+label summaryReport
+join checkValue draftTotals ","
+set checkValue $c.math.max(%checkValue%)$
+if {%checkValue%>0} set totDraft "<br><b><u>The total drafts for $c.player.playerInfo.userName$ $c.getDateFromTime(c.getRawTime()).date$/{$c.getDateFromTime(c.getRawTime()).month$+1} $c.getDateFromTime(c.getRawTime()).fullYear$</u></b><br>"
+set ToTi 0
+label createReportLoop
+if {%draftTotals[{%ToTi%}]%<1} goto nextArmyType
+set totDraft "%totDraft% $c.formatNum(%draftTotals[{%ToTi%}]%)$ %armyTypes[{%ToTi%}]% <br>"
+label nextArmyType
+set ToTi {%ToTi%+1}
+if {%ToTi%<%armyTypes.length%} goto createReportLoop
+set wLog $c.cm.warLogMsg(c.getVar(totDraft),#CC2EFA)$
+sleep 05:05:00
+loop
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///[DraftAll]
+setsilence true
+iferror %extrainfo% set extrainfo All
+#set test 100000
+set i 0
+set c 0
+set t c.cm.allTroop
+setarray tNames ["wo", "w", "s", "p", "sw", "a", "c", "cata", "t", "b", "r", "cp"]
+set CityCount $m_city.allCities.length$ // number of cities, automatically detected
+set cMaT .cityManager.allTroop.
+set mcac m_city.allCities
+set gltccind 0
+iferror %test% set test 0
+setarr gltctt2 "peasants militia scouter pikemen swordsmen archer lightCavalry heavyCavalry carriage ballista batteringRam catapult FoodProduced troopCostFood"
+setarray gltctt3 ["Workers", "Warriors", "Scouts", "Pikemen", "Swordsmen", "Archers", "Cavalry", "Cataphracts", "Transporters", "Ballista", "Battering Rams", "Catapults", "Food Produced per hour", "Food Eaten per hour"]
+setarr gltcctc "0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+setarray o ["$%t%.peasants$", "$%t%.militia$", "$%t%.scouter$", "$%t%.pikemen$", "$%t%.swordsmen$", "$%t%.archer$", "$%t%.lightCavalry$", "$%t%.heavyCavalry$", "$%t%.carriage$", "$%t%.ballista$", "$%t%.batteringRam$", "$%t%.catapult$"]
+
+label cityloop
+setarr gltcctc "{%gltcctc[0]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[0]%$} {%gltcctc[1]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[1]%$} {%gltcctc[2]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[2]%$} {%gltcctc[3]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[3]%$} {%gltcctc[4]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[4]%$} {%gltcctc[5]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[5]%$} {%gltcctc[6]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[6]%$} {%gltcctc[7]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[7]%$} {%gltcctc[8]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[8]%$} {%gltcctc[9]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[9]%$} {%gltcctc[10]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[10]%$} {%gltcctc[11]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[11]%$} {%gltcctc[12]%+$%mcac%[%gltccind%].cityManager.resource.food.increaseRate$+$%mcac%[%gltccind%].cityManager.resource.colonyFood$+$%mcac%[%gltccind%].cityManager.resource.supplyFood$} {%gltcctc[13]%+$%mcac%[%gltccind%].cityManager.resource.troopCostFood$}"
+set gltccind {%gltccind%+1}
+//echo "setting gltccind to %gltccind%"
+if {%gltccind%<%CityCount%} goto cityloop
+
+label totalcount
+setarr totaltroopcounto "%gltcctc[0]% %gltcctc[1]% %gltcctc[2]% %gltcctc[3]% %gltcctc[4]% %gltcctc[5]% %gltcctc[6]% %gltcctc[7]% %gltcctc[8]% %gltcctc[9]% %gltcctc[10]% %gltcctc[11]%"
+if {%test%!=0} goto skipdraftscript
+#------------------enter draftscript
+label dodraftscriot
+
+set i 0
+set c 0
+label coloLoop
+if {%i%>=$c.allCities[{%c%}].cm.colonies.length$} goto nextcity
+set cc "c.allCities[{%c%}].cm.colonies[{%i%}]"
+set r $c.af.getColonyCommands().overviewColonialCastle(c.allCities[{%c%}].castle.id,{%cc%}.castleId)$
+label waitforit
+sleep 0.1
+iferror $%r%.ok$ goto waitforit
+if {$%r%.ok$==1} gosub levy
+label nextColo
+set i {%i%+1}
+goto coloLoop
+label levy
+set r $c.af.getColonyCommands().levyArmy(c.allCities[{%c%}].castle.id,{%cc%}.castleId)$
+label waitresponse
+sleep 0.1
+iferror $%r%.ok$ goto waitresponse
+if {$%r%.ok$==1} set msg "<font color='#CC2EFA'> ------ Colony draft result: <b>$%r%.amount$ $%r%.armyType$</b> from $%cc%.cityName$ <i>by $%cc%.lordName$&#40;$%cc%.allianceName$&#41;</i> to your city <b>$c.allCities[{%c%}].castle.name$</b></font>"
+if {$%r%.ok$!=1} set msg "<font color='#FF0000'>$%cc%.cityName$ <i>by $%cc%.lordName$&#40;$%cc%.allianceName$&#41;</i>: <b>$%r%.errorMsg$</b></font>"
+set log $c.cm.warLogMsg(%msg%)$
+set sup $c.af.getColonyCommands().setDeployTroops(c.allCities[{%c%}].castle.id,{%cc%}.castleId,c.getValue(Troop,wo:0,w:0,s:0,p:0,sw:0,a:0,c:0,cata:0,t:0,b:0,r:0,cp:0))$
+gosubreturn
+label nextcity
+set i 0
+set c {%c%+1}
+if {%c%<$c.allCities.length$} goto coloLoop
+label skipdraftscript
+#-------------------------------
+set gltccind 0
+setarr gltcctc "0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+
+label cityloop
+setarr gltcctc "{%gltcctc[0]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[0]%$} {%gltcctc[1]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[1]%$} {%gltcctc[2]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[2]%$} {%gltcctc[3]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[3]%$} {%gltcctc[4]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[4]%$} {%gltcctc[5]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[5]%$} {%gltcctc[6]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[6]%$} {%gltcctc[7]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[7]%$} {%gltcctc[8]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[8]%$} {%gltcctc[9]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[9]%$} {%gltcctc[10]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[10]%$} {%gltcctc[11]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[11]%$} {%gltcctc[12]%+$%mcac%[%gltccind%].cityManager.resource.food.increaseRate$+$%mcac%[%gltccind%].cityManager.resource.colonyFood$+$%mcac%[%gltccind%].cityManager.resource.supplyFood$} {%gltcctc[13]%+$%mcac%[%gltccind%].cityManager.resource.troopCostFood$}"
+set gltccind {%gltccind%+1}
+//echo "setting gltccind to %gltccind%"
+if {%gltccind%<%CityCount%} goto cityloop
+set Time $m_city.getDateFromTime(m_city.serverTimeRaw)$
+set Time_msg "counts from %Time%"
+
+label totalcount
+setarr cfrn "2147483648 2147483648 1073741824 715827883 715827883 536870912 238609295 126322568 429496730 85899346 42949673 17179870"
+setarr vfrn "1073741824 1073741824 536870912 357913942 357913942 268435456 119304648 63161284 214748365 42949673 21474837 8589935"
+setarr totaltroopcountn "{%gltcctc[0]%+%test%} {%gltcctc[1]%+{%test%*10}} {%gltcctc[2]%+{%test%*5}} {%gltcctc[3]%+{%test%*3}} {%gltcctc[4]%+{%test%*20}} {%gltcctc[5]%+{%test%*30}} {%gltcctc[6]%+{%test%*14}} {%gltcctc[7]%+{%test%*16}} {%gltcctc[8]%+{%test%*2}} {%gltcctc[9]%+{%test%*3}} {%gltcctc[10]%+{%test%*4}} {%gltcctc[11]%+{%test%*5}}"
+set logi 0
+ set Time_delimiter1 " "
+ set Time_delimiter2 ":"
+ split Time_explode1 %Time_delimiter1% %Time%
+ split Time_explode2 %Time_delimiter2% %Time_explode1[3]%
+if {%Time_explode1[2]%>3} set datepost th
+if {%Time_explode1[2]%==3||%Time_explode1[2]%==23} set datepost rd
+if {%Time_explode1[2]%==2||%Time_explode1[2]%==22} set datepost nd
+if {%Time_explode1[2]%==1||%Time_explode1[2]%==21||%Time_explode1[2]%==31} set datepost st
+set msg "<font color='#CC2EFA'> ----------</font><font color='#FF0000'>Calculating Total Colony draft results for All cities on %Time_explode1[0]% the {%Time_explode1[2]%}{%datepost%} of %Time_explode1[1]% at <b>{%Time_explode2[0]%+6}:%Time_explode2[1]%:%Time_explode2[2]%</b></font><font color='#CC2EFA'> ----------</font>"
+echo "$m_city.cityManager.warLogMsg(%msg%)$"
+label checkcounts
+set tdd {%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%}
+set twd {{%tdd%}*7}
+set tmd {{%twd%}*4}
+set dtvgn {{{%vfrn[{%logi%}]%-%totaltroopcountn[{%logi%}]%}/%tdd%}\1}
+set tvgp {{{%totaltroopcountn[{%logi%}]%/%vfrn[{%logi%}]%}*100}\1}
+set dtcgn {{{%cfrn[{%logi%}]%-%totaltroopcountn[{%logi%}]%}/%tdd%}\1}
+set tcgp {{{%totaltroopcountn[{%logi%}]%/%cfrn[{%logi%}]%}*100}\1}
+#if {%extrainfo%} set msg "<font color='#CC2EFA'><b> {%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%} %gltctt3[{%logi%}]%!</b><font color='#FF0000'> in a Week you will have gained </font><b>{{%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%}*7} %gltctt3[{%logi%}]%!</b><font color='#FF0000'> in a Month you will have gained </font><b>{{%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%}*28} %gltctt3[{%logi%}]%!</b></font>"
+#if {%extrainfo%} set msg "<font color='#CC2EFA'><b> {%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%} %gltctt3[{%logi%}]%!</b><font color='#FF0000'> in a Week you will have gained </font><b>{{%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%}*7} %gltctt3[{%logi%}]%!</b><font color='#FF0000'> in a Month you will have gained </font><b>{{%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%}*28} %gltctt3[{%logi%}]%!</b></font>"
+#if {%extrainfo%} set msg "<font color='#CC2EFA'><b> {%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%} %gltctt3[{%logi%}]%!</b><font color='#FF0000'> in a Week you will have gained </font><b>{{%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%}*7} %gltctt3[{%logi%}]%!</b><font color='#FF0000'> in a Month you will have gained </font><b>{{%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%}*28} %gltctt3[{%logi%}]%!</b></font>"
+#if {%extrainfo%==All} 
+set msg "<br><font color='#CC2EFA'><b>%tdd% %gltctt3[{%logi%}]%!</b><font color='#FF0000'> in a Week you will have gained </font><b>%twd% %gltctt3[{%logi%}]%!</b><font color='#FF0000'> in a Month you will have gained </font><b>%tmd% %gltctt3[{%logi%}]%!</b></font><br><font color='#FF0000'>we are <font color='#CC2EFA'><b>%tvgp% percent</font></b> of the way to the Vally Glitch it will take <font color='#CC2EFA'><b>%dtvgn%</font></b> days to reach the numbers with the current drafts of %gltctt3[{%logi%}]% </font><font color='#FF0000'><br>we are <font color='#CC2EFA'><b>%tcgp% percent</font></b> of the way to the City Glitch it will take <font color='#CC2EFA'><b>%dtcgn%</font></b> days to reach the numbers with the current drafts of %gltctt3[{%logi%}]% </font>"
+if {%totaltroopcountn[{%logi%}]%>%totaltroopcounto[{%logi%}]%} gosub log 
+set logi {%logi%+1}
+if  {%logi%<%totaltroopcounto.length%} goto checkcounts
+goto enddraftall
+
+label log
+echo "$m_city.cityManager.warLogMsg(%msg%)$"
+gosubreturn
+
+label enddraftall
+sleep 04:33:00
+loop
+
+
+
+///////////////////////
+//---------------------------------------------
+// Colonize n Abandon Loop Script v1.1.2 for RE
+//       by: Zaknafein/Phaethon   aka Zaky
+//---------------------
+// This is a working version of a Colony/Suppress/Abandon script that
+// supports declarewar.
+//------------
+// Features:
+//    - Declaring war on a target that is Nuetral. If the target is a 
+//      Hostile, it will not attempt to use declarewar.
+//    - Warning if a coord is a friendly.
+//    - Checks War Declared time, as to not to attempt to declarewar
+//      on a target that is still under previous War Declaration.
+//    - Checks for declarewar cooldown buff.
+//    - Checks if an army has already been sent to the target.
+//    - Prevents trying to send army when Rally slots are full.
+//    - Optional drafting of colonies before abandonment.
+//    - Recalls army stuck at your target due to suppression over 
+//      maintenance server bug.
+//---------------------------------------------
+setsilence true
+
+setarr colonyCoord "564,359 611,313 508,357 495,619 426,359 568,688 429,358 563,284 418,85 226,696 309,790 103,508 468,95 445,33 224,743 261,750 507,702 391,753 509,109 276,602 294,623 435,366 372,713 500,106 443,18 239,715 250,793 491,27 322,739 321,739 504,149 90,626 496,105 530,84 730,384 691,396 665,268 700,343 10,798 2,799 494,38 494,42 491,34 489,33 489,34 479,19 466,9 639,306 411,7 439,33 494,32 493,31 496,30 694,308 494,497 546,426"
+
+set hero any,!Mayor
+
+set colonizingTroop c:100000
+
+//Optional drafting army before abandonment.  yes/no
+set DoDraft no
+
+
+//--------------- Do not edit below this line -----------------
+iferror %lastlogin% gosub updateMapCache
+label start
+set _0 null
+iferror %ind% set ind -1
+set ind {%ind%+1}
+if {%ind%>=%colonyCoord.length%} goto restCycle
+set loc $c.getValue(Coordinate,%colonyCoord[{%ind%}]%)$
+if {{$c.player.playerInfo.lastLoginTime$/1000\1}!=%lastlogin%} gosub updateMapCache
+//Handle cities the bot has not refreshed cache on.
+if {{{$c.getRawTime()$-$c.getMapDetail(%loc%).declaredWarStartTime$}/1000\60}>=2910&&$c.getMapDetail(%loc%).declaredWarStartTime$!=0} gosub fieldUpdate %loc% %ind% update
+//Handle refreshed cached cities
+if {$c.getMapDetail(%loc%).declaredWarStartTime$==0} gosub fieldUpdate %loc% %ind%
+if {{{$c.getRawTime()$-$c.getMapDetail(%loc%).declaredWarStartTime$}/1000\60}>=30&&%_0%!=err||$c.getMapDetail(%loc%).relation$==3} gosub checkMovement
+if {%_0%==null||%_0%==err} goto start
+if {%_0%==ok&&$c.getMapDetail(%loc%).type$==11&&$c.getMapDetail(%loc%).powerLevel$==4&&$c.getMapDetail(%loc%).relation$>1} qdeploy colonize %colonyCoord[{%ind%}]% %hero% %colonizingTroop%
+if {%_0%==ab&&$c.getValue(String,%DoDraft%).toLowerCase()$==yes} colony army %colonyCoord[{%ind%}]%
+//if {%_0%==ab} colony abandon %colonyCoord[{%ind%}]%
+goto start
+
+label checkMovement
+iferror %_ind% set _ind -1
+set _ind {%_ind%+1}
+//Check army movements and compare with coords
+if {%_ind%>=$c.cm.localArmies.length$&&$c.cm.isColony(%loc%)$==true} goto checkColony
+if {%_ind%>=$c.cm.localArmies.length$&&$c.cm.getUsedRallySlots()$<$c.cm.getMaxRallySlots()$&&$c.cm.isColony(%loc%)$==false} gosubreturn ok
+if {%_ind%>=$c.cm.localArmies.length$&&$c.cm.getUsedRallySlots()$==$c.cm.getMaxRallySlots()$&&$c.cm.isColony(%loc%)$==false} gosubreturn null
+if {$c.cm.localArmies[%_ind%].targetFieldId$==%loc%&&$c.cm.localArmies[%_ind%].missionType$==7&&$c.cm.localArmies[%_ind%].direction$==1} gosubreturn null
+if {$c.cm.localArmies[%_ind%].targetFieldId$==%loc%&&$c.cm.localArmies[%_ind%].missionType$==9&&$c.cm.localArmies[%_ind%].direction$==2&&$c.cm.isColony(%loc%)$==true} goto checkColony
+if {$c.cm.localArmies[%_ind%].targetFieldId$==%loc%&&$c.cm.localArmies[%_ind%].missionType$==9&&$c.cm.isColony(%loc%)$==false} idrecall $c.cm.localArmies[%_ind%].armyId$
+goto checkMovement
+
+label checkColony
+iferror %_cInd% set _cInd -1
+set _cInd {%_cInd%+1}
+if {%_cInd%>=$c.cm.colonies.length$} gosubreturn null
+if {$c.getValue(Coordinate,{c.cm.colonies[%_cInd%].position})$==%loc%&&$c.cm.colonies[%_cInd%].endTime$!=0} gosubreturn null
+if {$c.getValue(Coordinate,{c.cm.colonies[%_cInd%].position})$==%loc%&&$c.cm.colonies[%_cInd%].endTime$==0} gosubreturn ab
+goto checkColony
+
+label fieldUpdate
+iferror %_3% set _3 null
+iferror %_loc% set _loc %_1%
+iferror %_ind% set _ind %_2%
+//Update cached field
+if {%_3%==update} rescanmap %colonyCoord[{%_ind%}]% 1  
+label waitMD
+sleep {$c.lag$+0.25}
+iferror $c.getMapDetail(%_loc%).toDebugString()$ goto waitMD
+if {$c.getMapDetail(%_loc%).type$!=11||$c.getMapDetail(%_loc%).powerLevel$!=4} goto invaliderr
+if {$c.getMapDetail(%_loc%).relation$<2} goto error
+if {$c.getMapDetail(%_loc%).declaredWarStatus$!=3} gosubreturn null
+label chkBuff
+iferror %_bind% set _bind -1
+set _bind {%_bind%+1}
+if {%_bind%>=$c.player.buffsArray.length$} goto declare
+if {$c.player.buffsArray[{%_bind%}].typeId$!=DeclearWarCooldownBuff} goto chkBuff
+if {$c.player.buffsArray[{%_bind%}].typeId$==DeclearWarCooldownBuff} gosubreturn null
+label declare
+declarewar %colonyCoord[{%_ind%}]%
+set _3 update
+goto fieldUpdate
+label error
+if {%_3%==null} echo "<< ERROR >> Cannot colonize %colonyCoord[{%_ind%}]%... It appears to be a friendly or in your alliance!"
+gosubreturn err
+label invaliderr
+if {%_3%==null} echo "<< ERROR >> Coord at %colonyCoord[{%_ind%}]% appears to be a NPC, Valley/Flat, or HC."
+gosubreturn err
+
+label updateMapCache
+//Handle updating to prevent map detail errors at login/relogin times
+iferror %_ind% set _ind -1
+iferror %lastlogin% set lastlogin {$c.player.playerInfo.lastLoginTime$/1000\1}
+if {%_ind%==-1&&{$c.player.playerInfo.lastLoginTime$/1000\1}!=%lastlogin%} set lastlogin {$c.player.playerInfo.lastLoginTime$/1000\1}
+set _ind {%_ind%+1}
+if {%_ind%>=%colonyCoord.length%} gosubreturn
+set _loc $c.getValue(Coordinate,%colonyCoord[{%_ind%}]%)$
+gosub fieldUpdate %_loc% %_ind% update
+goto updateMapCache
+
+label restCycle
+//rest random time between 2 and 4 mintues
+sleep rnd:{2*60}:{4*60}
+set ind -1
+goto start
+
+
+
+
+
+
+
+///[DraftAll]
+setsilence true
+set msg "<font color='#CC2EFA'> <u>$c.player.playerInfo.userName$'s Colony draft result $c.getDateFromTime(c.getRawTime())$ ------</u></font>"
+set warLog $c.cm.warLogMsg(%msg%)$
+setarray armyTypes ["workers", "warriors", "scouts", "pikemen", "swordsmen", "archers", "cavalry", "cataphracts", "transporters", "ballista", "battering rams", "catapults"]
+setarray draftTotals ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]
+set totDraft "<br><b><u>No colony troop drafts were recieved for $c.player.playerInfo.userName$ at $c.getDateFromTime(c.getRawTime())$</u></b><br>"
+set i 0
+set c 0
+label coloLoop
+if {%i%>=$c.allCities[{%c%}].cm.colonies.length$} goto nextcity
+set cc "c.allCities[{%c%}].cm.colonies[{%i%}]"
+set r $c.af.getColonyCommands().overviewColonialCastle(c.allCities[{%c%}].castle.id,{%cc%}.castleId)$
+label waitforit
+sleep 0.1
+iferror $%r%.ok$ goto waitforit
+if {$%r%.ok$==1} gosub levy
+if {$%r%.ok$==-134} echo "$%cc%.position$: $%r%.errorMsg$ until $c.getDateFromTime(%cc%.endTime).toLocaleTimeString()$"
+label nextColo
+set i {%i%+1}
+goto coloLoop
+label levy
+set r $c.af.getColonyCommands().levyArmy(c.allCities[{%c%}].castle.id,{%cc%}.castleId)$
+label waitresponse
+sleep 0.1
+iferror $%r%.ok$ goto waitresponse
+if {$%r%.ok$==1} set msg "<font color='#CC2EFA'> ------ <b>$%r%.amount$ $%r%.armyType$</b> from $%cc%.cityName$ <i>by $%cc%.lordName$&#40;$%cc%.allianceName$&#41;</i> to your city <b>$c.allCities[{%c%}].castle.name$</b></font>"
+if {$%r%.ok$!=1} goto skip
+getindexof gotDrafted armyTypes $%r%.armyType$
+set draftTotals[%gotDrafted%] {%draftTotals[{%gotDrafted%}]%+$%r%.amount$}
+label skip
+if {$%r%.ok$==-134} set msg "<font color='#FF0000'>$%cc%.cityName$ <i>by $%cc%.lordName$&#40;$%cc%.allianceName$&#41;</i>: <b>$%r%.errorMsg$</b></font>"
+if {$%r%.ok$==-141} set msg "<font color='#FF0000'>$%cc%.cityName$ <i>by $%cc%.lordName$&#40;$%cc%.allianceName$&#41;</i>: <b>Policy Decree used but there were no troops in the city</b></font>"
+set log $c.cm.warLogMsg(%msg%)$
+set sup $c.af.getColonyCommands().setDeployTroops(c.allCities[{%c%}].castle.id,{%cc%}.castleId,c.getValue(Troop,wo:0,w:0,s:0,p:0,sw:0,a:0,c:0,cata:0,t:0,b:0,r:0,cp:0))$
+label waitSetSup
+sleep $c.lag$
+iferror $%sup%.ok$ goto waitSetSup
+if {$%sup%.ok$!=1} echo "$%cc%.position$: $%sup%.errorMsg$ on your colony $%cc%.cityName$ by $%cc%.lordName$"
+if {$%sup%.ok$==1} echo "$%cc%.position$: Suppression setting successfully changed for your colony $%cc%.cityName$ by $%cc%.lordName$"
+set supValue $c.af.getColonyCommands().getDeployTroopsInfo(c.allCities[{%c%}].castle.id,{%cc%}.castleId)$
+label waitValue
+sleep $c.lag$
+iferror $%supValue%.ok$ goto waitValue
+echo "Current sup settings for $%cc%.position$: wo:$%supValue%.troopBean.peasants$,w:$%supValue%.troopBean.militia$,s:$%supValue%.troopBean.scouter$,p:$%supValue%.troopBean.pikemen$,sw:$%supValue%.troopBean.swordsmen$,a:$%supValue%.troopBean.archer$,c:$%supValue%.troopBean.lightCavalry$,cata:$%supValue%.troopBean.heavyCavalry$,t:$%supValue%.troopBean.carriage$,b:$%supValue%.troopBean.ballista$,r::$%supValue%.troopBean.batteringRam$,cp:$%supValue%.troopBean.catapult$"
+gosubreturn
+label nextcity
+set i 0
+set c {%c%+1}
+if {%c%<$c.allCities.length$} goto coloLoop
+label summaryReport
+join checkValue draftTotals ","
+set checkValue $c.math.max(%checkValue%)$
+if {%checkValue%>0} set totDraft "<br><b><u>The total drafts for $c.player.playerInfo.userName$ $c.getDateFromTime(c.getRawTime()).date$/{$c.getDateFromTime(c.getRawTime()).month$+1} $c.getDateFromTime(c.getRawTime()).fullYear$</u></b><br>"
+set ToTi 0
+label createReportLoop
+if {%draftTotals[{%ToTi%}]%<1} goto nextArmyType
+set totDraft "%totDraft% $c.formatNum(%draftTotals[{%ToTi%}]%)$ %armyTypes[{%ToTi%}]% <br>"
+label nextArmyType
+set ToTi {%ToTi%+1}
+if {%ToTi%<%armyTypes.length%} goto createReportLoop
+split totDraft , %totDraft%
+join totDraft totDraft "&#44;"
+set wLog $c.cm.warLogMsg(%totDraft%,#CC2EFA)$
+sleep 00:30:00
+loop
+
+
+
+
+//-- Simple fast troop moving script v1.2,   by SeriousThisIsMe
+//-- ATTENTION!! -> This script is for RE only (not for AE)
+//-- This script will move all of the selected troops out of a town leaving only the
+//-- entered amounts behind with no need to calculate troop amounts.
+//-- 1) Copy this entire script to the "Script" tab under the town with the troops.
+//-- 2) Enter troop types from the following:  wo w s p sw a c cata t b r cp
+//--    **Be sure to enter the troops in the order you want them moved!**
+//-- 3) Enter the amounts of those troops you would like to keep in this town.
+//-- 4) Enter the coords of the destination to reinforce the troops to. You can enter
+//--    coords for a single destination if all the troops are going to the same place,
+//--    but if you want some troops to go to different places then you need to specify
+//--    the destination coords for every troop type. The destinations can be any
+//--    location that can normally be reinforced such as one of your towns, a valley
+//--    owned by you (for quick valley transfer), an alliance member's town, or a
+//--    valley owned by a member of your alliance.
+//-- 5) Click "Run"
+
+
+setarr sendTroopType "wo w s p sw a c cata t b r cp"
+setarr howManyToKeep "2000 5000 2000 2000 2000 38500 2000 2000 22500 15000 100 100"
+setarr sendToLocations "301,699"
+
+
+//===============DO=NOT=CHANGE=BELOW=THIS=LINE===============
+setsilence true
+setarray troopIntNames ["peasants", "militia", "scouter", "pikemen", "swordsmen", "archer", "lightCavalry", "heavyCavalry", "carriage", "ballista", "batteringRam", "catapult"]
+setarray troopExtNames ["Worker", "Warrior", "Scout", "Pikemen", "Swordsmen", "Archer", "Cavalry", "Cataphract", "Transporter", "Ballista", "BatteringRam", "Catapult"]
+setarray troopAbbr ["wo", "w", "s", "p", "sw", "a", "c", "cata", "t", "b", "r", "cp"]
+set t "allTroop"
+set i 0
+label checkDest
+if {$c.getCityFromCoord(%sendToLocations[{%i%}]%)$==null} set t "troop"
+set i {%i%+1}
+if {%i%<%sendToLocations.length%} goto checkDest
+set r getRallyDispatchPerArmyLimit
+if {%sendTroopType.length%==%howManyToKeep.length%} goto isValidArrLength
+echo "Error!  Number of values entered do not match in variables 'sendTroopType' and 'howManyToKeep'!"
+echo "For every troop type entered you need to enter an amount to keep, even if it's 0."
+goto exitScript
+label isValidArrLength
+if {%sendToLocations.length%==%sendTroopType.length%||%sendToLocations.length%==1} goto isValidDestinationArrLength
+echo "Error!  Number of destination coordinates entered does not match the number of troop types entered!"
+echo "You must either enter a single destination or a destination for each troop type."
+goto exitScript
+label isValidDestinationArrLength
+echo "Begin moving troops..."
+set totalTroopsMoved null
+set troopStr empty
+set currentTroopAmount 0
+set sendTroopTypeIndex -1
+label nextSendTroopType
+set sendTroopTypeIndex {%sendTroopTypeIndex%+1}
+if {!{%sendTroopType.length%>%sendTroopTypeIndex%}} goto doneSendingAllTroops
+set indexTN -1
+label findTroopName
+set indexTN {%indexTN%+1}
+if {%sendTroopType[{%sendTroopTypeIndex%}]%==%troopAbbr[{%indexTN%}]%} goto foundTroopName
+if {{%indexTN%+1}==%troopAbbr.length%} goto couldNotFindTroopName
+goto findTroopName
+label couldNotFindTroopName
+echo "WARNING!  Invalid value of ' %sendTroopType[{%sendTroopTypeIndex%}]% ' has been entered for variable 'sendTroopType'!"
+echo "--'sendTroopType' is not among [ wo w s p sw a c cata t b r cp ]. Skipping to next troop type entered."
+goto nextSendTroopType
+label foundTroopName
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}>-1} goto howManyToKeepIsValid
+echo "ATTENTION!  Invalid value of ' %howManyToKeep[{%sendTroopTypeIndex%}]% ' has been entered for troop type ' %sendTroopType[{%sendTroopTypeIndex%}]% '"
+echo "--'howManyToKeep' is set to more than your current troop count. Skipping to next troop type entered."
+goto nextSendTroopType
+label howManyToKeepIsValid
+if {%sendToLocations.length%==1} set destInd 0
+if {%sendToLocations.length%>1} set destInd %sendTroopTypeIndex%
+set destination %sendToLocations[{%destInd%}]%
+if {%totalTroopsMoved%!=null} set totalTroopsMoved "%totalTroopsMoved%, {$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%} %troopExtNames[{%indexTN%}]%(s) to (%destination%)"
+if {%totalTroopsMoved%==null} set totalTroopsMoved "{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%} %troopExtNames[{%indexTN%}]%(s) to (%destination%)"
+label startSendingTroops
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%+%currentTroopAmount%}>$c.cm.%r%(true)$} goto sendFull
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}<1&&%troopStr%==empty} goto doneSendingTroops
+if {%troopStr%==empty} goto makeNewTroopStr
+set troopStr "%troopStr%,%troopAbbr[{%indexTN%}]%:{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}"
+goto skipMakeNewTroopStr
+label makeNewTroopStr
+set troopStr "%troopAbbr[{%indexTN%}]%:{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}"
+label skipMakeNewTroopStr
+set currentTroopAmount {%currentTroopAmount%+{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}}
+iferror %sendTroopType[{%sendTroopTypeIndex%+1}]% goto skipAddAnotherTroopType
+set isNextsendToLocations false
+iferror %sendToLocations[{%sendTroopTypeIndex%+1}]% goto noNextsendToLocations
+if {!{%destination%==%sendToLocations[{%sendTroopTypeIndex%+1}]%}} goto noNextsendToLocations
+set isNextsendToLocations true
+label noNextsendToLocations
+if {{%sendToLocations.length%==1||%isNextsendToLocations%}&&{%currentTroopAmount%<$c.cm.%r%(true)$}} goto doneSendingTroops
+label skipAddAnotherTroopType
+goto sendTroopsNow
+label sendFull
+if {%troopStr%==empty} goto makeNewFullTroopStr
+set troopStr "%troopStr%,%troopAbbr[{%indexTN%}]%:{$c.cm.%r%(true)$-%currentTroopAmount%}"
+goto skipMakeNewFullTroopStr
+label makeNewFullTroopStr
+set troopStr "%troopAbbr[{%indexTN%}]%:$c.cm.%r%(true)$"
+label skipMakeNewFullTroopStr
+label sendTroopsNow
+reinforce %destination% none %troopStr%
+set currentTroopAmount 0
+set troopStr empty
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}>0} goto startSendingTroops
+label doneSendingTroops
+goto nextSendTroopType
+label doneSendingAllTroops
+if {%currentTroopAmount%>0} goto sendTroopsNow
+if {%totalTroopsMoved%==null} goto noTroopsMoved
+echo "Finished moving troops!"
+echo "A total of: %totalTroopsMoved% have been moved."
+goto exitScript
+label noTroopsMoved
+echo "ATTENTION:  No troops have been moved!"
+label exitScript
+setsilence false
+sleep 8:00:00
+loop

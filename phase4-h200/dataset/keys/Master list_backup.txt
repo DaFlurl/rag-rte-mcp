@@ -1,0 +1,1468 @@
+LT           Tarasdbe@yahoo.com bojangles5 (1.2 Billion Archers)
+
+CRAZYTURK    toygarc@hotmail.com	nailbomb123  LT (60m archers)
+
+feeder 1bamf: fearmenows@yahoo.com     Hoosier2010
+
+Capital Drafts 
+
+CrazyChod   azndrugz@yahoo.com	     timeline1 (4m archers)
+CW	     jnsmu97@aol.com	    brendan11 yonkers265 (28m archers)
+balls        auto180@yahoo.com         cupcake  LT
+crazyww      chemistrywizard2@yahoo.ca 69wombat69  LT (3m archers)
+lifeless     sixandclimbing69@gmail.com missy123  293,631 (24mil archers)
+CrazyDm	     lyarrocks@hotmail.com	purenappy5  LT
+CrazyRab     robcuaw2250@aol.com	Repair69    299,683 (7m archers)
+Likeaboss    Cotton_candy_for_u@yahoo.com   Kbnj1657   246,799 (800k archers)     
+bungarian    revell753@hotmail.com    Vadar01 or vadar01 (3m archers)
+CrazyBudda/CrazyChod   azndrugz@yahoo.com	     timeline1 (4m archers)
+Evana	    jacquiehassiaoui@hotmail.co.uk	Liberty4Everyone (3m archers)
+
+city drafts
+
+
+
+
+Gd306	        gdmarkus@hotmail.com	guydav  LT
+Davidevony        davidenvoy@hotmail.com	guydav	LT	
+zazz	        yucon2466@yahoo.com     1vermonter  LT
+zee             yucon1966@yahoo.com     vermonter1  LT
+RQ	        jenspast1991@yahoo.com    	redfox  LT
+CoolArrow       Midnightemissary@gmail.com	Vidnight  LT
+PAB	        erich.schlegel@us.fujitsu.com	4thebagel  LT
+IamChoder	bill.prins@gmail.com	macoss  LT
+GhostRaider	dustysoccer0@hotmail.com	soccer  LT
+Chodebitch	chrischen421@gmail.com	macoss   LT
+Saphire		saphires1@hotmail.com	GemsNJewels  LT
+David960	diamonddave960@yahoo.com fran916  LT
+Vorador		medri15@yahoo.com	macoss  LT                                                               
+CrazyIvana	wally.nino@yahoo.com	10molly10  LT
+ladytara	celticchef2000@aol.com	evony123 LT
+CrazyRill	terrillevony@yahoo.com	brendan11 evony123  LT
+CrazyRoyal	hunygurl67@yahoo.com	guiness3    Lt
+Rigamortis	masterramrod@hotmail.co.uk	silentassassin LT                                                       
+fox		pllyankees@hotmail.com	guiness3 laneyrunning LT
+KangWR		ykamhong@yahoo.com	000000 LT
+CRAZYMOFO	grosy@musc.edu	        Catapult1 LT (2.4m archers)
+Tard	        gutter_maintenance@iinet.net.au	denagi71                                                
+ant             ypgros@gmail.com	yardstickredneck98
+botkiller   iikissmygritsii@yahoo.com Kbnj1657 
+Evana	    jacquiehassiaoui@hotmail.co.uk	Liberty4Everyone
+Logaholic   skinnerindustries@yahoo.com	shaggin78 nail
+TABBIKAT    zurt@mail.com	        20467480  nail
+lollian     piendro@gmail.com         tinkerbell1  brendan11
+85theenemy  lavaye18@yahoo.com        Dugon1985
+other alts
+ 
+Savage          watsonj50@hotmail.com    cookie  (40m archers)
+
+LANEY
+
+crazylara	kakarot1973@hotmail.com	911922933  1qaz2wsxed
+GISELLE		gozdev@hotmail.com	20467480 
+ARCH77		patchwork_77@yahoo.com	ytrewq
+Daneri		twoguys@mail.com	bullet2004
+
+SAMSON
+
+LORD SAV	boozyfree@hushmail.com	k00li0 
+CrazyDaisy	patrick_fnn@yahoo.com	guiness3  
+ 
+KUGS
+
+renegade    jameson_mckee@live.com    merda123 renegade   kugs
+lollian     piendro@gmail.com         tinkerbell1  brendan11       kugs
+85theenemy  lavaye18@yahoo.com        Dugon1985           kug
+
+LION
+
+KRAZYTURK    jjjones@iinet.net.au	SouthOfHeaven  unused
+CRAZYTJ	    varun123patel@yahoo.com	toygar78 (3m archers)
+
+PLAGUE
+
+CRAZYDIK    zak21@blueyonder.co.uk	december
+killhappy1  q_t_p_i_e99@yahoo.com    102905  plague
+
+Nailbomb
+
+botkiller   iikissmygritsii@yahoo.com Kbnj1657 
+Evana	    jacquiehassiaoui@hotmail.co.uk	Liberty4Everyone
+Logaholic   skinnerindustries@yahoo.com	shaggin78 nail
+TABBIKAT    zurt@mail.com	        20467480  nail
+
+BARB
+
+evonian      e.hi42@yahoo.com         balls666 
+Algor	     alanweller625@btinternet.com	mrjoshua  
+Lori	     elacetay12@yahoo.com	beplaced66 cookie 
+killmegood    auto180@live.com racer694
+
+SIMOA
+
+Siren	      godivaevony@yahoo.com	SirensSoli2D 
+
+-----------------------------------------------------
+
+[4:18:49 AM] CrazyLT: balls
+[4:19:11 AM] CrazyLT: balls        auto180@yahoo.com         yonkers265
+[4:19:16 AM] CrazyLT: apache
+[4:19:30 AM] CrazyLT: jburkhardt0@gmail.com
+[4:19:34 AM] CrazyLT: cookie
+[4:19:58 AM] CrazyLT: choder name is banned by evony so had to change it
+=================================================================================
+
+config trade:0,comfort:4,gate:.1,dumping:10,hero:1,training:1,nocapture:1
+troop p:1000000000
+troop sw:1000000000
+troop b:10000
+troop t:10000
+gatepolicy 1 1 1 1 1
+config npc:0
+config valley:10
+distancepolicy 30 5 30 15
+fortification tra:100
+config wartown:1
+config nomayor:1
+keeptroop 300,700 t:10000,b:10000,wo:10,w:10,s:10,P:10,sw:10,a:10,c:10,cata:10,r:10,cp:10 1000
+
+======================================================================================================
+
+canceltrade
+sell food 99m 0.25
+sleep 06
+loop
+
+set production 100
+set sellfood 100m
+sellto food %sellfood% {$m_city.cityManager.market[1].sellersArray[4].price$-0.25}
+set production 100
+sleep 00:00:3
+loop
+
+======================================================================================================
+
+setsilence true
+canceltrade
+set sell food 100000000000
+label searchtrades
+set s $c.af.getTradeCommands().searchTrades(0)$
+label wait
+sleep .1
+iferror $%s%.ok$ goto wait
+set price $%s%.buyersArray[0].price$
+set amount $%s%.buyersArray[0].amount$
+setsilence false
+set totalamount $c.cm.resource.food.amount$
+set am {%totalamount%-%sellfood%}
+if {%am%<0} goto end
+set amount $c.math.min(%amount%,%am%,99999999)$
+sell food %amount% %price%
+sleep 1
+label end
+loop
+
+======================================================================================================
+Transport 300,701 t:100000 f:100000000
+Sleep 00:08:45
+loop
+
+
+
+set production 100
+set sellfood 100m
+sellto food %sellfood% {$m_city.cityManager.market[1].sellersArray[4].price$-0.25}
+set production 100
+sleep 00:00:3
+loop
+
+
+scanrec 0,0 799,799 
+Once you've had it running a bit, can type
+
+/searchcastle playername 
+
+/searchcastle Croakiejoe
+Croakiejoe
+
+config wartown:1
+config nomayor:1
+config automedal:1
+config autogear:2
+config nomayor:2
+
+config mayor:0 stops the bot from changing mayors
+
+
+config trade:0,comfort:4,gate:.1,npclimit:1,dumping:10,hero:10,fasthero:65,nocapture:1,training:1,nocapture:1,training:30
+
+
+\getfblinks
+
+
+setsilence true
+set colonyIndex -1
+label colonyLoop
+set colonyIndex {%colonyIndex%+1}
+ifgoto ( %colonyIndex% >= $m_city.cityManager.colonies.length$ ) colonyEndLoop
+set coordinate $m_city.cityManager.colonies[%colonyIndex%].position$
+colony suppress %coordinate% wo:0,w:0,s:0,p:0,sw:0,a:0,cav:0,cata:0,t:0,b:0,r:0,cp:0
+colony army %coordinate%
+goto colonyLoop
+loop
+
+sendresources 290,688 food 20m cavalry
+keepresources 290,688 f:5m 25m
+
+
+Transport 290,688 t:160000 f:1600000000
+Sleep 00:05:00
+loop
+
+Transport 290,688 t:100000 f:100000000
+Sleep 00:05:00
+loop
+
+
+keeptroop 284,689 cata:3000000,p:50000000,sw:76000000,a:530000000,s:11000000,w:50000000,c:15000000
+
+keeptroop 284,689 p:50000000,sw:76000000,a:530000000,s:11000000,w:50000000,c:15000000
+
+
+Transport 290,688 c:100000 f:20000000
+Sleep 00:5:00
+loop
+
+sell food 9999999 .25
+sleep 90
+loop 
+
+sell food 15m .24
+sleep 95
+loop 
+
+
+canceltrade
+buy stone 99m 0.002
+sleep 90
+loop
+
+
+canceltrade
+sell food 99m 0.25
+sleep 3
+loop
+
+config trade:0,comfort:4,gate:.1,npclimit:1,dumping:35,nocapture:1,training:1,valley:10
+troop t:1100000000,b:25000,p:92000000,sw:92000000,a:1200000000
+gatepolicy 1 1 1 1 1
+config npc:0
+fortification tra:7500,ab:9500
+
+Transport 300,701 t:2500 f:20000000
+buy stone 9m 0.002
+Sleep 00:02:15
+loop
+======================================================================================================
+======================================================================================================
+======================================================================================================
+
+
+
+CrazyRill	
+CrazyRoyal	
+Rigamortis	                                        
+fox		
+KangWR		
+Tard	                                             
+ant            
+botkiller   
+Logaholic   
+TABBIKAT   
+lollian  
+
+=============================================================
+
+scout 290,697 none s:1
+scout 296,688 none s:1
+scout 293,688 none s:1
+scout 230,733 none s:1
+scout 361,649 none s:1
+scout 279,778 none s:1
+scout 291,696 none s:1
+scout 299,683 none s:1
+scout 322,739 none s:1
+scout 300,688 none s:1
+scout 290,689 none s:1
+
+setsilence true
+set colonyIndex -1
+label colonyLoop
+set colonyIndex {%colonyIndex%+1}
+ifgoto ( %colonyIndex% >= $m_city.cityManager.colonies.length$ ) colonyEndLoop
+set coordinate $m_city.cityManager.colonies[%colonyIndex%].position$
+colony suppress %coordinate% wo:0,w:0,s:0,p:0,sw:0,a:0,cav:0,cata:0,t:0,b:0,r:0,cp:0
+colony army %coordinate%
+goto colonyLoop
+loop
+==================================================================
+
+
+//Script to play the market by Squirel Princess
+//Happy trading.
+//Script to play the market by Squirel Princess
+//Happy trading.
+
+setarray lowPrice ["0.25", "0.55", "0.002", "0.55"]
+setarray highPrice ["0.5", "0.9", "0.004", "0.8"]
+//Both prices are food, lumber, stone, iron
+setarray minLeft ["100000000", "100000000", "100000000", "100000000", "100000000"]
+//array is gold, food, lumber, stone, iron
+set batch 500000
+set check 00:00:30
+//good idea to set the check higher if batch is higher
+set priceChange .1
+//How much change up or down before cancelling an un-bought/sold order. PERCENT!
+set marketLevel 10
+//Best at 4 or higher.
+
+//Do not change below here.
+setsilence true
+setarray 1 ["food", "lumber", "stone", "iron"]
+label start
+set index 0
+label check
+if {$m_city.cityManager.resource.gold$<%minLeft[0]%} goto notEnoughGold
+iferror $m_city.cityManager.market[{%index%}].buyersArray[2].price$ goto next
+iferror $m_city.cityManager.market[{%index%}].sellersArray[2].price$ goto next
+set indexT 0 
+label checkLoop
+iferror $m_city.cityManager.tradesArray[{%indexT%}].resType$ goto skipCheck
+set order $m_city.cityManager.tradesArray[{%indexT%}].id$ 
+if {{$m_city.cityManager.tradesArray[{%indexT%}].resType$==%index%}&&{{$m_city.cityManager.tradesArray[{%indexT%}].tradeTypeName$==Bid}&&{$m_city.cityManager.market[{%index%}].buyersArray[4].price$>$m_city.cityManager.tradesArray[{%indexT%}].price$*1%priceChange%}}||{$m_city.cityManager.tradesArray[{%indexT%}].tradeTypeName$==Offer}&&{$m_city.cityManager.market[{%index%}].buyersArray[4].price$<$m_city.cityManager.tradesArray[{%indexT%}].price$*{1-%priceChange%}}} canceltrade $m_city.cityManager.tradesArray[{%indexT%}].id$
+sleep 2
+iferror $m_city.cityManager.tradesArray[{%indexT%}].id$ goto next
+if {{!{$m_city.cityManager.tradesArray[{%indexT%}].id$==%order%}}||{$m_city.cityManager.tradesArray[{%indexT%}].resType$==%index%}} goto next
+set indexT {%indexT%+1}
+if {$m_city.cityManager.tradesArray.length$<%indexT%} goto checkLoop
+if {$m_city.cityManager.tradesArray.length$=={%marketLevel%-1}} goto start
+label skipCheck
+if {{$m_city.cityManager.market[{%index%}].buyersArray[3].price$<%lowPrice[{%index%}]%}||{$m_city.cityManager.market[{%index%}].buyersArray[3].price$==%lowPrice[{%index%}]%}} buy %1[{%index%}]% %batch% %lowPrice[{%index%}]%
+if {{$m_city.cityManager.market[{%index%}].sellersArray[3].price$>%highPrice[{%index%}]%}||{$m_city.cityManager.market[{%index%}].sellersArray[3].price$==%highPrice[{%index%}]%}} sellto %1[{%index%}]% %minLeft[{%index%+1}]% %highPrice[{%index%}]%
+label next
+set index {%index%+1}
+if {%index%<%1.length%} goto check
+sleep %check%
+goto start
+label notEnoughGold
+echo "=========="
+echo "Went under the limit of %minLeft[0]% gold."
+echo "=========="
+setsilence false
+
+====END=====END=====END=================================================================
+
+label resourceLimits
+setarr resourceMaxLimit "500000000 1000000 500000 1000000"//food lumber stone iron
+setarr resourceMinLimit "50000 50000 50000 50000"
+set minGold 10000
+set maxGold 1000000000
+set sellIncrease 10 //percent above bidding
+set buyDecrease 10 //percent below asking
+set sleepMarket 300 //sleep time between cycles
+
+//=======no changes below this line==================
+setarr resource "food wood stone iron"
+setarr resources "food lumber stone iron"
+set ResInd -1
+label resourceLoop
+set ResInd {%ResInd%+1}
+set buyAt {$m_city.cityManager.market[%ResInd%].sellersArray[4].price$-$m_city.cityManager.market[%ResInd%].sellersArray[4].price$*.%buyDecrease%}
+set sellAt {$m_city.cityManager.market[%ResInd%].buyersArray[0].price$+$m_city.cityManager.market[%ResInd%].sellersArray[0].price$*.%sellIncrease%}
+ifgosub ( $m_city.cityManager.resource.%{resource[%ResInd%]}%.amount$ >= %{resourceMinLimit[%ResInd%]}% ) sell
+ifgosub ( $m_city.cityManager.resource.%{resource[%ResInd%]}%.amount$ <= %{resourceMaxLimit[%ResInd%]}% ) buy
+loop 4 resourceLoop
+sleep %sleepMarket%
+gosubreturn
+label buy
+buyto %{resources[%ResInd%]}% %{resourceMaxLimit[%ResInd%]}% %buyAt% %minGold%
+sleep 3
+gosubreturn
+label sell
+sellto %{resources[%ResInd%]}% %{resourceMinLimit[%ResInd%]}% %sellAt% %maxGold%
+sleep 3
+gosubreturn
+
+===========================================================================================
+
+//[DraftAll]
+setsilence true
+set msg "<font color='#CC2EFA'> <u>$c.player.playerInfo.userName$'s Colony draft result $c.getDateFromTime(c.getRawTime())$ ------</u></font>"
+set warLog $c.cm.warLogMsg(%msg%)$
+setarray armyTypes ["workers", "warriors", "scouts", "pikemen", "swordsmen", "archers", "cavalry", "cataphracts", "transporters", "ballista", "battering rams", "catapults"]
+setarray draftTotals ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]
+set totDraft "<br><b><u>No colony troop drafts were recieved for $c.player.playerInfo.userName$ at $c.getDateFromTime(c.getRawTime())$</u></b><br>"
+set i 0
+set c 0
+label coloLoop
+if {%i%>=$c.allCities[{%c%}].cm.colonies.length$} goto nextcity
+set cc "c.allCities[{%c%}].cm.colonies[{%i%}]"
+set r $c.af.getColonyCommands().overviewColonialCastle(c.allCities[{%c%}].castle.id,{%cc%}.castleId)$
+label waitforit
+sleep 0.1
+iferror $%r%.ok$ goto waitforit
+if {$%r%.ok$==1} gosub levy
+if {$%r%.ok$==-134} echo "$%cc%.position$: $%r%.errorMsg$ until $c.getDateFromTime(%cc%.endTime).toLocaleTimeString()$"
+label nextColo
+set i {%i%+1}
+goto coloLoop
+label levy
+set r $c.af.getColonyCommands().levyArmy(c.allCities[{%c%}].castle.id,{%cc%}.castleId)$
+label waitresponse
+sleep 0.1
+iferror $%r%.ok$ goto waitresponse
+if {$%r%.ok$==1} set msg "<font color='#CC2EFA'> ------ <b>$%r%.amount$ $%r%.armyType$</b> from $%cc%.cityName$ <i>by $%cc%.lordName$&#40;$%cc%.allianceName$&#41;</i> to your city <b>$c.allCities[{%c%}].castle.name$</b></font>"
+if {$%r%.ok$!=1} goto skip
+getindexof gotDrafted armyTypes $%r%.armyType$
+set draftTotals[%gotDrafted%] {%draftTotals[{%gotDrafted%}]%+$%r%.amount$}
+label skip
+if {$%r%.ok$==-134} set msg "<font color='#FF0000'>$%cc%.cityName$ <i>by $%cc%.lordName$&#40;$%cc%.allianceName$&#41;</i>: <b>$%r%.errorMsg$</b></font>"
+if {$%r%.ok$==-141} set msg "<font color='#FF0000'>$%cc%.cityName$ <i>by $%cc%.lordName$&#40;$%cc%.allianceName$&#41;</i>: <b>Policy Decree used but there were no troops in the city</b></font>"
+set log $c.cm.warLogMsg(%msg%)$
+set sup $c.af.getColonyCommands().setDeployTroops(c.allCities[{%c%}].castle.id,{%cc%}.castleId,c.getValue(Troop,wo:0,w:0,s:0,p:0,sw:0,a:0,c:0,cata:0,t:0,b:0,r:0,cp:0))$
+label waitSetSup
+sleep $c.lag$
+iferror $%sup%.ok$ goto waitSetSup
+if {$%sup%.ok$!=1} echo "$%cc%.position$: $%sup%.errorMsg$ on your colony $%cc%.cityName$ by $%cc%.lordName$"
+if {$%sup%.ok$==1} echo "$%cc%.position$: Suppression setting successfully changed for your colony $%cc%.cityName$ by $%cc%.lordName$"
+set supValue $c.af.getColonyCommands().getDeployTroopsInfo(c.allCities[{%c%}].castle.id,{%cc%}.castleId)$
+label waitValue
+sleep $c.lag$
+iferror $%supValue%.ok$ goto waitValue
+echo "Current sup settings for $%cc%.position$: wo:$%supValue%.troopBean.peasants$,w:$%supValue%.troopBean.militia$,s:$%supValue%.troopBean.scouter$,p:$%supValue%.troopBean.pikemen$,sw:$%supValue%.troopBean.swordsmen$,a:$%supValue%.troopBean.archer$,c:$%supValue%.troopBean.lightCavalry$,cata:$%supValue%.troopBean.heavyCavalry$,t:$%supValue%.troopBean.carriage$,b:$%supValue%.troopBean.ballista$,r::$%supValue%.troopBean.batteringRam$,cp:$%supValue%.troopBean.catapult$"
+gosubreturn
+label nextcity
+set i 0
+set c {%c%+1}
+if {%c%<$c.allCities.length$} goto coloLoop
+label summaryReport
+join checkValue draftTotals ","
+set checkValue $c.math.max(%checkValue%)$
+if {%checkValue%>0} set totDraft "<br><b><u>The total drafts for $c.player.playerInfo.userName$ $c.getDateFromTime(c.getRawTime()).date$/{$c.getDateFromTime(c.getRawTime()).month$+1} $c.getDateFromTime(c.getRawTime()).fullYear$</u></b><br>"
+set ToTi 0
+label createReportLoop
+if {%draftTotals[{%ToTi%}]%<1} goto nextArmyType
+set totDraft "%totDraft% $c.formatNum(%draftTotals[{%ToTi%}]%)$ %armyTypes[{%ToTi%}]% <br>"
+label nextArmyType
+set ToTi {%ToTi%+1}
+if {%ToTi%<%armyTypes.length%} goto createReportLoop
+set wLog $c.cm.warLogMsg(c.getVar(totDraft),#CC2EFA)$
+sleep 08:02:00
+loop
+
+
+
+
+
+
+
+#set mode lite // lite for just troop numbers, full for troops and food useage
+set mode lite //
+setsilence "true"
+label TROOP_TALLY
+set CityIndex 0
+set WorkerCount 0
+set WarriorCount 0
+set ScoutCount 0
+set PikeCount 0
+set SwordCount 0
+set ArcherCount 0
+set CavalryCount 0
+set CataphractCount 0
+set BallistaCount 0
+set CatapultCount 0
+set BatteringramCount 0
+set TransportCount 0
+set FootCount 0
+set HorseCount 0
+set MechCount 0
+set SupportCount 0
+set TotalCount 0
+set WorkerFood 0
+set WarriorFood 0
+set ScoutFood 0
+set PikeFood 0
+set SwordFood 0
+set ArcherFood 0
+set CavalryFood 0
+set CataphractFood 0
+set BallistaFood 0
+set CatapultFood 0
+set BatteringramFood 0
+set TransportFood 0
+set FootFood 0
+set HorseFood 0
+set MechFood 0
+set SupportFood 0
+set TotalFood 0
+set cMaT .cityManager.allTroop.
+set mcaC m_city.allCities
+label CITY_LOOP
+set WarriorCount {%WarriorCount%+$%mcaC%[{%CityIndex%}]%cMaT%militia$}
+set ScoutCount {%ScoutCount%+$%mcaC%[{%CityIndex%}]%cMaT%scouter$}
+set PikeCount {%PikeCount%+$%mcaC%[{%CityIndex%}]%cMaT%pikemen$}
+set SwordCount {%SwordCount%+$%mcaC%[{%CityIndex%}]%cMaT%swordsmen$}
+set ArcherCount {%ArcherCount%+$%mcaC%[{%CityIndex%}]%cMaT%archer$}
+set CavalryCount {%CavalryCount%+$%mcaC%[{%CityIndex%}]%cMaT%lightCavalry$}
+set CataphractCount {%CataphractCount%+$%mcaC%[{%CityIndex%}]%cMaT%heavyCavalry$}
+set BallistaCount {%BallistaCount%+$%mcaC%[{%CityIndex%}]%cMaT%ballista$}
+set CatapultCount {%CatapultCount%+$%mcaC%[{%CityIndex%}]%cMaT%catapult$}
+set BatteringramCount {%BatteringramCount%+$%mcaC%[{%CityIndex%}]%cMaT%batteringRam$}
+set TransportCount {%TransportCount%+$%mcaC%[{%CityIndex%}]%cMaT%carriage$}
+set WorkerCount {%WorkerCount%+$%mcaC%[{%CityIndex%}]%cMaT%peasants$}
+set FootCount {%WarriorCount%+%ScoutCount%+%PikeCount%+%SwordCount%+%ArcherCount%}
+set HorseCount {%CavalryCount%+%CataphractCount%}
+set MechCount {%BallistaCount%+%CatapultCount%+%BatteringramCount%}
+set SupportCount {%WorkerCount%+%TransportCount%}
+set CityIndex {%CityIndex%+1}
+ifgoto ( %CityIndex% < %mcaC%.length ) CITY_LOOP
+set TotalCount {%FootCount%+%HorseCount%+%MechCount%+%SupportCount%}
+set WarriorFood {%WarriorCount%}
+set ScoutFood {%ScoutCount%*2}
+set PikeFood {%PikeCount%*3}
+set SwordFood {%SwordCount%*3}
+set ArcherFood {%ArcherCount%*4}
+set CavalryFood {%CavalryCount%*9}
+set CataphractFood {%CataphractCount%*17}
+set BallistaFood {%BallistaCount%*25}
+set CatapultFood {%CatapultCount%*125}
+set BatteringramFood {%BatteringramCount%*50}
+set TransportFood {%TransportCount%*5}
+set WorkerFood {%WorkerCount%}
+set FootFood {%WarriorFood%+%ScoutFood%+%PikeFood%+%SwordFood%+%ArcherFood%}
+set HorseFood {%CavalryFood%+%CataphractFood%}
+set MechFood {%BallistaFood%+%CatapultFood%+%BatteringramFood%}
+set SupportFood {%WorkerFood%+%TransportFood%}
+set TotalFood {%FootFood%+%HorseFood%+%MechFood%+%SupportFood%}
+echo "Current troop counts in all cities combined."
+echo "Total Troops:         $m_city.formatNum(%TotalCount%)$"
+echo "Total Food Per Hour:     -$m_city.formatNum(%TotalFood%)$"
+echo "-----------------------------------------------------------------------------------------"
+if {%mode%==full} echo "Foot Troops:          $m_city.formatNum(%FootCount%)$"
+if {%mode%==full} echo "Food Per Hour:           -$m_city.formatNum(%FootFood%)$"
+echo "  Warriors:           $m_city.formatNum(%WarriorCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%WarriorFood%)$"
+echo "  Scouts:             $m_city.formatNum(%ScoutCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%ScoutFood%)$"
+echo "  Pikes:              $m_city.formatNum(%PikeCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%PikeFood%)$"
+echo "  Swords:             $m_city.formatNum(%SwordCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%SwordFood%)$"
+echo "  Archers:            $m_city.formatNum(%ArcherCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%ArcherFood%)$"
+if {%mode%==full} echo "-----------------------------------------------------------------------------------------"
+if {%mode%==full} echo "Mounted Troops:       $m_city.formatNum(%HorseCount%)$"
+if {%mode%==full} echo "Food Per Hour:           -$m_city.formatNum(%HorseFood%)$"
+echo "  Cavalry:            $m_city.formatNum(%CavalryCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%CavalryFood%)$"
+echo "  Cataphracts:        $m_city.formatNum(%CataphractCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%CataphractFood%)$"
+if {%mode%==full} echo "-----------------------------------------------------------------------------------------"
+if {%mode%==full} echo "Mechenised Troops:    $m_city.formatNum(%MechCount%)$"
+if {%mode%==full} echo "Food Per Hour:           -$m_city.formatNum(%MechFood%)$"
+echo "  Ballista:           $m_city.formatNum(%BallistaCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%BallistaFood%)$"
+echo "  Catapults:          $m_city.formatNum(%CatapultCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%CatapultFood%)$"
+echo "  Battering Rams:     $m_city.formatNum(%BatteringramCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%BatteringramFood%)$"
+if {%mode%==full} echo "-----------------------------------------------------------------------------------------"
+if {%mode%==full} echo "Support Troops:       $m_city.formatNum(%SupportCount%)$"
+if {%mode%==full} echo "Food Per Hour:           -$m_city.formatNum(%SupportFood%)$"
+echo "  Workers:            $m_city.formatNum(%WorkerCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%WorkerFood%)$"
+echo "  Transports:         $m_city.formatNum(%TransportCount%)$"
+if {%mode%==full} echo "  Food Per Hour:         -$m_city.formatNum(%TransportFood%)$"
+goto end
+
+label end
+setsilence "false"
+
+
+
+
+
+
+scanrec 0,0 799,799 
+
+// HC scan by Zig69/DyldoBaggins modified for faster running on RE by SP
+//-Copy the entire script and "set state" to required state. Example: set state Swabia_14s
+//-To list all state caps use "Statecaps" as the set state.
+//-For 14 List - Bohemia_14s,Friesland_14s,LowerLorraine_14s,NorthMarch_14s,Saxony_14s,Franconia_14s,Thuringia_14s,Tuscany_14s
+//-For 14 List - Moravia_14s,UpperLorraine_14s,Swabia_14s,Carinthia_14s,Burgundy_14s,Lombardy_14s,Romagna_14s,Bavaria_14s
+//-For 12 List - Bohemia_12s,Friesland_12s,LowerLorraine_12s,NorthMarch_12s,Saxony_12s,Franconia_12s,Thuringia_12s,Tuscany_12s
+//-For 12 List - Moravia_12s,UpperLorraine_12s,Swabia_12s,Carinthia_12s,Burgundy_12s,Lombardy_12s,Romagna_12s,Bavaria_12s
+//-You can only do one state at a time. A map scan is not required for the script to run but if you do the script will run much faster
+
+
+    
+set state Statecaps
+//---------------------------DO=NOT=CHANGE=BELOW=THIS=LINE---------------
+
+setsilence true
+gosub %state%
+gosub mapScan
+gosub echoType
+gosub display
+goto endScript
+
+//----------------------------STATE CAPS
+label Statecaps
+setarr coords "100,100 100,300 100,500 100,700 300,100 300,300 300,500 300,700 500,100 500,300 500,500 500,700 700,100 700,300 700,500 700,700"
+gosubreturn
+    
+//----------------------------Bohemia Level 14 HCs
+label Bohemia_14s
+setarr coords "627,33 693,33 759,33 627,99 759,99 627,165 693,165 759,165"
+gosubreturn
+//----------------------------Friesland Level 14 HCs
+label Friesland_14s
+setarr coords "33,33 99,33 165,33 33,99 165,99 33,165 99,165 165,165"
+gosubreturn
+//----------------------------LOWER LORRAINE Level 14 HCs
+label LowerLorraine_14s
+setarr coords "33,231 99,231 165,231 33,297 165,297 33,363 99,363 165,363"
+gosubreturn
+//----------------------------NORTH MARCH Level 14 HCs
+label NorthMarch_14s
+setarr coords "429,33 495,33 561,33 429,99 561,99 429,165 495,165 561,165"
+gosubreturn
+//----------------------------SAXONY Level 14 HCs
+label Saxony_14s
+setarr coords "231,33 297,33 363,33 231,99 363,99 231,165 297,165 363,165"
+gosubreturn
+//----------------------------FRANCONIA Level 14 HCs
+label Franconia_14s
+setarr coords "231,231 297,231 363,231 231,297 363,297 231,363 297,363 363,363"
+gosubreturn
+//----------------------------THURINGIA Level 14 HCs
+label Thuringia_14s
+setarr coords "429,231 495,231 561,231 429,297 561,297 429,363 495,363 561,363"
+gosubreturn
+//----------------------------MORAVIA Level 14 HCs
+label Moravia_14s
+setarr coords "627,231 693,231 759,231 627,297 759,297 627,363 693,363 759,363"
+gosubreturn
+//----------------------------UPPER LORRAINE Level 14 HCs
+label UpperLorraine_14s
+setarr coords "33,429 99,429 165,429 33,495 165,495 33,561 99,561 165,561"
+gosubreturn
+//----------------------------SWABIA Level 14 HCs
+label Swabia_14s
+setarr coords "231,429 297,429 363,429 231,495 363,495 231,561 297,561 363,561"
+gosubreturn
+//----------------------------BAVARIA Level 14 HCs
+label Bavaria_14s
+setarr coords "429,429 495,429 561,429 429,495 561,495 429,561 495,561 561,561"
+gosubreturn
+//----------------------------CARINTHIA Level 14 HCs
+label Carinthia_14s
+setarr coords "627,429 693,429 759,429 627,495 759,495 627,561 693,561 759,561"
+gosubreturn
+//----------------------------BURGUNDY Level 14 HCs
+label Burgundy_14s
+setarr coords "33,627 99,627 165,627 33,693 165,693 33,759 99,759 165,759"
+gosubreturn
+//----------------------------LOMBARDY Level 14 HCs
+label Lombardy_14s
+setarr coords "231,627 297,627 363,627 231,693 363,693 231,759 297,759 363,759"
+gosubreturn
+//----------------------------TUSCANY Level 14 HCs
+label Tuscany_14s
+setarr coords "429,627 495,627 561,627 429,693 561,693 429,759 495,759 561,759"
+gosubreturn
+//----------------------------ROMAGNA Level 14 HCs
+label Romagna_14s
+setarr coords "627,627 693,627 759,627 627,693 759,693 627,759"
+gosubreturn
+//----------------------------Bohemia Level 12 HCs
+label Bohemia_12s
+setarr coords "603,9 621,9 639,9 657,9 675,9 693,9 711,9 729,9 747,9 765,9 783,9 603,27 621,27 639,27 657,27 675,27 693,27 711,27 729,27 747,27 765,27 783,27 603,45 621,45 639,45 657,45 675,45 693,45 711,45 729,45 747,45 765,45 783,45 603,63 621,63 639,63 657,63 675,63 693,63 711,63 729,63 747,63 765,63 783,63 603,81 621,81 639,81 657,81 675,81 693,81 711,81 729,81 747,81 765,81 783,81 603,99 621,99 639,99 657,99 675,99 693,99 711,99 729,99 747,99 765,99 783,99 603,117 621,117 639,117 657,117 675,117 693,117 711,117 729,117 747,117 765,117 783,117 603,135 621,135 639,135 657,135 675,135 693,135 711,135 729,135 747,135 765,135 783,135 603,153 621,153 639,153 657,153 675,153 693,153 711,153 729,153 747,153 765,153 783,153 603,171 621,171 639,171 657,171 675,171 693,171 711,171 729,171 747,171 765,171 783,171 603,189 621,189 639,189 657,189 675,189 693,189 711,189 729,189 747,189 765,189 783,189"
+gosubreturn
+//----------------------------Friesland Level 12 HCs
+label Friesland_12s
+setarr coords "9,9 27,9 45,9 63,9 81,9 99,9 117,9 135,9 153,9 171,9 189,9 9,27 27,27 45,27 63,27 81,27 99,27 117,27 135,27 153,27 171,27 189,27 9,45 27,45 45,45 63,45 81,45 99,45 117,45 135,45 153,45 171,45 189,45 9,63 27,63 45,63 63,63 81,63 99,63 117,63 135,63 153,63 171,63 189,63 9,81 27,81 45,81 63,81 81,81 99,81 117,81 135,81 153,81 171,81 189,81 9,99 27,99 45,99 63,99 81,99 99,99 117,99 135,99 153,99 171,99 189,99 9,117 27,117 45,117 63,117 81,117 99,117 117,117 135,117 153,117 171,117 189,117 9,135 27,135 45,135 63,135 81,135 99,135 117,135 135,135 153,135 171,135 189,135 9,153 27,153 45,153 63,153 81,153 99,153 117,153 135,153 153,153 171,153 189,153 9,171 27,171 45,171 63,171 81,171 99,171 117,171 135,171 153,171 171,171 189,171 9,189 27,189 45,189 63,189 81,189 99,189 117,189 135,189 153,189 171,189 189,189"
+gosubreturn
+//----------------------------LOWER LORRAINE Level 12 HCs
+label LowerLorraine_12s
+setarr coords "9,207 27,207 45,207 63,207 81,207 99,207 117,207 135,207 153,207 171,207 189,207 9,225 27,225 45,225 63,225 81,225 99,225 117,225 135,225 153,225 171,225 189,225 9,243 27,243 45,243 63,243 81,243 99,243 117,243 135,243 153,243 171,243 189,243 9,261 27,261 45,261 63,261 81,261 99,261 117,261 135,261 153,261 171,261 189,261 9,279 27,279 45,279 63,279 81,279 99,279 117,279 135,279 153,279 171,279 189,279 9,297 27,297 45,297 63,297 81,297 99,297 117,297 135,297 153,297 171,297 189,297 9,315 27,315 45,315 63,315 81,315 99,315 117,315 135,315 153,315 171,315 189,315 9,333 27,333 45,333 63,333 81,333 99,333 117,333 135,333 153,333 171,333 189,333 9,351 27,351 45,351 63,351 81,351 99,351 117,351 135,351 153,351 171,351 189,351 9,369 27,369 45,369 63,369 81,369 99,369 117,369 135,369 153,369 171,369 189,369 9,387 27,387 45,387 63,387 81,387 99,387 117,387 135,387 153,387 171,387 189,387"
+gosubreturn
+//----------------------------NORTH MARCH Level 12 HCs
+label NorthMarch_12s
+setarr coords "405,9 423,9 441,9 459,9 477,9 495,9 513,9 531,9 549,9 567,9 585,9 405,27 423,27 441,27 459,27 477,27 495,27 513,27 531,27 549,27 567,27 585,27 405,45 423,45 441,45 459,45 477,45 495,45 513,45 531,45 549,45 567,45 585,45 405,63 423,63 441,63 459,63 477,63 495,63 513,63 531,63 549,63 567,63 585,63 405,81 423,81 441,81 459,81 477,81 495,81 513,81 531,81 549,81 567,81 585,81 405,99 423,99 441,99 459,99 477,99 495,99 513,99 531,99 549,99 567,99 585,99 405,117 423,117 441,117 459,117 477,117 495,117 513,117 531,117 549,117 567,117 585,117 405,135 423,135 441,135 459,135 477,135 495,135 513,135 531,135 549,135 567,135 585,135 405,153 423,153 441,153 459,153 477,153 495,153 513,153 531,153 549,153 567,153 585,153 405,171 423,171 441,171 459,171 477,171 495,171 513,171 531,171 549,171 567,171 585,171 405,189 423,189 441,189 459,189 477,189 495,189 513,189 531,189 549,189 567,189 585,189"
+gosubreturn
+//----------------------------SAXONY Level 12 HCs
+label Saxony_12s
+setarr coords "207,9 225,9 243,9 261,9 279,9 297,9 315,9 333,9 351,9 369,9 387,9 207,27 225,27 243,27 261,27 279,27 297,27 315,27 333,27 351,27 369,27 387,27 207,45 225,45 243,45 261,45 279,45 297,45 315,45 333,45 351,45 369,45 387,45 207,63 225,63 243,63 261,63 279,63 297,63 315,63 333,63 351,63 369,63 387,63 207,81 225,81 243,81 261,81 279,81 297,81 315,81 333,81 351,81 369,81 387,81 207,99 225,99 243,99 261,99 279,99 297,99 315,99 333,99 351,99 369,99 387,99 207,117 225,117 243,117 261,117 279,117 297,117 315,117 333,117 351,117 369,117 387,117 207,135 225,135 243,135 261,135 279,135 297,135 315,135 333,135 351,135 369,135 387,135 207,153 225,153 243,153 261,153 279,153 297,153 315,153 333,153 351,153 369,153 387,153 207,171 225,171 243,171 261,171 279,171 297,171 315,171 333,171 351,171 369,171 387,171 207,189 225,189 243,189 261,189 279,189 297,189 315,189 333,189 351,189 369,189 387,189"
+gosubreturn
+//----------------------------FRANCONIA Level 12 HCs
+label Franconia_12s
+setarr coords "207,207 225,207 243,207 261,207 279,207 297,207 315,207 333,207 351,207 369,207 387,207 207,225 225,225 243,225 261,225 279,225 297,225 315,225 333,225 351,225 369,225 387,225 207,243 225,243 243,243 261,243 279,243 297,243 315,243 333,243 351,243 369,243 387,243 207,261 225,261 243,261 261,261 279,261 297,261 315,261 333,261 351,261 369,261 387,261 207,279 225,279 243,279 261,279 279,279 297,279 315,279 333,279 351,279 369,279 387,279 207,297 225,297 243,297 261,297 279,297 297,297 315,297 333,297 351,297 369,297 387,297 207,315 225,315 243,315 261,315 279,315 297,315 315,315 333,315 351,315 369,315 387,315 207,333 225,333 243,333 261,333 279,333 297,333 315,333 333,333 351,333 369,333 387,333 207,351 225,351 243,351 261,351 279,351 297,351 315,351 333,351 351,351 369,351 387,351 207,369 225,369 243,369 261,369 279,369 297,369 315,369 333,369 351,369 369,369 387,369 207,387 225,387 243,387 261,387 279,387 297,387 315,387 333,387 351,387 369,387 387,387"
+gosubreturn
+//----------------------------THURINGIA Level 12 HCs
+label Thuringia_12s
+setarr coords "405,207 423,207 441,207 459,207 477,207 495,207 513,207 531,207 549,207 567,207 585,207 405,225 423,225 441,225 459,225 477,225 495,225 513,225 531,225 549,225 567,225 585,225 405,243 423,243 441,243 459,243 477,243 495,243 513,243 531,243 549,243 567,243 585,243 405,261 423,261 441,261 459,261 477,261 495,261 513,261 531,261 549,261 567,261 585,261 405,279 423,279 441,279 459,279 477,279 495,279 513,279 531,279 549,279 567,279 585,279 405,297 423,297 441,297 459,297 477,297 495,297 513,297 531,297 549,297 567,297 585,297 405,315 423,315 441,315 459,315 477,315 495,315 513,315 531,315 549,315 567,315 585,315 405,333 423,333 441,333 459,333 477,333 495,333 513,333 531,333 549,333 567,333 585,333 405,351 423,351 441,351 459,351 477,351 495,351 513,351 531,351 549,351 567,351 585,351 405,369 423,369 441,369 459,369 477,369 495,369 513,369 531,369 549,369 567,369 585,369 405,387 423,387 441,387 459,387 477,387 495,387 513,387 531,387 549,387 567,387 585,387"
+gosubreturn
+//----------------------------MORAVIA Level 12 HCs
+label Moravia_12s
+setarr coords "603,207 621,207 639,207 657,207 675,207 693,207 711,207 729,207 747,207 765,207 783,207 603,225 621,225 639,225 657,225 675,225 693,225 711,225 729,225 747,225 765,225 783,225 603,243 621,243 639,243 657,243 675,243 693,243 711,243 729,243 747,243 765,243 783,243 603,261 621,261 639,261 657,261 675,261 693,261 711,261 729,261 747,261 765,261 783,261 603,279 621,279 639,279 657,279 675,279 693,279 711,279 729,279 747,279 765,279 783,279 603,297 621,297 639,297 657,297 675,297 693,297 711,297 729,297 747,297 765,297 783,297 603,315 621,315 639,315 657,315 675,315 693,315 711,315 729,315 747,315 765,315 783,315 603,333 621,333 639,333 657,333 675,333 693,333 711,333 729,333 747,333 765,333 783,333 603,351 621,351 639,351 657,351 675,351 693,351 711,351 729,351 747,351 765,351 783,351 603,369 621,369 639,369 657,369 675,369 693,369 711,369 729,369 747,369 765,369 783,369 603,387 621,387 639,387 657,387 675,387 693,387 711,387 729,387 747,387 765,387 783,387"
+gosubreturn
+//----------------------------UPPER LORRAINE Level 12 HCs
+label UpperLorraine_12s
+setarr coords "9,405 27,405 45,405 63,405 81,405 99,405 117,405 135,405 153,405 171,405 189,405 9,423 27,423 45,423 63,423 81,423 99,423 117,423 135,423 153,423 171,423 189,423 9,441 27,441 45,441 63,441 81,441 99,441 117,441 135,441 153,441 171,441 189,441 9,459 27,459 45,459 63,459 81,459 99,459 117,459 135,459 153,459 171,459 189,459 9,477 27,477 45,477 63,477 81,477 99,477 117,477 135,477 153,477 171,477 189,477 9,495 27,495 45,495 63,495 81,495 99,495 117,495 135,495 153,495 171,495 189,495 9,513 27,513 45,513 63,513 81,513 99,513 117,513 135,513 153,513 171,513 189,513 9,531 27,531 45,531 63,531 81,531 99,531 117,531 135,531 153,531 171,531 189,531 9,549 27,549 45,549 63,549 81,549 99,549 117,549 135,549 153,549 171,549 189,549 9,567 27,567 45,567 63,567 81,567 99,567 117,567 135,567 153,567 171,567 189,567 9,585 27,585 45,585 63,585 81,585 99,585 117,585 135,585 153,585 171,585 189,585"
+gosubreturn
+//----------------------------SWABIA Level 12 HCs
+label Swabia_12s
+setarr coords "207,405 225,405 243,405 261,405 279,405 297,405 315,405 333,405 351,405 369,405 387,405 207,423 225,423 243,423 261,423 279,423 297,423 315,423 333,423 351,423 369,423 387,423 207,441 225,441 243,441 261,441 279,441 297,441 315,441 333,441 351,441 369,441 387,441 207,459 225,459 243,459 261,459 279,459 297,459 315,459 333,459 351,459 369,459 387,459 207,477 225,477 243,477 261,477 279,477 297,477 315,477 333,477 351,477 369,477 387,477 207,495 225,495 243,495 261,495 279,495 297,495 315,495 333,495 351,495 369,495 387,495 207,513 225,513 243,513 261,513 279,513 297,513 315,513 333,513 351,513 369,513 387,513 207,531 225,531 243,531 261,531 279,531 297,531 315,531 333,531 351,531 369,531 387,531 207,549 225,549 243,549 261,549 279,549 297,549 315,549 333,549 351,549 369,549 387,549 207,567 225,567 243,567 261,567 279,567 297,567 315,567 333,567 351,567 369,567 387,567 207,585 225,585 243,585 261,585 279,585 297,585 315,585 333,585 351,585 369,585 387,585"
+gosubreturn
+//----------------------------BAVARIA Level 12 HCs
+label Bavaria_12s
+setarr coords "405,405 423,405 441,405 459,405 477,405 495,405 513,405 531,405 549,405 567,405 585,405 405,423 423,423 441,423 459,423 477,423 495,423 513,423 531,423 549,423 567,423 585,423 405,441 423,441 441,441 459,441 477,441 495,441 513,441 531,441 549,441 567,441 585,441 405,459 423,459 441,459 459,459 477,459 495,459 513,459 531,459 549,459 567,459 585,459 405,477 423,477 441,477 459,477 477,477 495,477 513,477 531,477 549,477 567,477 585,477 405,495 423,495 441,495 459,495 477,495 495,495 513,495 531,495 549,495 567,495 585,495 405,513 423,513 441,513 459,513 477,513 495,513 513,513 531,513 549,513 567,513 585,513 405,531 423,531 441,531 459,531 477,531 495,531 513,531 531,531 549,531 567,531 585,531 405,549 423,549 441,549 459,549 477,549 495,549 513,549 531,549 549,549 567,549 585,549 405,567 423,567 441,567 459,567 477,567 495,567 513,567 531,567 549,567 567,567 585,567 405,585 423,585 441,585 459,585 477,585 495,585 513,585 531,585 549,585 567,585 585,585"
+gosubreturn
+//----------------------------CARINTHIA Level 12 HCs
+label Carinthia_12s
+setarr coords "603,405 621,405 639,405 657,405 675,405 693,405 711,405 729,405 747,405 765,405 783,405 603,423 621,423 639,423 657,423 675,423 693,423 711,423 729,423 747,423 765,423 783,423 603,441 621,441 639,441 657,441 675,441 693,441 711,441 729,441 747,441 765,441 783,441 603,459 621,459 639,459 657,459 675,459 693,459 711,459 729,459 747,459 765,459 783,459 603,477 621,477 639,477 657,477 675,477 693,477 711,477 729,477 747,477 765,477 783,477 603,495 621,495 639,495 657,495 675,495 693,495 711,495 729,495 747,495 765,495 783,495 603,513 621,513 639,513 657,513 675,513 693,513 711,513 729,513 747,513 765,513 783,513 603,531 621,531 639,531 657,531 675,531 693,531 711,531 729,531 747,531 765,531 783,531 603,549 621,549 639,549 657,549 675,549 693,549 711,549 729,549 747,549 765,549 783,549 603,567 621,567 639,567 657,567 675,567 693,567 711,567 729,567 747,567 765,567 783,567 603,585 621,585 639,585 657,585 675,585 693,585 711,585 729,585 747,585 765,585 783,585"
+gosubreturn
+//----------------------------BURGUNDY Level 12 HCs
+label Burgundy_12s
+setarr coords "9,603 27,603 45,603 63,603 81,603 99,603 117,603 135,603 153,603 171,603 189,603 9,621 27,621 45,621 63,621 81,621 99,621 117,621 135,621 153,621 171,621 189,621 9,639 27,639 45,639 63,639 81,639 99,639 117,639 135,639 153,639 171,639 189,639 9,657 27,657 45,657 63,657 81,657 99,657 117,657 135,657 153,657 171,657 189,657 9,675 27,675 45,675 63,675 81,675 99,675 117,675 135,675 153,675 171,675 189,675 9,693 27,693 45,693 63,693 81,693 99,693 117,693 135,693 153,693 171,693 189,693 9,711 27,711 45,711 63,711 81,711 99,711 117,711 135,711 153,711 171,711 189,711 9,729 27,729 45,729 63,729 81,729 99,729 117,729 135,729 153,729 171,729 189,729 9,747 27,747 45,747 63,747 81,747 99,747 117,747 135,747 153,747 171,747 189,747 9,765 27,765 45,765 63,765 81,765 99,765 117,765 135,765 153,765 171,765 189,765 9,783 27,783 45,783 63,783 81,783 99,783 117,783 135,783 153,783 171,783 189,783"
+gosubreturn
+//----------------------------LOMBARDY Level 12 HCs
+label Lombardy_12s
+setarr coords "207,603 225,603 243,603 261,603 279,603 297,603 315,603 333,603 351,603 369,603 387,603 207,621 225,621 243,621 261,621 279,621 297,621 315,621 333,621 351,621 369,621 387,621 207,639 225,639 243,639 261,639 279,639 297,639 315,639 333,639 351,639 369,639 387,639 207,657 225,657 243,657 261,657 279,657 297,657 315,657 333,657 351,657 369,657 387,657 207,675 225,675 243,675 261,675 279,675 297,675 315,675 333,675 351,675 369,675 387,675 207,693 225,693 243,693 261,693 279,693 297,693 315,693 333,693 351,693 369,693 387,693 207,711 225,711 243,711 261,711 279,711 297,711 315,711 333,711 351,711 369,711 387,711 207,729 225,729 243,729 261,729 279,729 297,729 315,729 333,729 351,729 369,729 387,729 207,747 225,747 243,747 261,747 279,747 297,747 315,747 333,747 351,747 369,747 387,747 207,765 225,765 243,765 261,765 279,765 297,765 315,765 333,765 351,765 369,765 387,765 207,783 225,783 243,783 261,783 279,783 297,783 315,783 333,783 351,783 369,783 387,783"
+gosubreturn
+//----------------------------TUSCANY Level 12 HCs
+label Tuscany_12s
+setarr coords "405,603 423,603 441,603 459,603 477,603 495,603 513,603 531,603 549,603 567,603 585,603 405,621 423,621 441,621 459,621 477,621 495,621 513,621 531,621 549,621 567,621 585,621 405,639 423,639 441,639 459,639 477,639 495,639 513,639 531,639 549,639 567,639 585,639 405,657 423,657 441,657 459,657 477,657 495,657 513,657 531,657 549,657 567,657 585,657 405,675 423,675 441,675 459,675 477,675 495,675 513,675 531,675 549,675 567,675 585,675 405,693 423,693 441,693 459,693 477,693 495,693 513,693 531,693 549,693 567,693 585,693 405,711 423,711 441,711 459,711 477,711 495,711 513,711 531,711 549,711 567,711 585,711 405,729 423,729 441,729 459,729 477,729 495,729 513,729 531,729 549,729 567,729 585,729 405,747 423,747 441,747 459,747 477,747 495,747 513,747 531,747 549,747 567,747 585,747 405,765 423,765 441,765 459,765 477,765 495,765 513,765 531,765 549,765 567,765 585,765 405,783 423,783 441,783 459,783 477,783 495,783 513,783 531,783 549,783 567,783 585,783"
+gosubreturn
+//----------------------------ROMAGNA Level 12 HCs
+label Romagna_12s
+setarr coords "603,603 621,603 639,603 657,603 675,603 693,603 711,603 729,603 747,603 765,603 783,603 603,621 621,621 639,621 657,621 675,621 693,621 711,621 729,621 747,621 765,621 783,621 603,639 621,639 639,639 657,639 675,639 693,639 711,639 729,639 747,639 765,639 783,639 603,657 621,657 639,657 657,657 675,657 693,657 711,657 729,657 747,657 765,657 783,657 603,675 621,675 639,675 657,675 675,675 693,675 711,675 729,675 747,675 765,675 783,675 603,693 621,693 639,693 657,693 675,693 693,693 711,693 729,693 747,693 765,693 783,693 603,711 621,711 639,711 657,711 675,711 693,711 711,711 729,711 747,711 765,711 783,711 603,729 621,729 639,729 657,729 675,729 693,729 711,729 729,729 747,729 765,729 783,729 603,747 621,747 639,747 657,747 675,747 693,747 711,747 729,747 747,747 765,747 783,747 603,765 621,765 639,765 657,765 675,765 693,765 711,765 729,765 747,765 765,765 783,765 603,783 621,783 639,783 657,783 675,783 693,783 711,783 729,783 747,783 765,783 783,783"
+gosubreturn
+    
+
+label mapScan
+set index 0
+label locScan
+scanmap %coords[{%index%}]% 1
+set index {%index%+1}
+if {%index%<%coords.length%} goto locScan
+gosubreturn
+
+label echoType
+if {%state%==Statecap} goto StateCapEcho
+goto 14Echo
+
+label StateCapEcho
+echo "-----"
+echo "Here is the info for all %index% of the State Caps..."
+echo "-----"
+gosubreturn
+
+label 14Echo
+echo "-----"
+echo "Here is the info for all %index% of the HCs in %state%..."
+echo "-----"
+gosubreturn
+
+label display
+set index 0
+label getHcInfo
+set mapVal $m_city.getValue(Coordinate,%coords[{%index%}]%)$
+set mapObj m_city.getMapDetail(%mapVal%)
+echo "-- $%mapObj%.name$(%coords[{%index%}]%) by $%mapObj%.userName$ of $%mapObj%.allianceName$"
+set index {%index%+1}
+if {%index%<%coords.length%} goto getHcInfo
+echo "-----"
+gosubreturn
+
+label endScript
+setsilence false
+
+
+
+//---------------------------------------------
+// Colonize n Abandon Loop Script v1.1.2 for RE
+//       by: Zaknafein/Phaethon   aka Zaky
+//---------------------
+// This is a working version of a Colony/Suppress/Abandon script that
+// supports declarewar.
+//------------
+// Features:
+//    - Declaring war on a target that is Nuetral. If the target is a 
+//      Hostile, it will not attempt to use declarewar.
+//    - Warning if a coord is a friendly.
+//    - Checks War Declared time, as to not to attempt to declarewar
+//      on a target that is still under previous War Declaration.
+//    - Checks for declarewar cooldown buff.
+//    - Checks if an army has already been sent to the target.
+//    - Prevents trying to send army when Rally slots are full.
+//    - Optional drafting of colonies before abandonment.
+//    - Recalls army stuck at your target due to suppression over 
+//      maintenance server bug.
+//---------------------------------------------
+setsilence true
+
+setarr colonyCoord "546,426"
+
+set hero any,!Mayor
+
+set colonizingTroop c:0
+
+//Optional drafting army before abandonment.  yes/no
+set DoDraft no
+
+
+//--------------- Do not edit below this line -----------------
+iferror %lastlogin% gosub updateMapCache
+label start
+set _0 null
+iferror %ind% set ind -1
+set ind {%ind%+1}
+if {%ind%>=%colonyCoord.length%} goto restCycle
+set loc $c.getValue(Coordinate,%colonyCoord[{%ind%}]%)$
+if {{$c.player.playerInfo.lastLoginTime$/1000\1}!=%lastlogin%} gosub updateMapCache
+//Handle cities the bot has not refreshed cache on.
+if {{{$c.getRawTime()$-$c.getMapDetail(%loc%).declaredWarStartTime$}/1000\60}>=2910&&$c.getMapDetail(%loc%).declaredWarStartTime$!=0} gosub fieldUpdate %loc% %ind% update
+//Handle refreshed cached cities
+if {$c.getMapDetail(%loc%).declaredWarStartTime$==0} gosub fieldUpdate %loc% %ind%
+if {{{$c.getRawTime()$-$c.getMapDetail(%loc%).declaredWarStartTime$}/1000\60}>=30&&%_0%!=err||$c.getMapDetail(%loc%).relation$==3} gosub checkMovement
+if {%_0%==null||%_0%==err} goto start
+if {%_0%==ok&&$c.getMapDetail(%loc%).type$==11&&$c.getMapDetail(%loc%).powerLevel$==4&&$c.getMapDetail(%loc%).relation$>1} qdeploy colonize %colonyCoord[{%ind%}]% %hero% %colonizingTroop%
+if {%_0%==ab&&$c.getValue(String,%DoDraft%).toLowerCase()$==yes} colony army %colonyCoord[{%ind%}]%
+//if {%_0%==ab} colony abandon %colonyCoord[{%ind%}]%
+goto start
+
+label checkMovement
+iferror %_ind% set _ind -1
+set _ind {%_ind%+1}
+//Check army movements and compare with coords
+if {%_ind%>=$c.cm.localArmies.length$&&$c.cm.isColony(%loc%)$==true} goto checkColony
+if {%_ind%>=$c.cm.localArmies.length$&&$c.cm.getUsedRallySlots()$<$c.cm.getMaxRallySlots()$&&$c.cm.isColony(%loc%)$==false} gosubreturn ok
+if {%_ind%>=$c.cm.localArmies.length$&&$c.cm.getUsedRallySlots()$==$c.cm.getMaxRallySlots()$&&$c.cm.isColony(%loc%)$==false} gosubreturn null
+if {$c.cm.localArmies[%_ind%].targetFieldId$==%loc%&&$c.cm.localArmies[%_ind%].missionType$==7&&$c.cm.localArmies[%_ind%].direction$==1} gosubreturn null
+if {$c.cm.localArmies[%_ind%].targetFieldId$==%loc%&&$c.cm.localArmies[%_ind%].missionType$==9&&$c.cm.localArmies[%_ind%].direction$==2&&$c.cm.isColony(%loc%)$==true} goto checkColony
+if {$c.cm.localArmies[%_ind%].targetFieldId$==%loc%&&$c.cm.localArmies[%_ind%].missionType$==9&&$c.cm.isColony(%loc%)$==false} idrecall $c.cm.localArmies[%_ind%].armyId$
+goto checkMovement
+
+label checkColony
+iferror %_cInd% set _cInd -1
+set _cInd {%_cInd%+1}
+if {%_cInd%>=$c.cm.colonies.length$} gosubreturn null
+if {$c.getValue(Coordinate,{c.cm.colonies[%_cInd%].position})$==%loc%&&$c.cm.colonies[%_cInd%].endTime$!=0} gosubreturn null
+if {$c.getValue(Coordinate,{c.cm.colonies[%_cInd%].position})$==%loc%&&$c.cm.colonies[%_cInd%].endTime$==0} gosubreturn ab
+goto checkColony
+
+label fieldUpdate
+iferror %_3% set _3 null
+iferror %_loc% set _loc %_1%
+iferror %_ind% set _ind %_2%
+//Update cached field
+if {%_3%==update} rescanmap %colonyCoord[{%_ind%}]% 1  
+label waitMD
+sleep {$c.lag$+0.25}
+iferror $c.getMapDetail(%_loc%).toDebugString()$ goto waitMD
+if {$c.getMapDetail(%_loc%).type$!=11||$c.getMapDetail(%_loc%).powerLevel$!=4} goto invaliderr
+if {$c.getMapDetail(%_loc%).relation$<2} goto error
+if {$c.getMapDetail(%_loc%).declaredWarStatus$!=3} gosubreturn null
+label chkBuff
+iferror %_bind% set _bind -1
+set _bind {%_bind%+1}
+if {%_bind%>=$c.player.buffsArray.length$} goto declare
+if {$c.player.buffsArray[{%_bind%}].typeId$!=DeclearWarCooldownBuff} goto chkBuff
+if {$c.player.buffsArray[{%_bind%}].typeId$==DeclearWarCooldownBuff} gosubreturn null
+label declare
+declarewar %colonyCoord[{%_ind%}]%
+set _3 update
+goto fieldUpdate
+label error
+if {%_3%==null} echo "<< ERROR >> Cannot colonize %colonyCoord[{%_ind%}]%... It appears to be a friendly or in your alliance!"
+gosubreturn err
+label invaliderr
+if {%_3%==null} echo "<< ERROR >> Coord at %colonyCoord[{%_ind%}]% appears to be a NPC, Valley/Flat, or HC."
+gosubreturn err
+
+label updateMapCache
+//Handle updating to prevent map detail errors at login/relogin times
+iferror %_ind% set _ind -1
+iferror %lastlogin% set lastlogin {$c.player.playerInfo.lastLoginTime$/1000\1}
+if {%_ind%==-1&&{$c.player.playerInfo.lastLoginTime$/1000\1}!=%lastlogin%} set lastlogin {$c.player.playerInfo.lastLoginTime$/1000\1}
+set _ind {%_ind%+1}
+if {%_ind%>=%colonyCoord.length%} gosubreturn
+set _loc $c.getValue(Coordinate,%colonyCoord[{%_ind%}]%)$
+gosub fieldUpdate %_loc% %_ind% update
+goto updateMapCache
+
+label restCycle
+//rest random time between 2 and 4 mintues
+sleep rnd:{2*60}:{4*60}
+set ind -1
+goto start
+loop
+
+
+///[DraftAll]
+setsilence true
+iferror %extrainfo% set extrainfo All
+#set test 100000
+set i 0
+set c 0
+set t c.cm.allTroop
+setarray tNames ["wo", "w", "s", "p", "sw", "a", "c", "cata", "t", "b", "r", "cp"]
+set CityCount $m_city.allCities.length$ // number of cities, automatically detected
+set cMaT .cityManager.allTroop.
+set mcac m_city.allCities
+set gltccind 0
+iferror %test% set test 0
+setarr gltctt2 "peasants militia scouter pikemen swordsmen archer lightCavalry heavyCavalry carriage ballista batteringRam catapult FoodProduced troopCostFood"
+setarray gltctt3 ["Workers", "Warriors", "Scouts", "Pikemen", "Swordsmen", "Archers", "Cavalry", "Cataphracts", "Transporters", "Ballista", "Battering Rams", "Catapults", "Food Produced per hour", "Food Eaten per hour"]
+setarr gltcctc "0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+setarray o ["$%t%.peasants$", "$%t%.militia$", "$%t%.scouter$", "$%t%.pikemen$", "$%t%.swordsmen$", "$%t%.archer$", "$%t%.lightCavalry$", "$%t%.heavyCavalry$", "$%t%.carriage$", "$%t%.ballista$", "$%t%.batteringRam$", "$%t%.catapult$"]
+
+label cityloop
+setarr gltcctc "{%gltcctc[0]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[0]%$} {%gltcctc[1]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[1]%$} {%gltcctc[2]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[2]%$} {%gltcctc[3]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[3]%$} {%gltcctc[4]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[4]%$} {%gltcctc[5]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[5]%$} {%gltcctc[6]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[6]%$} {%gltcctc[7]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[7]%$} {%gltcctc[8]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[8]%$} {%gltcctc[9]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[9]%$} {%gltcctc[10]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[10]%$} {%gltcctc[11]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[11]%$} {%gltcctc[12]%+$%mcac%[%gltccind%].cityManager.resource.food.increaseRate$+$%mcac%[%gltccind%].cityManager.resource.colonyFood$+$%mcac%[%gltccind%].cityManager.resource.supplyFood$} {%gltcctc[13]%+$%mcac%[%gltccind%].cityManager.resource.troopCostFood$}"
+set gltccind {%gltccind%+1}
+//echo "setting gltccind to %gltccind%"
+if {%gltccind%<%CityCount%} goto cityloop
+
+label totalcount
+setarr totaltroopcounto "%gltcctc[0]% %gltcctc[1]% %gltcctc[2]% %gltcctc[3]% %gltcctc[4]% %gltcctc[5]% %gltcctc[6]% %gltcctc[7]% %gltcctc[8]% %gltcctc[9]% %gltcctc[10]% %gltcctc[11]%"
+if {%test%!=0} goto skipdraftscript
+#------------------enter draftscript
+label dodraftscriot
+
+set i 0
+set c 0
+label coloLoop
+if {%i%>=$c.allCities[{%c%}].cm.colonies.length$} goto nextcity
+set cc "c.allCities[{%c%}].cm.colonies[{%i%}]"
+set r $c.af.getColonyCommands().overviewColonialCastle(c.allCities[{%c%}].castle.id,{%cc%}.castleId)$
+label waitforit
+sleep 0.1
+iferror $%r%.ok$ goto waitforit
+if {$%r%.ok$==1} gosub levy
+label nextColo
+set i {%i%+1}
+goto coloLoop
+label levy
+set r $c.af.getColonyCommands().levyArmy(c.allCities[{%c%}].castle.id,{%cc%}.castleId)$
+label waitresponse
+sleep 0.1
+iferror $%r%.ok$ goto waitresponse
+if {$%r%.ok$==1} set msg "<font color='#CC2EFA'> ------ Colony draft result: <b>$%r%.amount$ $%r%.armyType$</b> from $%cc%.cityName$ <i>by $%cc%.lordName$&#40;$%cc%.allianceName$&#41;</i> to your city <b>$c.allCities[{%c%}].castle.name$</b></font>"
+if {$%r%.ok$!=1} set msg "<font color='#FF0000'>$%cc%.cityName$ <i>by $%cc%.lordName$&#40;$%cc%.allianceName$&#41;</i>: <b>$%r%.errorMsg$</b></font>"
+set log $c.cm.warLogMsg(%msg%)$
+set sup $c.af.getColonyCommands().setDeployTroops(c.allCities[{%c%}].castle.id,{%cc%}.castleId,c.getValue(Troop,wo:0,w:0,s:0,p:0,sw:0,a:0,c:0,cata:0,t:0,b:0,r:0,cp:0))$
+gosubreturn
+label nextcity
+set i 0
+set c {%c%+1}
+if {%c%<$c.allCities.length$} goto coloLoop
+label skipdraftscript
+#-------------------------------
+set gltccind 0
+setarr gltcctc "0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+
+label cityloop
+setarr gltcctc "{%gltcctc[0]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[0]%$} {%gltcctc[1]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[1]%$} {%gltcctc[2]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[2]%$} {%gltcctc[3]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[3]%$} {%gltcctc[4]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[4]%$} {%gltcctc[5]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[5]%$} {%gltcctc[6]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[6]%$} {%gltcctc[7]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[7]%$} {%gltcctc[8]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[8]%$} {%gltcctc[9]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[9]%$} {%gltcctc[10]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[10]%$} {%gltcctc[11]%+$%mcac%[%gltccind%]%cMaT%%gltctt2[11]%$} {%gltcctc[12]%+$%mcac%[%gltccind%].cityManager.resource.food.increaseRate$+$%mcac%[%gltccind%].cityManager.resource.colonyFood$+$%mcac%[%gltccind%].cityManager.resource.supplyFood$} {%gltcctc[13]%+$%mcac%[%gltccind%].cityManager.resource.troopCostFood$}"
+set gltccind {%gltccind%+1}
+//echo "setting gltccind to %gltccind%"
+if {%gltccind%<%CityCount%} goto cityloop
+set Time $m_city.getDateFromTime(m_city.serverTimeRaw)$
+set Time_msg "counts from %Time%"
+
+label totalcount
+setarr cfrn "2147483648 2147483648 1073741824 715827883 715827883 536870912 238609295 126322568 429496730 85899346 42949673 17179870"
+setarr vfrn "1073741824 1073741824 536870912 357913942 357913942 268435456 119304648 63161284 214748365 42949673 21474837 8589935"
+setarr totaltroopcountn "{%gltcctc[0]%+%test%} {%gltcctc[1]%+{%test%*10}} {%gltcctc[2]%+{%test%*5}} {%gltcctc[3]%+{%test%*3}} {%gltcctc[4]%+{%test%*20}} {%gltcctc[5]%+{%test%*30}} {%gltcctc[6]%+{%test%*14}} {%gltcctc[7]%+{%test%*16}} {%gltcctc[8]%+{%test%*2}} {%gltcctc[9]%+{%test%*3}} {%gltcctc[10]%+{%test%*4}} {%gltcctc[11]%+{%test%*5}}"
+set logi 0
+ set Time_delimiter1 " "
+ set Time_delimiter2 ":"
+ split Time_explode1 %Time_delimiter1% %Time%
+ split Time_explode2 %Time_delimiter2% %Time_explode1[3]%
+if {%Time_explode1[2]%>3} set datepost th
+if {%Time_explode1[2]%==3||%Time_explode1[2]%==23} set datepost rd
+if {%Time_explode1[2]%==2||%Time_explode1[2]%==22} set datepost nd
+if {%Time_explode1[2]%==1||%Time_explode1[2]%==21||%Time_explode1[2]%==31} set datepost st
+set msg "<font color='#CC2EFA'> ----------</font><font color='#FF0000'>Calculating Total Colony draft results for All cities on %Time_explode1[0]% the {%Time_explode1[2]%}{%datepost%} of %Time_explode1[1]% at <b>{%Time_explode2[0]%+6}:%Time_explode2[1]%:%Time_explode2[2]%</b></font><font color='#CC2EFA'> ----------</font>"
+echo "$m_city.cityManager.warLogMsg(%msg%)$"
+label checkcounts
+set tdd {%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%}
+set twd {{%tdd%}*7}
+set tmd {{%twd%}*4}
+set dtvgn {{{%vfrn[{%logi%}]%-%totaltroopcountn[{%logi%}]%}/%tdd%}\1}
+set tvgp {{{%totaltroopcountn[{%logi%}]%/%vfrn[{%logi%}]%}*100}\1}
+set dtcgn {{{%cfrn[{%logi%}]%-%totaltroopcountn[{%logi%}]%}/%tdd%}\1}
+set tcgp {{{%totaltroopcountn[{%logi%}]%/%cfrn[{%logi%}]%}*100}\1}
+#if {%extrainfo%} set msg "<font color='#CC2EFA'><b> {%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%} %gltctt3[{%logi%}]%!</b><font color='#FF0000'> in a Week you will have gained </font><b>{{%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%}*7} %gltctt3[{%logi%}]%!</b><font color='#FF0000'> in a Month you will have gained </font><b>{{%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%}*28} %gltctt3[{%logi%}]%!</b></font>"
+#if {%extrainfo%} set msg "<font color='#CC2EFA'><b> {%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%} %gltctt3[{%logi%}]%!</b><font color='#FF0000'> in a Week you will have gained </font><b>{{%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%}*7} %gltctt3[{%logi%}]%!</b><font color='#FF0000'> in a Month you will have gained </font><b>{{%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%}*28} %gltctt3[{%logi%}]%!</b></font>"
+#if {%extrainfo%} set msg "<font color='#CC2EFA'><b> {%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%} %gltctt3[{%logi%}]%!</b><font color='#FF0000'> in a Week you will have gained </font><b>{{%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%}*7} %gltctt3[{%logi%}]%!</b><font color='#FF0000'> in a Month you will have gained </font><b>{{%totaltroopcountn[{%logi%}]%-%totaltroopcounto[{%logi%}]%}*28} %gltctt3[{%logi%}]%!</b></font>"
+#if {%extrainfo%==All} 
+set msg "<br><font color='#CC2EFA'><b>%tdd% %gltctt3[{%logi%}]%!</b><font color='#FF0000'> in a Week you will have gained </font><b>%twd% %gltctt3[{%logi%}]%!</b><font color='#FF0000'> in a Month you will have gained </font><b>%tmd% %gltctt3[{%logi%}]%!</b></font><br><font color='#FF0000'>we are <font color='#CC2EFA'><b>%tvgp% percent</font></b> of the way to the Vally Glitch it will take <font color='#CC2EFA'><b>%dtvgn%</font></b> days to reach the numbers with the current drafts of %gltctt3[{%logi%}]% </font><font color='#FF0000'><br>we are <font color='#CC2EFA'><b>%tcgp% percent</font></b> of the way to the City Glitch it will take <font color='#CC2EFA'><b>%dtcgn%</font></b> days to reach the numbers with the current drafts of %gltctt3[{%logi%}]% </font>"
+if {%totaltroopcountn[{%logi%}]%>%totaltroopcounto[{%logi%}]%} gosub log 
+set logi {%logi%+1}
+if  {%logi%<%totaltroopcounto.length%} goto checkcounts
+goto enddraftall
+
+label log
+echo "$m_city.cityManager.warLogMsg(%msg%)$"
+gosubreturn
+
+label enddraftall
+sleep 08:01:30
+loop
+
+============================================================================
+
+setarr sendTroopType "cata t b cp"
+setarr howManyToKeep "1000 1000 1000 1000"
+setarr sendToLocations ""
+
+//===============DO=NOT=CHANGE=BELOW=THIS=LINE===============
+setsilence true
+setarray troopIntNames ["peasants", "militia", "scouter", "pikemen", "swordsmen", "archer", "lightCavalry", "heavyCavalry", "carriage", "ballista", "batteringRam", "catapult"]
+setarray troopExtNames ["Worker", "Warrior", "Scout", "Pikemen", "Swordsmen", "Archer", "Cavalry", "Cataphract", "Transporter", "Ballista", "BatteringRam", "Catapult"]
+setarray troopAbbr ["wo", "w", "s", "p", "sw", "a", "c", "cata", "t", "b", "r", "cp"]
+set t "allTroop"
+set i 0
+label checkDest
+if {$c.getCityFromCoord(%sendToLocations[{%i%}]%)$==null} set t "troop"
+set i {%i%+1}
+if {%i%<%sendToLocations.length%} goto checkDest
+set r getRallyDispatchPerArmyLimit
+if {%sendTroopType.length%==%howManyToKeep.length%} goto isValidArrLength
+echo "Error!  Number of values entered do not match in variables 'sendTroopType' and 'howManyToKeep'!"
+echo "For every troop type entered you need to enter an amount to keep, even if it's 0."
+goto exitScript
+label isValidArrLength
+if {%sendToLocations.length%==%sendTroopType.length%||%sendToLocations.length%==1} goto isValidDestinationArrLength
+echo "Error!  Number of destination coordinates entered does not match the number of troop types entered!"
+echo "You must either enter a single destination or a destination for each troop type."
+goto exitScript
+label isValidDestinationArrLength
+echo "Begin moving troops..."
+set totalTroopsMoved null
+set troopStr empty
+set currentTroopAmount 0
+set sendTroopTypeIndex -1
+label nextSendTroopType
+set sendTroopTypeIndex {%sendTroopTypeIndex%+1}
+if {!{%sendTroopType.length%>%sendTroopTypeIndex%}} goto doneSendingAllTroops
+set indexTN -1
+label findTroopName
+set indexTN {%indexTN%+1}
+if {%sendTroopType[{%sendTroopTypeIndex%}]%==%troopAbbr[{%indexTN%}]%} goto foundTroopName
+if {{%indexTN%+1}==%troopAbbr.length%} goto couldNotFindTroopName
+goto findTroopName
+label couldNotFindTroopName
+echo "WARNING!  Invalid value of ' %sendTroopType[{%sendTroopTypeIndex%}]% ' has been entered for variable 'sendTroopType'!"
+echo "--'sendTroopType' is not among [ wo w s p sw a c cata t b r cp ]. Skipping to next troop type entered."
+goto nextSendTroopType
+label foundTroopName
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}>-1} goto howManyToKeepIsValid
+echo "ATTENTION!  Invalid value of ' %howManyToKeep[{%sendTroopTypeIndex%}]% ' has been entered for troop type ' %sendTroopType[{%sendTroopTypeIndex%}]% '"
+echo "--'howManyToKeep' is set to more than your current troop count. Skipping to next troop type entered."
+goto nextSendTroopType
+label howManyToKeepIsValid
+if {%sendToLocations.length%==1} set destInd 0
+if {%sendToLocations.length%>1} set destInd %sendTroopTypeIndex%
+set destination %sendToLocations[{%destInd%}]%
+if {%totalTroopsMoved%!=null} set totalTroopsMoved "%totalTroopsMoved%, {$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%} %troopExtNames[{%indexTN%}]%(s) to (%destination%)"
+if {%totalTroopsMoved%==null} set totalTroopsMoved "{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%} %troopExtNames[{%indexTN%}]%(s) to (%destination%)"
+label startSendingTroops
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%+%currentTroopAmount%}>$c.cm.%r%(true)$} goto sendFull
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}<1&&%troopStr%==empty} goto doneSendingTroops
+if {%troopStr%==empty} goto makeNewTroopStr
+set troopStr "%troopStr%,%troopAbbr[{%indexTN%}]%:{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}"
+goto skipMakeNewTroopStr
+label makeNewTroopStr
+set troopStr "%troopAbbr[{%indexTN%}]%:{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}"
+label skipMakeNewTroopStr
+set currentTroopAmount {%currentTroopAmount%+{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}}
+iferror %sendTroopType[{%sendTroopTypeIndex%+1}]% goto skipAddAnotherTroopType
+set isNextsendToLocations false
+iferror %sendToLocations[{%sendTroopTypeIndex%+1}]% goto noNextsendToLocations
+if {!{%destination%==%sendToLocations[{%sendTroopTypeIndex%+1}]%}} goto noNextsendToLocations
+set isNextsendToLocations true
+label noNextsendToLocations
+if {{%sendToLocations.length%==1||%isNextsendToLocations%}&&{%currentTroopAmount%<$c.cm.%r%(true)$}} goto doneSendingTroops
+label skipAddAnotherTroopType
+goto sendTroopsNow
+label sendFull
+if {%troopStr%==empty} goto makeNewFullTroopStr
+set troopStr "%troopStr%,%troopAbbr[{%indexTN%}]%:{$c.cm.%r%(true)$-%currentTroopAmount%}"
+goto skipMakeNewFullTroopStr
+label makeNewFullTroopStr
+set troopStr "%troopAbbr[{%indexTN%}]%:$c.cm.%r%(true)$"
+label skipMakeNewFullTroopStr
+label sendTroopsNow
+reinforce %destination% none %troopStr%
+set currentTroopAmount 0
+set troopStr empty
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}>0} goto startSendingTroops
+label doneSendingTroops
+goto nextSendTroopType
+label doneSendingAllTroops
+if {%currentTroopAmount%>0} goto sendTroopsNow
+if {%totalTroopsMoved%==null} goto noTroopsMoved
+echo "Finished moving troops!"
+echo "A total of: %totalTroopsMoved% have been moved."
+goto exitScript
+label noTroopsMoved
+echo "ATTENTION:  No troops have been moved!"
+label exitScript
+setsilence false
+sleep 1
+loop 10
+sleep 20
+loop
+
+
+
+
+
+
+
+reinforce 300,700 none c:500 f:10000
+sleep 00:00:15
+loop
+
+setarr sendTroopType "b"
+setarr howManyToKeep "1000"
+setarr sendToLocations "300,700"
+
+//===============DO=NOT=CHANGE=BELOW=THIS=LINE===============
+setsilence true
+setarray troopIntNames ["peasants", "militia", "scouter", "pikemen", "swordsmen", "archer", "lightCavalry", "heavyCavalry", "carriage", "ballista", "batteringRam", "catapult"]
+setarray troopExtNames ["Worker", "Warrior", "Scout", "Pikemen", "Swordsmen", "Archer", "Cavalry", "Cataphract", "Transporter", "Ballista", "BatteringRam", "Catapult"]
+setarray troopAbbr ["wo", "w", "s", "p", "sw", "a", "c", "cata", "t", "b", "r", "cp"]
+set t "allTroop"
+set i 0
+label checkDest
+if {$c.getCityFromCoord(%sendToLocations[{%i%}]%)$==null} set t "troop"
+set i {%i%+1}
+if {%i%<%sendToLocations.length%} goto checkDest
+set r getRallyDispatchPerArmyLimit
+if {%sendTroopType.length%==%howManyToKeep.length%} goto isValidArrLength
+echo "Error!  Number of values entered do not match in variables 'sendTroopType' and 'howManyToKeep'!"
+echo "For every troop type entered you need to enter an amount to keep, even if it's 0."
+goto exitScript
+label isValidArrLength
+if {%sendToLocations.length%==%sendTroopType.length%||%sendToLocations.length%==1} goto isValidDestinationArrLength
+echo "Error!  Number of destination coordinates entered does not match the number of troop types entered!"
+echo "You must either enter a single destination or a destination for each troop type."
+goto exitScript
+label isValidDestinationArrLength
+echo "Begin moving troops..."
+set totalTroopsMoved null
+set troopStr empty
+set currentTroopAmount 0
+set sendTroopTypeIndex -1
+label nextSendTroopType
+set sendTroopTypeIndex {%sendTroopTypeIndex%+1}
+if {!{%sendTroopType.length%>%sendTroopTypeIndex%}} goto doneSendingAllTroops
+set indexTN -1
+label findTroopName
+set indexTN {%indexTN%+1}
+if {%sendTroopType[{%sendTroopTypeIndex%}]%==%troopAbbr[{%indexTN%}]%} goto foundTroopName
+if {{%indexTN%+1}==%troopAbbr.length%} goto couldNotFindTroopName
+goto findTroopName
+label couldNotFindTroopName
+echo "WARNING!  Invalid value of ' %sendTroopType[{%sendTroopTypeIndex%}]% ' has been entered for variable 'sendTroopType'!"
+echo "--'sendTroopType' is not among [ wo w s p sw a c cata t b r cp ]. Skipping to next troop type entered."
+goto nextSendTroopType
+label foundTroopName
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}>-1} goto howManyToKeepIsValid
+echo "ATTENTION!  Invalid value of ' %howManyToKeep[{%sendTroopTypeIndex%}]% ' has been entered for troop type ' %sendTroopType[{%sendTroopTypeIndex%}]% '"
+echo "--'howManyToKeep' is set to more than your current troop count. Skipping to next troop type entered."
+goto nextSendTroopType
+label howManyToKeepIsValid
+if {%sendToLocations.length%==1} set destInd 0
+if {%sendToLocations.length%>1} set destInd %sendTroopTypeIndex%
+set destination %sendToLocations[{%destInd%}]%
+if {%totalTroopsMoved%!=null} set totalTroopsMoved "%totalTroopsMoved%, {$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%} %troopExtNames[{%indexTN%}]%(s) to (%destination%)"
+if {%totalTroopsMoved%==null} set totalTroopsMoved "{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%} %troopExtNames[{%indexTN%}]%(s) to (%destination%)"
+label startSendingTroops
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%+%currentTroopAmount%}>$c.cm.%r%(true)$} goto sendFull
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}<1&&%troopStr%==empty} goto doneSendingTroops
+if {%troopStr%==empty} goto makeNewTroopStr
+set troopStr "%troopStr%,%troopAbbr[{%indexTN%}]%:{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}"
+goto skipMakeNewTroopStr
+label makeNewTroopStr
+set troopStr "%troopAbbr[{%indexTN%}]%:{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}"
+label skipMakeNewTroopStr
+set currentTroopAmount {%currentTroopAmount%+{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}}
+iferror %sendTroopType[{%sendTroopTypeIndex%+1}]% goto skipAddAnotherTroopType
+set isNextsendToLocations false
+iferror %sendToLocations[{%sendTroopTypeIndex%+1}]% goto noNextsendToLocations
+if {!{%destination%==%sendToLocations[{%sendTroopTypeIndex%+1}]%}} goto noNextsendToLocations
+set isNextsendToLocations true
+label noNextsendToLocations
+if {{%sendToLocations.length%==1||%isNextsendToLocations%}&&{%currentTroopAmount%<$c.cm.%r%(true)$}} goto doneSendingTroops
+label skipAddAnotherTroopType
+goto sendTroopsNow
+label sendFull
+if {%troopStr%==empty} goto makeNewFullTroopStr
+set troopStr "%troopStr%,%troopAbbr[{%indexTN%}]%:{$c.cm.%r%(true)$-%currentTroopAmount%}"
+goto skipMakeNewFullTroopStr
+label makeNewFullTroopStr
+set troopStr "%troopAbbr[{%indexTN%}]%:$c.cm.%r%(true)$"
+label skipMakeNewFullTroopStr
+label sendTroopsNow
+reinforce %destination% none %troopStr%
+set currentTroopAmount 0
+set troopStr empty
+if {{$c.cm.%t%.%troopIntNames[{%indexTN%}]%$-%howManyToKeep[{%sendTroopTypeIndex%}]%}>0} goto startSendingTroops
+label doneSendingTroops
+goto nextSendTroopType
+label doneSendingAllTroops
+if {%currentTroopAmount%>0} goto sendTroopsNow
+if {%totalTroopsMoved%==null} goto noTroopsMoved
+echo "Finished moving troops!"
+echo "A total of: %totalTroopsMoved% have been moved."
+goto exitScript
+label noTroopsMoved
+echo "ATTENTION:  No troops have been moved!"
+label exitScript
+setsilence false
+sleep 1
+loop 10
+sleep 20
+
+
+
+
+// Transport 299,701 c:50000 f:10000000
+// Sleep 00:00:30
+// loop  100
+
+
+//---------------------------------------------
+// Colonize n Abandon Loop Script v1.1.2 for RE
+//       by: Zaknafein/Phaethon   aka Zaky
+//---------------------
+// This is a working version of a Colony/Suppress/Abandon script that
+// supports declarewar.
+//------------
+// Features:
+//    - Declaring war on a target that is Nuetral. If the target is a 
+//      Hostile, it will not attempt to use declarewar.
+//    - Warning if a coord is a friendly.
+//    - Checks War Declared time, as to not to attempt to declarewar
+//      on a target that is still under previous War Declaration.
+//    - Checks for declarewar cooldown buff.
+//    - Checks if an army has already been sent to the target.
+//    - Prevents trying to send army when Rally slots are full.
+//    - Optional drafting of colonies before abandonment.
+//    - Recalls army stuck at your target due to suppression over 
+//      maintenance server bug.
+//---------------------------------------------
+setsilence true
+
+setarr colonyCoord "411,7"
+
+set hero any,!Mayor
+
+set colonizingTroop c:0
+
+//Optional drafting army before abandonment.  yes/no
+set DoDraft no
+
+
+//--------------- Do not edit below this line -----------------
+iferror %lastlogin% gosub updateMapCache
+label start
+set _0 null
+iferror %ind% set ind -1
+set ind {%ind%+1}
+if {%ind%>=%colonyCoord.length%} goto restCycle
+set loc $c.getValue(Coordinate,%colonyCoord[{%ind%}]%)$
+if {{$c.player.playerInfo.lastLoginTime$/1000\1}!=%lastlogin%} gosub updateMapCache
+//Handle cities the bot has not refreshed cache on.
+if {{{$c.getRawTime()$-$c.getMapDetail(%loc%).declaredWarStartTime$}/1000\60}>=2910&&$c.getMapDetail(%loc%).declaredWarStartTime$!=0} gosub fieldUpdate %loc% %ind% update
+//Handle refreshed cached cities
+if {$c.getMapDetail(%loc%).declaredWarStartTime$==0} gosub fieldUpdate %loc% %ind%
+if {{{$c.getRawTime()$-$c.getMapDetail(%loc%).declaredWarStartTime$}/1000\60}>=30&&%_0%!=err||$c.getMapDetail(%loc%).relation$==3} gosub checkMovement
+if {%_0%==null||%_0%==err} goto start
+if {%_0%==ok&&$c.getMapDetail(%loc%).type$==11&&$c.getMapDetail(%loc%).powerLevel$==4&&$c.getMapDetail(%loc%).relation$>1} qdeploy colonize %colonyCoord[{%ind%}]% %hero% %colonizingTroop%
+if {%_0%==ab&&$c.getValue(String,%DoDraft%).toLowerCase()$==yes} colony army %colonyCoord[{%ind%}]%
+//if {%_0%==ab} colony abandon %colonyCoord[{%ind%}]%
+goto start
+
+label checkMovement
+iferror %_ind% set _ind -1
+set _ind {%_ind%+1}
+//Check army movements and compare with coords
+if {%_ind%>=$c.cm.localArmies.length$&&$c.cm.isColony(%loc%)$==true} goto checkColony
+if {%_ind%>=$c.cm.localArmies.length$&&$c.cm.getUsedRallySlots()$<$c.cm.getMaxRallySlots()$&&$c.cm.isColony(%loc%)$==false} gosubreturn ok
+if {%_ind%>=$c.cm.localArmies.length$&&$c.cm.getUsedRallySlots()$==$c.cm.getMaxRallySlots()$&&$c.cm.isColony(%loc%)$==false} gosubreturn null
+if {$c.cm.localArmies[%_ind%].targetFieldId$==%loc%&&$c.cm.localArmies[%_ind%].missionType$==7&&$c.cm.localArmies[%_ind%].direction$==1} gosubreturn null
+if {$c.cm.localArmies[%_ind%].targetFieldId$==%loc%&&$c.cm.localArmies[%_ind%].missionType$==9&&$c.cm.localArmies[%_ind%].direction$==2&&$c.cm.isColony(%loc%)$==true} goto checkColony
+if {$c.cm.localArmies[%_ind%].targetFieldId$==%loc%&&$c.cm.localArmies[%_ind%].missionType$==9&&$c.cm.isColony(%loc%)$==false} idrecall $c.cm.localArmies[%_ind%].armyId$
+goto checkMovement
+
+label checkColony
+iferror %_cInd% set _cInd -1
+set _cInd {%_cInd%+1}
+if {%_cInd%>=$c.cm.colonies.length$} gosubreturn null
+if {$c.getValue(Coordinate,{c.cm.colonies[%_cInd%].position})$==%loc%&&$c.cm.colonies[%_cInd%].endTime$!=0} gosubreturn null
+if {$c.getValue(Coordinate,{c.cm.colonies[%_cInd%].position})$==%loc%&&$c.cm.colonies[%_cInd%].endTime$==0} gosubreturn ab
+goto checkColony
+
+label fieldUpdate
+iferror %_3% set _3 null
+iferror %_loc% set _loc %_1%
+iferror %_ind% set _ind %_2%
+//Update cached field
+if {%_3%==update} rescanmap %colonyCoord[{%_ind%}]% 1  
+label waitMD
+sleep {$c.lag$+0.25}
+iferror $c.getMapDetail(%_loc%).toDebugString()$ goto waitMD
+if {$c.getMapDetail(%_loc%).type$!=11||$c.getMapDetail(%_loc%).powerLevel$!=4} goto invaliderr
+if {$c.getMapDetail(%_loc%).relation$<2} goto error
+if {$c.getMapDetail(%_loc%).declaredWarStatus$!=3} gosubreturn null
+label chkBuff
+iferror %_bind% set _bind -1
+set _bind {%_bind%+1}
+if {%_bind%>=$c.player.buffsArray.length$} goto declare
+if {$c.player.buffsArray[{%_bind%}].typeId$!=DeclearWarCooldownBuff} goto chkBuff
+if {$c.player.buffsArray[{%_bind%}].typeId$==DeclearWarCooldownBuff} gosubreturn null
+label declare
+declarewar %colonyCoord[{%_ind%}]%
+set _3 update
+goto fieldUpdate
+label error
+if {%_3%==null} echo "<< ERROR >> Cannot colonize %colonyCoord[{%_ind%}]%... It appears to be a friendly or in your alliance!"
+gosubreturn err
+label invaliderr
+if {%_3%==null} echo "<< ERROR >> Coord at %colonyCoord[{%_ind%}]% appears to be a NPC, Valley/Flat, or HC."
+gosubreturn err
+
+label updateMapCache
+//Handle updating to prevent map detail errors at login/relogin times
+iferror %_ind% set _ind -1
+iferror %lastlogin% set lastlogin {$c.player.playerInfo.lastLoginTime$/1000\1}
+if {%_ind%==-1&&{$c.player.playerInfo.lastLoginTime$/1000\1}!=%lastlogin%} set lastlogin {$c.player.playerInfo.lastLoginTime$/1000\1}
+set _ind {%_ind%+1}
+if {%_ind%>=%colonyCoord.length%} gosubreturn
+set _loc $c.getValue(Coordinate,%colonyCoord[{%_ind%}]%)$
+gosub fieldUpdate %_loc% %_ind% update
+goto updateMapCache
+
+label restCycle
+//rest random time between 2 and 4 mintues
+sleep rnd:{2*60}:{4*60}
+set ind -1
+goto start
+
+
+
+
+///////////////////////
+setsilence true
+canceltrade
+set sellfood 100000000000
+label searchtrades
+set s $c.af.getTradeCommands().searchTrades(0)$
+label wait
+sleep .1
+iferror $%s%.ok$ goto wait
+set price $%s%.buyersArray[0].price$
+set amount $%s%.buyersArray[0].amount$
+setsilence false
+set totalamount $c.cm.resource.food.amount$
+set am {%totalamount%-%sellfood%}
+if {%am%<0} goto end
+set amount $c.math.min(%amount%,%am%,99999999)$
+sell food %amount% %price%
+sleep 1
+label end
+loop
+
+
+set downloadlocation cc2maps.cc/7h82hf8rh2/EvonyAltsManager-master/REscript/generatestatus.as
+set timeout 30
+echo $m_dyn.sendrequest()$
+sleep {2*%timeout%}
+
+import autoevony.common.Utils;
+import autoevony.gui.MainScreen;
+import flash.utils.Timer;
+import flash.events.TimerEvent;
+import mx.rpc.http.HTTPService;
+import mx.rpc.events.ResultEvent;
+import mx.rpc.events.FaultEvent;
+function sendrequest(){x = new HTTPService();
+x.url="http:/"+"/"+getVar("downloadlocation");
+x.resultFormat='text';
+x.addEventListener(FaultEvent.FAULT,setCallback(dummy));
+x.addEventListener(ResultEvent.RESULT,setCallback(receiveddata));
+x.send();
+timr=new Timer(getVar("timeout")*1000,1);
+timr.addEventListener(TimerEvent.TIMER,getCallback("receiveddata"));
+timr.start();}
+function stoptimr(){timr.stop();}
+function dummy(evt){}
+function receiveddata(evt){
+x.removeEventListener(ResultEvent.RESULT,getCallback("receiveddata"));
+x.removeEventListener(FaultEvent.FAULT,getCallback("receiveddata"));
+MainScreen.getInstance().getCityPanel(c.castle.id).getScript().stop();
+Utils.callLater(1,setCallback(stoptimr));
+Utils.callLater(10,setCallback(runit),[evt.message.body]);}
+function runit(dat){
+MainScreen.getInstance().getCityPanel(c.castle.id).getScript().set_m_script(dat);
+MainScreen.getInstance().getCityPanel(c.castle.id).getScript().start();}
+
+
+
+setsilence true
+canceltrade
+set sellfood 100000000000
+label searchtrades
+set s $c.af.getTradeCommands().searchTrades(0)$
+label wait
+sleep .1
+iferror $%s%.ok$ goto wait
+set price $%s%.buyersArray[0].price$
+set amount $%s%.buyersArray[0].amount$
+setsilence false
+set totalamount $c.cm.resource.food.amount$
+set am {%totalamount%-%sellfood%}
+if {%am%<0} goto end
+set amount $c.math.min(%amount%,%am%,99999999)$
+sell food %amount% %price%
+sleep 1
+label end
+
+=========================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

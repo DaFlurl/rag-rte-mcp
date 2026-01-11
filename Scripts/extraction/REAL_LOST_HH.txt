@@ -1,0 +1,2891 @@
+REAL HISTORIC HEROES FROM DELETED ACCOUNTS
+================================================================================
+
+Total: 2096 Historic Heroes from 395 deleted accounts
+
+
+gutter_maintenanceiinet.net.au.json (trinitard)
+  Lv100 King                                               @ 10
+  Lv100 Ferdinand                                          @ 10
+  Lv100 Julius                                             @ 101
+  Lv100 Henry                                              @ 101
+  Lv100 Ferdinand                                          @ 101
+  Lv100 Leona                                              @ 103
+  Lv100 Leonard                                            @ 103
+  Lv100 LT                                                 @ 103
+  Lv100 Leo                                                @ 105
+  Lv100 Ed                                                 @ 105
+  Lv 58 Richard                                            @ 105
+  Lv100 ATT                                                @ MY8
+  Lv100 ATT                                                @ MY8
+  Lv100 pol                                                @ MY8
+  Lv100 pol                                                @ MY8
+  Lv100 LT                                                 @ MY8
+  Lv100 pol                                                @ npc
+  Lv100 pol                                                @ npc
+  Lv100 LT                                                 @ npc
+  Lv100 POL                                                @ SOD
+  Lv100 ATT                                                @ SOD
+  Lv100 ATT                                                @ SOD
+  Lv100 Ed                                                 @ turk
+  Lv100 LT                                                 @ turk
+
+zak21blueyonder.co.uk.json (CrazyKid)
+  Lv100 polo                                               @ 1
+  Lv100 polo                                               @ 2
+  Lv100 polo                                               @ 4
+  Lv100 polo                                               @ 5
+  Lv100 Stan                                               @ 5
+  Lv100 Richard                                            @ 5
+  Lv100 polo                                               @ 6
+  Lv100 Louis                                              @ 6
+  Lv100 Lou                                                @ 6
+  Lv100 polo                                               @ 7
+  Lv100 Oliver                                             @ 7
+  Lv100 Henry                                              @ 7
+  Lv100 polo                                               @ 8
+  Lv100 polo                                               @ 9
+  Lv100 King                                               @ 9
+  Lv100 Queen                                              @ star
+  Lv 97 polo                                               @ star
+  Lv100 August                                             @ ZAK
+  Lv100 Angelo                                             @ ZAK
+  Lv100 polo                                               @ ZAK
+
+st.survivor.json (TheVengefulLion)
+  Lv100 QUE                                                @ 1
+  Lv100 POLO                                               @ 1
+  Lv100 POLO                                               @ 2
+  Lv100 QUE                                                @ 2
+  Lv100 Oliver                                             @ 2
+  Lv100 Caesar                                             @ 3
+  Lv100 POLO                                               @ 4
+  Lv100 QUE                                                @ 4
+  Lv100 POLO                                               @ 5
+  Lv100 QUE                                                @ 5
+  Lv100 QUE                                                @ BU6
+  Lv100 POLO                                               @ CA4
+  Lv100 QUE                                                @ CA4
+  Lv100 POLO                                               @ cairo
+  Lv100 QUE                                                @ cairo
+  Lv100 Queen                                              @ Las Vegas
+  Lv100 POLO                                               @ Las Vegas
+  Lv100 Ferdinand                                          @ Las Vegas
+  Lv100 Christopher                                        @ TUSCANY
+
+st.survivorhotmail.com.json (TheVengefulLion)
+  Lv100 QUE                                                @ 1
+  Lv100 POLO                                               @ 1
+  Lv100 POLO                                               @ 2
+  Lv100 QUE                                                @ 2
+  Lv100 Oliver                                             @ 2
+  Lv100 Caesar                                             @ 3
+  Lv100 POLO                                               @ 4
+  Lv100 QUE                                                @ 4
+  Lv100 POLO                                               @ 5
+  Lv100 QUE                                                @ 5
+  Lv100 QUE                                                @ BU6
+  Lv100 POLO                                               @ CA4
+  Lv100 QUE                                                @ CA4
+  Lv100 POLO                                               @ cairo
+  Lv100 QUE                                                @ cairo
+  Lv100 Queen                                              @ Las Vegas
+  Lv100 POLO                                               @ Las Vegas
+  Lv100 Ferdinand                                          @ Las Vegas
+  Lv100 Christopher                                        @ TUSCANY
+
+Cotton_candy_for_uyahoo.com.json (LikeABoss)
+  Lv100 Duke                                               @ 1
+  Lv100 Gene                                               @ BallsOFire
+  Lv100 Catherine                                          @ BallsOFire
+  Lv100 Earl                                               @ BallsOFire
+  Lv100 Ina                                                @ BlueBalls
+  Lv100 Caesar                                             @ BlueBalls
+  Lv100 King                                               @ FireBalls
+  Lv100 LT                                                 @ FireBalls
+  Lv100 LT                                                 @ FireBalls
+  Lv100 Leo                                                @ IceBalls
+  Lv100 LT                                                 @ IceBalls
+  Lv 91 Mag                                                @ IceBalls
+  Lv100 Augus                                              @ IronBalls
+  Lv100 Thomas                                             @ IronBalls
+  Lv100 Christ                                             @ IronBalls
+
+masterramrodhotmail.co.uk.json (CrazyR1G)
+  Lv100 pol                                                @ 1
+  Lv100 Brian                                              @ 1
+  Lv100 Eric                                               @ 1
+  Lv100 Queen                                              @ Flat
+  Lv100 LT                                                 @ Flat
+  Lv100 LT                                                 @ Flat
+  Lv100 LT                                                 @ Flat
+  Lv100 POL                                                @ NODIPLO
+  Lv100 Catherine                                          @ NODIPLO
+  Lv100 POL                                                @ NOENTRY
+  Lv100 pol                                                @ NOFEAR
+  Lv100 LT                                                 @ NOMERCY
+  Lv100 LT                                                 @ NOMERCY
+  Lv100 Gene                                               @ NOPITY
+  Lv100 Oliver                                             @ NORETREAT
+
+celticchef2000aol.com.json (LadyTara)
+  Lv100 LT                                                 @ bo bo
+  Lv100 LT                                                 @ bo bo
+  Lv100 Olive                                              @ bo bo
+  Lv100 LT                                                 @ bo bo
+  Lv100 LT                                                 @ ElPlatino
+  Lv100 Alexander                                          @ ElPlatino
+  Lv100 Queen                                              @ sdbe
+  Lv100 LT                                                 @ sdbe
+  Lv100 LT                                                 @ Star
+  Lv100 Christ                                             @ Star
+  Lv100 Elizabeth                                          @ Star
+  Lv100 LT                                                 @ Tara
+  Lv100 Peter                                              @ Tara
+  Lv  4 Stan                                               @ Tara
+
+jjjonesiinet.net.au.json (KrazyTurk)
+  Lv100 Ella                                               @ 1Ottoman
+  Lv100 LT                                                 @ 3Ottoman
+  Lv100 AS                                                 @ 4Ottoman
+  Lv100 POL                                                @ 4Ottoman
+  Lv100 POL                                                @ 5Ottoman
+  Lv100 August                                             @ 6Ottoman
+  Lv100 POL                                                @ 7Ottoman
+  Lv100 Christopher                                        @ 7Ottoman
+  Lv100 POL                                                @ 8Ottoman
+  Lv100 POL                                                @ Istanbul
+  Lv100 AS                                                 @ Istanbul
+  Lv100 Queen                                              @ Russelsheim
+  Lv100 Augus                                              @ Russelsheim
+  Lv100 Frederic                                           @ Russelsheim
+
+apmjunioraol.com.json (RoboJack)
+  Lv100 Virgil                                             @ 0
+  Lv100 Joan                                               @ 0
+  Lv100 Leonard                                            @ 1
+  Lv100 Ian                                                @ 2
+  Lv100 Jo                                                 @ 3
+  Lv100 Pete                                               @ 5
+  Lv100 Ron                                                @ 8
+  Lv100 Queen                                              @ Reykjavik
+  Lv150 Brian Boru                                         @ Reykjavik
+  Lv150 Ludovico Sforza                                    @ Reykjavik
+  Lv150 Lothair III, Holy Roman Emperor                    @ Reykjavik
+  Lv150 Eric IV of Denmark                                 @ Reykjavik
+  Lv 63 Earl of Shrewsbury                                 @ Reykjavik
+
+legacy-njjuno.com.json (FridayFlute)
+  Lv100 Virgil                                             @ Aasgard
+  Lv100 Justin                                             @ Aasgard
+  Lv100 Borg                                               @ Aasgard
+  Lv100 Plato                                              @ Arvgard
+  Lv100 Leonard                                            @ Arvgard
+  Lv100 Augus                                              @ Arvgard
+  Lv100 Christ                                             @ Lillegard
+  Lv100 Ina                                                @ Lillegard
+  Lv100 Leona                                              @ Lillegard
+  Lv100 King                                               @ Nygard
+  Lv100 Julius                                             @ Odinsgard
+  Lv100 ATT                                                @ Thorsgard
+  Lv100 Leif                                               @ Turk
+
+marknewsome1sky.com.json (Ironclad)
+  Lv150 Albrecht Durer                                     @ Charlie
+  Lv150 James Hepburn, Earl of Bothwell                    @ Charlie
+  Lv150 Peter the Great                                    @ Foxtrot
+  Lv100 Queen                                              @ rally 14
+  Lv150 Oliver Cromwell                                    @ rally 14
+  Lv150 Lucrezia Borgia 2                                  @ rally 14
+  Lv150 Hamilcar Barca                                     @ rally 14
+  Lv120 Brian                                              @ rally 14
+  Lv150 Sandro Botticelli 2                                @ support
+  Lv150 Cardinal Richelieu                                 @ support
+  Lv150 Frederick II, Duke of Swabia                       @ support
+  Lv150 Ivan III the Great of Russia                       @ support
+  Lv150 Cicero                                             @ support
+
+chrislogue4396.json (Hitsugaya Toshiro)
+  Lv100 Joan                                               @ SubCity1
+  Lv100 Mag                                                @ SubCity2
+  Lv100 Henry                                              @ SubCity3
+  Lv100 Ian                                                @ SubCity5
+  Lv100 August                                             @ SubCity5
+  Lv100 Leif                                               @ SubCity6
+  Lv100 Joan                                               @ SubCity7
+  Lv100 Ferdinand                                          @ SubCity7
+  Lv100 Leo                                                @ SubCity7
+  Lv100 King                                               @ SubCity7
+  Lv100 Queen                                              @ SubCity9
+  Lv 93 Henry                                              @ SubCity9
+
+chrislogue4396yahoo.com.json (Hitsugaya Toshiro)
+  Lv100 Joan                                               @ SubCity1
+  Lv100 Mag                                                @ SubCity2
+  Lv100 Henry                                              @ SubCity3
+  Lv100 Ian                                                @ SubCity5
+  Lv100 August                                             @ SubCity5
+  Lv100 Leif                                               @ SubCity6
+  Lv100 Joan                                               @ SubCity7
+  Lv100 Ferdinand                                          @ SubCity7
+  Lv100 Leo                                                @ SubCity7
+  Lv100 King                                               @ SubCity7
+  Lv100 Queen                                              @ SubCity9
+  Lv 93 Henry                                              @ SubCity9
+
+geese0525.json (Hisagi Shuhei)
+  Lv100 Virgil                                             @ SubCity0
+  Lv100 Ian                                                @ SubCity2
+  Lv100 Louis                                              @ SubCity2
+  Lv100 King                                               @ SubCity2
+  Lv100 Borg                                               @ SubCity4
+  Lv100 Leo                                                @ SubCity4
+  Lv100 Francis                                            @ SubCity5
+  Lv100 Christopher                                        @ SubCity5
+  Lv100 Peter                                              @ SubCity8
+  Lv100 Queen                                              @ SubCity9
+  Lv100 Augustine                                          @ SubCity9
+  Lv100 Francis                                            @ SubCity9
+
+geese0525yahoo.com.json (Hisagi Shuhei)
+  Lv100 Virgil                                             @ SubCity0
+  Lv100 Ian                                                @ SubCity2
+  Lv100 Louis                                              @ SubCity2
+  Lv100 King                                               @ SubCity2
+  Lv100 Borg                                               @ SubCity4
+  Lv100 Leo                                                @ SubCity4
+  Lv100 Francis                                            @ SubCity5
+  Lv100 Christopher                                        @ SubCity5
+  Lv100 Peter                                              @ SubCity8
+  Lv100 Queen                                              @ SubCity9
+  Lv100 Augustine                                          @ SubCity9
+  Lv100 Francis                                            @ SubCity9
+
+hanny2ziggo.nl.json (Hanny)
+  Lv100 Richard                                            @ Bigcity
+  Lv100 King                                               @ Hanny10
+  Lv100 Eric                                               @ Hanny10
+  Lv100 Augustine                                          @ Hanny2
+  Lv 83 Julius                                             @ Hanny4
+  Lv100 Richard                                            @ Hanny6
+  Lv100 Eric                                               @ Hanny6
+  Lv100 Leona                                              @ hanny7
+  Lv 18 Ron                                                @ hanny8
+  Lv  3 Julius                                             @ hanny8
+  Lv  1 Peter                                              @ hanny8
+  Lv100 Francis                                            @ NewHanny
+
+macoverall1yahoo.com.json (Moana)
+  Lv100 polo                                               @ boom
+  Lv100 Queen                                              @ V
+  Lv100 polo                                               @ V1
+  Lv100 Francis                                            @ V1
+  Lv100 polo                                               @ V3
+  Lv100 Liz                                                @ V3
+  Lv100 polo                                               @ V4
+  Lv100 POLO                                               @ V5
+  Lv 92 Eli                                                @ V6
+  Lv 99 polo                                               @ vvvv
+  Lv100 Virgil                                             @ vvvv
+  Lv100 Joan                                               @ vvvv
+
+ypgrosgmail.com.json (CrazyAnt)
+  Lv100 LT                                                 @ 1
+  Lv100 Ann                                                @ 1
+  Lv100 Queen                                              @ 2
+  Lv100 Earl                                               @ 3
+  Lv100 Justin                                             @ 5
+  Lv100 Joan                                               @ 6
+  Lv100 LT                                                 @ 6
+  Lv100 Richard                                            @ 7
+  Lv100 Francis                                            @ 7
+  Lv100 Francis                                            @ 7
+  Lv100 Caesar                                             @ 7
+  Lv100 Pete                                               @ 8
+
+hunygurl67yahoo.com.json (CrazyLT)
+  Lv100 Duke                                               @ 1
+  Lv100 Queen                                              @ 2
+  Lv100 Brian                                              @ 2
+  Lv100 Julius                                             @ 2
+  Lv100 Olive                                              @ Devils Pit
+  Lv 98 Brian                                              @ Devils Pit
+  Lv100 Otto                                               @ done
+  Lv100 A                                                  @ horses
+  Lv 17 Leif                                               @ horses
+  Lv100 Ferdinand                                          @ new
+  Lv100 Ron                                                @ Zzz
+
+m.ribbonsyahoo.com.au.json (Crazyhindu)
+  Lv100 a                                                  @ 12
+  Lv100 a                                                  @ 12
+  Lv100 Lou                                                @ 12
+  Lv100 Caesar                                             @ 12
+  Lv100 Ron                                                @ 12
+  Lv100 a                                                  @ crazytown
+  Lv100 Queen                                              @ Guardian
+  Lv100 Catherine                                          @ Guardian
+  Lv100 Ivan                                               @ Guardian
+  Lv100 a                                                  @ KILL
+  Lv100 Ivan                                               @ Ulan Bator
+
+martyevony4.json (Smelly)
+  Lv100 Queen                                              @ Eight
+  Lv100 Borg                                               @ Five
+  Lv100 Christ                                             @ Nine
+  Lv 97 Liz                                                @ Nine
+  Lv100 Leo                                                @ Seven
+  Lv100 Leif                                               @ Six
+  Lv100 Otto                                               @ Six
+  Lv 92 Thomas                                             @ Six
+  Lv100 Otto                                               @ Three
+  Lv 45 Louis                                              @ Three
+  Lv 82 Leona                                              @ Two
+
+martyevony4yahoo.com.json (Smelly)
+  Lv100 Queen                                              @ Eight
+  Lv100 Borg                                               @ Five
+  Lv100 Christ                                             @ Nine
+  Lv 97 Liz                                                @ Nine
+  Lv100 Leo                                                @ Seven
+  Lv100 Leif                                               @ Six
+  Lv100 Otto                                               @ Six
+  Lv 92 Thomas                                             @ Six
+  Lv100 Otto                                               @ Three
+  Lv 45 Louis                                              @ Three
+  Lv 82 Leona                                              @ Two
+
+redjr46.json (Hood)
+  Lv100 Leonard                                            @ city
+  Lv100 Augus                                              @ city2
+  Lv100 Thomas                                             @ City3
+  Lv100 Duke                                               @ City3
+  Lv100 Will                                               @ City4
+  Lv100 Queen                                              @ City5
+  Lv100 Olive                                              @ City5
+  Lv100 August                                             @ City5
+  Lv100 Leonard                                            @ City5
+  Lv100 Louis                                              @ City9
+  Lv100 Louis                                              @ Draconus
+
+redjr46yahoo.com.json (Hood)
+  Lv100 Leonard                                            @ city
+  Lv100 Augus                                              @ city2
+  Lv100 Thomas                                             @ City3
+  Lv100 Duke                                               @ City3
+  Lv100 Will                                               @ City4
+  Lv100 Queen                                              @ City5
+  Lv100 Olive                                              @ City5
+  Lv100 August                                             @ City5
+  Lv100 Leonard                                            @ City5
+  Lv100 Louis                                              @ City9
+  Lv100 Louis                                              @ Draconus
+
+twoguysmail.com.json (Daneri)
+  Lv100 King                                               @ Georgetown
+  Lv100 Otto                                               @ Hostile
+  Lv100 Augustine                                          @ Hotel
+  Lv100 Christopher                                        @ One More
+  Lv100 King                                               @ Silver
+  Lv100 Tom                                                @ Silver
+  Lv100 Ivan                                               @ Silver
+  Lv100 Gene                                               @ Star Fire
+  Lv100 Will                                               @ Star Fire
+  Lv100 Thomas                                             @ Star Fire
+  Lv100 Frederic                                           @ Uhaul
+
+ykamhong.json (kangWR)
+  Lv100 Thomas                                             @ akvircock
+  Lv100 Spartacus                                          @ Almere
+  Lv100 Queen                                              @ kang
+  Lv100 queen                                              @ lvl10
+  Lv100 Ivan                                               @ lvl10
+  Lv100 Erin                                               @ Marl
+  Lv100 QUEEN                                              @ war
+  Lv100 Duke                                               @ war
+  Lv100 Erick                                              @ YiPPe
+  Lv100 Stan                                               @ yummy
+  Lv100 Ron                                                @ yummy
+
+ykamhongyahoo.com.json (kangWR)
+  Lv100 Thomas                                             @ akvircock
+  Lv100 Spartacus                                          @ Almere
+  Lv100 Queen                                              @ kang
+  Lv100 queen                                              @ lvl10
+  Lv100 Ivan                                               @ lvl10
+  Lv100 Erin                                               @ Marl
+  Lv100 QUEEN                                              @ war
+  Lv100 Duke                                               @ war
+  Lv100 Erick                                              @ YiPPe
+  Lv100 Stan                                               @ yummy
+  Lv100 Ron                                                @ yummy
+
+zsk54321yahoo.com.json (ScaryKitty)
+  Lv100 Jo                                                 @ HELL
+  Lv100 Eli                                                @ HELL
+  Lv100 Erin                                               @ VV7
+  Lv100 Queen                                              @ VV7
+  Lv100 Christopher                                        @ VV7
+  Lv 78 Alexander                                          @ VV7
+  Lv100 Olive                                              @ VV7
+  Lv100 Henry                                              @ VV7
+  Lv100 Ferdinand                                          @ VV7
+  Lv100 Elizabeth                                          @ VV7
+  Lv100 Oliver                                             @ VV7
+
+dustysoccer0hotmail.com.json (GhostRaidr)
+  Lv100 Stan                                               @ Leverage
+  Lv100 Leona                                              @ Leverage
+  Lv100 Thomas                                             @ NEW2
+  Lv 99 Henry                                              @ NEW3
+  Lv100 Francis                                            @ NEW4
+  Lv 95 Oliver                                             @ NEW4
+  Lv100 Ivan                                               @ NEW6
+  Lv100 Ed                                                 @ NEW6
+  Lv100 Queen                                              @ Yin
+  Lv100 Caesar                                             @ Yin
+
+markramiergmail.com.json (General TGCav)
+  Lv100 Peter                                              @ 2Skydom
+  Lv100 August                                             @ 3SarMell
+  Lv100 Lou                                                @ 4Tolos
+  Lv100 Thomas                                             @ 5MonsterM
+  Lv100 Ivan                                               @ 7Meereen
+  Lv100 William                                            @ 7Meereen
+  Lv100 Otto                                               @ 7Meereen
+  Lv100 Queen                                              @ 8Myr
+  Lv100 Hannibal                                           @ 9Tyrosh
+  Lv100 Leona                                              @ 9Tyrosh
+
+michelle_hanson9hotmail.com.json (AsianMoFo)
+  Lv100 Thomas                                             @ 1
+  Lv100 Jo                                                 @ 1
+  Lv100 King                                               @ 1
+  Lv100 Duke                                               @ 1
+  Lv100 Louis                                              @ 1
+  Lv100 Leona                                              @ 1
+  Lv100 Augustine                                          @ 1
+  Lv100 Leonard                                            @ 1
+  Lv100 Gene                                               @ 1
+  Lv100 Earl                                               @ 1
+
+sixandclimbing69gmail.com.json (lifeless_204)
+  Lv 39 William                                            @ 1
+  Lv100 Jo                                                 @ LT
+  Lv  1 Christopher                                        @ LT
+  Lv100 LT                                                 @ move
+  Lv100 Ron                                                @ New city
+  Lv100 Stan                                               @ Storen
+  Lv100 Henry                                              @ TELEANDDUM
+  Lv 54 King                                               @ TELEANDDUM
+  Lv100 Queen                                              @ WAR CITY
+  Lv100 Augustine                                          @ WAR CITY
+
+thedonkeysheep.json (setuid)
+  Lv  2 Alexander                                          @ 0
+  Lv100 Francis                                            @ 0
+  Lv100 King                                               @ 0
+  Lv100 Alexander                                          @ 0
+  Lv100 Christ                                             @ 0
+  Lv100 Tom                                                @ 0
+  Lv100 Queen                                              @ 0
+  Lv100 Borg                                               @ 0
+  Lv100 Gene                                               @ 0
+  Lv100 Ed                                                 @ 0
+
+thedonkeysheepyahoo.com.json (setuid)
+  Lv  2 Alexander                                          @ 0
+  Lv100 Francis                                            @ 0
+  Lv100 King                                               @ 0
+  Lv100 Alexander                                          @ 0
+  Lv100 Christ                                             @ 0
+  Lv100 Tom                                                @ 0
+  Lv100 Queen                                              @ 0
+  Lv100 Borg                                               @ 0
+  Lv100 Gene                                               @ 0
+  Lv100 Ed                                                 @ 0
+
+wally.nino.json (CrazyIvana)
+  Lv 13 Frederic                                           @ Bluejay
+  Lv 12 Leif                                               @ Bluejay
+  Lv100 Christopher                                        @ DODO
+  Lv100 Ed                                                 @ New city
+  Lv100 Eli                                                @ Nuthatch
+  Lv100 Earl                                               @ Starling
+  Lv100 Liz                                                @ Starling
+  Lv 13 Richard                                            @ Starling
+  Lv100 King                                               @ TITMOUSE
+  Lv100 Ella                                               @ TITMOUSE
+
+wally.ninoyahoo.com.json (CrazyIvana)
+  Lv 13 Frederic                                           @ Bluejay
+  Lv 12 Leif                                               @ Bluejay
+  Lv100 Christopher                                        @ DODO
+  Lv100 Ed                                                 @ New city
+  Lv100 Eli                                                @ Nuthatch
+  Lv100 Earl                                               @ Starling
+  Lv100 Liz                                                @ Starling
+  Lv 13 Richard                                            @ Starling
+  Lv100 King                                               @ TITMOUSE
+  Lv100 Ella                                               @ TITMOUSE
+
+catlinnstormgmail.com.json (Catlinn)
+  Lv100 Jo                                                 @ 1
+  Lv 43 Gene                                               @ 1
+  Lv 37 Angelo                                             @ 1
+  Lv100 King                                               @ 1
+  Lv100 Elizabeth                                          @ 1
+  Lv100 Borg                                               @ 1
+  Lv100 Richard                                            @ 1
+  Lv100 Will                                               @ 1
+  Lv100 Earl                                               @ 1
+
+dal163bigpond.com.au.json (PowerPuFF)
+  Lv100 King                                               @ Chisel
+  Lv100 Christopher                                        @ GasChamber
+  Lv120 Genghis                                            @ GasChamber
+  Lv100 Ivan                                               @ Hammer
+  Lv 90 Frederic                                           @ Hammer
+  Lv100 Jo                                                 @ StrikeTeam
+  Lv100 Ron                                                @ Warrior
+  Lv100 Augus                                              @ Warrior
+  Lv100 August                                             @ Warrior
+
+doug46972002.json (CrazyDoug)
+  Lv100 Plato                                              @ Almeria
+  Lv100 Socrates                                           @ Almeria
+  Lv100 Borg                                               @ Almeria
+  Lv100 Queen                                              @ Geneva
+  Lv100 August                                             @ Kampala
+  Lv100 Henry                                              @ Potato
+  Lv100 Plato                                              @ Traveler
+  Lv100 Go                                                 @ Traveler
+  Lv100 Stan                                               @ Traveler
+
+doug46972002hotmail.com.json (CrazyDoug)
+  Lv100 Plato                                              @ Almeria
+  Lv100 Socrates                                           @ Almeria
+  Lv100 Borg                                               @ Almeria
+  Lv100 Queen                                              @ Geneva
+  Lv100 August                                             @ Kampala
+  Lv100 Henry                                              @ Potato
+  Lv100 Plato                                              @ Traveler
+  Lv100 Go                                                 @ Traveler
+  Lv100 Stan                                               @ Traveler
+
+e.hi42.json (evonian)
+  Lv100 Ferdinand                                          @ 1
+  Lv100 Leif                                               @ 101
+  Lv100 Frederic                                           @ 101
+  Lv100 Ian                                                @ 104
+  Lv100 Queen                                              @ 1254
+  Lv100 Mag                                                @ 1254
+  Lv100 Ian                                                @ niceguy
+  Lv100 Angelo                                             @ stars
+  Lv100 Stan                                               @ T
+
+e.hi42yahoo.com.json (evonian)
+  Lv100 Ferdinand                                          @ 1
+  Lv100 Leif                                               @ 101
+  Lv100 Frederic                                           @ 101
+  Lv100 Ian                                                @ 104
+  Lv100 Queen                                              @ 1254
+  Lv100 Mag                                                @ 1254
+  Lv100 Ian                                                @ niceguy
+  Lv100 Angelo                                             @ stars
+  Lv100 Stan                                               @ T
+
+e3alexhotmail.com.json (Aprentice)
+  Lv100 Erin                                               @ A
+  Lv100 Lou                                                @ A
+  Lv100 Queen                                              @ A
+  Lv 38 Henry                                              @ A
+  Lv 67 Stan                                               @ A
+  Lv100 Caesar                                             @ A
+  Lv120 Khans                                              @ A
+  Lv100 Ron                                                @ A
+  Lv 18 Duke                                               @ A
+
+e44alexhotmail.com.json (Divas)
+  Lv100 Julius                                             @ 1
+  Lv100 ATT                                                @ 1
+  Lv100 Henry                                              @ 1
+  Lv100 Jo                                                 @ 1
+  Lv100 King                                               @ 1
+  Lv100 Otto                                               @ 1
+  Lv100 Mag                                                @ 1
+  Lv100 Jo                                                 @ 1
+  Lv100 Francis                                            @ 1
+
+e5alexhotmail.com.json (LiteSucks)
+  Lv100 Ivan                                               @ E
+  Lv100 Ed                                                 @ E
+  Lv100 King                                               @ E
+  Lv100 Otto                                               @ E
+  Lv100 Jo                                                 @ E
+  Lv100 Christopher                                        @ E
+  Lv100 Borg                                               @ E
+  Lv100 Peter                                              @ E
+  Lv100 Jo                                                 @ E
+
+franky_franky1551.json (Excellence)
+  Lv100 Earl                                               @ 01
+  Lv100 Caesar                                             @ 01
+  Lv 72 Gene                                               @ 01
+  Lv100 Julius                                             @ 03
+  Lv 90 Henry                                              @ 04
+  Lv100 Mag                                                @ 07
+  Lv100 Leo                                                @ 09
+  Lv100 Oliver                                             @ Niamey
+  Lv100 Queen                                              @ NiameyS
+
+franky_franky1551yahoo.com.json (Excellence)
+  Lv100 Earl                                               @ 01
+  Lv100 Caesar                                             @ 01
+  Lv 72 Gene                                               @ 01
+  Lv100 Julius                                             @ 03
+  Lv 90 Henry                                              @ 04
+  Lv100 Mag                                                @ 07
+  Lv100 Leo                                                @ 09
+  Lv100 Oliver                                             @ Niamey
+  Lv100 Queen                                              @ NiameyS
+
+jef_wearhotmail.com.json (Art Lippo)
+  Lv100 Ron                                                @ VV7
+  Lv100 Henry                                              @ VV7
+  Lv100 Queen                                              @ VV7
+  Lv100 Borg                                               @ VV7
+  Lv100 Francis                                            @ VV7
+  Lv100 Eric                                               @ VV7
+  Lv100 William                                            @ VV7
+  Lv100 Gene                                               @ VV7
+  Lv100 Ivan                                               @ VV7
+
+kanda1988outlook.com.json (Yolandacool)
+  Lv100 Mag                                                @ another1
+  Lv100 King                                               @ aye
+  Lv100 Ann                                                @ final
+  Lv 86 Stan                                               @ furst
+  Lv 96 Ella                                               @ newone
+  Lv100 William                                            @ ohmy
+  Lv 77 Eric                                               @ ohmy
+  Lv100 Leo                                                @ yeah
+  Lv100 Jo                                                 @ yeah
+
+kenzoevony.json (kenzo gt)
+  Lv100 Leo                                                @ Blarney
+  Lv100 Gene                                               @ GiantSteps
+  Lv100 Pete                                               @ nagshead
+  Lv100 Otto                                               @ Othello
+  Lv100 Queen                                              @ pits
+  Lv100 Jo                                                 @ queenvic
+  Lv100 Francis                                            @ WolfPack
+  Lv100 Ian                                                @ WolfPack
+  Lv100 King                                               @ WolfPack
+
+kenzoevonygmail.com.json (kenzo gt)
+  Lv100 Leo                                                @ Blarney
+  Lv100 Gene                                               @ GiantSteps
+  Lv100 Pete                                               @ nagshead
+  Lv100 Otto                                               @ Othello
+  Lv100 Queen                                              @ pits
+  Lv100 Jo                                                 @ queenvic
+  Lv100 Francis                                            @ WolfPack
+  Lv100 Ian                                                @ WolfPack
+  Lv100 King                                               @ WolfPack
+
+kugslitegmail.com.json (LittleB)
+  Lv 70 Thomas                                             @ BallsDeep
+  Lv 14 Richard                                            @ BallsDeep
+  Lv 60 Jo                                                 @ BIGHARDON
+  Lv 82 Julius                                             @ BIGHARDON
+  Lv 41 King                                               @ CUNTZ
+  Lv 58 Pete                                               @ CUNTZ
+  Lv 54 William                                            @ CUNTZ
+  Lv 41 Earl                                               @ DICKINYOU
+  Lv 78 Borg                                               @ JUICYPUSSY
+
+Mk3vento24yahoo.com.json (Chefrey)
+  Lv100 Jo                                                 @ Acumulator
+  Lv100 Ina                                                @ SubCity5
+  Lv100 Olive                                              @ SubCity6
+  Lv100 Earl                                               @ SubCity8
+  Lv100 Queen                                              @ SubCity8
+  Lv100 Ron                                                @ SubCity8
+  Lv100 Francis                                            @ SubCity8
+  Lv100 Louis                                              @ SubCity8
+  Lv100 Jo                                                 @ SubCity8
+
+nauticaltermgmail.com.json (MadRedLion)
+  Lv100 Queen                                              @ 2Madness
+  Lv100 Peter                                              @ 2Madness
+  Lv100 Virgil                                             @ 2Madness
+  Lv100 Leif                                               @ 3Madness
+  Lv100 Christ                                             @ 3Madness
+  Lv100 Jo                                                 @ 3Madness
+  Lv100 Ina                                                @ 5Madness
+  Lv100 King                                               @ 7Madness
+  Lv100 Will                                               @ Madness
+
+newmyseattleyahoo.com.json (myseattle)
+  Lv100 Queen                                              @ 1
+  Lv100 POL                                                @ 1
+  Lv100 Augustine                                          @ 1
+  Lv100 ATT                                                @ 1
+  Lv100 Jo                                                 @ 1
+  Lv100 ATT                                                @ 1
+  Lv100 Pete                                               @ 1
+  Lv 95 Liz                                                @ 1
+  Lv 97 Elizabeth                                          @ 1
+
+rapture15hotmail.com.json (TriTip)
+  Lv100 Duke                                               @ 3Nakara
+  Lv100 Ed                                                 @ 4Bankara
+  Lv100 Ian                                                @ 6Emana
+  Lv 92 Christ                                             @ 7Centana
+  Lv 95 Eric                                               @ 8Booaxa
+  Lv100 Angelo                                             @ 8Booaxa
+  Lv100 King                                               @ 999DF
+  Lv100 Frederic                                           @ 999DF
+  Lv100 Angelo                                             @ 9Dublana
+
+ruudvan-wersch.nl.json (MadKillah)
+  Lv100 Jo                                                 @ VV7
+  Lv100 Joan                                               @ VV7
+  Lv100 Erin                                               @ VV7
+  Lv100 Queen                                              @ VV7
+  Lv100 Peter                                              @ VV7
+  Lv 92 Jo                                                 @ VV7
+  Lv 90 Henry                                              @ VV7
+  Lv100 Alexander                                          @ VV7
+  Lv100 Ron                                                @ VV7
+
+sidnypearlyahoo.com.json (Sintax)
+  Lv100 Tom                                                @ 1KHAN
+  Lv  3 Ed                                                 @ 1KHAN
+  Lv100 Gene                                               @ 5KHAN
+  Lv100 Queen                                              @ 7KHAN
+  Lv100 P                                                  @ 7KHAN
+  Lv100 Erin                                               @ 7KHAN
+  Lv100 KHAN                                               @ 9KHAN
+  Lv  1 Lou                                                @ New city
+  Lv100 KHAN                                               @ OMG69Blow
+
+Tarasdbeyahoo.com.json (Borg)
+  Lv120 Borg                                               @ battack
+  Lv100 Queen                                              @ Falana
+  Lv150 Leif Ericson                                       @ Falana
+  Lv150 Hippocrates                                        @ Falana
+  Lv150 John of England                                    @ Falana
+  Lv  9 Augus                                              @ Hindu
+  Lv150 Rudolph of France                                  @ Jerusalem
+  Lv  1 Jo                                                 @ m
+  Lv  2 Augustine                                          @ m
+
+alsermolaevgmail.com.json (KingStevoo)
+  Lv100 at                                                 @ 1
+  Lv100 at                                                 @ 1
+  Lv100 at                                                 @ 1
+  Lv100 at                                                 @ 1
+  Lv100 at                                                 @ 1
+  Lv100 Julius                                             @ 1
+  Lv 90 King                                               @ 1
+  Lv100 Queen                                              @ 1
+
+bartolome_marino.json (Kusajishi Yachiru)
+  Lv100 Erin                                               @ SubCity3
+  Lv100 Alexander                                          @ SubCity4
+  Lv100 Will                                               @ SubCity4
+  Lv100 Eli                                                @ SubCity4
+  Lv100 Christopher                                        @ SubCity5
+  Lv100 Augus                                              @ SubCity5
+  Lv100 Richard                                            @ SubCity6
+  Lv100 King                                               @ WarghHaven
+
+bartolome_marinoyahoo.com.json (Kusajishi Yachiru)
+  Lv100 Erin                                               @ SubCity3
+  Lv100 Alexander                                          @ SubCity4
+  Lv100 Will                                               @ SubCity4
+  Lv100 Eli                                                @ SubCity4
+  Lv100 Christopher                                        @ SubCity5
+  Lv100 Augus                                              @ SubCity5
+  Lv100 Richard                                            @ SubCity6
+  Lv100 King                                               @ WarghHaven
+
+baseball_junky3.json (BandedSnow)
+  Lv100 Augus                                              @ bat
+  Lv100 Ed                                                 @ bat
+  Lv100 Queen                                              @ bow
+  Lv100 Otto                                               @ delta
+  Lv100 Leona                                              @ Dos Equis
+  Lv100 Leo                                                @ New city
+  Lv100 Pete                                               @ New city
+  Lv100 Ian                                                @ New city
+
+baseball_junky3yahoo.com.json (BandedSnow)
+  Lv100 Augus                                              @ bat
+  Lv100 Ed                                                 @ bat
+  Lv100 Queen                                              @ bow
+  Lv100 Otto                                               @ delta
+  Lv100 Leona                                              @ Dos Equis
+  Lv100 Leo                                                @ New city
+  Lv100 Pete                                               @ New city
+  Lv100 Ian                                                @ New city
+
+crazy_leopard03hotmail.com.json (Nigeru)
+  Lv100 Francis                                            @ SubCity0
+  Lv100 Queen                                              @ SubCity1
+  Lv100 August                                             @ SubCity1
+  Lv100 King                                               @ SubCity3
+  Lv100 King                                               @ SubCity6
+  Lv100 Eric                                               @ SubCity7
+  Lv100 Brian                                              @ SubCity7
+  Lv100 Ann                                                @ SubCity9
+
+dr300evony.json (Amagai Shusuke)
+  Lv100 Stan                                               @ SubCity0
+  Lv100 Henry                                              @ SubCity1
+  Lv100 Ivan                                               @ SubCity1
+  Lv100 Frederic                                           @ SubCity2
+  Lv 70 Jo                                                 @ SubCity2
+  Lv100 Queen                                              @ SubCity5
+  Lv100 Elizabeth                                          @ SubCity6
+  Lv100 Ina                                                @ SubCity7
+
+dr300evonyyahoo.com.json (Amagai Shusuke)
+  Lv100 Stan                                               @ SubCity0
+  Lv100 Henry                                              @ SubCity1
+  Lv100 Ivan                                               @ SubCity1
+  Lv100 Frederic                                           @ SubCity2
+  Lv 70 Jo                                                 @ SubCity2
+  Lv100 Queen                                              @ SubCity5
+  Lv100 Elizabeth                                          @ SubCity6
+  Lv100 Ina                                                @ SubCity7
+
+dr300evonyyahoocom.json (Amagai Shusuke)
+  Lv100 Stan                                               @ SubCity0
+  Lv100 Henry                                              @ SubCity1
+  Lv100 Ivan                                               @ SubCity1
+  Lv100 Frederic                                           @ SubCity2
+  Lv 70 Jo                                                 @ SubCity2
+  Lv 50 Thomas                                             @ SubCity4
+  Lv100 Queen                                              @ SubCity5
+  Lv100 Elizabeth                                          @ SubCity6
+
+e7alexhotmail.com.json (SteveB)
+  Lv100 Angelo                                             @ 1
+  Lv100 Eli                                                @ 1
+  Lv  1 Leonard                                            @ 1
+  Lv100 Jo                                                 @ 1
+  Lv100 Francis                                            @ 1
+  Lv100 Duke                                               @ 1
+  Lv 63 Alexander                                          @ 1
+  Lv100 Queen                                              @ 1
+
+elacetay12yahoo.com.json (Loria)
+  Lv100 Justin                                             @ Diamond
+  Lv100 Angelo                                             @ Diamond
+  Lv100 Earl                                               @ Hamm
+  Lv100 King                                               @ Returning
+  Lv100 Ian                                                @ Ruby
+  Lv100 Tom                                                @ Ruby
+  Lv100 Pete                                               @ Saphire
+  Lv100 Augustine                                          @ Saphire
+
+ELPERL4.json (Kuchiki Byakuya)
+  Lv100 Elizabeth                                          @ SubCity0
+  Lv100 Borg                                               @ SubCity1
+  Lv100 Leo                                                @ SubCity3
+  Lv100 Queen                                              @ SubCity7
+  Lv100 Augustine                                          @ SubCity7
+  Lv100 Pete                                               @ SubCity8
+  Lv100 Erin                                               @ SubCity8
+  Lv100 Virgil                                             @ SubCity9
+
+ELPERL4gmail.com.json (Kuchiki Byakuya)
+  Lv100 Elizabeth                                          @ SubCity0
+  Lv100 Borg                                               @ SubCity1
+  Lv100 Leo                                                @ SubCity3
+  Lv100 Queen                                              @ SubCity7
+  Lv100 Augustine                                          @ SubCity7
+  Lv100 Pete                                               @ SubCity8
+  Lv100 Erin                                               @ SubCity8
+  Lv100 Virgil                                             @ SubCity9
+
+erich.schlegel.json (PAB)
+  Lv100 Borg                                               @ 4
+  Lv100 Lou                                                @ 4
+  Lv100 Ed                                                 @ 4
+  Lv100 Will                                               @ 5
+  Lv100 Christ                                             @ 5
+  Lv100 Alexander                                          @ 8
+  Lv100 Queen                                              @ 9
+  Lv100 Borg                                               @ 9
+
+erich.schlegelus.fujitsu.com.json (PAB)
+  Lv100 Borg                                               @ 4
+  Lv100 Lou                                                @ 4
+  Lv100 Ed                                                 @ 4
+  Lv100 Will                                               @ 5
+  Lv100 Christ                                             @ 5
+  Lv100 Alexander                                          @ 8
+  Lv100 Queen                                              @ 9
+  Lv100 Borg                                               @ 9
+
+garyjoint1yahoo.com.json (CaitSith)
+  Lv100 TR                                                 @ 1
+  Lv100 Justin                                             @ 1
+  Lv 48 Otto                                               @ 1
+  Lv100 Queen                                              @ Portland
+  Lv100 Earl                                               @ Portland
+  Lv100 tr                                                 @ Portland
+  Lv100 Gene                                               @ Portland
+  Lv100 Duke                                               @ Portland
+
+iikissmygritsiiyahoo.com.json (BOTKILLER)
+  Lv100 Borg                                               @ A2
+  Lv100 Ferdinand                                          @ A2
+  Lv100 Queen                                              @ B2
+  Lv100 Oliver                                             @ B2
+  Lv 15 Eric                                               @ ram
+  Lv100 Alexander                                          @ rame
+  Lv100 William                                            @ rammy
+  Lv100 Elizabeth                                          @ Spirits
+
+liontooth1988gmail.com.json (Toothless)
+  Lv100 Queen                                              @ Bones
+  Lv100 Ron                                                @ Bones
+  Lv100 Richard                                            @ Heart
+  Lv 66 Eric                                               @ Liver
+  Lv100 Eric                                               @ Lungs
+  Lv100 Ian                                                @ Lungs
+  Lv100 Louis                                              @ Spine
+  Lv100 Will                                               @ Tongue
+
+lordgrayhotmail.com.json (OgIiss)
+  Lv100 August                                             @ 0
+  Lv100 Gene                                               @ 0
+  Lv 63 Henry                                              @ 0
+  Lv100 Leonard                                            @ 0
+  Lv100 Frederic                                           @ 0
+  Lv100 Peter                                              @ 0
+  Lv100 Eli                                                @ 0
+  Lv100 Queen                                              @ 0
+
+sleddog218.json (Saviour)
+  Lv100 Queen                                              @ Blah
+  Lv100 Leif                                               @ Blah
+  Lv100 William                                            @ FunTimes
+  Lv100 Jo                                                 @ Nine
+  Lv100 Will                                               @ Nine
+  Lv100 Richard                                            @ Puerto Princesa
+  Lv100 Pete                                               @ Puerto Princesa
+  Lv100 Ed                                                 @ Reno
+
+sleddog218yahoo.com.json (Saviour)
+  Lv100 Queen                                              @ Blah
+  Lv100 Leif                                               @ Blah
+  Lv100 William                                            @ FunTimes
+  Lv100 Jo                                                 @ Nine
+  Lv100 Will                                               @ Nine
+  Lv100 Richard                                            @ Puerto Princesa
+  Lv100 Pete                                               @ Puerto Princesa
+  Lv100 Ed                                                 @ Reno
+
+squeezemetiteyahoo.com.au.json (CrazyBaby)
+  Lv100 Augus                                              @ 11
+  Lv100 Lou                                                @ 2
+  Lv100 pol                                                @ 9
+  Lv100 Jo                                                 @ 9
+  Lv100 Stan                                               @ COOPER
+  Lv100 King                                               @ HINDOOOOOO
+  Lv100 Lou                                                @ HINDOOOOOO
+  Lv100 Mag                                                @ HINDOOOOOO
+
+twowolves7gmail.com.json (TwoWolves)
+  Lv100 W                                                  @ Alaxis
+  Lv100 Stan                                               @ Barrio
+  Lv100 Will                                               @ Barrio
+  Lv100 Virgil                                             @ Shaman
+  Lv100 Ian                                                @ Sin
+  Lv100 Queen                                              @ Squeaky
+  Lv100 Olive                                              @ Squeaky
+  Lv100 Ivan                                               @ Stokeville
+
+wesleyhallingyahoo.com.json (TheMonk)
+  Lv100 Gene                                               @ 12
+  Lv100 Ron                                                @ ann
+  Lv100 Augustine                                          @ little
+  Lv100 Queen                                              @ oak
+  Lv100 Queen                                              @ oak
+  Lv100 Queen                                              @ oak
+  Lv 40 Christopher                                        @ PA1
+  Lv 38 Leona                                              @ TY1
+
+zigzag1904.dk.json (Redkicker)
+  Lv100 Que                                                @ Laban
+  Lv100 Queen                                              @ Magnecia
+  Lv100 Que                                                @ Magnecia
+  Lv100 Ferdinand                                          @ Noctornus
+  Lv100 Stan                                               @ Quake
+  Lv 57 Mag                                                @ Sleepy
+  Lv 32 Duke                                               @ TooShort
+  Lv100 Que                                                @ XXX
+
+12antonius1972.json (Gove69Suk)
+  Lv100 Eric                                               @ AlpdHuez
+  Lv100 Frederic                                           @ Nice
+  Lv100 Queen                                              @ Paris
+  Lv100 Elizabeth                                          @ Paris
+  Lv100 Francis                                            @ QUeen
+  Lv100 Olive                                              @ Troyes
+  Lv100 Francis                                            @ Troyes
+
+12antonius1972gmail.com.json (Gove69Suk)
+  Lv100 Eric                                               @ AlpdHuez
+  Lv100 Frederic                                           @ Nice
+  Lv100 Queen                                              @ Paris
+  Lv100 Elizabeth                                          @ Paris
+  Lv100 Francis                                            @ QUeen
+  Lv100 Olive                                              @ Troyes
+  Lv100 Francis                                            @ Troyes
+
+alexalanta.com.json (Prety)
+  Lv 41 Stan                                               @ NE
+  Lv100 Thomas                                             @ NE
+  Lv 64 Ivan                                               @ NE
+  Lv100 King                                               @ NE
+  Lv100 Jo                                                 @ NE
+  Lv100 pol                                                @ NE
+  Lv100 att                                                @ NE
+
+cmoyersyahoo.com.json (YER0C)
+  Lv100 Ian                                                @ SubCity2
+  Lv100 Caesar                                             @ SubCity3
+  Lv100 Jo                                                 @ SubCity3
+  Lv100 Queen                                              @ SubCity4
+  Lv 89 Augus                                              @ SubCity7
+  Lv100 Brian                                              @ SubCity9
+  Lv 91 Ivan                                               @ SubCity9
+
+confused_gemini_goddessyahoo.com.json (Maxime02)
+  Lv100 hi                                                 @ Berlin
+  Lv100 hi                                                 @ Berlin
+  Lv100 hi                                                 @ Berlin
+  Lv150 Montezuma I                                        @ DeadZone
+  Lv100 Hi                                                 @ GoodLuck
+  Lv100 hi                                                 @ MeKaItami
+  Lv100 King                                               @ Tequila
+
+craigcorn99.json (CMurder)
+  Lv100 Queen                                              @ 1
+  Lv100 Jo                                                 @ 2
+  Lv100 Oliver                                             @ 2
+  Lv100 Eric                                               @ Alo
+  Lv100 Leo                                                @ Conakry
+  Lv  7 Gene                                               @ SEBav
+  Lv100 Henry                                              @ WBav
+
+craigcorn99hotmail.com.json (CMurder)
+  Lv100 Queen                                              @ 1
+  Lv100 Jo                                                 @ 2
+  Lv100 Oliver                                             @ 2
+  Lv100 Eric                                               @ Alo
+  Lv100 Leo                                                @ Conakry
+  Lv  7 Gene                                               @ SEBav
+  Lv100 Henry                                              @ WBav
+
+danlavoie1hotmail.com.json (lordraul)
+  Lv100 Oliver                                             @ LR
+  Lv100 Ed                                                 @ LR
+  Lv100 Queen                                              @ LR
+  Lv100 Peter                                              @ LR
+  Lv100 William                                            @ LR
+  Lv100 Thomas                                             @ LR
+  Lv100 Henry                                              @ LR
+
+dawnbunny101yahoo.com.json (ChinaGirl)
+  Lv100 Justin                                             @ 0
+  Lv 53 Augustine                                          @ 0
+  Lv100 Henry                                              @ 0
+  Lv100 Christ                                             @ 0
+  Lv100 King                                               @ 0
+  Lv100 Caesar                                             @ 0
+  Lv100 Borg                                               @ 0
+
+jameson_mckeelive.com.json (Renagade)
+  Lv100 LT                                                 @ 10
+  Lv100 August                                             @ blowme2
+  Lv100 Henry                                              @ Kush
+  Lv100 Queen                                              @ MYKONOS
+  Lv100 Ann                                                @ NEW
+  Lv100 Oliver                                             @ Vicous
+  Lv100 Virgil                                             @ Vicous
+
+jjmckay6manyahoo.com.json (Huntr)
+  Lv100 Ian                                                @ 10
+  Lv100 Mag                                                @ 10
+  Lv100 Catherine                                          @ 10
+  Lv100 Queen                                              @ BBD
+  Lv100 Angelo                                             @ Chodrrevng
+  Lv100 Queen                                              @ Hindutown
+  Lv100 August                                             @ Winterfell
+
+jptje1989.json (UOme)
+  Lv100 Leonard                                            @ Mine
+  Lv100 Queen                                              @ Place
+  Lv100 Virgil                                             @ Place
+  Lv120 Michelangelo Buonarroti                            @ two
+  Lv 57 Otto                                               @ two
+  Lv 10 Borg                                               @ two
+  Lv 17 Louis                                              @ two
+
+jptje1989gmail.com.json (UOme)
+  Lv100 Leonard                                            @ Mine
+  Lv100 Queen                                              @ Place
+  Lv100 Virgil                                             @ Place
+  Lv120 Michelangelo Buonarroti                            @ two
+  Lv 57 Otto                                               @ two
+  Lv 10 Borg                                               @ two
+  Lv 17 Louis                                              @ two
+
+klanders.json (DeusApollo)
+  Lv100 Chris                                              @ Harvest4
+  Lv100 Bo                                                 @ Harvest5
+  Lv100 Pete                                               @ Harvest5
+  Lv100 Augus                                              @ Harvest6
+  Lv100 King                                               @ Harvest7
+  Lv100 Queen                                              @ SogalS
+  Lv100 Francis                                            @ SogalS
+
+klanderscitcom.net.json (DeusApollo)
+  Lv100 Chris                                              @ Harvest4
+  Lv100 Bo                                                 @ Harvest5
+  Lv100 Pete                                               @ Harvest5
+  Lv100 Augus                                              @ Harvest6
+  Lv100 King                                               @ Harvest7
+  Lv100 Queen                                              @ SogalS
+  Lv100 Francis                                            @ SogalS
+
+LeoCasserly1.json (BabyMia)
+  Lv100 Ed                                                 @ 1DragonAG
+  Lv100 Ferdinand                                          @ 2BlackDrag
+  Lv100 Leonard                                            @ 6Yimara
+  Lv100 Caesar                                             @ 7DinCara
+  Lv100 Caesar                                             @ 7DinCara
+  Lv100 King                                               @ 8TanKana
+  Lv100 Tom                                                @ 99Yumbal
+
+LeoCasserly1hotmail.com.json (BabyMia)
+  Lv100 Ed                                                 @ 1DragonAG
+  Lv100 Ferdinand                                          @ 2BlackDrag
+  Lv100 Leonard                                            @ 6Yimara
+  Lv100 Caesar                                             @ 7DinCara
+  Lv100 Caesar                                             @ 7DinCara
+  Lv100 King                                               @ 8TanKana
+  Lv100 Tom                                                @ 99Yumbal
+
+Markimhofyahoo.com.json (MrEnyo)
+  Lv100 Pete                                               @ SubCity0
+  Lv 76 Thomas                                             @ SubCity1
+  Lv100 Will                                               @ SubCity1
+  Lv100 Queen                                              @ SubCity2
+  Lv 95 Christopher                                        @ SubCity4
+  Lv100 Stan                                               @ SubCity6
+  Lv 91 Julius                                             @ SubCity6
+
+medri15.json (Vorador)
+  Lv100 Alexander                                          @ Jyhad
+  Lv100 Brian                                              @ Viana do Castelo
+  Lv100 Leo                                                @ Viana do Castelo
+  Lv100 Queen                                              @ Worldstone
+  Lv100 Catherine                                          @ Worldstone
+  Lv100 Justin                                             @ Yanker
+  Lv100 LT                                                 @ Yanker
+
+medri15yahoo.com.json (Vorador)
+  Lv100 Alexander                                          @ Jyhad
+  Lv100 Brian                                              @ Viana do Castelo
+  Lv100 Leo                                                @ Viana do Castelo
+  Lv100 Queen                                              @ Worldstone
+  Lv100 Catherine                                          @ Worldstone
+  Lv100 Justin                                             @ Yanker
+  Lv100 LT                                                 @ Yanker
+
+moore.tn2.json (Driver)
+  Lv150 Vladimir I                                         @ BronzeageI
+  Lv150 Hernando de Soto                                   @ Hameln
+  Lv100 Queen                                              @ Helloagain
+  Lv100 Ella                                               @ Maastricht
+  Lv150 Elizabeth I                                        @ Victoria
+  Lv150 Richard III of England                             @ Victoria
+  Lv150 Claude de Lorraine. Duke of Guise                  @ Victoria
+
+moore.tn2gmail.com.json (Driver)
+  Lv150 Vladimir I                                         @ BronzeageI
+  Lv150 Hernando de Soto                                   @ Hameln
+  Lv100 Queen                                              @ Helloagain
+  Lv100 Ella                                               @ Maastricht
+  Lv150 Elizabeth I                                        @ Victoria
+  Lv150 Richard III of England                             @ Victoria
+  Lv150 Claude de Lorraine. Duke of Guise                  @ Victoria
+
+mymechanics.json (Force)
+  Lv 64 Augustine                                          @ Antup
+  Lv 81 Catherine                                          @ Antup
+  Lv100 Catherine                                          @ Cantolope
+  Lv 89 Ivan                                               @ Debra
+  Lv100 Alexander                                          @ Fibers
+  Lv100 Richard                                            @ Galanabra
+  Lv100 Queen                                              @ Ninetrop
+
+mymechanicsaol.com.json (Force)
+  Lv 64 Augustine                                          @ Antup
+  Lv 81 Catherine                                          @ Antup
+  Lv100 Catherine                                          @ Cantolope
+  Lv 89 Ivan                                               @ Debra
+  Lv100 Alexander                                          @ Fibers
+  Lv100 Richard                                            @ Galanabra
+  Lv100 Queen                                              @ Ninetrop
+
+oneandonlybbqbellsouth.net.json (DeathPig)
+  Lv100 Gene                                               @ 1
+  Lv100 Earl                                               @ 2
+  Lv100 Elizabeth                                          @ 3
+  Lv 38 King                                               @ 3
+  Lv100 Queen                                              @ 6
+  Lv100 Peter                                              @ 6
+  Lv100 O                                                  @ 8
+
+patchwork_77yahoo.com.json (Arch77)
+  Lv100 Queen                                              @ DEMENTIA
+  Lv100 King                                               @ DEMENTIA
+  Lv100 Leif                                               @ JONEZIN
+  Lv100 Augustine                                          @ MANIC
+  Lv100 Francis                                            @ REHAB
+  Lv100 Olive                                              @ Star
+  Lv100 Eli                                                @ Star
+
+robcuaw2250aol.com.json (CrazyRab)
+  Lv100 Queen                                              @ Rab
+  Lv100 King                                               @ Rab
+  Lv100 Liz                                                @ Rab
+  Lv 56 Augustine                                          @ Rab
+  Lv100 Alexander                                          @ Rab
+  Lv100 Leo                                                @ Rab
+  Lv100 Leo                                                @ Rab
+
+ronniebarry.json (SamsonKhan)
+  Lv100 Richard                                            @ 0
+  Lv100 Eli                                                @ 0
+  Lv 51 Earl                                               @ 0
+  Lv120 SamsonKhan                                         @ 0
+  Lv100 Francis                                            @ 0
+  Lv100 Louis                                              @ 0
+  Lv100 Queen                                              @ bob
+
+ronniebarryhotmail.com.json (SamsonKhan)
+  Lv100 Richard                                            @ 0
+  Lv100 Eli                                                @ 0
+  Lv 51 Earl                                               @ 0
+  Lv120 SamsonKhan                                         @ 0
+  Lv100 Francis                                            @ 0
+  Lv100 Louis                                              @ 0
+  Lv100 Queen                                              @ bob
+
+scream.your.heartoutwindowslive.com.json (Elloo)
+  Lv100 Queen                                              @ Dremur
+  Lv100 Eric                                               @ EPHESUS
+  Lv100 Louis                                              @ IHAVEFOOD
+  Lv 77 Alexander                                          @ missy
+  Lv100 Frederic                                           @ SABOTEUR
+  Lv100 Eric                                               @ TOMBSTONE
+  Lv 75 Brian                                              @ TOMBSTONE
+
+teasley1889yahoo.com.json (sir mikecool)
+  Lv100 Queen                                              @ Gold
+  Lv100 pol                                                @ holding
+  Lv100 pol                                                @ lanceville
+  Lv100 Stan                                               @ mikeville
+  Lv100 Leona                                              @ mikeville
+  Lv100 Ferdinand                                          @ mikeville
+  Lv100 pol                                                @ valtown
+
+yucon1966yahoo.com.json (ZeeZee)
+  Lv100 Catherine                                          @ Fusili
+  Lv100 Queen                                              @ Jonna
+  Lv100 Angelo                                             @ Jonna
+  Lv100 Henry                                              @ Penne
+  Lv100 Earl                                               @ Putney
+  Lv100 Ian                                                @ Rotini
+  Lv100 Lou                                                @ Vernon
+
+yucon2466yahoo.com.json (Arizona)
+  Lv 49 Lou                                                @ 1
+  Lv  8 Otto                                               @ 1
+  Lv  1 Julius                                             @ Caskets
+  Lv 10 Augustine                                          @ Caskets
+  Lv150 William the Conqueror                              @ Kiev
+  Lv  1 Louis                                              @ Kiev
+  Lv100 Queen                                              @ St Gallen
+
+zurtmail.com.json (tabbikat)
+  Lv100 King                                               @ fawwwk
+  Lv100 Caesar                                             @ homeless
+  Lv100 Julius                                             @ homeless
+  Lv100 Christopher                                        @ loveless
+  Lv100 Ed                                                 @ mindless
+  Lv100 Francis                                            @ sheit
+  Lv100 Henry                                              @ Star
+
+Adelena.cox.json (Scyanide)
+  Lv 12 Alexander                                          @ scouts
+  Lv100 Earl                                               @ Scyanide
+  Lv100 Catherine                                          @ Scyanide
+  Lv100 King                                               @ Scyanide
+  Lv100 King                                               @ Scyanide
+  Lv 38 Angelo                                             @ Scyanide
+
+Adelena.coxgmail.com.json (Scyanide)
+  Lv 12 Alexander                                          @ scouts
+  Lv100 Earl                                               @ Scyanide
+  Lv100 Catherine                                          @ Scyanide
+  Lv100 King                                               @ Scyanide
+  Lv100 King                                               @ Scyanide
+  Lv 38 Angelo                                             @ Scyanide
+
+aroman83.json (Niko)
+  Lv 73 Borg                                               @ 2
+  Lv100 Frederic                                           @ 5
+  Lv100 Stan                                               @ 8
+  Lv100 Ed                                                 @ 8
+  Lv100 William                                            @ Gold Amulet
+  Lv100 Queen                                              @ Khanlingus
+
+aroman83aol.com.json (Niko)
+  Lv 73 Borg                                               @ 2
+  Lv100 Frederic                                           @ 5
+  Lv100 Stan                                               @ 8
+  Lv100 Ed                                                 @ 8
+  Lv100 William                                            @ Gold Amulet
+  Lv100 Queen                                              @ Khanlingus
+
+ausseifhotmail.com.json (Kfcking4)
+  Lv100 Augus                                              @ SubCity3
+  Lv 97 Will                                               @ SubCity4
+  Lv100 Queen                                              @ SubCity6
+  Lv100 Justin                                             @ SubCity6
+  Lv100 Tom                                                @ SubCity6
+  Lv100 Frederic                                           @ SubCity8
+
+barryronnie1965hotmail.com.json (Kushiel Angel of Punishment)
+  Lv100 Ron                                                @ A
+  Lv100 Louis                                              @ A
+  Lv100 Augustine                                          @ A
+  Lv100 Queen                                              @ Kremlin
+  Lv100 Leonard                                            @ Prime
+  Lv100 Brian                                              @ Prime
+
+bbb_ark1964yahoo.com.json (Archemedes)
+  Lv100 Augus                                              @ SubCity3
+  Lv100 Ian                                                @ SubCity5
+  Lv100 Julius                                             @ SubCity5
+  Lv100 att                                                @ SubCity7
+  Lv100 Queen                                              @ SubCity9
+  Lv 51 Ed                                                 @ SubCity9
+
+bnicol.json (Nicola)
+  Lv100 Angelo                                             @ 1
+  Lv100 Ivan                                               @ 1
+  Lv100 King                                               @ Dittmar
+  Lv100 Augustine                                          @ Shizam
+  Lv100 Ron                                                @ Vermont
+  Lv100 Ian                                                @ War
+
+bnicolmountaincable.net.json (Nicola)
+  Lv100 Angelo                                             @ 1
+  Lv100 Ivan                                               @ 1
+  Lv100 King                                               @ Dittmar
+  Lv100 Augustine                                          @ Shizam
+  Lv100 Ron                                                @ Vermont
+  Lv100 Ian                                                @ War
+
+chrisofhoustonyahoo.com.json (K1llshot)
+  Lv100 Leo                                                @ SubCity2
+  Lv100 Richard                                            @ SubCity3
+  Lv100 Queen                                              @ SubCity5
+  Lv100 Frederic                                           @ SubCity5
+  Lv100 Alexander                                          @ SubCity6
+  Lv100 Francis                                            @ SubCity8
+
+dakota_tazyahoo.com.json (MudSlinger)
+  Lv100 Justin                                             @ Asmara II
+  Lv100 Ella                                               @ GT Dart
+  Lv100 Queen                                              @ Hellcat
+  Lv 93 Will                                               @ Mopar
+  Lv 93 Ed                                                 @ Mopar
+  Lv100 Tom                                                @ Ramcharger
+
+feyenoorder_1983hotmail.com.json (ATHERION)
+  Lv100 Francis                                            @ eaglestars
+  Lv100 Ed                                                 @ eaglestars
+  Lv100 Will                                               @ eaglestars
+  Lv100 Queen                                              @ z1
+  Lv100 Christopher                                        @ z2
+  Lv100 Christ                                             @ z4
+
+gdmarkushotmail.com.json (CrazyGD)
+  Lv100 Henry                                              @ 14A
+  Lv100 Thomas                                             @ 14A
+  Lv100 Otto                                               @ 14A
+  Lv100 Otto                                               @ 14Bam
+  Lv100 Queen                                              @ Mogadishu
+  Lv100 Christopher                                        @ Pisa
+
+guy.mundy.json (KingGuy)
+  Lv100 Brian                                              @ SubCity1
+  Lv100 Earl                                               @ SubCity2
+  Lv100 Queen                                              @ SubCity5
+  Lv100 Leo                                                @ SubCity5
+  Lv100 Tom                                                @ SubCity6
+  Lv100 Otto                                               @ SubCity7
+
+guy.mundytiscali.co.uk.json (KingGuy)
+  Lv100 Brian                                              @ SubCity1
+  Lv100 Earl                                               @ SubCity2
+  Lv100 Queen                                              @ SubCity5
+  Lv100 Leo                                                @ SubCity5
+  Lv100 Tom                                                @ SubCity6
+  Lv100 Otto                                               @ SubCity7
+
+haydenermelyahoo.com.json (LittleFart)
+  Lv100 Joan                                               @ Flat
+  Lv100 Queen                                              @ Pretender
+  Lv100 Ed                                                 @ Pretender
+  Lv100 Peter                                              @ Pretender
+  Lv 65 Ian                                                @ ruby soho
+  Lv100 Leonard                                            @ vigilante
+
+huisman81.json (Naut)
+  Lv100 Elizabeth                                          @ 2
+  Lv100 Virgil                                             @ 3
+  Lv100 Hannibal65                                         @ 4
+  Lv100 Ina                                                @ 6
+  Lv100 Stan                                               @ 8
+  Lv100 Queen                                              @ 9
+
+huisman81hotmail.com.json (Naut)
+  Lv100 Elizabeth                                          @ 2
+  Lv100 Virgil                                             @ 3
+  Lv100 Hannibal65                                         @ 4
+  Lv100 Ina                                                @ 6
+  Lv100 Stan                                               @ 8
+  Lv100 Queen                                              @ 9
+
+jamcaveman357.json (JAMCAVEMAN)
+  Lv100 tr                                                 @ Z
+  Lv100 tr                                                 @ Z2
+  Lv100 Tom                                                @ Z3
+  Lv100 Queen                                              @ Z4
+  Lv100 tr                                                 @ Z5
+  Lv100 tr                                                 @ Z6
+
+jamcaveman357att.net.json (JAMCAVEMAN)
+  Lv100 tr                                                 @ Z
+  Lv100 tr                                                 @ Z2
+  Lv100 Tom                                                @ Z3
+  Lv100 Queen                                              @ Z4
+  Lv100 tr                                                 @ Z5
+  Lv100 tr                                                 @ Z6
+
+jenn1131.json (TheMessenger)
+  Lv 59 Augustine                                          @ 0
+  Lv100 King                                               @ 0
+  Lv100 Brian                                              @ BA
+  Lv 39 Leona                                              @ BA
+  Lv100 King                                               @ HA
+  Lv100 M                                                  @ HA
+
+jenn1131gmail.com.json (TheMessenger)
+  Lv 59 Augustine                                          @ 0
+  Lv100 King                                               @ 0
+  Lv100 Brian                                              @ BA
+  Lv 39 Leona                                              @ BA
+  Lv100 King                                               @ HA
+  Lv100 M                                                  @ HA
+
+kendicosmo.json (Madarame Ikkaku)
+  Lv100 Thomas                                             @ Acumulator
+  Lv100 Duke                                               @ Acumulator
+  Lv100 Queen                                              @ SubCity5
+  Lv100 Eric                                               @ SubCity5
+  Lv100 Christopher                                        @ SubCity5
+  Lv100 Stan                                               @ SubCity7
+
+kendicosmoyahoo.com.json (Madarame Ikkaku)
+  Lv100 Thomas                                             @ Acumulator
+  Lv100 Duke                                               @ Acumulator
+  Lv100 Queen                                              @ SubCity5
+  Lv100 Eric                                               @ SubCity5
+  Lv100 Christopher                                        @ SubCity5
+  Lv100 Stan                                               @ SubCity7
+
+kevincarbrayhotmail.com.json (Muck)
+  Lv100 Duke                                               @ Biebaby
+  Lv100 Oliver                                             @ Biebaby
+  Lv100 Gene                                               @ Biebaby
+  Lv100 Earl                                               @ C
+  Lv100 Queen                                              @ F
+  Lv100 Christopher                                        @ farm
+
+klaus-biesel.json (Xploit)
+  Lv100 Henry                                              @ 0
+  Lv100 Tom                                                @ 0
+  Lv100 Queen                                              @ 0
+  Lv100 Ron                                                @ 0
+  Lv100 Augustine                                          @ 0
+  Lv100 Oliver                                             @ 0
+
+klaus-bieselhotmail.de.json (Xploit)
+  Lv100 Henry                                              @ 0
+  Lv100 Tom                                                @ 0
+  Lv100 Queen                                              @ 0
+  Lv100 Ron                                                @ 0
+  Lv100 Augustine                                          @ 0
+  Lv100 Oliver                                             @ 0
+
+Lburchiantibellsouth.net.json (indyice69)
+  Lv100 Erin                                               @ SubCity0
+  Lv100 Leif                                               @ SubCity0
+  Lv100 Duke                                               @ SubCity2
+  Lv100 Eric                                               @ SubCity5
+  Lv100 Queen                                              @ SubCity9
+  Lv100 Stan                                               @ SubCity9
+
+martyevony1yahoo.co.uk.json (UnraveledK)
+  Lv100 Ivan                                               @ 1
+  Lv100 Frederic                                           @ 1
+  Lv100 Caesar                                             @ 1
+  Lv100 Pete                                               @ 1
+  Lv100 Queen                                              @ 1
+  Lv100 Elizabeth                                          @ 1
+
+Mistersergio13gmail.com.json (TheTaTaFeline)
+  Lv100 Queen                                              @ TTF
+  Lv 62 Stan                                               @ TTF
+  Lv100 Christ                                             @ TTF
+  Lv100 Jo                                                 @ TTF
+  Lv100 Erin                                               @ TTF
+  Lv 42 Ron                                                @ TTF
+
+nmchiloyahoo.com.json (CHILO)
+  Lv100 Pol                                                @ 2
+  Lv100 Ina                                                @ 3
+  Lv100 pol                                                @ 4
+  Lv100 Ian                                                @ 7
+  Lv100 Pol                                                @ 7
+  Lv100 King                                               @ CHITOWN
+
+nobwenhotmail.com.json (CRZYONE)
+  Lv 96 Jo                                                 @ 1
+  Lv100 Lou                                                @ 1
+  Lv100 King                                               @ 1
+  Lv100 Lou                                                @ 1
+  Lv100 Caesar                                             @ 1
+  Lv100 Joan                                               @ 1
+
+roofingconsolidated.net.json (MISERY)
+  Lv 76 Alexander                                          @ Ally
+  Lv 73 Augus                                              @ Ally
+  Lv 53 Christopher                                        @ Callope
+  Lv100 Queen                                              @ Ganalara
+  Lv100 Leo                                                @ Ganalara
+  Lv 52 William                                            @ Inasha
+
+shewolf.json (Bella2)
+  Lv100 Jo                                                 @ Camelot
+  Lv100 King                                               @ Dragonston
+  Lv100 Angelo                                             @ Valyria
+  Lv100 Augus                                              @ Valyria
+  Lv100 Angelo                                             @ Winterfell
+  Lv100 Julius                                             @ Yunkai
+
+shewolfcitcom.net.json (Bella2)
+  Lv100 Jo                                                 @ Camelot
+  Lv100 King                                               @ Dragonston
+  Lv100 Angelo                                             @ Valyria
+  Lv100 Augus                                              @ Valyria
+  Lv100 Angelo                                             @ Winterfell
+  Lv100 Julius                                             @ Yunkai
+
+tenabutter.json (DrgnLady)
+  Lv100 Pete                                               @ AfterLife
+  Lv100 Jo                                                 @ DumpHonor
+  Lv100 King                                               @ Empathize
+  Lv100 Oliver                                             @ Empathize
+  Lv100 August                                             @ Intimidate
+  Lv100 Leif                                               @ Quiet
+
+tenabuttergmail.com.json (DrgnLady)
+  Lv100 Pete                                               @ AfterLife
+  Lv100 Jo                                                 @ DumpHonor
+  Lv100 King                                               @ Empathize
+  Lv100 Oliver                                             @ Empathize
+  Lv100 August                                             @ Intimidate
+  Lv100 Leif                                               @ Quiet
+
+travelinm004yahoo.com.json (Slater)
+  Lv100 Ian                                                @ FoodCastle
+  Lv  5 Tom                                                @ Sub4
+  Lv100 pete                                               @ Sub5
+  Lv100 Borg                                               @ Sub6
+  Lv100 Angelo                                             @ Sub7
+  Lv100 Queen                                              @ WarCastle
+
+trondski88hotmail.com.json (Trond)
+  Lv100 Liz                                                @ Foodfrenzy
+  Lv100 Peter                                              @ Sub3
+  Lv100 Christ                                             @ TopUp
+  Lv100 Pete                                               @ TopUp
+  Lv100 Stan                                               @ TopUp
+  Lv100 Queen                                              @ Trond
+
+VicVeritashotmail.com.json (VicVeritas)
+  Lv100 Queen                                              @ Bloodstone
+  Lv100 William                                            @ DesertRose
+  Lv100 Frederic                                           @ Kyanite
+  Lv100 King                                               @ Rhodenite
+  Lv 83 Oliver                                             @ Tektite
+  Lv 95 Duke                                               @ Zoicite
+
+watsonj50hotmail.com.json (Savage)
+  Lv100 CC                                                 @ Apache
+  Lv100 King                                               @ Dushanbe
+  Lv100 cc                                                 @ Navajo
+  Lv100 CC                                                 @ Savage
+  Lv 97 Oliver                                             @ SavageBear
+  Lv 95 Lou                                                @ SavageBear
+
+zsk54321gmail.com.json (Thaudan)
+  Lv100 Leif                                               @ VV7
+  Lv100 Virgil                                             @ VV7
+  Lv100 Queen                                              @ VV7
+  Lv100 Elizabeth                                          @ VV7
+  Lv100 Ron                                                @ VV7
+  Lv100 Peter                                              @ VV7
+
+a-j-watson.json (Ichimaru Gin)
+  Lv  2 Frederic                                           @ SubCity0
+  Lv100 Joan                                               @ SubCity1
+  Lv 61 Ann                                                @ SubCity3
+  Lv100 Queen                                              @ SubCity5
+  Lv100 Francis                                            @ SubCity7
+
+a-j-watsonhotmail.co.uk.json (Ichimaru Gin)
+  Lv  2 Frederic                                           @ SubCity0
+  Lv100 Joan                                               @ SubCity1
+  Lv 61 Ann                                                @ SubCity3
+  Lv100 Queen                                              @ SubCity5
+  Lv100 Francis                                            @ SubCity7
+
+annadepe1.json (blondANNA)
+  Lv100 William                                            @ Annatwo
+  Lv 92 Caesar                                             @ Flat
+  Lv100 King                                               @ new
+  Lv100 Francis                                            @ new
+  Lv100 Ann                                                @ NewAnna
+
+annadepe1gmail.com.json (blondANNA)
+  Lv100 William                                            @ Annatwo
+  Lv 92 Caesar                                             @ Flat
+  Lv100 King                                               @ new
+  Lv100 Francis                                            @ new
+  Lv100 Ann                                                @ NewAnna
+
+Aragog1279gmail.com.json (Elfdirnallyn The Bright King)
+  Lv100 Borg                                               @ 2
+  Lv100 Justin                                             @ 3
+  Lv100 Will                                               @ 5
+  Lv 48 Elizabeth                                          @ 5
+  Lv100 Queen                                              @ 6
+
+auto180yahoo.com.json (CrazyBalls)
+  Lv100 Ed                                                 @ 1
+  Lv100 p                                                  @ 3
+  Lv100 p                                                  @ 5
+  Lv100 Virgil                                             @ 7
+  Lv100 Queen                                              @ Balls
+
+bainesj74yahoo.com.json (Lorgar)
+  Lv100 Ella                                               @ 1StanHall
+  Lv100 Francis                                            @ 1StanHall
+  Lv100 William                                            @ 5CityWest
+  Lv100 Joan                                               @ 5CityWest
+  Lv100 Queen                                              @ 8ClaraLara
+
+bbb_ark1962.json (BBBTX)
+  Lv100 August                                             @ BBBFC
+  Lv  1 Ferdinand                                          @ BBBFC
+  Lv100 Christopher                                        @ BBBTX3
+  Lv100 Gene                                               @ BBBTX4
+  Lv100 Queen                                              @ BBBWC
+
+bbb_ark1962yahoo.com.json (BBBTX)
+  Lv100 August                                             @ BBBFC
+  Lv  1 Ferdinand                                          @ BBBFC
+  Lv100 Christopher                                        @ BBBTX3
+  Lv100 Gene                                               @ BBBTX4
+  Lv100 Queen                                              @ BBBWC
+
+car1029olyahoo.com.json (LilGUTS)
+  Lv100 Christopher                                        @ Ellesmera
+  Lv100 Lou                                                @ Ours
+  Lv100 Jo                                                 @ Ours
+  Lv100 Brian                                              @ OverAgain
+  Lv100 King                                               @ Silthirm
+
+cateransdementiagmail.com.json (Nasargiel)
+  Lv100 King                                               @ Angheliko
+  Lv100 Justin                                             @ Angheliko
+  Lv100 Richard                                            @ Angheliko
+  Lv100 Henry                                              @ Black City
+  Lv100 Stan                                               @ Englebild
+
+chriskittleson.json (KazigluBey)
+  Lv100 Alexander                                          @ Gemini
+  Lv100 Julius                                             @ Gemini
+  Lv100 Queen                                              @ KhanDo
+  Lv100 Otto                                               @ New city
+  Lv100 Elizabeth                                          @ New city
+
+chriskittlesonhotmail.com.json (KazigluBey)
+  Lv100 Alexander                                          @ Gemini
+  Lv100 Julius                                             @ Gemini
+  Lv100 Queen                                              @ KhanDo
+  Lv100 Otto                                               @ New city
+  Lv100 Elizabeth                                          @ New city
+
+curledmangoyahoo.com.json (Maverik22)
+  Lv100 Queen                                              @ Athens
+  Lv 91 Khan                                               @ Athens
+  Lv100 Ferdinand                                          @ Chester
+  Lv 20 Ron                                                @ Frank
+  Lv100 Justin                                             @ Goose
+
+Darkagetech.json (MrSmith)
+  Lv 99 Ella                                               @ SubCity2
+  Lv100 August                                             @ SubCity4
+  Lv100 Liz                                                @ SubCity6
+  Lv100 Eli                                                @ SubCity8
+  Lv100 Queen                                              @ SubCity9
+
+Darkagetechgmail.com.json (MrSmith)
+  Lv 99 Ella                                               @ SubCity2
+  Lv100 August                                             @ SubCity4
+  Lv100 Liz                                                @ SubCity6
+  Lv100 Eli                                                @ SubCity8
+  Lv100 Queen                                              @ SubCity9
+
+domexdanyahoo.com.json (Cuchulainn)
+  Lv100 Queen                                              @ Punishment
+  Lv150 Giovanni Sforza                                    @ Punishment
+  Lv150 Guiliano della Rovere, Pope Julius II              @ Punishment
+  Lv150 Baldwin I of Edessa                                @ Punishment
+  Lv133 Malcolm I of Scotland                              @ Punishment
+
+e2alexhotmail.com.json (Blondy)
+  Lv100 Queen                                              @ B
+  Lv100 Lou                                                @ B
+  Lv100 Frederic                                           @ B
+  Lv100 Duke                                               @ B
+  Lv100 Pete                                               @ B
+
+ebraffyahoo.com.json (Cyra)
+  Lv100 Frederic                                           @ HooHaa
+  Lv100 cleo                                               @ KHANS
+  Lv100 Justin                                             @ Rumz
+  Lv100 Queen                                              @ Sparkles
+  Lv100 Caesar                                             @ Sparkles
+
+erhettushotmail.com.json (Erhettus)
+  Lv100 Queen                                              @ Chaos2
+  Lv100 Tom                                                @ Chaos3
+  Lv100 Francis                                            @ Chaos3
+  Lv100 Julius                                             @ Chaos4
+  Lv100 Leonard                                            @ War City
+
+freeze999outlook.com.json (BATCH)
+  Lv 71 Brian                                              @ DOG3
+  Lv100 Christ                                             @ DOG8
+  Lv100 Richard                                            @ PIKES
+  Lv100 Augustine                                          @ PIKES
+  Lv100 Queen                                              @ SWORDS
+
+goose22evony.json (viper)
+  Lv100 Earl                                               @ Albert
+  Lv100 Erin                                               @ Ed
+  Lv100 Elizabeth                                          @ filler
+  Lv100 Ella                                               @ filler
+  Lv100 Queen                                              @ Henry
+
+goose22evonygmail.com.json (viper)
+  Lv100 Earl                                               @ Albert
+  Lv100 Erin                                               @ Ed
+  Lv100 Elizabeth                                          @ filler
+  Lv100 Ella                                               @ filler
+  Lv100 Queen                                              @ Henry
+
+hpu333yahoo.com.json (MrDirk)
+  Lv 71 Frederic                                           @ Chersoneso
+  Lv100 S                                                  @ Delphi
+  Lv100 M                                                  @ Delphi
+  Lv100 Queen                                              @ Edessa
+  Lv 87 Pete                                               @ Halicarnas
+
+hpu357.json (Enforcer)
+  Lv100 William                                            @ ApplePie
+  Lv100 King                                               @ Denali
+  Lv100 Mo                                                 @ FOREVER
+  Lv100 William                                            @ Stealth
+  Lv100 Queen                                              @ Z3
+
+hpu357yahoo.com.json (Enforcer)
+  Lv100 William                                            @ ApplePie
+  Lv100 King                                               @ Denali
+  Lv100 Mo                                                 @ FOREVER
+  Lv100 William                                            @ Stealth
+  Lv100 Queen                                              @ Z3
+
+hurlothrumboiprimus.com.au.json (OldWhiskey)
+  Lv100 Queen                                              @ OW
+  Lv100 Mar                                                @ OW
+  Lv100 Christ                                             @ OW
+  Lv100 Lou                                                @ OW
+  Lv100 Pete                                               @ OW
+
+jburkhardt0gmail.com.json (Apache)
+  Lv100 Queen                                              @ Gold
+  Lv 94 August                                             @ Nairobi
+  Lv100 Thomas                                             @ WarPony
+  Lv100 Justin                                             @ WarSociety
+  Lv100 Eli                                                @ WarSociety
+
+jcardoza50_.json (AtlasTitan)
+  Lv100 Queen                                              @ Antillar
+  Lv 55 Caesar                                             @ at2
+  Lv100 Justin                                             @ Tavar
+  Lv100 Ron                                                @ Three Fold
+  Lv100 Thomas                                             @ zzz
+
+jcardoza50_hotmail.com.json (AtlasTitan)
+  Lv100 Queen                                              @ Antillar
+  Lv 55 Caesar                                             @ at2
+  Lv100 Justin                                             @ Tavar
+  Lv100 Ron                                                @ Three Fold
+  Lv100 Thomas                                             @ zzz
+
+jenspast1991yahoo.com.json (RedQueen)
+  Lv100 Ed                                                 @ 1
+  Lv100 Frederic                                           @ 6
+  Lv100 Julius                                             @ 7
+  Lv100 King                                               @ 8
+  Lv100 LT                                                 @ 8
+
+johnpsandersiigmail.com.json (Blackstone)
+  Lv100 Duke                                               @ Balamb
+  Lv100 Oliver                                             @ Luca
+  Lv100 Queen                                              @ Midgar
+  Lv100 Richard                                            @ Midgar
+  Lv 11 Liz                                                @ Wutai
+
+kamiecomcast.net.json (Morie)
+  Lv 98 Christ                                             @ Baghdad
+  Lv 82 Brian                                              @ Baghdad
+  Lv  3 Ferdinand                                          @ Baghdad4I
+  Lv 53 Otto                                               @ Baghdad6W
+  Lv100 Queen                                              @ Quon Tali
+
+kathy_burton_885msn.com.json (SwampDiver)
+  Lv100 Joan                                               @ SubCity0
+  Lv100 Henry                                              @ SubCity1
+  Lv100 Queen                                              @ SubCity3
+  Lv100 Caesar                                             @ SubCity5
+  Lv100 Oliver                                             @ SubCity6
+
+lionofpride1.json (LionsPride)
+  Lv100 Angelo                                             @ I
+  Lv100 Augustine                                          @ II
+  Lv100 Leonard                                            @ V
+  Lv100 Elizabeth                                          @ VII
+  Lv 57 Leif                                               @ X
+
+Lionofpride1gmail.com.json (LionsPride)
+  Lv100 Angelo                                             @ I
+  Lv100 Augustine                                          @ II
+  Lv100 Leonard                                            @ V
+  Lv100 Elizabeth                                          @ VII
+  Lv 57 Leif                                               @ X
+
+mhpirooz.json (DamnedByDesign)
+  Lv100 Ron                                                @ SubCity0
+  Lv100 Ferdinand                                          @ SubCity4
+  Lv100 Brian                                              @ SubCity5
+  Lv100 Elizabeth                                          @ SubCity6
+  Lv100 Queen                                              @ WarghHaven
+
+mhpiroozgmail.com.json (DamnedByDesign)
+  Lv100 Ron                                                @ SubCity0
+  Lv100 Ferdinand                                          @ SubCity4
+  Lv100 Brian                                              @ SubCity5
+  Lv100 Elizabeth                                          @ SubCity6
+  Lv100 Queen                                              @ WarghHaven
+
+mjpataguehotmail.com.json (Synergy)
+  Lv100 King                                               @ 0
+  Lv100 Earl                                               @ 0
+  Lv100 Virgil                                             @ 0
+  Lv100 Queen                                              @ 0
+  Lv100 Ann                                                @ 0
+
+peterj23hotmail.co.uk.json (kenneth87)
+  Lv100 Queen                                              @ boooooh
+  Lv100 Ina                                                @ clontarf
+  Lv100 Ian                                                @ haven
+  Lv100 William                                            @ river boyn
+  Lv100 pol                                                @ TaraHill
+
+q_t_p_i_e99.json (KillHappy1)
+  Lv100 August                                             @ 1
+  Lv100 King                                               @ 2
+  Lv100 Richard                                            @ F
+  Lv100 polo                                               @ F
+  Lv100 King                                               @ husam
+
+q_t_p_i_e99yahoo.com.json (KillHappy1)
+  Lv100 August                                             @ 1
+  Lv100 King                                               @ 2
+  Lv100 Richard                                            @ F
+  Lv100 polo                                               @ F
+  Lv100 King                                               @ husam
+
+randomdragon3.json (Matsumoto Rangiku)
+  Lv100 Angelo                                             @ SubCity0
+  Lv100 Brian                                              @ SubCity4
+  Lv100 Gene                                               @ SubCity6
+  Lv100 Richard                                            @ SubCity8
+  Lv100 King                                               @ SubCity9
+
+randomdragon3hotmail.com.json (Matsumoto Rangiku)
+  Lv100 Angelo                                             @ SubCity0
+  Lv100 Brian                                              @ SubCity4
+  Lv100 Gene                                               @ SubCity6
+  Lv100 Richard                                            @ SubCity8
+  Lv100 King                                               @ SubCity9
+
+revkah23yahoo.com.json (Lady Penitant)
+  Lv100 Leif                                               @ Ash Fall
+  Lv100 King                                               @ Kyagezz
+  Lv100 Brian                                              @ Kyagezz
+  Lv100 Thomas                                             @ Kyagezz
+  Lv100 Christ                                             @ Mystic
+
+ricksdad2001yahoo.com.json (Ricksdad)
+  Lv100 Queen                                              @ Muang Xai
+  Lv100 Borg                                               @ ONELAYER
+  Lv100 ELLA                                               @ ricksland
+  Lv 89 Virgil                                             @ ricksland
+  Lv100 Tom                                                @ warcity
+
+sapphire_71hotmail.com.json (crazysent)
+  Lv100 Queen                                              @ 1
+  Lv100 Ian                                                @ 1
+  Lv100 Augustine                                          @ 1
+  Lv100 August                                             @ 1
+  Lv100 Ivan                                               @ 1
+
+swisspoe69yahoo.com.json (Phreaker)
+  Lv100 Jo                                                 @ Hax0r
+  Lv100 Ian                                                @ Hexican
+  Lv100 Queen                                              @ Maximus
+  Lv 56 Justin                                             @ Raiders
+  Lv100 Tom                                                @ UGotPwned
+
+tfornelliaol.com.json (tonyjofo)
+  Lv 44 Peter                                              @ t1
+  Lv100 Ina                                                @ t2
+  Lv  8 Angelo                                             @ T3
+  Lv100 William                                            @ t4
+  Lv100 Queen                                              @ t5
+
+wjgonder.json (Exterminartus Extremis)
+  Lv100 Christ                                             @ 1
+  Lv100 Jo                                                 @ 2
+  Lv100 Ann                                                @ 7
+  Lv100 Queen                                              @ 8
+  Lv100 Ivan                                               @ 8
+
+wjgondergmail.com.json (Exterminartus Extremis)
+  Lv100 Christ                                             @ 1
+  Lv100 Jo                                                 @ 2
+  Lv100 Ann                                                @ 7
+  Lv100 Queen                                              @ 8
+  Lv100 Ivan                                               @ 8
+
+alex_ermolaevyahoo.com.json (SlyStevee)
+  Lv100 King                                               @ aG
+  Lv 99 Christopher                                        @ aG
+  Lv100 Otto                                               @ aG
+  Lv100 Thomas                                             @ aG
+
+andrewflirtomatic.com.json (TheKillingJoke)
+  Lv100 William                                            @ 1
+  Lv100 Queen                                              @ 2
+  Lv100 Khan                                               @ 3
+  Lv100 Ed                                                 @ 7
+
+Anton.evony.json (Bumbler)
+  Lv100 August                                             @ SubCity2
+  Lv100 Christ                                             @ SubCity5
+  Lv100 Eli                                                @ SubCity7
+  Lv100 Queen                                              @ SubCity9
+
+Anton.evonygmail.com.json (Bumbler)
+  Lv100 August                                             @ SubCity2
+  Lv100 Christ                                             @ SubCity5
+  Lv100 Eli                                                @ SubCity7
+  Lv100 Queen                                              @ SubCity9
+
+Aussi007.json (MadBall)
+  Lv100 Otto                                               @ 1
+  Lv100 Queen                                              @ 1
+  Lv100 Richard                                            @ 1
+  Lv100 Eric                                               @ 1
+
+Aussi007hotmail.com.json (MadBall)
+  Lv100 Otto                                               @ 1
+  Lv100 Queen                                              @ 1
+  Lv100 Richard                                            @ 1
+  Lv100 Eric                                               @ 1
+
+bbb_ark2014.json (Hiker)
+  Lv100 Ann                                                @ SubCity1
+  Lv100 Eric                                               @ SubCity5
+  Lv100 Queen                                              @ SubCity9
+  Lv 83 William                                            @ SubCity9
+
+bbb_ark2014yahoo.com.json (Hiker)
+  Lv100 Ann                                                @ SubCity1
+  Lv100 Eric                                               @ SubCity5
+  Lv100 Queen                                              @ SubCity9
+  Lv 83 William                                            @ SubCity9
+
+bigscrewygmail.com.json (Screwball)
+  Lv100 Thomas                                             @ Scrw0
+  Lv100 Richard                                            @ Scrw1
+  Lv120 Amy Catherine                                      @ Scrw1
+  Lv100 Queen                                              @ Scrw7
+
+callingcroweshotmail.com.json (HarleQuinZ)
+  Lv100 King                                               @ Axyloni
+  Lv 65 Joan                                               @ Felianori
+  Lv100 Oliver                                             @ Sencheraht
+  Lv100 Augustine                                          @ Sencheraht
+
+coachteet80gmail.com.json (Coachteet)
+  Lv100 Francis                                            @ LOL
+  Lv 50 Francis                                            @ New city
+  Lv 62 Pete                                               @ New city
+  Lv100 Queen                                              @ Salusa
+
+coffinsatchgmail.com.json (Sanguinius)
+  Lv100 Lou                                                @ 3Cambrid
+  Lv100 Queen                                              @ 5ClickClap
+  Lv100 Louis                                              @ 5ClickClap
+  Lv100 Ed                                                 @ 8Oma
+
+dave.angel.json (BadDing)
+  Lv100 Queen                                              @ 1
+  Lv100 Justin                                             @ 1
+  Lv100 Francis                                            @ 1
+  Lv100 Stan                                               @ 1
+
+dave.angelyahoo.com.json (BadDing)
+  Lv100 Queen                                              @ 1
+  Lv100 Justin                                             @ 1
+  Lv100 Francis                                            @ 1
+  Lv100 Stan                                               @ 1
+
+dkw1951.json (TheWilyWizard)
+  Lv100 POL                                                @ EPISTLES
+  Lv100 Leo                                                @ JON
+  Lv 84 Peter                                              @ JON
+  Lv100 Queen                                              @ PSALMS
+
+dkw1951Yahoo.com.json (TheWilyWizard)
+  Lv100 POL                                                @ EPISTLES
+  Lv100 Leo                                                @ JON
+  Lv 84 Peter                                              @ JON
+  Lv100 Queen                                              @ PSALMS
+
+e1alexhotmail.com.json (Parish)
+  Lv100 Tom                                                @ P
+  Lv100 Leif                                               @ P
+  Lv100 Peter                                              @ P
+  Lv100 Queen                                              @ P
+
+edward660.json (TroubleSom)
+  Lv100 Will                                               @ HC
+  Lv100 Queen                                              @ Scout
+  Lv100 Augus                                              @ Scout
+  Lv100 Ina                                                @ Swords
+
+edward660hotmail.com.json (TroubleSom)
+  Lv100 Will                                               @ HC
+  Lv100 Queen                                              @ Scout
+  Lv100 Augus                                              @ Scout
+  Lv100 Ina                                                @ Swords
+
+exist2inspire1805.json (Scythica)
+  Lv100 Leonard                                            @ 4Scythica
+  Lv100 Catherine                                          @ 5Scythica
+  Lv100 Ina                                                @ 6Scythica
+  Lv100 Queen                                              @ TheGoatIV
+
+exist2inspire1805gmail.com.json (Scythica)
+  Lv100 Leonard                                            @ 4Scythica
+  Lv100 Catherine                                          @ 5Scythica
+  Lv100 Ina                                                @ 6Scythica
+  Lv100 Queen                                              @ TheGoatIV
+
+fmba07514.json (Abarai Renji)
+  Lv100 Lou                                                @ SubCity0
+  Lv 42 Ian                                                @ SubCity5
+  Lv100 Queen                                              @ SubCity7
+  Lv100 Christ                                             @ SubCity7
+
+fmba07514blueyonder.co.uk.json (Abarai Renji)
+  Lv100 Lou                                                @ SubCity0
+  Lv 42 Ian                                                @ SubCity5
+  Lv100 Queen                                              @ SubCity7
+  Lv100 Christ                                             @ SubCity7
+
+george.escobedojr.json (Tang)
+  Lv100 Christ                                             @ SubCity1
+  Lv100 Ann                                                @ SubCity1
+  Lv100 Virgil                                             @ SubCity7
+  Lv100 Queen                                              @ SubCity9
+
+george.escobedojryahoo.com.json (Tang)
+  Lv100 Christ                                             @ SubCity1
+  Lv100 Ann                                                @ SubCity1
+  Lv100 Virgil                                             @ SubCity7
+  Lv100 Queen                                              @ SubCity9
+
+godivaevony.json (Sirens)
+  Lv100 64Virgil                                           @ Beguile
+  Lv100 Will                                               @ Beguile
+  Lv100 Mag                                                @ Cajole
+  Lv100 King                                               @ Tempt
+
+godivaevonyyahoo.com.json (Sirens)
+  Lv100 64Virgil                                           @ Beguile
+  Lv100 Will                                               @ Beguile
+  Lv100 Mag                                                @ Cajole
+  Lv100 King                                               @ Tempt
+
+gotoxygengmail.com.json (TheMadLion)
+  Lv100 Queen                                              @ 1Madness
+  Lv 91 Erin                                               @ 2Madness
+  Lv100 Ed                                                 @ 8Madness
+  Lv100 Olive                                              @ Grievous
+
+holystgeorges.json (Magicturd)
+  Lv100 Oliver                                             @ CallaBryn
+  Lv100 Gene                                               @ CallaBryn
+  Lv100 Queen                                              @ DSanchez
+  Lv100 Queen                                              @ DSanchez
+
+holystgeorgeshotmail.com.json (Magicturd)
+  Lv100 Oliver                                             @ CallaBryn
+  Lv100 Gene                                               @ CallaBryn
+  Lv100 Queen                                              @ DSanchez
+  Lv100 Queen                                              @ DSanchez
+
+Ioriasj03gmail.com.json (Hynoptis)
+  Lv100 King                                               @ alfhalfhal
+  Lv 44 Virgil                                             @ im lost
+  Lv120 KublaiKhan                                         @ Krazy Town
+  Lv100 Queen                                              @ Stoners
+
+jah_calyx_rastafariyahoo.com.json (MaIekith The Accursed)
+  Lv100 Queen                                              @ SubCity4
+  Lv 88 Earl                                               @ SubCity6
+  Lv100 Eric                                               @ SubCity8
+  Lv 83 Frederic                                           @ SubCity9
+
+janette-scotthotmail.com.json (CrazyKiwi)
+  Lv100 King                                               @ ALL MINE
+  Lv100 Leonard                                            @ anothercit
+  Lv100 mac                                                @ DFWM
+  Lv100 Angelo                                             @ Wicked
+
+jbtjes2015yahoo.com.json (Bandit4sur)
+  Lv100 Catherine                                          @ Cheats
+  Lv100 Queen                                              @ Fifa4ver
+  Lv100 Ferdinand                                          @ Fifa4ver
+  Lv100 Richard                                            @ Hope
+
+krystalice13yahoo.com.json (PallasAthena)
+  Lv100 Thomas                                             @ Circe
+  Lv100 King                                               @ Dionysus
+  Lv100 Richard                                            @ Oceanus
+  Lv100 Julius                                             @ Oceanus
+
+live2love3laughhotmail.com.json (Lurking)
+  Lv100 Queen                                              @ mwc
+  Lv100 Erin                                               @ mz2
+  Lv 75 William                                            @ Z1
+  Lv100 Jo                                                 @ z4
+
+lyarrockshotmail.com.json (Diaperman)
+  Lv100 Ed                                                 @ 8
+  Lv100 LT                                                 @ 8
+  Lv100 LT                                                 @ 8
+  Lv100 Queen                                              @ DM
+
+mrqbiiiyahoo.com.json (QUE)
+  Lv 74 Oliver                                             @ Brundisium
+  Lv100 Borg                                               @ Emesa
+  Lv 93 Augustine                                          @ Glevum
+  Lv100 Queen                                              @ Mursa
+
+myunglive.com.au.json (Wonga)
+  Lv100 Queen                                              @ 1
+  Lv120 Angel                                              @ 2
+  Lv100 Olive                                              @ 2
+  Lv100 Ella                                               @ 3
+
+nigel.abrown.json (Zaraki Kenpachi)
+  Lv100 Peter                                              @ Acumulator
+  Lv100 Eric                                               @ Manufacto2
+  Lv100 Lou                                                @ Manufacto3
+  Lv100 Queen                                              @ SingaporeS
+
+nigel.abrownblueyonder.co.uk.json (Zaraki Kenpachi)
+  Lv100 Peter                                              @ Acumulator
+  Lv100 Eric                                               @ Manufacto2
+  Lv100 Lou                                                @ Manufacto3
+  Lv100 Queen                                              @ SingaporeS
+
+peterbrannanhotmail.com.json (EmperorSteve)
+  Lv100 Earl                                               @ Biggin Hil
+  Lv100 Joan                                               @ Ealing
+  Lv150 Amerigo Vespucci                                   @ LondonS1
+  Lv100 King                                               @ OldWar
+
+prince_medo_eghotmail.com.json (Krunk)
+  Lv100 Ikhan                                              @ 10
+  Lv100 Brian                                              @ 10
+  Lv100 Queen                                              @ Pyrat Cask
+  Lv100 M                                                  @ Ron Zacapa
+
+ptjes1987.json (Amandacool)
+  Lv 57 Catherine                                          @ Amanda2
+  Lv 53 Angelo                                             @ Amanda2
+  Lv100 King                                               @ Prinz
+  Lv100 Joan                                               @ Tiny
+
+ptjes1987outlook.com.json (Amandacool)
+  Lv 57 Catherine                                          @ Amanda2
+  Lv 53 Angelo                                             @ Amanda2
+  Lv100 King                                               @ Prinz
+  Lv100 Joan                                               @ Tiny
+
+racman1022yahoo.com.json (TheBastard)
+  Lv 68 Eli                                                @ A
+  Lv 16 King                                               @ A
+  Lv 31 Earl                                               @ B
+  Lv100 Queen                                              @ I
+
+raiderdude.json (RAIDERDUDE)
+  Lv100 Olive                                              @ 1ALPHA
+  Lv100 Queen                                              @ 3CHARLIE
+  Lv100 Stan                                               @ 5DELTA
+  Lv100 Elizabeth                                          @ 5DELTA
+
+raiderdudemsn.com.json (RAIDERDUDE)
+  Lv100 Olive                                              @ 1ALPHA
+  Lv100 Queen                                              @ 3CHARLIE
+  Lv100 Stan                                               @ 5DELTA
+  Lv100 Elizabeth                                          @ 5DELTA
+
+richardblack1comcast.net.json (SirRich)
+  Lv100 Ron                                                @ Braavos
+  Lv100 Ina                                                @ France
+  Lv100 Queen                                              @ Vaes Dothr
+  Lv100 Borg                                               @ Zooland
+
+Rwernerlive.com.json (ThePadre)
+  Lv100 William                                            @ Hugs
+  Lv  9 Justin                                             @ Sunshine
+  Lv100 William                                            @ Townsville
+  Lv 84 Queen                                              @ Unicorns
+
+satchman777gmail.com.json (Wazdakka)
+  Lv100 Queen                                              @ Celtra
+  Lv100 Peter                                              @ Celtra
+  Lv 61 Thomas                                             @ Delta
+  Lv 69 Mag                                                @ FireFox
+
+schaef81yahoo.com.json (Nympho)
+  Lv100 Queen                                              @ VV7
+  Lv100 Gene                                               @ VV7
+  Lv 86 Erin                                               @ VV7
+  Lv100 Erin                                               @ VV7
+
+scottwtaylor67gmail.com.json (Osiris)
+  Lv 91 Cleopatra                                          @ Horus
+  Lv100 Ivan                                               @ Set
+  Lv100 Queen                                              @ We Rise
+  Lv100 Will                                               @ We Rise
+
+show_stopper.json (TheStygianLion)
+  Lv100 Queen                                              @ 1Stygia
+  Lv100 Gene                                               @ 2Stygia
+  Lv100 Alexander                                          @ Despair
+  Lv100 Leona                                              @ Despair
+
+show_stopperhotmail.co.uk.json (TheStygianLion)
+  Lv100 Queen                                              @ 1Stygia
+  Lv100 Gene                                               @ 2Stygia
+  Lv100 Alexander                                          @ Despair
+  Lv100 Leona                                              @ Despair
+
+tikaevogmail.com.json (SparkleBitch)
+  Lv100 Tom                                                @ 6Unicorn
+  Lv100 Joan                                               @ 6Unicorn
+  Lv100 Eric                                               @ 7Unicorn
+  Lv100 Queen                                              @ Goddammit
+
+tompapadopoulossympatico.ca.json (RedSpy)
+  Lv100 Gene                                               @ GloveWorld
+  Lv100 King                                               @ MrCrabs
+  Lv100 Brian                                              @ Plankton
+  Lv100 Duke                                               @ XXX
+
+toygarchotmail.com.json (CrazyTurk)
+  Lv100 pol                                                @ Flat
+  Lv 94 Gene                                               @ Turk
+  Lv100 POL                                                @ Turk
+  Lv100 Queen                                              @ Turk
+
+yoni273gmail.com.json (what)
+  Lv100 Thomas                                             @ Best
+  Lv100 Oliver                                             @ gigitie
+  Lv100 Queen                                              @ Thanks
+  Lv100 Mag                                                @ when
+
+0732051539mtnloaded.co.za.json (Krypto)
+  Lv100 Queen                                              @ IronFist
+  Lv100 Oliver                                             @ Mortech
+  Lv100 Thomas                                             @ Zebulon
+
+alf481.json (KCA)
+  Lv100 William                                            @ 1Florence
+  Lv100 Pete                                               @ 5Berlin
+  Lv100 Queen                                              @ 7Moscow
+
+alf481hotmail.com.json (KCA)
+  Lv100 William                                            @ 1Florence
+  Lv100 Pete                                               @ 5Berlin
+  Lv100 Queen                                              @ 7Moscow
+
+asermolaevhotmail.com.json (KingStevee)
+  Lv100 Duke                                               @ Ealing
+  Lv100 Queen                                              @ War
+  Lv150 MacBeth                                            @ Yaounde
+
+bambie.khans.json (Fulminata)
+  Lv100 King                                               @ 1Fulminata
+  Lv 74 Pete                                               @ 2Fulminata
+  Lv100 Eric                                               @ NoQuarter
+
+bambie.khanscomcast.net.json (Fulminata)
+  Lv100 King                                               @ 1Fulminata
+  Lv 74 Pete                                               @ 2Fulminata
+  Lv100 Eric                                               @ NoQuarter
+
+bluepuppy_56.json (CrazyLon)
+  Lv100 Queen                                              @ aFOODa
+  Lv100 Virgil                                             @ Food
+  Lv100 Olive                                              @ WarMobile
+
+bluepuppy_56hotmail.com.json (CrazyLon)
+  Lv100 Queen                                              @ aFOODa
+  Lv100 Virgil                                             @ Food
+  Lv100 Olive                                              @ WarMobile
+
+cane1278yahoo.com.json (canesalive)
+  Lv100 Queen                                              @ SubCity0
+  Lv100 Augustine                                          @ SubCity0
+  Lv 46 Eric                                               @ SubCity2
+
+carolevonyyahoo.com.json (LILFck)
+  Lv100 Julius                                             @ 10Urubaen
+  Lv100 King                                               @ 3Aroughs
+  Lv100 Peter                                              @ 4Belatona
+
+cgilbrichhotmail.com.json (diefvkr)
+  Lv100 A                                                  @ ATL SPAM
+  Lv100 Joan                                               @ ATL SPAM
+  Lv100 Queen                                              @ Bean
+
+chrischen421gmail.com.json (ChodeBitch)
+  Lv100 Queen                                              @ CB2
+  Lv100 Virgil                                             @ Mootown
+  Lv100 Ferdinand                                          @ WoofTown
+
+chupu.69.json (CrazyMax02)
+  Lv100 Elizabeth                                          @ Edmonton
+  Lv150 Henry Hudson                                       @ MillWright
+  Lv100 Queen                                              @ Ottawa
+
+chupu.69hotmail.ca.json (CrazyMax02)
+  Lv100 Elizabeth                                          @ Edmonton
+  Lv150 Henry Hudson                                       @ MillWright
+  Lv100 Queen                                              @ Ottawa
+
+coreymoyers.json (Yero)
+  Lv100 Leif                                               @ Artificer4
+  Lv100 Eric                                               @ Artificer4
+  Lv100 Queen                                              @ BudapestS
+
+coreymoyersyahoo.com.json (Yero)
+  Lv100 Leif                                               @ Artificer4
+  Lv100 Eric                                               @ Artificer4
+  Lv100 Queen                                              @ BudapestS
+
+fishermanaaron1yahoo.com.json (Lord Penitent)
+  Lv100 Leonard                                            @ Dragons
+  Lv100 Queen                                              @ RedDeath
+  Lv100 Henry                                              @ TEUTORIGOS
+
+ironhead2235yahoo.com.json (EjGreat)
+  Lv100 Queen                                              @ 2BeBaka
+  Lv100 Ferdinand                                          @ 2BeBaka
+  Lv100 Christopher                                        @ 7Tikaka
+
+jacquiehassiaoui.json (Charles)
+  Lv100 68Virgil                                           @ Freedom
+  Lv100 King                                               @ Inspire
+  Lv 36 Stan                                               @ Solitude
+
+jacquiehassiaouihotmail.co.uk.json (Charles)
+  Lv100 68Virgil                                           @ Freedom
+  Lv100 King                                               @ Inspire
+  Lv 36 Stan                                               @ Solitude
+
+Jhoopes01yahoo.com.json (LORDJAKE1)
+  Lv100 Richard                                            @ 1
+  Lv100 Queen                                              @ 6
+  Lv100 Leif                                               @ 6
+
+jmtomeihotmail.com.json (OldMadLion)
+  Lv100 Queen                                              @ Grievous
+  Lv100 King                                               @ Hail2Lion
+  Lv100 Ed                                                 @ Highlander
+
+jtwc1hotmail.com.json (bcjt)
+  Lv100 King                                               @ Bucharest
+  Lv100 Earl                                               @ Bucharest
+  Lv100 V                                                  @ Wmiller
+
+katastrophe.2012.json (CrazySiA)
+  Lv150 Charlemagne                                        @ CrazySIA
+  Lv100 William                                            @ Ghostown
+  Lv100 King                                               @ SanJose
+
+katastrophe.2012hotmail.com.json (CrazySiA)
+  Lv150 Charlemagne                                        @ CrazySIA
+  Lv100 William                                            @ Ghostown
+  Lv100 King                                               @ SanJose
+
+kelvinths.json (Noggin)
+  Lv100 Queen                                              @ Get away
+  Lv100 Liz                                                @ My queen
+  Lv100 William                                            @ Pelocontet
+
+kelvinthsyahoo.com.json (Noggin)
+  Lv100 Queen                                              @ Get away
+  Lv100 Liz                                                @ My queen
+  Lv100 William                                            @ Pelocontet
+
+kugsliteyahoo.com.json (KUGS)
+  Lv100 Queen                                              @ 444
+  Lv100 Earl                                               @ mars
+  Lv100 Leona                                              @ zeus
+
+langley_timothyyahoo.com.json (Z0mbieCorp)
+  Lv100 Justin                                             @ DayOfDead
+  Lv100 Queen                                              @ HellOfDead
+  Lv100 Borg                                               @ HellOfDead
+
+luimi_revolution.json (TheSmilingLion)
+  Lv100 Virgil                                             @ Tviblindi
+  Lv100 Ron                                                @ Valgautr
+  Lv100 Queen                                              @ Valkjosand
+
+luimi_revolutionhotmail.com.json (TheSmilingLion)
+  Lv100 Virgil                                             @ Tviblindi
+  Lv100 Ron                                                @ Valgautr
+  Lv100 Queen                                              @ Valkjosand
+
+martingerard07aol.com.json (TH4N0S)
+  Lv 89 Mag                                                @ 3Saint
+  Lv 71 Otto                                               @ 7Saint
+  Lv100 Queen                                              @ FightOrDie
+
+matgcqld.com.json (nailbomb)
+  Lv100 Oliver                                             @ Asparukh
+  Lv100 Leona                                              @ Genghis
+  Lv100 Queen                                              @ Ogedei
+
+nathan.biggs23.json (ThePunisher)
+  Lv100 Queen                                              @ 1
+  Lv100 Earl                                               @ 1
+  Lv100 Ian                                                @ 1
+
+nathan.biggs23yahoo.com.json (ThePunisher)
+  Lv100 Queen                                              @ 1
+  Lv100 Earl                                               @ 1
+  Lv100 Ian                                                @ 1
+
+patrick_fnnyahoo.com.json (CrazyDaisy)
+  Lv 82 Elizabeth                                          @ 2rig
+  Lv100 Caesar                                             @ cw
+  Lv100 Queen                                              @ LARGO
+
+pausshantytown.st.json (beard)
+  Lv100 Eric                                               @ 6
+  Lv100 Christopher                                        @ 8
+  Lv100 Queen                                              @ New city
+
+Protikahlteknologieslive.com.json (Protikahl)
+  Lv100 Ivan                                               @ 4
+  Lv100 Queen                                              @ 9
+  Lv100 Leonard                                            @ 9
+
+roboneillbtconnect.com.json (666best)
+  Lv100 pol                                                @ BLOODLINE
+  Lv100 Queen                                              @ GOLDEN
+  Lv100 Thomas                                             @ New city
+
+rockfriedmanyahoo.com.json (Incindra)
+  Lv100 Catherine                                          @ 4KhanQuest
+  Lv100 Augustine                                          @ 5ReKhan
+  Lv100 Queen                                              @ Atlantis
+
+rtharp01.json (bumblebie)
+  Lv100 Leo                                                @ Danke
+  Lv100 Queen                                              @ Hell0
+  Lv 73 Ella                                               @ Hell0
+
+rtharp01gmail.com.json (bumblebie)
+  Lv100 Leo                                                @ Danke
+  Lv100 Queen                                              @ Hell0
+  Lv 73 Ella                                               @ Hell0
+
+ryaneilerrocketmail.com.json (robologan)
+  Lv100 Tom                                                @ robotium
+  Lv100 Queen                                              @ Ryanopli
+  Lv100 Caesar                                             @ Ryanopli
+
+simonsmall-voices.net.json (Tornado)
+  Lv100 Queen                                              @ Ibbenburen
+  Lv100 Queen                                              @ Infarction
+  Lv100 Caesar                                             @ Infarction
+
+skinnerindustriesyahoo.com.json (Logaholic)
+  Lv100 Queen                                              @ 1Scubatron
+  Lv100 Brian                                              @ Treviso
+  Lv100 Ivan                                               @ Zhu Hai
+
+tprrphhotmail.com.json (Chipmunk)
+  Lv100 Richard                                            @ Drasnia
+  Lv100 Queen                                              @ Phalanx
+  Lv100 Tom                                                @ Phalanx
+
+andycaddcomcast.net.json (Perkunas)
+  Lv100 Queen                                              @ DCarrotD
+  Lv 32 Leonard                                            @ GQuince
+
+bigger.2007outlook.com.json (GuNsNrOsEs)
+  Lv100 Ron                                                @ DefLeppard
+  Lv100 Queen                                              @ Metallica
+
+bigger.2008.json (CrazyJR)
+  Lv120 Alex                                               @ Arvida
+  Lv100 Queen                                              @ Mistassini
+
+bigger.2008hotmail.com.json (CrazyJR)
+  Lv120 Alex                                               @ Arvida
+  Lv100 Queen                                              @ Mistassini
+
+bigger.2009.json (Cedric90)
+  Lv100 Queen                                              @ BarExpress
+  Lv150 Wartislaw III, Duke of Pomerania                   @ Welcome
+
+bigger.2009outlook.com.json (Cedric90)
+  Lv100 Queen                                              @ BarExpress
+  Lv150 Wartislaw III, Duke of Pomerania                   @ Welcome
+
+Bobsfakeid2yahoo.com.json (TriGunSK)
+  Lv100 Queen                                              @ 1Anbracka
+  Lv100 Angelo                                             @ SmashNGrab
+
+car1029olexcite.com.json (doggystyle)
+  Lv100 Queen                                              @ apple
+  Lv100 Louis                                              @ Batr
+
+danieltestdragonfly.com.json (Cluricaun)
+  Lv100 Ferdinand                                          @ Antipathy
+  Lv100 Queen                                              @ Penitant
+
+dollylolly13hotmail.co.uk.json (BB)
+  Lv100 King                                               @ bongos
+  Lv100 Jo                                                 @ Chippy
+
+Evony.niko.json (TheTraveller)
+  Lv100 Borg                                               @ 2
+  Lv100 King                                               @ 41
+
+Evony.nikoaol.com.json (TheTraveller)
+  Lv100 Borg                                               @ 2
+  Lv100 King                                               @ 41
+
+foxtrotbest12yahoo.ie.json (Deathlock)
+  Lv100 King                                               @ galway
+  Lv100 Lou                                                @ galway
+
+gyulez.json (Merida)
+  Lv100 Ivan                                               @ Mitch
+  Lv100 King                                               @ Stuborn
+
+gyulezgmail.com.json (Merida)
+  Lv100 Ivan                                               @ Mitch
+  Lv100 King                                               @ Stuborn
+
+haubleyahoo.com.json (Flandore)
+  Lv100 Queen                                              @ Lollipop
+  Lv100 Jo                                                 @ Tomato
+
+hugo.evans56.json (LadyAsci)
+  Lv100 Queen                                              @ Hugo
+  Lv100 Ina                                                @ New city
+
+hugo.evans56btinternet.com.json (LadyAsci)
+  Lv100 Queen                                              @ Hugo
+  Lv100 Ina                                                @ New city
+
+josephungmmclearwire.net.json (ZigMa)
+  Lv100 King                                               @ Zig
+  Lv100 Louis                                              @ Zig
+
+lavaye18yahoo.com.json (85TheEnemy)
+  Lv100 Queen                                              @ 4L
+  Lv100 Jo                                                 @ 5I
+
+mcmhelyahoo.com.json (TIKAPEDIA)
+  Lv100 Catherine                                          @ Biscuits
+  Lv100 Queen                                              @ Steak
+
+mikehmikeyahoo.com.json (Lord ZIVA)
+  Lv100 Queen                                              @ Z1
+  Lv100 Polo                                               @ Z6
+
+neo36427.json (Recon)
+  Lv100 Gene                                               @ Republic
+  Lv100 Queen                                              @ Rome
+
+neo36427yahoo.com.json (Recon)
+  Lv100 Gene                                               @ Republic
+  Lv100 Queen                                              @ Rome
+
+orrsimon78.json (SweetPain)
+  Lv100 August                                             @ 01
+  Lv100 Queen                                              @ WARWILLY
+
+orrsimon78yahoo.com.json (SweetPain)
+  Lv100 August                                             @ 01
+  Lv100 Queen                                              @ WARWILLY
+
+pepsi1988outlook.com.json (Peps1)
+  Lv100 Queen                                              @ 4
+  Lv100 Francis                                            @ Hello
+
+pttambigpond.com.json (MadMum)
+  Lv 64 Ivan                                               @ lilSav
+  Lv100 King                                               @ New city
+
+rainman3232.json (LastKing)
+  Lv100 Queen                                              @ DeadKing
+  Lv100 Stan                                               @ DeadKing
+
+rainman3232gmail.com.json (LastKing)
+  Lv100 Queen                                              @ DeadKing
+  Lv100 Stan                                               @ DeadKing
+
+rnrkhans.json (RockKandee)
+  Lv100 Queen                                              @ 1
+  Lv 61 Ivan                                               @ 1
+
+rnrkhansgmail.com.json (RockKandee)
+  Lv100 Queen                                              @ 1
+  Lv 61 Ivan                                               @ 1
+
+satchman69.json (SATCH)
+  Lv150 Marco Polo                                         @ Kutahya
+  Lv100 King                                               @ THOR
+
+satchman69hotmail.com.json (SATCH)
+  Lv150 Marco Polo                                         @ Kutahya
+  Lv100 King                                               @ THOR
+
+Seaquest85.json (Clive_203)
+  Lv100 Queen                                              @ 0
+  Lv 67 Ina                                                @ 0
+
+Seaquest85yahoo.com.json (Clive_203)
+  Lv100 Queen                                              @ 0
+  Lv 67 Ina                                                @ 0
+
+thedaneinozhotmail.com.json (Kariana)
+  Lv100 Stan                                               @ Asgard
+  Lv100 Queen                                              @ Warmobile
+
+thenqai8ms2.json (Borg4914126010)
+  Lv  5 Otto                                               @ BORG
+  Lv  3 Elizabeth                                          @ BORG
+
+alliknow2002yahoo.ca.json (TheGloriousFallen)
+  Lv100 Queen                                              @ HATE YOU
+
+buckskinhorse.json (Bluehorse)
+  Lv100 Queen                                              @ sun
+
+buckskinhorsehotmail.com.json (Bluehorse)
+  Lv100 Queen                                              @ sun
+
+chrishetelus.net.json (Fentanyl)
+  Lv100 Queen                                              @ Versedia
+
+chrissye-1netzero.net.json (LaneyKins)
+  Lv100 King                                               @ Sparkles
+
+cobra-evonyhotmail.co.uk.json (Cobra)
+  Lv100 Queen                                              @ KissMyAss
+
+Cold_fear187hotmail.com.json (ElmerFud)
+  Lv100 Queen                                              @ iron1
+
+connolly.json (Blown)
+  Lv100 Queen                                              @ Ava
+
+connollybigpond.net.au.json (Blown)
+  Lv100 Queen                                              @ Ava
+
+dalefreeburg.json (Simikiel Angel of Vengeance)
+  Lv100 Queen                                              @ V1
+
+dalefreeburgyahoo.com.json (Simikiel Angel of Vengeance)
+  Lv100 Queen                                              @ V1
+
+davidenvoyhotmail.com.json (DavidEnvoy)
+  Lv100 Queen                                              @ Queens
+
+dirklaw.json (JesseJames)
+  Lv100 Queen                                              @ Sabotage
+
+dirklawyahoo.com.json (JesseJames)
+  Lv100 Queen                                              @ Sabotage
+
+draco810.json (ZATCH)
+  Lv100 Queen                                              @ balls
+
+draco810msn.com.json (ZATCH)
+  Lv100 Queen                                              @ balls
+
+erez_11yahoo.com.json (Troll)
+  Lv100 Queen                                              @ KR5
+
+freeze888outlook.com.json (MATCH)
+  Lv100 Queen                                              @ MOE
+
+fulonhotmail.com.json (Lon)
+  Lv 96 Queen                                              @ FULON
+
+Jac_6788yahoo.com.json (PureLon)
+  Lv100 King                                               @ A
+
+jasonjgenerator.com.json (WATCH)
+  Lv100 Queen                                              @ WORKERS
+
+judson.brown.json (MJunior)
+  Lv100 Queen                                              @ Peterborough
+
+judson.brownrcsdk12.org.json (MJunior)
+  Lv100 Queen                                              @ Peterborough
+
+ksronnie88gmail.com.json (Cateran)
+  Lv100 Queen                                              @ Hail2Lion
+
+lucasgaethhotmail.com.json (MastaLon)
+  Lv100 Queen                                              @ w Iron w
+
+Maltese_minx.json (Simao)
+  Lv100 Queen                                              @ Absolution
+
+Maltese_minxhotmail.com.json (Simao)
+  Lv100 Queen                                              @ Absolution
+
+mantonucci.json (Trish)
+  Lv100 King                                               @ Latte
+
+mantonucciyahoo.com.json (Trish)
+  Lv100 King                                               @ Latte
+
+mdepender.json (BadHugo)
+  Lv100 King                                               @ Atonement
+
+mdependerziggo.nl.json (BadHugo)
+  Lv100 King                                               @ Atonement
+
+pcmentors.json (Draknor)
+  Lv100 Queen                                              @ Clappers
+
+pcmentorshotmail.com.json (Draknor)
+  Lv100 Queen                                              @ Clappers
+
+randomdragon2hotmail.com.json (Ogliss)
+  Lv100 Queen                                              @ Warghaven
+
+rochutrocketmail.com.json (Rochut)
+  Lv100 Queen                                              @ TBONE
+
+rsimoesgmx.com.json (DickDaily)
+  Lv100 Queen                                              @ GnarlyWood
+
+simoes134.json (Londres)
+  Lv100 Queen                                              @ TANK
+
+simoes134hotmail.com.json (Londres)
+  Lv100 Queen                                              @ TANK
+
+spambillrocketmail.com.json (Celvar)
+  Lv100 Queen                                              @ 6
+
+timothyvogel1990gmail.com.json (Og1iss)
+  Lv100 Queen                                              @ SubCity9
+
+williamrlongjrgmail.com.json (bg1)
+  Lv100 Queen                                              @ BGIV

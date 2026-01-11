@@ -1,0 +1,1214 @@
+================================================================================
+  EVONY SOL FILE ANALYSIS REPORT
+  Generated: 2025-12-28 17:20:08
+================================================================================
+
+## SUMMARY
+----------------------------------------
+Total SOL files scanned: 4677
+Accounts found: 124
+Scripts found: 1209
+City configs found: 2465
+Troop configs found: 34
+
+================================================================================
+## ACCOUNT CREDENTIALS
+================================================================================
+
+### Accounts WITH Passwords (124):
+----------------------------------------
+
+  Email: Cold_fear187@hotmail.com
+  Password: snowball
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9998 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: Cotton_candy_for_u@yahoo.com
+  Password: Kbnj1657
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9999 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: Midnightemissary@gmail.com
+  Password: Vidnight
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: Mistersergio13@gmail.com
+  Password: Smoofers777
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9996 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: Rwerner@live.com
+  Password: PapaBear2013
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9996 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: Tarasdbe@yahoo.com
+  Password: bojangles5
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: andrew@flirtomatic.com
+  Password: valhalla9
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: andycadd@comcast.net
+  Password: 724722801a
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: apmjunior@aol.com
+  Password: AJcrazytons765
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: asermolaev@hotmail.com
+  Password: theBUSHsmells123
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: auto180@yahoo.com
+  Password: yonkers265
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: azndrugz@yahoo.com
+  Password: timeline1
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: bambie.khans@comcast.net
+  Password: P3tsb1te
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: barryronnie1965@hotmail.com
+  Password: nathan2002
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: baseball_junky3@yahoo.com
+  Password: cookie
+  Server: cc2 (Parapet)
+  Proxy: : ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: bigger.2007@outlook.com
+  Password: cedric26051990
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: bigger.2008@hotmail.com
+  Password: 69arvida1967
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: bigger.2009@outlook.com
+  Password: 69arvida1967
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: bill.prins@gmail.com
+  Password: macoss
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: bobsfakeid2@yahoo.com
+  Password: $BGrB7u76
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: callingcrowes@hotmail.com
+  Password: VVkitten7
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: celticchef2000@aol.com
+  Password: evony123
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9998 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: chemistrywizard2@yahoo.ca
+  Password: 69wombat69
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: chrischen421@gmail.com
+  Password: macoss
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9998 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: chrissye-1@netzero.net
+  Password: Cmstrec1181
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: confused_gemini_goddess@yahoo.com
+  Password: cedric26051990
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: connolly@bigpond.net.au
+  Password: knights29
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: dal163@bigpond.com.au
+  Password: soup411
+  Server: cc2 (Parapet)
+  Proxy: 51.159.185.244:12007 (ss5)
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: dalefreeburg@yahoo.com
+  Password: 7sPtEzAkURV9g7Ab
+  Server: cc2 (Parapet)
+  Proxy: 51.159.185.244:12001 (ss5)
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: danlavoie1@hotmail.com
+  Password: blamecanada1066
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9995 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: davidenvoy@hotmail.com
+  Password: guydav
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9999 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: dawnbunny101@yahoo.com
+  Password: cheekytoes
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: diamonddave960@yahoo.com
+  Password: fran916
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: domexdan@yahoo.com
+  Password: chainer88
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: dustysoccer0@hotmail.com
+  Password: soccer
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9999 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: e.hi42@yahoo.com
+  Password: balls666
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9996 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: edward660@hotmail.com
+  Password: fruit123
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9996 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: elacetay12@yahoo.com
+  Password: cookie
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9996 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: erich.schlegel@us.fujitsu.com
+  Password: 4thebagel
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9998 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: fearmenows@yahoo.com
+  Password: Hoosier2010
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: fnice0008@gmail.com
+  Password: zx01070107
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: fnice@q.com
+  Password: ZX0107Zx0107
+  Server: cc2 (Parapet)
+  Proxy: : ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: foxtrotbest12@yahoo.ie
+  Password: pinkranger
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: frank.gower@sympatico.ca
+  Password: Farmer@1970
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9995 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: franky_franky1551@yahoo.com
+  Password: frichy1551
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: garyjoint1@yahoo.com
+  Password: soup411
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: gdmarkus@hotmail.com
+  Password: guydav
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9999 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: godivaevony@yahoo.com
+  Password: SirensSoli2D
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: goose22evony@gmail.com
+  Password: Austin01
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9995 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: gozdev@hotmail.com
+  Password: 20467480
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: grosy@musc.edu
+  Password: Catapult1
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: gutter_maintenance@iinet.net.au
+  Password: denagi71
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9998 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: haydenermel@yahoo.com
+  Password: rollercoaster
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: hgrowden@hotmail.com
+  Password: hayden1979
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: hpu333@yahoo.com
+  Password: Godisgood5656
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9996 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: hunygurl67@yahoo.com
+  Password: guiness3
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9998 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: hurlothrumbo@iprimus.com.au
+  Password: 0ne2$even9
+  Server: cc2 (Parapet)
+  Proxy: 51.159.185.244:12008 (ss5)
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: iikissmygritsii@yahoo.com
+  Password: Kbnj1657
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9997 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: jacquiehassiaoui@hotmail.co.uk
+  Password: Liberty4Everyone
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: AutoEvony2.swf
+
+  Email: jameson_mckee@live.com
+  Password: merda123
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9997 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: janette-scott@hotmail.com
+  Password: system1019876
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: jburkhardt0@gmail.com
+  Password: cookie
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: jenspast1991@yahoo.com
+  Password: redfox
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9999 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: jjjones@iinet.net.au
+  Password: SouthOfHeaven
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: jnsmu97@aol.com
+  Password: yonkers265
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: jtwc1@hotmail.com
+  Password: beer2002
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: judson.brown@rcsdk12.org
+  Password: kissmyass69
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: kakarot1973@hotmail.com
+  Password: 1qaz2wsxed
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: katastrophe.2012@hotmail.com
+  Password: 69arvida1967
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: krystalice13@yahoo.com
+  Password: chainer88
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: langley_timothy@yahoo.com
+  Password: thetrooper
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9996 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: lavaye18@yahoo.com
+  Password: Dugon1985
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9997 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: lyarrocks@hotmail.com
+  Password: purenappy5
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9999 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: marknewsome1@sky.com
+  Password: Newsome@1970
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: AutoEvony2.swf
+
+  Email: martyevony1@yahoo.co.uk
+  Password: 0will2Live
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: masterramrod@hotmail.co.uk
+  Password: silentassassin
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9998 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: mat@gcqld.com
+  Password: 12coo35f
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: medri15@yahoo.com
+  Password: macoss
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9998 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: mikehmike@yahoo.com
+  Password: 7sPtEzAkURV9g7Ab
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: mrqbiii@yahoo.com
+  Password: cheesehead
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9996 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: myung@live.com.au
+  Password: stevensm
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: nauticalterm@gmail.com
+  Password: valhalla9
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: njs420@hotmail.com
+  Password: grainne12
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: oneandonlybbq@bellsouth.net
+  Password: piggy123abc
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9995 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: patchwork_77@yahoo.com
+  Password: ytrewq
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9997 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: patrick_fnn@yahoo.com
+  Password: guiness3
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9997 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: paus@shantytown.st
+  Password: main11
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9995 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: peterbrannan@hotmail.com
+  Password: theBUSHsmells123
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: AutoEvony2.swf
+
+  Email: piendro@gmail.com
+  Password: brendan11
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: pllyankees@hotmail.com
+  Password: guiness3
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: prince_medo_eg@hotmail.com
+  Password: jojo1999
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: pttam@bigpond.com
+  Password: cookie
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: q_t_p_i_e99@yahoo.com
+  Password: 102905
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9997 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: racman1022@yahoo.com
+  Password: rac1022
+  Server: cc2 (Parapet)
+  Proxy: 51.159.185.244:12004 (ss5)
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: randomdragon2@hotmail.com
+  Password: GetsuaTenshou
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: revell753@hotmail.com
+  Password: vadar01
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9999 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: robcuaw2250@aol.com
+  Password: Repair69
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9999 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: ruud@van-wersch.nl
+  Password: horsemen
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9995 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: saphires1@hotmail.com
+  Password: GemsNJewels
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: savage_territory@mocospace.com
+  Password: cookie
+  Server: cc2 (Parapet)
+  Proxy: : ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: schaef81@yahoo.com
+  Password: soup411
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9995 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: scream.your.heartout@windowslive.com
+  Password: cookie
+  Server: cc2 (Parapet)
+  Proxy: : ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: sidnypearl@yahoo.com
+  Password: shawne
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: simon@small-voices.net
+  Password: man4T33
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: sirsammy318@yahoo.com
+  Password: grainne12
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: sixandclimbing69@gmail.com
+  Password: missy123
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9999 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: skinnerindustries@yahoo.com
+  Password: shaggin78
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9997 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: swisspoe69@yahoo.com
+  Password: shawne
+  Server: cc2 (Parapet)
+  Proxy: 51.159.185.244:12006 (ss5)
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: tamezsimon@live.com
+  Password: tamez1291
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: toygarc@hotmail.com
+  Password: nailbomb123
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: travelinm004@yahoo.com
+  Password: panthers
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: twoguys@mail.com
+  Password: bullet2004
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9997 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: varun123patel@yahoo.com
+  Password: toygar78
+  Server: cc2 (Parapet)
+  Proxy: : ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: wally.nino@yahoo.com
+  Password: 10molly10
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9998 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: watsonj50@hotmail.com
+  Password: cookie
+  Server: cc2 (Parapet)
+  Proxy: : ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: wesleyhalling@yahoo.com
+  Password: steve2315
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9996 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: wjgonder@gmail.com
+  Password: J3d!ma5ter
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: ykamhong@yahoo.com
+  Password: 000000
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9998 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: ypgros@gmail.com
+  Password: yardstickredneck98
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9997 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: yucon1966@yahoo.com
+  Password: vermonter1
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9999 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: yucon2466@yahoo.com
+  Password: 1vermonter
+  Server: cc2 (Parapet)
+  Proxy: :8080 ()
+  Auto-Login: Yes
+  Source: roboevony.exe
+
+  Email: zak21@blueyonder.co.uk
+  Password: december
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9997 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: zsk54321@yahoo.com
+  Password: Football234
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9996 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+  Email: zurt@mail.com
+  Password: 20467480
+  Server: cc2 (Parapet)
+  Proxy: 127.0.0.1:9997 (ss5)
+  Auto-Login: No
+  Source: roboevony.exe
+
+
+### Accounts WITHOUT Passwords (0):
+----------------------------------------
+
+
+================================================================================
+## SCRIPTS AND AUTOMATION
+================================================================================
+
+### Script 1 (from: roboevony.exe)
+----------------------------------------
+  now:
+    ///=============
+// Troop building goals //
+///=============
+keepresource 501,133 f:5m 200m
+priorityFarming 5 b:500 b:500,t:500 10 480
+priorityFarming 4 b:400 b:400,t:400 10 480
+priorityFarming 3 b:30...
+
+### Script 2 (from: roboevony.exe)
+----------------------------------------
+  now:
+    ///=============
+// Troop building goals //
+///=============
+priorityFarming 5 b:500 b:500,t:500 10 480
+priorityFarming 4 b:400 b:400,t:400 10 480
+priorityFarming 3 b:300 b:300,t:300 10 480
+Config Dum...
+
+### Script 3 (from: roboevony.exe)
+----------------------------------------
+  now:
+    ///=============
+// Troop building goals //
+///=============
+keepresources 537,60 f:5m 200m
+priorityFarming 5 b:500 b:500,t:500 10 480
+priorityFarming 4 b:400 b:400,t:400 10 480
+priorityFarming 3 b:30...
+
+### Script 4 (from: roboevony.exe)
+----------------------------------------
+  now:
+    ///=============
+// Troop building goals //\getfblinks
+///=============
+keepresource 501,133 f:5m 200m
+priorityFarming 5 b:500 b:500,t:500 10 480
+priorityFarming 4 b:400 b:400,t:400 10 480
+priorityFar...
+
+### Script 5 (from: roboevony.exe)
+----------------------------------------
+  now:
+    maintown
+keepresources 537,60 f:5m 200m
+priorityFarming 5 b:500 b:500,t:500 10 480
+priorityFarming 4 b:400 b:400,t:400 10 480
+priorityFarming 3 b:300 b:300,t:300 10 480
+Config Dumping:2,hero:1,Gate:.1...
+
+### Script 6 (from: roboevony.exe)
+----------------------------------------
+  now:
+    ///=============
+// Troop building goals //
+///=============
+keepresources 537,60 f:5m 10m
+priorityFarming 5 b:500 b:500,t:500 10 480
+priorityFarming 4 b:400 b:400,t:400 10 480
+priorityFarming 3 b:300...
+
+### Script 7 (from: roboevony.exe)
+----------------------------------------
+  now:
+    ///=============
+// Troop building goals //
+///=============
+keepresources 537,60 f:5m 291m
+keepresources 537,60 f:5m 200m
+priorityFarming 5 b:500 b:500,t:500 10 480
+priorityFarming 4 b:400 b:400,t:40...
+
+### Script 8 (from: roboevony.exe)
+----------------------------------------
+  now:
+    ///=======================================
+// npc building & farming goals
+///=======================================
+keepresources 537,60 f:5m 200m
+priorityFarming 5 b:500 b:500,t:500 10 480
+priority...
+
+### Script 9 (from: roboevony.exe)
+----------------------------------------
+  now:
+    ///=============
+// Troop building goals //
+///=============
+keepresources 537,60 f:5m 200m
+priorityFarming 5 b:500 b:500,t:500 10 480
+priorityFarming 4 b:400 b:400,t:400 10 480
+priorityFarming 3 b:30...
+
+### Script 10 (from: roboevony.exe)
+----------------------------------------
+  now:
+    distancepolicy 30 30 30 30
+troop r:100000000000,b:25000,t:50000
+config buildnpc:5,valley:10,trade:1,comfort:4,gate:.1,npclimit:1,npc:5,dumping:10,nocapture:1,training:1,extrafood:1
+valleytype lake
+gat...
+
+... and 1199 more scripts
+
+
+================================================================================
+## TROOP CONFIGURATIONS
+================================================================================
+
+### Troop Config 1 (from: roboevony.exe)
+----------------------------------------
+  now: [{'troopCfg': 'wo:0', 'mx_internal_uid': 'C192619E-ADE7-7B03-D55C-BEFA1102BCF6', 'label': 'none'}, {'troopCfg': 'a:27000,s:1000,b:20000,cp:74000,sw:1000,p:1000', 'mx_internal_uid': '434DDE64-740D-CE93-EBC7-BEFBBEE58B87', 'label': 'wave1'}, {'troopCfg': 'a:10000,w:1000,s:1000,r:100000,b:86000,sw:1000,p:1000', 'mx_internal_uid': '36C5F92E-645C-D4D1-304E-126841878F46', 'label': 'bighitter'}, {'troopCfg': 'w:1000,s:1000,r:3000,b:10000,cp:84000,p:1000', 'mx_internal_uid': '846432F7-0AAE-8214-6DAB-16F
+
+### Troop Config 2 (from: roboevony.exe)
+----------------------------------------
+  now: [{'troopCfg': 'wo:0', 'mx_internal_uid': 'C192619E-ADE7-7B03-D55C-BEFA1102BCF6', 'label': 'none'}, {'troopCfg': 'a:27000,s:1000,b:20000,cp:74000,sw:1000,p:1000', 'mx_internal_uid': '434DDE64-740D-CE93-EBC7-BEFBBEE58B87', 'label': 'wave1'}, {'troopCfg': 'a:10000,w:1000,s:1000,r:100000,b:86000,sw:1000,p:1000', 'mx_internal_uid': '36C5F92E-645C-D4D1-304E-126841878F46', 'label': 'bighitter'}, {'troopCfg': 'w:1000,s:1000,r:3000,b:10000,cp:84000,p:1000', 'mx_internal_uid': '846432F7-0AAE-8214-6DAB-16F
+
+### Troop Config 3 (from: roboevony.exe)
+----------------------------------------
+  now: [{'mx_internal_uid': '37C48E54-5FA0-662C-5A6F-F1343CAE28A9', 'troopCfg': 'wo:0', 'label': 'none'}, {'mx_internal_uid': '07F628CF-A529-6522-0E7D-F134E519A9DE', 'troopCfg': 'a:91600,w:2000,s:2000,sw:2000,p:2000,c:300,cata:100', 'label': 'temp'}]
+
+### Troop Config 4 (from: roboevony.exe)
+----------------------------------------
+  now: [{'troopCfg': 'wo:0', 'mx_internal_uid': '8DE46529-CFC7-5F8F-E803-25CFDCCC4F23', 'label': 'none'}, {'troopCfg': 'a:50000,w:25,s:25,sw:25,p:25,c:25,wo:25', 'mx_internal_uid': '5E76FAE8-850E-0DFF-B3AB-25D0BE15EB39', 'label': 'Lv10Lake'}]
+
+### Troop Config 5 (from: roboevony.exe)
+----------------------------------------
+  now: [{'troopCfg': 'wo:0', 'mx_internal_uid': '6F8CC416-0ED8-80E0-5B51-762374918C7F', 'label': 'none'}, {'troopCfg': 't:1000,c:99000', 'mx_internal_uid': '4C50F7F0-14E3-5930-26CD-7623E53DD35A', 'label': '1'}]
+
+
+================================================================================
+## CITY CONFIGURATIONS
+================================================================================
+
+### City Config 1 (from: schaef81@yahoo.com)
+----------------------------------------
+  goals: []
+  sindex: 0
+  debugMask: 1
+  index: 0
+  scripts: []
+
+### City Config 2 (from: schaef81@yahoo.com)
+----------------------------------------
+  goals: []
+  sindex: 0
+  debugMask: 1
+  index: 0
+  scripts: []
+
+### City Config 3 (from: schaef81@yahoo.com)
+----------------------------------------
+  goals: []
+  sindex: 0
+  debugMask: 1
+  index: 0
+  scripts: []
+
+### City Config 4 (from: schaef81@yahoo.com)
+----------------------------------------
+  goals: []
+  sindex: 0
+  debugMask: 1
+  index: 0
+  scripts: []
+
+### City Config 5 (from: schaef81@yahoo.com)
+----------------------------------------
+  goals: []
+  sindex: 0
+  debugMask: 1
+  index: 0
+  scripts: []
+
+
+================================================================================
+## ALL DATA TYPES FOUND
+================================================================================
+
+Unique data keys across all SOL files (133):
+  - AttackFocus
+  - BalloonAttackWarning
+  - Minimize
+  - MinimizeToTray
+  - OneAccountRecorded
+  - TTSAttackWarning
+  - Title
+  - allow
+  - allowThirdPartyLSOAccess
+  - allowsecure
+  - always
+  - alwayssecure
+  - attackwarning
+  - authorizedFeaturesExpiry
+  - autoLogin
+  - autoRun
+  - autoUpdateDefaultUpdated
+  - autoUpdateDisabled
+  - autoUpdateInterval
+  - autoUpdateLastCheck
+  - autologin
+  - autorun
+  - autoscripts
+  - bandwidth
+  - captchaAutoSolve
+  - captchaDelay
+  - captchaNPC1
+  - captchaNPC2
+  - channel
+  - cities
+  - claimpackages
+  - colorBACKGROUND
+  - colorENEMY_ALLIANCE
+  - colorFRIEND_ALLIANCE
+  - colorFlat
+  - colorFlat10
+  - colorFlat5
+  - colorMIDDLE_ALLIANCE
+  - colorNO_ALLIANCE
+  - colorNPC
+  - colorNPC10
+  - colorNPC5
+  - colorOTHER_ALLIANCE
+  - colorPLAYER
+  - colorSAME_ALLIANCE
+  - colorUNKOWNFIELD
+  - compatible
+  - completequests
+  - conn
+  - connectionCheckDelay
+  - connectioncheckdelay
+  - crossdomainAllow
+  - crossdomainAlways
+  - customSay
+  - debugMask
+  - debugMasq
+  - defaultalways
+  - defaultcamera
+  - defaultklimit
+  - defaultmicrophone
+  - disallowP2PUplink
+  - domains
+  - echosuppression
+  - farmingmode
+  - fbLogin
+  - forumkey
+  - gain
+  - goals
+  - height
+  - hstsEnabled
+  - hstsIncSubDomain
+  - hstsMaxAge
+  - hstsStartTime
+  - index
+  - ip
+  - itemUse
+  - klimit
+  - lastAllianceReportTime
+  - logColors
+  - maintenance
+  - maximized
+  - maxprice
+  - maxtrade
+  - muteOn
+  - netbookMode
+  - netbookmode
+  - noamuletmessages
+  - noattackreports
+  - nosystemmessages
+  - notradingreports
+  - now
+  - os_skypeprotocol
+  - os_timezone
+  - os_version
+  - panel
+  - password
+  - port
+  - resetfh
+  - safefullscreen
+  - sc
+  - sce
+  - scripts
+  - scriptstartline
+  - secure
+  - secureCrossDomainCacheSize
+  - server
+  - showsettings
+  - sindex
+  - sound
+  - subsOn
+  - testMode
+  - timerMode
+  - title
+  - trustedPaths
+  - ui_accounts
+  - ui_country
+  - ui_installdate
+  - ui_language
+  - ui_version
+  - username
+  - utma
+  - utmb
+  - utmz
+  - value
+  - visit
+  - visitorKey
+  - volumeLevel
+  - warreports
+  - width
+  - windowSettings
+  - windowlessDisable
+  - x
+  - y

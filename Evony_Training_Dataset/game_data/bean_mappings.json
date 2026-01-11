@@ -1,0 +1,2119 @@
+{
+  "CastleBean": {
+    "fields": [
+      {
+        "name": "_1225376224herosArray",
+        "type": "ArrayCollection",
+        "access": "private",
+        "description": "Property: tradesArray",
+        "obfuscated_name": "_1225376224herosArray"
+      },
+      {
+        "name": "_309360144colonyBeansArray",
+        "type": "ArrayCollection",
+        "access": "private",
+        "description": "Property: tradesArray",
+        "obfuscated_name": "_309360144colonyBeansArray"
+      },
+      {
+        "name": "_452521375powerlevel",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_452521375powerlevel"
+      },
+      {
+        "name": "_1458231286tradesArray",
+        "type": "ArrayCollection",
+        "access": "private",
+        "description": "Property: tradesArray",
+        "obfuscated_name": "_1458231286tradesArray"
+      },
+      {
+        "name": "_3355id",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_3355id"
+      },
+      {
+        "name": "_2032248903buffsArray",
+        "type": "ArrayCollection",
+        "access": "private",
+        "description": "Property: tradesArray",
+        "obfuscated_name": "_2032248903buffsArray"
+      },
+      {
+        "name": "_696323609zoneId",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_696323609zoneId"
+      },
+      {
+        "name": "_233906701fortification",
+        "type": "FortificationsBean",
+        "access": "private",
+        "description": "Property: fortification",
+        "obfuscated_name": "_233906701fortification"
+      },
+      {
+        "name": "_1293148908mercenaryBeansArray",
+        "type": "ArrayCollection",
+        "access": "private",
+        "description": "Property: tradesArray",
+        "obfuscated_name": "_1293148908mercenaryBeansArray"
+      },
+      {
+        "name": "_1097354357logUrl",
+        "type": "String",
+        "access": "private",
+        "description": "Property: logUrl",
+        "obfuscated_name": "_1097354357logUrl"
+      },
+      {
+        "name": "_45571131goOutForBattle",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: hasEnemy",
+        "obfuscated_name": "_45571131goOutForBattle"
+      },
+      {
+        "name": "_110634834troop",
+        "type": "TroopBean",
+        "access": "private",
+        "description": "Property: troop",
+        "obfuscated_name": "_110634834troop"
+      },
+      {
+        "name": "_892481550status",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_892481550status"
+      },
+      {
+        "name": "_2059290973buildingQueuesArray",
+        "type": "ArrayCollection",
+        "access": "private",
+        "description": "Property: tradesArray",
+        "obfuscated_name": "_2059290973buildingQueuesArray"
+      },
+      {
+        "name": "_3226745icon",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_3226745icon"
+      },
+      {
+        "name": "_3373707name",
+        "type": "String",
+        "access": "private",
+        "description": "Property: logUrl",
+        "obfuscated_name": "_3373707name"
+      },
+      {
+        "name": "_341064690resource",
+        "type": "CastleResourceBean",
+        "access": "private",
+        "description": "Property: resource",
+        "obfuscated_name": "_341064690resource"
+      },
+      {
+        "name": "_1236765024allowAlliance",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: hasEnemy",
+        "obfuscated_name": "_1236765024allowAlliance"
+      },
+      {
+        "name": "_328168726usePACIFY_SUCCOUR_OR_PACIFY_PRAY",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_328168726usePACIFY_SUCCOUR_OR_PACIFY_PRAY"
+      },
+      {
+        "name": "_861252683fieldId",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_861252683fieldId"
+      },
+      {
+        "name": "_208690213colonization",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_208690213colonization"
+      },
+      {
+        "name": "_1632439642buildingsArray",
+        "type": "ArrayCollection",
+        "access": "private",
+        "description": "Property: tradesArray",
+        "obfuscated_name": "_1632439642buildingsArray"
+      },
+      {
+        "name": "_1228099360fieldsArray",
+        "type": "ArrayCollection",
+        "access": "private",
+        "description": "Property: tradesArray",
+        "obfuscated_name": "_1228099360fieldsArray"
+      },
+      {
+        "name": "_116645134hasEnemy",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: hasEnemy",
+        "obfuscated_name": "_116645134hasEnemy"
+      },
+      {
+        "name": "_637336720transingTradesArray",
+        "type": "ArrayCollection",
+        "access": "private",
+        "description": "Property: tradesArray",
+        "obfuscated_name": "_637336720transingTradesArray"
+      },
+      {
+        "name": "_419054649canChangeIcon",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: hasEnemy",
+        "obfuscated_name": "_419054649canChangeIcon"
+      },
+      {
+        "name": "_1775742881strTroop",
+        "type": "TroopStrBean",
+        "access": "private",
+        "description": "Property: strTroop",
+        "obfuscated_name": "_1775742881strTroop"
+      }
+    ],
+    "methods": [
+      "CastleBean",
+      "getHeros",
+      "setColonyBeans",
+      "setBuffs",
+      "getBuildingQueues",
+      "addEventListener",
+      "setBuildingQueues",
+      "removeEventListener",
+      "getTransingTrades",
+      "getMercenaryBeans",
+      "setTransingTrades",
+      "dispatchEvent",
+      "setMercenaryBeans",
+      "setHeros",
+      "getTrades",
+      "getBuildings",
+      "willTrigger",
+      "setTrades",
+      "toObject",
+      "getFields"
+    ],
+    "source_file": "C:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Training_Dataset\\source_code\\CastleBean.as",
+    "parent_class": "BaseBean"
+  },
+  "HeroBean": {
+    "fields": [
+      {
+        "name": "_412944526stratagem",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_412944526stratagem"
+      },
+      {
+        "name": "_85567126experience",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_85567126experience"
+      },
+      {
+        "name": "_358728774loyalty",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_358728774loyalty"
+      },
+      {
+        "name": "_1266164532fieldtype",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_1266164532fieldtype"
+      },
+      {
+        "name": "_1217743173equipmentbeanArray",
+        "type": "ArrayCollection",
+        "access": "private",
+        "description": "Property: equipmentbeanArray",
+        "obfuscated_name": "_1217743173equipmentbeanArray"
+      },
+      {
+        "name": "_1799980989management",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_1799980989management"
+      },
+      {
+        "name": "_100348382infro",
+        "type": "String",
+        "access": "private",
+        "description": "Property: fbFriendName",
+        "obfuscated_name": "_100348382infro"
+      },
+      {
+        "name": "_1544916048defence",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_1544916048defence"
+      },
+      {
+        "name": "_547400545politics",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: attack",
+        "obfuscated_name": "_547400545politics"
+      },
+      {
+        "name": "_761536362managementBuffAdded",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_761536362managementBuffAdded"
+      },
+      {
+        "name": "_113766sex",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: sex",
+        "obfuscated_name": "_113766sex"
+      },
+      {
+        "name": "_109641799speed",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_109641799speed"
+      },
+      {
+        "name": "_1200507606ability",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_1200507606ability"
+      },
+      {
+        "name": "_106858757power",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_106858757power"
+      },
+      {
+        "name": "_1068386166morale",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_1068386166morale"
+      },
+      {
+        "name": "_814364440powerBuffAdded",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_814364440powerBuffAdded"
+      },
+      {
+        "name": "_3355id",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_3355id"
+      },
+      {
+        "name": "_2032248903buffsArray",
+        "type": "ArrayCollection",
+        "access": "private",
+        "description": "Property: equipmentbeanArray",
+        "obfuscated_name": "_2032248903buffsArray"
+      },
+      {
+        "name": "_1039282375npc_id",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_1039282375npc_id"
+      },
+      {
+        "name": "_958110004facebook_id",
+        "type": "String",
+        "access": "private",
+        "description": "Property: fbFriendName",
+        "obfuscated_name": "_958110004facebook_id"
+      },
+      {
+        "name": "_510568485fbFriendName",
+        "type": "String",
+        "access": "private",
+        "description": "Property: fbFriendName",
+        "obfuscated_name": "_510568485fbFriendName"
+      },
+      {
+        "name": "_342500292logoUrl",
+        "type": "String",
+        "access": "private",
+        "description": "Property: fbFriendName",
+        "obfuscated_name": "_342500292logoUrl"
+      },
+      {
+        "name": "_1627044220remainPoint",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_1627044220remainPoint"
+      },
+      {
+        "name": "_1456811858stratagemAdded",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_1456811858stratagemAdded"
+      },
+      {
+        "name": "_471353915maxStrength",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_471353915maxStrength"
+      },
+      {
+        "name": "_797998783intelligence",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: attack",
+        "obfuscated_name": "_797998783intelligence"
+      },
+      {
+        "name": "_814903611leadershipAdded",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_814903611leadershipAdded"
+      },
+      {
+        "name": "_892481550status",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_892481550status"
+      },
+      {
+        "name": "_1691501851stratagemBuffAdded",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_1691501851stratagemBuffAdded"
+      },
+      {
+        "name": "_3373707name",
+        "type": "String",
+        "access": "private",
+        "description": "Property: fbFriendName",
+        "obfuscated_name": "_3373707name"
+      },
+      {
+        "name": "_102865796level",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_102865796level"
+      },
+      {
+        "name": "_682371709managementAdded",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_682371709managementAdded"
+      },
+      {
+        "name": "_1999179167upgradeExp",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_1999179167upgradeExp"
+      },
+      {
+        "name": "_412762875powerAdded",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_412762875powerAdded"
+      },
+      {
+        "name": "_1180455868isHero",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_1180455868isHero"
+      },
+      {
+        "name": "_1192391365leadership",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_1192391365leadership"
+      },
+      {
+        "name": "_1897344401stamina",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_1897344401stamina"
+      },
+      {
+        "name": "_1178662002itemId",
+        "type": "String",
+        "access": "private",
+        "description": "Property: fbFriendName",
+        "obfuscated_name": "_1178662002itemId"
+      },
+      {
+        "name": "_1407259064attack",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: attack",
+        "obfuscated_name": "_1407259064attack"
+      },
+      {
+        "name": "_1478417739itemAmount",
+        "type": "int",
+        "access": "private",
+        "description": "Property: power",
+        "obfuscated_name": "_1478417739itemAmount"
+      }
+    ],
+    "methods": [
+      "HeroBean",
+      "setBuffs",
+      "dispatchEvent",
+      "removeEventListener",
+      "addEventListener",
+      "getEquipmentbean",
+      "willTrigger",
+      "toObject",
+      "toDebugString",
+      "getBuffs",
+      "copyTo",
+      "hasEventListener",
+      "setEquipmentbean"
+    ],
+    "source_file": "C:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Training_Dataset\\source_code\\HeroBean.as",
+    "parent_class": "BaseBean"
+  },
+  "ArmyBean": {
+    "fields": [
+      {
+        "name": "_1409292392armyId",
+        "type": "int",
+        "access": "private",
+        "description": "Property: direction",
+        "obfuscated_name": "_1409292392armyId"
+      },
+      {
+        "name": "_1383259878missionType",
+        "type": "int",
+        "access": "private",
+        "description": "Property: direction",
+        "obfuscated_name": "_1383259878missionType"
+      },
+      {
+        "name": "_3292055king",
+        "type": "String",
+        "access": "private",
+        "description": "Property: hero",
+        "obfuscated_name": "_3292055king"
+      },
+      {
+        "name": "_341064690resource",
+        "type": "ResourceBean",
+        "access": "private",
+        "description": "Property: resource",
+        "obfuscated_name": "_341064690resource"
+      },
+      {
+        "name": "_995699469startFieldId",
+        "type": "int",
+        "access": "private",
+        "description": "Property: direction",
+        "obfuscated_name": "_995699469startFieldId"
+      },
+      {
+        "name": "_1220753771heroid",
+        "type": "int",
+        "access": "private",
+        "description": "Property: direction",
+        "obfuscated_name": "_1220753771heroid"
+      },
+      {
+        "name": "_1911605294targetPosName",
+        "type": "String",
+        "access": "private",
+        "description": "Property: hero",
+        "obfuscated_name": "_1911605294targetPosName"
+      },
+      {
+        "name": "_962590849direction",
+        "type": "int",
+        "access": "private",
+        "description": "Property: direction",
+        "obfuscated_name": "_962590849direction"
+      },
+      {
+        "name": "_526788547startPosName",
+        "type": "String",
+        "access": "private",
+        "description": "Property: hero",
+        "obfuscated_name": "_526788547startPosName"
+      },
+      {
+        "name": "_337438527restTime",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: restTime",
+        "obfuscated_name": "_337438527restTime"
+      },
+      {
+        "name": "_1191572123selected",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: selected",
+        "obfuscated_name": "_1191572123selected"
+      },
+      {
+        "name": "_2129294769startTime",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: restTime",
+        "obfuscated_name": "_2129294769startTime"
+      },
+      {
+        "name": "_2014132310heroLevel",
+        "type": "int",
+        "access": "private",
+        "description": "Property: direction",
+        "obfuscated_name": "_2014132310heroLevel"
+      },
+      {
+        "name": "_1134711072reachTime",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: restTime",
+        "obfuscated_name": "_1134711072reachTime"
+      },
+      {
+        "name": "_1442694372targetFieldId",
+        "type": "int",
+        "access": "private",
+        "description": "Property: direction",
+        "obfuscated_name": "_1442694372targetFieldId"
+      },
+      {
+        "name": "_3198970hero",
+        "type": "String",
+        "access": "private",
+        "description": "Property: hero",
+        "obfuscated_name": "_3198970hero"
+      },
+      {
+        "name": "_1806944311alliance",
+        "type": "String",
+        "access": "private",
+        "description": "Property: hero",
+        "obfuscated_name": "_1806944311alliance"
+      },
+      {
+        "name": "_110634834troop",
+        "type": "TroopStrBean",
+        "access": "private",
+        "description": "Property: troop",
+        "obfuscated_name": "_110634834troop"
+      }
+    ],
+    "methods": [
+      "ArmyBean",
+      "willTrigger",
+      "toObject",
+      "dispatchEvent",
+      "toDebugString",
+      "removeEventListener",
+      "addEventListener",
+      "copyTo",
+      "hasEventListener"
+    ],
+    "source_file": "C:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Training_Dataset\\source_code\\ArmyBean.as",
+    "parent_class": "BaseBean"
+  },
+  "PlayerInfoBean": {
+    "fields": [
+      {
+        "name": "_1019789636office",
+        "type": "String",
+        "access": "private",
+        "description": "Property: alliance",
+        "obfuscated_name": "_1019789636office"
+      },
+      {
+        "name": "_764803337castleCount",
+        "type": "int",
+        "access": "private",
+        "description": "Property: effortPoint",
+        "obfuscated_name": "_764803337castleCount"
+      },
+      {
+        "name": "_99462250honor",
+        "type": "int",
+        "access": "private",
+        "description": "Property: effortPoint",
+        "obfuscated_name": "_99462250honor"
+      },
+      {
+        "name": "_103771895medal",
+        "type": "int",
+        "access": "private",
+        "description": "Property: effortPoint",
+        "obfuscated_name": "_103771895medal"
+      },
+      {
+        "name": "_113766sex",
+        "type": "int",
+        "access": "private",
+        "description": "Property: effortPoint",
+        "obfuscated_name": "_113766sex"
+      },
+      {
+        "name": "_1092354606faceUrl",
+        "type": "String",
+        "access": "private",
+        "description": "Property: alliance",
+        "obfuscated_name": "_1092354606faceUrl"
+      },
+      {
+        "name": "_978111542ranking",
+        "type": "int",
+        "access": "private",
+        "description": "Property: effortPoint",
+        "obfuscated_name": "_978111542ranking"
+      },
+      {
+        "name": "_3355id",
+        "type": "int",
+        "access": "private",
+        "description": "Property: effortPoint",
+        "obfuscated_name": "_3355id"
+      },
+      {
+        "name": "_2023558323population",
+        "type": "int",
+        "access": "private",
+        "description": "Property: effortPoint",
+        "obfuscated_name": "_2023558323population"
+      },
+      {
+        "name": "_2066382787bdenyotherplayer",
+        "type": "int",
+        "access": "private",
+        "description": "Property: effortPoint",
+        "obfuscated_name": "_2066382787bdenyotherplayer"
+      },
+      {
+        "name": "_3076014date",
+        "type": "String",
+        "access": "private",
+        "description": "Property: alliance",
+        "obfuscated_name": "_3076014date"
+      },
+      {
+        "name": "_892483748starlv",
+        "type": "int",
+        "access": "private",
+        "description": "Property: effortPoint",
+        "obfuscated_name": "_892483748starlv"
+      },
+      {
+        "name": "_1971832828effortPoint",
+        "type": "int",
+        "access": "private",
+        "description": "Property: effortPoint",
+        "obfuscated_name": "_1971832828effortPoint"
+      },
+      {
+        "name": "_266666762userName",
+        "type": "String",
+        "access": "private",
+        "description": "Property: alliance",
+        "obfuscated_name": "_266666762userName"
+      },
+      {
+        "name": "_1307249261titleId",
+        "type": "int",
+        "access": "private",
+        "description": "Property: effortPoint",
+        "obfuscated_name": "_1307249261titleId"
+      },
+      {
+        "name": "_1447054905historygetvotes",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: getvotes",
+        "obfuscated_name": "_1447054905historygetvotes"
+      },
+      {
+        "name": "_944908652topvotes",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: getvotes",
+        "obfuscated_name": "_944908652topvotes"
+      },
+      {
+        "name": "_476980509createrTime",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: getvotes",
+        "obfuscated_name": "_476980509createrTime"
+      },
+      {
+        "name": "_1887950739prweekvotes",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: getvotes",
+        "obfuscated_name": "_1887950739prweekvotes"
+      },
+      {
+        "name": "_69784511levelId",
+        "type": "int",
+        "access": "private",
+        "description": "Property: effortPoint",
+        "obfuscated_name": "_69784511levelId"
+      },
+      {
+        "name": "_865966680accountName",
+        "type": "String",
+        "access": "private",
+        "description": "Property: alliance",
+        "obfuscated_name": "_865966680accountName"
+      },
+      {
+        "name": "_1997775155getvotes",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: getvotes",
+        "obfuscated_name": "_1997775155getvotes"
+      },
+      {
+        "name": "_3556460term",
+        "type": "String",
+        "access": "private",
+        "description": "Property: alliance",
+        "obfuscated_name": "_3556460term"
+      },
+      {
+        "name": "_1000737409facebookId",
+        "type": "String",
+        "access": "private",
+        "description": "Property: alliance",
+        "obfuscated_name": "_1000737409facebookId"
+      },
+      {
+        "name": "_1750962803allianceLevel",
+        "type": "String",
+        "access": "private",
+        "description": "Property: alliance",
+        "obfuscated_name": "_1750962803allianceLevel"
+      },
+      {
+        "name": "_3145580flag",
+        "type": "String",
+        "access": "private",
+        "description": "Property: alliance",
+        "obfuscated_name": "_3145580flag"
+      },
+      {
+        "name": "_1276224445prestige",
+        "type": "int",
+        "access": "private",
+        "description": "Property: effortPoint",
+        "obfuscated_name": "_1276224445prestige"
+      },
+      {
+        "name": "_836030906userId",
+        "type": "int",
+        "access": "private",
+        "description": "Property: effortPoint",
+        "obfuscated_name": "_836030906userId"
+      },
+      {
+        "name": "_781316064lastLoginTime",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: getvotes",
+        "obfuscated_name": "_781316064lastLoginTime"
+      },
+      {
+        "name": "_1806944311alliance",
+        "type": "String",
+        "access": "private",
+        "description": "Property: alliance",
+        "obfuscated_name": "_1806944311alliance"
+      }
+    ],
+    "methods": [
+      "PlayerInfoBean",
+      "dispatchEvent",
+      "removeEventListener",
+      "addEventListener",
+      "toObject",
+      "willTrigger",
+      "toDebugString",
+      "copyTo",
+      "hasEventListener"
+    ],
+    "source_file": "C:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Training_Dataset\\source_code\\PlayerInfoBean.as",
+    "parent_class": "BaseBean"
+  },
+  "TroopBean": {
+    "fields": [
+      {
+        "name": "_1671895235heavyCavalry",
+        "type": "int",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_1671895235heavyCavalry"
+      },
+      {
+        "name": "_47090712catapult",
+        "type": "int",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_47090712catapult"
+      },
+      {
+        "name": "_1409605757archer",
+        "type": "int",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_1409605757archer"
+      },
+      {
+        "name": "_1821715860lightCavalry",
+        "type": "int",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_1821715860lightCavalry"
+      },
+      {
+        "name": "_1914804330ballista",
+        "type": "int",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_1914804330ballista"
+      },
+      {
+        "name": "_1062697427militia",
+        "type": "int",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_1062697427militia"
+      },
+      {
+        "name": "_1924105259scouter",
+        "type": "int",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_1924105259scouter"
+      },
+      {
+        "name": "_5304340carriage",
+        "type": "int",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_5304340carriage"
+      },
+      {
+        "name": "_43947821peasants",
+        "type": "int",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_43947821peasants"
+      },
+      {
+        "name": "_2135247928batteringRam",
+        "type": "int",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_2135247928batteringRam"
+      },
+      {
+        "name": "_1669530624swordsmen",
+        "type": "int",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_1669530624swordsmen"
+      },
+      {
+        "name": "_570808349pikemen",
+        "type": "int",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_570808349pikemen"
+      }
+    ],
+    "methods": [
+      "TroopBean",
+      "willTrigger",
+      "toObject",
+      "dispatchEvent",
+      "toDebugString",
+      "removeEventListener",
+      "addEventListener",
+      "copyTo",
+      "hasEventListener"
+    ],
+    "source_file": "C:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Training_Dataset\\source_code\\TroopBean.as",
+    "parent_class": "BaseBean"
+  },
+  "TroopStrBean": {
+    "fields": [
+      {
+        "name": "_1671895235heavyCavalry",
+        "type": "String",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_1671895235heavyCavalry"
+      },
+      {
+        "name": "_47090712catapult",
+        "type": "String",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_47090712catapult"
+      },
+      {
+        "name": "_1409605757archer",
+        "type": "String",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_1409605757archer"
+      },
+      {
+        "name": "_1821715860lightCavalry",
+        "type": "String",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_1821715860lightCavalry"
+      },
+      {
+        "name": "_1062697427militia",
+        "type": "String",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_1062697427militia"
+      },
+      {
+        "name": "_1914804330ballista",
+        "type": "String",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_1914804330ballista"
+      },
+      {
+        "name": "_5304340carriage",
+        "type": "String",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_5304340carriage"
+      },
+      {
+        "name": "_1924105259scouter",
+        "type": "String",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_1924105259scouter"
+      },
+      {
+        "name": "_43947821peasants",
+        "type": "String",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_43947821peasants"
+      },
+      {
+        "name": "_2135247928batteringRam",
+        "type": "String",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_2135247928batteringRam"
+      },
+      {
+        "name": "_1669530624swordsmen",
+        "type": "String",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_1669530624swordsmen"
+      },
+      {
+        "name": "_570808349pikemen",
+        "type": "String",
+        "access": "private",
+        "description": "Property: swordsmen",
+        "obfuscated_name": "_570808349pikemen"
+      }
+    ],
+    "methods": [
+      "TroopStrBean",
+      "willTrigger",
+      "toObject",
+      "dispatchEvent",
+      "toDebugString",
+      "removeEventListener",
+      "addEventListener",
+      "copyTo",
+      "hasEventListener"
+    ],
+    "source_file": "C:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Training_Dataset\\source_code\\TroopStrBean.as",
+    "parent_class": "BaseBean"
+  },
+  "ResourceBean": {
+    "fields": [
+      {
+        "name": "_3655341wood",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: iron",
+        "obfuscated_name": "_3655341wood"
+      },
+      {
+        "name": "_109770853stone",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: iron",
+        "obfuscated_name": "_109770853stone"
+      },
+      {
+        "name": "_3148894food",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: iron",
+        "obfuscated_name": "_3148894food"
+      },
+      {
+        "name": "_3241160iron",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: iron",
+        "obfuscated_name": "_3241160iron"
+      },
+      {
+        "name": "_3178592gold",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: iron",
+        "obfuscated_name": "_3178592gold"
+      }
+    ],
+    "methods": [
+      "ResourceBean",
+      "willTrigger",
+      "dispatchEvent",
+      "toDebugString",
+      "addEventListener",
+      "removeEventListener",
+      "copyTo",
+      "toObject",
+      "hasEventListener"
+    ],
+    "source_file": "C:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Training_Dataset\\source_code\\ResourceBean.as",
+    "parent_class": "BaseBean"
+  },
+  "EquipmentBean": {
+    "fields": [
+      {
+        "name": "_124815621addAttribute",
+        "type": "int",
+        "access": "private",
+        "description": "Property: lv",
+        "obfuscated_name": "_124815621addAttribute"
+      },
+      {
+        "name": "_3466lv",
+        "type": "int",
+        "access": "private",
+        "description": "Property: lv",
+        "obfuscated_name": "_3466lv"
+      },
+      {
+        "name": "_811315194heroPos",
+        "type": "int",
+        "access": "private",
+        "description": "Property: lv",
+        "obfuscated_name": "_811315194heroPos"
+      },
+      {
+        "name": "_1188050137euipmenttechStarLv",
+        "type": "int",
+        "access": "private",
+        "description": "Property: lv",
+        "obfuscated_name": "_1188050137euipmenttechStarLv"
+      },
+      {
+        "name": "_2008330532equipmenttech",
+        "type": "int",
+        "access": "private",
+        "description": "Property: lv",
+        "obfuscated_name": "_2008330532equipmenttech"
+      },
+      {
+        "name": "_1512209195addAttributeType",
+        "type": "int",
+        "access": "private",
+        "description": "Property: lv",
+        "obfuscated_name": "_1512209195addAttributeType"
+      }
+    ],
+    "methods": [
+      "EquipmentBean",
+      "dispatchEvent",
+      "hasEventListener",
+      "willTrigger",
+      "toDebugString",
+      "addEventListener",
+      "removeEventListener",
+      "toObject",
+      "copyTo"
+    ],
+    "source_file": "C:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Training_Dataset\\source_code\\EquipmentBean.as",
+    "parent_class": "BaseBean"
+  },
+  "ItemBean": {
+    "fields": [
+      {
+        "name": "_3355id",
+        "type": "String",
+        "access": "private",
+        "description": "Property: name",
+        "obfuscated_name": "_3355id"
+      },
+      {
+        "name": "_3373707name",
+        "type": "String",
+        "access": "private",
+        "description": "Property: name",
+        "obfuscated_name": "_3373707name"
+      },
+      {
+        "name": "_382106123maxCount",
+        "type": "int",
+        "access": "private",
+        "description": "Property: count",
+        "obfuscated_name": "_382106123maxCount"
+      },
+      {
+        "name": "_1394090531minCount",
+        "type": "int",
+        "access": "private",
+        "description": "Property: count",
+        "obfuscated_name": "_1394090531minCount"
+      },
+      {
+        "name": "_94851343count",
+        "type": "int",
+        "access": "private",
+        "description": "Property: count",
+        "obfuscated_name": "_94851343count"
+      }
+    ],
+    "methods": [
+      "ItemBean",
+      "dispatchEvent",
+      "hasEventListener",
+      "willTrigger",
+      "toDebugString",
+      "addEventListener",
+      "copyTo",
+      "removeEventListener",
+      "toObject"
+    ],
+    "source_file": "C:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Training_Dataset\\source_code\\ItemBean.as",
+    "parent_class": "BaseBean"
+  },
+  "QuestBean": {
+    "fields": [
+      {
+        "name": "_1081415738manual",
+        "type": "String",
+        "access": "private",
+        "description": "Property: name",
+        "obfuscated_name": "_1081415738manual"
+      },
+      {
+        "name": "_600408483isFinish",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: recommend",
+        "obfuscated_name": "_600408483isFinish"
+      },
+      {
+        "name": "_3373707name",
+        "type": "String",
+        "access": "private",
+        "description": "Property: name",
+        "obfuscated_name": "_3373707name"
+      },
+      {
+        "name": "_351608024version",
+        "type": "int",
+        "access": "private",
+        "description": "Property: questId",
+        "obfuscated_name": "_351608024version"
+      },
+      {
+        "name": "_1179387200islast",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: recommend",
+        "obfuscated_name": "_1179387200islast"
+      },
+      {
+        "name": "_655126941questId",
+        "type": "int",
+        "access": "private",
+        "description": "Property: questId",
+        "obfuscated_name": "_655126941questId"
+      },
+      {
+        "name": "_1180608678isCard",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: recommend",
+        "obfuscated_name": "_1180608678isCard"
+      },
+      {
+        "name": "_328471159targetsArray",
+        "type": "ArrayCollection",
+        "access": "private",
+        "description": "Property: targetsArray",
+        "obfuscated_name": "_328471159targetsArray"
+      },
+      {
+        "name": "_93223517award",
+        "type": "String",
+        "access": "private",
+        "description": "Property: name",
+        "obfuscated_name": "_93223517award"
+      },
+      {
+        "name": "_1724546052description",
+        "type": "String",
+        "access": "private",
+        "description": "Property: name",
+        "obfuscated_name": "_1724546052description"
+      },
+      {
+        "name": "_989204668recommend",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: recommend",
+        "obfuscated_name": "_989204668recommend"
+      }
+    ],
+    "methods": [
+      "QuestBean",
+      "willTrigger",
+      "toObject",
+      "setTargets",
+      "toDebugString",
+      "getTargets",
+      "addEventListener",
+      "dispatchEvent",
+      "copyTo",
+      "removeEventListener",
+      "hasEventListener"
+    ],
+    "source_file": "C:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Training_Dataset\\source_code\\QuestBean.as",
+    "parent_class": "BaseBean"
+  },
+  "ReportBean": {
+    "fields": [
+      {
+        "name": "_110371416title",
+        "type": "String",
+        "access": "private",
+        "description": "Property: eventTime",
+        "obfuscated_name": "_110371416title"
+      },
+      {
+        "name": "_1316782738startPos",
+        "type": "String",
+        "access": "private",
+        "description": "Property: eventTime",
+        "obfuscated_name": "_1316782738startPos"
+      },
+      {
+        "name": "_3575610type",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_3575610type"
+      },
+      {
+        "name": "_3355id",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_3355id"
+      },
+      {
+        "name": "_1414939017armyType",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_1414939017armyType"
+      },
+      {
+        "name": "_1191572123selected",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: selected",
+        "obfuscated_name": "_1191572123selected"
+      },
+      {
+        "name": "_951530617content",
+        "type": "String",
+        "access": "private",
+        "description": "Property: eventTime",
+        "obfuscated_name": "_951530617content"
+      },
+      {
+        "name": "_1180158496isRead",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_1180158496isRead"
+      },
+      {
+        "name": "_3015911back",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: selected",
+        "obfuscated_name": "_3015911back"
+      },
+      {
+        "name": "_1407259064attack",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: selected",
+        "obfuscated_name": "_1407259064attack"
+      },
+      {
+        "name": "_31415431eventTime",
+        "type": "String",
+        "access": "private",
+        "description": "Property: eventTime",
+        "obfuscated_name": "_31415431eventTime"
+      },
+      {
+        "name": "_815590653targetPos",
+        "type": "String",
+        "access": "private",
+        "description": "Property: eventTime",
+        "obfuscated_name": "_815590653targetPos"
+      }
+    ],
+    "methods": [
+      "ReportBean",
+      "hasEventListener",
+      "willTrigger",
+      "toObject",
+      "toDebugString",
+      "removeEventListener",
+      "addEventListener",
+      "dispatchEvent",
+      "copyTo"
+    ],
+    "source_file": "C:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Training_Dataset\\source_code\\ReportBean.as",
+    "parent_class": "BaseBean"
+  },
+  "TradeBean": {
+    "fields": [
+      {
+        "name": "_384566343resourceName",
+        "type": "String",
+        "access": "private",
+        "description": "Property: resourceName",
+        "obfuscated_name": "_384566343resourceName"
+      },
+      {
+        "name": "_106934601price",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: dealedTotal",
+        "obfuscated_name": "_106934601price"
+      },
+      {
+        "name": "_1413853096amount",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_1413853096amount"
+      },
+      {
+        "name": "_3355id",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_3355id"
+      },
+      {
+        "name": "_752919230tradeType",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_752919230tradeType"
+      },
+      {
+        "name": "_1302723991tradeTypeName",
+        "type": "String",
+        "access": "private",
+        "description": "Property: resourceName",
+        "obfuscated_name": "_1302723991tradeTypeName"
+      },
+      {
+        "name": "_147397053dealedAmount",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_147397053dealedAmount"
+      },
+      {
+        "name": "_428497913dealedTotal",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: dealedTotal",
+        "obfuscated_name": "_428497913dealedTotal"
+      },
+      {
+        "name": "_1096575994resType",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_1096575994resType"
+      }
+    ],
+    "methods": [
+      "TradeBean",
+      "hasEventListener",
+      "willTrigger",
+      "toObject",
+      "dispatchEvent",
+      "toDebugString",
+      "removeEventListener",
+      "copyTo",
+      "addEventListener"
+    ],
+    "source_file": "C:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Training_Dataset\\source_code\\TradeBean.as",
+    "parent_class": "BaseBean"
+  },
+  "ColonyBean": {
+    "fields": [
+      {
+        "name": "_1607243192endTime",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: endTime",
+        "obfuscated_name": "_1607243192endTime"
+      },
+      {
+        "name": "_1962855648lordName",
+        "type": "String",
+        "access": "private",
+        "description": "Property: cityName",
+        "obfuscated_name": "_1962855648lordName"
+      },
+      {
+        "name": "_892481550status",
+        "type": "int",
+        "access": "private",
+        "description": "Property: castleId",
+        "obfuscated_name": "_892481550status"
+      },
+      {
+        "name": "_554436100relation",
+        "type": "int",
+        "access": "private",
+        "description": "Property: castleId",
+        "obfuscated_name": "_554436100relation"
+      },
+      {
+        "name": "_30247582isCanLevy",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: isCanOverview",
+        "obfuscated_name": "_30247582isCanLevy"
+      },
+      {
+        "name": "_1421682026cityName",
+        "type": "String",
+        "access": "private",
+        "description": "Property: cityName",
+        "obfuscated_name": "_1421682026cityName"
+      },
+      {
+        "name": "_747804969position",
+        "type": "String",
+        "access": "private",
+        "description": "Property: cityName",
+        "obfuscated_name": "_747804969position"
+      },
+      {
+        "name": "_342500292logoUrl",
+        "type": "String",
+        "access": "private",
+        "description": "Property: cityName",
+        "obfuscated_name": "_342500292logoUrl"
+      },
+      {
+        "name": "_2129294769startTime",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: endTime",
+        "obfuscated_name": "_2129294769startTime"
+      },
+      {
+        "name": "_3560141time",
+        "type": "String",
+        "access": "private",
+        "description": "Property: cityName",
+        "obfuscated_name": "_3560141time"
+      },
+      {
+        "name": "_35872819castleId",
+        "type": "int",
+        "access": "private",
+        "description": "Property: castleId",
+        "obfuscated_name": "_35872819castleId"
+      },
+      {
+        "name": "_1276224445prestige",
+        "type": "int",
+        "access": "private",
+        "description": "Property: castleId",
+        "obfuscated_name": "_1276224445prestige"
+      },
+      {
+        "name": "_1606140770allianceName",
+        "type": "String",
+        "access": "private",
+        "description": "Property: cityName",
+        "obfuscated_name": "_1606140770allianceName"
+      },
+      {
+        "name": "_1458266657isCanOverview",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: isCanOverview",
+        "obfuscated_name": "_1458266657isCanOverview"
+      }
+    ],
+    "methods": [
+      "ColonyBean",
+      "willTrigger",
+      "toObject",
+      "toDebugString",
+      "removeEventListener",
+      "copyTo",
+      "addEventListener",
+      "dispatchEvent",
+      "hasEventListener"
+    ],
+    "source_file": "C:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Training_Dataset\\source_code\\ColonyBean.as",
+    "parent_class": "BaseBean"
+  },
+  "BuffBean": {
+    "fields": [
+      {
+        "name": "_1017134268descName",
+        "type": "String",
+        "access": "private",
+        "description": "Property: typeId",
+        "obfuscated_name": "_1017134268descName"
+      },
+      {
+        "name": "_1607243192endTime",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: endTime",
+        "obfuscated_name": "_1607243192endTime"
+      },
+      {
+        "name": "_858803723typeId",
+        "type": "String",
+        "access": "private",
+        "description": "Property: typeId",
+        "obfuscated_name": "_858803723typeId"
+      }
+    ],
+    "methods": [
+      "BuffBean",
+      "dispatchEvent",
+      "willTrigger",
+      "toDebugString",
+      "removeEventListener",
+      "addEventListener",
+      "copyTo",
+      "toObject",
+      "hasEventListener"
+    ],
+    "source_file": "C:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Training_Dataset\\source_code\\BuffBean.as",
+    "parent_class": "BaseBean"
+  },
+  "MailBean": {
+    "fields": [
+      {
+        "name": "_441951604targetId",
+        "type": "int",
+        "access": "private",
+        "description": "Property: targetId",
+        "obfuscated_name": "_441951604targetId"
+      },
+      {
+        "name": "_853090240type_id",
+        "type": "int",
+        "access": "private",
+        "description": "Property: targetId",
+        "obfuscated_name": "_853090240type_id"
+      },
+      {
+        "name": "_905962955sender",
+        "type": "String",
+        "access": "private",
+        "description": "Property: sender",
+        "obfuscated_name": "_905962955sender"
+      },
+      {
+        "name": "_2103439280receiveTime",
+        "type": "String",
+        "access": "private",
+        "description": "Property: sender",
+        "obfuscated_name": "_2103439280receiveTime"
+      },
+      {
+        "name": "_1081573102mailid",
+        "type": "int",
+        "access": "private",
+        "description": "Property: targetId",
+        "obfuscated_name": "_1081573102mailid"
+      },
+      {
+        "name": "_1879273436playerId",
+        "type": "int",
+        "access": "private",
+        "description": "Property: targetId",
+        "obfuscated_name": "_1879273436playerId"
+      },
+      {
+        "name": "_1191572123selected",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: selected",
+        "obfuscated_name": "_1191572123selected"
+      },
+      {
+        "name": "_808719889receiver",
+        "type": "String",
+        "access": "private",
+        "description": "Property: sender",
+        "obfuscated_name": "_808719889receiver"
+      },
+      {
+        "name": "_1180158496isRead",
+        "type": "int",
+        "access": "private",
+        "description": "Property: targetId",
+        "obfuscated_name": "_1180158496isRead"
+      },
+      {
+        "name": "_110371416title",
+        "type": "String",
+        "access": "private",
+        "description": "Property: sender",
+        "obfuscated_name": "_110371416title"
+      }
+    ],
+    "methods": [
+      "MailBean",
+      "willTrigger",
+      "toObject",
+      "toDebugString",
+      "removeEventListener",
+      "dispatchEvent",
+      "copyTo",
+      "addEventListener",
+      "hasEventListener"
+    ],
+    "source_file": "C:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Training_Dataset\\source_code\\MailBean.as",
+    "parent_class": "BaseBean"
+  },
+  "MapCastleBean": {
+    "fields": [
+      {
+        "name": "_1682641376declaredWarStatus",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_1682641376declaredWarStatus"
+      },
+      {
+        "name": "_554436100relation",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_554436100relation"
+      },
+      {
+        "name": "_1695158553colonialStatus",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_1695158553colonialStatus"
+      },
+      {
+        "name": "_99462250honor",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_99462250honor"
+      },
+      {
+        "name": "_3575610type",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_3575610type"
+      },
+      {
+        "name": "_1207284347canColonize",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: canScout",
+        "obfuscated_name": "_1207284347canColonize"
+      },
+      {
+        "name": "_1167077297colonialRelation",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_1167077297colonialRelation"
+      },
+      {
+        "name": "_1503629328furlough",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: canScout",
+        "obfuscated_name": "_1503629328furlough"
+      },
+      {
+        "name": "_3355id",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_3355id"
+      },
+      {
+        "name": "_109281npc",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: canScout",
+        "obfuscated_name": "_109281npc"
+      },
+      {
+        "name": "_422968703powerLevel",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_422968703powerLevel"
+      },
+      {
+        "name": "_946919841declaredWarStartTime",
+        "type": "Number",
+        "access": "private",
+        "description": "Property: declaredWarStartTime",
+        "obfuscated_name": "_946919841declaredWarStartTime"
+      },
+      {
+        "name": "_848059479zoneName",
+        "type": "String",
+        "access": "private",
+        "description": "Property: suzerain",
+        "obfuscated_name": "_848059479zoneName"
+      },
+      {
+        "name": "_1387001311suzerain",
+        "type": "String",
+        "access": "private",
+        "description": "Property: suzerain",
+        "obfuscated_name": "_1387001311suzerain"
+      },
+      {
+        "name": "_266666762userName",
+        "type": "String",
+        "access": "private",
+        "description": "Property: suzerain",
+        "obfuscated_name": "_266666762userName"
+      },
+      {
+        "name": "_114043281castleIcon",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_114043281castleIcon"
+      },
+      {
+        "name": "_738630737ownerPlayerId",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_738630737ownerPlayerId"
+      },
+      {
+        "name": "_3373707name",
+        "type": "String",
+        "access": "private",
+        "description": "Property: suzerain",
+        "obfuscated_name": "_3373707name"
+      },
+      {
+        "name": "_1299492445playerLogoUrl",
+        "type": "String",
+        "access": "private",
+        "description": "Property: suzerain",
+        "obfuscated_name": "_1299492445playerLogoUrl"
+      },
+      {
+        "name": "_98100801canOccupy",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: canScout",
+        "obfuscated_name": "_98100801canOccupy"
+      },
+      {
+        "name": "_1524843188freshMan",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: canScout",
+        "obfuscated_name": "_1524843188freshMan"
+      },
+      {
+        "name": "_138006258canScout",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: canScout",
+        "obfuscated_name": "_138006258canScout"
+      },
+      {
+        "name": "_3145580flag",
+        "type": "String",
+        "access": "private",
+        "description": "Property: suzerain",
+        "obfuscated_name": "_3145580flag"
+      },
+      {
+        "name": "_549540504canLoot",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: canScout",
+        "obfuscated_name": "_549540504canLoot"
+      },
+      {
+        "name": "_109757585state",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_109757585state"
+      },
+      {
+        "name": "_35872819castleId",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_35872819castleId"
+      },
+      {
+        "name": "_1276224445prestige",
+        "type": "int",
+        "access": "private",
+        "description": "Property: id",
+        "obfuscated_name": "_1276224445prestige"
+      },
+      {
+        "name": "_136649544canTrans",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: canScout",
+        "obfuscated_name": "_136649544canTrans"
+      },
+      {
+        "name": "_549739384canSend",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: canScout",
+        "obfuscated_name": "_549739384canSend"
+      },
+      {
+        "name": "_1606140770allianceName",
+        "type": "String",
+        "access": "private",
+        "description": "Property: suzerain",
+        "obfuscated_name": "_1606140770allianceName"
+      },
+      {
+        "name": "_244224418canDeclaredWar",
+        "type": "Boolean",
+        "access": "private",
+        "description": "Property: canScout",
+        "obfuscated_name": "_244224418canDeclaredWar"
+      }
+    ],
+    "methods": [
+      "MapCastleBean",
+      "dispatchEvent",
+      "removeEventListener",
+      "addEventListener",
+      "willTrigger",
+      "toObject",
+      "toDebugString",
+      "copyTo",
+      "hasEventListener"
+    ],
+    "source_file": "C:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Training_Dataset\\source_code\\MapCastleBean.as",
+    "parent_class": "BaseBean"
+  },
+  "FieldBean": {
+    "fields": [
+      {
+        "name": "_3355id",
+        "type": "int",
+        "access": "private",
+        "description": "Property: level",
+        "obfuscated_name": "_3355id"
+      },
+      {
+        "name": "_109757601statu",
+        "type": "int",
+        "access": "private",
+        "description": "Property: level",
+        "obfuscated_name": "_109757601statu"
+      },
+      {
+        "name": "_3373707name",
+        "type": "String",
+        "access": "private",
+        "description": "Property: name",
+        "obfuscated_name": "_3373707name"
+      },
+      {
+        "name": "_3575610type",
+        "type": "int",
+        "access": "private",
+        "description": "Property: level",
+        "obfuscated_name": "_3575610type"
+      },
+      {
+        "name": "_1710868093armysArray",
+        "type": "ArrayCollection",
+        "access": "private",
+        "description": "Property: armysArray",
+        "obfuscated_name": "_1710868093armysArray"
+      },
+      {
+        "name": "_102865796level",
+        "type": "int",
+        "access": "private",
+        "description": "Property: level",
+        "obfuscated_name": "_102865796level"
+      }
+    ],
+    "methods": [
+      "FieldBean",
+      "getArmys",
+      "dispatchEvent",
+      "toDebugString",
+      "hasEventListener",
+      "addEventListener",
+      "removeEventListener",
+      "willTrigger",
+      "toObject",
+      "copyTo",
+      "setArmys"
+    ],
+    "source_file": "C:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Training_Dataset\\source_code\\FieldBean.as",
+    "parent_class": "BaseBean"
+  },
+  "FortificationsBean": {
+    "fields": [
+      {
+        "name": "_3568429trap",
+        "type": "int",
+        "access": "private",
+        "description": "Property: arrowTower",
+        "obfuscated_name": "_3568429trap"
+      },
+      {
+        "name": "_1739874176arrowTower",
+        "type": "int",
+        "access": "private",
+        "description": "Property: arrowTower",
+        "obfuscated_name": "_1739874176arrowTower"
+      },
+      {
+        "name": "_518185888rockfall",
+        "type": "int",
+        "access": "private",
+        "description": "Property: arrowTower",
+        "obfuscated_name": "_518185888rockfall"
+      },
+      {
+        "name": "_226523540rollingLogs",
+        "type": "int",
+        "access": "private",
+        "description": "Property: arrowTower",
+        "obfuscated_name": "_226523540rollingLogs"
+      },
+      {
+        "name": "_1424430018abatis",
+        "type": "int",
+        "access": "private",
+        "description": "Property: arrowTower",
+        "obfuscated_name": "_1424430018abatis"
+      }
+    ],
+    "methods": [
+      "FortificationsBean",
+      "toDebugString",
+      "addEventListener",
+      "removeEventListener",
+      "willTrigger",
+      "copyTo",
+      "toObject",
+      "hasEventListener",
+      "dispatchEvent"
+    ],
+    "source_file": "C:\\Users\\Admin\\Downloads\\Evony_Decrypted\\Evony_Training_Dataset\\source_code\\FortificationsBean.as",
+    "parent_class": "BaseBean"
+  }
+}

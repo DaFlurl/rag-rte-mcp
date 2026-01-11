@@ -1,0 +1,233 @@
+#======================================================================================================================
+# Multi-City Glitch Manager v1.0 - Enhanced by Borg
+# Based on Ogliss's FoodGlitchCounterV1.2
+#======================================================================================================================
+# This script scans ALL cities, identifies EVEN glitches that need fixing, and provides:
+# - Untrain recommendations (when < 50M to next threshold)
+# - Safe send destinations (cities that can receive without breaking their glitches)
+# - Coordinated troop movement commands
+#======================================================================================================================
+# USAGE:
+#   1. Run this script from any city
+#   2. It will scan all cities and output to WarLog
+#   3. Shows UNTRAIN commands for even glitches near threshold
+#   4. Shows SAFE cities to send overflow troops to
+#======================================================================================================================
+setsilence true
+
+#======================================================================================================================
+# CONFIGURATION
+#======================================================================================================================
+set Mode full
+set Output WarLog
+set UntrainThreshold 50000000
+set ShowOnlyProblems true
+
+#======================================================================================================================
+# CONSTANTS - Glitch Thresholds
+#======================================================================================================================
+set INT32MAX 2147483647
+setarr troopNames "peasants militia scouter pikemen swordsmen archer lightCavalry heavyCavalry carriage ballista batteringRam catapult"
+setarr troopDisplay "Workers Warriors Scouts Pikemen Swordsmen Archers Cavalry Cataphracts Transporters Ballista BattRams Catapults"
+setarr troopAbbr "wo w s p sw a c cata t b r cp"
+setarr foodCost "1 1 2 3 3 4 9 17 5 25 50 125"
+
+# Pre-calculate city glitch thresholds for each troop type
+# threshold = INT32MAX / foodCost + 1
+setarr cityThreshold "2147483648 2147483648 1073741824 715827883 715827883 536870912 238609295 126322568 429496730 85899346 42949673 17179870"
+
+#======================================================================================================================
+# INITIALIZE
+#======================================================================================================================
+set totalCities $m_city.allCities.length$
+set currentCityIndex 0
+set problemCount 0
+set LogMsg "<br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFD700'><b>  MULTI-CITY GLITCH MANAGER v1.0</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFFFFF'>  Scanning %totalCities% cities...</font>"
+
+# Arrays to store city glitch data for coordination
+setarray cityNames []
+setarray cityGlitchData []
+setarray safeReceiveCities []
+
+#======================================================================================================================
+# MAIN LOOP - Scan each city
+#======================================================================================================================
+label scanNextCity
+if {%currentCityIndex%>=%totalCities%} goto finishScan
+
+# Get city reference
+set thisCity m_city.allCities[%currentCityIndex%]
+set thisCityName $%thisCity%.name$
+set thisCityTroop %thisCity%.troop
+
+set LogMsg "%LogMsg%<br><br><font color='#CC2EFA'><b>────────────────────────────────────────────────────────────</b></font>"
+set LogMsg "%LogMsg%<br><font color='#00FFFF'><b>CITY: %thisCityName%</b></font>"
+set LogMsg "%LogMsg%<br><font color='#CC2EFA'><b>────────────────────────────────────────────────────────────</b></font>"
+
+set cityHasProblems false
+set cityCanReceive true
+set troopIndex 0
+
+#======================================================================================================================
+# Scan each troop type in this city
+#======================================================================================================================
+label scanNextTroop
+if {%troopIndex%>=12} goto finishCityScan
+
+set tName %troopNames[{%troopIndex%}]%
+set tDisplay %troopDisplay[{%troopIndex%}]%
+set tAbbr %troopAbbr[{%troopIndex%}]%
+set tFoodCost %foodCost[{%troopIndex%}]%
+set tThreshold %cityThreshold[{%troopIndex%}]%
+
+# Get troop count in this city
+set troopCount $%thisCityTroop%.%tName%$
+
+# Calculate glitch count
+set glitchCount 0
+set remaining %troopCount%
+
+label countGlitches
+if {%remaining%>=%tThreshold%} set glitchCount {%glitchCount%+1}
+if {%remaining%>=%tThreshold%} set remaining {%remaining%-%tThreshold%}
+if {%remaining%>=%tThreshold%} goto countGlitches
+
+# Check if generating (odd = true, even = false)
+set isOdd {{{%glitchCount%}|2}==1}
+set isGenerating %isOdd%
+
+# Calculate troops to next glitch
+set troopsToNextGlitch {%tThreshold%-%remaining%}
+
+# Calculate troops to untrain to flip to odd (if even and has glitches)
+set shouldUntrain false
+set untrainAmount 0
+
+if {%glitchCount%>0&&%isGenerating%==false} goto checkUntrain
+goto skipUntrainCheck
+
+label checkUntrain
+# If remaining troops < UntrainThreshold, we can untrain to flip
+if {%remaining%<%UntrainThreshold%} set shouldUntrain true
+if {%shouldUntrain%==true} set untrainAmount {%remaining%+1}
+set cityHasProblems true
+set problemCount {%problemCount%+1}
+
+label skipUntrainCheck
+
+# Only show if has glitches or ShowOnlyProblems is false
+if {%ShowOnlyProblems%==true&&%glitchCount%==0} goto skipTroopOutput
+
+# Output troop info
+if {%glitchCount%>0} goto outputTroopInfo
+if {%ShowOnlyProblems%==false} goto outputTroopInfo
+goto skipTroopOutput
+
+label outputTroopInfo
+set LogMsg "%LogMsg%<br>"
+set LogMsg "%LogMsg%<br><font color='#FFFFFF'><b>%tDisplay%</b></font> (%tAbbr%)"
+set LogMsg "%LogMsg%<br>  <font color='#888888'>Count:</font> <font color='#FFFFFF'>%troopCount%</font>"
+set LogMsg "%LogMsg%<br>  <font color='#888888'>Glitches:</font> <font color='#CC2EFA'><b>%glitchCount%</b></font>"
+
+# Show generating status with color
+if {%isGenerating%==true&&%glitchCount%>0} set LogMsg "%LogMsg%<br>  <font color='#888888'>Status:</font> <font color='#00FF00'><b>✓ GENERATING (ODD)</b></font>"
+if {%isGenerating%==false&&%glitchCount%>0} set LogMsg "%LogMsg%<br>  <font color='#888888'>Status:</font> <font color='#FF0000'><b>✗ NOT GENERATING (EVEN)</b></font>"
+
+# Show progress to next glitch
+set progressPct {{{%remaining%*100}/%tThreshold%}\1}
+set LogMsg "%LogMsg%<br>  <font color='#888888'>Progress:</font> <font color='#FFFFFF'>%progressPct%%</font> <font color='#888888'>(%remaining% / %tThreshold%)</font>"
+
+# Show UNTRAIN recommendation if applicable
+if {%shouldUntrain%==true} goto showUntrainCmd
+goto skipUntrainCmd
+
+label showUntrainCmd
+set LogMsg "%LogMsg%<br>  <font color='#FFD700'><b>► UNTRAIN TO FIX:</b></font> <font color='#00FFFF'>untrain %tAbbr%:%untrainAmount%</font>"
+set LogMsg "%LogMsg%<br>    <font color='#888888'>(Will flip from %glitchCount% to {%glitchCount%-1} glitches = ODD = GENERATING)</font>"
+
+label skipUntrainCmd
+
+# Show troops needed for next glitch
+if {%troopsToNextGlitch%<%UntrainThreshold%} set LogMsg "%LogMsg%<br>  <font color='#FFFF00'>Need %troopsToNextGlitch% more for next glitch</font>"
+
+label skipTroopOutput
+set troopIndex {%troopIndex%+1}
+goto scanNextTroop
+
+#======================================================================================================================
+# Finish scanning this city
+#======================================================================================================================
+label finishCityScan
+
+# Mark if this city can safely receive troops (low glitch counts)
+if {%cityHasProblems%==false} addtoarray safeReceiveCities %safeReceiveCities.length% %thisCityName%
+
+set currentCityIndex {%currentCityIndex%+1}
+goto scanNextCity
+
+#======================================================================================================================
+# FINISH - Show summary and recommendations
+#======================================================================================================================
+label finishScan
+
+set LogMsg "%LogMsg%<br><br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFD700'><b>  SUMMARY & RECOMMENDATIONS</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════</b></font>"
+
+set LogMsg "%LogMsg%<br><br><font color='#FFFFFF'>Total cities scanned:</font> <font color='#00FFFF'><b>%totalCities%</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFFFFF'>Troop types needing fix:</font> <font color='#FF0000'><b>%problemCount%</b></font>"
+
+# Show safe cities to send troops to
+set LogMsg "%LogMsg%<br><br><font color='#00FF00'><b>SAFE CITIES FOR OVERFLOW TROOPS:</b></font>"
+if {%safeReceiveCities.length%==0} set LogMsg "%LogMsg%<br>  <font color='#FF0000'>None found - all cities have glitch issues</font>"
+
+set safeIdx 0
+label showSafeCities
+if {%safeIdx%>=%safeReceiveCities.length%} goto doneSafeCities
+set LogMsg "%LogMsg%<br>  <font color='#00FFFF'>• %safeReceiveCities[{%safeIdx%}]%</font>"
+set safeIdx {%safeIdx%+1}
+goto showSafeCities
+
+label doneSafeCities
+
+# Quick reference for untrain commands
+set LogMsg "%LogMsg%<br><br><font color='#FFD700'><b>QUICK UNTRAIN REFERENCE:</b></font>"
+set LogMsg "%LogMsg%<br><font color='#888888'>Format: untrain [abbr]:[amount]</font>"
+set LogMsg "%LogMsg%<br><font color='#888888'>Abbr: wo=Workers, w=Warriors, s=Scouts, p=Pike, sw=Sword</font>"
+set LogMsg "%LogMsg%<br><font color='#888888'>      a=Archer, c=Cav, cata=Cata, t=Trans, b=Balli, r=Ram, cp=Catapult</font>"
+
+# Movement tips
+set LogMsg "%LogMsg%<br><br><font color='#FFD700'><b>SAFE MOVEMENT TIPS:</b></font>"
+set LogMsg "%LogMsg%<br><font color='#888888'>1. Only send troops to cities with 0 glitches of that type</font>"
+set LogMsg "%LogMsg%<br><font color='#888888'>2. Or send exact multiples of threshold to maintain glitch parity</font>"
+set LogMsg "%LogMsg%<br><font color='#888888'>3. Use valleys as temporary overflow storage</font>"
+set LogMsg "%LogMsg%<br><font color='#888888'>4. Reinforce to valleys counts as VALLEY glitches (half threshold)</font>"
+
+set LogMsg "%LogMsg%<br><br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════</b></font>"
+
+# Output to war log
+gosub outputLog
+goto endScript
+
+#======================================================================================================================
+# OUTPUT SUBROUTINES
+#======================================================================================================================
+label outputLog
+if {%Output%==Log||%Output%==log} goto logToCity
+if {%Output%==WarLog||%Output%==warlog} goto logToWar
+goto endScript
+
+label logToWar
+set out "$m_city.cityManager.warLogMsg(%LogMsg%)$"
+gosubreturn
+
+label logToCity
+set out "$m_city.cityManager.logMsg(%LogMsg%)$"
+gosubreturn
+
+label endScript
+setsilence false
+echo "Multi-City Glitch Manager complete!"

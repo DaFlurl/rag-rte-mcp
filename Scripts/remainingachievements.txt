@@ -1,0 +1,21 @@
+setsilence true
+setarray achievement ["Scouting", "Troops Training", "Enemy Killing", "Colonizing", "Hero", "Medal Acquisition", "Civilization", "Resource Production", "Marching", "Hero Capturing", "Domain", "Territory", "Star Level", "Booty"]
+setarray typeId ["102", "103", "100", "101", "110", "111", "108", "109", "106", "107", "104", "105", "116", "112"]
+set type 0
+set a "<br>"
+label typeIdLoop
+echo "checking %achievement[{%type%}]% achievements"
+set r $m_city.actionFactory.getQuestCommands().getEffortListByTargeTypeid(c.castle.id,%typeId[{%type%}]%)$
+label wait
+sleep 0.2
+iferror $%r%.ok$ goto wait 
+set i 0
+set a "%a%<u>List of <b>Remaining %achievement[{%type%}]%</b> achievements</u><br>" 
+label report
+if {$%r%.questsArray[{%i%}].isFinish$==false} set a "%a% $%r%.questsArray[{%i%}].manual$, completed $%r%.questsArray[{%i%}].name$<br>"
+set i {%i%+1}
+if {%i%<$%r%.questsArray.length$} goto report
+set type {%type%+1}
+if {%type%<%typeId.length%} goto typeIdLoop
+set msg $c.cm.logMsg(c.getVar(a),#005500)$
+goto end

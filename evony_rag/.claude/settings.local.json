@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m evony_rag.mcp_server_v2_stdio:*)",
+      "Bash(cat:*)",
+      "Bash(ls:*)",
+      "Bash(python:*)"
+    ]
+  }
+}

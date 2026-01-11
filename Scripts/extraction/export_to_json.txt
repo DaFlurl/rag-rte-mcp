@@ -1,0 +1,112 @@
+//===============================================================
+// EXPORT ACCOUNT DATA TO JSON FILE
+// Run this inside RoboEvony while logged in
+// Saves complete account data to D:\EvonyToolKit\data\exports\
+//===============================================================
+
+setsilence true
+
+// Get player info
+set playerName $player.userName$
+set playerEmail $config.username$
+set serverName $server.name$
+
+// Create output path
+set outputDir "D:\\EvonyToolKit\\data\\exports\\"
+set fileName "%playerEmail%".replace("@","_at_")
+set outputFile "%outputDir%%fileName%.json"
+
+// Start JSON output
+set json "{"
+set json "%json%\"extraction_time\":\"%date% %time%\","
+set json "%json%\"email\":\"%playerEmail%\","
+set json "%json%\"player_name\":\"%playerName%\","
+set json "%json%\"server\":\"%serverName%\","
+set json "%json%\"prestige\":%player.prestige%,"
+set json "%json%\"honor\":%player.honor%,"
+set json "%json%\"gold\":%player.gold%,"
+set json "%json%\"alliance\":\"%player.alliance%\","
+
+// Cities array
+set json "%json%\"cities\":["
+set cityIndex 0
+label CityLoop
+iferror $cities[%cityIndex%].name$ goto EndCities
+
+if {%cityIndex%>0} set json "%json%,"
+set json "%json%{"
+set json "%json%\"name\":\"%cities[%cityIndex%].name%\","
+set json "%json%\"x\":%cities[%cityIndex%].x%,"
+set json "%json%\"y\":%cities[%cityIndex%].y%,"
+set json "%json%\"gold\":%cities[%cityIndex%].resource.gold%,"
+set json "%json%\"food\":%cities[%cityIndex%].resource.food%,"
+set json "%json%\"lumber\":%cities[%cityIndex%].resource.wood%,"
+set json "%json%\"stone\":%cities[%cityIndex%].resource.stone%,"
+set json "%json%\"iron\":%cities[%cityIndex%].resource.iron%,"
+set json "%json%\"workers\":%cities[%cityIndex%].troop.peasants%,"
+set json "%json%\"warriors\":%cities[%cityIndex%].troop.militia%,"
+set json "%json%\"scouts\":%cities[%cityIndex%].troop.scouter%,"
+set json "%json%\"pikemen\":%cities[%cityIndex%].troop.pikemen%,"
+set json "%json%\"swordsmen\":%cities[%cityIndex%].troop.swordsmen%,"
+set json "%json%\"archers\":%cities[%cityIndex%].troop.archer%,"
+set json "%json%\"cavalry\":%cities[%cityIndex%].troop.lightCavalry%,"
+set json "%json%\"cataphracts\":%cities[%cityIndex%].troop.heavyCavalry%,"
+set json "%json%\"transporters\":%cities[%cityIndex%].troop.carriage%,"
+set json "%json%\"ballistas\":%cities[%cityIndex%].troop.ballista%,"
+set json "%json%\"rams\":%cities[%cityIndex%].troop.batteringRam%,"
+set json "%json%\"catapults\":%cities[%cityIndex%].troop.catapult%"
+set json "%json%}"
+
+set cityIndex {%cityIndex%+1}
+goto CityLoop
+
+label EndCities
+set json "%json%],"
+
+// Heroes array
+set json "%json%\"heroes\":["
+set heroIndex 0
+label HeroLoop
+iferror $heroes[%heroIndex%].name$ goto EndHeroes
+
+if {%heroIndex%>0} set json "%json%,"
+set json "%json%{"
+set json "%json%\"name\":\"%heroes[%heroIndex%].name%\","
+set json "%json%\"level\":%heroes[%heroIndex%].level%,"
+set json "%json%\"attack\":%heroes[%heroIndex%].stratagem%,"
+set json "%json%\"politics\":%heroes[%heroIndex%].power%,"
+set json "%json%\"intelligence\":%heroes[%heroIndex%].management%"
+set json "%json%}"
+
+set heroIndex {%heroIndex%+1}
+goto HeroLoop
+
+label EndHeroes
+set json "%json%],"
+
+// Items array  
+set json "%json%\"items\":["
+set itemIndex 0
+label ItemLoop
+iferror $items[%itemIndex%].name$ goto EndItems
+
+if {%itemIndex%>0} set json "%json%,"
+set json "%json%{\"name\":\"%items[%itemIndex%].name%\",\"count\":%items[%itemIndex%].count%}"
+
+set itemIndex {%itemIndex%+1}
+if {%itemIndex%>500} goto EndItems
+goto ItemLoop
+
+label EndItems
+set json "%json%]"
+
+// Close JSON
+set json "%json%}"
+
+// Save to file
+echo "Exporting to: %outputFile%"
+savefile "%outputFile%" "%json%"
+echo "Export complete!"
+echo "File saved: %outputFile%"
+
+setsilence false

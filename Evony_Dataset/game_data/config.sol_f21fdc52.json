@@ -1,0 +1,26 @@
+{
+  "now": {
+    "proxyPw": "",
+    "skypeUn": "",
+    "secCode": "",
+    "proxyUn": "",
+    "autoLoginMaxTime": "15",
+    "username": "bigger.2008@hotmail.com",
+    "serverIP": "216.66.17.168",
+    "proxyHost": "",
+    "proxyType": "",
+    "loginType": "ev",
+    "password": "69arvida1967",
+    "autoScript": true,
+    "autoRun": true,
+    "theme": "Default Grey RE",
+    "server": "cc2",
+    "autoLogin": true,
+    "sid": "375",
+    "tokenExpires": NaN,
+    "autoLoginMinTime": "0",
+    "strserverAlias": "Parapet",
+    "proxyPort": "8080",
+    "skypePw": ""
+  }
+}

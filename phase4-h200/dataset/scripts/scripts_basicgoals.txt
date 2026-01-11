@@ -1,0 +1,158 @@
+
+# GENERAL SETTINGS
+set warTown cityName //enter name of city for keeptroop ddestination (if in use)
+set resHub cityName  //enter name of city for keepresource destination (if in use)
+
+config keepreports:1
+config safemaint:1
+config enemywarning:20
+set friends name,name,name
+enemyallianceignorelist %friends%
+
+# CITY DEFENSE
+config comfort:4
+autouseitems Truce_Agreement:9
+autouseitems Speech_Text:6
+autouseitems Advance_by_a_Hidden_Path:2
+config gate:0.1
+config hiding:0.09
+config attackgap:5
+gatepolicy 0 0 0 0 0 
+
+
+# HERO MANAGEMENT
+traininghero $c.cm.bestAttackHero().name$
+config hero:1
+config autogear:2
+config automedal:1
+config nocapture:1
+//config fhreserved:1
+//config fasthero:65
+//config junkhero:3
+
+
+# TROOP PRODUCTION
+troop p:1,sw:1,c:1
+troop p:10,sw:10,c:10
+troop w:100,p:100,sw:100,c:100
+troop wo:250,w:10k,s:10k,p:1k,sw:1k,a:20k,c:55k,cata:1k,t:5k,b:1k
+
+troop a:1m
+
+condgoal {$c.castle.id$!=$c.getCityFromName(%warTown%).castle.id$} keeptroop $c.getCityFromName(%warTown%).coord$ a:100k
+
+# FARMING AND RESOURCE HANDLING
+//config trade:1
+//config markethiding:1
+//resourcelimits 0,0 10m,25m 0,0 10m,25m
+config dumping:1
+config dumpingmax:1
+config extrafood:-1
+config valley:10
+config npc:3
+distancepolicy 15 10 5 30 5
+ballsused 50,75,150,210,305
+config zerofood:168
+
+requesthelp any s:0 s:0 g:15m g:100m
+requesthelp any s:0 s:0 f:15m f:100m
+requesthelp any s:0 s:0 w:15m w:100m
+requesthelp any s:0 s:0 s:15m s:100m
+requesthelp any s:0 s:0 i:15m i:100m
+
+condgoal {$c.castle.id$!=$c.getCityFromName(%resHub%).castle.id$} keepresource $c.getCityFromName(%resHub%).coord$ g:50m,f:50m,w:50m,i:50m
+//config fastkeepreso:1
+//notfastkeepresoheroes $c.cm.bestAttackHero().name$,$c.cm.getBestPoliticsHero().name$
+
+# MAINTOWN GOALS
+condgoal {$c.castle.id$==$c.ac[0].castle.id$} set maintown true
+condgoal {$c.castle.id$==$c.ac[0].castle.id$} config attackwarning:1
+condgoal {$c.castle.id$==$c.ac[0].castle.id$} config warreport:1
+condgoal {$c.castle.id$==$c.ac[0].castle.id$} maintpolicy 40 45
+condgoal {$c.castle.id$==$c.ac[0].castle.id$} autouseitems Minor_Mining_Pack,Minor_Merchant_Pack,Minor_Lumbering_Pack,Minor_Farming_Pack,Junior_medal_Box,Medium_medal_Box,Senior_medal_Box,Minor_Merchant_Pack
+
+
+## -WALL FORTIFICATIONS
+# select 'CD WALL' or '5K WALL' (just one of them, not both)
+
+# CD WALL
+fortification at:1
+fortification at:2
+fortification at:3
+fortification at:4
+fortification at:5
+fortification at:6
+fortification at:7
+fortification at:8
+fortification at:9
+fortification at:10
+fortification at:100
+fortification at:200
+fortification at:300
+fortification at:400
+fortification at:500
+fortification at:600
+fortification at:700
+fortification at:800
+fortification at:900
+fortification at:1k
+fortification at:2k
+fortification at:3k
+fortification at:4k
+fortification at:5k
+fortification at:6k
+fortification at:7k
+fortification at:8k
+fortification at:9k
+fortification at:10k
+fortification at:11k
+fortification at:12k
+fortification at:13k
+fortification at:14k
+fortification at:15k
+fortification at:16k
+fortification at:17k.r:1k
+
+# 5K WALL
+fortification trap:1,ab:1
+fortification trap:2,ab:2
+fortification trap:3,ab:3
+fortification trap:4,ab:4
+fortification trap:5,ab:5
+fortification trap:6,ab:6
+fortification trap:7,ab:7
+fortification trap:8,ab:8
+fortification trap:9,ab:9
+fortification trap:10,ab:10,at:1
+fortification trap:20,ab:20,at:2
+fortification trap:30,ab:30,at:3
+fortification trap:40,ab:40,at:4
+fortification trap:50,ab:50,at:5
+fortification trap:60,ab:60,at:6
+fortification trap:70,ab:70,at:7
+fortification trap:80,ab:90,at:8
+fortification trap:90,ab:90,at:9
+fortification trap:100,ab:100,at:10,r:1,tre:1
+fortification trap:200,ab:200,at:20,r:1,tre:1
+fortification trap:300,ab:300,at:30,r:1,tre:1
+fortification trap:400,ab:400,at:40,r:1,tre:1
+fortification trap:500,ab:500,at:50,r:1,tre:1
+fortification trap:600,ab:600,at:60,r:1,tre:1
+fortification trap:700,ab:700,at:70,r:2,tre:2
+fortification trap:800,ab:800,at:80,r:3,tre:3
+fortification trap:900,ab:900,at:80,r:4,tre:4
+fortification trap:1000,ab:1000,at:100,r:5,tre:5
+fortification trap:1000,ab:2000,at:500,r:10,tre:10
+fortification trap:1000,ab:3000,at:1000,r:25,tre:25
+fortification trap:1000,ab:4000,at:2000,r:50,tre:50
+fortification trap:1000,ab:5000,at:3000,r:50,tre:50
+fortification trap:1000,ab:5000,at:4000,r:50,tre:50
+fortification trap:1000,ab:5000,at:5000,r:50,tre:50
+fortification trap:1000,ab:6000,at:7700,r:75,tre:75
+fortification trap:1000,ab:7000,at:7700,r:75,tre:75
+fortification trap:1000,ab:8000,at:7700,r:75,tre:75
+fortification trap:1000,ab:9000,at:7700,r:75,tre:75
+fortification trap:1000,ab:10000,at:7700,r:75,tre:75
+fortification trap:1000,ab:12500,at:7700,r:75,tre:75
+fortification trap:1000,ab:15000,at:7700,r:75,tre:75
+fortification trap:1000,ab:15000,at:7700,r:100,tre:100

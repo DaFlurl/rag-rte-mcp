@@ -1,0 +1,3 @@
+setarr sendTroopType "s p sw a c cata t b r cp"
+setarr howManyToKeep "1073741900 715827900 715827900 550870912 715832885 884258976 429499730 944892806 987844500 979252590"
+setarr sendToLocations "300,701"

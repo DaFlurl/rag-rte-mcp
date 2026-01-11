@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<languages>
+<language elname="English" langrange="" ltype="UTF-8" ltransdatas=""/>
+<language elname="中文(繁體)" langrange="00000404|00001404|00000c04" ltype="UTF-8" ltransdatas="Chinese-traditional.txt"/>
+<language elname="Deutsch" langrange="00000407|00001407|00001007|00000c07|00000807" ltype="UTF-8" ltransdatas="German.txt"/>
+<language elname="FranÇais" langrange="0000040c|0000180c|0000140c|0000100c|00000c0c|0000080c" ltype="UTF-8" ltransdatas="French.txt"/>
+<language elname="Italiano" langrange="00000410|00000810" ltype="UTF-8" ltransdatas="Italian.txt"/>
+<language elname="한국어" langrange="00000412" ltype="UTF-8" ltransdatas="Korean.txt"/>
+<language elname="Português" langrange="00000416|00000816" ltype="UTF-8" ltransdatas="Portuguese.txt" /> 
+
+<language elname="Español" langrange="00002c0a|0000400a|0000340a|0000240a|0000140a|00001c0a|0000300a|0000440a|0000100a|0000480a|0000080a|00004c0a|0000180a|00003c0a|0000280a|0000500a|00000c0a|0000040a|0000540a|0000380a|0000200a" ltype="UTF-8" ltransdatas="Spanish.txt" />
+
+<language elname="العربية" langrange="00001401|00003C01|00000C01|00000801|00002C01|00003401|00003001|00001001|00001801|00002001|00004001|00000401|00002801|00001C01|00003801|00002401" ltype="UTF-8" ltransdatas="Arabic.txt" />  
+</languages>

@@ -1,0 +1,30 @@
+// BORG TOOLKIT - Gold Farming Loop
+// Automated gold collection via tax + pacify
+
+setsilence off
+
+echo ========================================
+echo GOLD FARMING - Tax Loop
+echo Press STOP to end
+echo ========================================
+
+label goldloop
+
+// Set max tax rate
+settaxrate 100
+
+// Wait a moment
+sleep 500
+
+// Levy taxes
+levy tax
+
+// Pacify to restore loyalty
+comfort disaster
+
+echo Gold collected! Waiting 5 min...
+
+// Wait 5 minutes before next cycle
+sleep 300000
+
+goto goldloop

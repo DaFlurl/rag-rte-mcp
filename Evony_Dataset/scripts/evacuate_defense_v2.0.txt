@@ -1,0 +1,197 @@
+// ============================================
+// EVACUATE DEFENSE v2.0
+// Emergency evacuation and defense system
+// Uses REAL evacuatetown, endevacuate commands
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+// REAL COMMANDS FROM CityState.as:
+// evacuatetown coords
+// endevacuate
+// gatepolicy peace attack sb mixed
+// resourcelimits food wood stone iron
+// ============================================
+
+// ==========================================
+// CONFIGURATION - EDIT THESE
+// ==========================================
+
+// === EVACUATION TARGET ===
+set safeX 0
+set safeY 0
+set safeCoords "0,0"
+
+// === GATE POLICY ===
+// 0=open, 1=closed
+set peacePolicyGate 0
+set attackPolicyGate 1
+set sbPolicyGate 1
+set mixedPolicyGate 1
+
+// === RESOURCE LIMITS ===
+// Max resources to keep (rest sent to safe)
+set maxFood 1000000
+set maxWood 1000000
+set maxStone 1000000
+set maxIron 1000000
+
+// === EVACUATION TRIGGERS ===
+set enableAutoEvacuate 1
+set evacuateOnIncoming 1
+set evacuateOnScout 1
+set incomingThreshold 50000
+
+// === FEATURES ===
+set enableGateControl 1
+set enableResourceDump 1
+set enableTroopEvacuate 1
+set enableLogging 1
+
+// === RUN MODE ===
+set runMode "monitor"
+
+// ==========================================
+// DO NOT EDIT BELOW
+// ==========================================
+
+set isEvacuated 0
+set evacuationCount 0
+
+echo ============================================
+echo EVACUATE DEFENSE v2.0
+echo Safe Location: %safeX%,%safeY%
+echo Gate Policy: Peace=%peacePolicyGate% Attack=%attackPolicyGate%
+echo ============================================
+
+// Validate safe location
+if safeX = 0 then if safeY = 0 then goto noSafeLocation
+
+// Setup defense configuration
+gosub setupDefenseConfig
+
+// Main mode
+if runMode = "evacuate" then goto evacuateNow
+if runMode = "return" then goto returnTroops
+if runMode = "monitor" then goto monitorMode
+goto monitorMode
+
+// ==========================================
+// SETUP DEFENSE CONFIG (Real Commands)
+// ==========================================
+label setupDefenseConfig
+echo [SETUP] Configuring defense settings...
+
+// Set gate policy
+// gatepolicy peace attack sb mixed
+if enableGateControl = 1 then gatepolicy %peacePolicyGate% %attackPolicyGate% %sbPolicyGate% %mixedPolicyGate%
+
+// Set resource limits
+// resourcelimits food wood stone iron
+resourcelimits %maxFood% %maxWood% %maxStone% %maxIron%
+
+echo [SETUP] Defense configured
+return
+
+// ==========================================
+// EVACUATE NOW (Real Command)
+// ==========================================
+label evacuateNow
+echo [EVACUATE] Emergency evacuation!
+
+set safeCoords "%safeX%,%safeY%"
+
+// evacuatetown coords
+// Sends all troops and resources to safe location
+evacuatetown %safeCoords%
+
+set isEvacuated 1
+set evacuationCount evacuationCount + 1
+
+echo [EVACUATE] Evacuation initiated to %safeCoords%
+goto complete
+
+// ==========================================
+// RETURN TROOPS (Real Command)
+// ==========================================
+label returnTroops
+echo [RETURN] Ending evacuation...
+
+// endevacuate
+// Recalls troops from evacuation
+endevacuate
+
+set isEvacuated 0
+
+echo [RETURN] Troops returning
+goto complete
+
+// ==========================================
+// MONITOR MODE
+// ==========================================
+label monitorMode
+echo [MONITOR] Monitoring for threats...
+
+label monitorLoop
+
+// Check for incoming attacks
+gosub checkIncoming
+
+// If threat detected and auto-evacuate enabled
+if threatDetected = 1 then if enableAutoEvacuate = 1 then gosub evacuateNow
+
+echo [MONITOR] Status OK - checking again in 10s
+sleep 10000
+goto monitorLoop
+
+// ==========================================
+// CHECK INCOMING
+// ==========================================
+label checkIncoming
+set threatDetected 0
+
+// This would check for incoming armies
+// The bot has internal detection mechanisms
+
+return
+
+// ==========================================
+// CLOSE GATES (Emergency)
+// ==========================================
+label closeGates
+echo [GATE] Closing all gates!
+
+// Close gates during attack
+gatepolicy 1 1 1 1
+
+echo [GATE] All gates closed
+return
+
+// ==========================================
+// OPEN GATES (Normal)
+// ==========================================
+label openGates
+echo [GATE] Opening gates...
+
+gatepolicy %peacePolicyGate% %attackPolicyGate% %sbPolicyGate% %mixedPolicyGate%
+
+echo [GATE] Gates restored to policy
+return
+
+// ==========================================
+// ERROR HANDLERS
+// ==========================================
+label noSafeLocation
+echo [ERROR] Set safe evacuation coordinates!
+echo Usage: set safeX 100 / set safeY 200
+stop
+
+// ==========================================
+// COMPLETION
+// ==========================================
+label complete
+echo ============================================
+echo EVACUATE DEFENSE COMPLETE
+echo Evacuated: %isEvacuated%
+echo Total Evacuations: %evacuationCount%
+echo ============================================
+stop

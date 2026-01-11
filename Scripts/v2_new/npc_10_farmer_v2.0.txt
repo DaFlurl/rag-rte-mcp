@@ -1,0 +1,295 @@
+// ============================================
+// NPC 10 FARMER v2.0
+// Advanced Level 10 NPC farming automation
+// Uses REAL npc10list, npc10troops, npc10heroes
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+// REAL COMMANDS FROM CityState.as:
+// npc10list str - Set NPC 10 target list
+// npc10troops str - Set troops for NPC 10
+// npc10heroes str - Set heroes for NPC 10
+// npc10limit str - Set limits
+// npclist str - Standard NPC list
+// npctroops str - Standard NPC troops
+// npcheroes str - Standard NPC heroes
+// ============================================
+
+// ==========================================
+// CONFIGURATION - EDIT THESE
+// ==========================================
+
+// === NPC TARGETING ===
+set farmLevel 10
+set searchRadius 100
+set maxNPCsToFarm 20
+
+// === NPC 10 TROOP CONFIGURATION ===
+// Format: troopType:count,troopType:count
+set npc10TroopConfig "a:100000,b:10000"
+set standardNPCTroops "a:50000"
+
+// === NPC 10 HERO CONFIGURATION ===
+// Format: heroName1,heroName2,heroName3
+set npc10HeroConfig "any,any,any"
+set heroMinAttack 200
+
+// === NPC LISTS ===
+// Specific NPCs to target (coords)
+set useCustomList 0
+set customNPCList "100,200;150,250;200,300"
+
+// === WAVE SETTINGS ===
+set wavesPerNPC 3
+set waveDelay 3000
+set npcDelay 5000
+
+// === FEATURES ===
+set enableNPC10Mode 1
+set enableStandardMode 0
+set enableAutoScan 1
+set enableHeroRotation 1
+set enableTroopCheck 1
+set minArchersRequired 500000
+set enableLogging 1
+set enableCooldown 1
+set cooldownMinutes 10
+
+// === DISTANCE POLICY ===
+set maxNPCDistance 50
+set maxBuildNPCDistance 30
+set huntingDistance 100
+
+// === RUN MODE ===
+set runMode "continuous"
+
+// ==========================================
+// DO NOT EDIT BELOW
+// ==========================================
+
+set npcsHit 0
+set totalWaves 0
+set farmCycles 0
+
+echo ============================================
+echo NPC 10 FARMER v2.0
+echo Level: %farmLevel% | Radius: %searchRadius%
+echo NPC10 Mode: %enableNPC10Mode%
+echo ============================================
+
+// Setup NPC configuration using real commands
+gosub setupNPCConfig
+
+// Main farming
+if runMode = "once" then goto farmOnce
+if runMode = "continuous" then goto farmContinuous
+goto farmContinuous
+
+// ==========================================
+// SETUP NPC CONFIGURATION (Real Commands)
+// ==========================================
+label setupNPCConfig
+echo [SETUP] Configuring NPC farming...
+
+// Set distance policy
+// distancepolicy npc buildnpc hunting valley map
+distancepolicy %maxNPCDistance% %maxBuildNPCDistance% %huntingDistance% 50 100
+
+if enableNPC10Mode = 1 then gosub setupNPC10
+if enableStandardMode = 1 then gosub setupStandardNPC
+
+echo [SETUP] Configuration complete
+return
+
+// ==========================================
+// SETUP NPC 10 MODE
+// ==========================================
+label setupNPC10
+echo [NPC10] Setting up NPC 10 farming...
+
+// npc10troops - Set troops to use for NPC 10
+npc10troops %npc10TroopConfig%
+
+// npc10heroes - Set heroes for NPC 10
+npc10heroes %npc10HeroConfig%
+
+// npc10limit - Set limits
+npc10limit "max:20,waves:3"
+
+// npc10list - Set specific targets (optional)
+if useCustomList = 1 then npc10list %customNPCList%
+
+echo [NPC10] Configuration set
+return
+
+// ==========================================
+// SETUP STANDARD NPC MODE
+// ==========================================
+label setupStandardNPC
+echo [NPC] Setting up standard NPC farming...
+
+// npctroops - Set troops
+npctroops %standardNPCTroops%
+
+// npcheroes - Set heroes
+npcheroes %npc10HeroConfig%
+
+// npclist - Set targets
+if useCustomList = 1 then npclist %customNPCList%
+
+echo [NPC] Configuration set
+return
+
+// ==========================================
+// SINGLE FARM CYCLE
+// ==========================================
+label farmOnce
+echo [FARM] Single farm cycle...
+gosub executeFarmCycle
+goto complete
+
+// ==========================================
+// CONTINUOUS FARMING
+// ==========================================
+label farmContinuous
+echo [FARM] Continuous farming mode...
+
+label farmLoop
+
+gosub executeFarmCycle
+set farmCycles farmCycles + 1
+
+if enableCooldown = 1 then gosub doCooldown
+
+goto farmLoop
+
+// ==========================================
+// EXECUTE FARM CYCLE
+// ==========================================
+label executeFarmCycle
+echo ----------------------------------------
+echo [CYCLE %farmCycles%] Starting NPC farm cycle...
+
+// Check troops
+if enableTroopCheck = 1 then gosub checkTroops
+if troopsReady = 0 then goto waitForTroops
+
+// Scan for NPCs
+if enableAutoScan = 1 then gosub scanForNPCs
+
+// Farm NPCs
+gosub farmNPCs
+
+echo [CYCLE] Complete - %npcsHit% NPCs hit
+return
+
+// ==========================================
+// SCAN FOR NPCs
+// ==========================================
+label scanForNPCs
+echo [SCAN] Scanning for level %farmLevel% NPCs...
+
+// Use rescanmap to refresh
+// rescanmap coords radius
+rescanmap "0,0" %searchRadius%
+
+sleep 5000
+echo [SCAN] Scan complete
+return
+
+// ==========================================
+// FARM NPCs
+// ==========================================
+label farmNPCs
+echo [FARM] Farming NPCs...
+
+set npcCount 0
+label npcFarmLoop
+
+// Find next NPC
+// The bot handles this internally with npc10 commands
+// We just need to send attack waves
+
+gosub sendNPCWave
+
+set npcCount npcCount + 1
+set npcsHit npcsHit + 1
+
+sleep %npcDelay%
+
+if npcCount < maxNPCsToFarm then goto npcFarmLoop
+
+return
+
+// ==========================================
+// SEND NPC WAVE
+// ==========================================
+label sendNPCWave
+echo [WAVE] Sending NPC attack wave...
+
+set waveCount 0
+label waveLoop
+
+// Get hero using spamheroes config
+getspamhero power
+
+// The npc10 system handles targeting
+// We trigger manual waves as backup
+
+// Find NPC 10 in range
+findnpc %farmLevel%
+if npcX = 0 then return
+
+attack %npcX% %npcY% spamhero %npc10TroopConfig%
+
+set waveCount waveCount + 1
+set totalWaves totalWaves + 1
+
+sleep %waveDelay%
+
+if waveCount < wavesPerNPC then goto waveLoop
+
+return
+
+// ==========================================
+// CHECK TROOPS
+// ==========================================
+label checkTroops
+set troopsReady 1
+gettroops
+
+if archers < minArchersRequired then set troopsReady 0
+
+if troopsReady = 1 then echo [CHECK] Troops ready: %archers% archers
+if troopsReady = 0 then echo [CHECK] Need %minArchersRequired% archers
+
+return
+
+// ==========================================
+// WAIT FOR TROOPS
+// ==========================================
+label waitForTroops
+echo [WAIT] Waiting for troops...
+sleep 300000
+return
+
+// ==========================================
+// COOLDOWN
+// ==========================================
+label doCooldown
+set cooldownMs cooldownMinutes * 60000
+echo [COOLDOWN] Waiting %cooldownMinutes% minutes...
+sleep %cooldownMs%
+return
+
+// ==========================================
+// COMPLETION
+// ==========================================
+label complete
+echo ============================================
+echo NPC 10 FARMER COMPLETE
+echo Farm Cycles: %farmCycles%
+echo NPCs Hit: %npcsHit%
+echo Total Waves: %totalWaves%
+echo ============================================
+stop

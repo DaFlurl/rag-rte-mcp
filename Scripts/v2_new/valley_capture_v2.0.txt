@@ -1,0 +1,175 @@
+// ============================================
+// VALLEY CAPTURE v2.0
+// Automated valley farming and capture
+// For AE2/RoboEvony - Resource Valleys
+// Author: Borg Automation Suite
+// Status: UNTESTED - Requires validation
+// ============================================
+
+// ==========================================
+// CONFIGURATION - EDIT THESE
+// ==========================================
+
+// === VALLEY PREFERENCES ===
+set preferredLevel 10
+set minLevel 5
+set preferredType "any"
+set searchRadius 30
+
+// === CAPTURE SETTINGS ===
+set troopsPerCapture 10000
+set troopType "archers"
+set maxCaptures 10
+set captureDelay 5000
+
+// === FEATURES ===
+set enableAutoScan 1
+set enableLevelFilter 1
+set enableTypeFilter 0
+set enableOccupiedCheck 1
+set enableCooldown 1
+set cooldownMinutes 30
+set enableLogging 1
+
+// === VALLEY TYPES ===
+// 1=forest, 2=desert, 3=hill, 4=swamp
+// 5=grassland, 6=lake, 7=flat
+set typeFilter 7
+
+// === RUN MODE ===
+set runMode "loop"
+
+// ==========================================
+// DO NOT EDIT BELOW
+// ==========================================
+
+set valleysCaptured 0
+set currentValleyX 0
+set currentValleyY 0
+
+echo ============================================
+echo VALLEY CAPTURE v2.0
+echo Level: %minLevel%-%preferredLevel%
+echo Max Captures: %maxCaptures%
+echo ============================================
+
+// Main loop
+if runMode = "once" then goto captureOnce
+if runMode = "loop" then goto captureLoop
+goto captureLoop
+
+label captureOnce
+gosub executeCaptureRun
+goto complete
+
+label captureLoop
+gosub executeCaptureRun
+if enableCooldown = 1 then gosub doCooldown
+goto captureLoop
+
+// ==========================================
+// CAPTURE RUN
+// ==========================================
+label executeCaptureRun
+echo ----------------------------------------
+echo [RUN] Starting valley capture run...
+
+// Scan for valleys
+if enableAutoScan = 1 then gosub scanValleys
+
+// Capture loop
+set captureCount 0
+label valleyLoop
+
+gosub findNextValley
+if currentValleyX = 0 then goto runComplete
+
+gosub captureValley
+
+set captureCount captureCount + 1
+set valleysCaptured valleysCaptured + 1
+
+if captureCount >= maxCaptures then goto runComplete
+
+sleep %captureDelay%
+goto valleyLoop
+
+label runComplete
+echo [RUN] Capture run complete - %captureCount% valleys
+return
+
+// ==========================================
+// SCAN FOR VALLEYS
+// ==========================================
+label scanValleys
+echo [SCAN] Scanning for valleys within %searchRadius% tiles...
+
+scanmap %searchRadius%
+sleep 3000
+
+echo [SCAN] Scan complete
+return
+
+// ==========================================
+// FIND NEXT VALLEY
+// ==========================================
+label findNextValley
+echo [FIND] Looking for level %preferredLevel% valley...
+
+// Find valley at preferred level
+findvalley %preferredLevel%
+sleep 1000
+
+set currentValleyX valleyX
+set currentValleyY valleyY
+
+// If not found, try lower levels
+if currentValleyX = 0 then findvalley %minLevel%
+if currentValleyX = 0 then set currentValleyX valleyX
+if currentValleyY = 0 then set currentValleyY valleyY
+
+if currentValleyX > 0 then echo [FIND] Found valley at %currentValleyX%,%currentValleyY%
+if currentValleyX = 0 then echo [FIND] No valleys found
+
+return
+
+// ==========================================
+// CAPTURE VALLEY
+// ==========================================
+label captureValley
+echo [CAPTURE] Capturing valley at %currentValleyX%,%currentValleyY%...
+
+// Get hero
+getspamhero
+
+// Build troop string
+if troopType = "archers" then set troops "a%troopsPerCapture%"
+if troopType = "warriors" then set troops "w%troopsPerCapture%"
+if troopType = "scouts" then set troops "s%troopsPerCapture%"
+
+// Send capture force
+attack %currentValleyX% %currentValleyY% spamhero %troops%
+
+echo [CAPTURE] Capture force sent
+sleep 5000
+
+return
+
+// ==========================================
+// COOLDOWN
+// ==========================================
+label doCooldown
+set cooldownMs cooldownMinutes * 60000
+echo [COOLDOWN] Waiting %cooldownMinutes% minutes...
+sleep %cooldownMs%
+return
+
+// ==========================================
+// COMPLETE
+// ==========================================
+label complete
+echo ============================================
+echo VALLEY CAPTURE COMPLETE
+echo Valleys Captured: %valleysCaptured%
+echo ============================================
+stop

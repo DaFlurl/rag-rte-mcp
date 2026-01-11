@@ -1,0 +1,7850 @@
+{
+  "total_beans": 86,
+  "total_fields": 732,
+  "beans": {
+    "AllianceAddPlayerByLeaderInfoBean": {
+      "class_name": "AllianceAddPlayerByLeaderInfoBean",
+      "source_file": "AllianceAddPlayerByLeaderInfoBean.as",
+      "field_count": 5,
+      "fields": [
+        {
+          "name": "_1358063253memberCount",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1276224445prestige",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1606140770allianceName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3492908rank",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "prestige",
+          "type": "int"
+        },
+        {
+          "name": "memberCount",
+          "type": "int"
+        },
+        {
+          "name": "allianceName",
+          "type": "String"
+        },
+        {
+          "name": "rank",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "AllianceAddPlayerByLeaderInfoBean",
+        "dispatchEvent",
+        "toDebugString",
+        "removeEventListener",
+        "hasEventListener",
+        "copyTo",
+        "addEventListener",
+        "toObject",
+        "willTrigger"
+      ]
+    },
+    "AllianceAddPlayerByUserInfoBean": {
+      "class_name": "AllianceAddPlayerByUserInfoBean",
+      "source_file": "AllianceAddPlayerByUserInfoBean.as",
+      "field_count": 6,
+      "fields": [
+        {
+          "name": "_764803337castleCount",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1198082422inviteTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1276224445prestige",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_266666762userName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3492908rank",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "prestige",
+          "type": "int"
+        },
+        {
+          "name": "rank",
+          "type": "int"
+        },
+        {
+          "name": "inviteTime",
+          "type": "Number"
+        },
+        {
+          "name": "castleCount",
+          "type": "int"
+        },
+        {
+          "name": "userName",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "AllianceAddPlayerByUserInfoBean",
+        "dispatchEvent",
+        "toDebugString",
+        "copyTo",
+        "removeEventListener",
+        "addEventListener",
+        "willTrigger",
+        "hasEventListener",
+        "toObject"
+      ]
+    },
+    "AllianceAddPlayerInfoBean": {
+      "class_name": "AllianceAddPlayerInfoBean",
+      "source_file": "AllianceAddPlayerInfoBean.as",
+      "field_count": 7,
+      "fields": [
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_109757585state",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1198082422inviteTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1276224445prestige",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_266666762userName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_187927486invitePerson",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3492908rank",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "prestige",
+          "type": "int"
+        },
+        {
+          "name": "rank",
+          "type": "int"
+        },
+        {
+          "name": "state",
+          "type": "String"
+        },
+        {
+          "name": "userName",
+          "type": "String"
+        },
+        {
+          "name": "inviteTime",
+          "type": "Number"
+        },
+        {
+          "name": "invitePerson",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "AllianceAddPlayerInfoBean",
+        "dispatchEvent",
+        "toDebugString",
+        "removeEventListener",
+        "copyTo",
+        "addEventListener",
+        "hasEventListener",
+        "toObject",
+        "willTrigger"
+      ]
+    },
+    "AllianceInviteBeanResponse": {
+      "class_name": "AllianceInviteBeanResponse",
+      "source_file": "AllianceInviteBeanResponse.as",
+      "field_count": 5,
+      "fields": [
+        {
+          "name": "packageId",
+          "type": "Number",
+          "access": "public"
+        },
+        {
+          "name": "msg",
+          "type": "String",
+          "access": "public"
+        },
+        {
+          "name": "allianceAddPlayerInfoBeanListArray",
+          "type": "ArrayCollection",
+          "access": "public"
+        },
+        {
+          "name": "errorMsg",
+          "type": "String",
+          "access": "public"
+        },
+        {
+          "name": "ok",
+          "type": "int",
+          "access": "public"
+        }
+      ],
+      "getters": [],
+      "methods": [
+        "AllianceInviteBeanResponse",
+        "setAllianceAddPlayerInfoBeanList",
+        "toDebugString",
+        "getAllianceAddPlayerInfoBeanList",
+        "copyTo",
+        "toObject"
+      ]
+    },
+    "AllianceInviteOnClientBeanResponse": {
+      "class_name": "AllianceInviteOnClientBeanResponse",
+      "source_file": "AllianceInviteOnClientBeanResponse.as",
+      "field_count": 5,
+      "fields": [
+        {
+          "name": "packageId",
+          "type": "Number",
+          "access": "public"
+        },
+        {
+          "name": "msg",
+          "type": "String",
+          "access": "public"
+        },
+        {
+          "name": "allianceAddPlayerByLeaderInfoBeanListArray",
+          "type": "ArrayCollection",
+          "access": "public"
+        },
+        {
+          "name": "errorMsg",
+          "type": "String",
+          "access": "public"
+        },
+        {
+          "name": "ok",
+          "type": "int",
+          "access": "public"
+        }
+      ],
+      "getters": [],
+      "methods": [
+        "AllianceInviteOnClientBeanResponse",
+        "setAllianceAddPlayerByLeaderInfoBeanList",
+        "toDebugString",
+        "getAllianceAddPlayerByLeaderInfoBeanList",
+        "copyTo",
+        "toObject"
+      ]
+    },
+    "AllianceQueryBean": {
+      "class_name": "AllianceQueryBean",
+      "source_file": "AllianceQueryBean.as",
+      "field_count": 10,
+      "fields": [
+        {
+          "name": "_1344718425bulletin",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_102976443limit",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3373707name",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1349154522curNum",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_190875433creatorName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_1191282484leaderName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1276224445prestige",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3079825desc",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_978111542ranking",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "desc",
+          "type": "String"
+        },
+        {
+          "name": "curNum",
+          "type": "int"
+        },
+        {
+          "name": "bulletin",
+          "type": "String"
+        },
+        {
+          "name": "leaderName",
+          "type": "String"
+        },
+        {
+          "name": "ranking",
+          "type": "int"
+        },
+        {
+          "name": "limit",
+          "type": "int"
+        },
+        {
+          "name": "prestige",
+          "type": "int"
+        },
+        {
+          "name": "creatorName",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "AllianceQueryBean",
+        "willTrigger",
+        "toObject",
+        "dispatchEvent",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "copyTo",
+        "hasEventListener"
+      ]
+    },
+    "AllProduceBean": {
+      "class_name": "AllProduceBean",
+      "source_file": "AllProduceBean.as",
+      "field_count": 3,
+      "fields": [
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_267085529allProduceQueueArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_1381039140positionId",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "positionId",
+          "type": "int"
+        },
+        {
+          "name": "allProduceQueueArray",
+          "type": "ArrayCollection"
+        }
+      ],
+      "methods": [
+        "AllProduceBean",
+        "dispatchEvent",
+        "willTrigger",
+        "toDebugString",
+        "setAllProduceQueue",
+        "addEventListener",
+        "copyTo",
+        "removeEventListener",
+        "toObject",
+        "getAllProduceQueue",
+        "hasEventListener"
+      ]
+    },
+    "ArmyBean": {
+      "class_name": "ArmyBean",
+      "source_file": "ArmyBean.as",
+      "field_count": 19,
+      "fields": [
+        {
+          "name": "_1409292392armyId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1383259878missionType",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3292055king",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_341064690resource",
+          "type": "ResourceBean",
+          "access": "private"
+        },
+        {
+          "name": "_995699469startFieldId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1220753771heroid",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1911605294targetPosName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_962590849direction",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_526788547startPosName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_337438527restTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1191572123selected",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_2129294769startTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_2014132310heroLevel",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1134711072reachTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1442694372targetFieldId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3198970hero",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1806944311alliance",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_110634834troop",
+          "type": "TroopStrBean",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "direction",
+          "type": "int"
+        },
+        {
+          "name": "hero",
+          "type": "String"
+        },
+        {
+          "name": "resource",
+          "type": "ResourceBean"
+        },
+        {
+          "name": "king",
+          "type": "String"
+        },
+        {
+          "name": "armyId",
+          "type": "int"
+        },
+        {
+          "name": "selected",
+          "type": "Boolean"
+        },
+        {
+          "name": "heroid",
+          "type": "int"
+        },
+        {
+          "name": "targetPosName",
+          "type": "String"
+        },
+        {
+          "name": "heroLevel",
+          "type": "int"
+        },
+        {
+          "name": "alliance",
+          "type": "String"
+        },
+        {
+          "name": "restTime",
+          "type": "Number"
+        },
+        {
+          "name": "startPosName",
+          "type": "String"
+        },
+        {
+          "name": "startTime",
+          "type": "Number"
+        },
+        {
+          "name": "troop",
+          "type": "TroopStrBean"
+        },
+        {
+          "name": "reachTime",
+          "type": "Number"
+        },
+        {
+          "name": "targetFieldId",
+          "type": "int"
+        },
+        {
+          "name": "missionType",
+          "type": "int"
+        },
+        {
+          "name": "startFieldId",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "ArmyBean",
+        "willTrigger",
+        "toObject",
+        "dispatchEvent",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "copyTo",
+        "hasEventListener"
+      ]
+    },
+    "AvailableResearchListBean": {
+      "class_name": "AvailableResearchListBean",
+      "source_file": "AvailableResearchListBean.as",
+      "field_count": 12,
+      "fields": [
+        {
+          "name": "_1607243192endTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1999144890upgradeing",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_1371991915conditionBean",
+          "type": "ConditionBean",
+          "access": "private"
+        },
+        {
+          "name": "_499553710enhancedstarlv",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_102865796level",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3198785help",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_2129294769startTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_35872819castleId",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_858803723typeId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1780023352avalevel",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_676059661permition",
+          "type": "Boolean",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "level",
+          "type": "int"
+        },
+        {
+          "name": "permition",
+          "type": "Boolean"
+        },
+        {
+          "name": "avalevel",
+          "type": "int"
+        },
+        {
+          "name": "help",
+          "type": "int"
+        },
+        {
+          "name": "upgradeing",
+          "type": "Boolean"
+        },
+        {
+          "name": "endTime",
+          "type": "Number"
+        },
+        {
+          "name": "castleId",
+          "type": "Number"
+        },
+        {
+          "name": "startTime",
+          "type": "Number"
+        },
+        {
+          "name": "enhancedstarlv",
+          "type": "int"
+        },
+        {
+          "name": "conditionBean",
+          "type": "ConditionBean"
+        },
+        {
+          "name": "typeId",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "AvailableResearchListBean",
+        "hasEventListener",
+        "willTrigger",
+        "toObject",
+        "dispatchEvent",
+        "toDebugString",
+        "addEventListener",
+        "copyTo",
+        "removeEventListener"
+      ]
+    },
+    "BaseBean": {
+      "class_name": "BaseBean",
+      "source_file": "BaseBean.as",
+      "field_count": 0,
+      "fields": [],
+      "getters": [],
+      "methods": [
+        "BaseBean",
+        "toDebugString"
+      ]
+    },
+    "BettleResultBean": {
+      "class_name": "BettleResultBean",
+      "source_file": "BettleResultBean.as",
+      "field_count": 0,
+      "fields": [],
+      "getters": [],
+      "methods": [
+        "BettleResultBean",
+        "dispatchEvent",
+        "toDebugString",
+        "willTrigger",
+        "copyTo",
+        "removeEventListener",
+        "hasEventListener",
+        "toObject",
+        "addEventListener"
+      ]
+    },
+    "BuffBean": {
+      "class_name": "BuffBean",
+      "source_file": "BuffBean.as",
+      "field_count": 4,
+      "fields": [
+        {
+          "name": "_1017134268descName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1607243192endTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_858803723typeId",
+          "type": "String",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "endTime",
+          "type": "Number"
+        },
+        {
+          "name": "typeId",
+          "type": "String"
+        },
+        {
+          "name": "descName",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "BuffBean",
+        "dispatchEvent",
+        "willTrigger",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "copyTo",
+        "toObject",
+        "hasEventListener"
+      ]
+    },
+    "BuyResourceBean": {
+      "class_name": "BuyResourceBean",
+      "source_file": "BuyResourceBean.as",
+      "field_count": 9,
+      "fields": [
+        {
+          "name": "_678500047forIron",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_678592313forFood",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_504430457woodRemain",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_449807254foodRemain",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_450629916forStone",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1881641644ironRemain",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_252311759stoneRemain",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_678085866forWood",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "woodRemain",
+          "type": "int"
+        },
+        {
+          "name": "forFood",
+          "type": "int"
+        },
+        {
+          "name": "forIron",
+          "type": "int"
+        },
+        {
+          "name": "forWood",
+          "type": "int"
+        },
+        {
+          "name": "ironRemain",
+          "type": "int"
+        },
+        {
+          "name": "forStone",
+          "type": "int"
+        },
+        {
+          "name": "foodRemain",
+          "type": "int"
+        },
+        {
+          "name": "stoneRemain",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "BuyResourceBean",
+        "toDebugString",
+        "addEventListener",
+        "dispatchEvent",
+        "removeEventListener",
+        "willTrigger",
+        "copyTo",
+        "toObject",
+        "hasEventListener"
+      ]
+    },
+    "CastleBean": {
+      "class_name": "CastleBean",
+      "source_file": "CastleBean.as",
+      "field_count": 28,
+      "fields": [
+        {
+          "name": "_1225376224herosArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_309360144colonyBeansArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_452521375powerlevel",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1458231286tradesArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_3355id",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_2032248903buffsArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_696323609zoneId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_233906701fortification",
+          "type": "FortificationsBean",
+          "access": "private"
+        },
+        {
+          "name": "_1293148908mercenaryBeansArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_1097354357logUrl",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_45571131goOutForBattle",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_110634834troop",
+          "type": "TroopBean",
+          "access": "private"
+        },
+        {
+          "name": "_892481550status",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_2059290973buildingQueuesArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_3226745icon",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3373707name",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_341064690resource",
+          "type": "CastleResourceBean",
+          "access": "private"
+        },
+        {
+          "name": "_1236765024allowAlliance",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_328168726usePACIFY_SUCCOUR_OR_PACIFY_PRAY",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_861252683fieldId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_208690213colonization",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1632439642buildingsArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_1228099360fieldsArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_116645134hasEnemy",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_637336720transingTradesArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_419054649canChangeIcon",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_1775742881strTroop",
+          "type": "TroopStrBean",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "hasEnemy",
+          "type": "Boolean"
+        },
+        {
+          "name": "tradesArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "fieldsArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "resource",
+          "type": "CastleResourceBean"
+        },
+        {
+          "name": "herosArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "colonization",
+          "type": "int"
+        },
+        {
+          "name": "canChangeIcon",
+          "type": "Boolean"
+        },
+        {
+          "name": "goOutForBattle",
+          "type": "Boolean"
+        },
+        {
+          "name": "usePACIFY_SUCCOUR_OR_PACIFY_PRAY",
+          "type": "int"
+        },
+        {
+          "name": "troop",
+          "type": "TroopBean"
+        },
+        {
+          "name": "buildingsArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "icon",
+          "type": "int"
+        },
+        {
+          "name": "transingTradesArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "logUrl",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "powerlevel",
+          "type": "int"
+        },
+        {
+          "name": "allowAlliance",
+          "type": "Boolean"
+        },
+        {
+          "name": "buildingQueuesArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "strTroop",
+          "type": "TroopStrBean"
+        },
+        {
+          "name": "fieldId",
+          "type": "int"
+        },
+        {
+          "name": "buffsArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "zoneId",
+          "type": "int"
+        },
+        {
+          "name": "colonyBeansArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "fortification",
+          "type": "FortificationsBean"
+        },
+        {
+          "name": "status",
+          "type": "int"
+        },
+        {
+          "name": "mercenaryBeansArray",
+          "type": "ArrayCollection"
+        }
+      ],
+      "methods": [
+        "CastleBean",
+        "getHeros",
+        "setColonyBeans",
+        "setBuffs",
+        "getBuildingQueues",
+        "addEventListener",
+        "setBuildingQueues",
+        "removeEventListener",
+        "getTransingTrades",
+        "getMercenaryBeans",
+        "setTransingTrades",
+        "dispatchEvent",
+        "setMercenaryBeans",
+        "setHeros",
+        "getTrades",
+        "getBuildings",
+        "willTrigger",
+        "setTrades",
+        "toObject",
+        "getFields",
+        "getColonyBeans",
+        "setFields",
+        "toDebugString",
+        "getBuffs",
+        "copyTo",
+        "hasEventListener",
+        "setBuildings"
+      ]
+    },
+    "CastleResourceBean": {
+      "class_name": "CastleResourceBean",
+      "source_file": "CastleResourceBean.as",
+      "field_count": 23,
+      "fields": [
+        {
+          "name": "_3178592gold",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1197906146colonyIron",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1403061077complaint",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_636575436taxIncome",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3655341wood",
+          "type": "ResourceInfoBean",
+          "access": "private"
+        },
+        {
+          "name": "_1007641795troopCostFood",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1167488739herosSalary",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1099040721maxPopulation",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1418848857texRate",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_694674963supplyFood",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_2140939619buildPeople",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1510320245colonyStone",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1198320327colonyWood",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_109770853stone",
+          "type": "ResourceInfoBean",
+          "access": "private"
+        },
+        {
+          "name": "_1197843578colonyGold",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_3241160iron",
+          "type": "ResourceInfoBean",
+          "access": "private"
+        },
+        {
+          "name": "_359111346populationDirection",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_216564141curPopulation",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1197813880colonyFood",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_3148894food",
+          "type": "ResourceInfoBean",
+          "access": "private"
+        },
+        {
+          "name": "_1854767153support",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_996698880workPeople",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "workPeople",
+          "type": "int"
+        },
+        {
+          "name": "taxIncome",
+          "type": "int"
+        },
+        {
+          "name": "troopCostFood",
+          "type": "Number"
+        },
+        {
+          "name": "food",
+          "type": "ResourceInfoBean"
+        },
+        {
+          "name": "gold",
+          "type": "Number"
+        },
+        {
+          "name": "stone",
+          "type": "ResourceInfoBean"
+        },
+        {
+          "name": "colonyFood",
+          "type": "Number"
+        },
+        {
+          "name": "colonyGold",
+          "type": "Number"
+        },
+        {
+          "name": "colonyStone",
+          "type": "Number"
+        },
+        {
+          "name": "texRate",
+          "type": "int"
+        },
+        {
+          "name": "buildPeople",
+          "type": "int"
+        },
+        {
+          "name": "wood",
+          "type": "ResourceInfoBean"
+        },
+        {
+          "name": "complaint",
+          "type": "int"
+        },
+        {
+          "name": "populationDirection",
+          "type": "int"
+        },
+        {
+          "name": "curPopulation",
+          "type": "int"
+        },
+        {
+          "name": "colonyWood",
+          "type": "Number"
+        },
+        {
+          "name": "iron",
+          "type": "ResourceInfoBean"
+        },
+        {
+          "name": "support",
+          "type": "int"
+        },
+        {
+          "name": "maxPopulation",
+          "type": "int"
+        },
+        {
+          "name": "colonyIron",
+          "type": "Number"
+        },
+        {
+          "name": "herosSalary",
+          "type": "int"
+        },
+        {
+          "name": "supplyFood",
+          "type": "Number"
+        }
+      ],
+      "methods": [
+        "CastleResourceBean",
+        "hasEventListener",
+        "dispatchEvent",
+        "addEventListener",
+        "removeEventListener",
+        "willTrigger",
+        "toObject",
+        "toDebugString",
+        "copyTo"
+      ]
+    },
+    "CastleSignInfoBean": {
+      "class_name": "CastleSignInfoBean",
+      "source_file": "CastleSignInfoBean.as",
+      "field_count": 5,
+      "fields": [
+        {
+          "name": "_120x",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3373707name",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_121y",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3355id",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "int"
+        },
+        {
+          "name": "y",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "CastleSignInfoBean",
+        "dispatchEvent",
+        "hasEventListener",
+        "willTrigger",
+        "toDebugString",
+        "removeEventListener",
+        "copyTo",
+        "addEventListener",
+        "toObject"
+      ]
+    },
+    "CityPanelBean": {
+      "class_name": "CityPanelBean",
+      "source_file": "CityPanelBean.as",
+      "field_count": 7,
+      "fields": [
+        {
+          "name": "marchWin",
+          "type": "NewArmyWin",
+          "access": "public"
+        },
+        {
+          "name": "_1691131734scriptIsRunning",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "isSuz",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_249938341scriptTxt",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_35872819castleId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "isCol",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_1729777296goalsTxt",
+          "type": "String",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "goalsTxt",
+          "type": "String"
+        },
+        {
+          "name": "scriptTxt",
+          "type": "String"
+        },
+        {
+          "name": "scriptIsRunning",
+          "type": "Boolean"
+        },
+        {
+          "name": "castleId",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "CityPanelBean"
+      ]
+    },
+    "CityPanelBean_COL_ICON": {
+      "class_name": "CityPanelBean_COL_ICON",
+      "source_file": "CityPanelBean_COL_ICON.as",
+      "field_count": 0,
+      "fields": [],
+      "getters": [],
+      "methods": []
+    },
+    "CityPanelBean_SUZ_ICON": {
+      "class_name": "CityPanelBean_SUZ_ICON",
+      "source_file": "CityPanelBean_SUZ_ICON.as",
+      "field_count": 0,
+      "fields": [],
+      "getters": [],
+      "methods": []
+    },
+    "ColonyBean": {
+      "class_name": "ColonyBean",
+      "source_file": "ColonyBean.as",
+      "field_count": 15,
+      "fields": [
+        {
+          "name": "_1607243192endTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1962855648lordName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_892481550status",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_554436100relation",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_30247582isCanLevy",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_1421682026cityName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_747804969position",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_342500292logoUrl",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_2129294769startTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_3560141time",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_35872819castleId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1276224445prestige",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1606140770allianceName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1458266657isCanOverview",
+          "type": "Boolean",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "cityName",
+          "type": "String"
+        },
+        {
+          "name": "lordName",
+          "type": "String"
+        },
+        {
+          "name": "position",
+          "type": "String"
+        },
+        {
+          "name": "castleId",
+          "type": "int"
+        },
+        {
+          "name": "prestige",
+          "type": "int"
+        },
+        {
+          "name": "logoUrl",
+          "type": "String"
+        },
+        {
+          "name": "time",
+          "type": "String"
+        },
+        {
+          "name": "endTime",
+          "type": "Number"
+        },
+        {
+          "name": "startTime",
+          "type": "Number"
+        },
+        {
+          "name": "isCanOverview",
+          "type": "Boolean"
+        },
+        {
+          "name": "isCanLevy",
+          "type": "Boolean"
+        },
+        {
+          "name": "allianceName",
+          "type": "String"
+        },
+        {
+          "name": "status",
+          "type": "int"
+        },
+        {
+          "name": "relation",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "ColonyBean",
+        "willTrigger",
+        "toObject",
+        "toDebugString",
+        "removeEventListener",
+        "copyTo",
+        "addEventListener",
+        "dispatchEvent",
+        "hasEventListener"
+      ]
+    },
+    "CommissionQuestArmyRankBean": {
+      "class_name": "CommissionQuestArmyRankBean",
+      "source_file": "CommissionQuestArmyRankBean.as",
+      "field_count": 4,
+      "fields": [
+        {
+          "name": "_3492908rank",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_85567126experience",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1879273436playerId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "playerId",
+          "type": "int"
+        },
+        {
+          "name": "experience",
+          "type": "Number"
+        },
+        {
+          "name": "rank",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "CommissionQuestArmyRankBean",
+        "dispatchEvent",
+        "willTrigger",
+        "toDebugString",
+        "copyTo",
+        "removeEventListener",
+        "toObject",
+        "addEventListener",
+        "hasEventListener"
+      ]
+    },
+    "CommissionQuestBean": {
+      "class_name": "CommissionQuestBean",
+      "source_file": "CommissionQuestBean.as",
+      "field_count": 13,
+      "fields": [
+        {
+          "name": "_600408483isFinish",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_908959235isMyIssue",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_3373707name",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3575610type",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1313911455timeout",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_747804969position",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_1355171569isAccepted",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_934326481reward",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1606289880endtime",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3355id",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_880905839target",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_531131054playerCount",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "isMyIssue",
+          "type": "Boolean"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "target",
+          "type": "String"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "endtime",
+          "type": "String"
+        },
+        {
+          "name": "position",
+          "type": "String"
+        },
+        {
+          "name": "playerCount",
+          "type": "int"
+        },
+        {
+          "name": "reward",
+          "type": "int"
+        },
+        {
+          "name": "type",
+          "type": "int"
+        },
+        {
+          "name": "isFinish",
+          "type": "Boolean"
+        },
+        {
+          "name": "timeout",
+          "type": "Number"
+        },
+        {
+          "name": "isAccepted",
+          "type": "Boolean"
+        }
+      ],
+      "methods": [
+        "CommissionQuestBean",
+        "willTrigger",
+        "toObject",
+        "hasEventListener",
+        "dispatchEvent",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "copyTo"
+      ]
+    },
+    "ConditionBean": {
+      "class_name": "ConditionBean",
+      "source_file": "ConditionBean.as",
+      "field_count": 12,
+      "fields": [
+        {
+          "name": "_109770853stone",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3178592gold",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3241160iron",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_895975549destructTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1425640839itemsArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_1578480708techsArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_3655341wood",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_2023558323population",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3148894food",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1632439642buildingsArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_3560141time",
+          "type": "Number",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "destructTime",
+          "type": "Number"
+        },
+        {
+          "name": "wood",
+          "type": "int"
+        },
+        {
+          "name": "techsArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "iron",
+          "type": "int"
+        },
+        {
+          "name": "population",
+          "type": "int"
+        },
+        {
+          "name": "buildingsArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "time",
+          "type": "Number"
+        },
+        {
+          "name": "food",
+          "type": "int"
+        },
+        {
+          "name": "stone",
+          "type": "int"
+        },
+        {
+          "name": "gold",
+          "type": "int"
+        },
+        {
+          "name": "itemsArray",
+          "type": "ArrayCollection"
+        }
+      ],
+      "methods": [
+        "ConditionBean",
+        "getBuildings",
+        "getItems",
+        "willTrigger",
+        "toObject",
+        "toDebugString",
+        "removeEventListener",
+        "dispatchEvent",
+        "setTechs",
+        "copyTo",
+        "getTechs",
+        "addEventListener",
+        "hasEventListener",
+        "setBuildings",
+        "setItems"
+      ]
+    },
+    "ConditionDependItemBean": {
+      "class_name": "ConditionDependItemBean",
+      "source_file": "ConditionDependItemBean.as",
+      "field_count": 5,
+      "fields": [
+        {
+          "name": "_109446num",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1349154522curNum",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1268712945successFlag",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_3355id",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "num",
+          "type": "int"
+        },
+        {
+          "name": "successFlag",
+          "type": "Boolean"
+        },
+        {
+          "name": "id",
+          "type": "String"
+        },
+        {
+          "name": "curNum",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "ConditionDependItemBean",
+        "dispatchEvent",
+        "hasEventListener",
+        "toDebugString",
+        "removeEventListener",
+        "copyTo",
+        "addEventListener",
+        "willTrigger",
+        "toObject"
+      ]
+    },
+    "ConditionDependTechBean": {
+      "class_name": "ConditionDependTechBean",
+      "source_file": "ConditionDependTechBean.as",
+      "field_count": 5,
+      "fields": [
+        {
+          "name": "_3355id",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_540315940curLevel",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1268712945successFlag",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_102865796level",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "level",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "curLevel",
+          "type": "int"
+        },
+        {
+          "name": "successFlag",
+          "type": "Boolean"
+        }
+      ],
+      "methods": [
+        "ConditionDependTechBean",
+        "dispatchEvent",
+        "hasEventListener",
+        "willTrigger",
+        "toDebugString",
+        "removeEventListener",
+        "copyTo",
+        "addEventListener",
+        "toObject"
+      ]
+    },
+    "DisappearHeroBean": {
+      "class_name": "DisappearHeroBean",
+      "source_file": "DisappearHeroBean.as",
+      "field_count": 8,
+      "fields": [
+        {
+          "name": "_3355id",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3373707name",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1799980989management",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_106858757power",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1417925547disppeartime",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_102865796level",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_412944526stratagem",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "management",
+          "type": "int"
+        },
+        {
+          "name": "level",
+          "type": "int"
+        },
+        {
+          "name": "power",
+          "type": "int"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "stratagem",
+          "type": "int"
+        },
+        {
+          "name": "disppeartime",
+          "type": "String"
+        },
+        {
+          "name": "id",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "DisappearHeroBean",
+        "dispatchEvent",
+        "toDebugString",
+        "hasEventListener",
+        "addEventListener",
+        "copyTo",
+        "removeEventListener",
+        "toObject",
+        "willTrigger"
+      ]
+    },
+    "EffortListBean": {
+      "class_name": "EffortListBean",
+      "source_file": "EffortListBean.as",
+      "field_count": 3,
+      "fields": [
+        {
+          "name": "_275227512effortListInfo",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_873324063effortTypeid",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "effortTypeid",
+          "type": "int"
+        },
+        {
+          "name": "effortListInfo",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "EffortListBean",
+        "dispatchEvent",
+        "hasEventListener",
+        "willTrigger",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "toObject",
+        "copyTo"
+      ]
+    },
+    "EquipmentBean": {
+      "class_name": "EquipmentBean",
+      "source_file": "EquipmentBean.as",
+      "field_count": 7,
+      "fields": [
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_124815621addAttribute",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3466lv",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_811315194heroPos",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1188050137euipmenttechStarLv",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_2008330532equipmenttech",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1512209195addAttributeType",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "lv",
+          "type": "int"
+        },
+        {
+          "name": "addAttributeType",
+          "type": "int"
+        },
+        {
+          "name": "equipmenttech",
+          "type": "int"
+        },
+        {
+          "name": "euipmenttechStarLv",
+          "type": "int"
+        },
+        {
+          "name": "heroPos",
+          "type": "int"
+        },
+        {
+          "name": "addAttribute",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "EquipmentBean",
+        "dispatchEvent",
+        "hasEventListener",
+        "willTrigger",
+        "toDebugString",
+        "addEventListener",
+        "removeEventListener",
+        "toObject",
+        "copyTo"
+      ]
+    },
+    "EquipmenttechBean": {
+      "class_name": "EquipmenttechBean",
+      "source_file": "EquipmenttechBean.as",
+      "field_count": 3,
+      "fields": [
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_3466lv",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1565328703equipmenttechid",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "lv",
+          "type": "int"
+        },
+        {
+          "name": "equipmenttechid",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "EquipmenttechBean",
+        "dispatchEvent",
+        "hasEventListener",
+        "willTrigger",
+        "toDebugString",
+        "addEventListener",
+        "copyTo",
+        "removeEventListener",
+        "toObject"
+      ]
+    },
+    "FieldBean": {
+      "class_name": "FieldBean",
+      "source_file": "FieldBean.as",
+      "field_count": 7,
+      "fields": [
+        {
+          "name": "_3355id",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_109757601statu",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3373707name",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_3575610type",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1710868093armysArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_102865796level",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "level",
+          "type": "int"
+        },
+        {
+          "name": "armysArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "type",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "statu",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "FieldBean",
+        "getArmys",
+        "dispatchEvent",
+        "toDebugString",
+        "hasEventListener",
+        "addEventListener",
+        "removeEventListener",
+        "willTrigger",
+        "toObject",
+        "copyTo",
+        "setArmys"
+      ]
+    },
+    "FortificationsBean": {
+      "class_name": "FortificationsBean",
+      "source_file": "FortificationsBean.as",
+      "field_count": 6,
+      "fields": [
+        {
+          "name": "_3568429trap",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1739874176arrowTower",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_518185888rockfall",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_226523540rollingLogs",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1424430018abatis",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "arrowTower",
+          "type": "int"
+        },
+        {
+          "name": "rollingLogs",
+          "type": "int"
+        },
+        {
+          "name": "rockfall",
+          "type": "int"
+        },
+        {
+          "name": "trap",
+          "type": "int"
+        },
+        {
+          "name": "abatis",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "FortificationsBean",
+        "toDebugString",
+        "addEventListener",
+        "removeEventListener",
+        "willTrigger",
+        "copyTo",
+        "toObject",
+        "hasEventListener",
+        "dispatchEvent"
+      ]
+    },
+    "FortProduceListBean": {
+      "class_name": "FortProduceListBean",
+      "source_file": "FortProduceListBean.as",
+      "field_count": 4,
+      "fields": [
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_1371991915conditionBean",
+          "type": "ConditionBean",
+          "access": "private"
+        },
+        {
+          "name": "_858803723typeId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_676059661permition",
+          "type": "Boolean",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "permition",
+          "type": "Boolean"
+        },
+        {
+          "name": "conditionBean",
+          "type": "ConditionBean"
+        },
+        {
+          "name": "typeId",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "FortProduceListBean",
+        "dispatchEvent",
+        "willTrigger",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "copyTo",
+        "toObject",
+        "hasEventListener"
+      ]
+    },
+    "GamblingItemBean": {
+      "class_name": "GamblingItemBean",
+      "source_file": "GamblingItemBean.as",
+      "field_count": 4,
+      "fields": [
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_3292052kind",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_94851343count",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3355id",
+          "type": "String",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "count",
+          "type": "int"
+        },
+        {
+          "name": "kind",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "GamblingItemBean",
+        "dispatchEvent",
+        "willTrigger",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "copyTo",
+        "toObject",
+        "hasEventListener"
+      ]
+    },
+    "GamblingRankingBean": {
+      "class_name": "GamblingRankingBean",
+      "source_file": "GamblingRankingBean.as",
+      "field_count": 6,
+      "fields": [
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_260292359isReward",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_809208522itemsBeansArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_2095657228playerName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3492908rank",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_94851343count",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "playerName",
+          "type": "String"
+        },
+        {
+          "name": "count",
+          "type": "int"
+        },
+        {
+          "name": "itemsBeansArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "isReward",
+          "type": "int"
+        },
+        {
+          "name": "rank",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "GamblingRankingBean",
+        "dispatchEvent",
+        "hasEventListener",
+        "willTrigger",
+        "toDebugString",
+        "addEventListener",
+        "copyTo",
+        "removeEventListener",
+        "toObject",
+        "getItemsBeans",
+        "setItemsBeans"
+      ]
+    },
+    "GemStoneBean": {
+      "class_name": "GemStoneBean",
+      "source_file": "GemStoneBean.as",
+      "field_count": 2,
+      "fields": [
+        {
+          "name": "_1826952687gemstoneid",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "gemstoneid",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "GemStoneBean",
+        "dispatchEvent",
+        "hasEventListener",
+        "willTrigger",
+        "toDebugString",
+        "removeEventListener",
+        "copyTo",
+        "toObject",
+        "addEventListener"
+      ]
+    },
+    "GemStoneInPosBean": {
+      "class_name": "GemStoneInPosBean",
+      "source_file": "GemStoneInPosBean.as",
+      "field_count": 3,
+      "fields": [
+        {
+          "name": "_1694971109infroArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_111188pos",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "pos",
+          "type": "int"
+        },
+        {
+          "name": "infroArray",
+          "type": "ArrayCollection"
+        }
+      ],
+      "methods": [
+        "GemStoneInPosBean",
+        "dispatchEvent",
+        "willTrigger",
+        "toDebugString",
+        "removeEventListener",
+        "copyTo",
+        "addEventListener",
+        "toObject",
+        "setInfro",
+        "getInfro",
+        "hasEventListener"
+      ]
+    },
+    "GemStoneLvInfroBean": {
+      "class_name": "GemStoneLvInfroBean",
+      "source_file": "GemStoneLvInfroBean.as",
+      "field_count": 3,
+      "fields": [
+        {
+          "name": "_353643255gemstoneidsArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_3466lv",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "lv",
+          "type": "int"
+        },
+        {
+          "name": "gemstoneidsArray",
+          "type": "ArrayCollection"
+        }
+      ],
+      "methods": [
+        "GemStoneLvInfroBean",
+        "setGemstoneids",
+        "dispatchEvent",
+        "toDebugString",
+        "addEventListener",
+        "copyTo",
+        "getGemstoneids",
+        "willTrigger",
+        "removeEventListener",
+        "toObject",
+        "hasEventListener"
+      ]
+    },
+    "GetHelpedPlayerBean": {
+      "class_name": "GetHelpedPlayerBean",
+      "source_file": "GetHelpedPlayerBean.as",
+      "field_count": 2,
+      "fields": [
+        {
+          "name": "_2095387960playerFBID",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "playerFBID",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "GetHelpedPlayerBean",
+        "dispatchEvent",
+        "hasEventListener",
+        "willTrigger",
+        "toDebugString",
+        "removeEventListener",
+        "copyTo",
+        "addEventListener",
+        "toObject"
+      ]
+    },
+    "HeroBean": {
+      "class_name": "HeroBean",
+      "source_file": "HeroBean.as",
+      "field_count": 41,
+      "fields": [
+        {
+          "name": "_412944526stratagem",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_85567126experience",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_358728774loyalty",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1266164532fieldtype",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1217743173equipmentbeanArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_1799980989management",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_100348382infro",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1544916048defence",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_547400545politics",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_761536362managementBuffAdded",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_113766sex",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_109641799speed",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1200507606ability",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_106858757power",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1068386166morale",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_814364440powerBuffAdded",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3355id",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_2032248903buffsArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_1039282375npc_id",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_958110004facebook_id",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_510568485fbFriendName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_342500292logoUrl",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1627044220remainPoint",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1456811858stratagemAdded",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_471353915maxStrength",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_797998783intelligence",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_814903611leadershipAdded",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_892481550status",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1691501851stratagemBuffAdded",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3373707name",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_102865796level",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_682371709managementAdded",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1999179167upgradeExp",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_412762875powerAdded",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1180455868isHero",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1192391365leadership",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1897344401stamina",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1178662002itemId",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1407259064attack",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1478417739itemAmount",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "power",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "fbFriendName",
+          "type": "String"
+        },
+        {
+          "name": "fieldtype",
+          "type": "int"
+        },
+        {
+          "name": "stratagemBuffAdded",
+          "type": "int"
+        },
+        {
+          "name": "management",
+          "type": "int"
+        },
+        {
+          "name": "isHero",
+          "type": "int"
+        },
+        {
+          "name": "speed",
+          "type": "int"
+        },
+        {
+          "name": "npc_id",
+          "type": "int"
+        },
+        {
+          "name": "leadershipAdded",
+          "type": "int"
+        },
+        {
+          "name": "itemAmount",
+          "type": "int"
+        },
+        {
+          "name": "ability",
+          "type": "int"
+        },
+        {
+          "name": "attack",
+          "type": "Number"
+        },
+        {
+          "name": "loyalty",
+          "type": "int"
+        },
+        {
+          "name": "facebook_id",
+          "type": "String"
+        },
+        {
+          "name": "defence",
+          "type": "int"
+        },
+        {
+          "name": "politics",
+          "type": "Number"
+        },
+        {
+          "name": "sex",
+          "type": "Boolean"
+        },
+        {
+          "name": "upgradeExp",
+          "type": "int"
+        },
+        {
+          "name": "experience",
+          "type": "int"
+        },
+        {
+          "name": "managementBuffAdded",
+          "type": "int"
+        },
+        {
+          "name": "morale",
+          "type": "int"
+        },
+        {
+          "name": "remainPoint",
+          "type": "int"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "level",
+          "type": "int"
+        },
+        {
+          "name": "stamina",
+          "type": "int"
+        },
+        {
+          "name": "managementAdded",
+          "type": "int"
+        },
+        {
+          "name": "stratagem",
+          "type": "int"
+        },
+        {
+          "name": "stratagemAdded",
+          "type": "int"
+        },
+        {
+          "name": "itemId",
+          "type": "String"
+        },
+        {
+          "name": "equipmentbeanArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "intelligence",
+          "type": "Number"
+        },
+        {
+          "name": "buffsArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "logoUrl",
+          "type": "String"
+        },
+        {
+          "name": "maxStrength",
+          "type": "int"
+        },
+        {
+          "name": "leadership",
+          "type": "int"
+        },
+        {
+          "name": "infro",
+          "type": "String"
+        },
+        {
+          "name": "powerBuffAdded",
+          "type": "int"
+        },
+        {
+          "name": "status",
+          "type": "int"
+        },
+        {
+          "name": "powerAdded",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "HeroBean",
+        "setBuffs",
+        "dispatchEvent",
+        "removeEventListener",
+        "addEventListener",
+        "getEquipmentbean",
+        "willTrigger",
+        "toObject",
+        "toDebugString",
+        "getBuffs",
+        "copyTo",
+        "hasEventListener",
+        "setEquipmentbean"
+      ]
+    },
+    "HeroListBean": {
+      "class_name": "HeroListBean",
+      "source_file": "HeroListBean.as",
+      "field_count": 9,
+      "fields": [
+        {
+          "name": "_3355id",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3373707name",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1901043637location",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1191572123selected",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_547400545politics",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1407259064attack",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_797998783intelligence",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_102865796level",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "level",
+          "type": "int"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "attack",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "politics",
+          "type": "int"
+        },
+        {
+          "name": "selected",
+          "type": "Boolean"
+        },
+        {
+          "name": "location",
+          "type": "String"
+        },
+        {
+          "name": "intelligence",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "HeroListBean",
+        "dispatchEvent",
+        "hasEventListener",
+        "willTrigger",
+        "removeEventListener",
+        "addEventListener"
+      ]
+    },
+    "IndexAllianceInfoBean": {
+      "class_name": "IndexAllianceInfoBean",
+      "source_file": "IndexAllianceInfoBean.as",
+      "field_count": 10,
+      "fields": [
+        {
+          "name": "_3492908rank",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1606004101allianceInfo",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1366188353memberLimit",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_190875433creatorName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_1606154441allianceNote",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1358063253memberCount",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1191282484leaderName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1276224445prestige",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1606140770allianceName",
+          "type": "String",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "allianceInfo",
+          "type": "String"
+        },
+        {
+          "name": "memberCount",
+          "type": "int"
+        },
+        {
+          "name": "rank",
+          "type": "int"
+        },
+        {
+          "name": "leaderName",
+          "type": "String"
+        },
+        {
+          "name": "memberLimit",
+          "type": "int"
+        },
+        {
+          "name": "prestige",
+          "type": "int"
+        },
+        {
+          "name": "creatorName",
+          "type": "String"
+        },
+        {
+          "name": "allianceNote",
+          "type": "String"
+        },
+        {
+          "name": "allianceName",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "IndexAllianceInfoBean",
+        "willTrigger",
+        "toObject",
+        "dispatchEvent",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "copyTo",
+        "hasEventListener"
+      ]
+    },
+    "ItemBean": {
+      "class_name": "ItemBean",
+      "source_file": "ItemBean.as",
+      "field_count": 6,
+      "fields": [
+        {
+          "name": "_3355id",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3373707name",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_382106123maxCount",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1394090531minCount",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_94851343count",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "count",
+          "type": "int"
+        },
+        {
+          "name": "maxCount",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "String"
+        },
+        {
+          "name": "minCount",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "ItemBean",
+        "dispatchEvent",
+        "hasEventListener",
+        "willTrigger",
+        "toDebugString",
+        "addEventListener",
+        "copyTo",
+        "removeEventListener",
+        "toObject"
+      ]
+    },
+    "MailBean": {
+      "class_name": "MailBean",
+      "source_file": "MailBean.as",
+      "field_count": 11,
+      "fields": [
+        {
+          "name": "_441951604targetId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_853090240type_id",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_905962955sender",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_2103439280receiveTime",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1081573102mailid",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1879273436playerId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1191572123selected",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_808719889receiver",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1180158496isRead",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_110371416title",
+          "type": "String",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "targetId",
+          "type": "int"
+        },
+        {
+          "name": "mailid",
+          "type": "int"
+        },
+        {
+          "name": "selected",
+          "type": "Boolean"
+        },
+        {
+          "name": "sender",
+          "type": "String"
+        },
+        {
+          "name": "type_id",
+          "type": "int"
+        },
+        {
+          "name": "receiveTime",
+          "type": "String"
+        },
+        {
+          "name": "title",
+          "type": "String"
+        },
+        {
+          "name": "playerId",
+          "type": "int"
+        },
+        {
+          "name": "isRead",
+          "type": "int"
+        },
+        {
+          "name": "receiver",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "MailBean",
+        "willTrigger",
+        "toObject",
+        "toDebugString",
+        "removeEventListener",
+        "dispatchEvent",
+        "copyTo",
+        "addEventListener",
+        "hasEventListener"
+      ]
+    },
+    "MapCastleBean": {
+      "class_name": "MapCastleBean",
+      "source_file": "MapCastleBean.as",
+      "field_count": 32,
+      "fields": [
+        {
+          "name": "_1682641376declaredWarStatus",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_554436100relation",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1695158553colonialStatus",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_99462250honor",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3575610type",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1207284347canColonize",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_1167077297colonialRelation",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1503629328furlough",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_3355id",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_109281npc",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_422968703powerLevel",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_946919841declaredWarStartTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_848059479zoneName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1387001311suzerain",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_266666762userName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_114043281castleIcon",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_738630737ownerPlayerId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3373707name",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1299492445playerLogoUrl",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_98100801canOccupy",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_1524843188freshMan",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_138006258canScout",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_3145580flag",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_549540504canLoot",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_109757585state",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_35872819castleId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1276224445prestige",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_136649544canTrans",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_549739384canSend",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_1606140770allianceName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_244224418canDeclaredWar",
+          "type": "Boolean",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "canScout",
+          "type": "Boolean"
+        },
+        {
+          "name": "furlough",
+          "type": "Boolean"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "suzerain",
+          "type": "String"
+        },
+        {
+          "name": "type",
+          "type": "int"
+        },
+        {
+          "name": "prestige",
+          "type": "int"
+        },
+        {
+          "name": "castleId",
+          "type": "int"
+        },
+        {
+          "name": "freshMan",
+          "type": "Boolean"
+        },
+        {
+          "name": "zoneName",
+          "type": "String"
+        },
+        {
+          "name": "canDeclaredWar",
+          "type": "Boolean"
+        },
+        {
+          "name": "honor",
+          "type": "int"
+        },
+        {
+          "name": "flag",
+          "type": "String"
+        },
+        {
+          "name": "allianceName",
+          "type": "String"
+        },
+        {
+          "name": "canSend",
+          "type": "Boolean"
+        },
+        {
+          "name": "powerLevel",
+          "type": "int"
+        },
+        {
+          "name": "canColonize",
+          "type": "Boolean"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "castleIcon",
+          "type": "int"
+        },
+        {
+          "name": "canLoot",
+          "type": "Boolean"
+        },
+        {
+          "name": "state",
+          "type": "int"
+        },
+        {
+          "name": "declaredWarStartTime",
+          "type": "Number"
+        },
+        {
+          "name": "playerLogoUrl",
+          "type": "String"
+        },
+        {
+          "name": "ownerPlayerId",
+          "type": "int"
+        },
+        {
+          "name": "colonialRelation",
+          "type": "int"
+        },
+        {
+          "name": "canTrans",
+          "type": "Boolean"
+        },
+        {
+          "name": "canOccupy",
+          "type": "Boolean"
+        },
+        {
+          "name": "declaredWarStatus",
+          "type": "int"
+        },
+        {
+          "name": "npc",
+          "type": "Boolean"
+        },
+        {
+          "name": "colonialStatus",
+          "type": "int"
+        },
+        {
+          "name": "relation",
+          "type": "int"
+        },
+        {
+          "name": "userName",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "MapCastleBean",
+        "dispatchEvent",
+        "removeEventListener",
+        "addEventListener",
+        "willTrigger",
+        "toObject",
+        "toDebugString",
+        "copyTo",
+        "hasEventListener"
+      ]
+    },
+    "MarketTradeBean": {
+      "class_name": "MarketTradeBean",
+      "source_file": "MarketTradeBean.as",
+      "field_count": 3,
+      "fields": [
+        {
+          "name": "_1413853096amount",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_106934601price",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "price",
+          "type": "Number"
+        },
+        {
+          "name": "amount",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "MarketTradeBean",
+        "dispatchEvent",
+        "toObject",
+        "hasEventListener",
+        "removeEventListener",
+        "addEventListener",
+        "copyTo",
+        "willTrigger",
+        "toDebugString"
+      ]
+    },
+    "MBeanAttributeInfo": {
+      "class_name": "MBeanAttributeInfo",
+      "source_file": "MBeanAttributeInfo.as",
+      "field_count": 4,
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "access": "public"
+        },
+        {
+          "name": "readable",
+          "type": "Boolean",
+          "access": "public"
+        },
+        {
+          "name": "writable",
+          "type": "Boolean",
+          "access": "public"
+        },
+        {
+          "name": "isIs",
+          "type": "Boolean",
+          "access": "public"
+        }
+      ],
+      "getters": [],
+      "methods": [
+        "MBeanAttributeInfo"
+      ]
+    },
+    "MBeanConstructorInfo": {
+      "class_name": "MBeanConstructorInfo",
+      "source_file": "MBeanConstructorInfo.as",
+      "field_count": 1,
+      "fields": [
+        {
+          "name": "signature",
+          "type": "Array",
+          "access": "public"
+        }
+      ],
+      "getters": [],
+      "methods": [
+        "MBeanConstructorInfo"
+      ]
+    },
+    "MBeanFeatureInfo": {
+      "class_name": "MBeanFeatureInfo",
+      "source_file": "MBeanFeatureInfo.as",
+      "field_count": 2,
+      "fields": [
+        {
+          "name": "name",
+          "type": "String",
+          "access": "public"
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "access": "public"
+        }
+      ],
+      "getters": [],
+      "methods": [
+        "MBeanFeatureInfo",
+        "toString"
+      ]
+    },
+    "MBeanInfo": {
+      "class_name": "MBeanInfo",
+      "source_file": "MBeanInfo.as",
+      "field_count": 5,
+      "fields": [
+        {
+          "name": "className",
+          "type": "String",
+          "access": "public"
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "access": "public"
+        },
+        {
+          "name": "attributes",
+          "type": "Array",
+          "access": "public"
+        },
+        {
+          "name": "constructors",
+          "type": "Array",
+          "access": "public"
+        },
+        {
+          "name": "operations",
+          "type": "Array",
+          "access": "public"
+        }
+      ],
+      "getters": [],
+      "methods": [
+        "MBeanInfo",
+        "toString"
+      ]
+    },
+    "MBeanOperationInfo": {
+      "class_name": "MBeanOperationInfo",
+      "source_file": "MBeanOperationInfo.as",
+      "field_count": 3,
+      "fields": [
+        {
+          "name": "signature",
+          "type": "Array",
+          "access": "public"
+        },
+        {
+          "name": "returnType",
+          "type": "String",
+          "access": "public"
+        },
+        {
+          "name": "impact",
+          "type": "int",
+          "access": "public"
+        }
+      ],
+      "getters": [],
+      "methods": [
+        "MBeanOperationInfo"
+      ]
+    },
+    "MBeanParameterInfo": {
+      "class_name": "MBeanParameterInfo",
+      "source_file": "MBeanParameterInfo.as",
+      "field_count": 1,
+      "fields": [
+        {
+          "name": "type",
+          "type": "String",
+          "access": "public"
+        }
+      ],
+      "getters": [],
+      "methods": [
+        "MBeanParameterInfo"
+      ]
+    },
+    "MercenaryBean": {
+      "class_name": "MercenaryBean",
+      "source_file": "MercenaryBean.as",
+      "field_count": 6,
+      "fields": [
+        {
+          "name": "_1607243192endTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_892481550status",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_2129294769startTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_35872819castleId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1911605294targetPosName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "endTime",
+          "type": "Number"
+        },
+        {
+          "name": "startTime",
+          "type": "Number"
+        },
+        {
+          "name": "targetPosName",
+          "type": "String"
+        },
+        {
+          "name": "status",
+          "type": "int"
+        },
+        {
+          "name": "castleId",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "MercenaryBean",
+        "dispatchEvent",
+        "willTrigger",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "copyTo",
+        "toObject",
+        "hasEventListener"
+      ]
+    },
+    "NpcHeroBean": {
+      "class_name": "NpcHeroBean",
+      "source_file": "NpcHeroBean.as",
+      "field_count": 31,
+      "fields": [
+        {
+          "name": "_1000157193hireQuestId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_412944526stratagem",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_105022396npcid",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_871991583introduce",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3575610type",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1799980989management",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1782850756questType",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_113766sex",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1200507606ability",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_106858757power",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1551386992logoimage",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1180601999wisdom_base",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_97427706field",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_318758630leadership_Added",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_737297702power_Added",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1384944173stratagem_Added",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_2055722679bravery_base",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_505236964management_Added",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_987485392province",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3887zi",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_892481550status",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_702030434catchQuestId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1272455898affairs_base",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3373707name",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_115792uid",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1599491379taskitemid",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_102865796level",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_3135069face",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1192391365leadership",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_358728774loyalty",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "hireQuestId",
+          "type": "int"
+        },
+        {
+          "name": "power",
+          "type": "int"
+        },
+        {
+          "name": "introduce",
+          "type": "String"
+        },
+        {
+          "name": "power_Added",
+          "type": "int"
+        },
+        {
+          "name": "affairs_base",
+          "type": "int"
+        },
+        {
+          "name": "ability",
+          "type": "int"
+        },
+        {
+          "name": "questType",
+          "type": "int"
+        },
+        {
+          "name": "province",
+          "type": "String"
+        },
+        {
+          "name": "management",
+          "type": "int"
+        },
+        {
+          "name": "zi",
+          "type": "String"
+        },
+        {
+          "name": "bravery_base",
+          "type": "int"
+        },
+        {
+          "name": "taskitemid",
+          "type": "String"
+        },
+        {
+          "name": "loyalty",
+          "type": "int"
+        },
+        {
+          "name": "uid",
+          "type": "int"
+        },
+        {
+          "name": "type",
+          "type": "int"
+        },
+        {
+          "name": "face",
+          "type": "int"
+        },
+        {
+          "name": "catchQuestId",
+          "type": "int"
+        },
+        {
+          "name": "sex",
+          "type": "int"
+        },
+        {
+          "name": "stratagem",
+          "type": "int"
+        },
+        {
+          "name": "wisdom_base",
+          "type": "int"
+        },
+        {
+          "name": "logoimage",
+          "type": "String"
+        },
+        {
+          "name": "level",
+          "type": "int"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "npcid",
+          "type": "int"
+        },
+        {
+          "name": "leadership",
+          "type": "int"
+        },
+        {
+          "name": "stratagem_Added",
+          "type": "int"
+        },
+        {
+          "name": "management_Added",
+          "type": "int"
+        },
+        {
+          "name": "leadership_Added",
+          "type": "int"
+        },
+        {
+          "name": "status",
+          "type": "int"
+        },
+        {
+          "name": "field",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "NpcHeroBean",
+        "dispatchEvent",
+        "removeEventListener",
+        "addEventListener",
+        "willTrigger",
+        "toObject",
+        "toDebugString",
+        "copyTo",
+        "hasEventListener"
+      ]
+    },
+    "PackageBean": {
+      "class_name": "PackageBean",
+      "source_file": "PackageBean.as",
+      "field_count": 14,
+      "fields": [
+        {
+          "name": "_892481550status",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3575610type",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1049685640itemListArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_3355id",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_162030183isUseNow",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_2063817998provideTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1530923192claimedTime",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_907766751scores",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_391026675maxMedal",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1385169979minMedal",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3079825desc",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_908759025packageName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_92515438expiredTime",
+          "type": "Number",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "itemListArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "desc",
+          "type": "String"
+        },
+        {
+          "name": "expiredTime",
+          "type": "Number"
+        },
+        {
+          "name": "provideTime",
+          "type": "Number"
+        },
+        {
+          "name": "isUseNow",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "scores",
+          "type": "int"
+        },
+        {
+          "name": "type",
+          "type": "int"
+        },
+        {
+          "name": "minMedal",
+          "type": "int"
+        },
+        {
+          "name": "claimedTime",
+          "type": "String"
+        },
+        {
+          "name": "packageName",
+          "type": "String"
+        },
+        {
+          "name": "status",
+          "type": "int"
+        },
+        {
+          "name": "maxMedal",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "PackageBean",
+        "willTrigger",
+        "toObject",
+        "hasEventListener",
+        "dispatchEvent",
+        "getItemList",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "copyTo",
+        "setItemList"
+      ]
+    },
+    "PlayerBean": {
+      "class_name": "PlayerBean",
+      "source_file": "PlayerBean.as",
+      "field_count": 50,
+      "fields": [
+        {
+          "name": "_117401885packageBeanArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_1425640839itemsArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_165283771isSetSecurityCode",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_902435682castlesArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_2032248903buffsArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_811312386redCount",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1329771231autoFurlough",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_2100063033isReceiveIncomingAttack",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_167675003mapSizeX",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_989948789gameSpeed",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_2041542881newReportCount_army",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_29843496newMailCount",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_925069225saleTypeBeansArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_704639681friendArmysArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_1123696564newReportCount_other",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_1484814694gamblingItemIndex",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1070931784emailAddress",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_675024588castleSignBeanArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_1438363703autoHeal",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_2026418520newMaileCount_inbox",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1902496333newMaileCount_system",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_784915076returnReport",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_230483579newReportCount",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1081550341tutorialStepId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1651231951changedFace",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_376568900declaredWarBeansArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_1503629328furlough",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_1378032427enemyArmysArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_1503909044equipmentsArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_1887518356furloughDay",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1440789421disconnectvotes",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_167675004mapSizeY",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1432206175finishedQuestCount",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1102495504saleItemBeansArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_1971832828effortPoint",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1918704276friendBeansArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_1120501702newReportCount_scout",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_859583983selfArmysArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_874955648gemstoneinposArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_1981766659randomEventsArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_248723404currentDateTime",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_2054170777isEvonyMember",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_601235430currentTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1115058732headline",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_196779434troopConfigBeansArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_1970419386setshowinfroArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_1119145312newReportCount_trade",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1461815869blockBeansArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_2095520559playerInfo",
+          "type": "PlayerInfoBean",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "effortPoint",
+          "type": "int"
+        },
+        {
+          "name": "tutorialStepId",
+          "type": "int"
+        },
+        {
+          "name": "furlough",
+          "type": "Boolean"
+        },
+        {
+          "name": "autoHeal",
+          "type": "Boolean"
+        },
+        {
+          "name": "newReportCount_scout",
+          "type": "int"
+        },
+        {
+          "name": "declaredWarBeansArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "isSetSecurityCode",
+          "type": "Boolean"
+        },
+        {
+          "name": "newMaileCount_system",
+          "type": "int"
+        },
+        {
+          "name": "newReportCount_other",
+          "type": "int"
+        },
+        {
+          "name": "saleTypeBeansArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "currentDateTime",
+          "type": "String"
+        },
+        {
+          "name": "itemsArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "mapSizeX",
+          "type": "int"
+        },
+        {
+          "name": "mapSizeY",
+          "type": "int"
+        },
+        {
+          "name": "newReportCount",
+          "type": "int"
+        },
+        {
+          "name": "returnReport",
+          "type": "Boolean"
+        },
+        {
+          "name": "friendBeansArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "isEvonyMember",
+          "type": "Boolean"
+        },
+        {
+          "name": "newReportCount_trade",
+          "type": "int"
+        },
+        {
+          "name": "gamblingItemIndex",
+          "type": "int"
+        },
+        {
+          "name": "castlesArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "newMaileCount_inbox",
+          "type": "int"
+        },
+        {
+          "name": "setshowinfroArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "equipmentsArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "emailAddress",
+          "type": "String"
+        },
+        {
+          "name": "friendArmysArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "isReceiveIncomingAttack",
+          "type": "Boolean"
+        },
+        {
+          "name": "autoFurlough",
+          "type": "Boolean"
+        },
+        {
+          "name": "newReportCount_army",
+          "type": "int"
+        },
+        {
+          "name": "packageBeanArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "redCount",
+          "type": "int"
+        },
+        {
+          "name": "saleItemBeansArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "enemyArmysArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "changedFace",
+          "type": "Boolean"
+        },
+        {
+          "name": "castleSignBeanArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "playerInfo",
+          "type": "PlayerInfoBean"
+        },
+        {
+          "name": "finishedQuestCount",
+          "type": "int"
+        },
+        {
+          "name": "furloughDay",
+          "type": "int"
+        },
+        {
+          "name": "gameSpeed",
+          "type": "int"
+        },
+        {
+          "name": "gemstoneinposArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "troopConfigBeansArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "disconnectvotes",
+          "type": "Number"
+        },
+        {
+          "name": "buffsArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "blockBeansArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "newMailCount",
+          "type": "int"
+        },
+        {
+          "name": "headline",
+          "type": "String"
+        },
+        {
+          "name": "currentTime",
+          "type": "Number"
+        },
+        {
+          "name": "selfArmysArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "randomEventsArray",
+          "type": "ArrayCollection"
+        }
+      ],
+      "methods": [
+        "PlayerBean",
+        "getItems",
+        "getBlockBeans",
+        "getRandomEvents",
+        "setBlockBeans",
+        "dispatchEvent",
+        "setSelfArmys",
+        "getCastles",
+        "setSetshowinfro",
+        "setTroopConfigBeans",
+        "addEventListener",
+        "setItems",
+        "getDeclaredWarBeans",
+        "getEquipments",
+        "getGemstoneinpos",
+        "setEquipments",
+        "setFriendArmys",
+        "toDebugString",
+        "getBuffs",
+        "copyTo",
+        "hasEventListener",
+        "setFriendBeans",
+        "setGemstoneinpos",
+        "getCastleSignBean",
+        "getSaleItemBeans",
+        "setCastleSignBean",
+        "setBuffs",
+        "getFriendArmys",
+        "setRandomEvents",
+        "removeEventListener"
+      ]
+    },
+    "PlayerDeclaredWarBean": {
+      "class_name": "PlayerDeclaredWarBean",
+      "source_file": "PlayerDeclaredWarBean.as",
+      "field_count": 5,
+      "fields": [
+        {
+          "name": "_1607243192endTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_892481550status",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_2129294769startTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_2095657228playerName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "playerName",
+          "type": "String"
+        },
+        {
+          "name": "startTime",
+          "type": "Number"
+        },
+        {
+          "name": "endTime",
+          "type": "Number"
+        },
+        {
+          "name": "status",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "PlayerDeclaredWarBean",
+        "dispatchEvent",
+        "willTrigger",
+        "toDebugString",
+        "addEventListener",
+        "copyTo",
+        "removeEventListener",
+        "toObject",
+        "hasEventListener"
+      ]
+    },
+    "PlayerInfoBean": {
+      "class_name": "PlayerInfoBean",
+      "source_file": "PlayerInfoBean.as",
+      "field_count": 31,
+      "fields": [
+        {
+          "name": "_1019789636office",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_764803337castleCount",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_99462250honor",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_103771895medal",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_113766sex",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1092354606faceUrl",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_978111542ranking",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3355id",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_2023558323population",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_2066382787bdenyotherplayer",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3076014date",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_892483748starlv",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1971832828effortPoint",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_266666762userName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1307249261titleId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1447054905historygetvotes",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_944908652topvotes",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_476980509createrTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1887950739prweekvotes",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_69784511levelId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_865966680accountName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1997775155getvotes",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_3556460term",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1000737409facebookId",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_1750962803allianceLevel",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3145580flag",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1276224445prestige",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_836030906userId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_781316064lastLoginTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1806944311alliance",
+          "type": "String",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "effortPoint",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "alliance",
+          "type": "String"
+        },
+        {
+          "name": "ranking",
+          "type": "int"
+        },
+        {
+          "name": "getvotes",
+          "type": "Number"
+        },
+        {
+          "name": "prestige",
+          "type": "int"
+        },
+        {
+          "name": "population",
+          "type": "int"
+        },
+        {
+          "name": "userId",
+          "type": "int"
+        },
+        {
+          "name": "accountName",
+          "type": "String"
+        },
+        {
+          "name": "starlv",
+          "type": "int"
+        },
+        {
+          "name": "sex",
+          "type": "int"
+        },
+        {
+          "name": "honor",
+          "type": "int"
+        },
+        {
+          "name": "term",
+          "type": "String"
+        },
+        {
+          "name": "flag",
+          "type": "String"
+        },
+        {
+          "name": "facebookId",
+          "type": "String"
+        },
+        {
+          "name": "titleId",
+          "type": "int"
+        },
+        {
+          "name": "topvotes",
+          "type": "Number"
+        },
+        {
+          "name": "allianceLevel",
+          "type": "String"
+        },
+        {
+          "name": "prweekvotes",
+          "type": "Number"
+        },
+        {
+          "name": "date",
+          "type": "String"
+        },
+        {
+          "name": "office",
+          "type": "String"
+        },
+        {
+          "name": "bdenyotherplayer",
+          "type": "int"
+        },
+        {
+          "name": "historygetvotes",
+          "type": "Number"
+        },
+        {
+          "name": "faceUrl",
+          "type": "String"
+        },
+        {
+          "name": "levelId",
+          "type": "int"
+        },
+        {
+          "name": "lastLoginTime",
+          "type": "Number"
+        },
+        {
+          "name": "createrTime",
+          "type": "Number"
+        },
+        {
+          "name": "userName",
+          "type": "String"
+        },
+        {
+          "name": "castleCount",
+          "type": "int"
+        },
+        {
+          "name": "medal",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "PlayerInfoBean",
+        "dispatchEvent",
+        "removeEventListener",
+        "addEventListener",
+        "toObject",
+        "willTrigger",
+        "toDebugString",
+        "copyTo",
+        "hasEventListener"
+      ]
+    },
+    "ProduceBean": {
+      "class_name": "ProduceBean",
+      "source_file": "ProduceBean.as",
+      "field_count": 6,
+      "fields": [
+        {
+          "name": "_424687558costTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1607243192endTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_655172108queueId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_109446num",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3575610type",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "type",
+          "type": "int"
+        },
+        {
+          "name": "num",
+          "type": "int"
+        },
+        {
+          "name": "queueId",
+          "type": "int"
+        },
+        {
+          "name": "endTime",
+          "type": "Number"
+        },
+        {
+          "name": "costTime",
+          "type": "Number"
+        }
+      ],
+      "methods": [
+        "ProduceBean",
+        "dispatchEvent",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "willTrigger",
+        "toObject",
+        "hasEventListener",
+        "copyTo"
+      ]
+    },
+    "QueryBeanType": {
+      "class_name": "QueryBeanType",
+      "source_file": "QueryBeanType.as",
+      "field_count": 0,
+      "fields": [],
+      "getters": [],
+      "methods": [
+        "QueryBeanType",
+        "encode",
+        "decode"
+      ]
+    },
+    "QuestBean": {
+      "class_name": "QuestBean",
+      "source_file": "QuestBean.as",
+      "field_count": 12,
+      "fields": [
+        {
+          "name": "_1081415738manual",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_600408483isFinish",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_3373707name",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_351608024version",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1179387200islast",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_655126941questId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1180608678isCard",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_328471159targetsArray",
+          "type": "ArrayCollection",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_93223517award",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1724546052description",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_989204668recommend",
+          "type": "Boolean",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "questId",
+          "type": "int"
+        },
+        {
+          "name": "recommend",
+          "type": "Boolean"
+        },
+        {
+          "name": "manual",
+          "type": "String"
+        },
+        {
+          "name": "islast",
+          "type": "Boolean"
+        },
+        {
+          "name": "version",
+          "type": "int"
+        },
+        {
+          "name": "isCard",
+          "type": "Boolean"
+        },
+        {
+          "name": "isFinish",
+          "type": "Boolean"
+        },
+        {
+          "name": "award",
+          "type": "String"
+        },
+        {
+          "name": "targetsArray",
+          "type": "ArrayCollection"
+        },
+        {
+          "name": "description",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "QuestBean",
+        "willTrigger",
+        "toObject",
+        "setTargets",
+        "toDebugString",
+        "getTargets",
+        "addEventListener",
+        "dispatchEvent",
+        "copyTo",
+        "removeEventListener",
+        "hasEventListener"
+      ]
+    },
+    "QuestTargetBean": {
+      "class_name": "QuestTargetBean",
+      "source_file": "QuestTargetBean.as",
+      "field_count": 3,
+      "fields": [
+        {
+          "name": "_3373707name",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_673660814finished",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "finished",
+          "type": "Boolean"
+        }
+      ],
+      "methods": [
+        "QuestTargetBean",
+        "hasEventListener",
+        "willTrigger",
+        "dispatchEvent",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "copyTo",
+        "toObject"
+      ]
+    },
+    "QuestTypeBean": {
+      "class_name": "QuestTypeBean",
+      "source_file": "QuestTypeBean.as",
+      "field_count": 8,
+      "fields": [
+        {
+          "name": "_600408483isFinish",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_351608024version",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_989204668recommend",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_3373707name",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1081572172mainId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_858803723typeId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1724546052description",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "description",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "version",
+          "type": "int"
+        },
+        {
+          "name": "isFinish",
+          "type": "Boolean"
+        },
+        {
+          "name": "mainId",
+          "type": "int"
+        },
+        {
+          "name": "typeId",
+          "type": "int"
+        },
+        {
+          "name": "recommend",
+          "type": "Boolean"
+        }
+      ],
+      "methods": [
+        "QuestTypeBean",
+        "dispatchEvent",
+        "willTrigger",
+        "toDebugString",
+        "removeEventListener",
+        "hasEventListener",
+        "addEventListener",
+        "copyTo",
+        "toObject"
+      ]
+    },
+    "RandomEventBean": {
+      "class_name": "RandomEventBean",
+      "source_file": "RandomEventBean.as",
+      "field_count": 3,
+      "fields": [
+        {
+          "name": "_3560141time",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_3355id",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "time",
+          "type": "Number"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "RandomEventBean",
+        "hasEventListener",
+        "willTrigger",
+        "toDebugString",
+        "removeEventListener",
+        "dispatchEvent",
+        "copyTo",
+        "toObject",
+        "addEventListener"
+      ]
+    },
+    "RandomHeroBean": {
+      "class_name": "RandomHeroBean",
+      "source_file": "RandomHeroBean.as",
+      "field_count": 11,
+      "fields": [
+        {
+          "name": "_2024747164resettime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1949052249lockstratagem",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_1799980989management",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_914405702lockpower",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_1872044231player_id",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_106858757power",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_1672860384resetcount",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_2120287150lockmanagement",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_3355id",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_412944526stratagem",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "power",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "Number"
+        },
+        {
+          "name": "resettime",
+          "type": "Number"
+        },
+        {
+          "name": "resetcount",
+          "type": "int"
+        },
+        {
+          "name": "lockstratagem",
+          "type": "Boolean"
+        },
+        {
+          "name": "lockmanagement",
+          "type": "Boolean"
+        },
+        {
+          "name": "player_id",
+          "type": "int"
+        },
+        {
+          "name": "lockpower",
+          "type": "Boolean"
+        },
+        {
+          "name": "management",
+          "type": "int"
+        },
+        {
+          "name": "stratagem",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "RandomHeroBean",
+        "willTrigger",
+        "toObject",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "dispatchEvent",
+        "copyTo",
+        "hasEventListener"
+      ]
+    },
+    "RankAllianceBean": {
+      "class_name": "RankAllianceBean",
+      "source_file": "RankAllianceBean.as",
+      "field_count": 12,
+      "fields": [
+        {
+          "name": "_3373707name",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1077769574member",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_99462250honor",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_3355id",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_3076014date",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1724546052description",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1276224445prestige",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_2095657228playerName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_477166943createrName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3053931city",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3492908rank",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "playerName",
+          "type": "String"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "member",
+          "type": "int"
+        },
+        {
+          "name": "createrName",
+          "type": "String"
+        },
+        {
+          "name": "rank",
+          "type": "int"
+        },
+        {
+          "name": "date",
+          "type": "String"
+        },
+        {
+          "name": "prestige",
+          "type": "Number"
+        },
+        {
+          "name": "honor",
+          "type": "Number"
+        },
+        {
+          "name": "city",
+          "type": "int"
+        },
+        {
+          "name": "description",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "RankAllianceBean",
+        "hasEventListener",
+        "willTrigger",
+        "toObject",
+        "dispatchEvent",
+        "toDebugString",
+        "addEventListener",
+        "copyTo",
+        "removeEventListener"
+      ]
+    },
+    "RankCastleBean": {
+      "class_name": "RankCastleBean",
+      "source_file": "RankCastleBean.as",
+      "field_count": 8,
+      "fields": [
+        {
+          "name": "_2023558323population",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3373707name",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_98615255grade",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3292052kind",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3492908rank",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_102865796level",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_1806944311alliance",
+          "type": "String",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "level",
+          "type": "int"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "population",
+          "type": "int"
+        },
+        {
+          "name": "grade",
+          "type": "String"
+        },
+        {
+          "name": "kind",
+          "type": "String"
+        },
+        {
+          "name": "rank",
+          "type": "int"
+        },
+        {
+          "name": "alliance",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "RankCastleBean",
+        "dispatchEvent",
+        "hasEventListener",
+        "toDebugString",
+        "removeEventListener",
+        "copyTo",
+        "willTrigger",
+        "addEventListener",
+        "toObject"
+      ]
+    },
+    "RankHeroBean": {
+      "class_name": "RankHeroBean",
+      "source_file": "RankHeroBean.as",
+      "field_count": 9,
+      "fields": [
+        {
+          "name": "_3373707name",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1799980989management",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1180455868isHero",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3292052kind",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_106858757power",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_98615255grade",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3492908rank",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_412944526stratagem",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "management",
+          "type": "int"
+        },
+        {
+          "name": "isHero",
+          "type": "int"
+        },
+        {
+          "name": "power",
+          "type": "int"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "grade",
+          "type": "int"
+        },
+        {
+          "name": "kind",
+          "type": "String"
+        },
+        {
+          "name": "rank",
+          "type": "int"
+        },
+        {
+          "name": "stratagem",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "RankHeroBean",
+        "dispatchEvent",
+        "toDebugString",
+        "hasEventListener",
+        "addEventListener",
+        "copyTo",
+        "willTrigger",
+        "removeEventListener",
+        "toObject"
+      ]
+    },
+    "ReportBean": {
+      "class_name": "ReportBean",
+      "source_file": "ReportBean.as",
+      "field_count": 13,
+      "fields": [
+        {
+          "name": "_110371416title",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1316782738startPos",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3575610type",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3355id",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_1414939017armyType",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1191572123selected",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_951530617content",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1180158496isRead",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3015911back",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_1407259064attack",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_31415431eventTime",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_815590653targetPos",
+          "type": "String",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "eventTime",
+          "type": "String"
+        },
+        {
+          "name": "targetPos",
+          "type": "String"
+        },
+        {
+          "name": "startPos",
+          "type": "String"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "selected",
+          "type": "Boolean"
+        },
+        {
+          "name": "type",
+          "type": "int"
+        },
+        {
+          "name": "attack",
+          "type": "Boolean"
+        },
+        {
+          "name": "title",
+          "type": "String"
+        },
+        {
+          "name": "isRead",
+          "type": "int"
+        },
+        {
+          "name": "armyType",
+          "type": "int"
+        },
+        {
+          "name": "content",
+          "type": "String"
+        },
+        {
+          "name": "back",
+          "type": "Boolean"
+        }
+      ],
+      "methods": [
+        "ReportBean",
+        "hasEventListener",
+        "willTrigger",
+        "toObject",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "dispatchEvent",
+        "copyTo"
+      ]
+    },
+    "ResourceBean": {
+      "class_name": "ResourceBean",
+      "source_file": "ResourceBean.as",
+      "field_count": 6,
+      "fields": [
+        {
+          "name": "_3655341wood",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_109770853stone",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_3148894food",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_3241160iron",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_3178592gold",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "iron",
+          "type": "Number"
+        },
+        {
+          "name": "food",
+          "type": "Number"
+        },
+        {
+          "name": "stone",
+          "type": "Number"
+        },
+        {
+          "name": "wood",
+          "type": "Number"
+        },
+        {
+          "name": "gold",
+          "type": "Number"
+        }
+      ],
+      "methods": [
+        "ResourceBean",
+        "willTrigger",
+        "dispatchEvent",
+        "toDebugString",
+        "addEventListener",
+        "removeEventListener",
+        "copyTo",
+        "toObject",
+        "hasEventListener"
+      ]
+    },
+    "ResourceInfoBean": {
+      "class_name": "ResourceInfoBean",
+      "source_file": "ResourceInfoBean.as",
+      "field_count": 6,
+      "fields": [
+        {
+          "name": "_996698880workPeople",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1913146946increaseRate",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_2133060262storeRercent",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_107876max",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1413853096amount",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "workPeople",
+          "type": "int"
+        },
+        {
+          "name": "increaseRate",
+          "type": "Number"
+        },
+        {
+          "name": "amount",
+          "type": "Number"
+        },
+        {
+          "name": "max",
+          "type": "int"
+        },
+        {
+          "name": "storeRercent",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "ResourceInfoBean",
+        "willTrigger",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "dispatchEvent",
+        "copyTo",
+        "toObject",
+        "hasEventListener"
+      ]
+    },
+    "ResourceProduceDataBean": {
+      "class_name": "ResourceProduceDataBean",
+      "source_file": "ResourceProduceDataBean.as",
+      "field_count": 14,
+      "fields": [
+        {
+          "name": "_1308753897armyPercentage",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_313448791commenceRate",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_2043715731productionCapacity",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_858802731typeid",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_849060507totalOutput",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_2028158848cimeliaPercentage",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_401632820heroPercentage",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_859635508fieldPercentage",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1261923249commenceDemands",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_795443933maxLabour",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1141868451naturalPercentage",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_940015921basicOutput",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_488102284technologicalPercentage",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "cimeliaPercentage",
+          "type": "int"
+        },
+        {
+          "name": "productionCapacity",
+          "type": "int"
+        },
+        {
+          "name": "armyPercentage",
+          "type": "Number"
+        },
+        {
+          "name": "technologicalPercentage",
+          "type": "int"
+        },
+        {
+          "name": "maxLabour",
+          "type": "int"
+        },
+        {
+          "name": "fieldPercentage",
+          "type": "int"
+        },
+        {
+          "name": "commenceDemands",
+          "type": "int"
+        },
+        {
+          "name": "heroPercentage",
+          "type": "int"
+        },
+        {
+          "name": "naturalPercentage",
+          "type": "int"
+        },
+        {
+          "name": "basicOutput",
+          "type": "int"
+        },
+        {
+          "name": "typeid",
+          "type": "int"
+        },
+        {
+          "name": "commenceRate",
+          "type": "int"
+        },
+        {
+          "name": "totalOutput",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "ResourceProduceDataBean",
+        "willTrigger",
+        "toObject",
+        "dispatchEvent",
+        "copyTo",
+        "addEventListener",
+        "toDebugString",
+        "removeEventListener",
+        "hasEventListener"
+      ]
+    },
+    "SaleItemBean": {
+      "class_name": "SaleItemBean",
+      "source_file": "SaleItemBean.as",
+      "field_count": 3,
+      "fields": [
+        {
+          "name": "_100526016items",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1936082977saleType",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "items",
+          "type": "String"
+        },
+        {
+          "name": "saleType",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "SaleItemBean",
+        "hasEventListener",
+        "willTrigger",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "dispatchEvent",
+        "copyTo",
+        "toObject"
+      ]
+    },
+    "SaleTypeBean": {
+      "class_name": "SaleTypeBean",
+      "source_file": "SaleTypeBean.as",
+      "field_count": 3,
+      "fields": [
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_100526016items",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_676507419typeName",
+          "type": "String",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "items",
+          "type": "String"
+        },
+        {
+          "name": "typeName",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "SaleTypeBean",
+        "hasEventListener",
+        "willTrigger",
+        "toDebugString",
+        "addEventListener",
+        "dispatchEvent",
+        "copyTo",
+        "removeEventListener",
+        "toObject"
+      ]
+    },
+    "SimpleNpcHeroBean": {
+      "class_name": "SimpleNpcHeroBean",
+      "source_file": "SimpleNpcHeroBean.as",
+      "field_count": 6,
+      "fields": [
+        {
+          "name": "_105022396npcid",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_871991583introduce",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3373707name",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_342531044logourl",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1261935347introduce2",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "introduce",
+          "type": "String"
+        },
+        {
+          "name": "logourl",
+          "type": "String"
+        },
+        {
+          "name": "introduce2",
+          "type": "String"
+        },
+        {
+          "name": "npcid",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "SimpleNpcHeroBean",
+        "dispatchEvent",
+        "willTrigger",
+        "toDebugString",
+        "copyTo",
+        "removeEventListener",
+        "addEventListener",
+        "toObject",
+        "hasEventListener"
+      ]
+    },
+    "SkypeMsgBean": {
+      "class_name": "SkypeMsgBean",
+      "source_file": "SkypeMsgBean.as",
+      "field_count": 0,
+      "fields": [],
+      "getters": [],
+      "methods": [
+        "SkypeMsgBean"
+      ]
+    },
+    "StoreBean": {
+      "class_name": "StoreBean",
+      "source_file": "StoreBean.as",
+      "field_count": 8,
+      "fields": [
+        {
+          "name": "_358052900storePercent",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_2016783856magnitude",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_292680141warehourseCapacity",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1096322212resLimt",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_172472894unstorage",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1795184074storeTypeId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1884274053storage",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "unstorage",
+          "type": "int"
+        },
+        {
+          "name": "warehourseCapacity",
+          "type": "int"
+        },
+        {
+          "name": "magnitude",
+          "type": "int"
+        },
+        {
+          "name": "storePercent",
+          "type": "int"
+        },
+        {
+          "name": "resLimt",
+          "type": "int"
+        },
+        {
+          "name": "storeTypeId",
+          "type": "int"
+        },
+        {
+          "name": "storage",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "StoreBean",
+        "dispatchEvent",
+        "hasEventListener",
+        "willTrigger",
+        "toDebugString",
+        "copyTo",
+        "removeEventListener",
+        "addEventListener",
+        "toObject"
+      ]
+    },
+    "TradeBean": {
+      "class_name": "TradeBean",
+      "source_file": "TradeBean.as",
+      "field_count": 10,
+      "fields": [
+        {
+          "name": "_384566343resourceName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_106934601price",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1413853096amount",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_3355id",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_752919230tradeType",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1302723991tradeTypeName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_147397053dealedAmount",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_428497913dealedTotal",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_1096575994resType",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "dealedTotal",
+          "type": "Number"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "resourceName",
+          "type": "String"
+        },
+        {
+          "name": "tradeType",
+          "type": "int"
+        },
+        {
+          "name": "dealedAmount",
+          "type": "int"
+        },
+        {
+          "name": "price",
+          "type": "Number"
+        },
+        {
+          "name": "amount",
+          "type": "int"
+        },
+        {
+          "name": "tradeTypeName",
+          "type": "String"
+        },
+        {
+          "name": "resType",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "TradeBean",
+        "hasEventListener",
+        "willTrigger",
+        "toObject",
+        "dispatchEvent",
+        "toDebugString",
+        "removeEventListener",
+        "copyTo",
+        "addEventListener"
+      ]
+    },
+    "TransingTradeBean": {
+      "class_name": "TransingTradeBean",
+      "source_file": "TransingTradeBean.as",
+      "field_count": 8,
+      "fields": [
+        {
+          "name": "_3355id",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_1607243192endTime",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_384566343resourceName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_106934601price",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_110549828total",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1413853096amount",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1096575994resType",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "endTime",
+          "type": "Number"
+        },
+        {
+          "name": "total",
+          "type": "int"
+        },
+        {
+          "name": "amount",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "resType",
+          "type": "int"
+        },
+        {
+          "name": "price",
+          "type": "Number"
+        },
+        {
+          "name": "resourceName",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "TransingTradeBean",
+        "dispatchEvent",
+        "hasEventListener",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "copyTo",
+        "willTrigger",
+        "toObject"
+      ]
+    },
+    "TroopBean": {
+      "class_name": "TroopBean",
+      "source_file": "TroopBean.as",
+      "field_count": 13,
+      "fields": [
+        {
+          "name": "_1671895235heavyCavalry",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_47090712catapult",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_1409605757archer",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1821715860lightCavalry",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1914804330ballista",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1062697427militia",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1924105259scouter",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_5304340carriage",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_43947821peasants",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_2135247928batteringRam",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_1669530624swordsmen",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_570808349pikemen",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "swordsmen",
+          "type": "int"
+        },
+        {
+          "name": "archer",
+          "type": "int"
+        },
+        {
+          "name": "carriage",
+          "type": "int"
+        },
+        {
+          "name": "ballista",
+          "type": "int"
+        },
+        {
+          "name": "lightCavalry",
+          "type": "int"
+        },
+        {
+          "name": "catapult",
+          "type": "int"
+        },
+        {
+          "name": "scouter",
+          "type": "int"
+        },
+        {
+          "name": "heavyCavalry",
+          "type": "int"
+        },
+        {
+          "name": "batteringRam",
+          "type": "int"
+        },
+        {
+          "name": "peasants",
+          "type": "int"
+        },
+        {
+          "name": "militia",
+          "type": "int"
+        },
+        {
+          "name": "pikemen",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "TroopBean",
+        "willTrigger",
+        "toObject",
+        "dispatchEvent",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "copyTo",
+        "hasEventListener"
+      ]
+    },
+    "TroopConfigBean": {
+      "class_name": "TroopConfigBean",
+      "source_file": "TroopConfigBean.as",
+      "field_count": 4,
+      "fields": [
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_391817972orderList",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3560141time",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_110634834troop",
+          "type": "TroopBean",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "orderList",
+          "type": "String"
+        },
+        {
+          "name": "troop",
+          "type": "TroopBean"
+        },
+        {
+          "name": "time",
+          "type": "Number"
+        }
+      ],
+      "methods": [
+        "TroopConfigBean",
+        "willTrigger",
+        "toDebugString",
+        "dispatchEvent",
+        "copyTo",
+        "removeEventListener",
+        "addEventListener",
+        "toObject",
+        "hasEventListener"
+      ]
+    },
+    "TroopProduceListBean": {
+      "class_name": "TroopProduceListBean",
+      "source_file": "TroopProduceListBean.as",
+      "field_count": 4,
+      "fields": [
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_1371991915conditionBean",
+          "type": "ConditionBean",
+          "access": "private"
+        },
+        {
+          "name": "_858803723typeId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_676059661permition",
+          "type": "Boolean",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "permition",
+          "type": "Boolean"
+        },
+        {
+          "name": "conditionBean",
+          "type": "ConditionBean"
+        },
+        {
+          "name": "typeId",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "TroopProduceListBean",
+        "dispatchEvent",
+        "willTrigger",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "copyTo",
+        "toObject",
+        "hasEventListener"
+      ]
+    },
+    "TroopStrBean": {
+      "class_name": "TroopStrBean",
+      "source_file": "TroopStrBean.as",
+      "field_count": 13,
+      "fields": [
+        {
+          "name": "_1671895235heavyCavalry",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_47090712catapult",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_1409605757archer",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1821715860lightCavalry",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1062697427militia",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1914804330ballista",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_5304340carriage",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1924105259scouter",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_43947821peasants",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_2135247928batteringRam",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1669530624swordsmen",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_570808349pikemen",
+          "type": "String",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "swordsmen",
+          "type": "String"
+        },
+        {
+          "name": "archer",
+          "type": "String"
+        },
+        {
+          "name": "carriage",
+          "type": "String"
+        },
+        {
+          "name": "ballista",
+          "type": "String"
+        },
+        {
+          "name": "lightCavalry",
+          "type": "String"
+        },
+        {
+          "name": "catapult",
+          "type": "String"
+        },
+        {
+          "name": "scouter",
+          "type": "String"
+        },
+        {
+          "name": "heavyCavalry",
+          "type": "String"
+        },
+        {
+          "name": "batteringRam",
+          "type": "String"
+        },
+        {
+          "name": "militia",
+          "type": "String"
+        },
+        {
+          "name": "peasants",
+          "type": "String"
+        },
+        {
+          "name": "pikemen",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "TroopStrBean",
+        "willTrigger",
+        "toObject",
+        "dispatchEvent",
+        "toDebugString",
+        "removeEventListener",
+        "addEventListener",
+        "copyTo",
+        "hasEventListener"
+      ]
+    },
+    "TVmsgBean": {
+      "class_name": "TVmsgBean",
+      "source_file": "TVmsgBean.as",
+      "field_count": 3,
+      "fields": [
+        {
+          "name": "_108417msg",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3560141time",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "msg",
+          "type": "String"
+        },
+        {
+          "name": "time",
+          "type": "Number"
+        }
+      ],
+      "methods": [
+        "TVmsgBean",
+        "hasEventListener",
+        "willTrigger",
+        "removeEventListener",
+        "dispatchEvent",
+        "copyTo",
+        "addEventListener",
+        "toDebugString",
+        "toObject"
+      ]
+    },
+    "VisitorCommentBean": {
+      "class_name": "VisitorCommentBean",
+      "source_file": "VisitorCommentBean.as",
+      "field_count": 6,
+      "fields": [
+        {
+          "name": "_950398559comment",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3496342read",
+          "type": "Boolean",
+          "access": "private"
+        },
+        {
+          "name": "_3560141time",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_1880546825visitorid",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3355id",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "time",
+          "type": "String"
+        },
+        {
+          "name": "read",
+          "type": "Boolean"
+        },
+        {
+          "name": "visitorid",
+          "type": "String"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "comment",
+          "type": "String"
+        }
+      ],
+      "methods": [
+        "VisitorCommentBean",
+        "dispatchEvent",
+        "toDebugString",
+        "hasEventListener",
+        "copyTo",
+        "removeEventListener",
+        "willTrigger",
+        "addEventListener",
+        "toObject"
+      ]
+    },
+    "WareHouseBean": {
+      "class_name": "WareHouseBean",
+      "source_file": "WareHouseBean.as",
+      "field_count": 9,
+      "fields": [
+        {
+          "name": "_storePercent",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_typeId",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_stock",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_storage",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_unStock",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_typeName",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_resLimt",
+          "type": "Number",
+          "access": "private"
+        },
+        {
+          "name": "_amount",
+          "type": "Number",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "storage",
+          "type": "Number"
+        },
+        {
+          "name": "stock",
+          "type": "Number"
+        },
+        {
+          "name": "storePercent",
+          "type": "int"
+        },
+        {
+          "name": "resLimt",
+          "type": "Number"
+        },
+        {
+          "name": "amount",
+          "type": "Number"
+        },
+        {
+          "name": "typeName",
+          "type": "String"
+        },
+        {
+          "name": "typeId",
+          "type": "int"
+        },
+        {
+          "name": "unStock",
+          "type": "Number"
+        }
+      ],
+      "methods": [
+        "WareHouseBean",
+        "willTrigger",
+        "dispatchEvent",
+        "addEventListener",
+        "removeEventListener",
+        "hasEventListener"
+      ]
+    },
+    "ZoneInfoBean": {
+      "class_name": "ZoneInfoBean",
+      "source_file": "ZoneInfoBean.as",
+      "field_count": 6,
+      "fields": [
+        {
+          "name": "_531131054playerCount",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_764803337castleCount",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_3373707name",
+          "type": "String",
+          "access": "private"
+        },
+        {
+          "name": "_3355id",
+          "type": "int",
+          "access": "private"
+        },
+        {
+          "name": "_bindingEventDispatcher",
+          "type": "EventDispatcher",
+          "access": "private"
+        },
+        {
+          "name": "_3493088rate",
+          "type": "int",
+          "access": "private"
+        }
+      ],
+      "getters": [
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "rate",
+          "type": "int"
+        },
+        {
+          "name": "playerCount",
+          "type": "int"
+        },
+        {
+          "name": "castleCount",
+          "type": "int"
+        }
+      ],
+      "methods": [
+        "ZoneInfoBean",
+        "willTrigger",
+        "dispatchEvent",
+        "toDebugString",
+        "hasEventListener",
+        "addEventListener",
+        "copyTo",
+        "removeEventListener",
+        "toObject"
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "now": {
+    "strserverAlias": "Parapet",
+    "autoLogin": true,
+    "proxyType": "",
+    "autoLoginMaxTime": "600",
+    "username": "fnice0008@gmail.com",
+    "secCode": "",
+    "proxyPort": "8080",
+    "server": "cc2",
+    "proxyPw": "",
+    "serverIP": "216.66.17.168",
+    "password": "zx01070107",
+    "proxyUn": "",
+    "autoRun": true,
+    "proxyHost": "",
+    "autoLoginMinTime": "1",
+    "autoScript": true
+  }
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "instruction": "What is the archer overflow threshold in Evony?",
+    "input": "",
+    "output": "The archer overflow threshold is 6,135,037. Training this many archers causes an integer overflow (INT32_MAX / cost + 1), resulting in negative or zero resource consumption.",
+    "source": "curated_qa",
+    "category": "qa_general"
+  },
+  {
+    "instruction": "How do integer overflow exploits work in Evony?",
+    "input": "",
+    "output": "Integer overflow exploits occur when training troop quantities exceed INT32_MAX divided by the troop cost. For example:\n- Archers: 6,135,037 (cost 350)\n- Workers: 42,949,673 (cost 50)\n- Catapults: 715,828 (cost 3000)\n\nWhen the calculation overflows, the game may charge 0 or negative resources.",
+    "source": "curated_qa",
+    "category": "qa_general"
+  },
+  {
+    "instruction": "What encryption keys does Evony use?",
+    "input": "",
+    "output": "Evony uses several encryption keys:\n- ACTION_KEY: 'TAO_{313-894*&*($*#-FDIU(430}-{facebook_dioe(&*%$l}'\n- API_KEY: '9f758e2deccbe6244f734371b9642eda'\n- USER_INFO_KEY: 'IUGI_md5_key_{djfiji3*4930}-{fjdi3284$9dlld}'\n- XOR_KEY: 0xAA\n- LOGIN_SALT: 'evony'",
+    "source": "curated_qa",
+    "category": "qa_general"
+  },
+  {
+    "instruction": "How does Evony encrypt protocol messages?",
+    "input": "",
+    "output": "Evony protocol messages use a combination of XOR encryption with key 0xAA, MD5 hashing for authentication, and the ACTION_KEY for signing requests. Messages are typically base64 encoded after encryption.",
+    "source": "curated_qa",
+    "category": "qa_general"
+  },
+  {
+    "instruction": "What is a race condition exploit in Evony?",
+    "input": "",
+    "output": "Race condition exploits in Evony occur when sending multiple requests simultaneously before the server validates state. For example, rapidly sending troop training requests can sometimes bypass resource checks if the requests are processed before the first one deducts resources.",
+    "source": "curated_qa",
+    "category": "qa_general"
+  },
+  {
+    "instruction": "How is the Evony client structured?",
+    "input": "",
+    "output": "The Evony client is a Flash/ActionScript 3 application. Key components:\n- View layer: UI components in /view/\n- Controller: Game logic in /controller/\n- Model: Data structures in /model/\n- Network: Protocol handlers in /net/\n- Managers: TroopManager, BuildingManager, etc.",
+    "source": "curated_qa",
+    "category": "qa_general"
+  },
+  {
+    "instruction": "How do I create an AutoEvony script?",
+    "input": "",
+    "output": "AutoEvony scripts use a simple command syntax:\n```\ncmd trainTroop a:1000\ncmd buildCombo 1,2,3\nloop 10\n  cmd collectResource\nendloop\nincludeurl http://server/script.txt\n```\nSave as .txt and load via includeurl or paste directly.",
+    "source": "curated_qa",
+    "category": "qa_general"
+  }
+]

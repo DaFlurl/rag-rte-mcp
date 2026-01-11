@@ -1,0 +1,17 @@
+{
+  "total_examples": 4286,
+  "by_category": {
+    "authentication": 52,
+    "encryption": 500,
+    "protocol": 500,
+    "injection": 234,
+    "overflow": 500,
+    "validation": 500,
+    "race_condition": 500,
+    "privilege": 500,
+    "dos": 500,
+    "logic": 500
+  },
+  "target_per_category": 500,
+  "categories_at_target": 8
+}

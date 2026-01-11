@@ -1,0 +1,149 @@
+// ============================================
+// NPC FARMING SYSTEM v1.0
+// Automated NPC farming with wave management
+// Author: Borg Automation Suite
+// ============================================
+
+// Configuration
+set npcLevel 5
+set waveSize 10000
+set minScouts 1000
+set minArchers 50000
+set attackDelay 3000
+set waveCooldown 60000
+set heroName "spamhero"
+
+echo ========================================
+echo NPC FARMING SYSTEM v1.0
+echo Target NPC Level: %npcLevel%
+echo Wave Size: %waveSize% archers
+echo ========================================
+
+// Main farming loop
+label mainLoop
+
+// Check troop availability
+gosub checkTroops
+if troopsReady = 0 then goto waitForTroops
+
+// Find target NPC
+gosub findTarget
+if targetFound = 0 then goto noTargets
+
+// Execute attack wave
+gosub executeWave
+
+// Wait between waves
+echo Cooling down for next wave...
+sleep %waveCooldown%
+goto mainLoop
+
+// ==========================================
+// TROOP CHECK
+// ==========================================
+label checkTroops
+echo [CHECK] Verifying troop counts...
+gettroops
+
+set troopsReady 1
+
+if scouts < %minScouts% then set troopsReady 0
+if archers < %minArchers% then set troopsReady 0
+
+if troopsReady = 1 then echo [CHECK] Troops ready: YES
+if troopsReady = 0 then echo [CHECK] Troops ready: NO - waiting for training
+
+return
+
+// ==========================================
+// FIND TARGET NPC
+// ==========================================
+label findTarget
+echo [SCAN] Scanning for level %npcLevel% NPCs...
+
+set targetFound 0
+
+// Scan map for NPCs
+scanmap 50
+sleep 2000
+
+// Find NPC at target level
+findnpc %npcLevel%
+sleep 1000
+
+if npcX > 0 then set targetFound 1
+if npcY > 0 then set targetFound 1
+
+if targetFound = 1 then echo [SCAN] Target found at (%npcX%, %npcY%)
+if targetFound = 0 then echo [SCAN] No level %npcLevel% NPCs found
+
+return
+
+// ==========================================
+// EXECUTE ATTACK WAVE
+// ==========================================
+label executeWave
+echo [ATTACK] Executing wave attack...
+
+// Get spam hero
+getspamhero
+set heroName spamhero
+sleep 1000
+
+// Scout first
+echo [ATTACK] Scouting target...
+scout %npcX% %npcY% %heroName% 1
+sleep 5000
+
+// Send attack wave
+echo [ATTACK] Sending %waveSize% archers...
+attack %npcX% %npcY% %heroName% a%waveSize%
+sleep %attackDelay%
+
+// Optional: Send follow-up waves
+echo [ATTACK] Sending follow-up wave...
+getspamhero
+attack %npcX% %npcY% spamhero a%waveSize%
+sleep %attackDelay%
+
+echo [ATTACK] Wave sent successfully
+return
+
+// ==========================================
+// WAIT FOR TROOPS
+// ==========================================
+label waitForTroops
+echo [WAIT] Insufficient troops, waiting for training...
+
+// Start training more archers
+train archers 1000
+sleep 2000
+
+// Wait and retry
+sleep 120000
+goto mainLoop
+
+// ==========================================
+// NO TARGETS
+// ==========================================
+label noTargets
+echo [SCAN] No targets found, rescanning...
+sleep 30000
+goto mainLoop
+
+// ==========================================
+// ERROR HANDLER
+// ==========================================
+label error
+echo [ERROR] NPC Farming error occurred
+sleep 60000
+goto mainLoop
+
+// ==========================================
+// SHUTDOWN
+// ==========================================
+label done
+echo ========================================
+echo NPC FARMING SYSTEM STOPPED
+echo ========================================
+stop

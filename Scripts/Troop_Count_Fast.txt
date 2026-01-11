@@ -1,0 +1,38 @@
+//--Total Account Readout for 1.12 RE by SG credit to ThisIsMe
+setsilence true
+echo "ALL ACCOUNT INFORMATION"
+echo "------------------------------------------------------------------"
+echo "Player Name: $m_city.cityManager.player.playerInfo.userName$"
+set pre m_city.allCities
+set mid .cityManager.allTroop.
+set bMid .cityManager.getBuildingsCountByTypeAndLvl
+set accHeroAttack 0
+set metLevel $m_city.cityManager.researches[4].level$
+set msLevel $m_city.cityManager.researches[6].level$
+setarray totals ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]
+setarray baseTimeTotals ["50", "24", "98", "150", "224", "350", "500", "1500", "1000", "3000", "4500", "6000"]
+setarray troopNames ["Workers", "Warriors", "Scouts", "Pikemen", "Swordsmen", "Archers", "Cavalry", "Cataphracts", "Transporters", "Ballista", "BatteringRam", "Catapults"]
+set i 0
+label loopCities
+setarray totals ["{%totals[0]%+$%pre%[{%i%}]%mid%peasants$}", "{%totals[1]%+$%pre%[{%i%}]%mid%militia$}", "{%totals[2]%+$%pre%[{%i%}]%mid%scouter$}", "{%totals[3]%+$%pre%[{%i%}]%mid%pikemen$}", "{%totals[4]%+$%pre%[{%i%}]%mid%swordsmen$}", "{%totals[5]%+$%pre%[{%i%}]%mid%archer$}", "{%totals[6]%+$%pre%[{%i%}]%mid%lightCavalry$}", "{%totals[7]%+$%pre%[{%i%}]%mid%heavyCavalry$}", "{%totals[8]%+$%pre%[{%i%}]%mid%carriage$}", "{%totals[9]%+$%pre%[{%i%}]%mid%ballista$}", "{%totals[10]%+$%pre%[{%i%}]%mid%batteringRam$}", "{%totals[11]%+$%pre%[{%i%}]%mid%catapult$}", "{%totals[12]%+$%pre%[{%i%}]%bMid%(2,1)$}", "{%totals[13]%+$%pre%[{%i%}]%bMid%(2,4)$}", "{%totals[14]%+$%pre%[{%i%}]%bMid%(2,9)$}", "{%totals[15]%+$%pre%[{%i%}]%bMid%(2,10)$}"]
+set i {%i%+1}
+if {%i%<$m_city.allCities.length$} goto loopCities
+echo "-----------------------------------------------------------------------------------------------------------"
+echo "Total Troop: $m_city.formatNum({%totals[0]%+%totals[1]%+%totals[2]%+%totals[3]%+%totals[4]%+%totals[5]%+%totals[6]%+%totals[7]%+%totals[8]%+%totals[9]%+%totals[10]%+%totals[11]%})$"
+echo "-----------------------------------------------------------------------------------------------------------"
+echo "  Workers:  $m_city.formatNum(%totals[0]%)$"
+echo "  Warriors: $m_city.formatNum(%totals[1]%)$"
+echo "  Scouts:   $m_city.formatNum(%totals[2]%)$"
+echo "  Pikes:     $m_city.formatNum(%totals[3]%)$"
+echo "  Swordsmen:   $m_city.formatNum(%totals[4]%)$"
+echo "  Archers:   $m_city.formatNum(%totals[5]%)$"
+echo "  Cavalry:   $m_city.formatNum(%totals[6]%)$"
+echo "  Cataphract:   $m_city.formatNum(%totals[7]%)$"
+echo "  Transports:   $m_city.formatNum(%totals[8]%)$"
+echo "  Ballista:   $m_city.formatNum(%totals[9]%)$"
+echo "  Battering Rams:   $m_city.formatNum(%totals[10]%)$"
+echo "  Catapults:   $m_city.formatNum(%totals[11]%)$"
+echo "------------------------------------------------------------------"
+goto exit
+gosubreturn
+label exit

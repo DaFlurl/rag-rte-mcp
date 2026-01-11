@@ -1,0 +1,433 @@
+//-AccountBuilderSnippets.
+[Configurations]
+config npc:1
+config buildnpc:15
+config automedal:1
+condgoal {%TimePlayed%>120} config fasthero:65
+condgoal {%TimePlayed%<120} config junkhero:5
+config hero:11
+config autogear:1
+config training:1
+config comfort:4
+config embopen:1
+config gate:0.2
+config hiding:2.5
+config warreport:1
+condgoal {%TimePlayed%<120} config trade:1
+condgoal {{%TimePlayed%>120}&&{%TimePlayed%<336}} config trade:2
+condgoal {%TimePlayed%>336} config trade:3
+config markethiding:1
+config maxproduction:1
+condgoal {%TimePlayed%>336} config zerofood:-1
+config safemaint:1
+config keepreports:1
+config debug:1
+config enemywarning:10
+condgoal {%TimePlayed%<168} config herominattack:50
+config attackwarning:1
+[CityPolicies]
+condgoal {%TimePlayed%<168} rallymax hunting:3,npc:10,buildnpc:1
+condgoal {%TimePlayed%>168} rallymax npc:10,buildnpc:1,valley:2,keepresource:2,keeptroop:3,hiding:1,rainbow:1
+condgoal {%TimePlayed%<168} resourcelimits 50k,500k 50k,500k 50k,500k 50k,550k
+condgoal {{%TimePlayed%>168}&&{%TimePlayed%<288}} resourcelimits 150k,750k 150k,750k 150k,750k 150k,750k
+condgoal {{%TimePlayed%>288}&&{%TimePlayed%<504}} resourcelimits 15m,500m 1.5m,20m 1.5m,20m 1.5m,20m
+condgoal {%TimePlayed%>504} resourcelimits 150m,100b 15m,1b 15m,15b 15m,1b
+condgoal {%TimePlayed%<450} ballsused 25,50,170,250,550
+condgoal {%TimePlayed%>450} ballsused 25,50,150,250,450
+maintpolicy 32 40
+gatepolicy 1 3 2 1
+[Buildings]
+build c:2:1
+build f:1:1,s:2:1,i:1:1,q:1:1
+build t:2
+build inn:1,fh:1
+build m:1,a:1,e:1,r:1,b:1:1
+build i:3:1,q:2:1
+build fo:2,ws:1
+build w:1
+build t:3
+build c:2:3
+build b:4:1,fo:4,a:4
+condgoal {%CityType%==Lumber} build s:2:5
+condgoal {%CityType%==Iron} build i:2:5
+condgoal {%CityType%==LumberIronMix} build s:2:3,i:2:2
+condgoal {%CityType%==QuickRacks} build b:1:5
+build be:3
+build b:1:4
+build t:4,w:4
+condgoal {%CityType%==Lumber} build c:3:6,s:4:40
+condgoal {%CityType%==Iron} build c:3:8,i:4:40
+condgoal {%CityType%==LumberIronMix} build s:4:10,i:4:10,c:3:7
+condgoal {%CityType%==QuickRacks} build b:4:2,c:3:5
+build ws:5,fo:5,st:5,m:5
+condgoal {%CityType%==Lumber} build c:5:6
+condgoal {%CityType%==Iron} build c:5:8
+condgoal {%CityType%==LumberIronMix} build c:5:7
+condgoal {%CityType%==QuickRacks} build c:4:5
+build fh:5,r:5
+condgoal {%CityType%==Lumber} build b:4:4
+condgoal {%CityType%==Iron} build b:4:4
+condgoal {%CityType%==LumberIronMix} build b:4:4
+condgoal {%CityType%==QuickRacks} build b:4:15
+build e:4,a:7
+build b:6:2
+build st:6,fo:6,ws:6,m:6,rs:1
+build fh:6,r:7
+build b:8:2
+build t:5,w:5
+build b:4:32
+build b:9:1
+condgoal {%CityType%==Lumber} build c:6:6,s:6:40
+condgoal {%CityType%==Iron} build c:6:8,i:6:40
+condgoal {%CityType%==LumberIronMix} build s:6:12,i:6:11,c:6:7
+condgoal {%CityType%==QuickRacks} build b:6:4,c:5:5
+condgoal {%CityType%==QuickRacks} build b:9:4
+build b:9:2
+build t:6,w:6
+condgoal {%CityType%==Lumber} build s:7:40,c:7:6
+condgoal {%CityType%==Iron} build i:7:40,c:7:8
+condgoal {%CityType%==LumberIronMix} build s:7:13,i:7:13,c:7:7
+condgoal {%CityType%==QuickRacks} build b:7:15,c:6:5
+build t:7,w:7
+condgoal {%CityType%==Lumber} build s:8:40,c:8:6
+condgoal {%CityType%==Iron} build i:8:40,c:8:8
+condgoal {%CityType%==LumberIronMix} build s:8:15,i:8:14,c:8:7
+condgoal {%CityType%==QuickRacks} build b:8:15,c:7:5
+build t:8,w:8
+condgoal {%CityType%==Lumber} build s:9:40,c:9:6
+condgoal {%CityType%==Iron} build i:9:40,c:9:8
+condgoal {%CityType%==LumberIronMix} build s:9:16,i:9:16,c:9:7
+condgoal {%CityType%==QuickRacks} build b:9:15,c:8:5
+build fh:9,r:10,b:8:4,m:8,fo:8,ws:8,st:8
+build b:9:4
+build a:9,be:9,f:9:1,q:9:2,i:9:1
+build t:9
+condgoal {%CityType%==Lumber} build b:6:15
+condgoal {%CityType%==Iron} build b:6:15
+condgoal {%CityType%==LumberIronMix} build b:6:15
+condgoal {%CityType%==QuickRacks} build b:9:15
+condgoal {%CityType%==Lumber} build c:9:6,s:9:40,b:8:32
+condgoal {%CityType%==Iron} build i:9:40,c:9:8,b:8:32
+condgoal {%CityType%==LumberIronMix} build s:9:18,i:9:17,c:9:7,b:8:32
+condgoal {%CityType%==QuickRacks} build c:9:5
+build b:9:32
+build t:10,w:9,e:9,fh:10,be:9,m:9,ws:9,fo:9,st:9,c:9:6,b:9:15,rs:9,r:10,a:9
+[Research]
+research in:1,ms:1,mt:1
+research ms:2,ir:1
+research ms:4
+research ar:1
+research ag:1,lu:1,mas:1,mi:1,met:1,ir:1,lo:1,com:1,ar:2
+research lu:5,con:3,ar:3
+research met:3,in:3,ms:5,mt:3,ir:3,lo:3,com:3,ho:1
+research ag:3,mi:3,mas:3,lu:6,con:4
+research ar:6
+research met:5,in:5,ms:4,mt:5,ir:4,lo:4,com:4,ho:4
+research lu:7,con:5,med:3
+research ar:8
+research met:5,in:7,ms:5,mt:7,ir:5,lo:5,com:5,ho:6
+research mt:10,in:10,con:6,med:6
+research met:7,ms:7,ir:7,lo:7,com:7
+research lu:8,con:7
+research met:8,ms:8,ir:8,lo:8,com:8
+research ho:7
+research ar:9
+research ho:8
+research ar:10
+research ho:9
+research met:9,ms:9,ir:9,lo:9,com:9,med:9,con:9
+research met:10,ms:10,ir:10,lo:10,com:10,med:10,con:10
+research lu:9
+research en:10,mac:10
+research ho:10
+[Troops]
+condgoal {%TimePlayed%<168} config dumping:2
+condgoal {{%TimePlayed%>168}&&{%TimePlayed%<504}} config dumping:4
+condgoal {%TimePlayed%>504} config dumping:6
+troop a:300
+troop a:500,w:10,s:10,sw:10,p:10
+troop a:1000,w:200,s:20,sw:15,p:15
+troop a:5000,w:2000,s:300,sw:50,p:50
+troop a:12500,w:5000
+troop w:15000
+troop b:25,t:50
+troop a:30000,w:30000,s:5000,sw:500,p:500,b:170,t:200
+troop a:125000,w:250000,s:15000,sw:5000,p:5000,b:1500,t:1500
+troop a:200000
+troop c:15000
+troop b:5500,t:5500
+[WallDefence]
+fortification tra:2
+fortification tra:5
+fortification tra:10
+fortification tra:15
+fortification tra:23
+fortification tra:30
+fortification tra:50
+fortification ab:2
+fortification ab:5
+fortification ab:10
+fortification ab:15
+fortification ab:23
+fortification ab:30
+fortification ab:50
+fortification at:50
+fortification at:150
+fortification at:300
+fortification at:500,tra:100,ab:100
+fortification at:1000
+fortification tra:200
+fortification tre:200
+fortification at:1500
+fortification at:5000,tre:200,tra:200,ab:5000
+fortification at:11000,ab:11000,tre:200,tra:200
+[PromoGoals]
+condgoal {%TimePlayed%<100} config hunting:1
+condgoal {{%TimePlayed%>100}&&{%TimePlayed%<200}} config slowhunting:2
+condgoal {{%TimePlayed%>200}&&{%TimePlayed%<300}} config slowhunting:3
+condgoal {%TimePlayed%>300} config slowhunting:4
+condgoal {{%TimePlayed%>72}&&{%TimePlayed%<168}} priorityfarming 1 w:10000 w:3000 10 6 any+70
+condgoal {{%TimePlayed%>168}&&{%TimePlayed%<432}} priorityfarming 5 b:1100 b:500,t:200 10 6 any+130
+condgoal {{%TimePlayed%>432}&&{%TimePlayed%<1080}} priorityfarming 10 a:180000 a:95000,w:2000,s:2000,sw:500,p:500 10 6 any+300
+[Npc10]
+condgoal {%TimePlayed%>504} npc10limit a:181000,w:125000,s:100000,p:50000,sw:50000
+condgoal {%TimePlayed%>504} npc10troop a:95000,w:2000,s:2000,p:500,sw:500
+condgoal {%TimePlayed%>504} npc10heroes any+350
+[TroopResPolicies]
+set TimePlayed {{$m_city.getRawTime()$-$m_city.player.playerInfo.createrTime$}/60000\60}
+condgoal {%TimePlayed%<72} keeptroop %MainTown% a:50 10
+condgoal {{%TimePlayed%<168}&&{%TimePlayed%>72}} keeptroop %MainTown% a:300 50
+condgoal {{%TimePlayed%>168}&&{%TimePlayed%<336}} keeptroop %MainTown% a:5000,w:5000,p:5000,sw:5000,s:5000,b:5500,c:5000 3000
+condgoal {{%TimePlayed%>336}&&{%TimePlayed%<720}} keeptroop %MainTown% a:30000,w:20000,p:500,sw:500,s:20000,b:10000,c:5000 5000
+condgoal {%TimePlayed%>720} keeptroop %MainTown% a:125000,w:200000,p:2000,sw:2000,s:100000,b:15500,c:10000 5000
+condgoal {%TimePlayed%<168} keepresource %MainTown% f:300000 10000
+condgoal {%TimePlayed%<168} keepresource %MainTown% w:300000 10000
+condgoal {%TimePlayed%<168} keepresource %MainTown% s:300000 10000
+condgoal {%TimePlayed%<168} keepresource %MainTown% i:300000 10000
+condgoal {%TimePlayed%<168} keepresource %MainTown% g:300000 10000
+condgoal {{%TimePlayed%>168}&&{%TimePlayed%<336}} keepresource %MainTown% f:3000000 20000
+condgoal {{%TimePlayed%>168}&&{%TimePlayed%<336}} keepresource %MainTown% w:1000000 20000
+condgoal {{%TimePlayed%>168}&&{%TimePlayed%<336}} keepresource %MainTown% s:1000000 20000
+condgoal {{%TimePlayed%>168}&&{%TimePlayed%<336}} keepresource %MainTown% i:1000000 20000
+condgoal {{%TimePlayed%>168}&&{%TimePlayed%<336}} keepresource %MainTown% g:750000 20000
+condgoal {{%TimePlayed%>336}&&{%TimePlayed%<720}} keepresource %MainTown% f:20000000 20000
+condgoal {{%TimePlayed%>336}&&{%TimePlayed%<720}} keepresource %MainTown% w:5000000 20000
+condgoal {{%TimePlayed%>336}&&{%TimePlayed%<720}} keepresource %MainTown% s:5000000 20000
+condgoal {{%TimePlayed%>336}&&{%TimePlayed%<720}} keepresource %MainTown% i:5000000 20000
+condgoal {{%TimePlayed%>336}&&{%TimePlayed%<720}} keepresource %MainTown% g:750000 20000
+condgoal {%TimePlayed%>720} keepresource %MainTown% f:2000000000 20000
+condgoal {%TimePlayed%>720} keepresource %MainTown% w:50000000 20000
+condgoal {%TimePlayed%>720} keepresource %MainTown% s:50000000 20000
+condgoal {%TimePlayed%>720} keepresource %MainTown% i:50000000 20000
+condgoal {%TimePlayed%>720} keepresource %MainTown% g:7500000 20000
+[UseItems]
+autouseitems aries_amulet
+autouseitems Junior_Battalion
+autouseitems Truce_Agreement:13
+autouseitems Speech_Text:6
+autouseitems Advance_by_A_Hidden_Path
+autouseitems Civillian_Rienf._Pack
+autouseitems Knight_Rienf._Pack
+autouseitems Baronet_Rienf._Pack
+autouseitems Baron_Rienf._Pack
+autouseitems Viscount_Rienf._Pack
+autouseitems Earl_Rienf._Pack
+autouseitems Marquis_Rienf._Pack
+autouseitems Duke_Rienf._Pack
+autouseitems Furstin_Rienf._Pack
+autouseitems Prinzessin_Rienf._Pack
+[AdvancedEvasion]
+####################### advEvasion Configs #######################
+
+##-->  Turn On AdvEvasion  <--##
+config advevasion:1
+
+##-->  Debug AdvEvasion  <--##
+//config advevasiondbg:32
+
+##-->  Set timing and enough rally slots to move all layers  <--##
+config attackgap:4
+rallymax rainbow:5
+
+##-->  Set custom layer sizes to remain during evasion  <--##
+set pLayer 100
+set cLayer 10
+set factor 1.6
+//set numwaves 5
+//set healpercent 0.17
+//set pLayer {1.04248\{%healpercent%^{%numwaves%-1}}}
+
+
+####################### advEvasion Rules #######################
+
+
+
+
+##-->  For naked workers  <--##
+advevasion wo:1,w:-1,s:-1,p:-1,sw:-1,a:-1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none c:0,cata:0
+
+##-->  For naked war  <--##
+advevasion wo:-1,w:1,s:-1,p:-1,sw:-1,a:-1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none c:0,cata:0
+
+##-->  For naked pike  <--##
+advevasion wo:-1,w:-1,s:-1,p:1,sw:-1,a:-1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:1
+
+##-->  For naked arch  <--##
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:-1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:1
+
+##-->  For non spam cav only, phract only, cav/phract combo only, or scout/cav/phract combo only waves  <--##
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:-1,a:-1,c:1001,cata:-1,b:-1,r:-1,cp:-1 none c:0,cata:0
+advevasion wo:-1,w:-1,s:1,p:-1,sw:-1,a:-1,c:1001,cata:-1,b:-1,r:-1,cp:-1 none c:0,cata:0
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:-1,a:-1,c:-1,cata:1001,b:-1,r:-1,cp:-1 none c:0,cata:0
+advevasion wo:-1,w:-1,s:1,p:-1,sw:-1,a:-1,c:-1,cata:1001,b:-1,r:-1,cp:-1 none c:0,cata:0
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:-1,a:-1,c:1,cata:1001,b:-1,r:-1,cp:-1 none c:0,cata:0
+advevasion wo:-1,w:-1,s:1,p:-1,sw:-1,a:-1,c:1,cata:1001,b:-1,r:-1,cp:-1 none c:0,cata:0
+
+##-->  For any arch/cav/phract waves with no layers  <--##
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:-1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:0,c:0,cata:0
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:-1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:0,c:0,cata:0
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:-1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:0,c:0,cata:0
+
+##-->  For any arch bow without cav/phract  <--##
+advevasion wo:-1,w:1,s:1,p:1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:1,w:1,s:-1,p:1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:-1,w:1,s:-1,p:1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:1,w:-1,s:1,p:1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:1,w:-1,s:-1,p:1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:-1,w:-1,s:1,p:1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:-1,w:-1,s:-1,p:1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:1,w:1,s:1,p:1,sw:-1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:1,w:1,s:1,p:-1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:1,w:1,s:-1,p:1,sw:-1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:1,w:1,s:-1,p:-1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:-1,w:1,s:-1,p:1,sw:-1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:-1,w:1,s:-1,p:-1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:-1,w:-1,s:-1,p:1,sw:-1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:0,cata:0
+
+##-->  For Rainbow with cav/phract  <--##
+advevasion wo:-1,w:1,s:1,p:1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:-1,p:1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:-1,p:1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:-1,s:1,p:1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:-1,s:-1,p:1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:1,p:1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:-1,p:1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:1,p:1,sw:-1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:1,p:-1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:-1,p:1,sw:-1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:-1,p:-1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:-1,p:1,sw:-1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:-1,p:-1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:-1,p:1,sw:-1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:1,a:1,c:1,cata:-1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:1,p:1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:-1,p:1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:-1,p:1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:-1,s:1,p:1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:-1,s:-1,p:1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:1,p:1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:-1,p:1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:1,p:1,sw:-1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:1,p:-1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:-1,p:1,sw:-1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:-1,p:-1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:-1,p:1,sw:-1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:-1,p:-1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:-1,p:1,sw:-1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:1,a:1,c:-1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:1,p:1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:-1,p:1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:-1,p:1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:-1,s:1,p:1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:-1,s:-1,p:1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:1,p:1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:-1,p:1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:1,p:1,sw:-1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:1,p:-1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:-1,p:1,sw:-1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:1,w:1,s:-1,p:-1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:-1,p:1,sw:-1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:1,s:-1,p:-1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:-1,p:1,sw:-1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+advevasion wo:-1,w:-1,s:-1,p:-1,sw:1,a:1,c:1,cata:1,b:-1,r:-1,cp:-1 none p:%pLayer%,sw:1,c:%cLayer%,cata:0
+
+##-->  For arch/warr/scout spam  <--##
+advevasion w:1,s:1,sw:-1,p:-1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:0,sw:0,c:0,cata:0
+advevasion w:1,s:1,sw:-1,p:-1,a:1,c:-1,cata:-1,b:-1,r:-1,cp:-1 none p:0,sw:0,c:0,cata:0
+
+##-->  For scout/cav spam  <--##
+advevasion wo:-1,w:-1,s:1,p:-1,sw:-1,a:-1,c:1,cata:-1,b:-1,r:-1,cp:-1 none c:0,cata:0
+advevasion wo:-1,w:-1,s:1,p:-1,sw:-1,a:-1,c:-1,cata:1,b:-1,r:-1,cp:-1 none c:0,cata:0
+advevasion wo:-1,w:-1,s:1,p:-1,sw:-1,a:-1,c:1,cata:1,b:-1,r:-1,cp:-1 none c:0,cata:0
+
+##-->  For work/warr spam  <--##
+advevasion wo:1,w:1,s:-1,p:-1,sw:-1,a:-1,b:-1,r:-1,cp:-1,c:-1 none c:0,cata:0
+
+##-->  For war/pike/sword spam  <--##
+advevasion wo:-1,w:1,s:-1,p:1,sw:1,a:-1,b:-1,r:-1,cp:-1,c:-1 none c:0,cata:0
+
+##-->  For any arch/mech wave  <--##
+//advevasion a:80000,b:5000 none sw:0,c:0,cata:0,p:0
+advevasion a:90000,cp:10000 none p:{16000*%factor%},sw:0,c:10,cata:10
+advevasion a:90000,b:10000 none p:{16000*%factor%},sw:0,c:10,cata:10
+advevasion a:85000,cp:10000 none p:{16000*%factor%},sw:0,c:10,cata:10
+advevasion a:85000,b:10000 none p:{16000*%factor%},sw:0,c:10,cata:10
+advevasion a:80000,cp:10000 none p:{15900*%factor%},sw:0,c:10,cata:10
+advevasion a:80000,b:10000 none p:{15900*%factor%},sw:0,c:10,cata:10
+advevasion a:75000,cp:10000 none p:{14900*%factor%},sw:0,c:10,cata:10
+advevasion a:75000,b:10000 none p:{14900*%factor%},sw:0,c:10,cata:10
+advevasion a:70000,cp:10000 none p:{13900*%factor%},sw:0,c:10,cata:10
+advevasion a:70000,b:10000 none p:{13900*%factor%},sw:0,c:10,cata:10
+advevasion a:65000,cp:10000 none p:{13100*%factor%},sw:0,c:10,cata:10
+advevasion a:65000,b:10000 none p:{13100*%factor%},sw:0,c:10,cata:10
+advevasion a:60000,cp:10000 none p:{12200*%factor%},sw:0,c:10,cata:10
+advevasion a:60000,b:10000 none p:{12200*%factor%},sw:0,c:10,cata:10
+advevasion a:55000,cp:10000 none p:{11200*%factor%},sw:0,c:10,cata:10
+advevasion a:55000,b:10000 none p:{11200*%factor%},sw:0,c:10,cata:10
+advevasion a:50000,cp:10000 none p:{10300*%factor%},sw:0,c:10,cata:10
+advevasion a:50000,b:10000 none p:{10300*%factor%},sw:0,c:10,cata:10
+advevasion a:45000,cp:10000 none p:{9400*%factor%},sw:0,c:10,cata:10
+advevasion a:45000,b:10000 none p:{9400*%factor%},sw:0,c:10,cata:10
+advevasion a:40000,cp:10000 none p:{8400*%factor%},sw:0,c:10,cata:10
+advevasion a:40000,b:10000 none p:{8400*%factor%},sw:0,c:10,cata:10
+advevasion a:35000,cp:10000 none p:{7500*%factor%},sw:0,c:10,cata:10
+advevasion a:35000,b:10000 none p:{7500*%factor%},sw:0,c:10,cata:10
+advevasion a:30000,cp:10000 none p:{6600*%factor%},sw:0,c:10,cata:10
+advevasion a:30000,b:10000 none p:{6600*%factor%},sw:0,c:10,cata:10
+advevasion a:25000,cp:10000 none p:{5600*%factor%},sw:0,c:10,cata:10
+advevasion a:25000,b:10000 none p:{5600*%factor%},sw:0,c:10,cata:10
+advevasion a:20000,cp:10000 none p:{4700*%factor%},sw:0,c:10,cata:10
+advevasion a:20000,b:10000 none p:{4700*%factor%},sw:0,c:10,cata:10
+advevasion a:15000,cp:10000 none p:{3800*%factor%},sw:0,c:10,cata:10
+advevasion a:15000,b:10000 none p:{3800*%factor%},sw:0,c:10,cata:10
+advevasion a:10000,cp:10000 none p:{2800*%factor%},sw:0,c:10,cata:10
+advevasion a:10000,b:10000 none p:{2800*%factor%},sw:0,c:10,cata:10
+advevasion a:5000,cp:10000 none p:{1900*%factor%},sw:0,c:10,cata:10
+advevasion a:5000,b:10000 none p:{1900*%factor%},sw:0,c:10,cata:10
+advevasion a:1,cp:10000 none p:{1000*%factor%},sw:0,c:10,cata:10
+advevasion a:1,b:10000 none p:{1000*%factor%},sw:0,c:10,cata:10
+advevasion a:1,cp:1 none p:%pLayer%,sw:0,c:%cLayer%,cata:1
+advevasion a:1,b:1 none p:%pLayer%,sw:0,c:%cLayer%,cata:1
+
+##-->  For all possible remaining configs, to prevent evasion failure  <--##
+advevasion wo:1 none p:1,sw:1,c:1,cata:1
+advevasion w:1 none p:1,sw:1,c:1,cata:1
+advevasion p:1 none p:1,sw:1,c:1,cata:1
+advevasion sw:1 none p:1,sw:1,c:1,cata:1
+advevasion a:1 none p:1,sw:1,c:1,cata:1
+advevasion c:1 none p:1,sw:1,c:1,cata:1
+advevasion cata:1 none p:1,sw:1,c:1,cata:1
+advevasion t:1 none p:1,sw:1,c:1,cata:1
+advevasion b:1 none p:1,sw:1,c:1,cata:1
+advevasion r:1 none p:1,sw:1,c:1,cata:1
+advevasion cp:1 none p:1,sw:1,c:1,cata:1
+[ResourcePacks]
+autouseitems Minor_Bonus_Reward
+autouseitems Minor_Resources_Reward
+autouseitems Lesser_Bonus_Reward
+autouseitems Lesser_Resources_Reward
+autouseitems Medium_Bonus_Reward
+autouseitems Medium_Resources_Reward
+autouseitems Greater_Bonus_Reward
+autouseitems Greater_Resources_Reward

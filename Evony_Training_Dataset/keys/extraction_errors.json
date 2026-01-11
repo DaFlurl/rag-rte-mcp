@@ -1,0 +1,18 @@
+[
+  {
+    "email": "ebraff@yahoo.com",
+    "error": "Login failed: ok=-2"
+  },
+  {
+    "email": "andre3age2@hotmail.co.uk",
+    "error": "Account needs setup"
+  },
+  {
+    "email": "brown_451@hotmail.com",
+    "error": "Login failed: ok=-2"
+  },
+  {
+    "email": "marknewsome1@sky.com",
+    "error": "Connection timeout"
+  }
+]

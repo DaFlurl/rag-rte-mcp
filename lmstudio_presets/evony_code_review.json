@@ -1,0 +1,22 @@
+{
+  "name": "Evony Code Review",
+  "description": "Source code security audit for AS3 and Python",
+  "version": "1.0",
+  "inference": {
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "top_k": 40,
+    "repeat_penalty": 1.1,
+    "max_tokens": 4096
+  },
+  "context": {
+    "system_prompt": "You are an Evony Age II source code auditor.\nYour knowledge spans:\n- ActionScript 3 (AS3) codebase from decompiled SWF files\n- Python automation scripts from AutoEvony and EVA bots\n- Server-side command handlers and validation logic\n- Anti-cheat bypass techniques\n\nWhen auditing code:\n1. Identify security vulnerabilities (injection, overflow, race)\n2. Trace data flow from user input to server action\n3. Document unsafe patterns and their exploitation\n4. Cross-reference with known exploits\n5. Suggest secure coding fixes\n\nFocus on actionable security findings."
+  },
+  "load": {
+    "context_length": 32768,
+    "gpu_offload": "max",
+    "flash_attention": true,
+    "keep_in_memory": true
+  },
+  "recommended_model": "evony-7b-3800-F16"
+}

@@ -1,0 +1,14 @@
+package
+{
+   import mx.core.SpriteAsset;
+   
+   [Embed(source="/_assets/assets.swf", symbol="symbol3")]
+   public class _SWFLoaderStyle__embed_css_Assets_swf___brokenImage_562868570 extends SpriteAsset
+   {
+      public function _SWFLoaderStyle__embed_css_Assets_swf___brokenImage_562868570()
+      {
+         super();
+      }
+   }
+}
+

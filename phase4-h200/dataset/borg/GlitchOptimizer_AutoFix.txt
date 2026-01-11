@@ -1,0 +1,172 @@
+#======================================================================================================================
+# Glitch Optimizer & Auto-Fix v1.0 - Enhanced by Borg
+#======================================================================================================================
+# This script runs in the CURRENT city and:
+# 1. Analyzes all troop types for EVEN glitches (not generating)
+# 2. Calculates EXACT untrain amounts to flip to ODD (generating)
+# 3. Can AUTO-EXECUTE untrains if enabled
+# 4. Shows safe send amounts that won't break other cities' glitches
+#======================================================================================================================
+# SAFETY FEATURES:
+# - Only untrains minimum amount needed
+# - Won't untrain if it would remove all glitches
+# - Preview mode by default (set AutoExecute to true to actually untrain)
+#======================================================================================================================
+setsilence true
+
+#======================================================================================================================
+# CONFIGURATION - CHANGE THESE
+#======================================================================================================================
+# Set to true to actually execute untrains, false for preview only
+set AutoExecute false
+
+# Maximum amount to untrain in one go (safety limit)
+set MaxUntrainAmount 100000000
+
+# Only fix troops that are close to threshold (set to 0 for all)
+set OnlyFixNearThreshold 50000000
+
+# Focus on high-value glitch troops (mechs, horses, archers)
+set FocusHighValue true
+
+#======================================================================================================================
+# CONSTANTS
+#======================================================================================================================
+set INT32MAX 2147483647
+setarr troopNames "peasants militia scouter pikemen swordsmen archer lightCavalry heavyCavalry carriage ballista batteringRam catapult"
+setarr troopDisplay "Workers Warriors Scouts Pikemen Swordsmen Archers Cavalry Cataphracts Transporters Ballista BattRams Catapults"
+setarr troopAbbr "wo w s p sw a c cata t b r cp"
+setarr foodCost "1 1 2 3 3 4 9 17 5 25 50 125"
+setarr cityThreshold "2147483648 2147483648 1073741824 715827883 715827883 536870912 238609295 126322568 429496730 85899346 42949673 17179870"
+
+# High value troops (where most glitches come from)
+setarr highValueTroops "5 6 7 9 10 11"
+
+#======================================================================================================================
+# INITIALIZE
+#======================================================================================================================
+set cityName $m_city.name$
+set tc c.castle.troop
+set fixCount 0
+set totalFixed 0
+
+set LogMsg "<br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFD700'><b>  GLITCH OPTIMIZER - %cityName%</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════</b></font>"
+
+if {%AutoExecute%==true} set LogMsg "%LogMsg%<br><font color='#FF0000'><b>⚠ AUTO-EXECUTE MODE - WILL UNTRAIN TROOPS</b></font>"
+if {%AutoExecute%==false} set LogMsg "%LogMsg%<br><font color='#00FF00'><b>✓ PREVIEW MODE - No changes will be made</b></font>"
+
+set troopIndex 0
+
+#======================================================================================================================
+# MAIN LOOP - Check each troop type
+#======================================================================================================================
+label checkNextTroop
+if {%troopIndex%>=12} goto showSummary
+
+set tName %troopNames[{%troopIndex%}]%
+set tDisplay %troopDisplay[{%troopIndex%}]%
+set tAbbr %troopAbbr[{%troopIndex%}]%
+set tThreshold %cityThreshold[{%troopIndex%}]%
+
+# Get current troop count
+set troopCount $%tc%.%tName%$
+
+# Calculate glitches
+set glitchCount 0
+set remaining %troopCount%
+
+label calcGlitch
+if {%remaining%>=%tThreshold%} set glitchCount {%glitchCount%+1}
+if {%remaining%>=%tThreshold%} set remaining {%remaining%-%tThreshold%}
+if {%remaining%>=%tThreshold%} goto calcGlitch
+
+# Skip if no glitches or odd glitches (already generating)
+set isOdd {{{%glitchCount%}|2}==1}
+if {%glitchCount%==0} goto nextTroop
+if {%isOdd%==true} goto nextTroop
+
+# EVEN glitches - needs fixing!
+set LogMsg "%LogMsg%<br><br><font color='#CC2EFA'><b>────────────────────────────────────────</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FF6600'><b>%tDisplay%</b></font> - <font color='#FF0000'>EVEN GLITCHES (%glitchCount%)</font>"
+
+# Calculate untrain amount to flip to odd
+# We need to reduce remaining to < 0 to drop one glitch
+set untrainAmount {%remaining%+1}
+
+# Check if near threshold
+if {%OnlyFixNearThreshold%>0&&%remaining%>%OnlyFixNearThreshold%} goto skipNotNear
+
+# Check if safe to untrain (won't remove all glitches)
+if {%glitchCount%<2} goto warnLowGlitch
+
+# Check max untrain limit
+if {%untrainAmount%>%MaxUntrainAmount%} goto warnTooMuch
+
+# SAFE TO FIX
+set LogMsg "%LogMsg%<br><font color='#FFFFFF'>  Current: %troopCount% troops, %glitchCount% glitches</font>"
+set LogMsg "%LogMsg%<br><font color='#FFFFFF'>  Remaining: %remaining% / %tThreshold%</font>"
+set LogMsg "%LogMsg%<br><font color='#00FF00'><b>  ► UNTRAIN: %untrainAmount%</b></font>"
+set LogMsg "%LogMsg%<br><font color='#888888'>  Result: {%glitchCount%-1} glitches (ODD = GENERATING)</font>"
+
+# Show command
+set LogMsg "%LogMsg%<br><font color='#00FFFF'>  Command: untrain %tAbbr%:%untrainAmount%</font>"
+
+# Execute if auto mode
+if {%AutoExecute%==false} goto skipExecute
+set LogMsg "%LogMsg%<br><font color='#FFD700'>  EXECUTING...</font>"
+untrain %tAbbr%:%untrainAmount%
+set totalFixed {%totalFixed%+1}
+set LogMsg "%LogMsg%<br><font color='#00FF00'>  ✓ DONE!</font>"
+
+label skipExecute
+set fixCount {%fixCount%+1}
+goto nextTroop
+
+label skipNotNear
+set LogMsg "%LogMsg%<br><font color='#FFFFFF'>  Remaining: %remaining% (> %OnlyFixNearThreshold% threshold)</font>"
+set LogMsg "%LogMsg%<br><font color='#FFFF00'>  Skipped - not near threshold. Untrain %untrainAmount% to fix.</font>"
+goto nextTroop
+
+label warnLowGlitch
+set LogMsg "%LogMsg%<br><font color='#FF0000'>  ⚠ Only %glitchCount% glitch - untraining would remove ALL glitches!</font>"
+set LogMsg "%LogMsg%<br><font color='#FFFF00'>  Consider ADDING troops to get 3 glitches instead.</font>"
+set troopsNeeded {%tThreshold%-%remaining%}
+set LogMsg "%LogMsg%<br><font color='#888888'>  Need %troopsNeeded% more for next glitch</font>"
+goto nextTroop
+
+label warnTooMuch
+set LogMsg "%LogMsg%<br><font color='#FF0000'>  ⚠ Untrain amount %untrainAmount% exceeds max %MaxUntrainAmount%</font>"
+set LogMsg "%LogMsg%<br><font color='#FFFF00'>  Increase MaxUntrainAmount or use manual untrain</font>"
+goto nextTroop
+
+label nextTroop
+set troopIndex {%troopIndex%+1}
+goto checkNextTroop
+
+#======================================================================================================================
+# SUMMARY
+#======================================================================================================================
+label showSummary
+
+set LogMsg "%LogMsg%<br><br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFD700'><b>  SUMMARY</b></font>"
+set LogMsg "%LogMsg%<br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════</b></font>"
+
+set LogMsg "%LogMsg%<br><font color='#FFFFFF'>  Troop types needing fix: %fixCount%</font>"
+if {%AutoExecute%==true} set LogMsg "%LogMsg%<br><font color='#00FF00'>  Auto-fixed: %totalFixed%</font>"
+
+if {%fixCount%==0} set LogMsg "%LogMsg%<br><font color='#00FF00'><b>  ✓ All troop types are generating food!</b></font>"
+
+# Quick reference
+set LogMsg "%LogMsg%<br><br><font color='#888888'>To run commands manually, copy from above.</font>"
+set LogMsg "%LogMsg%<br><font color='#888888'>To auto-execute: set AutoExecute true</font>"
+
+set LogMsg "%LogMsg%<br><br><font color='#FFD700'><b>═══════════════════════════════════════════════════════════</b></font>"
+
+# Output
+set out "$m_city.cityManager.warLogMsg(%LogMsg%)$"
+
+setsilence false
+echo "Glitch Optimizer complete! Found %fixCount% fixable issues."

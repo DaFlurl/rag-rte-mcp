@@ -1,0 +1,112 @@
+# HuggingFace Transformers Fine-Tuning Configuration
+# Evony Knowledge Model Training
+# Generated: 2026-01-05
+
+# Model Configuration
+model:
+  # RECOMMENDED: Qwen2.5-14B Abliterated (uncensored, 128K context)
+  name_or_path: "huihui-ai/Qwen2.5-14B-Instruct-abliterated"
+  # Alternatives (all abliterated/uncensored):
+  # - "huihui-ai/Qwen2.5-7B-Instruct-abliterated"     # Faster, less VRAM
+  # - "mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated"  # Good balance
+  # - "failspy/Mistral-7B-Instruct-v0.3-abliterated"  # 32K context
+  torch_dtype: "bfloat16"
+  load_in_4bit: true
+  trust_remote_code: true
+
+# Dataset Configuration
+dataset:
+  train_file: "Evony_Training_Data/evony_final_5k.json"
+  validation_file: null  # Will split from train
+  validation_split: 0.1
+  text_column: "instruction"
+  max_seq_length: 2048
+  preprocessing_num_workers: 4
+
+# Training Arguments
+training:
+  output_dir: "./evony_model_output"
+  num_train_epochs: 3
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 4
+  gradient_accumulation_steps: 4
+  gradient_checkpointing: true
+  learning_rate: 2.0e-5
+  lr_scheduler_type: "cosine"
+  warmup_ratio: 0.1
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  
+  # Logging
+  logging_steps: 10
+  logging_first_step: true
+  
+  # Evaluation
+  evaluation_strategy: "steps"
+  eval_steps: 100
+  
+  # Saving
+  save_strategy: "steps"
+  save_steps: 100
+  save_total_limit: 3
+  
+  # Performance
+  fp16: false
+  bf16: true
+  optim: "adamw_torch"
+  
+  # Misc
+  seed: 42
+  report_to: "tensorboard"
+
+# LoRA Configuration (Parameter Efficient Fine-Tuning)
+lora:
+  enabled: true
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules:
+    - "q_proj"
+    - "k_proj"
+    - "v_proj"
+    - "o_proj"
+    - "gate_proj"
+    - "up_proj"
+    - "down_proj"
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
+# Quantization (QLoRA)
+quantization:
+  load_in_4bit: true
+  bnb_4bit_compute_dtype: "bfloat16"
+  bnb_4bit_quant_type: "nf4"
+  bnb_4bit_use_double_quant: true
+
+# Data Formatting
+formatting:
+  # Alpaca format
+  template: |
+    ### Instruction:
+    {instruction}
+    
+    ### Input:
+    {input}
+    
+    ### Response:
+    {output}
+  
+  system_prompt: |
+    You are an expert on the Evony game, including its protocol, 
+    data structures, scripting, and game mechanics. Provide accurate 
+    and detailed answers about Evony's technical implementation.
+
+# Hardware Requirements (Estimated)
+hardware_requirements:
+  min_vram_gb: 16  # With 4-bit quantization
+  recommended_vram_gb: 24
+  supported_gpus:
+    - "NVIDIA RTX 3090"
+    - "NVIDIA RTX 4090"
+    - "NVIDIA A100"
+    - "NVIDIA H100"
