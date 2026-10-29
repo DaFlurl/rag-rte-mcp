@@ -42,6 +42,8 @@ The following rules apply to every phase:
 | LAB-08 | P1 | Run static and simulated RTE verification | LAB-05, LAB-06 | Source scan completes; synthetic AMF3 encode/decode tests pass under socket/HTTP deny patches; no proxy, packet capture, game handler, server launcher, purchase, or login path runs |
 | LAB-09 | P2 | Archive evidence and synchronize documentation | LAB-04, LAB-07, LAB-08 | GitHub, Notion, and Obsidian contain matching status, evidence links, blockers, and next decision; no secret or account content is copied into documentation |
 
+GitHub tracking: [LAB-01](https://github.com/Ghenghis/rag-rte-mcp/issues/2), [LAB-02](https://github.com/Ghenghis/rag-rte-mcp/issues/3), [LAB-03](https://github.com/Ghenghis/rag-rte-mcp/issues/4), [LAB-04](https://github.com/Ghenghis/rag-rte-mcp/issues/5), [LAB-05](https://github.com/Ghenghis/rag-rte-mcp/issues/6), [LAB-06](https://github.com/Ghenghis/rag-rte-mcp/issues/7), [LAB-07](https://github.com/Ghenghis/rag-rte-mcp/issues/8), [LAB-08](https://github.com/Ghenghis/rag-rte-mcp/issues/9), and [LAB-09](https://github.com/Ghenghis/rag-rte-mcp/issues/10).
+
 ## Sanitized transfer specification
 
 The full working tree is not a safe transfer unit. The bundle must be generated from an explicit allowlist and reviewed before it is copied.
